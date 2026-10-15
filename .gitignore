@@ -1,0 +1,33 @@
+# macOS and Python tooling
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+
+# Local credentials and machine-specific settings
+.env
+.env.*
+!.env.example
+
+# Bulk research artifacts (keep small manifests in data/splits/)
+/data/raw/
+/data/processed/
+/cache/
+/checkpoints/
+/runs/
+/outputs/
+/wandb/
+/tensorboard/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.log
