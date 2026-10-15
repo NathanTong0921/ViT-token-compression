@@ -18,6 +18,7 @@ Create one Markdown record in `docs/experiments/` for each substantive experimen
 - Dataset version, split manifest, and random seed(s):
 - Candidate-set construction and train/test combination split:
 - Frozen model checkpoint identifier / revision:
+- Image preprocessing / augmentation and class-text prompt templates:
 - Selector variant, pruning layer, and token budget:
 - Baselines and matched settings:
 - Cached supervision / feature artifact locations and hashes:
