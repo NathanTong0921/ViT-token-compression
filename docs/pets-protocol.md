@@ -6,6 +6,8 @@ Use the [Oxford-IIIT Pet dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/), 
 
 The official test set stays fixed. Shuffle official trainval images within each class with Python's `random.Random(2026)` and reserve 20% per class for validation. The manifests under `data/splits/pets-v1/` define the exact split. Only annotated images are used, rather than every file in the image archive.
 
+This yields 2,944 training, 736 validation and 3,669 test images. Raw images are distributed through the [fastai Pets archive](https://s3.amazonaws.com/fast-ai-imageclas/oxford-iiit-pet.tgz), listed as `URLs.PETS` in [fastai's data documentation](https://docs.fast.ai/data.external.html). Original Oxford split files define membership; download transport does not redefine the experimental split.
+
 ## Candidate-class tasks
 
 Each task is an unordered pair of distinct classes. Shuffle all 666 pairs with independent seed 2027, allocating 532 to train, 66 to validation, and 68 to test. All 37 classes remain known; test generalization means new class combinations, not entirely new classes.

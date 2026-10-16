@@ -43,7 +43,7 @@ def _read_annotations(data_root):
 
 def _write_csv(path, fields, rows):
     with path.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
