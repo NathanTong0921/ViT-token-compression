@@ -7,7 +7,7 @@ This project studies whether changing the competing classes changes which visual
 The main study uses frozen CLIP ViT-B/16 on Oxford-IIIT Pets, with controlled cross-task selection, strong shared-selection baselines, and matched conditional/unconditional selectors. Flowers102 provides validation; a targeted ViT-L/14 check is planned if time permits.
 
 `Project_Proposal.pdf` is the proposal for submission and the reference plan for project execution. 
-Current status: server runtime initialized and the pretrained CLIP ViT-B/16 CUDA smoke check passed. See [setup instructions](docs/server-setup.md) and [verified runtime records](results/setup/README.md). Dataset and pruning experiments are next; no research results are claimed yet.
+Current status: the server runtime is verified; Oxford Pets manifests and the frozen CLIP baseline are implemented. See the [Pets protocol and commands](docs/pets-protocol.md), [setup instructions](docs/server-setup.md), and [verified runtime records](results/setup/README.md). Pruning and selector experiments follow this baseline.
 
 ## Working approach
 

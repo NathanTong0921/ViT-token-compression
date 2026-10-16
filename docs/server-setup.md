@@ -1,6 +1,6 @@
 # Server setup
 
-Develop code locally, commit and push it, then pull the same version into the server checkout. The server checkout is named `Experiments` under the user-selected data directory. Connection details belong in the ignored local `.env.server` file; no password is stored in the repository.
+Develop code locally, commit and push it, then pull the same version into the server checkout. The server checkout is named `experiments` under the user-selected data directory. Connection details belong in the ignored local `.env.server` file; no password is stored in the repository.
 
 ## Environment
 
@@ -25,7 +25,15 @@ Once this wheel directory is complete, install without downloading dependencies 
 .venv/bin/python -m pip check
 ```
 
-This installation and `pip check` completed successfully on 2026-10-16. The temporary server wheel directory was then removed to reclaim approximately 2.9 GiB; the local wheel archive remains available for reuse. The environment and cached B/16 checkpoint together occupy approximately 5.6 GiB.
+This installation and `pip check` completed successfully on 2026-10-16. The temporary server wheel directory was then removed. Local transfer copies of the wheels and checkpoint, together with matching newly created pip download-cache copies, were also removed (approximately 6.5 GB total). The installed environment and server B/16 checkpoint remain available.
+
+When the checkout was renamed to lowercase `experiments`, the environment's activation scripts and executable entry points were updated to the new absolute path. Both pip and a CUDA tensor operation passed afterwards.
+
+Install this repository's small Python package after pulling the experiment code:
+
+```bash
+.venv/bin/python -m pip install --no-deps --no-build-isolation -e .
+```
 
 ## Runtime check
 
@@ -41,6 +49,8 @@ CUDA_VISIBLE_DEVICES=0 .venv/bin/python scripts/check_runtime.py \
 Copy these two records back to local `results/setup/` for review and version management. Generated server files stay under the ignored `runs/` directory so that subsequent code pulls do not conflict with locally curated results.
 
 Model downloads go under `cache/clip`. If the official checkpoint download is unavailable on the server, download that checkpoint locally and transfer it into this directory before running the check.
+
+Remove local transfer-only downloads once the remote copy is verified. Preserve scientific outputs, split manifests and selected figure assets; they are backups, not disposable transfer intermediates.
 
 ## Disk and results
 

@@ -1,0 +1,14 @@
+{
+  "model": "ViT-B/16",
+  "model_cache": "cache/clip",
+  "data_root": "data/raw/oxford-iiit-pet",
+  "manifest_dir": "data/splits/pets-v1",
+  "image_split": "val",
+  "task_splits": ["train", "val"],
+  "prompt_template": "a photo of a {class_name}, a type of pet.",
+  "balance_seed": 2028,
+  "seed": 2026,
+  "batch_size": 64,
+  "num_workers": 4,
+  "device": "cuda:0"
+}
