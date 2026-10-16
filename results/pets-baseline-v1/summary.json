@@ -1,0 +1,93 @@
+{
+  "run_type": "unpruned_frozen_clip_baseline",
+  "started_utc": "2026-10-16T10:33:08.536452+00:00",
+  "code_commit": "2623193452f219f7708ecc15dff5c2839ff5661b",
+  "config": {
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "image_split": "val",
+    "task_splits": [
+      "train",
+      "val"
+    ],
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "batch_size": 64,
+    "num_workers": 4,
+    "device": "cuda:0"
+  },
+  "model_training": false,
+  "backbone_dtype": "torch.float16",
+  "normalization_and_scoring_dtype": "float32",
+  "logit_scale": 100.0,
+  "preprocess": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_image_to_rgb at 0x7b3e3598e170>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "prompts": [
+    "a photo of a abyssinian, a type of pet.",
+    "a photo of a american bulldog, a type of pet.",
+    "a photo of a american pit bull terrier, a type of pet.",
+    "a photo of a basset hound, a type of pet.",
+    "a photo of a beagle, a type of pet.",
+    "a photo of a bengal, a type of pet.",
+    "a photo of a birman, a type of pet.",
+    "a photo of a bombay, a type of pet.",
+    "a photo of a boxer, a type of pet.",
+    "a photo of a british shorthair, a type of pet.",
+    "a photo of a chihuahua, a type of pet.",
+    "a photo of a egyptian mau, a type of pet.",
+    "a photo of a english cocker spaniel, a type of pet.",
+    "a photo of a english setter, a type of pet.",
+    "a photo of a german shorthaired, a type of pet.",
+    "a photo of a great pyrenees, a type of pet.",
+    "a photo of a havanese, a type of pet.",
+    "a photo of a japanese chin, a type of pet.",
+    "a photo of a keeshond, a type of pet.",
+    "a photo of a leonberger, a type of pet.",
+    "a photo of a maine coon, a type of pet.",
+    "a photo of a miniature pinscher, a type of pet.",
+    "a photo of a newfoundland, a type of pet.",
+    "a photo of a persian, a type of pet.",
+    "a photo of a pomeranian, a type of pet.",
+    "a photo of a pug, a type of pet.",
+    "a photo of a ragdoll, a type of pet.",
+    "a photo of a russian blue, a type of pet.",
+    "a photo of a saint bernard, a type of pet.",
+    "a photo of a samoyed, a type of pet.",
+    "a photo of a scottish terrier, a type of pet.",
+    "a photo of a shiba inu, a type of pet.",
+    "a photo of a siamese, a type of pet.",
+    "a photo of a sphynx, a type of pet.",
+    "a photo of a staffordshire bull terrier, a type of pet.",
+    "a photo of a wheaten terrier, a type of pet.",
+    "a photo of a yorkshire terrier, a type of pet."
+  ],
+  "image_count": 736,
+  "accuracy_37class": 0.8722826086956522,
+  "correct_37class": 642,
+  "binary": {
+    "train": {
+      "task_count": 532,
+      "image_task_count": 21054,
+      "accuracy_micro": 0.9910705804122732,
+      "accuracy_macro": 0.9910368025326475
+    },
+    "val": {
+      "task_count": 66,
+      "image_task_count": 2608,
+      "accuracy_micro": 0.9927147239263804,
+      "accuracy_macro": 0.9925438596491228
+    }
+  },
+  "image_extraction_wall_seconds": 5.323422794928774,
+  "timing_scope": "One feature extraction pass, including data loading and CPU transfers; not an inference latency benchmark.",
+  "gpu": "NVIDIA RTX A6000",
+  "peak_allocated_gpu_bytes": 737034752,
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4",
+    "cuda": "12.4"
+  }
+}

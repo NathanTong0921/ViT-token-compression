@@ -1,6 +1,6 @@
 # Storage and backup plan
 
-Status: planning estimate, 2026-10-16. The server is connected and the runtime has been verified. Its first small records were copied back locally and committed; experiment transfer automation is not implemented yet. Update the estimates after the first measured data pilot.
+Status, 2026-10-16: the first Pets development baseline is complete. Its approximately 4.1 MB result bundle, including embeddings and per-example predictions, was copied back locally and checked. The server project currently occupies approximately 6.5 GiB, including the environment, B/16 checkpoint and raw Pets data; no token-prefix or selection-supervision caches have been generated. The capacity figures below remain planning allowances for later experiments.
 
 ## Capacity
 
