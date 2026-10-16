@@ -28,6 +28,8 @@ Create one Markdown record in `docs/experiments/` for each substantive experimen
 
 - Small result tables or figures committed under `results/`:
 - Raw logs, checkpoints, and other artifact locations:
+- Paper evidence bundle (per-example results, figure data, relevant images, and selected checkpoints):
+- Verified backup locations (server, local, and GitHub commit/release); mark pending copies explicitly:
 - Main observations and uncertainty:
 - Failed runs or deviations from the planned protocol:
 - Interpretation and next step:
