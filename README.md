@@ -7,7 +7,12 @@ This project studies whether changing the competing classes changes which visual
 The main study uses frozen CLIP ViT-B/16 on Oxford-IIIT Pets, with controlled cross-task selection, strong shared-selection baselines, and matched conditional/unconditional selectors. Flowers102 provides validation; a targeted ViT-L/14 check is planned if time permits.
 
 `Project_Proposal.pdf` is the proposal for submission and the reference plan for project execution. 
-Current status: repository setup. No experiment results are claimed yet.
+Current status: server runtime initialized and the pretrained CLIP ViT-B/16 CUDA smoke check passed. See [setup instructions](docs/server-setup.md) and [verified runtime records](results/setup/README.md). Dataset and pruning experiments are next; no research results are claimed yet.
+
+## Working approach
+
+- Keep code direct and focused on the current experiments. Avoid speculative abstractions, redundant checks, and silent fallbacks; retain checks that establish scientific correctness.
+- Treat the proposal as the starting research plan. Raise new observations, hypotheses, and better experimental designs as they emerge, and record the evidence and tradeoffs behind changes to the plan.
 
 ## Version management
 
@@ -19,7 +24,7 @@ Current status: repository setup. No experiment results are claimed yet.
 
 Use [the experiment record template](docs/experiment-log.md) for each substantive experiment. Negative and inconclusive results should retain the same provenance as positive results.
 
-Paper evidence will be retained on the server, locally, and on GitHub: per-example results, figure source data, figures, configurations, and selected selector checkpoints. Small files belong in Git; larger essential artifacts belong in versioned GitHub Release attachments. See the [storage and backup plan](docs/storage-and-backup.md). Transfer scripts will be configured after the server and storage paths are provided.
+Paper evidence will be retained on the server, locally, and on GitHub: per-example results, figure source data, figures, configurations, and selected selector checkpoints. Small files belong in Git; larger essential artifacts belong in versioned GitHub Release attachments. See the [storage and backup plan](docs/storage-and-backup.md). The first runtime records have been copied back locally and committed; experiment-specific transfer scripts remain to be implemented.
 
 ## File organization
 

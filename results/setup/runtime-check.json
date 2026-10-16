@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "scope": "CUDA and CLIP runtime only; synthetic image, no accuracy evaluation",
+  "python": "3.10.12",
+  "torch": "2.6.0+cu124",
+  "torchvision": "0.21.0+cu124",
+  "cuda_runtime": "12.4",
+  "gpu": "NVIDIA RTX A6000",
+  "device": "cuda:0",
+  "model": "ViT-B/16",
+  "logits_shape": [
+    1,
+    2
+  ],
+  "finite_logits": true
+}

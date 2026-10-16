@@ -1,6 +1,6 @@
 # Storage and backup plan
 
-Status: planning estimate, 2026-10-16. No server is connected and no transfer automation is implemented yet. Update the estimates after the first measured pilot.
+Status: planning estimate, 2026-10-16. The server is connected and the runtime has been verified. Its first small records were copied back locally and committed; experiment transfer automation is not implemented yet. Update the estimates after the first measured data pilot.
 
 ## Capacity
 
@@ -43,7 +43,7 @@ Per-example records must retain enough information to recalculate the reported c
 
 After each substantive completed experiment, collect its evidence bundle, copy it to local storage, and push the small results or attach the larger bundle to a versioned GitHub Release. Keep the exact code/configuration association in an artifact manifest. Retain meaningful failed or inconclusive runs as well.
 
-The local artifact archive will be outside the Git checkout; its exact path and the server paths will be set during server setup. Existing ignored checkpoint/cache paths remain ignored. Release attachments provide the GitHub copy of selected model weights without committing them to ordinary Git history.
+The local large-artifact archive will be outside the Git checkout; its exact path will be set when the first larger bundle is produced. The server checkout is configured in the ignored local `.env.server`. Existing ignored checkpoint/cache paths remain ignored. Release attachments provide the GitHub copy of selected model weights without committing them to ordinary Git history.
 
 A backup is complete only after its contents have been checked at the destination. Verify at least one bundle by downloading it from GitHub, opening the records, loading a selected checkpoint, and reproducing a summary table or figure. Before deleting unique server results or releasing the instance, confirm that all required local and GitHub copies are complete. Recomputable bulk caches are optional backups.
 
