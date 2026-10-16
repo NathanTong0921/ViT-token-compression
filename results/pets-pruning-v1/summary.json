@@ -1,0 +1,745 @@
+{
+  "run_type": "single_stage_pruning_development_pilot",
+  "started_utc": "2026-10-16T11:01:16.826175+00:00",
+  "code_commit": "cffe5165a630ae500cf4f99032210dc6620191ed",
+  "config": {
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "results/pets-baseline-v1",
+    "image_split": "val",
+    "task_splits": [
+      "train",
+      "val"
+    ],
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "batch_size": 64,
+    "num_workers": 4,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": [
+      147,
+      98,
+      49
+    ],
+    "random_seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "identity_atol": 1e-06,
+    "margin_quartile_edges": [
+      0.09612737409770489,
+      0.12876027822494507,
+      0.15853078663349152
+    ],
+    "margin_quartile_source": "All 21054 balanced train-pair rows on validation images in the unpruned pets-baseline-v1; fixed before pruning outcomes."
+  },
+  "identity": {
+    "image_count": 736,
+    "max_feature_error_vs_native": 0.0,
+    "max_feature_error_vs_saved_baseline": 0.0,
+    "max_score_error_vs_saved_baseline": 0.0,
+    "max_score_error_vs_native": 0.0,
+    "prediction_disagreements_37class": 0,
+    "prediction_disagreements_37class_vs_native": 0,
+    "atol": 1e-06,
+    "prediction_disagreements_binary": {
+      "train": 0,
+      "val": 0
+    },
+    "native_vs_saved_binary_disagreements": {
+      "train": 0,
+      "val": 0
+    },
+    "passed": true,
+    "wall_seconds": 3.86014671693556
+  },
+  "variants": [
+    {
+      "variant": "keep_all",
+      "method": "keep_all",
+      "keep_patch_tokens": 196,
+      "keep_fraction": 1.0,
+      "random_seed": null,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.8722826086956522,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": 0.0,
+        "baseline_correct_to_wrong_count": 0,
+        "baseline_wrong_to_correct_count": 0,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9910368025326475,
+            "accuracy_micro": 0.9910705804122732,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": 0.0,
+            "baseline_correct_count": 20866,
+            "new_errors": 0,
+            "recoveries": 0,
+            "new_error_rate_among_baseline_correct": 0.0,
+            "recovery_rate_among_baseline_wrong": 0.0,
+            "mean_geometric_margin_loss": 0.0
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9925438596491228,
+            "accuracy_micro": 0.9927147239263804,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": 0.0,
+            "baseline_correct_count": 2589,
+            "new_errors": 0,
+            "recoveries": 0,
+            "new_error_rate_among_baseline_correct": 0.0,
+            "recovery_rate_among_baseline_wrong": 0.0,
+            "mean_geometric_margin_loss": 0.0
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "attention_k147",
+      "method": "attention",
+      "keep_patch_tokens": 147,
+      "keep_fraction": 0.75,
+      "random_seed": null,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.8559782608695652,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -1.630434782608703,
+        "baseline_correct_to_wrong_count": 14,
+        "baseline_wrong_to_correct_count": 2,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9904704194697269,
+            "accuracy_micro": 0.9905006174598651,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -0.05699629524081873,
+            "baseline_correct_count": 20866,
+            "new_errors": 22,
+            "recoveries": 10,
+            "new_error_rate_among_baseline_correct": 0.001054346784242308,
+            "recovery_rate_among_baseline_wrong": 0.05319148936170213,
+            "mean_geometric_margin_loss": 0.003965797709810752
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9913676236044656,
+            "accuracy_micro": 0.9915644171779141,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -0.11503067484662788,
+            "baseline_correct_count": 2589,
+            "new_errors": 3,
+            "recoveries": 0,
+            "new_error_rate_among_baseline_correct": 0.0011587485515643105,
+            "recovery_rate_among_baseline_wrong": 0.0,
+            "mean_geometric_margin_loss": 0.004282555747544884
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "attention_k98",
+      "method": "attention",
+      "keep_patch_tokens": 98,
+      "keep_fraction": 0.5,
+      "random_seed": null,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.8206521739130435,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -5.163043478260876,
+        "baseline_correct_to_wrong_count": 47,
+        "baseline_wrong_to_correct_count": 9,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9882370399683419,
+            "accuracy_micro": 0.9882682625629334,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -0.28023178493398193,
+            "baseline_correct_count": 20866,
+            "new_errors": 85,
+            "recoveries": 26,
+            "new_error_rate_among_baseline_correct": 0.004073612575481645,
+            "recovery_rate_among_baseline_wrong": 0.13829787234042554,
+            "mean_geometric_margin_loss": 0.01293032336201483
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.989792663476874,
+            "accuracy_micro": 0.9900306748466258,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -0.26840490797546135,
+            "baseline_correct_count": 2589,
+            "new_errors": 7,
+            "recoveries": 0,
+            "new_error_rate_among_baseline_correct": 0.0027037466203167246,
+            "recovery_rate_among_baseline_wrong": 0.0,
+            "mean_geometric_margin_loss": 0.013220291977782512
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "attention_k49",
+      "method": "attention",
+      "keep_patch_tokens": 49,
+      "keep_fraction": 0.25,
+      "random_seed": null,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.7051630434782609,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -16.711956521739136,
+        "baseline_correct_to_wrong_count": 139,
+        "baseline_wrong_to_correct_count": 16,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9729719034428177,
+            "accuracy_micro": 0.9730692504987176,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -1.800132991355563,
+            "baseline_correct_count": 20866,
+            "new_errors": 432,
+            "recoveries": 53,
+            "new_error_rate_among_baseline_correct": 0.020703536854212595,
+            "recovery_rate_among_baseline_wrong": 0.28191489361702127,
+            "mean_geometric_margin_loss": 0.0349386856031508
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9766547049441786,
+            "accuracy_micro": 0.9769938650306749,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -1.5720858895705514,
+            "baseline_correct_count": 2589,
+            "new_errors": 43,
+            "recoveries": 2,
+            "new_error_rate_among_baseline_correct": 0.01660872923908845,
+            "recovery_rate_among_baseline_wrong": 0.10526315789473684,
+            "mean_geometric_margin_loss": 0.03553406476640128
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "random_s2026_k147",
+      "method": "random",
+      "keep_patch_tokens": 147,
+      "keep_fraction": 0.75,
+      "random_seed": 2026,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.8627717391304348,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -0.9510869565217406,
+        "baseline_correct_to_wrong_count": 14,
+        "baseline_wrong_to_correct_count": 7,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9892758211317769,
+            "accuracy_micro": 0.9893131946423482,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -0.17573857699250128,
+            "baseline_correct_count": 20866,
+            "new_errors": 54,
+            "recoveries": 17,
+            "new_error_rate_among_baseline_correct": 0.0025879421067765743,
+            "recovery_rate_among_baseline_wrong": 0.09042553191489362,
+            "mean_geometric_margin_loss": 0.005410277464859376
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9902113237639553,
+            "accuracy_micro": 0.9904141104294478,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -0.23006134969325576,
+            "baseline_correct_count": 2589,
+            "new_errors": 6,
+            "recoveries": 0,
+            "new_error_rate_among_baseline_correct": 0.002317497103128621,
+            "recovery_rate_among_baseline_wrong": 0.0,
+            "mean_geometric_margin_loss": 0.0053431438755459975
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "random_s2026_k98",
+      "method": "random",
+      "keep_patch_tokens": 98,
+      "keep_fraction": 0.5,
+      "random_seed": 2026,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.8478260869565217,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -2.445652173913049,
+        "baseline_correct_to_wrong_count": 34,
+        "baseline_wrong_to_correct_count": 16,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9854694301543331,
+            "accuracy_micro": 0.9855134416262943,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -0.5557138785978966,
+            "baseline_correct_count": 20866,
+            "new_errors": 157,
+            "recoveries": 40,
+            "new_error_rate_among_baseline_correct": 0.007524202051183744,
+            "recovery_rate_among_baseline_wrong": 0.2127659574468085,
+            "mean_geometric_margin_loss": 0.015194580066829715
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9860047846889952,
+            "accuracy_micro": 0.9861963190184049,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -0.6518404907975506,
+            "baseline_correct_count": 2589,
+            "new_errors": 19,
+            "recoveries": 2,
+            "new_error_rate_among_baseline_correct": 0.007338740826573967,
+            "recovery_rate_among_baseline_wrong": 0.10526315789473684,
+            "mean_geometric_margin_loss": 0.015336029663452279
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "random_s2026_k49",
+      "method": "random",
+      "keep_patch_tokens": 49,
+      "keep_fraction": 0.25,
+      "random_seed": 2026,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.5692934782608695,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -30.298913043478272,
+        "baseline_correct_to_wrong_count": 236,
+        "baseline_wrong_to_correct_count": 13,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.919400474871389,
+            "accuracy_micro": 0.9195877267977581,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -7.148285361451512,
+            "baseline_correct_count": 20866,
+            "new_errors": 1570,
+            "recoveries": 65,
+            "new_error_rate_among_baseline_correct": 0.07524202051183744,
+            "recovery_rate_among_baseline_wrong": 0.34574468085106386,
+            "mean_geometric_margin_loss": 0.05231909273962131
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9222488038277511,
+            "accuracy_micro": 0.9225460122699386,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -7.0168711656441785,
+            "baseline_correct_count": 2589,
+            "new_errors": 188,
+            "recoveries": 5,
+            "new_error_rate_among_baseline_correct": 0.07261490923136346,
+            "recovery_rate_among_baseline_wrong": 0.2631578947368421,
+            "mean_geometric_margin_loss": 0.05220515790476266
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "random_s2027_k147",
+      "method": "random",
+      "keep_patch_tokens": 147,
+      "keep_fraction": 0.75,
+      "random_seed": 2027,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.8478260869565217,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -2.445652173913049,
+        "baseline_correct_to_wrong_count": 24,
+        "baseline_wrong_to_correct_count": 6,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9899510288880096,
+            "accuracy_micro": 0.9899781514201577,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -0.10924289921155905,
+            "baseline_correct_count": 20866,
+            "new_errors": 38,
+            "recoveries": 15,
+            "new_error_rate_among_baseline_correct": 0.0018211444455094412,
+            "recovery_rate_among_baseline_wrong": 0.0797872340425532,
+            "mean_geometric_margin_loss": 0.00463278062662154
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9902113237639553,
+            "accuracy_micro": 0.9904141104294478,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -0.23006134969325576,
+            "baseline_correct_count": 2589,
+            "new_errors": 6,
+            "recoveries": 0,
+            "new_error_rate_among_baseline_correct": 0.002317497103128621,
+            "recovery_rate_among_baseline_wrong": 0.0,
+            "mean_geometric_margin_loss": 0.00465898076088098
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "random_s2027_k98",
+      "method": "random",
+      "keep_patch_tokens": 98,
+      "keep_fraction": 0.5,
+      "random_seed": 2027,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.8247282608695652,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -4.7554347826087024,
+        "baseline_correct_to_wrong_count": 47,
+        "baseline_wrong_to_correct_count": 12,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9873887020182034,
+            "accuracy_micro": 0.9874133181343213,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -0.36572622779519337,
+            "baseline_correct_count": 20866,
+            "new_errors": 110,
+            "recoveries": 33,
+            "new_error_rate_among_baseline_correct": 0.00527173392121154,
+            "recovery_rate_among_baseline_wrong": 0.17553191489361702,
+            "mean_geometric_margin_loss": 0.014032097067247978
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9898524720893142,
+            "accuracy_micro": 0.9900306748466258,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -0.26840490797546135,
+            "baseline_correct_count": 2589,
+            "new_errors": 8,
+            "recoveries": 1,
+            "new_error_rate_among_baseline_correct": 0.003089996137504828,
+            "recovery_rate_among_baseline_wrong": 0.05263157894736842,
+            "mean_geometric_margin_loss": 0.013256845562044109
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "random_s2027_k49",
+      "method": "random",
+      "keep_patch_tokens": 49,
+      "keep_fraction": 0.25,
+      "random_seed": 2027,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.563858695652174,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -30.842391304347828,
+        "baseline_correct_to_wrong_count": 241,
+        "baseline_wrong_to_correct_count": 14,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9286975662841312,
+            "accuracy_micro": 0.9288496247743897,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -6.222095563788354,
+            "baseline_correct_count": 20866,
+            "new_errors": 1367,
+            "recoveries": 57,
+            "new_error_rate_among_baseline_correct": 0.06551327518451068,
+            "recovery_rate_among_baseline_wrong": 0.30319148936170215,
+            "mean_geometric_margin_loss": 0.05021290363191305
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9276714513556621,
+            "accuracy_micro": 0.9279141104294478,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -6.480061349693256,
+            "baseline_correct_count": 2589,
+            "new_errors": 173,
+            "recoveries": 4,
+            "new_error_rate_among_baseline_correct": 0.0668211664735419,
+            "recovery_rate_among_baseline_wrong": 0.21052631578947367,
+            "mean_geometric_margin_loss": 0.04886785897072213
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "random_s2028_k147",
+      "method": "random",
+      "keep_patch_tokens": 147,
+      "keep_fraction": 0.75,
+      "random_seed": 2028,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.8464673913043478,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -2.5815217391304435,
+        "baseline_correct_to_wrong_count": 24,
+        "baseline_wrong_to_correct_count": 5,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9898916699643847,
+            "accuracy_micro": 0.989930654507457,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -0.11399259048162635,
+            "baseline_correct_count": 20866,
+            "new_errors": 42,
+            "recoveries": 18,
+            "new_error_rate_among_baseline_correct": 0.0020128438608262244,
+            "recovery_rate_among_baseline_wrong": 0.09574468085106383,
+            "mean_geometric_margin_loss": 0.005227032171078358
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9890151515151514,
+            "accuracy_micro": 0.9892638036809815,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -0.34509202453988364,
+            "baseline_correct_count": 2589,
+            "new_errors": 9,
+            "recoveries": 0,
+            "new_error_rate_among_baseline_correct": 0.0034762456546929316,
+            "recovery_rate_among_baseline_wrong": 0.0,
+            "mean_geometric_margin_loss": 0.005218536183203323
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "random_s2028_k98",
+      "method": "random",
+      "keep_patch_tokens": 98,
+      "keep_fraction": 0.5,
+      "random_seed": 2028,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.8152173913043478,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -5.7065217391304435,
+        "baseline_correct_to_wrong_count": 53,
+        "baseline_wrong_to_correct_count": 11,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.985622774040364,
+            "accuracy_micro": 0.985703429277097,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -0.5367151135176274,
+            "baseline_correct_count": 20866,
+            "new_errors": 153,
+            "recoveries": 40,
+            "new_error_rate_among_baseline_correct": 0.007332502635866961,
+            "recovery_rate_among_baseline_wrong": 0.2127659574468085,
+            "mean_geometric_margin_loss": 0.015694884653755296
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9850677830940987,
+            "accuracy_micro": 0.9854294478527608,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -0.7285276073619618,
+            "baseline_correct_count": 2589,
+            "new_errors": 20,
+            "recoveries": 1,
+            "new_error_rate_among_baseline_correct": 0.00772499034376207,
+            "recovery_rate_among_baseline_wrong": 0.05263157894736842,
+            "mean_geometric_margin_loss": 0.01605535515124305
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    },
+    {
+      "variant": "random_s2028_k49",
+      "method": "random",
+      "keep_patch_tokens": 49,
+      "keep_fraction": 0.25,
+      "random_seed": 2028,
+      "metrics": {
+        "image_count": 736,
+        "accuracy_37class": 0.5489130434782609,
+        "baseline_accuracy_37class": 0.8722826086956522,
+        "net_accuracy_change_pp": -32.33695652173913,
+        "baseline_correct_to_wrong_count": 251,
+        "baseline_wrong_to_correct_count": 13,
+        "binary": {
+          "train": {
+            "task_count": 532,
+            "example_count": 21054,
+            "accuracy_macro": 0.9197145825089038,
+            "accuracy_micro": 0.9199202051866628,
+            "baseline_accuracy_macro": 0.9910368025326475,
+            "baseline_accuracy_micro": 0.9910705804122732,
+            "net_accuracy_change_pp": -7.115037522561041,
+            "baseline_correct_count": 20866,
+            "new_errors": 1572,
+            "recoveries": 74,
+            "new_error_rate_among_baseline_correct": 0.07533787021949583,
+            "recovery_rate_among_baseline_wrong": 0.39361702127659576,
+            "mean_geometric_margin_loss": 0.053128429897722027
+          },
+          "val": {
+            "task_count": 66,
+            "example_count": 2608,
+            "accuracy_macro": 0.9198963317384371,
+            "accuracy_micro": 0.9202453987730062,
+            "baseline_accuracy_macro": 0.9925438596491228,
+            "baseline_accuracy_micro": 0.9927147239263804,
+            "net_accuracy_change_pp": -7.2469325153374236,
+            "baseline_correct_count": 2589,
+            "new_errors": 191,
+            "recoveries": 2,
+            "new_error_rate_among_baseline_correct": 0.07377365778292777,
+            "recovery_rate_among_baseline_wrong": 0.10526315789473684,
+            "mean_geometric_margin_loss": 0.053611736887086286
+          }
+        },
+        "interpretation_scope": "Compression diagnostics only; no inference speed claim or test of H1/H2."
+      }
+    }
+  ],
+  "prompts": [
+    "a photo of a abyssinian, a type of pet.",
+    "a photo of a american bulldog, a type of pet.",
+    "a photo of a american pit bull terrier, a type of pet.",
+    "a photo of a basset hound, a type of pet.",
+    "a photo of a beagle, a type of pet.",
+    "a photo of a bengal, a type of pet.",
+    "a photo of a birman, a type of pet.",
+    "a photo of a bombay, a type of pet.",
+    "a photo of a boxer, a type of pet.",
+    "a photo of a british shorthair, a type of pet.",
+    "a photo of a chihuahua, a type of pet.",
+    "a photo of a egyptian mau, a type of pet.",
+    "a photo of a english cocker spaniel, a type of pet.",
+    "a photo of a english setter, a type of pet.",
+    "a photo of a german shorthaired, a type of pet.",
+    "a photo of a great pyrenees, a type of pet.",
+    "a photo of a havanese, a type of pet.",
+    "a photo of a japanese chin, a type of pet.",
+    "a photo of a keeshond, a type of pet.",
+    "a photo of a leonberger, a type of pet.",
+    "a photo of a maine coon, a type of pet.",
+    "a photo of a miniature pinscher, a type of pet.",
+    "a photo of a newfoundland, a type of pet.",
+    "a photo of a persian, a type of pet.",
+    "a photo of a pomeranian, a type of pet.",
+    "a photo of a pug, a type of pet.",
+    "a photo of a ragdoll, a type of pet.",
+    "a photo of a russian blue, a type of pet.",
+    "a photo of a saint bernard, a type of pet.",
+    "a photo of a samoyed, a type of pet.",
+    "a photo of a scottish terrier, a type of pet.",
+    "a photo of a shiba inu, a type of pet.",
+    "a photo of a siamese, a type of pet.",
+    "a photo of a sphynx, a type of pet.",
+    "a photo of a staffordshire bull terrier, a type of pet.",
+    "a photo of a wheaten terrier, a type of pet.",
+    "a photo of a yorkshire terrier, a type of pet."
+  ],
+  "prune_after_completed_blocks": 6,
+  "total_blocks": 12,
+  "patch_tokens_before": 196,
+  "cls_always_retained": true,
+  "selection_scope": "One image-only selection per image, shared by all candidate-class tasks.",
+  "attention_definition": "Mean over heads of CLS-to-patch attention in the last completed prefix block; scoring is recomputed beside the unchanged native block forward.",
+  "attention_score_precision": "Layer normalization and Q/K projection follow the backbone dtype; QK products, softmax, and head averaging use float32.",
+  "random_definition": "Per-image NumPy permutations in manifest order; nested top-k sets within each seed; selected tokens gathered in original spatial order.",
+  "timing_scope": "Prefix states reused in RAM across variants; wall times include evaluation/output and cannot establish inference speedup.",
+  "pruning_sweep_wall_seconds": 9.423033826053143,
+  "total_wall_seconds": 16.488301046891138,
+  "prefix_cache_bytes": 222707712,
+  "gpu": "NVIDIA RTX A6000",
+  "peak_allocated_gpu_bytes": 756246016,
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4"
+  }
+}

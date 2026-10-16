@@ -13,7 +13,7 @@ class SingleStagePruner:
     """
 
     attention_score_precision = (
-        "Layer normalization and Q/K projection follow the backbone dtype; "
+        "Layer normalization uses the original CLIP LayerNorm; Q/K projection uses the backbone dtype; "
         "QK products, softmax, and head averaging use float32."
     )
 

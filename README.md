@@ -7,7 +7,7 @@ This project studies whether changing the competing classes changes which visual
 The main study uses frozen CLIP ViT-B/16 on Oxford-IIIT Pets, with controlled cross-task selection, strong shared-selection baselines, and matched conditional/unconditional selectors. Flowers102 provides validation; a targeted ViT-L/14 check is planned if time permits.
 
 `Project_Proposal.pdf` is the proposal for submission and the reference plan for project execution. 
-Current status: Oxford Pets manifests are fixed and the original frozen CLIP ViT-B/16 baseline has run on 736 development images: **87.23% full 37-class accuracy**, and **99.25% macro accuracy across 66 validation candidate pairs**. No official test images or test pairs have been evaluated. See the [results and per-example artifacts](results/pets-baseline-v1/README.md), [experiment record](docs/experiments/2026-10-16-pets-baseline.md), and [Pets protocol and commands](docs/pets-protocol.md). Pruning and selector experiments follow this baseline.
+Current status: single-stage pruning is implemented after block 6, and retaining all tokens **exactly reproduces the original CLIP baseline** on 736 development images. At 25% patch retention, binary macro accuracy across 66 validation pairs is **97.66% with attention selection** and **92.33% with random selection averaged over three seeds**, versus 99.25% uncompressed. No official test images or test pairs have been evaluated. See the [pruning results and figure](results/pets-pruning-v1/README.md), [pruning protocol](docs/pruning-pilot.md), [original baseline](results/pets-baseline-v1/README.md), and [Pets data protocol](docs/pets-protocol.md). Task-specific and strong shared-selection diagnostics are next.
 
 ## Working approach
 
@@ -24,7 +24,7 @@ Current status: Oxford Pets manifests are fixed and the original frozen CLIP ViT
 
 Use [the experiment record template](docs/experiment-log.md) for each substantive experiment. Negative and inconclusive results should retain the same provenance as positive results.
 
-Paper evidence will be retained on the server, locally, and on GitHub: per-example results, figure source data, figures, configurations, and selected selector checkpoints. Small files belong in Git; larger essential artifacts belong in versioned GitHub Release attachments. See the [storage and backup plan](docs/storage-and-backup.md). Runtime records and the first baseline's embeddings, scores and predictions have been copied back locally and committed. Transfer-only archives are removed after verification.
+Paper evidence will be retained on the server, locally, and on GitHub: per-example results, figure source data, figures, configurations, and selected selector checkpoints. Small files belong in Git; larger essential artifacts belong in versioned GitHub Release attachments. See the [storage and backup plan](docs/storage-and-backup.md). Runtime records, the original baseline, and the first pruning pilot's embeddings, scores, retained positions and plots have been copied back locally and committed. Transfer-only archives are removed after verification.
 
 ## File organization
 

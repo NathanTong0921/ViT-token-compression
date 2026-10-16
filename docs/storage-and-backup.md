@@ -1,6 +1,8 @@
 # Storage and backup plan
 
-Status, 2026-10-16: the first Pets development baseline is complete. Its approximately 4.1 MB result bundle, including embeddings and per-example predictions, was copied back locally and checked. The server project currently occupies approximately 6.5 GiB, including the environment, B/16 checkpoint and raw Pets data; no token-prefix or selection-supervision caches have been generated. The capacity figures below remain planning allowances for later experiments.
+Status, 2026-10-16: the first Pets development baseline is complete. Its approximately 4.1 MB result bundle, including embeddings and per-example predictions, was copied back locally and checked. The server project currently occupies approximately 6.5 GiB, including the environment, B/16 checkpoint and raw Pets data; no persistent token-prefix or selection-supervision caches have been generated. The capacity figures below remain planning allowances for later experiments.
+
+The single-stage pruning pilot adds approximately 21.6 MB of scores, embeddings, retained positions, metrics and figure exports under `results/pets-pruning-v1/`. These are small enough for ordinary Git. Its approximately 223 MB prefix cache existed only in host RAM and was released after the run; no persistent prefix cache or selection-supervision cache was created.
 
 ## Capacity
 
