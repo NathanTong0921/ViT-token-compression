@@ -74,6 +74,7 @@ def run(config, output):
     native = np.concatenate(native)
     keep_all = np.concatenate(keep_all)
     keep_scores = keep_all @ text.T
+    native_scores = native @ text.T
     attention_scores = torch.cat(attentions)
     n_patches = attention_scores.shape[1]
     identity = {
@@ -81,13 +82,16 @@ def run(config, output):
         "max_feature_error_vs_native": float(np.max(np.abs(keep_all - native))),
         "max_feature_error_vs_saved_baseline": float(np.max(np.abs(keep_all - reference_features))),
         "max_score_error_vs_saved_baseline": float(np.max(np.abs(keep_scores - reference_scores))),
+        "max_score_error_vs_native": float(np.max(np.abs(keep_scores - native_scores))),
         "prediction_disagreements_37class": int(np.sum(keep_scores.argmax(1) != reference_scores.argmax(1))),
+        "prediction_disagreements_37class_vs_native": int(np.sum(keep_scores.argmax(1) != native_scores.argmax(1))),
         "atol": config["identity_atol"],
     }
     for key in ("max_feature_error_vs_native", "max_feature_error_vs_saved_baseline",
-                "max_score_error_vs_saved_baseline"):
+                "max_score_error_vs_saved_baseline", "max_score_error_vs_native"):
         assert identity[key] <= config["identity_atol"], identity
     assert identity["prediction_disagreements_37class"] == 0, identity
+    assert identity["prediction_disagreements_37class_vs_native"] == 0, identity
     evaluation_args = dict(baseline_scores=reference_scores, text_features=text, labels=labels,
                            image_ids=image_ids.tolist(), images=images, tasks=tasks,
                            image_split=config["image_split"], task_splits=config["task_splits"],
@@ -99,6 +103,12 @@ def run(config, output):
         for split, values in keep_metrics["binary"].items()
     }
     assert all(value == 0 for value in identity["prediction_disagreements_binary"].values()), identity
+    native_metrics, _, _ = evaluate_variant(native_scores, **evaluation_args)
+    identity["native_vs_saved_binary_disagreements"] = {
+        split: values["new_errors"] + values["recoveries"]
+        for split, values in native_metrics["binary"].items()
+    }
+    assert all(value == 0 for value in identity["native_vs_saved_binary_disagreements"].values()), identity
     identity["passed"] = True
     identity["wall_seconds"] = time.perf_counter() - before_identity
     (output / "identity.json").write_text(json.dumps(identity, indent=2) + "\n")
