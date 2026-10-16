@@ -4,7 +4,9 @@
 
 This project studies whether changing the competing classes changes which visual tokens are useful for classification, and whether a lightweight task-conditioned selector can learn and generalize that advantage.
 
-The main study uses frozen CLIP ViT-B/16 on Oxford-IIIT Pets, with controlled cross-task selection, strong shared-selection baselines, and matched conditional/unconditional selectors. Flowers102 provides validation; a targeted ViT-L/14 check is planned if time permits. The full project proposal remains the execution plan; the one-page submitted proposal is a summary.
+The main study uses frozen CLIP ViT-B/16 on Oxford-IIIT Pets, with controlled cross-task selection, strong shared-selection baselines, and matched conditional/unconditional selectors. Flowers102 provides validation; a targeted ViT-L/14 check is planned if time permits.
+
+`Project_Proposal_Full.pdf` is the proposal for submission and the reference plan for project execution. Course guidance specifies one page as the minimum, not a strict maximum, and permits additional experimental details, references, and supporting appendices. The earlier one-page version is retained as a condensed summary.
 
 Current status: repository setup. No experiment results are claimed yet.
 
