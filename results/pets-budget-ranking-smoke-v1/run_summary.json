@@ -1,0 +1,120 @@
+{
+  "run_type": "budget_context_additive_ranking_comparison",
+  "started_utc": "2026-10-18T09:09:45.601048+00:00",
+  "code_commit": "dee4d0c48801525248e42ada70a14f16ec5d02f0",
+  "config": {
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "results/pets-baseline-v1",
+    "image_split": "val",
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "batch_size": 64,
+    "num_workers": 4,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": [
+      147,
+      98,
+      49
+    ],
+    "identity_atol": 1e-06,
+    "task_split": "val",
+    "images_per_class": 1,
+    "candidate_count": 64,
+    "suffix_batch_size": 64,
+    "near_full_context": 192,
+    "probe_count": 512,
+    "holdout_count": 128,
+    "mask_seed": 2031,
+    "ridge": 0.01
+  },
+  "image_count": 36,
+  "task_count": 66,
+  "identity": {
+    "max_feature_error": 0.0,
+    "max_feature_error_vs_native": 0.0,
+    "max_score_error": 0.0,
+    "prediction_disagreements_37class": 0,
+    "prediction_disagreements_binary": 0
+  },
+  "exchange_row_count_per_arm": 651,
+  "probe_design": {
+    "192": {
+      "train_seed": 3423134599,
+      "holdout_seed": null,
+      "probe_count": 512,
+      "holdout_count": 0
+    },
+    "147": {
+      "train_seed": 1163859094,
+      "holdout_seed": 1047126236,
+      "probe_count": 512,
+      "holdout_count": 128
+    },
+    "98": {
+      "train_seed": 3785732041,
+      "holdout_seed": 4219432775,
+      "probe_count": 512,
+      "holdout_count": 128
+    },
+    "49": {
+      "train_seed": 2738241488,
+      "holdout_seed": 3958992813,
+      "probe_count": 512,
+      "holdout_count": 128
+    }
+  },
+  "ranking_objective": "Ridge regression of masked-image cosine scores on centered, standardized fixed-cardinality masks; coefficients mapped to signed geometric task margins.",
+  "representation_objective": "The 38th fitted response is cosine similarity to the original uncompressed image feature.",
+  "mask_sharing": "Each context uses the same fixed design across all images; target-context holdouts are disjoint from that context's training masks and shared across prediction arms.",
+  "candidate_bank": "Identical generator, candidate count, seed and direct CLIP evaluation in both arms; bank contents differ where model-based rankings differ.",
+  "budget_scope": "Equal probe counts, not equal GPU time: retained sequence lengths differ by context. The 192-token fit is reused across all target budgets.",
+  "interpretation_scope": "Label-informed development experiment. No learned selector, official test evaluation, global optimization or deployment claim.",
+  "cost": {
+    "identity_and_prefix_seconds": 5.30752670019865,
+    "context_seconds": {
+      "192": {
+        "probe_seconds": 6.439385276287794,
+        "fit_seconds": 0.01246438454836607,
+        "holdout_seconds": 0.0
+      },
+      "147": {
+        "probe_seconds": 5.091462281532586,
+        "fit_seconds": 0.013081174343824387,
+        "holdout_seconds": 1.273504827171564
+      },
+      "98": {
+        "probe_seconds": 3.4247566373087466,
+        "fit_seconds": 0.012950599193572998,
+        "holdout_seconds": 0.8580688908696175
+      },
+      "49": {
+        "probe_seconds": 1.8335021040402353,
+        "fit_seconds": 0.012909249402582645,
+        "holdout_seconds": 0.4594692634418607
+      }
+    },
+    "selection_seconds": {
+      "near_full": 12.860775545239449,
+      "budget_matched": 12.833294421900064
+    },
+    "save_seconds": 2.3614844512194395,
+    "suffix_forward_batches": 2886,
+    "suffix_forward_examples": 184704,
+    "unique_requested_suffix_examples": 172320,
+    "suffix_counter_scope": "Probe, holdout and candidate evaluation only; excludes native and keep-all identity passes.",
+    "total_wall_seconds": 52.90589580312371,
+    "training_seconds": 0,
+    "peak_allocated_gpu_bytes": 755721728
+  },
+  "gpu": "NVIDIA RTX A6000",
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4"
+  }
+}

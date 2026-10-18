@@ -1,0 +1,2005 @@
+{
+  "aggregation": "mean within each image, then equal-weight mean across images",
+  "interval": "paired image-cluster bootstrap percentile 95% interval",
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 2030,
+  "accuracy_scope": "Shared-anchor image panel; not the full balanced binary benchmark.",
+  "selection_scope": "Label-informed offline diagnostics, not deployable predictions or proof of learnability.",
+  "h2_geometry": "Exchange loss = 0.5 * (z_A-z_B) dot (d_A-d_B), bounded in absolute value by ||z_A-z_B|| * sin(theta/2). Normalized alignment removes this mechanical scale where nonzero; neither normalization nor regression establishes causality.",
+  "budgets": [
+    {
+      "keep_patch_tokens": 49,
+      "row_count": 217,
+      "image_count": 31,
+      "metrics": {
+        "own_margin": {
+          "mean": 0.10322571010974836,
+          "ci95": [
+            0.08572416000331855,
+            0.12052983587810763
+          ]
+        },
+        "swapped_margin": {
+          "mean": 0.08584683477072871,
+          "ci95": [
+            0.06967764043539067,
+            0.10137263828727579
+          ]
+        },
+        "exchange_margin_loss": {
+          "mean": 0.017378875339019634,
+          "ci95": [
+            0.013839845225529376,
+            0.02118388428275163
+          ]
+        },
+        "task_search_own_margin": {
+          "mean": 0.16798636552902044,
+          "ci95": [
+            0.15925669869066097,
+            0.17667050279458024
+          ]
+        },
+        "shared_proxy_margin": {
+          "mean": 0.10304483599445698,
+          "ci95": [
+            0.08311997797383498,
+            0.12312580654111498
+          ]
+        },
+        "own_minus_shared_proxy_margin": {
+          "mean": 0.00018087411529138373,
+          "ci95": [
+            -0.006203679407558894,
+            0.005747482427471322
+          ]
+        },
+        "task_search_own_minus_shared_proxy_margin": {
+          "mean": 0.06494152953456347,
+          "ci95": [
+            0.04540147553521892,
+            0.08492372216246222
+          ]
+        },
+        "attention_margin": {
+          "mean": 0.08634158130863913,
+          "ci95": [
+            0.0750203636034711,
+            0.09655525866504286
+          ]
+        },
+        "own_minus_attention_margin": {
+          "mean": 0.01688412880110923,
+          "ci95": [
+            7.808498289600605e-05,
+            0.03507842654021088
+          ]
+        },
+        "representation_margin": {
+          "mean": 0.10569204810517518,
+          "ci95": [
+            0.09393185864316053,
+            0.11808186660930957
+          ]
+        },
+        "own_minus_representation_margin": {
+          "mean": -0.002466337995426823,
+          "ci95": [
+            -0.024087322874517723,
+            0.018190019258282928
+          ]
+        },
+        "random_0_margin": {
+          "mean": 0.07228025622114341,
+          "ci95": [
+            0.0622245015049404,
+            0.08212393498036151
+          ]
+        },
+        "own_minus_random_0_margin": {
+          "mean": 0.030945453888604965,
+          "ci95": [
+            0.015768812134167743,
+            0.04669368053222028
+          ]
+        },
+        "shared_search_mean_margin": {
+          "mean": 0.16291259081115783,
+          "ci95": [
+            0.15400650512149555,
+            0.1720687628767601
+          ]
+        },
+        "own_minus_shared_search_mean_margin": {
+          "mean": -0.05968688070140948,
+          "ci95": [
+            -0.0785700443280931,
+            -0.041435829651332995
+          ]
+        },
+        "task_search_own_minus_shared_search_mean_margin": {
+          "mean": 0.005073774717862614,
+          "ci95": [
+            0.003830808664853764,
+            0.006263613483601016
+          ]
+        },
+        "shared_search_maxmin_margin": {
+          "mean": 0.1600764045082662,
+          "ci95": [
+            0.15095707130276476,
+            0.1694458575350892
+          ]
+        },
+        "own_minus_shared_search_maxmin_margin": {
+          "mean": -0.05685069439851786,
+          "ci95": [
+            -0.0758901187921021,
+            -0.03855887749082855
+          ]
+        },
+        "task_search_own_minus_shared_search_maxmin_margin": {
+          "mean": 0.007909961020754232,
+          "ci95": [
+            0.006194458120772918,
+            0.009711534579394644
+          ]
+        },
+        "own_accuracy": {
+          "mean": 0.95,
+          "ci95": [
+            0.8886962365591397,
+            0.9946236559139785
+          ]
+        },
+        "swapped_accuracy": {
+          "mean": 0.8997695852534562,
+          "ci95": [
+            0.829543010752688,
+            0.9554857910906297
+          ]
+        },
+        "exchange_accuracy_loss": {
+          "mean": 0.05023041474654378,
+          "ci95": [
+            0.01152073732718894,
+            0.09916282642089091
+          ]
+        },
+        "task_search_own_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "shared_proxy_accuracy": {
+          "mean": 0.9360215053763441,
+          "ci95": [
+            0.8741801075268817,
+            0.9833333333333333
+          ]
+        },
+        "own_minus_shared_proxy_accuracy": {
+          "mean": 0.013978494623655914,
+          "ci95": [
+            0.0,
+            0.03120967741935481
+          ]
+        },
+        "task_search_own_minus_shared_proxy_accuracy": {
+          "mean": 0.06397849462365592,
+          "ci95": [
+            0.016666666666666666,
+            0.12581989247311828
+          ]
+        },
+        "attention_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_attention_accuracy": {
+          "mean": -0.05,
+          "ci95": [
+            -0.11130376344086022,
+            -0.005376344086021505
+          ]
+        },
+        "representation_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_representation_accuracy": {
+          "mean": -0.05,
+          "ci95": [
+            -0.11130376344086022,
+            -0.005376344086021505
+          ]
+        },
+        "random_0_accuracy": {
+          "mean": 0.9182795698924731,
+          "ci95": [
+            0.8661290322580646,
+            0.960228494623656
+          ]
+        },
+        "own_minus_random_0_accuracy": {
+          "mean": 0.031720430107526884,
+          "ci95": [
+            -0.007526881720430108,
+            0.07635752688172041
+          ]
+        },
+        "shared_search_mean_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_shared_search_mean_accuracy": {
+          "mean": -0.05,
+          "ci95": [
+            -0.11130376344086022,
+            -0.005376344086021505
+          ]
+        },
+        "task_search_own_minus_shared_search_mean_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "shared_search_maxmin_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_shared_search_maxmin_accuracy": {
+          "mean": -0.05,
+          "ci95": [
+            -0.11130376344086022,
+            -0.005376344086021505
+          ]
+        },
+        "task_search_own_minus_shared_search_maxmin_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "overlap_fraction_task_ab": {
+          "mean": 0.5965735602996958,
+          "ci95": [
+            0.5670066459763629,
+            0.6295709113138342
+          ]
+        },
+        "selection_feature_distance": {
+          "mean": 0.339289787459758,
+          "ci95": [
+            0.26937944189154645,
+            0.41160574722814774
+          ]
+        }
+      },
+      "valid_exchange_alignment": {
+        "row_count": 217,
+        "image_count": 31,
+        "excluded_row_count": 0,
+        "minimum_scale_exclusive": 1e-06,
+        "mean": 0.13225994401202118,
+        "ci95": [
+          0.1104099533421288,
+          0.154628117836596
+        ]
+      },
+      "max_abs_projection_identity_residual": 1.7508864402770996e-07,
+      "h2": {
+        "raw_exchange_loss": {
+          "status": "exploratory",
+          "row_count": 217,
+          "image_count": 31,
+          "estimator": "least squares with inverse within-image row-count weights",
+          "control_columns": [
+            "intercept",
+            "baseline_margin_mean",
+            "baseline_margin_abs_difference",
+            "baseline_margin_mean_squared",
+            "baseline_margin_abs_difference_squared",
+            "baseline_margin_mean_times_abs_difference"
+          ],
+          "angle_scale": "angle_degrees / 90",
+          "coefficients": {
+            "intercept": 0.019562157766880393,
+            "baseline_margin_mean": -0.11197207133378377,
+            "baseline_margin_abs_difference": -0.14299096853555868,
+            "baseline_margin_mean_squared": 0.14703325333358006,
+            "baseline_margin_abs_difference_squared": 2.497304617769898,
+            "baseline_margin_mean_times_abs_difference": -0.882040656627171,
+            "angle_per_90_degrees": 0.020072943764727947
+          },
+          "design_rank": 7,
+          "design_column_count": 7,
+          "rank_deficient": false,
+          "angle_identifiable_after_controls": true,
+          "angle_coefficient": 0.020072943764727947,
+          "angle_coefficient_ci95": [
+            -0.007878688481623482,
+            0.04401994372155945
+          ],
+          "bootstrap_replicates": 300,
+          "bootstrap_identifiable_replicates": 300,
+          "bootstrap_rank_deficient_replicates": 0,
+          "cv_seed": 2030,
+          "cv_folds": 5,
+          "fold_details": [
+            {
+              "fold": 0,
+              "test_image_count": 7,
+              "train_image_count": 24,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 1,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 2,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 3,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 4,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            }
+          ],
+          "cv_controls_mse": 0.00029277482643803653,
+          "cv_controls_plus_angle_mse": 0.0002977315617262212,
+          "cv_mse_reduction_from_angle": -4.9567352881845935e-06,
+          "interpretation": "Descriptive association, not causality. Rank-deficient fits use the least-squares minimum-norm solution. Repeated task rows are clustered by image. Cross-validation holds out images, not unseen class combinations."
+        },
+        "feature_distance_adjusted_exchange_loss": {
+          "status": "exploratory",
+          "row_count": 217,
+          "image_count": 31,
+          "estimator": "least squares with inverse within-image row-count weights",
+          "control_columns": [
+            "intercept",
+            "baseline_margin_mean",
+            "baseline_margin_abs_difference",
+            "baseline_margin_mean_squared",
+            "baseline_margin_abs_difference_squared",
+            "baseline_margin_mean_times_abs_difference",
+            "selection_feature_distance"
+          ],
+          "angle_scale": "angle_degrees / 90",
+          "coefficients": {
+            "intercept": 0.015124764237294214,
+            "baseline_margin_mean": -0.15262544224866587,
+            "baseline_margin_abs_difference": -0.18548726907582183,
+            "baseline_margin_mean_squared": 0.4177144508997701,
+            "baseline_margin_abs_difference_squared": 2.822866854162825,
+            "baseline_margin_mean_times_abs_difference": -0.6559325680988118,
+            "selection_feature_distance": 0.01660522568574247,
+            "angle_per_90_degrees": 0.018744336155115546
+          },
+          "design_rank": 8,
+          "design_column_count": 8,
+          "rank_deficient": false,
+          "angle_identifiable_after_controls": true,
+          "angle_coefficient": 0.018744336155115546,
+          "angle_coefficient_ci95": [
+            -0.008161515001859299,
+            0.04351818323983792
+          ],
+          "bootstrap_replicates": 300,
+          "bootstrap_identifiable_replicates": 300,
+          "bootstrap_rank_deficient_replicates": 0,
+          "cv_seed": 2030,
+          "cv_folds": 5,
+          "fold_details": [
+            {
+              "fold": 0,
+              "test_image_count": 7,
+              "train_image_count": 24,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 1,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 2,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 3,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 4,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            }
+          ],
+          "cv_controls_mse": 0.0002638875695964023,
+          "cv_controls_plus_angle_mse": 0.00026724159998158046,
+          "cv_mse_reduction_from_angle": -3.3540303851781467e-06,
+          "interpretation": "Descriptive association, not causality. Rank-deficient fits use the least-squares minimum-norm solution. Repeated task rows are clustered by image. Cross-validation holds out images, not unseen class combinations."
+        },
+        "normalized_exchange_alignment": {
+          "status": "exploratory",
+          "row_count": 217,
+          "image_count": 31,
+          "estimator": "least squares with inverse within-image row-count weights",
+          "control_columns": [
+            "intercept",
+            "baseline_margin_mean",
+            "baseline_margin_abs_difference",
+            "baseline_margin_mean_squared",
+            "baseline_margin_abs_difference_squared",
+            "baseline_margin_mean_times_abs_difference"
+          ],
+          "angle_scale": "angle_degrees / 90",
+          "coefficients": {
+            "intercept": 0.04803039575363168,
+            "baseline_margin_mean": 0.3068051005924522,
+            "baseline_margin_abs_difference": -0.16677327052699645,
+            "baseline_margin_mean_squared": -0.4329470093193569,
+            "baseline_margin_abs_difference_squared": 10.046726332507918,
+            "baseline_margin_mean_times_abs_difference": -4.344137986566408,
+            "angle_per_90_degrees": 0.08225031420524263
+          },
+          "design_rank": 7,
+          "design_column_count": 7,
+          "rank_deficient": false,
+          "angle_identifiable_after_controls": true,
+          "angle_coefficient": 0.08225031420524263,
+          "angle_coefficient_ci95": [
+            -0.08559244242945213,
+            0.24172033352097386
+          ],
+          "bootstrap_replicates": 300,
+          "bootstrap_identifiable_replicates": 300,
+          "bootstrap_rank_deficient_replicates": 0,
+          "cv_seed": 2030,
+          "cv_folds": 5,
+          "fold_details": [
+            {
+              "fold": 0,
+              "test_image_count": 7,
+              "train_image_count": 24,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 1,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 2,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 3,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 4,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            }
+          ],
+          "cv_controls_mse": 0.008056687534547437,
+          "cv_controls_plus_angle_mse": 0.008082112419966793,
+          "cv_mse_reduction_from_angle": -2.5424885419352937e-05,
+          "interpretation": "Descriptive association, not causality. Rank-deficient fits use the least-squares minimum-norm solution. Repeated task rows are clustered by image. Cross-validation holds out images, not unseen class combinations."
+        },
+        "alignment_excluded_small_scale_rows": 0,
+        "alignment_minimum_scale_exclusive": 1e-06
+      }
+    },
+    {
+      "keep_patch_tokens": 98,
+      "row_count": 217,
+      "image_count": 31,
+      "metrics": {
+        "own_margin": {
+          "mean": 0.13430666513626568,
+          "ci95": [
+            0.11466523968498757,
+            0.15323028423811788
+          ]
+        },
+        "swapped_margin": {
+          "mean": 0.11448361747779352,
+          "ci95": [
+            0.09640372938700112,
+            0.13196095288802054
+          ]
+        },
+        "exchange_margin_loss": {
+          "mean": 0.01982304765847214,
+          "ci95": [
+            0.016201848265364537,
+            0.02339755077102001
+          ]
+        },
+        "task_search_own_margin": {
+          "mean": 0.17652202043596502,
+          "ci95": [
+            0.1665291991211136,
+            0.18680713386548123
+          ]
+        },
+        "shared_proxy_margin": {
+          "mean": 0.12910832948181802,
+          "ci95": [
+            0.1105171599485121,
+            0.14790624097041977
+          ]
+        },
+        "own_minus_shared_proxy_margin": {
+          "mean": 0.005198335654447668,
+          "ci95": [
+            -0.0013412811317688505,
+            0.011698796928971187
+          ]
+        },
+        "task_search_own_minus_shared_proxy_margin": {
+          "mean": 0.047413690954146985,
+          "ci95": [
+            0.02899811612618363,
+            0.06713337074484751
+          ]
+        },
+        "attention_margin": {
+          "mean": 0.11190126702109332,
+          "ci95": [
+            0.102745226988649,
+            0.12110018524741854
+          ]
+        },
+        "own_minus_attention_margin": {
+          "mean": 0.022405398115172365,
+          "ci95": [
+            0.00554209974265912,
+            0.03870919081181991
+          ]
+        },
+        "representation_margin": {
+          "mean": 0.12131624813928352,
+          "ci95": [
+            0.11187566778473067,
+            0.1321904956938244
+          ]
+        },
+        "own_minus_representation_margin": {
+          "mean": 0.012990416996982149,
+          "ci95": [
+            -0.006919979328835401,
+            0.03078058772326086
+          ]
+        },
+        "random_0_margin": {
+          "mean": 0.1090475716708874,
+          "ci95": [
+            0.09921691329037097,
+            0.11908680333340631
+          ]
+        },
+        "own_minus_random_0_margin": {
+          "mean": 0.025259093465378288,
+          "ci95": [
+            0.0056196802565860165,
+            0.04267363395784862
+          ]
+        },
+        "shared_search_mean_margin": {
+          "mean": 0.170494053812666,
+          "ci95": [
+            0.16050845411380094,
+            0.18111368340378578
+          ]
+        },
+        "own_minus_shared_search_mean_margin": {
+          "mean": -0.03618738867640038,
+          "ci95": [
+            -0.05698069202835806,
+            -0.017318637671994156
+          ]
+        },
+        "task_search_own_minus_shared_search_mean_margin": {
+          "mean": 0.006027966623298951,
+          "ci95": [
+            0.005109937906497016,
+            0.007002002415712205
+          ]
+        },
+        "shared_search_maxmin_margin": {
+          "mean": 0.16632412402059443,
+          "ci95": [
+            0.15542599934303475,
+            0.17755350609259898
+          ]
+        },
+        "own_minus_shared_search_maxmin_margin": {
+          "mean": -0.032017458884328755,
+          "ci95": [
+            -0.05302633543385079,
+            -0.012890423374866043
+          ]
+        },
+        "task_search_own_minus_shared_search_maxmin_margin": {
+          "mean": 0.010197896415370585,
+          "ci95": [
+            0.008200538927194205,
+            0.012250532301460405
+          ]
+        },
+        "own_accuracy": {
+          "mean": 0.9693548387096774,
+          "ci95": [
+            0.9387096774193548,
+            0.9946236559139786
+          ]
+        },
+        "swapped_accuracy": {
+          "mean": 0.9607526881720432,
+          "ci95": [
+            0.9225672043010752,
+            0.989260752688172
+          ]
+        },
+        "exchange_accuracy_loss": {
+          "mean": 0.00860215053763441,
+          "ci95": [
+            -0.01075268817204301,
+            0.030107526881720432
+          ]
+        },
+        "task_search_own_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "shared_proxy_accuracy": {
+          "mean": 0.9715053763440862,
+          "ci95": [
+            0.9381586021505376,
+            0.996774193548387
+          ]
+        },
+        "own_minus_shared_proxy_accuracy": {
+          "mean": -0.0021505376344086017,
+          "ci95": [
+            -0.023669354838709678,
+            0.016129032258064516
+          ]
+        },
+        "task_search_own_minus_shared_proxy_accuracy": {
+          "mean": 0.028494623655913976,
+          "ci95": [
+            0.0032258064516129032,
+            0.06184139784946236
+          ]
+        },
+        "attention_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_attention_accuracy": {
+          "mean": -0.03064516129032258,
+          "ci95": [
+            -0.061290322580645165,
+            -0.005376344086021505
+          ]
+        },
+        "representation_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_representation_accuracy": {
+          "mean": -0.03064516129032258,
+          "ci95": [
+            -0.061290322580645165,
+            -0.005376344086021505
+          ]
+        },
+        "random_0_accuracy": {
+          "mean": 0.993010752688172,
+          "ci95": [
+            0.9806451612903225,
+            1.0
+          ]
+        },
+        "own_minus_random_0_accuracy": {
+          "mean": -0.023655913978494623,
+          "ci95": [
+            -0.0478494623655914,
+            -0.0021505376344086017
+          ]
+        },
+        "shared_search_mean_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_shared_search_mean_accuracy": {
+          "mean": -0.03064516129032258,
+          "ci95": [
+            -0.061290322580645165,
+            -0.005376344086021505
+          ]
+        },
+        "task_search_own_minus_shared_search_mean_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "shared_search_maxmin_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_shared_search_maxmin_accuracy": {
+          "mean": -0.03064516129032258,
+          "ci95": [
+            -0.061290322580645165,
+            -0.005376344086021505
+          ]
+        },
+        "task_search_own_minus_shared_search_maxmin_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "overlap_fraction_task_ab": {
+          "mean": 0.7168939465186994,
+          "ci95": [
+            0.6964931502554937,
+            0.7370613890717574
+          ]
+        },
+        "selection_feature_distance": {
+          "mean": 0.2886161770528546,
+          "ci95": [
+            0.24426397725796686,
+            0.3440542420808987
+          ]
+        }
+      },
+      "valid_exchange_alignment": {
+        "row_count": 217,
+        "image_count": 31,
+        "excluded_row_count": 0,
+        "minimum_scale_exclusive": 1e-06,
+        "mean": 0.16383478428852044,
+        "ci95": [
+          0.13741306481556534,
+          0.19246226841749325
+        ]
+      },
+      "max_abs_projection_identity_residual": 1.1920928955078125e-07,
+      "h2": {
+        "raw_exchange_loss": {
+          "status": "exploratory",
+          "row_count": 217,
+          "image_count": 31,
+          "estimator": "least squares with inverse within-image row-count weights",
+          "control_columns": [
+            "intercept",
+            "baseline_margin_mean",
+            "baseline_margin_abs_difference",
+            "baseline_margin_mean_squared",
+            "baseline_margin_abs_difference_squared",
+            "baseline_margin_mean_times_abs_difference"
+          ],
+          "angle_scale": "angle_degrees / 90",
+          "coefficients": {
+            "intercept": -0.010091068074025574,
+            "baseline_margin_mean": 0.15055749713840264,
+            "baseline_margin_abs_difference": 0.18488164625825285,
+            "baseline_margin_mean_squared": -0.3814081312362288,
+            "baseline_margin_abs_difference_squared": 2.0963227982538006,
+            "baseline_margin_mean_times_abs_difference": -3.3401901752805094,
+            "angle_per_90_degrees": 0.03120081721892333
+          },
+          "design_rank": 7,
+          "design_column_count": 7,
+          "rank_deficient": false,
+          "angle_identifiable_after_controls": true,
+          "angle_coefficient": 0.03120081721892333,
+          "angle_coefficient_ci95": [
+            0.0056176003132183076,
+            0.05515786390075354
+          ],
+          "bootstrap_replicates": 300,
+          "bootstrap_identifiable_replicates": 300,
+          "bootstrap_rank_deficient_replicates": 0,
+          "cv_seed": 2030,
+          "cv_folds": 5,
+          "fold_details": [
+            {
+              "fold": 0,
+              "test_image_count": 7,
+              "train_image_count": 24,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 1,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 2,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 3,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 4,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            }
+          ],
+          "cv_controls_mse": 0.00024736301145569247,
+          "cv_controls_plus_angle_mse": 0.0002489821434241099,
+          "cv_mse_reduction_from_angle": -1.6191319684174263e-06,
+          "interpretation": "Descriptive association, not causality. Rank-deficient fits use the least-squares minimum-norm solution. Repeated task rows are clustered by image. Cross-validation holds out images, not unseen class combinations."
+        },
+        "feature_distance_adjusted_exchange_loss": {
+          "status": "exploratory",
+          "row_count": 217,
+          "image_count": 31,
+          "estimator": "least squares with inverse within-image row-count weights",
+          "control_columns": [
+            "intercept",
+            "baseline_margin_mean",
+            "baseline_margin_abs_difference",
+            "baseline_margin_mean_squared",
+            "baseline_margin_abs_difference_squared",
+            "baseline_margin_mean_times_abs_difference",
+            "selection_feature_distance"
+          ],
+          "angle_scale": "angle_degrees / 90",
+          "coefficients": {
+            "intercept": -0.010251997926590877,
+            "baseline_margin_mean": 0.11394260877933765,
+            "baseline_margin_abs_difference": 0.20193928428828037,
+            "baseline_margin_mean_squared": -0.20044502896121863,
+            "baseline_margin_abs_difference_squared": 2.1779774158923115,
+            "baseline_margin_mean_times_abs_difference": -3.557024114450429,
+            "selection_feature_distance": 0.009710293916743731,
+            "angle_per_90_degrees": 0.029821312633215576
+          },
+          "design_rank": 8,
+          "design_column_count": 8,
+          "rank_deficient": false,
+          "angle_identifiable_after_controls": true,
+          "angle_coefficient": 0.029821312633215576,
+          "angle_coefficient_ci95": [
+            0.004767579972782498,
+            0.05346865108478975
+          ],
+          "bootstrap_replicates": 300,
+          "bootstrap_identifiable_replicates": 300,
+          "bootstrap_rank_deficient_replicates": 0,
+          "cv_seed": 2030,
+          "cv_folds": 5,
+          "fold_details": [
+            {
+              "fold": 0,
+              "test_image_count": 7,
+              "train_image_count": 24,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 1,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 2,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 3,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 4,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            }
+          ],
+          "cv_controls_mse": 0.0002471732173840442,
+          "cv_controls_plus_angle_mse": 0.00025184484474804033,
+          "cv_mse_reduction_from_angle": -4.671627363996104e-06,
+          "interpretation": "Descriptive association, not causality. Rank-deficient fits use the least-squares minimum-norm solution. Repeated task rows are clustered by image. Cross-validation holds out images, not unseen class combinations."
+        },
+        "normalized_exchange_alignment": {
+          "status": "exploratory",
+          "row_count": 217,
+          "image_count": 31,
+          "estimator": "least squares with inverse within-image row-count weights",
+          "control_columns": [
+            "intercept",
+            "baseline_margin_mean",
+            "baseline_margin_abs_difference",
+            "baseline_margin_mean_squared",
+            "baseline_margin_abs_difference_squared",
+            "baseline_margin_mean_times_abs_difference"
+          ],
+          "angle_scale": "angle_degrees / 90",
+          "coefficients": {
+            "intercept": 0.16399993683505387,
+            "baseline_margin_mean": -1.148735970188848,
+            "baseline_margin_abs_difference": 1.1936164659321573,
+            "baseline_margin_mean_squared": 6.495861788622444,
+            "baseline_margin_abs_difference_squared": 11.147521650754719,
+            "baseline_margin_mean_times_abs_difference": -18.90128908676556,
+            "angle_per_90_degrees": 0.07532629727090222
+          },
+          "design_rank": 7,
+          "design_column_count": 7,
+          "rank_deficient": false,
+          "angle_identifiable_after_controls": true,
+          "angle_coefficient": 0.07532629727090222,
+          "angle_coefficient_ci95": [
+            -0.17957353289327305,
+            0.2775289266157656
+          ],
+          "bootstrap_replicates": 300,
+          "bootstrap_identifiable_replicates": 300,
+          "bootstrap_rank_deficient_replicates": 0,
+          "cv_seed": 2030,
+          "cv_folds": 5,
+          "fold_details": [
+            {
+              "fold": 0,
+              "test_image_count": 7,
+              "train_image_count": 24,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 1,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 2,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 3,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 4,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            }
+          ],
+          "cv_controls_mse": 0.010930310197354895,
+          "cv_controls_plus_angle_mse": 0.011253753517577136,
+          "cv_mse_reduction_from_angle": -0.0003234433202222408,
+          "interpretation": "Descriptive association, not causality. Rank-deficient fits use the least-squares minimum-norm solution. Repeated task rows are clustered by image. Cross-validation holds out images, not unseen class combinations."
+        },
+        "alignment_excluded_small_scale_rows": 0,
+        "alignment_minimum_scale_exclusive": 1e-06
+      }
+    },
+    {
+      "keep_patch_tokens": 147,
+      "row_count": 217,
+      "image_count": 31,
+      "metrics": {
+        "own_margin": {
+          "mean": 0.15554050470740977,
+          "ci95": [
+            0.14224219786689918,
+            0.16653043094437323
+          ]
+        },
+        "swapped_margin": {
+          "mean": 0.13799577760874954,
+          "ci95": [
+            0.1257580127388657,
+            0.14898352164798023
+          ]
+        },
+        "exchange_margin_loss": {
+          "mean": 0.017544727098660264,
+          "ci95": [
+            0.014794652873690247,
+            0.020196018866141724
+          ]
+        },
+        "task_search_own_margin": {
+          "mean": 0.16965000143821152,
+          "ci95": [
+            0.16010279241095246,
+            0.17919481637771775
+          ]
+        },
+        "shared_proxy_margin": {
+          "mean": 0.15111557510702908,
+          "ci95": [
+            0.1383660320044544,
+            0.16192771999225494
+          ]
+        },
+        "own_minus_shared_proxy_margin": {
+          "mean": 0.004424929600380672,
+          "ci95": [
+            0.0002522681471383834,
+            0.0074698789084162815
+          ]
+        },
+        "task_search_own_minus_shared_proxy_margin": {
+          "mean": 0.018534426331182456,
+          "ci95": [
+            0.009016939189353708,
+            0.031871971941746895
+          ]
+        },
+        "attention_margin": {
+          "mean": 0.12236960165792028,
+          "ci95": [
+            0.11384740020445307,
+            0.1314851836427494
+          ]
+        },
+        "own_minus_attention_margin": {
+          "mean": 0.033170903049489504,
+          "ci95": [
+            0.021558529119788398,
+            0.04169028612434545
+          ]
+        },
+        "representation_margin": {
+          "mean": 0.1254472764446393,
+          "ci95": [
+            0.11601740484442791,
+            0.13538771410515607
+          ]
+        },
+        "own_minus_representation_margin": {
+          "mean": 0.03009322826277047,
+          "ci95": [
+            0.016734165820592124,
+            0.03936002911595676
+          ]
+        },
+        "random_0_margin": {
+          "mean": 0.12224098674762714,
+          "ci95": [
+            0.11346838245028128,
+            0.13173771111024243
+          ]
+        },
+        "own_minus_random_0_margin": {
+          "mean": 0.03329951795978263,
+          "ci95": [
+            0.020292619249564214,
+            0.04255983135929601
+          ]
+        },
+        "shared_search_mean_margin": {
+          "mean": 0.16497210617793778,
+          "ci95": [
+            0.1556232606887548,
+            0.17475131838322092
+          ]
+        },
+        "own_minus_shared_search_mean_margin": {
+          "mean": -0.00943160147052802,
+          "ci95": [
+            -0.02328019989232393,
+            0.000277571900277047
+          ]
+        },
+        "task_search_own_minus_shared_search_mean_margin": {
+          "mean": 0.00467789526027377,
+          "ci95": [
+            0.003879947624900327,
+            0.005550565386531495
+          ]
+        },
+        "shared_search_maxmin_margin": {
+          "mean": 0.16181575439286675,
+          "ci95": [
+            0.1523090296156544,
+            0.17222305519399037
+          ]
+        },
+        "own_minus_shared_search_maxmin_margin": {
+          "mean": -0.006275249685456951,
+          "ci95": [
+            -0.020446953832439385,
+            0.0038863967040470714
+          ]
+        },
+        "task_search_own_minus_shared_search_maxmin_margin": {
+          "mean": 0.007834247045344838,
+          "ci95": [
+            0.006337736868392534,
+            0.009472040081605569
+          ]
+        },
+        "own_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "swapped_accuracy": {
+          "mean": 0.9946236559139785,
+          "ci95": [
+            0.9838709677419354,
+            1.0
+          ]
+        },
+        "exchange_accuracy_loss": {
+          "mean": 0.005376344086021505,
+          "ci95": [
+            0.0,
+            0.016129032258064516
+          ]
+        },
+        "task_search_own_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "shared_proxy_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_shared_proxy_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "task_search_own_minus_shared_proxy_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "attention_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_attention_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "representation_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_representation_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "random_0_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_random_0_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "shared_search_mean_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_shared_search_mean_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "task_search_own_minus_shared_search_mean_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "shared_search_maxmin_accuracy": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "own_minus_shared_search_maxmin_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "task_search_own_minus_shared_search_maxmin_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "overlap_fraction_task_ab": {
+          "mean": 0.8579694243288714,
+          "ci95": [
+            0.8486941335674054,
+            0.8672242337795334
+          ]
+        },
+        "selection_feature_distance": {
+          "mean": 0.24021159527271116,
+          "ci95": [
+            0.2002281257617767,
+            0.2823749366604627
+          ]
+        }
+      },
+      "valid_exchange_alignment": {
+        "row_count": 217,
+        "image_count": 31,
+        "excluded_row_count": 0,
+        "minimum_scale_exclusive": 1e-06,
+        "mean": 0.17900046359186056,
+        "ci95": [
+          0.14901790727391825,
+          0.20532317379924567
+        ]
+      },
+      "max_abs_projection_identity_residual": 1.3690441846847534e-07,
+      "h2": {
+        "raw_exchange_loss": {
+          "status": "exploratory",
+          "row_count": 217,
+          "image_count": 31,
+          "estimator": "least squares with inverse within-image row-count weights",
+          "control_columns": [
+            "intercept",
+            "baseline_margin_mean",
+            "baseline_margin_abs_difference",
+            "baseline_margin_mean_squared",
+            "baseline_margin_abs_difference_squared",
+            "baseline_margin_mean_times_abs_difference"
+          ],
+          "angle_scale": "angle_degrees / 90",
+          "coefficients": {
+            "intercept": -0.01828274281325687,
+            "baseline_margin_mean": 0.16653138522369387,
+            "baseline_margin_abs_difference": 0.3437510562427296,
+            "baseline_margin_mean_squared": -0.39448032424299606,
+            "baseline_margin_abs_difference_squared": 0.7695004114782671,
+            "baseline_margin_mean_times_abs_difference": -3.3818318763926887,
+            "angle_per_90_degrees": 0.03282269926929746
+          },
+          "design_rank": 7,
+          "design_column_count": 7,
+          "rank_deficient": false,
+          "angle_identifiable_after_controls": true,
+          "angle_coefficient": 0.03282269926929746,
+          "angle_coefficient_ci95": [
+            0.009574497502943292,
+            0.05155452922408877
+          ],
+          "bootstrap_replicates": 300,
+          "bootstrap_identifiable_replicates": 300,
+          "bootstrap_rank_deficient_replicates": 0,
+          "cv_seed": 2030,
+          "cv_folds": 5,
+          "fold_details": [
+            {
+              "fold": 0,
+              "test_image_count": 7,
+              "train_image_count": 24,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 1,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 2,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 3,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 4,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            }
+          ],
+          "cv_controls_mse": 0.00014046566066499422,
+          "cv_controls_plus_angle_mse": 0.00013587622135851702,
+          "cv_mse_reduction_from_angle": 4.589439306477238e-06,
+          "interpretation": "Descriptive association, not causality. Rank-deficient fits use the least-squares minimum-norm solution. Repeated task rows are clustered by image. Cross-validation holds out images, not unseen class combinations."
+        },
+        "feature_distance_adjusted_exchange_loss": {
+          "status": "exploratory",
+          "row_count": 217,
+          "image_count": 31,
+          "estimator": "least squares with inverse within-image row-count weights",
+          "control_columns": [
+            "intercept",
+            "baseline_margin_mean",
+            "baseline_margin_abs_difference",
+            "baseline_margin_mean_squared",
+            "baseline_margin_abs_difference_squared",
+            "baseline_margin_mean_times_abs_difference",
+            "selection_feature_distance"
+          ],
+          "angle_scale": "angle_degrees / 90",
+          "coefficients": {
+            "intercept": -0.010964734737993406,
+            "baseline_margin_mean": 0.07922594880812245,
+            "baseline_margin_abs_difference": 0.2827993359986476,
+            "baseline_margin_mean_squared": -0.19873043466564377,
+            "baseline_margin_abs_difference_squared": 0.7606639818222709,
+            "baseline_margin_mean_times_abs_difference": -2.821913993793254,
+            "selection_feature_distance": -0.015201062597684568,
+            "angle_per_90_degrees": 0.03851203785383923
+          },
+          "design_rank": 8,
+          "design_column_count": 8,
+          "rank_deficient": false,
+          "angle_identifiable_after_controls": true,
+          "angle_coefficient": 0.03851203785383923,
+          "angle_coefficient_ci95": [
+            0.01760983325845089,
+            0.05546442237838156
+          ],
+          "bootstrap_replicates": 300,
+          "bootstrap_identifiable_replicates": 300,
+          "bootstrap_rank_deficient_replicates": 0,
+          "cv_seed": 2030,
+          "cv_folds": 5,
+          "fold_details": [
+            {
+              "fold": 0,
+              "test_image_count": 7,
+              "train_image_count": 24,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 1,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 2,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 3,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            },
+            {
+              "fold": 4,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 7,
+              "with_angle_rank": 8
+            }
+          ],
+          "cv_controls_mse": 0.00013724616153015307,
+          "cv_controls_plus_angle_mse": 0.0001282333592388202,
+          "cv_mse_reduction_from_angle": 9.012802291332867e-06,
+          "interpretation": "Descriptive association, not causality. Rank-deficient fits use the least-squares minimum-norm solution. Repeated task rows are clustered by image. Cross-validation holds out images, not unseen class combinations."
+        },
+        "normalized_exchange_alignment": {
+          "status": "exploratory",
+          "row_count": 217,
+          "image_count": 31,
+          "estimator": "least squares with inverse within-image row-count weights",
+          "control_columns": [
+            "intercept",
+            "baseline_margin_mean",
+            "baseline_margin_abs_difference",
+            "baseline_margin_mean_squared",
+            "baseline_margin_abs_difference_squared",
+            "baseline_margin_mean_times_abs_difference"
+          ],
+          "angle_scale": "angle_degrees / 90",
+          "coefficients": {
+            "intercept": -0.15152495645635047,
+            "baseline_margin_mean": 3.716626765403642,
+            "baseline_margin_abs_difference": 3.685875688997098,
+            "baseline_margin_mean_squared": -9.190747182327033,
+            "baseline_margin_abs_difference_squared": 3.2792487561347343,
+            "baseline_margin_mean_times_abs_difference": -31.398525654669985,
+            "angle_per_90_degrees": 0.016333210971484855
+          },
+          "design_rank": 7,
+          "design_column_count": 7,
+          "rank_deficient": false,
+          "angle_identifiable_after_controls": true,
+          "angle_coefficient": 0.016333210971484855,
+          "angle_coefficient_ci95": [
+            -0.2602254115782013,
+            0.2594991506385351
+          ],
+          "bootstrap_replicates": 300,
+          "bootstrap_identifiable_replicates": 300,
+          "bootstrap_rank_deficient_replicates": 0,
+          "cv_seed": 2030,
+          "cv_folds": 5,
+          "fold_details": [
+            {
+              "fold": 0,
+              "test_image_count": 7,
+              "train_image_count": 24,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 1,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 2,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 3,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            },
+            {
+              "fold": 4,
+              "test_image_count": 6,
+              "train_image_count": 25,
+              "controls_rank": 6,
+              "with_angle_rank": 7
+            }
+          ],
+          "cv_controls_mse": 0.011999506275414972,
+          "cv_controls_plus_angle_mse": 0.01246107161890131,
+          "cv_mse_reduction_from_angle": -0.0004615653434863397,
+          "interpretation": "Descriptive association, not causality. Rank-deficient fits use the least-squares minimum-norm solution. Repeated task rows are clustered by image. Cross-validation holds out images, not unseen class combinations."
+        },
+        "alignment_excluded_small_scale_rows": 0,
+        "alignment_minimum_scale_exclusive": 1e-06
+      }
+    }
+  ],
+  "single_task_panel": [
+    {
+      "keep_patch_tokens": 49,
+      "method": "attention",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 1.0,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 0,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 1.0,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 1.0,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.0,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 49,
+      "method": "random",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 0.9242424242424242,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 10,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 0.9242424242424242,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 0.9242424242424242,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.07575757575757576,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 49,
+      "method": "representation",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 1.0,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 0,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 1.0,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 1.0,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.0,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 49,
+      "method": "task_rank",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 0.946969696969697,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 7,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 0.946969696969697,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 0.946969696969697,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.05303030303030303,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 98,
+      "method": "attention",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 1.0,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 0,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 1.0,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 1.0,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.0,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 98,
+      "method": "random",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 1.0,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 0,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 1.0,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 1.0,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.0,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 98,
+      "method": "representation",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 1.0,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 0,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 1.0,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 1.0,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.0,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 98,
+      "method": "task_rank",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 0.9696969696969697,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 4,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 0.9696969696969697,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 0.9696969696969697,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.030303030303030304,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 147,
+      "method": "attention",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 1.0,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 0,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 1.0,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 1.0,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.0,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 147,
+      "method": "random",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 1.0,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 0,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 1.0,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 1.0,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.0,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 147,
+      "method": "representation",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 1.0,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 0,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 1.0,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 1.0,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.0,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    },
+    {
+      "keep_patch_tokens": 147,
+      "method": "task_rank",
+      "row_count": 132,
+      "image_count": 36,
+      "task_count": 66,
+      "panel_accuracy_micro": 1.0,
+      "panel_base_accuracy_micro": 1.0,
+      "panel_new_error_count": 0,
+      "panel_recovery_count": 0,
+      "panel_accuracy_task_macro": 1.0,
+      "panel_base_accuracy_task_macro": 1.0,
+      "two_sided_task_count": 66,
+      "two_sided_task_macro_balanced_accuracy": 1.0,
+      "two_sided_task_macro_balanced_base_accuracy": 1.0,
+      "two_sided_task_macro_balanced_new_error_fraction": 0.0,
+      "two_sided_task_macro_balanced_recovery_fraction": 0.0
+    }
+  ],
+  "candidate_search_depth": {
+    "aggregation": "mean within image, then equal-weight mean across images",
+    "scope": "Nested finite-bank prefixes; stability does not establish global optimality.",
+    "rows": [
+      {
+        "keep_patch_tokens": 147,
+        "candidate_count": 16,
+        "row_count": 217,
+        "image_count": 31,
+        "task_search_own_margin": 0.16769033663386848,
+        "task_search_own_accuracy": 1.0,
+        "shared_search_mean_margin": 0.16331464648017865,
+        "shared_search_mean_accuracy": 1.0,
+        "task_search_own_minus_shared_search_mean_margin": 0.004375690153689795,
+        "task_search_own_minus_shared_search_mean_accuracy": 0.0,
+        "shared_search_maxmin_margin": 0.1603328026871207,
+        "shared_search_maxmin_accuracy": 1.0,
+        "task_search_own_minus_shared_search_maxmin_margin": 0.007357533946747786,
+        "task_search_own_minus_shared_search_maxmin_accuracy": 0.0
+      },
+      {
+        "keep_patch_tokens": 147,
+        "candidate_count": 32,
+        "row_count": 217,
+        "image_count": 31,
+        "task_search_own_margin": 0.16884803513319627,
+        "task_search_own_accuracy": 1.0,
+        "shared_search_mean_margin": 0.1643054874834194,
+        "shared_search_mean_accuracy": 1.0,
+        "task_search_own_minus_shared_search_mean_margin": 0.004542547649776881,
+        "task_search_own_minus_shared_search_mean_accuracy": 0.0,
+        "shared_search_maxmin_margin": 0.1612648446748059,
+        "shared_search_maxmin_accuracy": 1.0,
+        "task_search_own_minus_shared_search_maxmin_margin": 0.007583190458390387,
+        "task_search_own_minus_shared_search_maxmin_accuracy": 0.0
+      },
+      {
+        "keep_patch_tokens": 147,
+        "candidate_count": 64,
+        "row_count": 217,
+        "image_count": 31,
+        "task_search_own_margin": 0.16965000143821152,
+        "task_search_own_accuracy": 1.0,
+        "shared_search_mean_margin": 0.16497210617793778,
+        "shared_search_mean_accuracy": 1.0,
+        "task_search_own_minus_shared_search_mean_margin": 0.00467789526027377,
+        "task_search_own_minus_shared_search_mean_accuracy": 0.0,
+        "shared_search_maxmin_margin": 0.16181575439286675,
+        "shared_search_maxmin_accuracy": 1.0,
+        "task_search_own_minus_shared_search_maxmin_margin": 0.007834247045344838,
+        "task_search_own_minus_shared_search_maxmin_accuracy": 0.0
+      },
+      {
+        "keep_patch_tokens": 49,
+        "candidate_count": 16,
+        "row_count": 217,
+        "image_count": 31,
+        "task_search_own_margin": 0.15601364409496662,
+        "task_search_own_accuracy": 1.0,
+        "shared_search_mean_margin": 0.15163451508796288,
+        "shared_search_mean_accuracy": 1.0,
+        "task_search_own_minus_shared_search_mean_margin": 0.004379129007003756,
+        "task_search_own_minus_shared_search_mean_accuracy": 0.0,
+        "shared_search_maxmin_margin": 0.14913549001504608,
+        "shared_search_maxmin_accuracy": 1.0,
+        "task_search_own_minus_shared_search_maxmin_margin": 0.0068781540799205025,
+        "task_search_own_minus_shared_search_maxmin_accuracy": 0.0
+      },
+      {
+        "keep_patch_tokens": 49,
+        "candidate_count": 32,
+        "row_count": 217,
+        "image_count": 31,
+        "task_search_own_margin": 0.16315110141780523,
+        "task_search_own_accuracy": 1.0,
+        "shared_search_mean_margin": 0.15851934671018578,
+        "shared_search_mean_accuracy": 1.0,
+        "task_search_own_minus_shared_search_mean_margin": 0.004631754707619433,
+        "task_search_own_minus_shared_search_mean_accuracy": 0.0,
+        "shared_search_maxmin_margin": 0.15629117886397054,
+        "shared_search_maxmin_accuracy": 1.0,
+        "task_search_own_minus_shared_search_maxmin_margin": 0.006859922553834643,
+        "task_search_own_minus_shared_search_maxmin_accuracy": 0.0
+      },
+      {
+        "keep_patch_tokens": 49,
+        "candidate_count": 64,
+        "row_count": 217,
+        "image_count": 31,
+        "task_search_own_margin": 0.16798636552902044,
+        "task_search_own_accuracy": 1.0,
+        "shared_search_mean_margin": 0.16291259081115783,
+        "shared_search_mean_accuracy": 1.0,
+        "task_search_own_minus_shared_search_mean_margin": 0.005073774717862614,
+        "task_search_own_minus_shared_search_mean_accuracy": 0.0,
+        "shared_search_maxmin_margin": 0.1600764045082662,
+        "shared_search_maxmin_accuracy": 1.0,
+        "task_search_own_minus_shared_search_maxmin_margin": 0.007909961020754232,
+        "task_search_own_minus_shared_search_maxmin_accuracy": 0.0
+      },
+      {
+        "keep_patch_tokens": 98,
+        "candidate_count": 16,
+        "row_count": 217,
+        "image_count": 31,
+        "task_search_own_margin": 0.17146024747240926,
+        "task_search_own_accuracy": 1.0,
+        "shared_search_mean_margin": 0.16628486973172005,
+        "shared_search_mean_accuracy": 1.0,
+        "task_search_own_minus_shared_search_mean_margin": 0.00517537774068923,
+        "task_search_own_minus_shared_search_mean_accuracy": 0.0,
+        "shared_search_maxmin_margin": 0.16277791106824505,
+        "shared_search_maxmin_accuracy": 1.0,
+        "task_search_own_minus_shared_search_maxmin_margin": 0.008682336404164267,
+        "task_search_own_minus_shared_search_maxmin_accuracy": 0.0
+      },
+      {
+        "keep_patch_tokens": 98,
+        "candidate_count": 32,
+        "row_count": 217,
+        "image_count": 31,
+        "task_search_own_margin": 0.1748327588619587,
+        "task_search_own_accuracy": 1.0,
+        "shared_search_mean_margin": 0.16902971440917613,
+        "shared_search_mean_accuracy": 1.0,
+        "task_search_own_minus_shared_search_mean_margin": 0.0058030444527826,
+        "task_search_own_minus_shared_search_mean_accuracy": 0.0,
+        "shared_search_maxmin_margin": 0.16498124603348027,
+        "shared_search_maxmin_accuracy": 1.0,
+        "task_search_own_minus_shared_search_maxmin_margin": 0.009851512828478435,
+        "task_search_own_minus_shared_search_maxmin_accuracy": 0.0
+      },
+      {
+        "keep_patch_tokens": 98,
+        "candidate_count": 64,
+        "row_count": 217,
+        "image_count": 31,
+        "task_search_own_margin": 0.17652202043596502,
+        "task_search_own_accuracy": 1.0,
+        "shared_search_mean_margin": 0.170494053812666,
+        "shared_search_mean_accuracy": 1.0,
+        "task_search_own_minus_shared_search_mean_margin": 0.006027966623298951,
+        "task_search_own_minus_shared_search_mean_accuracy": 0.0,
+        "shared_search_maxmin_margin": 0.16632412402059443,
+        "shared_search_maxmin_accuracy": 1.0,
+        "task_search_own_minus_shared_search_maxmin_margin": 0.010197896415370585,
+        "task_search_own_minus_shared_search_maxmin_accuracy": 0.0
+      }
+    ]
+  }
+}

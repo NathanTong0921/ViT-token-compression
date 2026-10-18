@@ -1,0 +1,170 @@
+{
+  "scope": "Paired mask-seed diagnostic on the same 36 development images and 132 image-task rows per budget; this is not a generalization experiment or evidence of learned-selector performance.",
+  "source_results": [
+    "results/pets-budget-ranking-smoke-v1",
+    "results/pets-budget-ranking-replication-v1"
+  ],
+  "mask_seeds": [
+    2031,
+    2032
+  ],
+  "pair_identity_checks": {
+    "image_ids_exactly_equal": true,
+    "labels_exactly_equal": true,
+    "text_features_exactly_equal": true,
+    "full_features_exactly_equal": true,
+    "full_scores_exactly_equal": true,
+    "attention_scores_exactly_equal": true,
+    "image_count": 36,
+    "config_differences": {
+      "mask_seed": [
+        2031,
+        2032
+      ]
+    },
+    "near_full_all_image_task_budget_method_keys_equal": true,
+    "budget_matched_all_image_task_budget_method_keys_equal": true
+  },
+  "definitions": {
+    "row_key": "(image_id, task_id, keep_patch_tokens, method); all keys must match between runs.",
+    "overlap_fraction": "|selection_seed_2031 intersection selection_seed_2032| / retained_patch_count; average tasks within each image, then average images equally.",
+    "task_coefficient": "(class_coefficient[true_class] - class_coefficient[competitor]) / ||text[true_class] - text[competitor]||_2; near_full uses probes_k192, budget_matched uses probes at the retained budget.",
+    "task_coefficient_pearson": "Pearson correlation between the two 196-dimensional task-coefficient vectors for each image-task row; then image-equal averaging.",
+    "task_row_accuracy": "Mean correct over all 132 image-task rows in the balanced single-task panel; differs in definition from image-equal margin aggregation.",
+    "margin": "True-class-oriented geometric classification margin from single_task_rows.csv.",
+    "image_equal": "Average tasks within each image, then average the 36 images equally.",
+    "paired_margin_delta": "Margin(seed 2032) minus margin(seed 2031), computed per image-task row before aggregation.",
+    "mean_absolute_margin_change": "Absolute per-row paired margin change, then image-equal averaging.",
+    "margin_bootstrap": "Use token_compression.selection_analysis.cluster_summary(image_ids, paired_margin_delta, bootstrap_replicates=1000, seed=2030); resample images after within-image averaging.",
+    "selection_rows": "Row i of single_task_positions.npz/patch_indices matches row i of single_task_rows.csv; first k entries are selected original patch indices and remaining entries are -1 padding.",
+    "interpretation": "Different masks with similar observed outcomes need not be poor teachers. Accuracy ceiling and a confidence interval containing zero do not establish equivalence or performance on unseen images."
+  },
+  "bootstrap_seed": 2030,
+  "bootstrap_replicates": 1000,
+  "arms": {
+    "near_full": [
+      {
+        "keep_patch_tokens": 147,
+        "image_count": 36,
+        "image_task_row_count": 132,
+        "overlap_mean_image_equal": 0.9637750602886658,
+        "overlap_row_10th_percentile": 0.9319727891156463,
+        "identical_selection_row_count": 2,
+        "task_coefficient_pearson_mean_image_equal": 0.994887957371505,
+        "task_row_accuracy_seed_2031": 1.0,
+        "task_row_accuracy_seed_2032": 1.0,
+        "correctness_changed_row_count": 0,
+        "mean_margin_image_equal_seed_2031": 0.16088208135281484,
+        "mean_margin_image_equal_seed_2032": 0.1611069197411693,
+        "mean_absolute_margin_change_image_equal": 0.0030096969786518935,
+        "paired_margin_delta_image_equal": 0.00022483838835445346,
+        "paired_margin_delta_image_bootstrap_ci95": [
+          -0.0012136101588439295,
+          0.0019078020193421883
+        ]
+      },
+      {
+        "keep_patch_tokens": 98,
+        "image_count": 36,
+        "image_task_row_count": 132,
+        "overlap_mean_image_equal": 0.9085162239498974,
+        "overlap_row_10th_percentile": 0.8367346938775511,
+        "identical_selection_row_count": 0,
+        "task_coefficient_pearson_mean_image_equal": 0.994887957371505,
+        "task_row_accuracy_seed_2031": 0.9696969696969697,
+        "task_row_accuracy_seed_2032": 0.9848484848484849,
+        "correctness_changed_row_count": 2,
+        "mean_margin_image_equal_seed_2031": 0.1437214671679718,
+        "mean_margin_image_equal_seed_2032": 0.1411761055553268,
+        "mean_absolute_margin_change_image_equal": 0.009588801574452275,
+        "paired_margin_delta_image_equal": -0.002545361612645032,
+        "paired_margin_delta_image_bootstrap_ci95": [
+          -0.010590432516002606,
+          0.003782168463855413
+        ]
+      },
+      {
+        "keep_patch_tokens": 49,
+        "image_count": 36,
+        "image_task_row_count": 132,
+        "overlap_mean_image_equal": 0.9137998056365403,
+        "overlap_row_10th_percentile": 0.8571428571428571,
+        "identical_selection_row_count": 2,
+        "task_coefficient_pearson_mean_image_equal": 0.994887957371505,
+        "task_row_accuracy_seed_2031": 0.946969696969697,
+        "task_row_accuracy_seed_2032": 0.9393939393939394,
+        "correctness_changed_row_count": 1,
+        "mean_margin_image_equal_seed_2031": 0.10841481588232987,
+        "mean_margin_image_equal_seed_2032": 0.10884398953591395,
+        "mean_absolute_margin_change_image_equal": 0.0042797275420285085,
+        "paired_margin_delta_image_equal": 0.0004291736535840696,
+        "paired_margin_delta_image_bootstrap_ci95": [
+          -0.0014315891430132545,
+          0.002802238901608184
+        ]
+      }
+    ],
+    "budget_matched": [
+      {
+        "keep_patch_tokens": 147,
+        "image_count": 36,
+        "image_task_row_count": 132,
+        "overlap_mean_image_equal": 0.8796732714249722,
+        "overlap_row_10th_percentile": 0.8231292517006803,
+        "identical_selection_row_count": 0,
+        "task_coefficient_pearson_mean_image_equal": 0.9238503647663805,
+        "task_row_accuracy_seed_2031": 1.0,
+        "task_row_accuracy_seed_2032": 1.0,
+        "correctness_changed_row_count": 0,
+        "mean_margin_image_equal_seed_2031": 0.16395749629933448,
+        "mean_margin_image_equal_seed_2032": 0.16346600558658048,
+        "mean_absolute_margin_change_image_equal": 0.006488571886623662,
+        "paired_margin_delta_image_equal": -0.0004914907127539946,
+        "paired_margin_delta_image_bootstrap_ci95": [
+          -0.004416414756640772,
+          0.004979948367413488
+        ]
+      },
+      {
+        "keep_patch_tokens": 98,
+        "image_count": 36,
+        "image_task_row_count": 132,
+        "overlap_mean_image_equal": 0.6171195065327719,
+        "overlap_row_10th_percentile": 0.5510204081632653,
+        "identical_selection_row_count": 0,
+        "task_coefficient_pearson_mean_image_equal": 0.6369627302244376,
+        "task_row_accuracy_seed_2031": 1.0,
+        "task_row_accuracy_seed_2032": 1.0,
+        "correctness_changed_row_count": 0,
+        "mean_margin_image_equal_seed_2031": 0.16215634378678506,
+        "mean_margin_image_equal_seed_2032": 0.16259486663731793,
+        "mean_absolute_margin_change_image_equal": 0.006713766088738801,
+        "paired_margin_delta_image_equal": 0.00043852285053285346,
+        "paired_margin_delta_image_bootstrap_ci95": [
+          -0.0016947974964345574,
+          0.002529829064662514
+        ]
+      },
+      {
+        "keep_patch_tokens": 49,
+        "image_count": 36,
+        "image_task_row_count": 132,
+        "overlap_mean_image_equal": 0.4627726487420365,
+        "overlap_row_10th_percentile": 0.3673469387755102,
+        "identical_selection_row_count": 0,
+        "task_coefficient_pearson_mean_image_equal": 0.7078030156179639,
+        "task_row_accuracy_seed_2031": 1.0,
+        "task_row_accuracy_seed_2032": 1.0,
+        "correctness_changed_row_count": 0,
+        "mean_margin_image_equal_seed_2031": 0.14599377955679618,
+        "mean_margin_image_equal_seed_2032": 0.14639276762014972,
+        "mean_absolute_margin_change_image_equal": 0.007960319301734369,
+        "paired_margin_delta_image_equal": 0.0003989880633535524,
+        "paired_margin_delta_image_bootstrap_ci95": [
+          -0.0016150864886573303,
+          0.0022624464496162045
+        ]
+      }
+    ]
+  }
+}

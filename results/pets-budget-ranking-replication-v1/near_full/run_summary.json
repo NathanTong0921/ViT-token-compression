@@ -1,0 +1,49 @@
+{
+  "run_type": "budget_context_additive_ranking",
+  "arm": "near_full",
+  "started_utc": "2026-10-18T09:14:47.724153+00:00",
+  "code_commit": "dee4d0c48801525248e42ada70a14f16ec5d02f0",
+  "config": {
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "results/pets-baseline-v1",
+    "image_split": "val",
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "batch_size": 64,
+    "num_workers": 4,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": [
+      147,
+      98,
+      49
+    ],
+    "identity_atol": 1e-06,
+    "task_split": "val",
+    "images_per_class": 1,
+    "candidate_count": 64,
+    "suffix_batch_size": 64,
+    "near_full_context": 192,
+    "probe_count": 512,
+    "holdout_count": 128,
+    "mask_seed": 2032,
+    "ridge": 0.01
+  },
+  "image_count": 36,
+  "task_count": 66,
+  "exchange_row_count": 651,
+  "single_task_row_count": 1584,
+  "identity": {
+    "max_feature_error": 0.0,
+    "max_feature_error_vs_native": 0.0,
+    "max_score_error": 0.0,
+    "prediction_disagreements_37class": 0,
+    "prediction_disagreements_binary": 0
+  },
+  "ranking_context": 192,
+  "interpretation_scope": "Label-informed development diagnostics; candidate-bank searches are optimistic bounded references, not learned selectors."
+}
