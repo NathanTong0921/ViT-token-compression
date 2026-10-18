@@ -117,6 +117,36 @@ def plot(result, directory):
     plt.close(fig)
 
 
+def plot_training(directory):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    rows = read_rows(directory / "training" / "training_history.csv")
+    fig, axes = plt.subplots(1, 2, figsize=(10.5, 3.8), sharey=True)
+    for arm, color in (("conditioned", "#d97925"), ("image_only", "#3565a3")):
+        seeds = sorted({int(r["seed"]) for r in rows if r["arm"] == arm})
+        for ax, metric in zip(axes, ("train_kl", "val_kl")):
+            curves = []
+            for seed in seeds:
+                values = sorted((r for r in rows if r["arm"] == arm and int(r["seed"]) == seed),
+                                key=lambda r: int(r["epoch"]))
+                epochs = [int(r["epoch"]) for r in values]
+                curve = [float(r[metric]) for r in values]
+                curves.append(curve)
+                ax.plot(epochs, curve, color=color, linewidth=.7, alpha=.3)
+            ax.plot(epochs, np.mean(curves, axis=0), color=color, linewidth=2,
+                    label=arm.replace("_", " "))
+    for ax, title in zip(axes, ("Training fit", "New images and unseen pairs")):
+        ax.set(xlabel="Epoch (fixed final checkpoint)", ylabel="Teacher-distribution KL", title=title)
+        ax.spines[["top", "right"]].set_visible(False)
+        ax.grid(alpha=.2)
+    axes[0].legend(frameon=False)
+    fig.tight_layout()
+    for ext in ("png", "pdf"):
+        fig.savefig(directory / f"training_curves.{ext}", dpi=180, bbox_inches="tight")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--results", type=Path, required=True)
@@ -126,5 +156,6 @@ if __name__ == "__main__":
     (args.results / "analysis.json").write_text(json.dumps(result, indent=2, allow_nan=False)+"\n")
     if args.plot:
         plot(result, args.results)
+        plot_training(args.results)
     for split, value in result["task_splits"].items():
         print(split, [(row["method"], round(row["mean_accuracy"], 4)) for row in value["table"]])
