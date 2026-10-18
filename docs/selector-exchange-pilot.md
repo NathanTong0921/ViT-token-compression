@@ -16,7 +16,7 @@ The previous evaluation retained the compressed image's cosine scores against al
 
 For each image/task pair, form the four cells: descriptor A evaluated on A or B, and descriptor B evaluated on A or B. The primary effect is the mean of the two own-descriptor outcomes minus the mean of the two exchanged-descriptor outcomes, for signed geometric margin and accuracy. Positive values mean the correct task information helps. Compare own and exchanged outcomes against the matched image-only model. Its selections and score vectors should be invariant across descriptors, yielding a zero exchange effect.
 
-Replay a small deterministic sample on the server from the saved prefix cache and final weights, using the same fixed batch size of 64 and stable top-k selection. Verify selected positions, logits, all-class scores and crossed correctness against the archived values. Record this replay's cost separately from CPU re-analysis.
+Replay the first eight alphabetically sorted eligible unseen-panel images and their first two task IDs, for all three seeds and both learned models, from saved prefix caches and final weights. Use the same fixed batch size of 64 and stable top-k selection. Require exact selected positions and crossed correctness, all-class score and crossed-margin errors at most 1e-6, and raw-logit errors at most 1e-5. Record this replay's cost separately from CPU re-analysis.
 
 ## Analysis fixed in advance
 
