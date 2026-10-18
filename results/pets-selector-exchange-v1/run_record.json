@@ -1,0 +1,32 @@
+{
+  "code_commit": "171db3c8fa0439cab8668708eb688d105663985f",
+  "python_version": "3.9.6",
+  "analysis_location": "local CPU",
+  "commands": [
+    {
+      "command": [
+        "scripts/analyze_selector_exchange.py",
+        "--config",
+        "configs/pets_selector_exchange.json",
+        "--output",
+        "results/pets-selector-exchange-v1",
+        "--plot",
+        "--unseen-csv"
+      ],
+      "wall_seconds": 2.623806375
+    },
+    {
+      "command": [
+        "scripts/analyze_selector_errors.py",
+        "--source",
+        "results/pets-selector-pilot-v1",
+        "--pruning-summary",
+        "results/pets-pruning-v1/summary.json",
+        "--output",
+        "results/pets-selector-exchange-v1/error_analysis"
+      ],
+      "wall_seconds": 0.3794978750000002
+    }
+  ],
+  "note": "Official archived regeneration after code commit; the error script also had an earlier uncommitted local check. GPU replay is recorded separately; no new training."
+}

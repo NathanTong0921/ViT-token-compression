@@ -1,0 +1,157 @@
+{
+  "code_commit": "b38e13fbc4e99cfaf22257ae20455ef1e276e1aa",
+  "source": "results/pets-selector-pilot-v1",
+  "config": {
+    "cache_dir": "runs/pets-selector-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "results/pets-baseline-v1",
+    "teacher_source_dir": "results/pets-budget-ranking-v1",
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": 49,
+    "train_images_per_class": 16,
+    "val_images_per_class": 4,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "epochs": 30,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0
+  },
+  "selection": "First eight alphabetically sorted eligible unseen-panel images, first two task IDs per image; no outcome-based sampling.",
+  "image_task_plans": [
+    [
+      "Abyssinian_104",
+      "00_06",
+      "00_15"
+    ],
+    [
+      "Abyssinian_133",
+      "00_06",
+      "00_15"
+    ],
+    [
+      "Abyssinian_164",
+      "00_06",
+      "00_15"
+    ],
+    [
+      "Abyssinian_172",
+      "00_06",
+      "00_15"
+    ],
+    [
+      "Bengal_147",
+      "04_05",
+      "05_11"
+    ],
+    [
+      "Bengal_153",
+      "04_05",
+      "05_11"
+    ],
+    [
+      "Bengal_154",
+      "04_05",
+      "05_11"
+    ],
+    [
+      "Bengal_18",
+      "04_05",
+      "05_11"
+    ]
+  ],
+  "checks": [
+    {
+      "seed": 2041,
+      "method": "conditioned",
+      "logical_examples": 16,
+      "physical_examples": 64,
+      "max_score_error": 0.0,
+      "max_logit_error": 0.0,
+      "max_crossed_margin_error": 0.0,
+      "positions_exact": true,
+      "crossed_correctness_exact": true
+    },
+    {
+      "seed": 2041,
+      "method": "image_only",
+      "logical_examples": 16,
+      "physical_examples": 64,
+      "max_score_error": 0.0,
+      "max_logit_error": 0.0,
+      "max_crossed_margin_error": 0.0,
+      "positions_exact": true,
+      "crossed_correctness_exact": true
+    },
+    {
+      "seed": 2042,
+      "method": "conditioned",
+      "logical_examples": 16,
+      "physical_examples": 64,
+      "max_score_error": 0.0,
+      "max_logit_error": 0.0,
+      "max_crossed_margin_error": 0.0,
+      "positions_exact": true,
+      "crossed_correctness_exact": true
+    },
+    {
+      "seed": 2042,
+      "method": "image_only",
+      "logical_examples": 16,
+      "physical_examples": 64,
+      "max_score_error": 0.0,
+      "max_logit_error": 0.0,
+      "max_crossed_margin_error": 0.0,
+      "positions_exact": true,
+      "crossed_correctness_exact": true
+    },
+    {
+      "seed": 2043,
+      "method": "conditioned",
+      "logical_examples": 16,
+      "physical_examples": 64,
+      "max_score_error": 0.0,
+      "max_logit_error": 0.0,
+      "max_crossed_margin_error": 0.0,
+      "positions_exact": true,
+      "crossed_correctness_exact": true
+    },
+    {
+      "seed": 2043,
+      "method": "image_only",
+      "logical_examples": 16,
+      "physical_examples": 64,
+      "max_score_error": 0.0,
+      "max_logit_error": 0.0,
+      "max_crossed_margin_error": 0.0,
+      "positions_exact": true,
+      "crossed_correctness_exact": true
+    }
+  ],
+  "score_atol": 1e-06,
+  "logit_atol": 1e-05,
+  "crossed_margin_atol": 1e-06,
+  "wall_seconds": 4.692892751190811,
+  "gpu": "NVIDIA RTX A6000",
+  "torch_version": "2.6.0+cu124",
+  "cost_scope": "Small cached-prefix replay, including loading/checks/writes; not training or deployment latency."
+}

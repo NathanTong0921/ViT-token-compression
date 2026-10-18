@@ -1,6 +1,6 @@
 # Storage and backup plan
 
-Status, 2026-10-18: the first paired selector pilot is complete. Original baseline, pruning, offline-selection, budget-context and learned-selector evidence are retained locally and on the server; small evidence is versioned in Git. The selector pilot adds a persistent 222.71 MB prefix cache on the server. Dataset and CLIP weights remain server working assets. The capacity figures below are planning allowances, not current-use measurements.
+Status, 2026-10-18: the paired selector pilot and subsequent fixed-model task exchange are complete. Original baseline, pruning, offline-selection, budget-context and learned-selector evidence are retained locally and on the server; small evidence is versioned in Git. The selector pilot adds a persistent 222.71 MB prefix cache on the server. The exchange adds approximately 3.9 MB of case arrays, summaries, figures, error records and replay evidence in ordinary Git; it reuses existing weights and caches. Dataset and CLIP weights remain server working assets. The capacity figures below are planning allowances, not current-use measurements.
 
 The single-stage pruning pilot adds approximately 21.6 MB of scores, embeddings, retained positions, metrics and figure exports under `results/pets-pruning-v1/`. These are small enough for ordinary Git. Its approximately 223 MB prefix cache existed only in host RAM and was released after the run; no persistent prefix cache or selection-supervision cache was created.
 

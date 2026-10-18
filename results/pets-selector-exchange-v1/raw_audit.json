@@ -1,0 +1,383 @@
+{
+  "scope": "Independent read-only reconstruction of saved learned-selector exchange results; no new statistical sample, training or GPU inference.",
+  "source_predictions": "results/pets-selector-pilot-v1/evaluation/predictions.npz",
+  "exchange_cases": "results/pets-selector-exchange-v1/exchange_cases.npz",
+  "analysis_source": "results/pets-selector-exchange-v1/analysis.json",
+  "case_count": 164316,
+  "paired_key_checks": {
+    "source_image_seed_split_budget_labels_match": true,
+    "source_task_ids_and_candidate_labels_match": true,
+    "unordered_pair_keys_unique": true,
+    "all_eligible_unordered_pairs_present": true,
+    "per_split_seed_counts": [
+      {
+        "task_split": "seen",
+        "seed": 2041,
+        "expected_pairs": 53904,
+        "saved_pairs": 53904,
+        "eligible_images": 144
+      },
+      {
+        "task_split": "seen",
+        "seed": 2042,
+        "expected_pairs": 53904,
+        "saved_pairs": 53904,
+        "eligible_images": 144
+      },
+      {
+        "task_split": "seen",
+        "seed": 2043,
+        "expected_pairs": 53904,
+        "saved_pairs": 53904,
+        "eligible_images": 144
+      },
+      {
+        "task_split": "unseen",
+        "seed": 2041,
+        "expected_pairs": 868,
+        "saved_pairs": 868,
+        "eligible_images": 124
+      },
+      {
+        "task_split": "unseen",
+        "seed": 2042,
+        "expected_pairs": 868,
+        "saved_pairs": 868,
+        "eligible_images": 124
+      },
+      {
+        "task_split": "unseen",
+        "seed": 2043,
+        "expected_pairs": 868,
+        "saved_pairs": 868,
+        "eligible_images": 124
+      }
+    ]
+  },
+  "four_cell_reconstruction": {
+    "definition": "First letter is supplied descriptor; second letter is evaluated task. Both conditioned and image-only cells are checked.",
+    "margin_max_abs_difference_by_cell": {
+      "margin_aa": 0.0,
+      "margin_ba": 0.0,
+      "margin_bb": 0.0,
+      "margin_ab": 0.0,
+      "image_only_margin_aa": 0.0,
+      "image_only_margin_ba": 0.0,
+      "image_only_margin_bb": 0.0,
+      "image_only_margin_ab": 0.0
+    },
+    "correctness_disagreements_by_cell": {
+      "correct_aa": 0,
+      "correct_ba": 0,
+      "correct_bb": 0,
+      "correct_ab": 0,
+      "image_only_correct_aa": 0,
+      "image_only_correct_ba": 0,
+      "image_only_correct_bb": 0,
+      "image_only_correct_ab": 0
+    },
+    "original_full_model_margins_and_correctness_exact": true
+  },
+  "task_invariant_references": {
+    "image_only": {
+      "image_seed_groups": 432,
+      "source_prediction_rows": 13584,
+      "scope": "Same image and seed across all seen and unseen supplied task descriptors.",
+      "max_abs_all_class_score_difference": 0.0,
+      "position_disagreement_rows": 0
+    },
+    "full_model": {
+      "image_seed_groups": 144,
+      "source_prediction_rows": 4528,
+      "scope": "Same image and seed across all seen and unseen supplied task descriptors.",
+      "max_abs_all_class_score_difference": 0.0,
+      "position_disagreement_rows": 0
+    },
+    "attention": {
+      "image_seed_groups": 144,
+      "source_prediction_rows": 4528,
+      "scope": "Same image and seed across all seen and unseen supplied task descriptors.",
+      "max_abs_all_class_score_difference": 0.0,
+      "position_disagreement_rows": 0
+    }
+  },
+  "bootstrap_reconstruction": {
+    "implementation": "Independent NumPy within-image averaging with np.add.at, then percentile bootstrap over image means.",
+    "replicates": 2000,
+    "seed": 2051,
+    "comparison_count": 18,
+    "max_abs_mean_or_interval_difference": 6.938893903907228e-18,
+    "comparisons": [
+      {
+        "check": "unseen/own_minus_swapped_margin",
+        "max_abs_mean_or_interval_difference": 3.469446951953614e-18
+      },
+      {
+        "check": "unseen/same_band/own_minus_swapped_margin",
+        "max_abs_mean_or_interval_difference": 1.3010426069826053e-18
+      },
+      {
+        "check": "unseen/2041/own_minus_swapped_margin",
+        "max_abs_mean_or_interval_difference": 2.6020852139652106e-18
+      },
+      {
+        "check": "unseen/2042/own_minus_swapped_margin",
+        "max_abs_mean_or_interval_difference": 1.734723475976807e-18
+      },
+      {
+        "check": "unseen/2043/own_minus_swapped_margin",
+        "max_abs_mean_or_interval_difference": 1.734723475976807e-18
+      },
+      {
+        "check": "unseen/own_minus_swapped_accuracy",
+        "max_abs_mean_or_interval_difference": 8.673617379884035e-19
+      },
+      {
+        "check": "unseen/same_band/own_minus_swapped_accuracy",
+        "max_abs_mean_or_interval_difference": 1.734723475976807e-18
+      },
+      {
+        "check": "unseen/2041/own_minus_swapped_accuracy",
+        "max_abs_mean_or_interval_difference": 1.734723475976807e-18
+      },
+      {
+        "check": "unseen/2042/own_minus_swapped_accuracy",
+        "max_abs_mean_or_interval_difference": 0.0
+      },
+      {
+        "check": "unseen/2043/own_minus_swapped_accuracy",
+        "max_abs_mean_or_interval_difference": 4.336808689942018e-19
+      },
+      {
+        "check": "unseen/band1/own_minus_swapped_margin",
+        "max_abs_mean_or_interval_difference": 8.673617379884035e-19
+      },
+      {
+        "check": "unseen/band1/own_minus_swapped_accuracy",
+        "max_abs_mean_or_interval_difference": 6.938893903907228e-18
+      },
+      {
+        "check": "unseen/band2/own_minus_swapped_margin",
+        "max_abs_mean_or_interval_difference": 1.3010426069826053e-18
+      },
+      {
+        "check": "unseen/band2/own_minus_swapped_accuracy",
+        "max_abs_mean_or_interval_difference": 0.0
+      },
+      {
+        "check": "unseen/band3/own_minus_swapped_margin",
+        "max_abs_mean_or_interval_difference": 2.6020852139652106e-18
+      },
+      {
+        "check": "unseen/band3/own_minus_swapped_accuracy",
+        "max_abs_mean_or_interval_difference": 0.0
+      },
+      {
+        "check": "unseen/band4/own_minus_swapped_margin",
+        "max_abs_mean_or_interval_difference": 1.734723475976807e-18
+      },
+      {
+        "check": "unseen/band4/own_minus_swapped_accuracy",
+        "max_abs_mean_or_interval_difference": 0.0
+      }
+    ]
+  },
+  "primary_unseen": {
+    "own_minus_swapped_margin": {
+      "mean": 0.004155483746587905,
+      "ci95": [
+        0.0032190647287518403,
+        0.005159642915584598
+      ],
+      "image_count": 124
+    },
+    "own_minus_swapped_accuracy": {
+      "mean": 0.005331541218637993,
+      "ci95": [
+        0.0012533602150537632,
+        0.010304659498207884
+      ],
+      "image_count": 124
+    }
+  },
+  "primary_unseen_per_seed": {
+    "2041": {
+      "own_minus_swapped_margin": {
+        "mean": 0.003745873635868706,
+        "ci95": [
+          0.0025248115905263328,
+          0.004969807487484756
+        ],
+        "image_count": 124
+      },
+      "own_minus_swapped_accuracy": {
+        "mean": 0.005779569892473118,
+        "ci95": [
+          -0.0009408602150537635,
+          0.014385080645161271
+        ],
+        "image_count": 124
+      }
+    },
+    "2042": {
+      "own_minus_swapped_margin": {
+        "mean": 0.003746196104467706,
+        "ci95": [
+          0.0027040551055844885,
+          0.004818368104296595
+        ],
+        "image_count": 124
+      },
+      "own_minus_swapped_accuracy": {
+        "mean": 0.008064516129032258,
+        "ci95": [
+          0.0017473118279569893,
+          0.016532258064516126
+        ],
+        "image_count": 124
+      }
+    },
+    "2043": {
+      "own_minus_swapped_margin": {
+        "mean": 0.0049743814994273015,
+        "ci95": [
+          0.003682219168784233,
+          0.006386727891926093
+        ],
+        "image_count": 124
+      },
+      "own_minus_swapped_accuracy": {
+        "mean": 0.002150537634408602,
+        "ci95": [
+          -0.0032258064516129024,
+          0.0077956989247311825
+        ],
+        "image_count": 124
+      }
+    }
+  },
+  "same_reference_band_unseen": {
+    "observations_across_seeds": 795,
+    "images": 108,
+    "effects": {
+      "own_minus_swapped_margin": {
+        "mean": 0.0033396552581516506,
+        "ci95": [
+          0.0023454652407811924,
+          0.004361048570442943
+        ],
+        "image_count": 108
+      },
+      "own_minus_swapped_accuracy": {
+        "mean": 0.00787037037037037,
+        "ci95": [
+          0.0023649691358024693,
+          0.015277777777777777
+        ],
+        "image_count": 108
+      }
+    }
+  },
+  "directed_difficulty_checks": {
+    "edges": [
+      0.09612737409770489,
+      0.12876027822494507,
+      0.15853078663349152
+    ],
+    "assignment": "Each evaluated task uses its own full-model margin; exact edges go to the higher band.",
+    "bands": [
+      {
+        "reference_band": 1,
+        "directed_observations_across_seeds": 1410,
+        "own_minus_swapped_margin": {
+          "mean": 0.004792856753371918,
+          "ci95": [
+            0.002653944805604162,
+            0.0070201901762693844
+          ],
+          "image_count": 78
+        },
+        "own_minus_swapped_accuracy": {
+          "mean": 0.013698955365622031,
+          "ci95": [
+            0.002564102564102564,
+            0.027946937321937298
+          ],
+          "image_count": 78
+        }
+      },
+      {
+        "reference_band": 2,
+        "directed_observations_across_seeds": 1200,
+        "own_minus_swapped_margin": {
+          "mean": 0.003293409846562537,
+          "ci95": [
+            0.001507312657879689,
+            0.0052353569283815505
+          ],
+          "image_count": 81
+        },
+        "own_minus_swapped_accuracy": {
+          "mean": 0.0018518518518518517,
+          "ci95": [
+            0.0,
+            0.0049382716049382715
+          ],
+          "image_count": 81
+        }
+      },
+      {
+        "reference_band": 3,
+        "directed_observations_across_seeds": 1479,
+        "own_minus_swapped_margin": {
+          "mean": 0.003746455056329561,
+          "ci95": [
+            0.001483945183693532,
+            0.005726139472537623
+          ],
+          "image_count": 87
+        },
+        "own_minus_swapped_accuracy": {
+          "mean": -0.0025542784163473816,
+          "ci95": [
+            -0.011494252873563218,
+            0.0038314176245210726
+          ],
+          "image_count": 87
+        }
+      },
+      {
+        "reference_band": 4,
+        "directed_observations_across_seeds": 1119,
+        "own_minus_swapped_margin": {
+          "mean": 0.005151896175691141,
+          "ci95": [
+            0.0031641217493572336,
+            0.007278978171215865
+          ],
+          "image_count": 66
+        },
+        "own_minus_swapped_accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "image_count": 66
+        }
+      }
+    ]
+  },
+  "positive_mean_exchange_margin_images": {
+    "positive": 102,
+    "total": 124
+  },
+  "limitations": [
+    "Confidence intervals are conditional on these task collections and trained seeds; repeated pairs and seeds are not independent images.",
+    "All three seed-specific margin intervals exclude zero, but only seed 2042 has an accuracy interval excluding zero.",
+    "Same reference band is a coarse difficulty restriction, not exact margin matching.",
+    "Correct-versus-exchanged descriptor benefit does not establish superiority over a task-independent selector or privileged shared search.",
+    "These are development images and held-out combinations of known classes, not untouched final-test confirmation.",
+    "Saved class cosine scores do not determine full image-embedding displacement, so this audit does not establish normalized H2 alignment or mechanism."
+  ]
+}
