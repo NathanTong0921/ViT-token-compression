@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from token_compression.selection_analysis import SHARED_METHODS, cluster_summary, fit_h2, grouped_folds, row_metrics, summarize_single_tasks
+from token_compression.selection_analysis import SHARED_METHODS, candidate_search_depth, cluster_summary, fit_h2, grouped_folds, row_metrics, summarize_single_tasks, valid_alignment_rows
 
 
 class SelectionAnalysisTests(unittest.TestCase):
@@ -46,6 +46,30 @@ class SelectionAnalysisTests(unittest.TestCase):
         for image_id in np.unique(ids):
             self.assertEqual(len(np.unique(folds[ids == image_id])), 1)
 
+    def test_zero_and_near_zero_scale_alignment_are_not_observations(self):
+        valid = self.make_row()
+        zero = dict(valid, image_id="zero", selection_feature_distance=0., exchange_alignment=0.)
+        tiny = dict(valid, image_id="tiny", selection_feature_distance=1e-7, exchange_alignment=.9)
+        small_angle = dict(valid, image_id="angle", angle_degrees=1e-5, exchange_alignment=.8)
+        self.assertEqual(valid_alignment_rows([valid, zero, tiny, small_angle]), [valid])
+        self.assertNotIn("exchange_alignment", row_metrics([valid, zero]))
+
+    def test_candidate_prefix_search_is_nested_and_uses_true_task_direction(self):
+        text = np.eye(3, dtype=np.float32)
+        bank = {"image_ids": np.asarray(["a", "b"]),
+                "cases": np.asarray([[0, 0, 1, 2], [1, 2, 0, 1]]),
+                "cosine_scores": np.asarray([
+                    [[.2, .1, .1], [.4, .1, .5], [.5, .1, .1], [.1, .4, .4]],
+                    [[.1, .1, .2], [.5, .1, .4], [.1, .1, .5], [.4, .4, .1]],
+                ], dtype=np.float32)}
+        result = candidate_search_depth(bank, text, 49, depths=(1, 2, 4))
+        self.assertEqual([row["candidate_count"] for row in result], [1, 2, 4])
+        self.assertEqual(result[-1]["image_count"], 2)
+        self.assertAlmostEqual(result[-1]["shared_search_mean_accuracy"], 1.)
+        self.assertAlmostEqual(result[-1]["shared_search_mean_margin"], .4 / np.sqrt(2), places=6)
+        self.assertTrue(all(a["shared_search_mean_margin"] <= b["shared_search_mean_margin"]
+                            for a, b in zip(result, result[1:])))
+
     def test_rank_deficient_controls_still_report_identifiable_angle(self):
         rows = []
         for i in range(15):
@@ -62,7 +86,8 @@ class SelectionAnalysisTests(unittest.TestCase):
 
     def test_single_task_panel_requires_both_class_sides_for_balanced_metric(self):
         rows = [{"keep_patch_tokens": 49, "method": "task_rank", "image_id": name,
-                 "task_id": task, "class_id": label, "correct": correct}
+                 "task_id": task, "class_id": label, "correct": correct,
+                 "base_correct": int(name != "b")}
                 for name, task, label, correct in
                 [("a", "0_1", 0, 1), ("b", "0_1", 0, 1), ("c", "0_1", 1, 0),
                  ("d", "0_2", 0, 1)]]
@@ -70,6 +95,12 @@ class SelectionAnalysisTests(unittest.TestCase):
         self.assertEqual(result["two_sided_task_count"], 1)
         self.assertAlmostEqual(result["two_sided_task_macro_balanced_accuracy"], .5)
         self.assertAlmostEqual(result["panel_accuracy_micro"], .75)
+        self.assertAlmostEqual(result["panel_base_accuracy_micro"], .75)
+        self.assertEqual(result["panel_new_error_count"], 1)
+        self.assertEqual(result["panel_recovery_count"], 1)
+        self.assertAlmostEqual(result["two_sided_task_macro_balanced_base_accuracy"], .75)
+        self.assertAlmostEqual(result["two_sided_task_macro_balanced_new_error_fraction"], .5)
+        self.assertAlmostEqual(result["two_sided_task_macro_balanced_recovery_fraction"], .25)
 
 
 if __name__ == "__main__":

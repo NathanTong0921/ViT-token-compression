@@ -13,6 +13,7 @@ import numpy as np
 
 SHARED_METHODS = ("shared_proxy", "attention", "representation", "random_0",
                   "shared_search_mean", "shared_search_maxmin")
+ALIGNMENT_MIN_SCALE = 1e-6
 
 
 def row_metrics(rows):
@@ -38,8 +39,14 @@ def row_metrics(rows):
                 metrics[f"task_search_own_minus_{method}_{metric}"] = searched - shared
     metrics["overlap_fraction_task_ab"] = column("overlap_fraction_task_ab")
     metrics["selection_feature_distance"] = column("selection_feature_distance")
-    metrics["exchange_alignment"] = column("exchange_alignment")
     return metrics
+
+
+def valid_alignment_rows(rows, minimum_scale=ALIGNMENT_MIN_SCALE):
+    """Exclude undefined or numerically unstable normalized projection values."""
+    return [row for row in rows
+            if float(row["selection_feature_distance"])
+            * abs(np.sin(np.deg2rad(float(row["angle_degrees"])) / 2)) > minimum_scale]
 
 
 def image_means(image_ids, values):
@@ -182,21 +189,42 @@ def summarize_single_tasks(rows):
         by_task = defaultdict(list)
         for row in selected:
             by_task[row["task_id"]].append(row)
-        balanced = []
+        balanced, balanced_base, balanced_new_errors, balanced_recoveries = [], [], [], []
         for task_rows in by_task.values():
             by_class = defaultdict(list)
             for row in task_rows:
-                by_class[int(row["class_id"])].append(float(row["correct"]))
+                by_class[int(row["class_id"])].append(row)
             if len(by_class) == 2:
-                balanced.append(np.mean([np.mean(values) for values in by_class.values()]))
+                balanced.append(np.mean([np.mean([float(r["correct"]) for r in values])
+                                         for values in by_class.values()]))
+                balanced_base.append(np.mean([np.mean([float(r["base_correct"]) for r in values])
+                                              for values in by_class.values()]))
+                balanced_new_errors.append(np.mean([
+                    np.mean([float(r["base_correct"]) * (1 - float(r["correct"])) for r in values])
+                    for values in by_class.values()]))
+                balanced_recoveries.append(np.mean([
+                    np.mean([(1 - float(r["base_correct"])) * float(r["correct"]) for r in values])
+                    for values in by_class.values()]))
+        correct = np.asarray([float(row["correct"]) for row in selected])
+        base_correct = np.asarray([float(row["base_correct"]) for row in selected])
+        new_errors = int(np.sum(base_correct * (1 - correct)))
+        recoveries = int(np.sum((1 - base_correct) * correct))
         results.append({
             "keep_patch_tokens": budget, "method": method, "row_count": len(selected),
             "image_count": len({row["image_id"] for row in selected}), "task_count": len(by_task),
-            "panel_accuracy_micro": float(np.mean([float(row["correct"]) for row in selected])),
+            "panel_accuracy_micro": float(np.mean(correct)),
+            "panel_base_accuracy_micro": float(np.mean(base_correct)),
+            "panel_new_error_count": new_errors,
+            "panel_recovery_count": recoveries,
             "panel_accuracy_task_macro": float(np.mean([
                 np.mean([float(row["correct"]) for row in task_rows]) for task_rows in by_task.values()])),
+            "panel_base_accuracy_task_macro": float(np.mean([
+                np.mean([float(row["base_correct"]) for row in task_rows]) for task_rows in by_task.values()])),
             "two_sided_task_count": len(balanced),
             "two_sided_task_macro_balanced_accuracy": float(np.mean(balanced)) if balanced else None,
+            "two_sided_task_macro_balanced_base_accuracy": float(np.mean(balanced_base)) if balanced else None,
+            "two_sided_task_macro_balanced_new_error_fraction": float(np.mean(balanced_new_errors)) if balanced else None,
+            "two_sided_task_macro_balanced_recovery_fraction": float(np.mean(balanced_recoveries)) if balanced else None,
         })
     return results
 
@@ -216,10 +244,19 @@ def analyze_rows(rows, bootstrap_replicates=1000, h2_bootstrap_replicates=300, s
                      for i, name in enumerate(names)}
         raw, _, _ = fit_h2(selected, metrics["exchange_margin_loss"], False, h2_bootstrap_replicates, seed)
         distance_adjusted, _, _ = fit_h2(selected, metrics["exchange_margin_loss"], True, h2_bootstrap_replicates, seed)
-        # Zero displacement gives an undefined alignment, recorded as 0 by the
-        # runner. Exclude those rows from the normalized association analysis.
-        aligned_rows = [row for row in selected if float(row["selection_feature_distance"]) > 1e-12
-                        and abs(np.sin(np.deg2rad(float(row["angle_degrees"])) / 2)) > 1e-12]
+        # The runner's zero-scale value is a sentinel, not an observed alignment.
+        aligned_rows = valid_alignment_rows(selected)
+        alignment_summary = {"row_count": len(aligned_rows),
+                             "image_count": len({row["image_id"] for row in aligned_rows}),
+                             "excluded_row_count": len(selected) - len(aligned_rows),
+                             "minimum_scale_exclusive": ALIGNMENT_MIN_SCALE,
+                             "mean": None, "ci95": None}
+        if aligned_rows:
+            valid = cluster_summary([row["image_id"] for row in aligned_rows],
+                                    [float(row["exchange_alignment"]) for row in aligned_rows],
+                                    bootstrap_replicates, seed)
+            alignment_summary.update(mean=float(valid["mean"]),
+                                     ci95=[float(valid["ci95_low"]), float(valid["ci95_high"])])
         if len({row["image_id"] for row in aligned_rows}) >= 2:
             aligned_target = np.asarray([float(row["exchange_alignment"]) for row in aligned_rows])
             alignment, _, _ = fit_h2(aligned_rows, aligned_target, False, h2_bootstrap_replicates, seed)
@@ -228,10 +265,12 @@ def analyze_rows(rows, bootstrap_replicates=1000, h2_bootstrap_replicates=300, s
         results.append({
             "keep_patch_tokens": budget, "row_count": len(selected), "image_count": aggregate["image_count"],
             "metrics": summaries,
+            "valid_exchange_alignment": alignment_summary,
             "max_abs_projection_identity_residual": float(max(abs(float(row["exchange_projection_residual"])) for row in selected)),
             "h2": {"raw_exchange_loss": raw, "feature_distance_adjusted_exchange_loss": distance_adjusted,
                    "normalized_exchange_alignment": alignment,
-                   "alignment_excluded_zero_scale_rows": len(selected) - len(aligned_rows)},
+                   "alignment_excluded_small_scale_rows": len(selected) - len(aligned_rows),
+                   "alignment_minimum_scale_exclusive": ALIGNMENT_MIN_SCALE},
         })
     return {
         "aggregation": "mean within each image, then equal-weight mean across images",
@@ -246,3 +285,47 @@ def analyze_rows(rows, bootstrap_replicates=1000, h2_bootstrap_replicates=300, s
         ),
         "budgets": results,
     }
+
+
+def candidate_search_depth(bank, text_features, budget, depths=(16, 32, 64)):
+    """Inspect nested prefixes of the saved finite candidate bank without GPU work.
+
+    Task searches maximize each task separately; shared searches maximize the
+    mean or minimum of its two geometric margins. Accuracy is an evaluation,
+    not the selection objective. Prefix stability does not establish optimality.
+    """
+    scores = bank["cosine_scores"]
+    cases = bank["cases"]
+    image_ids = bank["image_ids"][cases[:, 0]]
+    margins = np.empty(scores.shape[:2] + (2,), dtype=np.float64)
+    correctness = np.empty_like(margins)
+    for index, (_, label, ca, cb) in enumerate(cases):
+        norms = np.linalg.norm(text_features[label] - text_features[[ca, cb]], axis=1)
+        # Keep the arithmetic of the original stored-score evaluator.
+        margins[index] = (scores[index, :, label, None] - scores[index][:, [ca, cb]]) / norms
+        for side, competitor in enumerate((ca, cb)):
+            delta = scores[index, :, label] - scores[index, :, competitor]
+            correctness[index, :, side] = (delta > 0) | ((delta == 0) & (label < competitor))
+    depth_values = sorted(set([depth for depth in depths if depth <= scores.shape[1]] + [scores.shape[1]]))
+    case_indices = np.arange(len(cases))
+    output = []
+    for depth in depth_values:
+        part = margins[:, :depth]
+        task_best = part.argmax(axis=1)
+        mean_best = part.mean(axis=2).argmax(axis=1)
+        maxmin_best = part.min(axis=2).argmax(axis=1)
+        own_margin = part[case_indices[:, None], task_best, np.arange(2)[None, :]].mean(axis=1)
+        own_accuracy = correctness[case_indices[:, None], task_best, np.arange(2)[None, :]].mean(axis=1)
+        values = {"task_search_own_margin": own_margin, "task_search_own_accuracy": own_accuracy}
+        for name, chosen in (("shared_search_mean", mean_best), ("shared_search_maxmin", maxmin_best)):
+            shared_margin = part[case_indices, chosen].mean(axis=1)
+            shared_accuracy = correctness[case_indices, chosen].mean(axis=1)
+            values[f"{name}_margin"] = shared_margin
+            values[f"{name}_accuracy"] = shared_accuracy
+            values[f"task_search_own_minus_{name}_margin"] = own_margin - shared_margin
+            values[f"task_search_own_minus_{name}_accuracy"] = own_accuracy - shared_accuracy
+        unique, means = image_means(image_ids, np.column_stack(list(values.values())))
+        output.append({"keep_patch_tokens": int(budget), "candidate_count": int(depth),
+                       "row_count": len(cases), "image_count": len(unique),
+                       **{name: float(value) for name, value in zip(values, means.mean(axis=0))}})
+    return output

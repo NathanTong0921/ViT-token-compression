@@ -7,7 +7,7 @@ from pathlib import Path
 
 import numpy as np
 
-from token_compression.selection_analysis import analyze_rows, fit_h2, image_means, row_metrics, summarize_single_tasks
+from token_compression.selection_analysis import analyze_rows, candidate_search_depth, fit_h2, image_means, row_metrics, summarize_single_tasks
 
 
 def read_csv(path):
@@ -64,12 +64,31 @@ def main():
     parser.add_argument("--h2-bootstrap-replicates", type=int, default=300)
     parser.add_argument("--seed", type=int, default=2030)
     parser.add_argument("--plot", action="store_true", help="Also save descriptive PNG/PDF plots (requires Matplotlib).")
+    parser.add_argument("--search-depth", action="store_true",
+                        help="Analyze saved candidate-bank prefixes at 16, 32 and 64 candidates.")
     args = parser.parse_args()
     rows = read_csv(args.results / "exchange_rows.csv")
     analysis = analyze_rows(rows, args.bootstrap_replicates, args.h2_bootstrap_replicates, args.seed)
     single_path = args.results / "single_task_rows.csv"
     if single_path.exists():
         analysis["single_task_panel"] = summarize_single_tasks(read_csv(single_path))
+    if args.search_depth:
+        with np.load(args.results / "deletion_evidence.npz") as evidence:
+            text = evidence["text_features"].copy()
+        depth_rows = []
+        for bank_path in sorted(args.results.glob("candidate_bank_k*.npz")):
+            budget = int(bank_path.stem.split("_k")[-1])
+            with np.load(bank_path) as bank:
+                depth_rows.extend(candidate_search_depth(bank, text, budget))
+        with (args.results / "search_depth.csv").open("w", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(depth_rows[0]), lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(depth_rows)
+        analysis["candidate_search_depth"] = {
+            "aggregation": "mean within image, then equal-weight mean across images",
+            "scope": "Nested finite-bank prefixes; stability does not establish global optimality.",
+            "rows": depth_rows,
+        }
     (args.results / "analysis.json").write_text(json.dumps(analysis, indent=2, allow_nan=False) + "\n")
     table = []
     for budget in analysis["budgets"]:
