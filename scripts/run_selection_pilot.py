@@ -130,15 +130,20 @@ def run(config, output):
     deletion_seconds = 0.0
     selection_seconds = 0.0
     suffix_count = 0
+    logical_suffix_count = 0
 
     def finish_one(tokens, retained):
-        nonlocal suffix_count
+        nonlocal suffix_count, logical_suffix_count
         parts = []
         for start in range(0, len(retained), config["suffix_batch_size"]):
             idx = torch.as_tensor(retained[start:start + config["suffix_batch_size"]],
                                   device=device, dtype=torch.long)
-            parts.append(normalized(pruner.finish(tokens.expand(len(idx), -1, -1), idx)))
-        suffix_count += len(retained)
+            valid = len(idx)
+            if valid < config["suffix_batch_size"]:
+                idx = torch.cat([idx, idx[-1:].expand(config["suffix_batch_size"] - valid, -1)])
+            parts.append(normalized(pruner.finish(tokens.expand(len(idx), -1, -1), idx))[:valid])
+            suffix_count += len(idx)
+        logical_suffix_count += len(retained)
         return np.concatenate(parts)
 
     for image_index, image_row in enumerate(panel):
@@ -263,6 +268,7 @@ def run(config, output):
         "cost": {"deletion_and_ranking_seconds": deletion_seconds,
                  "subset_evaluation_seconds": selection_seconds,
                  "suffix_forward_examples": suffix_count,
+                 "unique_requested_suffix_examples": logical_suffix_count,
                  "total_wall_seconds": time.perf_counter() - before_run,
                  "training_seconds": 0,
                  "peak_allocated_gpu_bytes": torch.cuda.max_memory_allocated(device)},
