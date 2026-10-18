@@ -72,7 +72,7 @@ class BudgetComparisonTests(unittest.TestCase):
         for arm, mse, correlation in (("near_full", .04, .3), ("budget_matched", .01, .8)):
             for image_id in ("image_a", "image_b"):
                 prediction.append({"keep_patch_tokens": 49, "arm": arm,
-                                   "image_id": image_id, "raw_mse": mse,
+                                   "image_id": image_id, "task_id": "0_1", "raw_mse": mse,
                                    "centered_mse": mse / 2, "pearson": correlation,
                                    "pearson_valid": 1})
         write_rows(self.results / "holdout_prediction_rows.csv", prediction)
@@ -95,6 +95,25 @@ class BudgetComparisonTests(unittest.TestCase):
         self.assertAlmostEqual(prediction["budget_matched"]["pearson"]["mean"], .8)
         self.assertLess(prediction["budget_matched"]["raw_mse"]["mean"],
                         prediction["near_full"]["raw_mse"]["mean"])
+
+    def test_prediction_differences_pair_tasks_and_require_joint_pearson_validity(self):
+        path = self.results / "holdout_prediction_rows.csv"
+        rows = comparison.read_rows(path)
+        for arm, mse, pearson, valid in (("near_full", .05, 0., 0),
+                                       ("budget_matched", .01, .99, 1)):
+            rows.append({"keep_patch_tokens": 49, "arm": arm, "image_id": "image_a",
+                         "task_id": "0_2", "raw_mse": mse, "centered_mse": mse / 2,
+                         "pearson": pearson, "pearson_valid": valid})
+        write_rows(path, rows[::-1])
+        budget = comparison.compare(self.results, self.previous)["budgets"][0]
+        paired = budget["independent_mask_prediction_paired_effects"]
+        self.assertAlmostEqual(paired["budget_minus_near_full_raw_mse"]["mean"], -.0325)
+        self.assertAlmostEqual(paired["budget_minus_near_full_centered_mse"]["mean"], -.01625)
+        self.assertAlmostEqual(paired["budget_minus_near_full_pearson"]["mean"], .5)
+        self.assertEqual(paired["budget_minus_near_full_raw_mse"]["row_count"], 3)
+        self.assertEqual(paired["budget_minus_near_full_pearson"]["row_count"], 2)
+        self.assertEqual(paired["budget_minus_near_full_pearson"]["image_count"], 2)
+        json.dumps(budget, allow_nan=False)
 
     def test_every_arm_uses_identical_union_shared_reference(self):
         budget = comparison.compare(self.results, self.previous)["budgets"][0]

@@ -7,7 +7,7 @@ from pathlib import Path
 
 import numpy as np
 
-from token_compression.selection_analysis import cluster_summary, image_means
+from token_compression.selection_analysis import cluster_summary
 
 
 def read_rows(path):
@@ -102,15 +102,30 @@ def compare(results, previous):
                     shared[f"{arm}_own_minus_union_shared_{metric}_{objective}"] = paired_summary(image_ids, own - common[f"{metric}_{objective}"])
 
         prediction = {}
+        prediction_lookup = {}
         for arm in ("near_full", "budget_matched"):
             rows = [row for row in prediction_rows if int(row["keep_patch_tokens"]) == k and row["arm"] == arm]
+            prediction_lookup[arm] = {(row["image_id"], row["task_id"]): row for row in rows}
+            assert len(prediction_lookup[arm]) == len(rows)
             prediction[arm] = {}
             for metric in ("raw_mse", "centered_mse", "pearson"):
                 selected = [row for row in rows if metric != "pearson" or int(row.get("pearson_valid", "1"))]
                 prediction[arm][metric] = paired_summary([row["image_id"] for row in selected], [float(row[metric]) for row in selected])
+        prediction_keys = sorted(prediction_lookup["near_full"])
+        assert prediction_keys == sorted(prediction_lookup["budget_matched"])
+        prediction_contrasts = {}
+        for metric in ("raw_mse", "centered_mse", "pearson"):
+            paired_keys = [key for key in prediction_keys if metric != "pearson" or all(
+                int(prediction_lookup[arm][key].get("pearson_valid", "1"))
+                for arm in ("near_full", "budget_matched"))]
+            delta = [float(prediction_lookup["budget_matched"][key][metric])
+                     - float(prediction_lookup["near_full"][key][metric]) for key in paired_keys]
+            prediction_contrasts[f"budget_minus_near_full_{metric}"] = paired_summary(
+                [key[0] for key in paired_keys], delta)
         output["budgets"].append({"keep_patch_tokens": k, "balanced_accuracy": table,
                                   "paired_effects": contrasts,
                                   "independent_mask_prediction": prediction,
+                                  "independent_mask_prediction_paired_effects": prediction_contrasts,
                                   "union_candidate_count": scores.shape[1], "union_shared_reference": shared})
     return output
 
@@ -123,12 +138,16 @@ def plot(comparison, destination):
     budgets = [b["keep_patch_tokens"] for b in comparison["budgets"]]
     labels = {"legacy_block": "Previous block-deletion ranking", "near_full": "Near-full regression ranking",
               "budget_matched": "Budget-matched regression ranking", "attention": "Attention"}
+    styles = {"legacy_block": {"color": "#777777", "marker": "s", "linestyle": ":"},
+              "near_full": {"color": "#3565a3", "marker": "o", "linestyle": "--"},
+              "budget_matched": {"color": "#d97925", "marker": "D", "linestyle": "-"},
+              "attention": {"color": "#41946b", "marker": "x", "linestyle": ":"}}
     for method, label in labels.items():
         values = [next(row["accuracy"] for row in b["balanced_accuracy"] if row["method"] == method) for b in comparison["budgets"]]
-        axes[0].plot(budgets, np.asarray(values) * 100, "o-", label=label)
+        axes[0].plot(budgets, np.asarray(values) * 100, label=label, **styles[method])
     for arm in ("near_full", "budget_matched"):
         values = [b["independent_mask_prediction"][arm]["pearson"]["mean"] for b in comparison["budgets"]]
-        axes[1].plot(budgets, values, "o-", label=labels[arm])
+        axes[1].plot(budgets, values, label=labels[arm], **styles[arm])
     axes[0].set(ylabel="Balanced task accuracy (%)", title="Actual top-k selection performance")
     axes[1].set(ylabel="Mean held-out mask correlation", title="Prediction on independent fixed-budget masks")
     for ax in axes:
