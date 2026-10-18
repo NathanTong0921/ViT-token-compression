@@ -1,0 +1,334 @@
+{
+  "started_utc": "2026-10-18T10:11:48.620067+00:00",
+  "code_commit": "bee5abb9e67eacdfa3e0e32fcc043100260f2ee6",
+  "config": {
+    "cache_dir": "runs/pets-selector-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "results/pets-baseline-v1",
+    "teacher_source_dir": "results/pets-budget-ranking-v1",
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": 49,
+    "train_images_per_class": 16,
+    "val_images_per_class": 4,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "epochs": 30,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0
+  },
+  "cache_dir": "runs/pets-selector-supervision-v1",
+  "models_dir": "runs/pets-selector-training-v1",
+  "image_count": 144,
+  "examples_per_method": 4528,
+  "evaluation": [
+    {
+      "seed": -1,
+      "method": "full_model",
+      "task_split": "seen",
+      "image_task_examples": 4000,
+      "task_count": 500,
+      "image_count": 144,
+      "accuracy": 0.989,
+      "mean_margin": 0.12461430176032445
+    },
+    {
+      "seed": -1,
+      "method": "full_model",
+      "task_split": "unseen",
+      "image_task_examples": 528,
+      "task_count": 66,
+      "image_count": 144,
+      "accuracy": 0.990530303030303,
+      "mean_margin": 0.12468287724861897
+    },
+    {
+      "seed": -1,
+      "method": "attention",
+      "task_split": "seen",
+      "image_task_examples": 4000,
+      "task_count": 500,
+      "image_count": 144,
+      "accuracy": 0.97375,
+      "mean_margin": 0.08932767062146968
+    },
+    {
+      "seed": -1,
+      "method": "attention",
+      "task_split": "unseen",
+      "image_task_examples": 528,
+      "task_count": 66,
+      "image_count": 144,
+      "accuracy": 0.9791666666666666,
+      "mean_margin": 0.08809889711196636
+    },
+    {
+      "seed": -1,
+      "method": "label_informed_teacher",
+      "task_split": "seen",
+      "image_task_examples": 4000,
+      "task_count": 500,
+      "image_count": 144,
+      "accuracy": 0.99925,
+      "mean_margin": 0.14015203030297563
+    },
+    {
+      "seed": -1,
+      "method": "label_informed_teacher",
+      "task_split": "unseen",
+      "image_task_examples": 528,
+      "task_count": 66,
+      "image_count": 144,
+      "accuracy": 1.0,
+      "mean_margin": 0.14134581707537908
+    },
+    {
+      "seed": 2041,
+      "method": "conditioned",
+      "task_split": "seen",
+      "image_task_examples": 4000,
+      "task_count": 500,
+      "image_count": 144,
+      "accuracy": 0.98925,
+      "mean_margin": 0.11309426986266044
+    },
+    {
+      "seed": 2041,
+      "method": "conditioned",
+      "task_split": "unseen",
+      "image_task_examples": 528,
+      "task_count": 66,
+      "image_count": 144,
+      "accuracy": 0.990530303030303,
+      "mean_margin": 0.11248672161155175
+    },
+    {
+      "seed": 2041,
+      "method": "image_only",
+      "task_split": "seen",
+      "image_task_examples": 4000,
+      "task_count": 500,
+      "image_count": 144,
+      "accuracy": 0.98875,
+      "mean_margin": 0.1133882671194379
+    },
+    {
+      "seed": 2041,
+      "method": "image_only",
+      "task_split": "unseen",
+      "image_task_examples": 528,
+      "task_count": 66,
+      "image_count": 144,
+      "accuracy": 0.9867424242424242,
+      "mean_margin": 0.11305847386260708
+    },
+    {
+      "seed": 2042,
+      "method": "conditioned",
+      "task_split": "seen",
+      "image_task_examples": 4000,
+      "task_count": 500,
+      "image_count": 144,
+      "accuracy": 0.9915,
+      "mean_margin": 0.11395869722687894
+    },
+    {
+      "seed": 2042,
+      "method": "conditioned",
+      "task_split": "unseen",
+      "image_task_examples": 528,
+      "task_count": 66,
+      "image_count": 144,
+      "accuracy": 0.9924242424242424,
+      "mean_margin": 0.11338843700341937
+    },
+    {
+      "seed": 2042,
+      "method": "image_only",
+      "task_split": "seen",
+      "image_task_examples": 4000,
+      "task_count": 500,
+      "image_count": 144,
+      "accuracy": 0.98975,
+      "mean_margin": 0.11444490771237906
+    },
+    {
+      "seed": 2042,
+      "method": "image_only",
+      "task_split": "unseen",
+      "image_task_examples": 528,
+      "task_count": 66,
+      "image_count": 144,
+      "accuracy": 0.9886363636363636,
+      "mean_margin": 0.11467917812159144
+    },
+    {
+      "seed": 2043,
+      "method": "conditioned",
+      "task_split": "seen",
+      "image_task_examples": 4000,
+      "task_count": 500,
+      "image_count": 144,
+      "accuracy": 0.99025,
+      "mean_margin": 0.11299426816050982
+    },
+    {
+      "seed": 2043,
+      "method": "conditioned",
+      "task_split": "unseen",
+      "image_task_examples": 528,
+      "task_count": 66,
+      "image_count": 144,
+      "accuracy": 0.990530303030303,
+      "mean_margin": 0.11283223975183457
+    },
+    {
+      "seed": 2043,
+      "method": "image_only",
+      "task_split": "seen",
+      "image_task_examples": 4000,
+      "task_count": 500,
+      "image_count": 144,
+      "accuracy": 0.989,
+      "mean_margin": 0.11413938190063709
+    },
+    {
+      "seed": 2043,
+      "method": "image_only",
+      "task_split": "unseen",
+      "image_task_examples": 528,
+      "task_count": 66,
+      "image_count": 144,
+      "accuracy": 0.9867424242424242,
+      "mean_margin": 0.11372940543504118
+    }
+  ],
+  "cost": {
+    "methods": [
+      {
+        "seed": -1,
+        "method": "full_model",
+        "checkpoint": null,
+        "selector_seconds": 0.0,
+        "finish_and_normalize_seconds": 0.0,
+        "total_method_seconds": 0.022430526092648506,
+        "logical_suffix_examples": 0,
+        "physical_suffix_examples": 0
+      },
+      {
+        "seed": -1,
+        "method": "attention",
+        "checkpoint": null,
+        "selector_seconds": 0.0,
+        "finish_and_normalize_seconds": 0.5588439190760255,
+        "total_method_seconds": 0.6292142160236835,
+        "logical_suffix_examples": 4528,
+        "physical_suffix_examples": 4544
+      },
+      {
+        "seed": -1,
+        "method": "label_informed_teacher",
+        "checkpoint": null,
+        "selector_seconds": 0.0,
+        "finish_and_normalize_seconds": 0.4425168321467936,
+        "total_method_seconds": 0.5146019789390266,
+        "logical_suffix_examples": 4528,
+        "physical_suffix_examples": 4544
+      },
+      {
+        "seed": 2041,
+        "method": "conditioned",
+        "checkpoint": "runs/pets-selector-training-v1/seed_2041/conditioned.pt",
+        "selector_seconds": 0.12947080889716744,
+        "finish_and_normalize_seconds": 0.44252145010977983,
+        "total_method_seconds": 0.6565762418322265,
+        "logical_suffix_examples": 4528,
+        "physical_suffix_examples": 4544
+      },
+      {
+        "seed": 2041,
+        "method": "image_only",
+        "checkpoint": "runs/pets-selector-training-v1/seed_2041/image_only.pt",
+        "selector_seconds": 0.0793896596878767,
+        "finish_and_normalize_seconds": 0.4425071179866791,
+        "total_method_seconds": 0.6068693827837706,
+        "logical_suffix_examples": 4528,
+        "physical_suffix_examples": 4544
+      },
+      {
+        "seed": 2042,
+        "method": "conditioned",
+        "checkpoint": "runs/pets-selector-training-v1/seed_2042/conditioned.pt",
+        "selector_seconds": 0.0804055891931057,
+        "finish_and_normalize_seconds": 0.4421136202290654,
+        "total_method_seconds": 0.6090410309843719,
+        "logical_suffix_examples": 4528,
+        "physical_suffix_examples": 4544
+      },
+      {
+        "seed": 2042,
+        "method": "image_only",
+        "checkpoint": "runs/pets-selector-training-v1/seed_2042/image_only.pt",
+        "selector_seconds": 0.07954902248457074,
+        "finish_and_normalize_seconds": 0.4413471738807857,
+        "total_method_seconds": 0.6063844719901681,
+        "logical_suffix_examples": 4528,
+        "physical_suffix_examples": 4544
+      },
+      {
+        "seed": 2043,
+        "method": "conditioned",
+        "checkpoint": "runs/pets-selector-training-v1/seed_2043/conditioned.pt",
+        "selector_seconds": 0.08034664811566472,
+        "finish_and_normalize_seconds": 0.44055168703198433,
+        "total_method_seconds": 0.6075981147587299,
+        "logical_suffix_examples": 4528,
+        "physical_suffix_examples": 4544
+      },
+      {
+        "seed": 2043,
+        "method": "image_only",
+        "checkpoint": "runs/pets-selector-training-v1/seed_2043/image_only.pt",
+        "selector_seconds": 0.07935917377471924,
+        "finish_and_normalize_seconds": 0.44194952538236976,
+        "total_method_seconds": 0.6070612538605928,
+        "logical_suffix_examples": 4528,
+        "physical_suffix_examples": 4544
+      }
+    ],
+    "total_wall_seconds": 12.860514181200415,
+    "peak_allocated_gpu_bytes": 653805056
+  },
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "1.26.4",
+    "torch": "2.6.0+cu124"
+  },
+  "artifact_schema": {
+    "row_alignment": "CSV row_id equals every per-row NPZ array index.",
+    "patch_indices": "Original 0-based patch positions; unused columns are -1. Full-model rows retain all patches.",
+    "selection_logits": "Raw ranking scores, with an availability flag. Full-model zero placeholders are not predictions.",
+    "seed": "Shared baselines use -1 and are stored once, not repeated per training seed."
+  },
+  "scope": "Validation images only. Seen pairs appeared in selector training; unseen validation pairs did not. Official test images and pairs are unused. Label-informed teacher uses target labels only as an offline diagnostic.",
+  "cost_scope": "Cached-prefix, fixed padded batch evaluation costs. Selector timing includes score transfer; finish timing includes gathering, suffix, normalization and feature transfer. Neither is deployment latency; prefix extraction, teacher generation and training are separate."
+}

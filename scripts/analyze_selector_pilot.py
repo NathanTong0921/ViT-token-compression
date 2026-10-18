@@ -91,9 +91,9 @@ def plot(result, directory):
     for method, offset in (("conditioned", -.2), ("image_only", 0), ("attention", .2)):
         for x, split in enumerate(("seen", "unseen")):
             row = next(r for r in result["task_splits"][split]["table"] if r["method"] == method)
-            axes[0].bar(x+offset, row["mean_accuracy"]*100, width=.18, color=colors[method],
+            axes[0].bar(x+offset, (1-row["mean_accuracy"])*100, width=.18, color=colors[method],
                         label=method.replace("_", " ") if x==0 else None, alpha=.75)
-            axes[0].plot(np.full(len(row["seeds"]), x+offset), [r["accuracy"]*100 for r in row["seeds"]],
+            axes[0].plot(np.full(len(row["seeds"]), x+offset), [(1-r["accuracy"])*100 for r in row["seeds"]],
                          ".", color="#222222", markersize=5)
     for x, split in enumerate(("seen", "unseen")):
         effect = result["task_splits"][split]["conditional_minus_image_only"]["margin"]
@@ -103,7 +103,7 @@ def plot(result, directory):
                          fmt="o", color="#d97925", capsize=4)
         axes[1].scatter(np.full(len(effect["per_seed"]), x)+np.linspace(-.07,.07,len(effect["per_seed"])),
                         [r["mean"] for r in effect["per_seed"]], marker="x", color="#3565a3", s=24)
-    axes[0].set(ylabel="Balanced task accuracy (%)", ylim=(0, 102), title="Actual compressed CLIP predictions")
+    axes[0].set(ylabel="Balanced task error (%) — lower is better", ylim=(0, 3.2), title="Actual compressed CLIP predictions")
     axes[0].legend(frameon=False, fontsize=8)
     axes[1].set(ylabel="Conditional minus image-only margin", title="Paired effect, image bootstrap 95% CI")
     axes[1].axhline(0, color="#888888", linewidth=.8)

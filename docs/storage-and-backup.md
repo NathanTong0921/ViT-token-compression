@@ -1,6 +1,6 @@
 # Storage and backup plan
 
-Status, 2026-10-16: the first Pets development baseline is complete. Its approximately 4.1 MB result bundle, including embeddings and per-example predictions, was copied back locally and checked. The server project currently occupies approximately 6.5 GiB, including the environment, B/16 checkpoint and raw Pets data; no persistent token-prefix or selection-supervision caches have been generated. The capacity figures below remain planning allowances for later experiments.
+Status, 2026-10-18: the first paired selector pilot is complete. Original baseline, pruning, offline-selection, budget-context and learned-selector evidence are retained locally and on the server; small evidence is versioned in Git. The selector pilot adds a persistent 222.71 MB prefix cache on the server. Dataset and CLIP weights remain server working assets. The capacity figures below are planning allowances, not current-use measurements.
 
 The single-stage pruning pilot adds approximately 21.6 MB of scores, embeddings, retained positions, metrics and figure exports under `results/pets-pruning-v1/`. These are small enough for ordinary Git. Its approximately 223 MB prefix cache existed only in host RAM and was released after the run; no persistent prefix cache or selection-supervision cache was created.
 
@@ -66,3 +66,8 @@ The three `results/pets-selection*` bundles add about 51 MB: fixed panels, delet
 ## Budget-context development experiment
 
 The three `results/pets-budget-ranking*` bundles add approximately 209.5 MB, including four contexts of complete mask/response evidence, ridge coefficients, independent-mask prediction records, two arms of candidate banks and selected positions, analyses and plots. The largest individual file is 20.2 MB; this milestone remains in ordinary Git under the planned repository-size allowance. Prefix tensors existed only in RAM. Original server outputs remain under `runs/`, and tracked copies retain the scientific evidence under `results/`. Local transfer archives were not needed.
+
+
+## First learned-selector pilot
+
+`results/pets-selector-pilot-v1/` adds about 45 MB of manifests, validation teacher, all predictions and selected positions, training losses, analyses and figures to ordinary Git. The 70.93 MB training teacher and all six final selector checkpoints are stored in `pets-selector-pilot-v1-artifacts.zip` in the local directory `/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-pilot-v1/`, with a copy in the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-pilot-v1). The archive restores these files at their original repository-relative `runs/` paths; original server files remain in place. Prefix caches totaling 222.71 MB are retained only on the server and can be regenerated. The run record documents destination recovery checks. Temporary duplicate downloads/extractions are removed after those checks.

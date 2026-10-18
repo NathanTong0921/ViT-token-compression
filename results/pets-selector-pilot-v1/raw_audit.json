@@ -1,0 +1,12 @@
+{
+  "rows_audited": 40752,
+  "row_keys_match": true,
+  "score_to_correctness_exact": true,
+  "max_score_to_margin_error": 0.0,
+  "top49_positions_match_logits_exactly": true,
+  "image_only_max_across_task_logit_error": 0.0,
+  "previous_unseen_reference_rows_checked": 1056,
+  "previous_reference_positions_and_predictions_exact": true,
+  "previous_reference_max_margin_error": 2.384185791015625e-07,
+  "all_numeric_arrays_finite": true
+}

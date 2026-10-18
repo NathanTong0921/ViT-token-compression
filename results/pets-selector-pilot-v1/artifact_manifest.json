@@ -1,0 +1,43 @@
+{
+  "release": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-pilot-v1",
+  "asset_name": "pets-selector-pilot-v1-artifacts.zip",
+  "asset_bytes": 78768182,
+  "restore_at": "repository root",
+  "files": [
+    {
+      "path": "runs/pets-selector-supervision-v1/train/teacher.npz",
+      "bytes": 70927104
+    },
+    {
+      "path": "runs/pets-selector-training-v1/seed_2041/conditioned.pt",
+      "bytes": 1401265
+    },
+    {
+      "path": "runs/pets-selector-training-v1/seed_2041/image_only.pt",
+      "bytes": 1401250
+    },
+    {
+      "path": "runs/pets-selector-training-v1/seed_2042/conditioned.pt",
+      "bytes": 1401265
+    },
+    {
+      "path": "runs/pets-selector-training-v1/seed_2042/image_only.pt",
+      "bytes": 1401250
+    },
+    {
+      "path": "runs/pets-selector-training-v1/seed_2043/conditioned.pt",
+      "bytes": 1401265
+    },
+    {
+      "path": "runs/pets-selector-training-v1/seed_2043/image_only.pt",
+      "bytes": 1401250
+    }
+  ],
+  "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-pilot-v1/pets-selector-pilot-v1-artifacts.zip",
+  "server_originals": [
+    "runs/pets-selector-supervision-v1",
+    "runs/pets-selector-training-v1",
+    "runs/pets-selector-eval-v1"
+  ],
+  "prefix_cache_backup": "Server only; regenerable via preparation script."
+}

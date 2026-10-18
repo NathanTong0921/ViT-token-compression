@@ -1,0 +1,102 @@
+{
+  "run_type": "frozen_prefix_and_budget_matched_selector_supervision",
+  "started_utc": "2026-10-18T10:02:31.506892+00:00",
+  "code_commit": "94f83fd8adf05a63a32f33f2d6cacd1128e591dd",
+  "config": {
+    "cache_dir": "runs/pets-selector-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "results/pets-baseline-v1",
+    "teacher_source_dir": "results/pets-budget-ranking-v1",
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": 49,
+    "train_images_per_class": 16,
+    "val_images_per_class": 4,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "epochs": 30,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0
+  },
+  "counts": {
+    "train": {
+      "images": 592,
+      "classes": 37,
+      "tasks": 532,
+      "full_split_images_encoded": 2944,
+      "prefix_bytes": 179134464
+    },
+    "val": {
+      "images": 144,
+      "classes": 36,
+      "tasks": 66,
+      "full_split_images_encoded": 736,
+      "prefix_bytes": 43573248
+    }
+  },
+  "identity": {
+    "train": {
+      "images_checked": 2944,
+      "max_feature_error_vs_native": 0.0,
+      "prediction_disagreements_37class_vs_native": 0
+    },
+    "val": {
+      "images_checked": 736,
+      "max_feature_error_vs_native": 0.0,
+      "prediction_disagreements_37class_vs_native": 0,
+      "max_feature_error_vs_saved_baseline": 0.0,
+      "max_score_error_vs_saved_baseline": 1.4901161193847656e-07,
+      "prediction_disagreements_37class_vs_saved_baseline": 0
+    }
+  },
+  "train_val_images_disjoint": true,
+  "train_val_tasks_disjoint": true,
+  "teacher": {
+    "context_patch_tokens": 49,
+    "probe_count_per_training_image": 512,
+    "mask_design_seed": 2738241488,
+    "ridge": 0.01,
+    "response_columns": "Class cosine scores in manifest class order.",
+    "training_supervision": "Only train images and train task pairs are supplied to selector optimization.",
+    "validation_source": "results/pets-budget-ranking-v1/probes_k49.npz",
+    "validation_use": "Reused label-informed offline teacher for evaluation only; never an optimization target during training."
+  },
+  "cost": {
+    "train_feature_seconds": 52.58035729499534,
+    "train_teacher_seconds": 34.55335850128904,
+    "val_feature_seconds": 9.71435609087348,
+    "val_teacher_seconds": 0.643855603877455,
+    "model_setup_seconds": 3.960015547927469,
+    "teacher_suffix_forward_batches": 4736,
+    "teacher_suffix_forward_examples": 303104,
+    "teacher_requested_suffix_examples": 303104,
+    "total_wall_seconds": 101.49434229591861,
+    "peak_allocated_gpu_bytes": 755721728
+  },
+  "storage": "Selected prefix caches stay on the server; no full-split prefix cache is written.",
+  "gpu": "NVIDIA RTX A6000",
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4"
+  }
+}
