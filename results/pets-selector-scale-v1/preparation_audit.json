@@ -1,0 +1,73 @@
+{
+  "audited_utc": "2026-10-18T11:23:24.029773+00:00",
+  "preparation_code_commit": "fa4ed58d895a33d7e8e7d103dfe2c33705211946",
+  "scope": "Read-only CPU audit of completed server caches; no model training or final test data.",
+  "splits": {
+    "train": {
+      "images": 2944,
+      "classes": 37,
+      "tasks": 532,
+      "reused_images": 592,
+      "generated_images": 2352,
+      "response_images_available": 2944,
+      "response_images_unavailable": 0,
+      "old_prefix_coefficients_intercepts_exact": true,
+      "old_training_responses_exact": true,
+      "unavailable_raw_responses_zero_filled_and_explicitly_marked": null,
+      "all_arrays_finite": true,
+      "mask_bank_exact": true,
+      "ridge_recomputations": [
+        {
+          "image_id": "Abyssinian_1",
+          "max_coefficient_error": 0,
+          "max_intercept_error": 0
+        },
+        {
+          "image_id": "english_cocker_spaniel_144",
+          "max_coefficient_error": 0,
+          "max_intercept_error": 0
+        },
+        {
+          "image_id": "yorkshire_terrier_190",
+          "max_coefficient_error": 0,
+          "max_intercept_error": 0
+        }
+      ]
+    },
+    "val": {
+      "images": 736,
+      "classes": 37,
+      "tasks": 66,
+      "reused_images": 144,
+      "generated_images": 592,
+      "response_images_available": 592,
+      "response_images_unavailable": 144,
+      "old_prefix_coefficients_intercepts_exact": true,
+      "old_training_responses_exact": null,
+      "unavailable_raw_responses_zero_filled_and_explicitly_marked": true,
+      "all_arrays_finite": true,
+      "mask_bank_exact": true,
+      "ridge_recomputations": [
+        {
+          "image_id": "Abyssinian_100",
+          "max_coefficient_error": 0,
+          "max_intercept_error": 0
+        },
+        {
+          "image_id": "english_cocker_spaniel_139",
+          "max_coefficient_error": 0,
+          "max_intercept_error": 0
+        },
+        {
+          "image_id": "yorkshire_terrier_187",
+          "max_coefficient_error": 0,
+          "max_intercept_error": 0
+        }
+      ]
+    }
+  },
+  "train_val_images_disjoint": true,
+  "train_val_tasks_disjoint": true,
+  "official_test_images_and_pairs_excluded": true,
+  "passed": true
+}

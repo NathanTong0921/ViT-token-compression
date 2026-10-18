@@ -1,0 +1,330 @@
+{
+  "audited_utc": "2026-10-18T11:31:34.333278+00:00",
+  "audit_environment": {
+    "python": "3.10.12",
+    "numpy": "1.26.4",
+    "torch": "2.6.0+cu124",
+    "device": "cpu"
+  },
+  "source_code_commit": "604150ca2fda39f1772d6c9798b3974299a07e9c",
+  "training_output": "runs/pets-selector-scale-training-v1",
+  "status": "passed",
+  "scope": "Read-only CPU reconstruction of sampling and verification of saved training summaries, curves and checkpoints; no training or GPU inference rerun.",
+  "image_partition": {
+    "small_training_images": 592,
+    "full_training_images": 2944,
+    "validation_images": 736,
+    "small_exact_old_image_ids": true,
+    "small_nested_in_full": true,
+    "train_validation_disjoint": true,
+    "full_train_per_class_min": 74,
+    "full_train_per_class_max": 80
+  },
+  "fixed_budget": {
+    "runs": 12,
+    "optimizer_updates_per_run": 3990,
+    "batch_size": 128,
+    "draws_per_run": 510720,
+    "trainable_parameters_per_run": 348033,
+    "train_tasks": 532,
+    "draws_per_task_class": 480,
+    "curve_rows_per_run": 31
+  },
+  "sampling_reconstruction": [
+    {
+      "seed": 2041,
+      "draws": 510720,
+      "draws_per_task_side": 480,
+      "coverages": {
+        "small": {
+          "available_images": 592,
+          "unique_images_drawn": 592,
+          "draw_count_min": 672,
+          "draw_count_max": 1131,
+          "independently_reconstructed_image_draw_counts_exact": true,
+          "independently_reconstructed_first_batch_exact": true
+        },
+        "full": {
+          "available_images": 2944,
+          "unique_images_drawn": 2944,
+          "draw_count_min": 118,
+          "draw_count_max": 242,
+          "independently_reconstructed_image_draw_counts_exact": true,
+          "independently_reconstructed_first_batch_exact": true
+        }
+      }
+    },
+    {
+      "seed": 2042,
+      "draws": 510720,
+      "draws_per_task_side": 480,
+      "coverages": {
+        "small": {
+          "available_images": 592,
+          "unique_images_drawn": 592,
+          "draw_count_min": 683,
+          "draw_count_max": 1089,
+          "independently_reconstructed_image_draw_counts_exact": true,
+          "independently_reconstructed_first_batch_exact": true
+        },
+        "full": {
+          "available_images": 2944,
+          "unique_images_drawn": 2944,
+          "draw_count_min": 115,
+          "draw_count_max": 242,
+          "independently_reconstructed_image_draw_counts_exact": true,
+          "independently_reconstructed_first_batch_exact": true
+        }
+      }
+    },
+    {
+      "seed": 2043,
+      "draws": 510720,
+      "draws_per_task_side": 480,
+      "coverages": {
+        "small": {
+          "available_images": 592,
+          "unique_images_drawn": 592,
+          "draw_count_min": 671,
+          "draw_count_max": 1115,
+          "independently_reconstructed_image_draw_counts_exact": true,
+          "independently_reconstructed_first_batch_exact": true
+        },
+        "full": {
+          "available_images": 2944,
+          "unique_images_drawn": 2944,
+          "draw_count_min": 117,
+          "draw_count_max": 259,
+          "independently_reconstructed_image_draw_counts_exact": true,
+          "independently_reconstructed_first_batch_exact": true
+        }
+      }
+    }
+  ],
+  "initial_validation_matches": [
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "initial_val_kl": 2.5147771654115836,
+      "exact_match_across_coverages": true
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only",
+      "initial_val_kl": 2.5147141223018794,
+      "exact_match_across_coverages": true
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "initial_val_kl": 2.5127781649975724,
+      "exact_match_across_coverages": true
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only",
+      "initial_val_kl": 2.511702256945617,
+      "exact_match_across_coverages": true
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "initial_val_kl": 2.4919297866310868,
+      "exact_match_across_coverages": true
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only",
+      "initial_val_kl": 2.4901720388725614,
+      "exact_match_across_coverages": true
+    }
+  ],
+  "initial_state_evidence": "Training source asserts exact tensor equality to one shared initial state per seed for all four runs. Audit independently verifies identical recorded initial validation losses across coverages for each arm; initial checkpoint tensors were not saved separately.",
+  "evaluation_weighting_checks": [
+    {
+      "split": "train",
+      "tasks": 532,
+      "expected_mass_per_task_class": 0.0009398496240601503,
+      "sum_weight": 0.9999999999999847,
+      "all_task_class_weights_equal": true
+    },
+    {
+      "split": "val",
+      "tasks": 66,
+      "expected_mass_per_task_class": 0.007575757575757576,
+      "sum_weight": 0.9999999999999992,
+      "all_task_class_weights_equal": true
+    }
+  ],
+  "checkpoints": [
+    {
+      "seed": 2041,
+      "coverage": "small",
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.14914627744433243,
+      "final_val_kl": 0.8050379760671618
+    },
+    {
+      "seed": 2041,
+      "coverage": "small",
+      "arm": "image_only",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.3338096904008192,
+      "final_val_kl": 0.6493218123607013
+    },
+    {
+      "seed": 2041,
+      "coverage": "full",
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.27182240227887294,
+      "final_val_kl": 0.49623500629201184
+    },
+    {
+      "seed": 2041,
+      "coverage": "full",
+      "arm": "image_only",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.42963390135676344,
+      "final_val_kl": 0.5437358642156657
+    },
+    {
+      "seed": 2042,
+      "coverage": "small",
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.14120187848206303,
+      "final_val_kl": 0.8626011175950513
+    },
+    {
+      "seed": 2042,
+      "coverage": "small",
+      "arm": "image_only",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.33599379846716904,
+      "final_val_kl": 0.6507364260942928
+    },
+    {
+      "seed": 2042,
+      "coverage": "full",
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.2695884144301458,
+      "final_val_kl": 0.5001179702822088
+    },
+    {
+      "seed": 2042,
+      "coverage": "full",
+      "arm": "image_only",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.43528519958727785,
+      "final_val_kl": 0.5652381010455126
+    },
+    {
+      "seed": 2043,
+      "coverage": "small",
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.13512843385936674,
+      "final_val_kl": 0.8312823635025806
+    },
+    {
+      "seed": 2043,
+      "coverage": "small",
+      "arm": "image_only",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.3349789158063296,
+      "final_val_kl": 0.6433844440902227
+    },
+    {
+      "seed": 2043,
+      "coverage": "full",
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.26728669663135657,
+      "final_val_kl": 0.502110621651092
+    },
+    {
+      "seed": 2043,
+      "coverage": "full",
+      "arm": "image_only",
+      "step": 3990,
+      "parameters": 348033,
+      "checkpoint_tensors_finite": true,
+      "curve_steps_complete": true,
+      "final_train_kl": 0.4206740543824791,
+      "final_val_kl": 0.5429225970386785
+    }
+  ],
+  "mean_kl_by_coverage_arm": [
+    {
+      "coverage": "small",
+      "arm": "conditioned",
+      "mean_final_train_kl": 0.1418255299285874,
+      "mean_final_val_kl": 0.8329738190549311,
+      "mean_val_minus_train_kl": 0.6911482891263439
+    },
+    {
+      "coverage": "small",
+      "arm": "image_only",
+      "mean_final_train_kl": 0.33492746822477265,
+      "mean_final_val_kl": 0.6478142275150723,
+      "mean_val_minus_train_kl": 0.3128867592902997
+    },
+    {
+      "coverage": "full",
+      "arm": "conditioned",
+      "mean_final_train_kl": 0.2695658377801251,
+      "mean_final_val_kl": 0.49948786607510426,
+      "mean_val_minus_train_kl": 0.22992202829497912
+    },
+    {
+      "coverage": "full",
+      "arm": "image_only",
+      "mean_final_train_kl": 0.4285310517755068,
+      "mean_final_val_kl": 0.5506321874332856,
+      "mean_val_minus_train_kl": 0.1221011356577788
+    }
+  ],
+  "cost": {
+    "wall_seconds": 362.47691787034273,
+    "optimizer_training_seconds": 316.89323621150106,
+    "validation_seconds": 17.398315395228565,
+    "peak_allocated_bytes": 1849987072
+  },
+  "interpretation": "At fixed updates, broader image coverage lowers validation utility-distillation KL in both arms and reverses their validation ranking: conditioned becomes lower-KL than image-only. This is evidence about the supervised utility objective, not yet evidence of better classification accuracy or margin."
+}

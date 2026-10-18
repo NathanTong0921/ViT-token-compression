@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-18",
+  "rendered_locally": true,
+  "reason": "Server statistical analysis completed; plotting required matplotlib, available locally. The saved statistics and training history were used without rerunning experiments.",
+  "files": [
+    "coverage_comparison.png",
+    "coverage_comparison.pdf",
+    "training_curves.png",
+    "training_curves.pdf"
+  ],
+  "visual_review": "Both PNGs inspected: readable labels, visible uncertainty intervals, no clipping; PDF exports retained."
+}

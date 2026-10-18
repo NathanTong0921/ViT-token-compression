@@ -1,0 +1,21 @@
+{
+  "archive": "pets-selector-scale-supervision-v1.zip",
+  "bytes": 441895622,
+  "members": 10,
+  "all_member_integrity_passed": true,
+  "teacher_arrays_finite": true,
+  "teacher_checks": [
+    {
+      "file": "runs/pets-selector-scale-supervision-v1/train/teacher.npz",
+      "images": 2944,
+      "response_available": 2944
+    },
+    {
+      "file": "runs/pets-selector-scale-supervision-v1/val/teacher.npz",
+      "images": 736,
+      "response_available": 592
+    }
+  ],
+  "local_archive_retained": true,
+  "extracted_duplicates_created": false
+}

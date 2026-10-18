@@ -1,6 +1,6 @@
 # Storage and backup plan
 
-Status, 2026-10-18: the paired selector pilot and subsequent fixed-model task exchange are complete. Original baseline, pruning, offline-selection, budget-context and learned-selector evidence are retained locally and on the server; small evidence is versioned in Git. The selector pilot adds a persistent 222.71 MB prefix cache on the server. The exchange adds approximately 3.9 MB of case arrays, summaries, figures, error records and replay evidence in ordinary Git; it reuses existing weights and caches. Dataset and CLIP weights remain server working assets. The capacity figures below are planning allowances, not current-use measurements.
+Status, 2026-10-18: the paired selector pilot, fixed-model task exchange and fixed-update image-coverage experiment are complete. Original baseline, pruning, offline-selection, budget-context and learned-selector evidence are retained locally and on the server; small evidence is versioned in Git. The latest coverage experiment adds about 1.11 GB of recomputable prefix caches on the server and two retained evidence archives totaling 1.38 GB locally and in Release storage. Dataset and CLIP weights remain server working assets. The capacity figures below are planning allowances, not current-use measurements.
 
 The single-stage pruning pilot adds approximately 21.6 MB of scores, embeddings, retained positions, metrics and figure exports under `results/pets-pruning-v1/`. These are small enough for ordinary Git. Its approximately 223 MB prefix cache existed only in host RAM and was released after the run; no persistent prefix cache or selection-supervision cache was created.
 
@@ -24,7 +24,7 @@ Saving 196 masked global embeddings per image adds approximately:
 
 GB here denotes decimal gigabytes. Mask counts are illustrative, not a fixed experimental design. FP32 doubles these amounts; additional layers or views require additional storage. Check numerical consistency before adopting reduced-precision caches for the study.
 
-Cache the unmasked prefix features and the necessary global embeddings/ranking targets. Do not retain full intermediate token tensors for every masking intervention: that example would exceed 900 GB. Reuse compatible caches across candidate sets and token budgets. The optional ViT-L/14 check should cache only its required subset unless broader coverage becomes necessary.
+Cache the unmasked prefix features and the necessary global embeddings/ranking targets. Do not retain full intermediate token tensors for every masking intervention: that example would exceed 900 GB. Reuse compatible caches across candidate sets and token budgets. The required targeted ViT-L/14 check should cache only its required subset unless broader coverage becomes necessary.
 
 ## What to retain
 
@@ -47,7 +47,7 @@ After each substantive completed experiment, collect its evidence bundle, copy i
 
 Downloads staged locally only to reach the server belong in `cache/transfers/`. After verifying successful transfer and extraction/loading on the server, delete those local archives and temporary extracted copies promptly. Apply the same rule to temporary installation wheels and duplicate download caches created for the transfer. Keep local scientific evidence and selected paper assets according to the table above.
 
-The local large-artifact archive will be outside the Git checkout; its exact path will be set when the first larger bundle is produced. The server checkout is configured in the ignored local `.env.server`. Existing ignored checkpoint/cache paths remain ignored. Release attachments provide the GitHub copy of selected model weights without committing them to ordinary Git history.
+Local large-artifact archives are retained outside the Git checkout under `/Users/nathan_tong0921/Desktop/2012 Project/artifacts/`, in a directory for each experiment. The server checkout is configured in the ignored local `.env.server`. Existing ignored checkpoint/cache paths remain ignored. Release attachments provide the GitHub copy of selected model weights without committing them to ordinary Git history.
 
 A backup is complete only after its contents have been checked at the destination. Verify at least one bundle by downloading it from GitHub, opening the records, loading a selected checkpoint, and reproducing a summary table or figure. Before deleting unique server results or releasing the instance, confirm that all required local and GitHub copies are complete. Recomputable bulk caches are optional backups.
 
@@ -71,3 +71,9 @@ The three `results/pets-budget-ranking*` bundles add approximately 209.5 MB, inc
 ## First learned-selector pilot
 
 `results/pets-selector-pilot-v1/` adds about 45 MB of manifests, validation teacher, all predictions and selected positions, training losses, analyses and figures to ordinary Git. The 70.93 MB training teacher and all six final selector checkpoints are stored in `pets-selector-pilot-v1-artifacts.zip` in the local directory `/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-pilot-v1/`, with a copy in the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-pilot-v1). The archive restores these files at their original repository-relative `runs/` paths; original server files remain in place. Prefix caches totaling 222.71 MB are retained only on the server and can be regenerated. The run record documents destination recovery checks. Temporary duplicate downloads/extractions are removed after those checks.
+
+## Fixed-update image-coverage experiment
+
+`results/pets-selector-scale-v1/` retains analysis tables, exchange case arrays, training curves, figures and independent audits in ordinary Git. Two ZIP archives in the local `artifacts/pets-selector-scale-v1/` directory retain the larger evidence: `pets-selector-scale-supervision-v1.zip` (441.90 MB; teachers, probe masks/responses and full-model evidence) and `pets-selector-scale-models-and-evaluation-v1.zip` (941.52 MB; all 12 final selectors, training histories, and per-example scores, full 512D features and selected positions). These scientific backups are retained; they are not transfer-only staging files. Original server outputs remain under the three matching `runs/pets-selector-scale-*` directories.
+
+The [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-scale-v1) holds both archives. Destination recovery status and exact byte counts are recorded in `results/pets-selector-scale-v1/release_assets.json` and the backup verification records. Prefix caches are omitted from the archives because they can be regenerated from the fixed model, preprocessing and image manifests.
