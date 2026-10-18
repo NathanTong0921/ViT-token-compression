@@ -80,6 +80,7 @@ def train(config, output):
     output.mkdir(parents=True, exist_ok=True)
     device = torch.device(config["device"])
     if device.type == "cuda":
+        torch.cuda.set_device(device)
         torch.cuda.reset_peak_memory_stats(device)
         torch.backends.cuda.matmul.allow_tf32 = False
     cache = Path(config["cache_dir"])
