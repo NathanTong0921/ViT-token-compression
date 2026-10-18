@@ -1,4 +1,11 @@
+import contextlib
+import csv
+import importlib.util
+import io
+from pathlib import Path
+import tempfile
 import unittest
+from unittest import mock
 
 import numpy as np
 
@@ -61,6 +68,63 @@ class SelectorScaleTests(unittest.TestCase):
             validate_image_partition(self.ids, ["a"], ["a"])
         with self.assertRaises(AssertionError):
             validate_image_partition(self.ids, ["held_out"], ["missing"])
+
+    @unittest.skipUnless(importlib.util.find_spec("torch"), "Training smoke requires PyTorch")
+    def test_cpu_training_keeps_update_budget_and_shared_initialization(self):
+        import torch
+
+        script = Path(__file__).resolve().parents[1] / "scripts" / "train_selector_scale.py"
+        spec = importlib.util.spec_from_file_location("train_selector_scale_smoke", script)
+        training = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(training)
+        rng = np.random.default_rng(3)
+        text = rng.normal(size=(3, 512)).astype(np.float32)
+        text /= np.linalg.norm(text, axis=1, keepdims=True)
+        previous_threads = torch.get_num_threads()
+        torch.set_num_threads(1)
+        try:
+            with tempfile.TemporaryDirectory() as folder:
+                folder = Path(folder)
+                cache, old = folder / "cache", folder / "old"
+                for split, labels in (("train", [0, 0, 1, 1, 1, 2, 2]), ("val", [0, 0, 2])):
+                    target = cache / split
+                    target.mkdir(parents=True)
+                    ids = np.array([f"{split}_{i}" for i in range(len(labels))])
+                    np.savez(target / "evidence.npz", image_ids=ids, labels=np.array(labels), text_features=text)
+                    np.save(target / "prefix_tokens.npy", rng.normal(size=(len(labels), 5, 768)).astype(np.float32))
+                    np.savez(target / "teacher.npz", image_ids=ids,
+                             coefficients=rng.normal(size=(len(labels), 4, 3)).astype(np.float32))
+                (old / "train").mkdir(parents=True)
+                np.savez(old / "train" / "evidence.npz", image_ids=np.array(["train_0", "train_2", "train_5"]))
+                for split, pairs in (("train", [[0, 1], [1, 2]]), ("val", [[0, 2]])):
+                    with (cache / f"{split}_tasks.csv").open("w", newline="") as handle:
+                        writer = csv.DictWriter(handle, fieldnames=["task_id", "class_a", "class_b"])
+                        writer.writeheader()
+                        writer.writerows({"task_id": f"{a}_{b}", "class_a": a, "class_b": b} for a, b in pairs)
+                (old / "train_tasks.csv").write_text((cache / "train_tasks.csv").read_text())
+                config = {"cache_dir": str(cache), "source_cache_dir": str(old), "device": "cpu",
+                          "batch_size": 2, "temperature": 1., "training_steps": 4, "checkpoint_interval": 2,
+                          "hidden_dim": 4, "training_seeds": [11], "learning_rate": .0003,
+                          "weight_decay": .01, "coverages": ["small", "full"]}
+                original_step = torch.optim.AdamW.step
+                with mock.patch.object(torch.optim.AdamW, "step", autospec=True, side_effect=original_step) as steps:
+                    with contextlib.redirect_stdout(io.StringIO()):
+                        summary = training.train(config, folder / "output")
+                    self.assertEqual(steps.call_count, 4 * 4)
+                runs = {(row["coverage"], row["arm"]): row for row in summary["runs"]}
+                self.assertEqual(summary["train_image_counts"], {"small": 3, "full": 7})
+                self.assertEqual(summary["val_image_count"], 3)
+                for arm in ("conditioned", "image_only"):
+                    self.assertEqual(runs[("small", arm)]["initial_val_kl"], runs[("full", arm)]["initial_val_kl"])
+                    for coverage in ("small", "full"):
+                        row = runs[(coverage, arm)]
+                        self.assertEqual(row["training_steps"], 4)
+                        self.assertTrue(np.isfinite(row["final_val_kl"]))
+                        checkpoint = torch.load(folder / "output" / row["checkpoint"], weights_only=True)
+                        self.assertEqual(checkpoint["step"], 4)
+                        self.assertEqual(checkpoint["conditioned"], arm == "conditioned")
+        finally:
+            torch.set_num_threads(previous_threads)
 
 
 if __name__ == "__main__":
