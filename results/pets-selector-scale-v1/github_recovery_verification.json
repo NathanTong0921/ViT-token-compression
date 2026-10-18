@@ -1,0 +1,188 @@
+{
+  "verified_utc": "2026-10-18T11:44:05.686573+00:00",
+  "release_tag": "pets-selector-scale-v1",
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-scale-v1",
+  "verification_scope": "Downloaded both published assets from canonical public URLs; compared every uncompressed member with original server files; CPU restoration and independent primary-statistic recomputation.",
+  "assets": [
+    {
+      "name": "pets-selector-scale-supervision-v1.zip",
+      "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/pets-selector-scale-v1/pets-selector-scale-supervision-v1.zip",
+      "downloaded_bytes": 441895622,
+      "member_count": 10,
+      "uncompressed_bytes": 441893702,
+      "zip_crc_all_members_passed": true,
+      "all_members_byte_identical_to_original_server_files": true,
+      "download_and_compare_seconds": 110.66477145720273
+    },
+    {
+      "name": "pets-selector-scale-models-and-evaluation-v1.zip",
+      "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/pets-selector-scale-v1/pets-selector-scale-models-and-evaluation-v1.zip",
+      "downloaded_bytes": 941515594,
+      "member_count": 24,
+      "uncompressed_bytes": 987258055,
+      "zip_crc_all_members_passed": true,
+      "all_members_byte_identical_to_original_server_files": true,
+      "download_and_compare_seconds": 205.8747320403345
+    }
+  ],
+  "restored_teacher_checks": [
+    {
+      "split": "train",
+      "images": 2944,
+      "response_images_available": 2944,
+      "arrays_finite": true,
+      "image_alignment_exact": true
+    },
+    {
+      "split": "val",
+      "images": 736,
+      "response_images_available": 592,
+      "arrays_finite": true,
+      "image_alignment_exact": true
+    }
+  ],
+  "restored_checkpoints": [
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2041/conditioned.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2041/image_only.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2042/conditioned.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2042/image_only.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2043/conditioned.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2043/image_only.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/small/seed_2041/conditioned.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/small/seed_2041/image_only.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/small/seed_2042/conditioned.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/small/seed_2042/image_only.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/small/seed_2043/conditioned.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    },
+    {
+      "checkpoint": "runs/pets-selector-scale-training-v1/small/seed_2043/image_only.pt",
+      "strict_load_passed": true,
+      "parameters": 348033,
+      "step": 3990
+    }
+  ],
+  "restored_primary_analysis": {
+    "task_split": "unseen",
+    "tasks": 66,
+    "image_task_rows": 2624,
+    "images": 716,
+    "weight_sum": 0.9999999999999998,
+    "table": [
+      {
+        "coverage": "references",
+        "method": "full_model",
+        "accuracy": 0.9926435406698411,
+        "mean_margin": 0.12604220506255845
+      },
+      {
+        "coverage": "references",
+        "method": "attention",
+        "accuracy": 0.9769537480063645,
+        "mean_margin": 0.0906283231296261
+      },
+      {
+        "coverage": "references",
+        "method": "label_informed_teacher",
+        "accuracy": 0.9999999999999845,
+        "mean_margin": 0.14205167268483093
+      },
+      {
+        "coverage": "small",
+        "method": "conditioned",
+        "accuracy": 0.9879120148856838,
+        "mean_margin": 0.11435076710092977
+      },
+      {
+        "coverage": "small",
+        "method": "image_only",
+        "accuracy": 0.9897860180754766,
+        "mean_margin": 0.11503410133528776
+      },
+      {
+        "coverage": "full",
+        "method": "conditioned",
+        "accuracy": 0.9899189261031214,
+        "mean_margin": 0.11469279310470881
+      },
+      {
+        "coverage": "full",
+        "method": "image_only",
+        "accuracy": 0.9899056353003568,
+        "mean_margin": 0.11561186911457144
+      }
+    ],
+    "effects": {
+      "small_conditioned_minus_image_only.accuracy": -0.0018740031897926637,
+      "small_conditioned_minus_image_only.margin": -0.0006833342343580823,
+      "full_conditioned_minus_image_only.accuracy": 1.329080276448667e-05,
+      "full_conditioned_minus_image_only.margin": -0.0009190760098627065,
+      "conditioned_full_minus_small.accuracy": 0.0020069112174375334,
+      "conditioned_full_minus_small.margin": 0.0003420260037789128,
+      "image_only_full_minus_small.accuracy": 0.00011961722488038306,
+      "image_only_full_minus_small.margin": 0.0005777677792835347,
+      "change_in_conditioning_advantage.accuracy": 0.0018872939925571506,
+      "change_in_conditioning_advantage.margin": -0.00023574177550462165
+    },
+    "max_absolute_error_vs_published_analysis": 4.107825191113079e-15,
+    "confidence_intervals_recomputed": false
+  },
+  "temporary_directory": "/data2/zhao.tong/experiments/runs/.recovery-scale-h2ubomzh",
+  "temporary_downloads_and_extractions_removed": true,
+  "original_run_directories_untouched": true,
+  "wall_seconds": 321.05045392084867,
+  "passed": true
+}

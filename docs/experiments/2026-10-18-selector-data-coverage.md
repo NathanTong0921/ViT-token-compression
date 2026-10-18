@@ -16,9 +16,9 @@
 
 | 阶段 | 代码来源 | 输出目录 | 进程 wall-clock |
 | --- | --- | --- | ---: |
-| 特征与监督准备 | `fa4ed58` | `runs/pets-selector-scale-supervision-v1` | 224.823 s |
-| 配对训练 | `604150c` | `runs/pets-selector-scale-training-v1` | 362.477 s |
-| 实际 CLIP 评估 | `8b8a231` | `runs/pets-selector-scale-eval-v1` | 83.019 s |
+| 特征与监督准备 | `fa4ed58d895a33d7e8e7d103dfe2c33705211946` | `runs/pets-selector-scale-supervision-v1` | 224.823 s |
+| 配对训练 | `604150ca2fda39f1772d6c9798b3974299a07e9c` | `runs/pets-selector-scale-training-v1` | 362.477 s |
+| 实际 CLIP 评估 | `8b8a231a21ac0832b8f7f0f54f55395303b3f76d` | `runs/pets-selector-scale-eval-v1` | 83.019 s |
 
 三阶段合计 670.319 秒，约 **0.1862 单卡小时**；该占用时间估计包含阶段内 CPU/I/O，不含外部传输、备份及 CPU 分析，也不是部署延迟。训练阶段中优化更新合计 316.893 秒，周期验证 17.398 秒，峰值 GPU 分配约 1.85 GB。
 
@@ -32,6 +32,8 @@
 .venv/bin/python scripts/evaluate_selector_scale.py --config configs/pets_selector_scale.json --models runs/pets-selector-scale-training-v1 --output runs/pets-selector-scale-eval-v1
 .venv/bin/python scripts/analyze_selector_scale.py --source runs/pets-selector-scale-eval-v1 --training runs/pets-selector-scale-training-v1 --output results/pets-selector-scale-v1 --plot
 ```
+
+统计分析在服务器完成；服务器缺少 matplotlib，`--plot` 在保存统计结果后仅绘图失败。随后在本地根据同一 analysis.json 与 training_history.csv 生成并检查 PNG/PDF，未重跑或改动实验结果。见结果目录的 `figure_validation.json`。
 
 ## 结果与解释
 
@@ -49,8 +51,8 @@
 
 [准备核验](../../results/pets-selector-scale-v1/preparation_audit.json)确认旧缓存精确对齐、抽样 ridge 重算一致、训练／开发图片与任务划分不交叉且未进入最终测试。[训练核验](../../results/pets-selector-scale-v1/training_audit.json)独立重建全部采样序列和曝光计数：每任务／类别恰好 480 次，全部 592／2,944 张图片均实际使用；12 个最终权重可加载且数值有限，更新数、参数量与曲线完整。每种子同一模型类型在两种覆盖下的初始验证 KL 精确一致；初始化张量一致性由训练时断言检查，未另存初始 checkpoint。[评估核验](../../results/pets-selector-scale-v1/evaluation_audit.json)独立检查全部 356,790 行预测，并重算加权主效应和配对区间，结果在浮点精度内一致；两张汇总图已检查。
 
-结果摘要、图表、曲线和审计 JSON 保存在 `results/pets-selector-scale-v1/`。完整监督、12 个最终权重、逐样本 37 类分数、选择位置和图像嵌入归档于项目父目录的 `artifacts/pets-selector-scale-v1/`，分别为 `pets-selector-scale-supervision-v1.zip` 和 `pets-selector-scale-models-and-evaluation-v1.zip`；服务器保留原始结果。两 ZIP 约 421 MiB 和 898 MiB，是长期证据备份，不是待删除的传输中间件。GitHub Release `pets-selector-scale-v1` 的发布和目的地恢复核验正在完成，以结果目录中的后续核验记录为准。
+结果摘要、图表、曲线和审计 JSON 保存在 `results/pets-selector-scale-v1/`。完整监督、12 个最终权重、逐样本 37 类分数、选择位置和图像嵌入归档于项目父目录的 `artifacts/pets-selector-scale-v1/`，分别为 `pets-selector-scale-supervision-v1.zip` 和 `pets-selector-scale-models-and-evaluation-v1.zip`；服务器保留原始结果。两 ZIP 约 421 MiB 和 898 MiB，是长期证据备份，不是待删除的传输中间件。[GitHub Release `pets-selector-scale-v1`](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-scale-v1) 已发布。目的地重新下载两个 ZIP，34 个文件逐字节与原始结果一致；12 个恢复模型均可加载，从恢复数据独立重算主要表格与五个对照，与既有结果在浮点精度内一致。见 [恢复核验记录](../../results/pets-selector-scale-v1/github_recovery_verification.json)。恢复产生的下载／解压临时目录与服务器打包传输 ZIP 已删除，本地长期科学归档保留。服务器的原始统计输出归档到 `runs/pets-selector-scale-analysis-v1/`，受版本管理的结果位于 `results/pets-selector-scale-v1/`。见结果目录的 `transfer_cleanup.json`。
 
 ## 下一步
 
-本轮完成了训练图片覆盖的受控比较，但尚未建立 3B 的强共享基线优势。下一轮优先补齐 49／98／147 token 的成对实验，并开展 H2 的归一化特征变化分析，解释监督拟合与分类表现为何分离。随后完成 Flowers102 和已升为必做项的 ViT-L/14 定向验证；保留最终测试用于方案固定后的确认。
+本轮完成了训练图片覆盖的受控比较，但尚未建立 3B 的强共享基线优势。下一轮优先补齐 49／98／147 token 的成对实验，并开展 H2 的文本分隔方向夹角分析，控制未压缩模型的分类间隔，解释监督拟合与分类表现为何分离。随后完成 Flowers102 和已升为必做项的 ViT-L/14 定向验证；保留最终测试用于方案固定后的确认。
