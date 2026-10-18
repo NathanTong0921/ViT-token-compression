@@ -63,6 +63,7 @@ H2 is not resolved here. The geometric angle/exchange relation has an algebraic 
 - `replay/`: independent GPU rerun of selected existing predictions, not an independent statistical replication.
 - `run_record.json`: source version, commands and measured analysis time.
 - `raw_audit.json`: independent reconstruction checks.
+- `backup_verification.json`: server recovery from GitHub, including regeneration of all statistical summaries from the parent predictions.
 
 The earlier evaluation retained all 37 class scores under every descriptor. The CLIP suffix receives no task descriptor after token selection, so crossed outcomes can be reconstructed exactly from those scores. A predetermined eight-image GPU replay across all seeds and both arms reproduced positions, logits, all-class scores and crossed predictions exactly. All 55 server tests passed. An independent audit reconstructed every saved case from the parent predictions and reproduced the image-bootstrap statistics.
 
