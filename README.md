@@ -13,6 +13,7 @@ The [preceding paired training pilot](results/pets-selector-pilot-v1/README.md) 
 
 ## Working approach
 
+- Follow the [project TODO](docs/TODO.md) for remaining experiments and deliverables; update it as evidence changes the next step.
 - Keep code direct and focused on the current experiments. Avoid speculative abstractions, redundant checks, and silent fallbacks; retain checks that establish scientific correctness.
 - Treat the proposal as the starting research plan. Raise new observations, hypotheses, and better experimental designs as they emerge, and record the evidence and tradeoffs behind changes to the plan.
 - After each completed task, explain the result plainly, identify the corresponding proposal stage, distinguish any new insight from the original plan, and assess whether it advances the project goal. Report unexpected problems and useful observations during execution.
