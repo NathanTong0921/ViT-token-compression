@@ -1,0 +1,8 @@
+{
+  "source_dir": "results/pets-selector-pilot-v1",
+  "pruning_summary": "results/pets-pruning-v1/summary.json",
+  "training_seeds": [2041, 2042, 2043],
+  "task_splits": ["unseen", "seen"],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2051
+}
