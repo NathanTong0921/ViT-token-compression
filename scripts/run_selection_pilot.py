@@ -41,6 +41,7 @@ def correct(scores, label, competitor):
 @torch.inference_mode()
 def run(config, output):
     started = datetime.now(timezone.utc).isoformat()
+    source_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
     before_run = time.perf_counter()
     output.mkdir(parents=True, exist_ok=True)
     torch.manual_seed(config["seed"])
@@ -76,23 +77,48 @@ def run(config, output):
                for row in classes]
     measured_text = normalized(model.encode_text(clip.tokenize(prompts).to(device)))
     np.testing.assert_allclose(measured_text, text, atol=config["identity_atol"], rtol=0)
-    loader = DataLoader(PetsImages(config["data_root"], panel, preprocess),
+    # Preserve the original encoder batch shapes before sampling the panel:
+    # FP16 kernels can otherwise change even unpruned embeddings slightly.
+    full_image_rows = [row for row in images if row["split"] == config["image_split"]]
+    loader = DataLoader(PetsImages(config["data_root"], full_image_rows, preprocess),
                         batch_size=config["batch_size"], shuffle=False,
                         num_workers=config["num_workers"], pin_memory=True)
     torch.cuda.reset_peak_memory_stats(device)
-    prefixes, attentions, keep_all = [], [], []
-    for pixels, _, _ in loader:
-        tokens, attention = pruner.prefix(pixels.to(device))
+    prefixes, attentions, keep_all, native, visited_ids = [], [], [], [], []
+    selected_ids = set(image_ids.tolist())
+    for pixels, _, batch_ids in loader:
+        pixels = pixels.to(device)
+        tokens, attention = pruner.prefix(pixels)
         full = torch.arange(pruner.num_patches, device=device).expand(len(pixels), -1)
-        keep_all.append(normalized(pruner.finish(tokens, full)))
-        prefixes.append(tokens.cpu())
-        attentions.append(attention.cpu().numpy())
+        batch_keep = normalized(pruner.finish(tokens, full))
+        batch_native = normalized(model.encode_image(pixels))
+        selected = [i for i, image_id in enumerate(batch_ids) if image_id in selected_ids]
+        if selected:
+            keep_all.append(batch_keep[selected])
+            native.append(batch_native[selected])
+            prefixes.append(tokens[selected].cpu())
+            attentions.append(attention[selected].cpu().numpy())
+            visited_ids.extend(batch_ids[i] for i in selected)
+    assert visited_ids == image_ids.tolist()
     prefixes = torch.cat(prefixes)
     attentions = np.concatenate(attentions)
     keep_all = np.concatenate(keep_all)
+    native = np.concatenate(native)
     max_error = float(np.max(np.abs(keep_all - reference_features)))
     assert max_error <= config["identity_atol"], max_error
-    print(f"Keep-all verified on {len(panel)} images; max feature error {max_error}", flush=True)
+    keep_scores = keep_all @ text.T
+    identity = {"max_feature_error": max_error,
+                "max_feature_error_vs_native": float(np.max(np.abs(keep_all - native))),
+                "max_score_error": float(np.max(np.abs(keep_scores - reference_scores))),
+                "prediction_disagreements_37class": int(np.sum(keep_scores.argmax(1) != reference_scores.argmax(1))),
+                "prediction_disagreements_binary": sum(
+                    correct(keep_scores[i], int(label), competitor) != correct(reference_scores[i], int(label), competitor)
+                    for i, label in enumerate(labels) for competitor, _ in by_class[int(label)])}
+    assert identity["max_score_error"] <= config["identity_atol"], identity
+    assert identity["max_feature_error_vs_native"] <= config["identity_atol"], identity
+    assert identity["prediction_disagreements_37class"] == 0, identity
+    assert identity["prediction_disagreements_binary"] == 0, identity
+    print(f"Keep-all verified on {len(panel)} images: {json.dumps(identity)}", flush=True)
 
     windows = deletion_windows(14, config["window_size"])
     complement = np.stack([np.setdiff1d(np.arange(196), window) for window in windows])
@@ -223,10 +249,10 @@ def run(config, output):
     summary = {
         "run_type": "offline_task_selection_development_pilot",
         "started_utc": started,
-        "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+        "code_commit": source_commit,
         "config": config, "image_count": len(panel), "task_count": len(panel_tasks),
         "exchange_row_count": len(exchange_rows), "single_task_row_count": len(single_rows),
-        "identity_max_feature_error": max_error,
+        "identity": identity,
         "window_count": len(windows), "windows_stride": 1,
         "ranking_objective": "Mean signed geometric margin drop across deletion windows covering each patch.",
         "shared_proxy": "Mean of the two task patch-utility vectors.",
