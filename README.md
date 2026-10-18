@@ -14,6 +14,7 @@ Current status: the controlled budget-context ranking pilot is complete. On 144 
 - Keep code direct and focused on the current experiments. Avoid speculative abstractions, redundant checks, and silent fallbacks; retain checks that establish scientific correctness.
 - Treat the proposal as the starting research plan. Raise new observations, hypotheses, and better experimental designs as they emerge, and record the evidence and tradeoffs behind changes to the plan.
 - After each completed task, explain the result plainly, identify the corresponding proposal stage, distinguish any new insight from the original plan, and assess whether it advances the project goal. Report unexpected problems and useful observations during execution.
+- Keep evolving findings in the [research insight log](docs/research-insights.md), with evidence links, their relationship to the proposal, and implications for the next experiment. Update the interpretation when new evidence changes it; retain dated revisions.
 
 ## Version management
 

@@ -33,5 +33,6 @@ Create one Markdown record in `docs/experiments/` for each substantive experimen
 - Main observations and uncertainty:
 - Failed runs or deviations from the planned protocol:
 - Interpretation and next step:
+- Research insight added or revised in [the insight log](research-insights.md), if this experiment changes the research interpretation:
 
 The code SHA identifies the version that produced the result, even if this record is committed later. When an experiment changes a data split, checkpoint, configuration, or supervision cache, record the new identifier so results from different protocols remain distinguishable.
