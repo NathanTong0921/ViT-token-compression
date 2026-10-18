@@ -41,4 +41,6 @@ Use fixed-seed image-cluster bootstrap intervals and image-grouped validation fo
 
 ## Retention and cost
 
+Preserve the original 64-image encoder batch order before selecting the panel, because changing batch shapes can perturb FP16 outputs. In suffix evaluation, pad short batches to 64 with repeated selections and discard the repeated outputs. Record physical forward examples separately from requested selections. Verify keep-all against both original saved features/scores and the current native encoder before intervention results.
+
 Save the sampled manifests, deletion scores/window positions, single-task outcomes and positions, full exchange rows, and candidate banks (all positions/scores plus the two proxy-task embeddings). Record model source, configuration, measured supervision-generation/evaluation cost, and peak GPU allocation. No persistent prefix cache is needed. Small scientific artifacts are copied locally and to GitHub; transfer-only artifacts are removed after verification.

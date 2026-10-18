@@ -58,3 +58,7 @@ A backup is complete only after its contents have been checked at the destinatio
 - [CLIP ViT-B/16 configuration](https://huggingface.co/openai/clip-vit-base-patch16/blob/main/config.json)
 - [GitHub large-file guidance](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
 - [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
+
+## Offline-selection development pilots
+
+The three `results/pets-selection*` bundles add about 51 MB: fixed panels, deletion scores, full candidate indices/scores, the two task-ranking embeddings, derived metrics and figures. Each individual file is below 10 MB, so ordinary Git retains these scientific artifacts. Prefix states live only in RAM; no model/data archive was downloaded locally for these runs. Original outputs remain in server `runs/`, with curated tracked copies in `results/`.

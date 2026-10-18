@@ -7,7 +7,7 @@ This project studies whether changing the competing classes changes which visual
 The main study uses frozen CLIP ViT-B/16 on Oxford-IIIT Pets, with controlled cross-task selection, strong shared-selection baselines, and matched conditional/unconditional selectors. Flowers102 provides validation; a targeted ViT-L/14 check is planned if time permits.
 
 `Project_Proposal.pdf` is the proposal for submission and the reference plan for project execution. 
-Current status: single-stage pruning is implemented after block 6, and retaining all tokens **exactly reproduces the original CLIP baseline** on 736 development images. At 25% patch retention, binary macro accuracy across 66 validation pairs is **97.66% with attention selection** and **92.33% with random selection averaged over three seeds**, versus 99.25% uncompressed. No official test images or test pairs have been evaluated. See the [pruning results and figure](results/pets-pruning-v1/README.md), [pruning protocol](docs/pruning-pilot.md), [original baseline](results/pets-baseline-v1/README.md), and [Pets data protocol](docs/pets-protocol.md). Task-specific and strong shared-selection diagnostics are next.
+Current status: the first offline task-selection and cross-task exchange pilot is complete. On a fixed 144-image development panel, task-derived rankings show positive exchange losses, but do **not** establish a consistent advantage over privileged shared search. At 25% patch retention the deletion proxy underperforms attention, identifying supervision quality at the target budget as the next issue to investigate. The original keep-all checks still reproduce native and saved CLIP outputs exactly. No learned selector, official test images, or held-out test task pairs have been evaluated. See the [selection results](results/pets-selection-v1/README.md), [experiment record](docs/experiments/2026-10-18-selection-pilot.md), [selection protocol](docs/selection-pilot.md), [pruning pilot](results/pets-pruning-v1/README.md), and [original baseline](results/pets-baseline-v1/README.md).
 
 ## Working approach
 
@@ -24,7 +24,7 @@ Current status: single-stage pruning is implemented after block 6, and retaining
 
 Use [the experiment record template](docs/experiment-log.md) for each substantive experiment. Negative and inconclusive results should retain the same provenance as positive results.
 
-Paper evidence will be retained on the server, locally, and on GitHub: per-example results, figure source data, figures, configurations, and selected selector checkpoints. Small files belong in Git; larger essential artifacts belong in versioned GitHub Release attachments. See the [storage and backup plan](docs/storage-and-backup.md). Runtime records, the original baseline, and the first pruning pilot's embeddings, scores, retained positions and plots have been copied back locally and committed. Transfer-only archives are removed after verification.
+Paper evidence will be retained on the server, locally, and on GitHub: per-example results, figure source data, figures, configurations, and selected selector checkpoints. Small files belong in Git; larger essential artifacts belong in versioned GitHub Release attachments. See the [storage and backup plan](docs/storage-and-backup.md). Runtime records, the original baseline, pruning pilot and offline-selection diagnostics include locally retained scores, selection positions, statistical tables and plots. Transfer-only archives are removed after verification.
 
 ## File organization
 

@@ -1,0 +1,65 @@
+{
+  "run_type": "offline_task_selection_development_pilot",
+  "started_utc": "2026-10-18T08:37:57.778454+00:00",
+  "code_commit": "3f3c79a80f00ebfce79316b900e8341520b5c675",
+  "config": {
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "results/pets-baseline-v1",
+    "image_split": "val",
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "batch_size": 64,
+    "num_workers": 4,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": [
+      147,
+      98,
+      49
+    ],
+    "identity_atol": 1e-06,
+    "task_split": "val",
+    "images_per_class": 4,
+    "window_size": 2,
+    "candidate_count": 64,
+    "suffix_batch_size": 64
+  },
+  "image_count": 144,
+  "task_count": 66,
+  "exchange_row_count": 2604,
+  "single_task_row_count": 6336,
+  "identity": {
+    "max_feature_error": 0.0,
+    "max_feature_error_vs_native": 0.0,
+    "max_score_error": 0.0,
+    "prediction_disagreements_37class": 0,
+    "prediction_disagreements_binary": 0
+  },
+  "window_count": 169,
+  "windows_stride": 1,
+  "ranking_objective": "Mean signed geometric margin drop across deletion windows covering each patch.",
+  "shared_proxy": "Mean of the two task patch-utility vectors.",
+  "shared_search": "Maximize mean (or minimum) actual task margins over the same fixed candidate bank; includes task-specific and shared proxy sets, attention, representation, random and swap neighbors.",
+  "candidate_count_per_case_budget": 64,
+  "task_search_scope": "Optimistic same-bank references. Their nonnegative margin advantage follows from selection and is not independent evidence for H1.",
+  "interpretation_scope": "Label-informed offline diagnostics. No learned selector or held-out test result; bounded search is not a globally optimal shared selection.",
+  "cost": {
+    "deletion_and_ranking_seconds": 9.88238279055804,
+    "subset_evaluation_seconds": 50.90972038824111,
+    "suffix_forward_examples": 221952,
+    "unique_requested_suffix_examples": 193872,
+    "total_wall_seconds": 69.3554250090383,
+    "training_seconds": 0,
+    "peak_allocated_gpu_bytes": 755721728
+  },
+  "gpu": "NVIDIA RTX A6000",
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4"
+  }
+}
