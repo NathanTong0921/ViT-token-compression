@@ -42,6 +42,12 @@ Proceed to the small matched conditional/image-only selector trial at 49 patches
 
 ## Checks and retained evidence
 
-The runner version passed 36 tests on the server. The subsequent paired-prediction analysis change passed 11 budget tests locally, including its joint-valid Pearson pairing test. Raw reconstruction is described in the [audit note](2026-10-18-budget-ranking-audit.md). Primary plots were visually checked. The final server suite passed all 37 tests after the analysis change. Remote recovery verification is recorded with the completed milestone.
+The runner version passed 36 tests on the server. The subsequent paired-prediction analysis change passed 11 budget tests locally, including its joint-valid Pearson pairing test. Raw reconstruction is described in the [audit note](2026-10-18-budget-ranking-audit.md). Primary plots were visually checked. The final server suite passed all 37 tests after the analysis change. GitHub recovery verification is recorded below.
 
-All raw probes/responses, coefficients, selected positions, candidate scores, per-example tables, summary analyses and figures are retained locally and in Git; total bundle size before final notes is approximately 209.5MB, with largest file 20.2 MB. Original outputs remain in server `runs/`; tracked curated copies live in `results/`. Public datasets/checkpoints were reused in place. No new local transfer archives or persistent prefix caches were created.
+All raw probes/responses, coefficients, selected positions, candidate scores, per-example tables, summary analyses and figures are retained locally and in Git; total bundle size before final notes is approximately 209.5 MB, with largest file 20.2 MB. Original outputs remain in server `runs/`; tracked curated copies live in `results/`. Public datasets/checkpoints were reused in place. No new local transfer archives or persistent prefix caches were created.
+
+## GitHub recovery verification
+
+After pushing the results, the server fetched and checked out GitHub `main`. These new tracked `results/` paths were obtained from GitHub, separate from the original GPU outputs under `runs/`. All 87original run files (excluding text logs) matched the fetched copies byte for byte. All 45 NumPy archives, 19 JSON files and 3 PNG figures opened successfully; floating-point arrays were finite. All three comparison summaries were rebuilt from the fetched artifacts and agreed with the saved values within 1e-10. No checkpoint is produced at this stage.
+
+A redundant fresh full clone on the local machine was stopped because its download was slow; its partial directory was removed. Verification used the server's completed GitHub fetch instead. Local scientific evidence remains intact. Code and evidence are retained locally, on the server, and on GitHub; this milestone is tagged `pets-budget-ranking-v1`.
