@@ -78,6 +78,22 @@ class GeometryInferenceTests(unittest.TestCase):
         fixed = adjusted_angle_association(cases, replicates=150, seed=13, image_fixed_effects=True)
         self.assertAlmostEqual(fixed["angle_slope"], .003, delta=.0001)
 
+    def test_family_size_changes_only_multiplicity_and_preserves_three_budget_aliases(self):
+        cases = self.synthetic()
+        default = adjusted_angle_association(cases, replicates=300, seed=13)
+        three = adjusted_angle_association(cases, replicates=300, seed=13, family_size=3)
+        self.assertEqual(default, three)
+        self.assertEqual(three["ci_familywise_budgets"], three["ci_familywise_three_budgets"])
+        self.assertEqual(three["positive_after_budget_adjustment"], three["positive_after_three_budget_adjustment"])
+        two = adjusted_angle_association(cases, replicates=300, seed=13, family_size=2)
+        self.assertEqual(two["angle_slope"], three["angle_slope"])
+        self.assertEqual(two["ci95"], three["ci95"])
+        self.assertEqual(two["familywise_interval_level"], .975)
+        self.assertEqual(two["family_size"], 2)
+        self.assertNotIn("ci_familywise_three_budgets", two)
+        self.assertGreaterEqual(two["ci_familywise_budgets"][0], three["ci_familywise_budgets"][0])
+        self.assertLessEqual(two["ci_familywise_budgets"][1], three["ci_familywise_budgets"][1])
+
     def test_repeated_pairs_do_not_create_new_independent_images(self):
         cases = self.synthetic()
         result = adjusted_angle_association(cases, replicates=120, seed=15)
@@ -171,6 +187,22 @@ class GeometryPipelineTests(unittest.TestCase):
             with np.load(output / "budget_49/seed_mean_cases.npz") as cases:
                 self.assertEqual(len(cases["image_ids"]), 120)
                 self.assertTrue(np.all(cases["seed_count"] == 3))
+            second = Path(directory) / "source_98"
+            for group in ("references", "full"):
+                with np.load(source / group / "predictions.npz") as saved:
+                    packed = {key: saved[key].copy() for key in saved.files}
+                learned = packed["method"] != "full_model"
+                packed["keep_patch_tokens"][learned] = 98
+                packed["patch_indices"][learned] = np.r_[np.arange(98), np.repeat(-1, 98)]
+                (second / group).mkdir(parents=True)
+                np.savez_compressed(second / group / "predictions.npz", **packed)
+            two = module.run({49: source, 98: second}, Path(directory) / "analysis_two", seeds, replicates=15)
+            self.assertEqual(two["family_size"], 2)
+            for value in two["budgets"].values():
+                self.assertEqual(value["primary_difficulty_adjusted"]["familywise_interval_level"], .975)
+                self.assertEqual(value["image_fixed_effects_sensitivity"]["family_size"], 2)
+                self.assertTrue(all(r["difficulty_adjusted"]["family_size"] == 2 for r in value["per_seed"]))
+                self.assertTrue(all(r["difficulty_adjusted"]["family_size"] == 2 for r in value["normalized_alignment_diagnostics"]))
 
 
 class SeedAggregationTests(unittest.TestCase):

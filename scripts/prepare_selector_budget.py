@@ -101,8 +101,9 @@ def run(config, output):
                 full_features = evidence["full_features"].copy()
                 np.testing.assert_array_equal(evidence["text_features"], text)
             before_identity = time.perf_counter()
+            disagreement_key = f"prediction_disagreements_{len(classes)}class_vs_source"
             identity = {"images_checked": 0, "max_feature_error_vs_source": 0.,
-                        "prediction_disagreements_37class_vs_source": 0}
+                        disagreement_key: 0}
             for start in range(0, len(panel), config["image_batch_size"]):
                 tokens = torch.from_numpy(np.array(prefixes[start:start + config["image_batch_size"]])).to(device)
                 all_patches = torch.arange(pruner.num_patches, device=device).expand(len(tokens), -1)
@@ -111,10 +112,10 @@ def run(config, output):
                 identity["images_checked"] += len(tokens)
                 identity["max_feature_error_vs_source"] = max(
                     identity["max_feature_error_vs_source"], float(np.max(np.abs(features - reference))))
-                identity["prediction_disagreements_37class_vs_source"] += int(np.sum(
+                identity[disagreement_key] += int(np.sum(
                     (features @ text.T).argmax(1) != (reference @ text.T).argmax(1)))
             assert identity["max_feature_error_vs_source"] <= config["identity_atol"], identity
-            assert identity["prediction_disagreements_37class_vs_source"] == 0, identity
+            assert identity[disagreement_key] == 0, identity
             identities[split] = identity
             costs[f"{split}_identity_seconds"] = time.perf_counter() - before_identity
             print(f"{split} reused prefixes verified: {json.dumps(identity)}", flush=True)

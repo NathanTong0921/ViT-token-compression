@@ -136,16 +136,19 @@ def describe(cases):
 def plot_summaries(summary, output):
     import matplotlib.pyplot as plt
     budgets = sorted(summary["budgets"], key=int)
+    level = summary["budgets"][budgets[0]]["primary_difficulty_adjusted"]["familywise_interval_level"]
     fig, axes = plt.subplots(1, 3, figsize=(13.5, 4.2))
     specifications = [
-        ("primary_difficulty_adjusted", "angle_slope", "ci_familywise_three_budgets", "Adjusted exchange-loss slope\nper 10 degrees (98.33% intervals)"),
+        ("primary_difficulty_adjusted", "angle_slope", "ci_familywise_budgets", f"Adjusted exchange-loss slope\nper 10 degrees ({100 * level:.2f}% intervals)"),
         ("image_fixed_effects_sensitivity", "angle_slope", "ci95", "Within-image slope\nper 10 degrees (95% intervals)"),
         ("held_image_prediction", "incremental_out_of_fold_r2", "incremental_out_of_fold_r2_ci95", "Held-image incremental R²\nfrom adding angle (95% intervals)"),
     ]
     for ax, (section, point, interval, title) in zip(axes, specifications):
         for i, budget in enumerate(budgets):
             result = summary["budgets"][budget][section]
-            value, bounds = result[point], result[interval]
+            interval_key = ("ci_familywise_three_budgets" if interval == "ci_familywise_budgets"
+                            and interval not in result else interval)
+            value, bounds = result[point], result[interval_key]
             if value is not None:
                 ax.plot(i, value, "o", color="C0")
                 ax.vlines(i, bounds[0], bounds[1], color="C0")
@@ -164,6 +167,7 @@ def plot_summaries(summary, output):
 def run(sources, output, seeds=(2041, 2042, 2043), replicates=2000,
         bootstrap_seed=2061, fold_seed=2060, plot=False):
     output.mkdir(parents=True, exist_ok=True)
+    family_size = len(sources)
     summary = {
         "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
         "primary": "Unseen class combinations on development images, full training coverage; conditional selector's symmetric exchange loss.",
@@ -172,7 +176,8 @@ def run(sources, output, seeds=(2041, 2042, 2043), replicates=2000,
         "difficulty_controls": "Intercept and symmetric quadratic basis of min/max full-model signed geometric margins; primary adds a linear angle term per 10 degrees.",
         "identity": "L = .5*(z_A-z_B) dot (u_A-u_B) = ||z_A-z_B|| * sin(theta/2) * alignment. This identity is not a mechanism discovery.",
         "uncertainty": "Paired image-cluster bootstrap, conditional on task collection and fixed training seeds. Shared sorted image IDs and bootstrap seed align resamples across budgets when coverage matches.",
-        "multiplicity": "Primary three budget slopes have 98.333% Bonferroni intervals; other 95% intervals are exploratory diagnostics.",
+        "multiplicity": f"Primary {family_size} budget slopes have {100 * (1 - .05 / family_size):.3f}% Bonferroni intervals; other 95% intervals are exploratory diagnostics.",
+        "family_size": family_size,
         "interpretation": "A positive adjusted slope is predictive association, not a causal angle intervention. Image-fixed-effects sensitivity and held-image prediction assess robustness. Alignment diagnostics remove the algebraic displacement/angle scale but do not prove mechanism.",
         "training_seeds": list(seeds), "bootstrap_replicates": replicates,
         "bootstrap_seed": bootstrap_seed, "fold_seed": fold_seed,
@@ -193,8 +198,10 @@ def run(sources, output, seeds=(2041, 2042, 2043), replicates=2000,
         np.savez_compressed(folder / "seed_mean_cases.npz", **scalar_cases(averaged))
         np.savez_compressed(folder / "per_seed_cases.npz", **scalar_cases(cases))
         write_csv(folder / "seed_mean_cases.csv", scalar_cases(averaged))
-        primary = adjusted_angle_association(averaged, replicates=replicates, seed=bootstrap_seed)
-        fixed = adjusted_angle_association(averaged, replicates=replicates, seed=bootstrap_seed, image_fixed_effects=True)
+        primary = adjusted_angle_association(averaged, replicates=replicates, seed=bootstrap_seed,
+                                              family_size=family_size)
+        fixed = adjusted_angle_association(averaged, replicates=replicates, seed=bootstrap_seed,
+                                            image_fixed_effects=True, family_size=family_size)
         cv = cross_validated_angle_prediction(averaged, folds=5, seed=fold_seed,
                                                replicates=replicates, bootstrap_seed=bootstrap_seed)
         np.savez_compressed(folder / "cross_fitted_predictions.npz", **cv.pop("out_of_fold_predictions"),
@@ -204,8 +211,10 @@ def run(sources, output, seeds=(2041, 2042, 2043), replicates=2000,
         for seed in seeds:
             part = subset(cases, cases["seed"] == seed)
             per_seed.append({"seed": int(seed), "scope": describe(part),
-                             "difficulty_adjusted": adjusted_angle_association(part, replicates=replicates, seed=bootstrap_seed),
-                             "image_fixed_effects": adjusted_angle_association(part, replicates=replicates, seed=bootstrap_seed, image_fixed_effects=True)})
+                             "difficulty_adjusted": adjusted_angle_association(part, replicates=replicates, seed=bootstrap_seed,
+                                                                                 family_size=family_size),
+                             "image_fixed_effects": adjusted_angle_association(part, replicates=replicates, seed=bootstrap_seed,
+                                                                                image_fixed_effects=True, family_size=family_size)})
         alignment = []
         for threshold in (1e-12, 1e-6):
             eligible = averaged["alignment_valid"] & (averaged["displacement_norm"] > threshold)
@@ -216,8 +225,11 @@ def run(sources, output, seeds=(2041, 2042, 2043), replicates=2000,
                 continue
             alignment.append({"minimum_displacement_norm": threshold, "scope": describe(part),
                               "excluded_pair_count": int((~eligible).sum()),
-                              "difficulty_adjusted": adjusted_angle_association(part, outcome="alignment", replicates=replicates, seed=bootstrap_seed),
-                              "image_fixed_effects": adjusted_angle_association(part, outcome="alignment", replicates=replicates, seed=bootstrap_seed, image_fixed_effects=True)})
+                              "difficulty_adjusted": adjusted_angle_association(part, outcome="alignment", replicates=replicates,
+                                                                                  seed=bootstrap_seed, family_size=family_size),
+                              "image_fixed_effects": adjusted_angle_association(part, outcome="alignment", replicates=replicates,
+                                                                                 seed=bootstrap_seed, image_fixed_effects=True,
+                                                                                 family_size=family_size)})
         summary["budgets"][str(budget)] = {"source": str(source), "scope": describe(averaged), "audit": audit,
                                             "primary_difficulty_adjusted": primary,
                                             "image_fixed_effects_sensitivity": fixed,
@@ -225,7 +237,7 @@ def run(sources, output, seeds=(2041, 2042, 2043), replicates=2000,
                                             "normalized_alignment_diagnostics": alignment}
         (output / "analysis.json").write_text(json.dumps(summary, indent=2, allow_nan=False) + "\n")
         print(json.dumps({"budget": budget, "slope_per_10_degrees": primary["angle_slope"],
-                          "interval_familywise": primary["ci_familywise_three_budgets"],
+                          "interval_familywise": primary["ci_familywise_budgets"],
                           "image_fixed_effect_slope": fixed["angle_slope"],
                           "incremental_cv_r2": cv["incremental_out_of_fold_r2"]}), flush=True)
         del predictions, cases, averaged
@@ -236,7 +248,7 @@ def run(sources, output, seeds=(2041, 2042, 2043), replicates=2000,
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", action="append", required=True, help="BUDGET=EVALUATION_DIRECTORY; repeat for 49,98,147")
+    parser.add_argument("--source", action="append", required=True, help="BUDGET=EVALUATION_DIRECTORY; repeat for every predeclared budget")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seeds", nargs="+", type=int, default=[2041, 2042, 2043])
     parser.add_argument("--bootstrap-replicates", type=int, default=2000)

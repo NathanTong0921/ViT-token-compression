@@ -1,5 +1,6 @@
 torch==2.6.0
 torchvision==0.21.0
 numpy==1.26.4
+scipy==1.13.1
 packaging
 clip @ git+https://github.com/openai/CLIP.git@d05afc436d78f1c48dc0dbf8e5980a9d471f35f6

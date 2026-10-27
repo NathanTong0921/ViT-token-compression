@@ -65,7 +65,7 @@ def analyze_rows(rows_by_budget, training_seeds, random_seeds, replicates=2000, 
         "primary": "Conditioned minus image-only performance at each predeclared budget on unseen validation class combinations.",
         "budgets": budgets, "training_seeds": training_seeds, "random_mask_seeds": random_seeds,
         "aggregation": "Equal tasks and equal class sides within each task, then equal images within class. Average fixed training seeds or random-mask seeds before image resampling.",
-        "uncertainty": "Paired image-cluster bootstrap of weighted numerator/denominator totals. Intervals condition on these tasks and seeds. Bonferroni intervals cover the three budgets separately for each metric, not all metrics jointly.",
+        "uncertainty": f"Paired image-cluster bootstrap of weighted numerator/denominator totals. Intervals condition on these tasks and seeds. Bonferroni intervals cover the {len(budgets)} predeclared budgets separately for each metric, not all metrics jointly.",
         "bootstrap_replicates": replicates, "bootstrap_seed": seed, "task_splits": {}}
     for split in ("seen", "unseen"):
         base = [r for r in rows_by_budget[budgets[0]] if r["method"] == "full_model" and r["task_split"] == split]
@@ -275,21 +275,29 @@ def run(sources, random_sources, output, pruning_summary):
     return result, exchange
 
 
-if __name__ == "__main__":
+def argument_parser():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", action="append", default=[], help="BUDGET=EVALUATION_DIR; repeat for each budget.")
+    parser.add_argument("--budgets", nargs="+", type=int, default=[49, 98, 147],
+                        help="Predeclared budget family; all listed sources must be supplied.")
     parser.add_argument("--random-source", action="append", default=[], help="BUDGET=DIR for a separate random-only supplement.")
     parser.add_argument("--output", type=Path, default=Path("results/pets-selector-budgets-v1"))
     parser.add_argument("--pruning-summary", type=Path, default=Path("results/pets-pruning-v1/summary.json"))
     parser.add_argument("--plot", action="store_true")
     parser.add_argument("--plot-only", action="store_true", help="Render saved analysis files without loading raw GPU outputs.")
+    return parser
+
+
+if __name__ == "__main__":
+    parser = argument_parser()
     args = parser.parse_args()
     if args.plot_only:
         result = json.loads((args.output / "analysis.json").read_text())
         exchange = json.loads((args.output / "exchange_analysis.json").read_text())
     else:
         sources, random_sources = parse_sources(args.source), parse_sources(args.random_source)
-        assert sorted(sources) == [49, 98, 147]
+        assert len(set(args.budgets)) == len(args.budgets)
+        assert sorted(sources) == sorted(args.budgets)
         result, exchange = run(sources, random_sources, args.output, args.pruning_summary)
     if args.plot or args.plot_only:
         plot(result, exchange, args.output)

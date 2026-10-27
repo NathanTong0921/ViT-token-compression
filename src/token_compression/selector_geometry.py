@@ -97,14 +97,16 @@ def _fit(design, target, weights):
 
 
 def adjusted_angle_association(cases, outcome="exchange_loss", replicates=2000,
-                               seed=2061, image_fixed_effects=False):
+                               seed=2061, image_fixed_effects=False, family_size=3):
     """Estimate angle slope and image-bootstrap intervals under fixed controls.
 
-    95% intervals are pointwise. 98.333...% intervals use a Bonferroni correction
-    for the three predeclared token budgets; only primary loss slopes use them
-    for the study's directional H2 assessment.
+    95% intervals are pointwise. Family intervals use a Bonferroni correction
+    for the predeclared token budgets; only primary loss slopes use them
+    for the study's directional H2 assessment. The default preserves the
+    original three-budget Pets analysis.
     """
     ids = np.asarray(cases["image_ids"])
+    assert family_size >= 1
     target = np.asarray(cases[outcome], dtype=float)
     features = np.column_stack([difficulty_features(cases["base_margin_a"], cases["base_margin_b"]),
                                 np.asarray(cases["angle_degrees"]) / 10.])
@@ -138,22 +140,23 @@ def adjusted_angle_association(cases, outcome="exchange_loss", replicates=2000,
             bootstrap[start + j] = value[-1] / scale[-1]
     point = float(coefficients[-1] / scale[-1])
     lo95, hi95 = np.percentile(bootstrap, [2.5, 97.5])
-    lo_family, hi_family = np.percentile(bootstrap, [100 * .05 / (2 * 3), 100 * (1 - .05 / (2 * 3))])
+    lo_family, hi_family = np.percentile(bootstrap, [100 * .05 / (2 * family_size), 100 * (1 - .05 / (2 * family_size))])
     residual_angle = features[:, -1] - design[:, :-1] @ _fit(design[:, :-1], features[:, -1], weights)[0]
     residual_sd = float(np.sqrt(np.sum(weights * residual_angle ** 2)))
     weighted_mean = np.sum(weights * target)
     total = float(np.sum(weights * (target - weighted_mean) ** 2))
     mse = float(np.sum(weights * (target - fitted) ** 2))
     baseline_mse = float(np.sum(weights * (target - baseline_fitted) ** 2))
-    return {
+    result = {
         "outcome": outcome, "image_fixed_effects": bool(image_fixed_effects),
         "image_count": len(unique), "pair_count": len(ids),
         "controls": CONTROL_NAMES, "angle_unit": "10 degrees",
         "angle_slope": point, "ci95": [float(lo95), float(hi95)],
-        "ci_familywise_three_budgets": [float(lo_family), float(hi_family)],
-        "familywise_interval_level": 1 - .05 / 3,
+        "ci_familywise_budgets": [float(lo_family), float(hi_family)],
+        "family_size": family_size,
+        "familywise_interval_level": 1 - .05 / family_size,
         "angle_estimable_beyond_controls": bool(rank > baseline_rank),
-        "positive_after_three_budget_adjustment": bool(rank > baseline_rank and lo_family > 0),
+        "positive_after_budget_adjustment": bool(rank > baseline_rank and lo_family > 0),
         "design_rank": rank, "design_columns": p,
         "scaled_design_condition_number": float(singular[0] / singular[-1]) if singular[-1] > 0 else None,
         "bootstrap_rank_deficient_replicates": int(deficient),
@@ -162,6 +165,10 @@ def adjusted_angle_association(cases, outcome="exchange_loss", replicates=2000,
         "weighted_mse": mse, "difficulty_only_weighted_mse": baseline_mse,
         "in_sample_incremental_r2": (baseline_mse - mse) / total if total > 0 else None,
     }
+    if family_size == 3:
+        result["ci_familywise_three_budgets"] = result["ci_familywise_budgets"]
+        result["positive_after_three_budget_adjustment"] = result["positive_after_budget_adjustment"]
+    return result
 
 
 def image_fold_assignments(image_ids, labels, folds=5, seed=2060):

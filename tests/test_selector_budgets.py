@@ -22,6 +22,11 @@ analysis = load_script("analyze_selector_budgets")
 
 
 class SelectorBudgetTests(unittest.TestCase):
+    def test_budget_cli_preserves_pets_default_and_accepts_flowers_pair(self):
+        parser = analysis.argument_parser()
+        self.assertEqual(parser.parse_args([]).budgets, [49, 98, 147])
+        self.assertEqual(parser.parse_args(["--budgets", "49", "98"]).budgets, [49, 98])
+
     def test_random_sets_are_nested_across_budgets_and_reproducible(self):
         a = evaluation.random_rankings(8, 196, 2055)
         b = evaluation.random_rankings(8, 196, 2055)
@@ -41,6 +46,12 @@ class SelectorBudgetTests(unittest.TestCase):
         self.assertLessEqual(result["bonferroni_family_ci95"][0], result["ci95"][0])
         self.assertGreaterEqual(result["bonferroni_family_ci95"][1], result["ci95"][1])
         self.assertAlmostEqual(result["individual_interval_level"], 1 - .05 / 3)
+        pair = analysis.weighted_estimates(ids, weights, values, ["value"], 500, 9, 2)["value"]
+        self.assertEqual(pair["mean"], result["mean"])
+        self.assertEqual(pair["ci95"], result["ci95"])
+        self.assertEqual(pair["individual_interval_level"], .975)
+        self.assertGreaterEqual(pair["bonferroni_family_ci95"][0], result["bonferroni_family_ci95"][0])
+        self.assertLessEqual(pair["bonferroni_family_ci95"][1], result["bonferroni_family_ci95"][1])
 
     def test_repeated_seed_rows_do_not_shrink_image_intervals(self):
         ids = np.array(["a", "a", "b", "c"])
@@ -90,6 +101,12 @@ class SelectorBudgetTests(unittest.TestCase):
         changes = unseen_result["secondary_change_in_conditioning_advantage"]
         self.assertAlmostEqual(changes["98_minus_49"]["margin"]["mean"], .2)
         self.assertAlmostEqual(changes["147_minus_49"]["margin"]["mean"], .5)
+        two = analysis.analyze_rows({k: rows_by_budget[k] for k in (49, 98)}, seeds, masks, 100, 6)
+        self.assertEqual(two["budgets"], [49, 98])
+        for budget in (49, 98):
+            estimate = two["task_splits"]["unseen"]["budgets"][str(budget)]["conditioned_minus_image_only"]["margin"]
+            self.assertEqual(estimate["individual_interval_level"], .975)
+            self.assertEqual(estimate["mean"], unseen_result["budgets"][str(budget)]["conditioned_minus_image_only"]["margin"]["mean"])
 
     def test_common_full_model_must_match_across_budgets(self):
         examples = evaluation.evaluation_examples(["a", "b", "c"], [0, 1, 2],
