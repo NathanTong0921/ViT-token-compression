@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "classification": {
+    "image_count": 1020,
+    "image_task_rows_per_arm_and_seed": 4080,
+    "task_count": 204,
+    "conditioned_minus_image_only": {
+      "accuracy": {
+        "mean": 0.0014705882352941172,
+        "ci95": [
+          0.0002450980392156865,
+          0.002859477124183007
+        ]
+      },
+      "margin": {
+        "mean": 0.00022182158935559962,
+        "ci95": [
+          -0.0001631755190100361,
+          0.0006027337708709774
+        ]
+      }
+    },
+    "aggregation": "Task/class-balanced; fixed seeds averaged before paired image resampling."
+  },
+  "h2": {
+    "angle_slope": 0.0005785462431389223,
+    "design_rank": 7,
+    "design_columns": 7,
+    "angle_estimable_beyond_controls": true,
+    "reported_ci95": [
+      0.0003889709545523158,
+      0.0007714946481374657
+    ]
+  }
+}

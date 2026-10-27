@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "budget": 128,
+  "source": "runs/pets-vitl128-eval-v1",
+  "audit_scope": "Independent raw-outcome reconstruction, weighted image-bootstrap contrasts, full-feature geometry, H2 point slopes and held-image refits.",
+  "not_recomputed": "H2 slope-bootstrap and held-image R2 intervals; slope interval levels and decision consistency are checked.",
+  "classification": {
+    "image_count": 716,
+    "image_task_rows_per_arm_and_seed": 2624,
+    "task_count": 66,
+    "conditioned_minus_image_only": {
+      "accuracy": {
+        "mean": -0.00012626262626262626,
+        "ci95": [
+          -0.0007626964564873678,
+          0.0003917078687911472
+        ]
+      },
+      "margin": {
+        "mean": -0.0006381419381177493,
+        "ci95": [
+          -0.0010062437904632448,
+          -0.00026990962234034975
+        ]
+      }
+    },
+    "aggregation": "Task/class-balanced; fixed seeds averaged before paired image resampling."
+  },
+  "h2": {
+    "embedding_dim": 768,
+    "per_seed_pair_count": 12945,
+    "identity_max_abs_error": 3.469446951953614e-18,
+    "image_only_exchange_max_abs_difference": 0.0,
+    "primary_difficulty_adjusted": {
+      "angle_slope": 0.0002280134560110335,
+      "design_rank": 7,
+      "design_columns": 7,
+      "angle_estimable_beyond_controls": true,
+      "reported_ci95": [
+        0.00013662148746273068,
+        0.00032319041132852257
+      ]
+    },
+    "image_fixed_effects_sensitivity": {
+      "angle_slope": 0.00031515815972699385,
+      "design_rank": 6,
+      "design_columns": 6,
+      "angle_estimable_beyond_controls": true,
+      "reported_ci95": [
+        0.000213248070116871,
+        0.000415118312490106
+      ]
+    },
+    "held_image_prediction": {
+      "independent_refit_matches_saved_predictions": true,
+      "difficulty_only_mse": 3.2821499583589794e-06,
+      "angle_augmented_mse": 3.2495579976625947e-06,
+      "incremental_out_of_fold_r2": 0.009864513436893265
+    }
+  }
+}

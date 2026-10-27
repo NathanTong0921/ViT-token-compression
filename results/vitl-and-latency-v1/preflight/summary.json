@@ -1,0 +1,868 @@
+{
+  "started_utc": "2026-10-27T12:30:22.616611+00:00",
+  "code_commit": "9ff71ccb30a42cd130956dc3c661d687f3aa2564",
+  "config": {
+    "cache_dir": "runs/pets-selector-budget-98-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "results/pets-baseline-v1",
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0,
+    "source_cache_dir": "runs/pets-selector-supervision-v1",
+    "training_steps": 3990,
+    "checkpoint_interval": 133,
+    "coverages": [
+      "full"
+    ],
+    "bootstrap_seed": 2052,
+    "bootstrap_replicates": 2000,
+    "experiment_name": "pets_selector_budget_98_v1",
+    "feature_cache_dir": "runs/pets-selector-scale-supervision-v1",
+    "random_seeds": [
+      2055,
+      2056,
+      2057
+    ]
+  },
+  "models_dir": "runs/pets-selector-budget-98-training-v1",
+  "evaluation_source": "runs/pets-selector-budget-98-eval-v1",
+  "evaluation_code_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+  "quality_scope": "Full validation evaluation from evaluation_source; timing-pool outcomes are not used as an accuracy benchmark.",
+  "measurement_scope": "GPU-resident preprocessed images and candidate-class indices to two cosine scores. Includes complete image encoder, online descriptor/selector, stable GPU ranking, spatial sort, gather and suffix. No image-prefix cache, request reuse, hidden padding, compilation, CUDA graphs or model fusion.",
+  "excluded_from_primary": [
+    "disk reading",
+    "CPU image preprocessing",
+    "host-to-device input transfer",
+    "one-time class text encoding",
+    "one-time model/checkpoint loading",
+    "output transfer to CPU"
+  ],
+  "primary_clock": "CUDA-synchronized Python wall clock per request; CUDA events are supplementary.",
+  "precision": {
+    "backbone": "torch.float16",
+    "selector": "torch.float32",
+    "cosine_scores": "torch.float32"
+  },
+  "text_policy": "Cached individual class embeddings, identical across methods; online pair lookup/descriptor included.",
+  "panel_size": 128,
+  "panel_seed": 2081,
+  "order_seed": 2082,
+  "batch_sizes": [
+    1,
+    32
+  ],
+  "warmup_calls_per_condition": 1,
+  "rounds": 1,
+  "timed_calls_per_round_per_condition": 2,
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "timed_unique_images_by_batch_size": {
+    "1": 2,
+    "32": 64
+  },
+  "batch_construction": "Contiguous complete batches from the seeded panel; each method/seed receives the same input sequence in each round. Unique timed-image counts are recorded separately from the pool size.",
+  "round_order": [
+    {
+      "batch_size": 1,
+      "round": 0,
+      "order": [
+        {
+          "method": "conditioned",
+          "seed": 2043
+        },
+        {
+          "method": "conditioned",
+          "seed": 2041
+        },
+        {
+          "method": "image_only",
+          "seed": 2041
+        },
+        {
+          "method": "image_only",
+          "seed": 2042
+        },
+        {
+          "method": "full_model",
+          "seed": -1
+        },
+        {
+          "method": "attention",
+          "seed": -1
+        },
+        {
+          "method": "conditioned",
+          "seed": 2042
+        },
+        {
+          "method": "image_only",
+          "seed": 2043
+        }
+      ]
+    },
+    {
+      "batch_size": 32,
+      "round": 0,
+      "order": [
+        {
+          "method": "image_only",
+          "seed": 2043
+        },
+        {
+          "method": "full_model",
+          "seed": -1
+        },
+        {
+          "method": "conditioned",
+          "seed": 2042
+        },
+        {
+          "method": "conditioned",
+          "seed": 2041
+        },
+        {
+          "method": "conditioned",
+          "seed": 2043
+        },
+        {
+          "method": "attention",
+          "seed": -1
+        },
+        {
+          "method": "image_only",
+          "seed": 2041
+        },
+        {
+          "method": "image_only",
+          "seed": 2042
+        }
+      ]
+    }
+  ],
+  "results": {
+    "1": {
+      "timing_window_valid": false,
+      "invalid_window_policy": "All raw timings retained. Speedup summary withheld if another compute process was observed; reruns require a separately recorded window.",
+      "methods": {
+        "attention": {
+          "wall_ms": {
+            "count": 2,
+            "mean": 6.545055999595206,
+            "median": 6.545055999595206,
+            "q25": 6.068606999178883,
+            "q75": 7.02150500001153,
+            "p95": 7.402664200344589,
+            "minimum": 5.592157998762559,
+            "maximum": 7.497954000427853
+          },
+          "cuda_event_ms": {
+            "count": 2,
+            "mean": 6.518784046173096,
+            "median": 6.518784046173096,
+            "q25": 6.0395519733428955,
+            "q75": 6.998016119003296,
+            "p95": 7.381401777267456,
+            "minimum": 5.560319900512695,
+            "maximum": 7.477248191833496
+          },
+          "per_seed": [
+            {
+              "seed": -1,
+              "wall_ms": {
+                "count": 2,
+                "mean": 6.545055999595206,
+                "median": 6.545055999595206,
+                "q25": 6.068606999178883,
+                "q75": 7.02150500001153,
+                "p95": 7.402664200344589,
+                "minimum": 5.592157998762559,
+                "maximum": 7.497954000427853
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 6.518784046173096,
+                "median": 6.518784046173096,
+                "q25": 6.0395519733428955,
+                "q75": 6.998016119003296,
+                "p95": 7.381401777267456,
+                "minimum": 5.560319900512695,
+                "maximum": 7.477248191833496
+              }
+            }
+          ],
+          "images_per_second_at_median": 152.78708082281454,
+          "paired_round_speedup_samples": [
+            {
+              "round": 0,
+              "seed": -1,
+              "ratio": 0.764820117572088
+            }
+          ],
+          "paired_round_speedup": null
+        },
+        "conditioned": {
+          "wall_ms": {
+            "count": 6,
+            "mean": 9.817253832200853,
+            "median": 7.726449501205934,
+            "q25": 6.275982996157836,
+            "q75": 11.392775999411242,
+            "p95": 17.90791224630084,
+            "minimum": 5.212390002270695,
+            "maximum": 19.830854995234404
+          },
+          "cuda_event_ms": {
+            "count": 6,
+            "mean": 8.679482698440552,
+            "median": 6.326096057891846,
+            "q25": 4.464864015579224,
+            "q75": 10.798768281936646,
+            "p95": 17.628959894180298,
+            "minimum": 3.817471981048584,
+            "maximum": 19.473119735717773
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "wall_ms": {
+                "count": 2,
+                "mean": 7.71107349646627,
+                "median": 7.71107349646627,
+                "q25": 6.989684245127137,
+                "q75": 8.432462747805403,
+                "p95": 9.009574148876709,
+                "minimum": 6.268294993788004,
+                "maximum": 9.153851999144536
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 6.326096057891846,
+                "median": 6.326096057891846,
+                "q25": 6.036328077316284,
+                "q75": 6.615864038467407,
+                "p95": 6.8476784229278564,
+                "minimum": 5.746560096740723,
+                "maximum": 6.905632019042969
+              }
+            },
+            {
+              "seed": 2042,
+              "wall_ms": {
+                "count": 2,
+                "mean": 5.755718502769014,
+                "median": 5.755718502769014,
+                "q25": 5.484054252519854,
+                "q75": 6.027382753018173,
+                "p95": 6.244714153217501,
+                "minimum": 5.212390002270695,
+                "maximum": 6.299047003267333
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 3.9275519847869873,
+                "median": 3.9275519847869873,
+                "q25": 3.8725119829177856,
+                "q75": 3.982591986656189,
+                "p95": 4.026623988151551,
+                "minimum": 3.817471981048584,
+                "maximum": 4.037631988525391
+              }
+            },
+            {
+              "seed": 2043,
+              "wall_ms": {
+                "count": 2,
+                "mean": 15.984969497367274,
+                "median": 15.984969497367274,
+                "q25": 14.06202674843371,
+                "q75": 17.90791224630084,
+                "p95": 19.44626644544769,
+                "minimum": 12.139083999500144,
+                "maximum": 19.830854995234404
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 15.784800052642822,
+                "median": 15.784800052642822,
+                "q25": 13.940640211105347,
+                "q75": 17.628959894180298,
+                "p95": 19.104287767410277,
+                "minimum": 12.096480369567871,
+                "maximum": 19.473119735717773
+              }
+            }
+          ],
+          "images_per_second_at_median": 129.42555307504713,
+          "paired_round_speedup_samples": [
+            {
+              "round": 0,
+              "seed": 2041,
+              "ratio": 0.6491690815060048
+            },
+            {
+              "round": 0,
+              "seed": 2042,
+              "ratio": 0.8697073174648958
+            },
+            {
+              "round": 0,
+              "seed": 2043,
+              "ratio": 0.3131560870323062
+            }
+          ],
+          "paired_round_speedup": null
+        },
+        "full_model": {
+          "wall_ms": {
+            "count": 2,
+            "mean": 5.005790499126306,
+            "median": 5.005790499126306,
+            "q25": 4.913755748930271,
+            "q75": 5.097825249322341,
+            "p95": 5.171453049479169,
+            "minimum": 4.821720998734236,
+            "maximum": 5.189859999518376
+          },
+          "cuda_event_ms": {
+            "count": 2,
+            "mean": 4.980144023895264,
+            "median": 4.980144023895264,
+            "q25": 4.8852081298828125,
+            "q75": 5.075079917907715,
+            "p95": 5.151028633117676,
+            "minimum": 4.790272235870361,
+            "maximum": 5.170015811920166
+          },
+          "per_seed": [
+            {
+              "seed": -1,
+              "wall_ms": {
+                "count": 2,
+                "mean": 5.005790499126306,
+                "median": 5.005790499126306,
+                "q25": 4.913755748930271,
+                "q75": 5.097825249322341,
+                "p95": 5.171453049479169,
+                "minimum": 4.821720998734236,
+                "maximum": 5.189859999518376
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 4.980144023895264,
+                "median": 4.980144023895264,
+                "q25": 4.8852081298828125,
+                "q75": 5.075079917907715,
+                "p95": 5.151028633117676,
+                "minimum": 4.790272235870361,
+                "maximum": 5.170015811920166
+              }
+            }
+          ],
+          "images_per_second_at_median": 199.76864796370057,
+          "paired_round_speedup_samples": [
+            {
+              "round": 0,
+              "seed": -1,
+              "ratio": 1.0
+            }
+          ],
+          "paired_round_speedup": null
+        },
+        "image_only": {
+          "wall_ms": {
+            "count": 6,
+            "mean": 5.829263334211039,
+            "median": 5.468238003231818,
+            "q25": 5.41595625145419,
+            "q75": 6.109566000304767,
+            "p95": 6.8468137505988125,
+            "minimum": 5.29256399750011,
+            "maximum": 7.024669001111761
+          },
+          "cuda_event_ms": {
+            "count": 6,
+            "mean": 4.557429313659668,
+            "median": 4.645375967025757,
+            "q25": 3.433703899383545,
+            "q75": 5.34937596321106,
+            "p95": 6.078344106674194,
+            "minimum": 3.1281919479370117,
+            "maximum": 6.311776161193848
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "wall_ms": {
+                "count": 2,
+                "mean": 5.875602000742219,
+                "median": 5.875602000742219,
+                "q25": 5.656779001583345,
+                "q75": 6.0944249999010935,
+                "p95": 6.269483399228193,
+                "minimum": 5.437956002424471,
+                "maximum": 6.313247999059968
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 3.577791929244995,
+                "median": 3.577791929244995,
+                "q25": 3.3529919385910034,
+                "q75": 3.802591919898987,
+                "p95": 3.98243191242218,
+                "minimum": 3.1281919479370117,
+                "maximum": 4.0273919105529785
+              }
+            },
+            {
+              "seed": 2042,
+              "wall_ms": {
+                "count": 2,
+                "mean": 5.350593499315437,
+                "median": 5.350593499315437,
+                "q25": 5.321578748407774,
+                "q75": 5.3796082502231,
+                "p95": 5.402820050949231,
+                "minimum": 5.29256399750011,
+                "maximum": 5.408623001130763
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 5.320703983306885,
+                "median": 5.320703983306885,
+                "q25": 5.29203200340271,
+                "q75": 5.34937596321106,
+                "p95": 5.372313547134399,
+                "minimum": 5.263360023498535,
+                "maximum": 5.378047943115234
+              }
+            },
+            {
+              "seed": 2043,
+              "wall_ms": {
+                "count": 2,
+                "mean": 6.261594502575463,
+                "median": 6.261594502575463,
+                "q25": 5.880057253307314,
+                "q75": 6.643131751843612,
+                "p95": 6.948361551258131,
+                "minimum": 5.498520004039165,
+                "maximum": 7.024669001111761
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 4.773792028427124,
+                "median": 4.773792028427124,
+                "q25": 4.004799962043762,
+                "q75": 5.542784094810486,
+                "p95": 6.157977747917175,
+                "minimum": 3.2358078956604004,
+                "maximum": 6.311776161193848
+              }
+            }
+          ],
+          "images_per_second_at_median": 182.87426396016116,
+          "paired_round_speedup_samples": [
+            {
+              "round": 0,
+              "seed": 2041,
+              "ratio": 0.8519621476223139
+            },
+            {
+              "round": 0,
+              "seed": 2042,
+              "ratio": 0.9355579899251839
+            },
+            {
+              "round": 0,
+              "seed": 2043,
+              "ratio": 0.7994434160607764
+            }
+          ],
+          "paired_round_speedup": null
+        }
+      }
+    },
+    "32": {
+      "timing_window_valid": false,
+      "invalid_window_policy": "All raw timings retained. Speedup summary withheld if another compute process was observed; reruns require a separately recorded window.",
+      "methods": {
+        "attention": {
+          "wall_ms": {
+            "count": 2,
+            "mean": 28.410391500074184,
+            "median": 28.410391500074184,
+            "q25": 24.081832250885782,
+            "q75": 32.738950749262585,
+            "p95": 36.20179814861331,
+            "minimum": 19.75327300169738,
+            "maximum": 37.06750999845099
+          },
+          "cuda_event_ms": {
+            "count": 2,
+            "mean": 27.64748764038086,
+            "median": 27.64748764038086,
+            "q25": 23.683839797973633,
+            "q75": 31.611135482788086,
+            "p95": 34.782053756713864,
+            "minimum": 19.720191955566406,
+            "maximum": 35.57478332519531
+          },
+          "per_seed": [
+            {
+              "seed": -1,
+              "wall_ms": {
+                "count": 2,
+                "mean": 28.410391500074184,
+                "median": 28.410391500074184,
+                "q25": 24.081832250885782,
+                "q75": 32.738950749262585,
+                "p95": 36.20179814861331,
+                "minimum": 19.75327300169738,
+                "maximum": 37.06750999845099
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 27.64748764038086,
+                "median": 27.64748764038086,
+                "q25": 23.683839797973633,
+                "q75": 31.611135482788086,
+                "p95": 34.782053756713864,
+                "minimum": 19.720191955566406,
+                "maximum": 35.57478332519531
+              }
+            }
+          ],
+          "images_per_second_at_median": 1126.348434864632,
+          "paired_round_speedup_samples": [
+            {
+              "round": 0,
+              "seed": -1,
+              "ratio": 1.2939068967369198
+            }
+          ],
+          "paired_round_speedup": null
+        },
+        "conditioned": {
+          "wall_ms": {
+            "count": 6,
+            "mean": 26.404194999486208,
+            "median": 25.85775299667148,
+            "q25": 21.433142499518,
+            "q75": 30.22324474659399,
+            "p95": 33.74638500099536,
+            "minimum": 20.411285004229285,
+            "maximum": 34.661698002310004
+          },
+          "cuda_event_ms": {
+            "count": 6,
+            "mean": 25.606826782226562,
+            "median": 24.696831703186035,
+            "q25": 20.83788776397705,
+            "q75": 30.124032497406006,
+            "p95": 32.02252817153931,
+            "minimum": 20.358144760131836,
+            "maximum": 32.40447998046875
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "wall_ms": {
+                "count": 2,
+                "mean": 32.83107199968072,
+                "median": 32.83107199968072,
+                "q25": 31.915758998366073,
+                "q75": 33.74638500099536,
+                "p95": 34.478635402047075,
+                "minimum": 31.00044599705143,
+                "maximum": 34.661698002310004
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 31.640576362609863,
+                "median": 31.640576362609863,
+                "q25": 31.25862455368042,
+                "q75": 32.02252817153931,
+                "p95": 32.32808961868286,
+                "minimum": 30.876672744750977,
+                "maximum": 32.40447998046875
+              }
+            },
+            {
+              "seed": 2042,
+              "wall_ms": {
+                "count": 2,
+                "mean": 22.117575001175283,
+                "median": 22.117575001175283,
+                "q25": 21.264430002702284,
+                "q75": 22.97071999964828,
+                "p95": 23.65323599842668,
+                "minimum": 20.411285004229285,
+                "maximum": 23.82386499812128
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 20.942848205566406,
+                "median": 20.942848205566406,
+                "q25": 20.65049648284912,
+                "q75": 21.23519992828369,
+                "p95": 21.469081306457518,
+                "minimum": 20.358144760131836,
+                "maximum": 21.527551651000977
+              }
+            },
+            {
+              "seed": 2043,
+              "wall_ms": {
+                "count": 2,
+                "mean": 24.263937997602625,
+                "median": 24.263937997602625,
+                "q25": 22.450086498793098,
+                "q75": 26.07778949641215,
+                "p95": 27.528870695459773,
+                "minimum": 20.63623499998357,
+                "maximum": 27.891640995221678
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 24.237055778503418,
+                "median": 24.237055778503418,
+                "q25": 22.42252779006958,
+                "q75": 26.051583766937256,
+                "p95": 27.503206157684325,
+                "minimum": 20.607999801635742,
+                "maximum": 27.866111755371094
+              }
+            }
+          ],
+          "images_per_second_at_median": 1237.5398590944533,
+          "paired_round_speedup_samples": [
+            {
+              "round": 0,
+              "seed": 2041,
+              "ratio": 1.1196832531480985
+            },
+            {
+              "round": 0,
+              "seed": 2042,
+              "ratio": 1.662044844382288
+            },
+            {
+              "round": 0,
+              "seed": 2043,
+              "ratio": 1.5150220670929027
+            }
+          ],
+          "paired_round_speedup": null
+        },
+        "full_model": {
+          "wall_ms": {
+            "count": 2,
+            "mean": 36.76040150094195,
+            "median": 36.76040150094195,
+            "q25": 31.459641750188894,
+            "q75": 42.06116125169501,
+            "p95": 46.30176905229746,
+            "minimum": 26.158881999435835,
+            "maximum": 47.36192100244807
+          },
+          "cuda_event_ms": {
+            "count": 2,
+            "mean": 36.6694393157959,
+            "median": 36.6694393157959,
+            "q25": 31.340031623840332,
+            "q75": 41.998847007751465,
+            "p95": 46.262373161315914,
+            "minimum": 26.010623931884766,
+            "maximum": 47.32825469970703
+          },
+          "per_seed": [
+            {
+              "seed": -1,
+              "wall_ms": {
+                "count": 2,
+                "mean": 36.76040150094195,
+                "median": 36.76040150094195,
+                "q25": 31.459641750188894,
+                "q75": 42.06116125169501,
+                "p95": 46.30176905229746,
+                "minimum": 26.158881999435835,
+                "maximum": 47.36192100244807
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 36.6694393157959,
+                "median": 36.6694393157959,
+                "q25": 31.340031623840332,
+                "q75": 41.998847007751465,
+                "p95": 46.262373161315914,
+                "minimum": 26.010623931884766,
+                "maximum": 47.32825469970703
+              }
+            }
+          ],
+          "images_per_second_at_median": 870.5019176458133,
+          "paired_round_speedup_samples": [
+            {
+              "round": 0,
+              "seed": -1,
+              "ratio": 1.0
+            }
+          ],
+          "paired_round_speedup": null
+        },
+        "image_only": {
+          "wall_ms": {
+            "count": 6,
+            "mean": 28.5845160021078,
+            "median": 26.89580450532958,
+            "q25": 22.14362250379054,
+            "q75": 35.16299349757901,
+            "p95": 38.30488849962421,
+            "minimum": 20.630311002605595,
+            "maximum": 38.606891001109034
+          },
+          "cuda_event_ms": {
+            "count": 6,
+            "mean": 27.775615692138672,
+            "median": 24.63488006591797,
+            "q25": 21.547263622283936,
+            "q75": 34.568448066711426,
+            "p95": 38.130943298339844,
+            "minimum": 20.596479415893555,
+            "maximum": 38.3897590637207
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "wall_ms": {
+                "count": 2,
+                "mean": 29.239142499136506,
+                "median": 29.239142499136506,
+                "q25": 25.159273251119885,
+                "q75": 33.31901174715313,
+                "p95": 36.58290714556642,
+                "minimum": 21.079404003103264,
+                "maximum": 37.39888099516975
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 29.198847770690918,
+                "median": 29.198847770690918,
+                "q25": 25.121023654937744,
+                "q75": 33.27667188644409,
+                "p95": 36.53893117904663,
+                "minimum": 21.04319953918457,
+                "maximum": 37.354496002197266
+              }
+            },
+            {
+              "seed": 2042,
+              "wall_ms": {
+                "count": 2,
+                "mean": 24.542821003706194,
+                "median": 24.542821003706194,
+                "q25": 22.586566003155895,
+                "q75": 26.499076004256494,
+                "p95": 28.064080004696734,
+                "minimum": 20.630311002605595,
+                "maximum": 28.455331004806794
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 23.40339183807373,
+                "median": 23.40339183807373,
+                "q25": 21.999935626983643,
+                "q75": 24.80684804916382,
+                "p95": 25.929613018035887,
+                "minimum": 20.596479415893555,
+                "maximum": 26.210304260253906
+              }
+            },
+            {
+              "seed": 2043,
+              "wall_ms": {
+                "count": 2,
+                "mean": 31.9715845034807,
+                "median": 31.9715845034807,
+                "q25": 28.65393125466653,
+                "q75": 35.289237752294866,
+                "p95": 37.9433603513462,
+                "minimum": 25.336278005852364,
+                "maximum": 38.606891001109034
+              },
+              "cuda_event_ms": {
+                "count": 2,
+                "mean": 30.724607467651367,
+                "median": 30.724607467651367,
+                "q25": 26.8920316696167,
+                "q75": 34.557183265686035,
+                "p95": 37.62324390411377,
+                "minimum": 23.05945587158203,
+                "maximum": 38.3897590637207
+              }
+            }
+          ],
+          "images_per_second_at_median": 1189.776643180872,
+          "paired_round_speedup_samples": [
+            {
+              "round": 0,
+              "seed": 2041,
+              "ratio": 1.257232543739187
+            },
+            {
+              "round": 0,
+              "seed": 2042,
+              "ratio": 1.4978066904122713
+            },
+            {
+              "round": 0,
+              "seed": 2043,
+              "ratio": 1.1497835365945002
+            }
+          ],
+          "paired_round_speedup": null
+        }
+      }
+    }
+  },
+  "hardware": {
+    "physical_gpu": 4,
+    "visible_devices": "4",
+    "device_name": "NVIDIA RTX A6000",
+    "pid": 1943132
+  },
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4",
+    "cuda": "12.4",
+    "cpu_threads": 4
+  },
+  "contention_check_limit": "Compute-process snapshots before and after each round; they cannot rule out a transient process entirely inside a round. All samples are retained; no fastest-run selection."
+}

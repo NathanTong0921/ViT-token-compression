@@ -1,0 +1,838 @@
+{
+  "primary": "Conditioned minus image-only performance at each predeclared budget on unseen validation class combinations.",
+  "budgets": [
+    128
+  ],
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "random_mask_seeds": [
+    2055,
+    2056,
+    2057
+  ],
+  "aggregation": "Equal tasks and equal class sides within each task, then equal images within class. Average fixed training seeds or random-mask seeds before image resampling.",
+  "uncertainty": "Paired image-cluster bootstrap of weighted numerator/denominator totals. Intervals condition on these tasks and seeds. Bonferroni intervals cover the 1 predeclared budgets separately for each metric, not all metrics jointly.",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2052,
+  "task_splits": {
+    "seen": {
+      "image_count": 736,
+      "image_task_examples": 21162,
+      "task_count": 532,
+      "budgets": {
+        "128": {
+          "table": [
+            {
+              "method": "full_model",
+              "accuracy": {
+                "mean": 0.9946824297586033,
+                "ci95": [
+                  0.9908410921612383,
+                  0.9974569381281578
+                ]
+              },
+              "margin": {
+                "mean": 0.13483988748876724,
+                "ci95": [
+                  0.13267425850467618,
+                  0.1368562144957605
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0,
+              "weighted_new_errors_vs_full_model": 0.0,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9946824297583567,
+                  "margin": 0.13483988748876793
+                }
+              ]
+            },
+            {
+              "method": "random",
+              "accuracy": {
+                "mean": 0.9938802598601729,
+                "ci95": [
+                  0.9900804558853348,
+                  0.9966372656234331
+                ]
+              },
+              "margin": {
+                "mean": 0.12332236201184019,
+                "ci95": [
+                  0.12126798499833798,
+                  0.1251900706710006
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.000643879435430682,
+              "weighted_new_errors_vs_full_model": 0.0014460493338609682,
+              "run_seed_type": "mask",
+              "per_seed": [
+                {
+                  "seed": 2055,
+                  "accuracy": 0.993876137712453,
+                  "margin": 0.123734030190895
+                },
+                {
+                  "seed": 2056,
+                  "accuracy": 0.9937401068458127,
+                  "margin": 0.12265642623366067
+                },
+                {
+                  "seed": 2057,
+                  "accuracy": 0.994024535021515,
+                  "margin": 0.12357662961096438
+                }
+              ]
+            },
+            {
+              "method": "attention",
+              "accuracy": {
+                "mean": 0.9938711911357305,
+                "ci95": [
+                  0.9902033255842522,
+                  0.9965002178757276
+                ]
+              },
+              "margin": {
+                "mean": 0.12787768106047456,
+                "ci95": [
+                  0.12561630512652816,
+                  0.13000563669595558
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0006578947368421052,
+              "weighted_new_errors_vs_full_model": 0.0014691333597150772,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9938711911354843,
+                  "margin": 0.12787768106047503
+                }
+              ]
+            },
+            {
+              "method": "image_only",
+              "accuracy": {
+                "mean": 0.9952331486611227,
+                "ci95": [
+                  0.9913539205571156,
+                  0.9979040831831058
+                ]
+              },
+              "margin": {
+                "mean": 0.1380438483676737,
+                "ci95": [
+                  0.1357917125023312,
+                  0.14010527308853948
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0009109945917425143,
+              "weighted_new_errors_vs_full_model": 0.0003602756892230577,
+              "run_seed_type": "training",
+              "per_seed": [
+                {
+                  "seed": 2041,
+                  "accuracy": 0.9952958053024801,
+                  "margin": 0.13798675661354717
+                },
+                {
+                  "seed": 2042,
+                  "accuracy": 0.9952488128212771,
+                  "margin": 0.1383694891717777
+                },
+                {
+                  "seed": 2043,
+                  "accuracy": 0.9951548278588711,
+                  "margin": 0.13777529931769686
+                }
+              ]
+            },
+            {
+              "method": "conditioned",
+              "accuracy": {
+                "mean": 0.9949800488062224,
+                "ci95": [
+                  0.9911102319397935,
+                  0.9977227091506315
+                ]
+              },
+              "margin": {
+                "mean": 0.1374650351855727,
+                "ci95": [
+                  0.13531023878463588,
+                  0.13947642955923278
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0007848568790397046,
+              "weighted_new_errors_vs_full_model": 0.00048723783142065694,
+              "run_seed_type": "training",
+              "per_seed": [
+                {
+                  "seed": 2041,
+                  "accuracy": 0.9950583696079808,
+                  "margin": 0.13787175062368986
+                },
+                {
+                  "seed": 2042,
+                  "accuracy": 0.9948209339134815,
+                  "margin": 0.1373509492804333
+                },
+                {
+                  "seed": 2043,
+                  "accuracy": 0.9950608428964651,
+                  "margin": 0.13717240565259617
+                }
+              ]
+            },
+            {
+              "method": "label_informed_teacher",
+              "accuracy": {
+                "mean": 0.9997180451127781,
+                "ci95": [
+                  0.9993382291740017,
+                  0.9999999999999993
+                ]
+              },
+              "margin": {
+                "mean": 0.1685523970485568,
+                "ci95": [
+                  0.16669182936392127,
+                  0.17028040415558507
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.005035615354174912,
+              "weighted_new_errors_vs_full_model": 0.0,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.99971804511253,
+                  "margin": 0.16855239704855782
+                }
+              ]
+            }
+          ],
+          "conditioned_minus_image_only": {
+            "accuracy": {
+              "mean": -0.0002530998549004088,
+              "ci95": [
+                -0.00045497172017657075,
+                -6.230206728671553e-05
+              ]
+            },
+            "margin": {
+              "mean": -0.0005788131821009573,
+              "ci95": [
+                -0.0008850111643781456,
+                -0.0002749712264760248
+              ]
+            }
+          },
+          "secondary_contrasts": {
+            "conditioned_minus_attention": {
+              "accuracy": {
+                "mean": 0.0011088576704920187,
+                "ci95": [
+                  0.00037444653421577764,
+                  0.0018738963688403217
+                ]
+              },
+              "margin": {
+                "mean": 0.009587354125098159,
+                "ci95": [
+                  0.008796854782550802,
+                  0.010382220299908988
+                ]
+              }
+            },
+            "image_only_minus_attention": {
+              "accuracy": {
+                "mean": 0.0013619575253924277,
+                "ci95": [
+                  0.000672389361165586,
+                  0.0020752663772576033
+                ]
+              },
+              "margin": {
+                "mean": 0.010166167307199119,
+                "ci95": [
+                  0.009291404492458483,
+                  0.011014849414065137
+                ]
+              }
+            },
+            "conditioned_minus_random": {
+              "accuracy": {
+                "mean": 0.0010997889460493333,
+                "ci95": [
+                  0.00036615628738237606,
+                  0.0020581731715907437
+                ]
+              },
+              "margin": {
+                "mean": 0.014142673173732684,
+                "ci95": [
+                  0.0134300269145012,
+                  0.014877333628029024
+                ]
+              }
+            }
+          },
+          "paired_seed_results": [
+            {
+              "seed": 2041,
+              "accuracy_difference": -0.00023743569449940642,
+              "margin_difference": -0.00011500598985715736,
+              "repair_image_task_cases": 7,
+              "new_error_image_task_cases": 12,
+              "weighted_repair_fraction": 0.0003289473684210527,
+              "weighted_new_error_fraction": 0.0005663830629204592
+            },
+            {
+              "seed": 2042,
+              "accuracy_difference": -0.00042787890779580524,
+              "margin_difference": -0.001018539891344596,
+              "repair_image_task_cases": 5,
+              "new_error_image_task_cases": 14,
+              "weighted_repair_fraction": 0.0002349624060150376,
+              "weighted_new_error_fraction": 0.0006628413138108429
+            },
+            {
+              "seed": 2043,
+              "accuracy_difference": -9.398496240601504e-05,
+              "margin_difference": -0.000602893665101122,
+              "repair_image_task_cases": 7,
+              "new_error_image_task_cases": 9,
+              "weighted_repair_fraction": 0.0003289473684210527,
+              "weighted_new_error_fraction": 0.00042293233082706767
+            }
+          ]
+        }
+      },
+      "secondary_change_in_conditioning_advantage": {}
+    },
+    "unseen": {
+      "image_count": 716,
+      "image_task_examples": 2624,
+      "task_count": 66,
+      "budgets": {
+        "128": {
+          "table": [
+            {
+              "method": "full_model",
+              "accuracy": {
+                "mean": 0.994557416267939,
+                "ci95": [
+                  0.9909402144097127,
+                  0.9976694085714485
+                ]
+              },
+              "margin": {
+                "mean": 0.13331373665253946,
+                "ci95": [
+                  0.13081200295052547,
+                  0.1357897133589452
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0,
+              "weighted_new_errors_vs_full_model": 0.0,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9945574162679233,
+                  "margin": 0.13331373665253954
+                }
+              ]
+            },
+            {
+              "method": "random",
+              "accuracy": {
+                "mean": 0.9930489101541696,
+                "ci95": [
+                  0.9890864409700455,
+                  0.9963054005472847
+                ]
+              },
+              "margin": {
+                "mean": 0.12218833508546353,
+                "ci95": [
+                  0.11983897049691877,
+                  0.12451549641180068
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.000531632110579479,
+              "weighted_new_errors_vs_full_model": 0.0020401382243487504,
+              "run_seed_type": "mask",
+              "per_seed": [
+                {
+                  "seed": 2055,
+                  "accuracy": 0.9937998405103475,
+                  "margin": 0.12274301105160357
+                },
+                {
+                  "seed": 2056,
+                  "accuracy": 0.9915470494417671,
+                  "margin": 0.12135917636279125
+                },
+                {
+                  "seed": 2057,
+                  "accuracy": 0.9937998405103475,
+                  "margin": 0.12246281784199549
+                }
+              ]
+            },
+            {
+              "method": "attention",
+              "accuracy": {
+                "mean": 0.9930422647527875,
+                "ci95": [
+                  0.9891020173445384,
+                  0.9964900523065136
+                ]
+              },
+              "margin": {
+                "mean": 0.12614127157827645,
+                "ci95": [
+                  0.1236715934867278,
+                  0.1286140278842219
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.00039872408293460925,
+              "weighted_new_errors_vs_full_model": 0.0019138755980861242,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9930422647527718,
+                  "margin": 0.12614127157827648
+                }
+              ]
+            },
+            {
+              "method": "image_only",
+              "accuracy": {
+                "mean": 0.9941719829877689,
+                "ci95": [
+                  0.9906027072919564,
+                  0.9972104853624546
+                ]
+              },
+              "margin": {
+                "mean": 0.13677599062855755,
+                "ci95": [
+                  0.13413990566127476,
+                  0.13940851291421638
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0003787878787878788,
+              "weighted_new_errors_vs_full_model": 0.000764221158958001,
+              "run_seed_type": "training",
+              "per_seed": [
+                {
+                  "seed": 2041,
+                  "accuracy": 0.9937998405103475,
+                  "margin": 0.13656397492715244
+                },
+                {
+                  "seed": 2042,
+                  "accuracy": 0.9941586921849886,
+                  "margin": 0.13710086883109987
+                },
+                {
+                  "seed": 2043,
+                  "accuracy": 0.9945574162679233,
+                  "margin": 0.1366631281274206
+                }
+              ]
+            },
+            {
+              "method": "conditioned",
+              "accuracy": {
+                "mean": 0.9940457203615063,
+                "ci95": [
+                  0.9904217034773094,
+                  0.9971263789802336
+                ]
+              },
+              "margin": {
+                "mean": 0.1361378486904399,
+                "ci95": [
+                  0.13359443862815146,
+                  0.138664899904139
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0002525252525252525,
+              "weighted_new_errors_vs_full_model": 0.0007642211589580011,
+              "run_seed_type": "training",
+              "per_seed": [
+                {
+                  "seed": 2041,
+                  "accuracy": 0.9941786283891354,
+                  "margin": 0.1365337155121195
+                },
+                {
+                  "seed": 2042,
+                  "accuracy": 0.9941786283891354,
+                  "margin": 0.13617984141975947
+                },
+                {
+                  "seed": 2043,
+                  "accuracy": 0.9937799043062008,
+                  "margin": 0.1356999891394402
+                }
+              ]
+            },
+            {
+              "method": "label_informed_teacher",
+              "accuracy": {
+                "mean": 0.9996212121212086,
+                "ci95": [
+                  0.9988435031497492,
+                  0.9999999999999976
+                ]
+              },
+              "margin": {
+                "mean": 0.16740937709725562,
+                "ci95": [
+                  0.1650674046212044,
+                  0.16984484455470444
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.005063795853269538,
+              "weighted_new_errors_vs_full_model": 0.0,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9996212121211928,
+                  "margin": 0.16740937709725598
+                }
+              ]
+            }
+          ],
+          "conditioned_minus_image_only": {
+            "accuracy": {
+              "mean": -0.00012626262626262626,
+              "ci95": [
+                -0.0007626964564873678,
+                0.0003917078687911472
+              ]
+            },
+            "margin": {
+              "mean": -0.0006381419381177493,
+              "ci95": [
+                -0.0010062437904632448,
+                -0.00026990962234034975
+              ]
+            }
+          },
+          "secondary_contrasts": {
+            "conditioned_minus_attention": {
+              "accuracy": {
+                "mean": 0.0010034556087187665,
+                "ci95": [
+                  -0.0005353323819758601,
+                  0.0025260252853217184
+                ]
+              },
+              "margin": {
+                "mean": 0.009996577112163535,
+                "ci95": [
+                  0.009071169305083452,
+                  0.010945872164384503
+                ]
+              }
+            },
+            "image_only_minus_attention": {
+              "accuracy": {
+                "mean": 0.001129718234981393,
+                "ci95": [
+                  -0.000453734238104641,
+                  0.002852973455149536
+                ]
+              },
+              "margin": {
+                "mean": 0.010634719050281278,
+                "ci95": [
+                  0.009653964576830779,
+                  0.011632114782430581
+                ]
+              }
+            },
+            "conditioned_minus_random": {
+              "accuracy": {
+                "mean": 0.0009968102073365235,
+                "ci95": [
+                  -0.0006446676303792264,
+                  0.002937959817193195
+                ]
+              },
+              "margin": {
+                "mean": 0.013949513604976342,
+                "ci95": [
+                  0.013039036349491804,
+                  0.014865505592389581
+                ]
+              }
+            }
+          },
+          "paired_seed_results": [
+            {
+              "seed": 2041,
+              "accuracy_difference": 0.0003787878787878788,
+              "margin_difference": -3.0259415032696872e-05,
+              "repair_image_task_cases": 1,
+              "new_error_image_task_cases": 0,
+              "weighted_repair_fraction": 0.0003787878787878788,
+              "weighted_new_error_fraction": 0.0
+            },
+            {
+              "seed": 2042,
+              "accuracy_difference": 1.9936204146730465e-05,
+              "margin_difference": -0.0009210274113404924,
+              "repair_image_task_cases": 2,
+              "new_error_image_task_cases": 2,
+              "weighted_repair_fraction": 0.000777511961722488,
+              "weighted_new_error_fraction": 0.0007575757575757576
+            },
+            {
+              "seed": 2043,
+              "accuracy_difference": -0.000777511961722488,
+              "margin_difference": -0.0009631389879800601,
+              "repair_image_task_cases": 0,
+              "new_error_image_task_cases": 2,
+              "weighted_repair_fraction": 0.0,
+              "weighted_new_error_fraction": 0.000777511961722488
+            }
+          ]
+        }
+      },
+      "secondary_change_in_conditioning_advantage": {}
+    }
+  },
+  "sources": {
+    "128": {
+      "evaluation": "runs/pets-vitl128-eval-v1",
+      "random_evaluation": "runs/pets-vitl128-eval-v1",
+      "evaluation_code_commit": "e64471f359e817056be8cede1e7ce5bce7f92c2a",
+      "random_evaluation_code_commit": "e64471f359e817056be8cede1e7ce5bce7f92c2a",
+      "config": {
+        "cache_dir": "runs/pets-vitl128-supervision-v1",
+        "model": "ViT-L/14",
+        "model_cache": "cache/clip",
+        "data_root": "data/raw/oxford-iiit-pet",
+        "manifest_dir": "data/splits/pets-v1",
+        "baseline_dir": "runs/pets-vitl128-features-v1",
+        "prompt_template": "a photo of a {class_name}, a type of pet.",
+        "balance_seed": 2028,
+        "seed": 2026,
+        "device": "cuda:0",
+        "prune_after": 12,
+        "keep_patch_tokens": 128,
+        "probe_count": 512,
+        "mask_seed": 2031,
+        "ridge": 0.01,
+        "identity_atol": 1e-06,
+        "image_batch_size": 64,
+        "teacher_batch_size": 64,
+        "num_workers": 4,
+        "hidden_dim": 128,
+        "batch_size": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.01,
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "temperature": 1.0,
+        "source_cache_dir": "runs/pets-vitl128-features-v1",
+        "training_steps": 3990,
+        "checkpoint_interval": 133,
+        "coverages": [
+          "full"
+        ],
+        "bootstrap_seed": 2052,
+        "bootstrap_replicates": 2000,
+        "experiment_name": "pets_vitl128_v1",
+        "feature_cache_dir": "runs/pets-vitl128-features-v1",
+        "random_seeds": [
+          2055,
+          2056,
+          2057
+        ]
+      },
+      "recorded_source_evaluation_cost": {
+        "methods": [
+          {
+            "coverage": "references",
+            "seed": -1,
+            "method": "full_model",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 0.0,
+            "total_method_seconds": 0.21922296400589403,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 0,
+            "physical_suffix_examples": 0
+          },
+          {
+            "coverage": "references",
+            "seed": -1,
+            "method": "attention",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 0.675573358006659,
+            "total_method_seconds": 0.9496344750004937,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 736,
+            "physical_suffix_examples": 768
+          },
+          {
+            "coverage": "references",
+            "seed": -1,
+            "method": "label_informed_teacher",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 22.56656686410861,
+            "total_method_seconds": 23.50294354599464,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": false,
+            "logical_suffix_examples": 23786,
+            "physical_suffix_examples": 23808
+          },
+          {
+            "coverage": "full",
+            "seed": 2041,
+            "method": "conditioned",
+            "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2041/conditioned.pt",
+            "selector_seconds": 0.8462420969808591,
+            "finish_and_normalize_seconds": 18.926488793993485,
+            "total_method_seconds": 20.687290690002555,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": false,
+            "logical_suffix_examples": 23786,
+            "physical_suffix_examples": 23808
+          },
+          {
+            "coverage": "full",
+            "seed": 2041,
+            "method": "image_only",
+            "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2041/image_only.pt",
+            "selector_seconds": 0.024474979974911548,
+            "finish_and_normalize_seconds": 0.5778499009975349,
+            "total_method_seconds": 0.878436402999796,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 736,
+            "physical_suffix_examples": 768
+          },
+          {
+            "coverage": "full",
+            "seed": 2042,
+            "method": "conditioned",
+            "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2042/conditioned.pt",
+            "selector_seconds": 0.8966692150352173,
+            "finish_and_normalize_seconds": 21.607497953045822,
+            "total_method_seconds": 23.72138607299712,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": false,
+            "logical_suffix_examples": 23786,
+            "physical_suffix_examples": 23808
+          },
+          {
+            "coverage": "full",
+            "seed": 2042,
+            "method": "image_only",
+            "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2042/image_only.pt",
+            "selector_seconds": 0.02929624899843475,
+            "finish_and_normalize_seconds": 0.8269645449909149,
+            "total_method_seconds": 1.1491790720028803,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 736,
+            "physical_suffix_examples": 768
+          },
+          {
+            "coverage": "full",
+            "seed": 2043,
+            "method": "conditioned",
+            "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2043/conditioned.pt",
+            "selector_seconds": 0.9671150539361406,
+            "finish_and_normalize_seconds": 24.212205449024623,
+            "total_method_seconds": 26.736590487002104,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": false,
+            "logical_suffix_examples": 23786,
+            "physical_suffix_examples": 23808
+          },
+          {
+            "coverage": "full",
+            "seed": 2043,
+            "method": "image_only",
+            "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2043/image_only.pt",
+            "selector_seconds": 0.03139048701268621,
+            "finish_and_normalize_seconds": 0.7593289320066106,
+            "total_method_seconds": 1.1205870720004896,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 736,
+            "physical_suffix_examples": 768
+          },
+          {
+            "coverage": "random",
+            "seed": 2055,
+            "method": "random",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 0.7134918689989718,
+            "total_method_seconds": 1.0057061719999183,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 736,
+            "physical_suffix_examples": 768
+          },
+          {
+            "coverage": "random",
+            "seed": 2056,
+            "method": "random",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 0.7647911209933227,
+            "total_method_seconds": 1.058625886005757,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 736,
+            "physical_suffix_examples": 768
+          },
+          {
+            "coverage": "random",
+            "seed": 2057,
+            "method": "random",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 0.6921278300069389,
+            "total_method_seconds": 0.9885029019933427,
+            "logical_task_examples": 23786,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 736,
+            "physical_suffix_examples": 768
+          }
+        ],
+        "total_wall_seconds": 179.17612705400097,
+        "peak_allocated_gpu_bytes": 1766024192
+      },
+      "separate_random_evaluation_cost": null,
+      "cost_scope": "These are recorded source-run costs. A reused source can contain additional earlier conditions; do not treat these totals as new per-budget compute or deployment latency."
+    }
+  }
+}

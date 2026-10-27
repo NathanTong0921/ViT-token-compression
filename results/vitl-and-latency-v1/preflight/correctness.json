@@ -1,0 +1,167 @@
+{
+  "status": "passed",
+  "reference": "Same input batch, native prefix, original NumPy stable descending selection, original suffix and normalized pair scores.",
+  "scope": "First full batch at each timed batch size, all methods and all training seeds. This checks the device-only implementation rather than comparing different numerical batch shapes.",
+  "cases": [
+    {
+      "batch_size": 1,
+      "method": "full_model",
+      "seed": -1,
+      "images_checked": 1,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 1,
+      "method": "attention",
+      "seed": -1,
+      "images_checked": 1,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 1,
+      "method": "image_only",
+      "seed": 2041,
+      "images_checked": 1,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 1,
+      "method": "conditioned",
+      "seed": 2041,
+      "images_checked": 1,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 1,
+      "method": "image_only",
+      "seed": 2042,
+      "images_checked": 1,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 1,
+      "method": "conditioned",
+      "seed": 2042,
+      "images_checked": 1,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 1,
+      "method": "image_only",
+      "seed": 2043,
+      "images_checked": 1,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 1,
+      "method": "conditioned",
+      "seed": 2043,
+      "images_checked": 1,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 32,
+      "method": "full_model",
+      "seed": -1,
+      "images_checked": 32,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 32,
+      "method": "attention",
+      "seed": -1,
+      "images_checked": 32,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 32,
+      "method": "image_only",
+      "seed": 2041,
+      "images_checked": 32,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 32,
+      "method": "conditioned",
+      "seed": 2041,
+      "images_checked": 32,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 32,
+      "method": "image_only",
+      "seed": 2042,
+      "images_checked": 32,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 32,
+      "method": "conditioned",
+      "seed": 2042,
+      "images_checked": 32,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 32,
+      "method": "image_only",
+      "seed": 2043,
+      "images_checked": 32,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    },
+    {
+      "batch_size": 32,
+      "method": "conditioned",
+      "seed": 2043,
+      "images_checked": 32,
+      "selected_positions_match_numpy_stable": true,
+      "max_feature_error": 0.0,
+      "max_score_error": 0.0,
+      "keep_all_vs_native_max_feature_error": 0.0
+    }
+  ]
+}

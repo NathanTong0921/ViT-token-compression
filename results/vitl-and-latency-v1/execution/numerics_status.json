@@ -1,0 +1,178 @@
+{
+  "started_utc": "2026-10-27T12:58:01.626713+00:00",
+  "pid": 2047630,
+  "code_commit": "7d3e08a8a8ed5a102a3a5bc5976b3bec6964ccd6",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "4",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "status": "complete",
+  "stages": [
+    {
+      "name": "pets-b16-49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/audit_inference_numerics.py",
+        "--config",
+        "configs/pets_selector_scale.json",
+        "--models",
+        "runs/pets-selector-scale-training-v1",
+        "--evaluation",
+        "runs/pets-selector-scale-eval-v1",
+        "--output",
+        "runs/selector-numerics-v1/pets-b16-49"
+      ],
+      "code_commit": "7d3e08a8a8ed5a102a3a5bc5976b3bec6964ccd6",
+      "started_utc": "2026-10-27T12:58:01.626980+00:00",
+      "status": "complete",
+      "pid": 2047632,
+      "returncode": 0,
+      "wall_seconds": 83.75383731700276,
+      "completed_utc": "2026-10-27T12:59:25.381078+00:00"
+    },
+    {
+      "name": "pets-b16-98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/audit_inference_numerics.py",
+        "--config",
+        "configs/pets_selector_budget_98.json",
+        "--models",
+        "runs/pets-selector-budget-98-training-v1",
+        "--evaluation",
+        "runs/pets-selector-budget-98-eval-v1",
+        "--output",
+        "runs/selector-numerics-v1/pets-b16-98"
+      ],
+      "code_commit": "7d3e08a8a8ed5a102a3a5bc5976b3bec6964ccd6",
+      "started_utc": "2026-10-27T12:59:25.382410+00:00",
+      "status": "complete",
+      "pid": 2052587,
+      "returncode": 0,
+      "wall_seconds": 84.3980774590018,
+      "completed_utc": "2026-10-27T13:00:49.781213+00:00"
+    },
+    {
+      "name": "pets-b16-147",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/audit_inference_numerics.py",
+        "--config",
+        "configs/pets_selector_budget_147.json",
+        "--models",
+        "runs/pets-selector-budget-147-training-v1",
+        "--evaluation",
+        "runs/pets-selector-budget-147-eval-v1",
+        "--output",
+        "runs/selector-numerics-v1/pets-b16-147"
+      ],
+      "code_commit": "7d3e08a8a8ed5a102a3a5bc5976b3bec6964ccd6",
+      "started_utc": "2026-10-27T13:00:49.782371+00:00",
+      "status": "complete",
+      "pid": 2057215,
+      "returncode": 0,
+      "wall_seconds": 83.12941078600124,
+      "completed_utc": "2026-10-27T13:02:12.912435+00:00"
+    },
+    {
+      "name": "flowers-b16-49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/audit_inference_numerics.py",
+        "--config",
+        "configs/flowers_selector_budget_49.json",
+        "--models",
+        "runs/flowers-selector-budget-49-training-v1",
+        "--evaluation",
+        "runs/flowers-selector-budget-49-eval-v1",
+        "--output",
+        "runs/selector-numerics-v1/flowers-b16-49"
+      ],
+      "code_commit": "7d3e08a8a8ed5a102a3a5bc5976b3bec6964ccd6",
+      "started_utc": "2026-10-27T13:02:12.913564+00:00",
+      "status": "complete",
+      "pid": 2062222,
+      "returncode": 0,
+      "wall_seconds": 134.2499851620014,
+      "completed_utc": "2026-10-27T13:04:27.164234+00:00"
+    },
+    {
+      "name": "flowers-b16-98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/audit_inference_numerics.py",
+        "--config",
+        "configs/flowers_selector_budget_98.json",
+        "--models",
+        "runs/flowers-selector-budget-98-training-v1",
+        "--evaluation",
+        "runs/flowers-selector-budget-98-eval-v1",
+        "--output",
+        "runs/selector-numerics-v1/flowers-b16-98"
+      ],
+      "code_commit": "7d3e08a8a8ed5a102a3a5bc5976b3bec6964ccd6",
+      "started_utc": "2026-10-27T13:04:27.165504+00:00",
+      "status": "complete",
+      "pid": 2069419,
+      "returncode": 0,
+      "wall_seconds": 120.49597152400383,
+      "completed_utc": "2026-10-27T13:06:27.662236+00:00"
+    },
+    {
+      "name": "pets-l14-128",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/audit_inference_numerics.py",
+        "--config",
+        "configs/pets_vitl128.json",
+        "--models",
+        "runs/pets-vitl128-training-v1",
+        "--evaluation",
+        "runs/pets-vitl128-eval-v1",
+        "--output",
+        "runs/selector-numerics-v1/pets-l14-128"
+      ],
+      "code_commit": "7d3e08a8a8ed5a102a3a5bc5976b3bec6964ccd6",
+      "started_utc": "2026-10-27T13:06:27.663598+00:00",
+      "status": "complete",
+      "pid": 2075769,
+      "returncode": 0,
+      "wall_seconds": 171.02799683799822,
+      "completed_utc": "2026-10-27T13:09:18.692462+00:00"
+    },
+    {
+      "name": "flowers-l14-128",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/audit_inference_numerics.py",
+        "--config",
+        "configs/flowers_vitl128.json",
+        "--models",
+        "runs/flowers-vitl128-training-v1",
+        "--evaluation",
+        "runs/flowers-vitl128-eval-v1",
+        "--output",
+        "runs/selector-numerics-v1/flowers-l14-128"
+      ],
+      "code_commit": "7d3e08a8a8ed5a102a3a5bc5976b3bec6964ccd6",
+      "started_utc": "2026-10-27T13:09:38.701419+00:00",
+      "status": "complete",
+      "pid": 2086449,
+      "returncode": 0,
+      "wall_seconds": 274.3091507429999,
+      "completed_utc": "2026-10-27T13:14:13.011893+00:00"
+    }
+  ],
+  "stage_count": 7,
+  "current_stage": "flowers-l14-128",
+  "completed_utc": "2026-10-27T13:14:13.013278+00:00"
+}

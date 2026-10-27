@@ -1,0 +1,838 @@
+{
+  "primary": "Conditioned minus image-only performance at each predeclared budget on unseen validation class combinations.",
+  "budgets": [
+    128
+  ],
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "random_mask_seeds": [
+    2055,
+    2056,
+    2057
+  ],
+  "aggregation": "Equal tasks and equal class sides within each task, then equal images within class. Average fixed training seeds or random-mask seeds before image resampling.",
+  "uncertainty": "Paired image-cluster bootstrap of weighted numerator/denominator totals. Intervals condition on these tasks and seeds. Bonferroni intervals cover the 1 predeclared budgets separately for each metric, not all metrics jointly.",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2052,
+  "task_splits": {
+    "seen": {
+      "image_count": 1020,
+      "image_task_examples": 12240,
+      "task_count": 612,
+      "budgets": {
+        "128": {
+          "table": [
+            {
+              "method": "full_model",
+              "accuracy": {
+                "mean": 0.9843954248365979,
+                "ci95": [
+                  0.9803104575163365,
+                  0.9883169934640489
+                ]
+              },
+              "margin": {
+                "mean": 0.1233201910155985,
+                "ci95": [
+                  0.12125966823968888,
+                  0.12540391038584855
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0,
+              "weighted_new_errors_vs_full_model": 0.0,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9843954248365979,
+                  "margin": 0.12332019101559873
+                }
+              ]
+            },
+            {
+              "method": "random",
+              "accuracy": {
+                "mean": 0.9842047930283195,
+                "ci95": [
+                  0.9803914760348552,
+                  0.9879084967320234
+                ]
+              },
+              "margin": {
+                "mean": 0.1141902932931629,
+                "ci95": [
+                  0.11219892969136554,
+                  0.11618917869322164
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.002505446623093682,
+              "weighted_new_errors_vs_full_model": 0.0026960784313725485,
+              "run_seed_type": "mask",
+              "per_seed": [
+                {
+                  "seed": 2055,
+                  "accuracy": 0.9839052287581666,
+                  "margin": 0.11411289617271159
+                },
+                {
+                  "seed": 2056,
+                  "accuracy": 0.9842320261437875,
+                  "margin": 0.11459398837566369
+                },
+                {
+                  "seed": 2057,
+                  "accuracy": 0.9844771241830031,
+                  "margin": 0.113863995331113
+                }
+              ]
+            },
+            {
+              "method": "attention",
+              "accuracy": {
+                "mean": 0.9834150326797352,
+                "ci95": [
+                  0.9791666666666633,
+                  0.9874999999999966
+                ]
+              },
+              "margin": {
+                "mean": 0.11383451807828934,
+                "ci95": [
+                  0.11177075530789918,
+                  0.11587491646212941
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.00261437908496732,
+              "weighted_new_errors_vs_full_model": 0.0035947712418300656,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9834150326797352,
+                  "margin": 0.11383451807828915
+                }
+              ]
+            },
+            {
+              "method": "image_only",
+              "accuracy": {
+                "mean": 0.985648148148145,
+                "ci95": [
+                  0.9818069172113258,
+                  0.9894063180827855
+                ]
+              },
+              "margin": {
+                "mean": 0.12333284364938003,
+                "ci95": [
+                  0.12123641999647797,
+                  0.1253529466066033
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0031590413943355113,
+              "weighted_new_errors_vs_full_model": 0.0019063180827886713,
+              "run_seed_type": "training",
+              "per_seed": [
+                {
+                  "seed": 2041,
+                  "accuracy": 0.9850490196078397,
+                  "margin": 0.12406505150374143
+                },
+                {
+                  "seed": 2042,
+                  "accuracy": 0.9861111111111077,
+                  "margin": 0.12201357797740861
+                },
+                {
+                  "seed": 2043,
+                  "accuracy": 0.9857843137254868,
+                  "margin": 0.12391990146699092
+                }
+              ]
+            },
+            {
+              "method": "conditioned",
+              "accuracy": {
+                "mean": 0.9880174291938963,
+                "ci95": [
+                  0.9845588235294087,
+                  0.9912316176470558
+                ]
+              },
+              "margin": {
+                "mean": 0.12420232689079982,
+                "ci95": [
+                  0.12218055703954617,
+                  0.12617389822944838
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.005065359477124182,
+              "weighted_new_errors_vs_full_model": 0.0014433551198257078,
+              "run_seed_type": "training",
+              "per_seed": [
+                {
+                  "seed": 2041,
+                  "accuracy": 0.9884803921568593,
+                  "margin": 0.12377999771895694
+                },
+                {
+                  "seed": 2042,
+                  "accuracy": 0.987990196078428,
+                  "margin": 0.12463744183391569
+                },
+                {
+                  "seed": 2043,
+                  "accuracy": 0.9875816993464018,
+                  "margin": 0.12418954111952751
+                }
+              ]
+            },
+            {
+              "method": "label_informed_teacher",
+              "accuracy": {
+                "mean": 0.9987745098039181,
+                "ci95": [
+                  0.9980392156862711,
+                  0.9993464052287547
+                ]
+              },
+              "margin": {
+                "mean": 0.162782493057574,
+                "ci95": [
+                  0.1609566869511947,
+                  0.16455426254416392
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.01437908496732026,
+              "weighted_new_errors_vs_full_model": 0.0,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9987745098039181,
+                  "margin": 0.16278249305757334
+                }
+              ]
+            }
+          ],
+          "conditioned_minus_image_only": {
+            "accuracy": {
+              "mean": 0.0023692810457516342,
+              "ci95": [
+                0.0010893246187363833,
+                0.00375816993464052
+              ]
+            },
+            "margin": {
+              "mean": 0.0008694832414196293,
+              "ci95": [
+                0.0005310910864659066,
+                0.0012125130168491505
+              ]
+            }
+          },
+          "secondary_contrasts": {
+            "conditioned_minus_attention": {
+              "accuracy": {
+                "mean": 0.004602396514161221,
+                "ci95": [
+                  0.0028322440087145966,
+                  0.006536628540305005
+                ]
+              },
+              "margin": {
+                "mean": 0.010367808812510362,
+                "ci95": [
+                  0.009696761120256662,
+                  0.01105951959787748
+                ]
+              }
+            },
+            "image_only_minus_attention": {
+              "accuracy": {
+                "mean": 0.0022331154684095854,
+                "ci95": [
+                  0.0007080610021786487,
+                  0.0038943355119825714
+                ]
+              },
+              "margin": {
+                "mean": 0.009498325571090729,
+                "ci95": [
+                  0.008850257353028856,
+                  0.010223233556246143
+                ]
+              }
+            },
+            "conditioned_minus_random": {
+              "accuracy": {
+                "mean": 0.003812636165577343,
+                "ci95": [
+                  0.0023692810457516325,
+                  0.005392837690631806
+                ]
+              },
+              "margin": {
+                "mean": 0.010012033597636956,
+                "ci95": [
+                  0.009448661047494712,
+                  0.010602817523224709
+                ]
+              }
+            }
+          },
+          "paired_seed_results": [
+            {
+              "seed": 2041,
+              "accuracy_difference": 0.00343137254901961,
+              "margin_difference": -0.0002850537847847763,
+              "repair_image_task_cases": 62,
+              "new_error_image_task_cases": 20,
+              "weighted_repair_fraction": 0.005065359477124182,
+              "weighted_new_error_fraction": 0.001633986928104575
+            },
+            {
+              "seed": 2042,
+              "accuracy_difference": 0.001879084967320261,
+              "margin_difference": 0.0026238638565067164,
+              "repair_image_task_cases": 47,
+              "new_error_image_task_cases": 24,
+              "weighted_repair_fraction": 0.003839869281045751,
+              "weighted_new_error_fraction": 0.00196078431372549
+            },
+            {
+              "seed": 2043,
+              "accuracy_difference": 0.001797385620915032,
+              "margin_difference": 0.0002696396525369492,
+              "repair_image_task_cases": 51,
+              "new_error_image_task_cases": 29,
+              "weighted_repair_fraction": 0.004166666666666667,
+              "weighted_new_error_fraction": 0.002369281045751634
+            }
+          ]
+        }
+      },
+      "secondary_change_in_conditioning_advantage": {}
+    },
+    "unseen": {
+      "image_count": 1020,
+      "image_task_examples": 4080,
+      "task_count": 204,
+      "budgets": {
+        "128": {
+          "table": [
+            {
+              "method": "full_model",
+              "accuracy": {
+                "mean": 0.9877450980392123,
+                "ci95": [
+                  0.98333333333333,
+                  0.9916666666666633
+                ]
+              },
+              "margin": {
+                "mean": 0.12422069804009642,
+                "ci95": [
+                  0.12206627120047382,
+                  0.12636580641299916
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0,
+              "weighted_new_errors_vs_full_model": 0.0,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9877450980392123,
+                  "margin": 0.12422069804009617
+                }
+              ]
+            },
+            {
+              "method": "random",
+              "accuracy": {
+                "mean": 0.987990196078428,
+                "ci95": [
+                  0.9841503267973822,
+                  0.991584967320258
+                ]
+              },
+              "margin": {
+                "mean": 0.11498584443478889,
+                "ci95": [
+                  0.11291467774494698,
+                  0.11701517753182586
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0022875816993464053,
+              "weighted_new_errors_vs_full_model": 0.002042483660130719,
+              "run_seed_type": "mask",
+              "per_seed": [
+                {
+                  "seed": 2055,
+                  "accuracy": 0.9877450980392123,
+                  "margin": 0.11500584527276794
+                },
+                {
+                  "seed": 2056,
+                  "accuracy": 0.987990196078428,
+                  "margin": 0.11535151663592866
+                },
+                {
+                  "seed": 2057,
+                  "accuracy": 0.9882352941176437,
+                  "margin": 0.1146001713956711
+                }
+              ]
+            },
+            {
+              "method": "attention",
+              "accuracy": {
+                "mean": 0.9860294117647025,
+                "ci95": [
+                  0.9811274509803888,
+                  0.9904411764705848
+                ]
+              },
+              "margin": {
+                "mean": 0.11435424065557696,
+                "ci95": [
+                  0.11213983323089981,
+                  0.1164816876470547
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0014705882352941176,
+              "weighted_new_errors_vs_full_model": 0.0031862745098039215,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9860294117647025,
+                  "margin": 0.11435424065557671
+                }
+              ]
+            },
+            {
+              "method": "image_only",
+              "accuracy": {
+                "mean": 0.9886437908496698,
+                "ci95": [
+                  0.9844771241830031,
+                  0.9924040032679704
+                ]
+              },
+              "margin": {
+                "mean": 0.12413905006909631,
+                "ci95": [
+                  0.12195482915897539,
+                  0.12626939812353064
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.0021241830065359475,
+              "weighted_new_errors_vs_full_model": 0.0012254901960784314,
+              "run_seed_type": "training",
+              "per_seed": [
+                {
+                  "seed": 2041,
+                  "accuracy": 0.9877450980392123,
+                  "margin": 0.12477615401336424
+                },
+                {
+                  "seed": 2042,
+                  "accuracy": 0.9894607843137221,
+                  "margin": 0.12282182929313018
+                },
+                {
+                  "seed": 2043,
+                  "accuracy": 0.988725490196075,
+                  "margin": 0.12481916690079513
+                }
+              ]
+            },
+            {
+              "method": "conditioned",
+              "accuracy": {
+                "mean": 0.9901143790849639,
+                "ci95": [
+                  0.9863541666666633,
+                  0.9935457516339835
+                ]
+              },
+              "margin": {
+                "mean": 0.12436087165845208,
+                "ci95": [
+                  0.12225644929546839,
+                  0.12646252020169718
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.003186274509803922,
+              "weighted_new_errors_vs_full_model": 0.0008169934640522876,
+              "run_seed_type": "training",
+              "per_seed": [
+                {
+                  "seed": 2041,
+                  "accuracy": 0.9899509803921535,
+                  "margin": 0.12397365239818717
+                },
+                {
+                  "seed": 2042,
+                  "accuracy": 0.9904411764705848,
+                  "margin": 0.1250764594056103
+                },
+                {
+                  "seed": 2043,
+                  "accuracy": 0.9899509803921535,
+                  "margin": 0.12403250317155874
+                }
+              ]
+            },
+            {
+              "method": "label_informed_teacher",
+              "accuracy": {
+                "mean": 0.9992647058823495,
+                "ci95": [
+                  0.9980392156862711,
+                  0.9999999999999966
+                ]
+              },
+              "margin": {
+                "mean": 0.16361137373354645,
+                "ci95": [
+                  0.1616416351436625,
+                  0.16551001313456914
+                ]
+              },
+              "weighted_repairs_vs_full_model": 0.011519607843137256,
+              "weighted_new_errors_vs_full_model": 0.0,
+              "run_seed_type": "deterministic",
+              "per_seed": [
+                {
+                  "seed": -1,
+                  "accuracy": 0.9992647058823495,
+                  "margin": 0.16361137373354623
+                }
+              ]
+            }
+          ],
+          "conditioned_minus_image_only": {
+            "accuracy": {
+              "mean": 0.0014705882352941172,
+              "ci95": [
+                0.0002450980392156865,
+                0.002859477124183007
+              ]
+            },
+            "margin": {
+              "mean": 0.00022182158935559962,
+              "ci95": [
+                -0.0001631755190100361,
+                0.0006027337708709774
+              ]
+            }
+          },
+          "secondary_contrasts": {
+            "conditioned_minus_attention": {
+              "accuracy": {
+                "mean": 0.004084967320261437,
+                "ci95": [
+                  0.0016339869281045759,
+                  0.0066176470588235285
+                ]
+              },
+              "margin": {
+                "mean": 0.010006631002874968,
+                "ci95": [
+                  0.009279632570648401,
+                  0.010764130500336385
+                ]
+              }
+            },
+            "image_only_minus_attention": {
+              "accuracy": {
+                "mean": 0.0026143790849673196,
+                "ci95": [
+                  0.00032679738562091485,
+                  0.004983660130718954
+                ]
+              },
+              "margin": {
+                "mean": 0.009784809413519365,
+                "ci95": [
+                  0.009062446106375042,
+                  0.010548030358014616
+                ]
+              }
+            },
+            "conditioned_minus_random": {
+              "accuracy": {
+                "mean": 0.002124183006535948,
+                "ci95": [
+                  0.0006535947712418302,
+                  0.003758169934640524
+                ]
+              },
+              "margin": {
+                "mean": 0.009375027223662976,
+                "ci95": [
+                  0.008773522027422058,
+                  0.010007299465548335
+                ]
+              }
+            }
+          },
+          "paired_seed_results": [
+            {
+              "seed": 2041,
+              "accuracy_difference": 0.0022058823529411764,
+              "margin_difference": -0.0008025016151769495,
+              "repair_image_task_cases": 14,
+              "new_error_image_task_cases": 5,
+              "weighted_repair_fraction": 0.003431372549019608,
+              "weighted_new_error_fraction": 0.0012254901960784314
+            },
+            {
+              "seed": 2042,
+              "accuracy_difference": 0.000980392156862745,
+              "margin_difference": 0.002254630112480189,
+              "repair_image_task_cases": 8,
+              "new_error_image_task_cases": 4,
+              "weighted_repair_fraction": 0.00196078431372549,
+              "weighted_new_error_fraction": 0.000980392156862745
+            },
+            {
+              "seed": 2043,
+              "accuracy_difference": 0.0012254901960784314,
+              "margin_difference": -0.0007866637292364416,
+              "repair_image_task_cases": 11,
+              "new_error_image_task_cases": 6,
+              "weighted_repair_fraction": 0.002696078431372549,
+              "weighted_new_error_fraction": 0.0014705882352941176
+            }
+          ]
+        }
+      },
+      "secondary_change_in_conditioning_advantage": {}
+    }
+  },
+  "sources": {
+    "128": {
+      "evaluation": "runs/flowers-vitl128-eval-v1",
+      "random_evaluation": "runs/flowers-vitl128-eval-v1",
+      "evaluation_code_commit": "e64471f359e817056be8cede1e7ce5bce7f92c2a",
+      "random_evaluation_code_commit": "e64471f359e817056be8cede1e7ce5bce7f92c2a",
+      "config": {
+        "cache_dir": "runs/flowers-vitl128-supervision-v1",
+        "model": "ViT-L/14",
+        "model_cache": "cache/clip",
+        "data_root": "data/raw/flowers102",
+        "manifest_dir": "data/splits/flowers-v1",
+        "baseline_dir": "runs/flowers-vitl128-features-v1",
+        "prompt_template": "a photo of a {class_name}, a type of flower.",
+        "balance_seed": 2028,
+        "seed": 2026,
+        "device": "cuda:0",
+        "prune_after": 12,
+        "keep_patch_tokens": 128,
+        "probe_count": 512,
+        "mask_seed": 2031,
+        "ridge": 0.01,
+        "identity_atol": 1e-06,
+        "image_batch_size": 64,
+        "teacher_batch_size": 64,
+        "num_workers": 4,
+        "hidden_dim": 128,
+        "batch_size": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.01,
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "temperature": 1.0,
+        "source_cache_dir": "runs/flowers-vitl128-features-v1",
+        "training_steps": 3978,
+        "checkpoint_interval": 153,
+        "coverages": [
+          "full"
+        ],
+        "bootstrap_seed": 2052,
+        "bootstrap_replicates": 2000,
+        "experiment_name": "flowers_vitl128_v1",
+        "feature_cache_dir": "runs/flowers-vitl128-features-v1",
+        "random_seeds": [
+          2055,
+          2056,
+          2057
+        ]
+      },
+      "recorded_source_evaluation_cost": {
+        "methods": [
+          {
+            "coverage": "references",
+            "seed": -1,
+            "method": "full_model",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 0.0,
+            "total_method_seconds": 0.16824804800126003,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 0,
+            "physical_suffix_examples": 0
+          },
+          {
+            "coverage": "references",
+            "seed": -1,
+            "method": "attention",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 1.1945388259846368,
+            "total_method_seconds": 1.4076912599994102,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 1020,
+            "physical_suffix_examples": 1024
+          },
+          {
+            "coverage": "references",
+            "seed": -1,
+            "method": "label_informed_teacher",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 15.846692823019112,
+            "total_method_seconds": 16.47735863300477,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": false,
+            "logical_suffix_examples": 16320,
+            "physical_suffix_examples": 16320
+          },
+          {
+            "coverage": "full",
+            "seed": 2041,
+            "method": "conditioned",
+            "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2041/conditioned.pt",
+            "selector_seconds": 0.5574936869452358,
+            "finish_and_normalize_seconds": 12.377145173944882,
+            "total_method_seconds": 13.476057993000722,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": false,
+            "logical_suffix_examples": 16320,
+            "physical_suffix_examples": 16320
+          },
+          {
+            "coverage": "full",
+            "seed": 2041,
+            "method": "image_only",
+            "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2041/image_only.pt",
+            "selector_seconds": 0.031574485008604825,
+            "finish_and_normalize_seconds": 0.7712096779869171,
+            "total_method_seconds": 0.9855612969986396,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 1020,
+            "physical_suffix_examples": 1024
+          },
+          {
+            "coverage": "full",
+            "seed": 2042,
+            "method": "conditioned",
+            "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2042/conditioned.pt",
+            "selector_seconds": 0.6490750620359904,
+            "finish_and_normalize_seconds": 15.763118451104674,
+            "total_method_seconds": 17.350893207003537,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": false,
+            "logical_suffix_examples": 16320,
+            "physical_suffix_examples": 16320
+          },
+          {
+            "coverage": "full",
+            "seed": 2042,
+            "method": "image_only",
+            "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2042/image_only.pt",
+            "selector_seconds": 0.042199542018352076,
+            "finish_and_normalize_seconds": 1.0388413280015811,
+            "total_method_seconds": 1.2997235319999163,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 1020,
+            "physical_suffix_examples": 1024
+          },
+          {
+            "coverage": "full",
+            "seed": 2043,
+            "method": "conditioned",
+            "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2043/conditioned.pt",
+            "selector_seconds": 0.6442013229825534,
+            "finish_and_normalize_seconds": 16.05895789904025,
+            "total_method_seconds": 17.718348164002236,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": false,
+            "logical_suffix_examples": 16320,
+            "physical_suffix_examples": 16320
+          },
+          {
+            "coverage": "full",
+            "seed": 2043,
+            "method": "image_only",
+            "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2043/image_only.pt",
+            "selector_seconds": 0.03799301598337479,
+            "finish_and_normalize_seconds": 0.9510236309943139,
+            "total_method_seconds": 1.233458309994603,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 1020,
+            "physical_suffix_examples": 1024
+          },
+          {
+            "coverage": "random",
+            "seed": 2055,
+            "method": "random",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 0.7617838010119158,
+            "total_method_seconds": 0.9414270960041904,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 1020,
+            "physical_suffix_examples": 1024
+          },
+          {
+            "coverage": "random",
+            "seed": 2056,
+            "method": "random",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 0.7663585310074268,
+            "total_method_seconds": 0.9344771629985189,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 1020,
+            "physical_suffix_examples": 1024
+          },
+          {
+            "coverage": "random",
+            "seed": 2057,
+            "method": "random",
+            "checkpoint": null,
+            "selector_seconds": 0.0,
+            "finish_and_normalize_seconds": 0.7684020750093623,
+            "total_method_seconds": 0.9421931710021454,
+            "logical_task_examples": 16320,
+            "unique_image_reuse": true,
+            "logical_suffix_examples": 1020,
+            "physical_suffix_examples": 1024
+          }
+        ],
+        "total_wall_seconds": 125.97257173199614,
+        "peak_allocated_gpu_bytes": 1915123200
+      },
+      "separate_random_evaluation_cost": null,
+      "cost_scope": "These are recorded source-run costs. A reused source can contain additional earlier conditions; do not treat these totals as new per-budget compute or deployment latency."
+    }
+  }
+}

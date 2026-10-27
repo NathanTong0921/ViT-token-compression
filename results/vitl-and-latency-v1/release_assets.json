@@ -1,0 +1,1045 @@
+{
+  "release_id": 425401556,
+  "tag": "vitl-and-latency-v1",
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-0a8e0489cbd3fd19f31b",
+  "draft": true,
+  "asset_count": 5,
+  "total_bytes": 3204072261,
+  "assets": [
+    {
+      "asset_id": 681636804,
+      "name": "vitl128-flowers-eval-v1.zip",
+      "bytes": 724070625,
+      "digest": "sha256:e8820599ad81c4767004b8fcd340f7c8f1633c2292c286c5404f1904efe1d64c",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a8e0489cbd3fd19f31b/vitl128-flowers-eval-v1.zip",
+      "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681636804",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/vitl-and-latency-v1/vitl128-flowers-eval-v1.zip",
+      "members": [
+        {
+          "path": "runs/flowers-vitl128-eval-v1/eval_summary.json",
+          "bytes": 8484
+        },
+        {
+          "path": "runs/flowers-vitl128-eval-v1/examples.csv",
+          "bytes": 986243
+        },
+        {
+          "path": "runs/flowers-vitl128-eval-v1/full/predictions.csv",
+          "bytes": 15372568
+        },
+        {
+          "path": "runs/flowers-vitl128-eval-v1/full/predictions.npz",
+          "bytes": 361424177
+        },
+        {
+          "path": "runs/flowers-vitl128-eval-v1/random/predictions.csv",
+          "bytes": 7624818
+        },
+        {
+          "path": "runs/flowers-vitl128-eval-v1/random/predictions.npz",
+          "bytes": 164951746
+        },
+        {
+          "path": "runs/flowers-vitl128-eval-v1/references/predictions.csv",
+          "bytes": 7596356
+        },
+        {
+          "path": "runs/flowers-vitl128-eval-v1/references/predictions.npz",
+          "bytes": 190037881
+        }
+      ]
+    },
+    {
+      "asset_id": 681615654,
+      "name": "vitl128-flowers-supervision-v1.zip",
+      "bytes": 781034850,
+      "digest": "sha256:cdbfe51191b28477a3d343b1b0ed4c9f2a0444feed51e18c6470fff4958d61b9",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a8e0489cbd3fd19f31b/vitl128-flowers-supervision-v1.zip",
+      "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681615654",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/vitl-and-latency-v1/vitl128-flowers-supervision-v1.zip",
+      "members": [
+        {
+          "path": "runs/flowers-vitl128-supervision-v1/panel_images.csv",
+          "bytes": 93238
+        },
+        {
+          "path": "runs/flowers-vitl128-supervision-v1/prep_summary.json",
+          "bytes": 4617
+        },
+        {
+          "path": "runs/flowers-vitl128-supervision-v1/train/evidence.npz",
+          "bytes": 4323933
+        },
+        {
+          "path": "runs/flowers-vitl128-supervision-v1/train/panel_images.csv",
+          "bytes": 47668
+        },
+        {
+          "path": "runs/flowers-vitl128-supervision-v1/train/teacher.npz",
+          "bytes": 386180625
+        },
+        {
+          "path": "runs/flowers-vitl128-supervision-v1/train_tasks.csv",
+          "bytes": 12174
+        },
+        {
+          "path": "runs/flowers-vitl128-supervision-v1/val/evidence.npz",
+          "bytes": 4324127
+        },
+        {
+          "path": "runs/flowers-vitl128-supervision-v1/val/panel_images.csv",
+          "bytes": 45628
+        },
+        {
+          "path": "runs/flowers-vitl128-supervision-v1/val/teacher.npz",
+          "bytes": 386180838
+        },
+        {
+          "path": "runs/flowers-vitl128-supervision-v1/val_tasks.csv",
+          "bytes": 3670
+        }
+      ]
+    },
+    {
+      "asset_id": 681687038,
+      "name": "vitl128-models-and-records-v1.zip",
+      "bytes": 97002156,
+      "digest": "sha256:5807d414680f7dd834d8e56cc81ad1cd9c1e2f1df86dfcde2b98d64ebdebd38e",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a8e0489cbd3fd19f31b/vitl128-models-and-records-v1.zip",
+      "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681687038",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/vitl-and-latency-v1/vitl128-models-and-records-v1.zip",
+      "members": [
+        {
+          "path": "runs/flowers-vitl128-features-v1/exchange_strata.json",
+          "bytes": 288
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/panel_images.csv",
+          "bytes": 93238
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/prep_summary.json",
+          "bytes": 9322
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/train/baseline_train_tasks.csv",
+          "bytes": 693039
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/train/baseline_val_tasks.csv",
+          "bytes": 222829
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/train/evidence.npz",
+          "bytes": 4323933
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/train/panel_images.csv",
+          "bytes": 47668
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/train_tasks.csv",
+          "bytes": 12174
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/val/baseline_train_tasks.csv",
+          "bytes": 692866
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/val/baseline_val_tasks.csv",
+          "bytes": 222832
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/val/evidence.npz",
+          "bytes": 4324127
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/val/panel_images.csv",
+          "bytes": 45628
+        },
+        {
+          "path": "runs/flowers-vitl128-features-v1/val_tasks.csv",
+          "bytes": 3670
+        },
+        {
+          "path": "runs/flowers-vitl128-training-v1/completed_runs.json",
+          "bytes": 5019
+        },
+        {
+          "path": "runs/flowers-vitl128-training-v1/full/seed_2041/conditioned.pt",
+          "bytes": 1934065
+        },
+        {
+          "path": "runs/flowers-vitl128-training-v1/full/seed_2041/image_only.pt",
+          "bytes": 1934050
+        },
+        {
+          "path": "runs/flowers-vitl128-training-v1/full/seed_2042/conditioned.pt",
+          "bytes": 1934065
+        },
+        {
+          "path": "runs/flowers-vitl128-training-v1/full/seed_2042/image_only.pt",
+          "bytes": 1934050
+        },
+        {
+          "path": "runs/flowers-vitl128-training-v1/full/seed_2043/conditioned.pt",
+          "bytes": 1934065
+        },
+        {
+          "path": "runs/flowers-vitl128-training-v1/full/seed_2043/image_only.pt",
+          "bytes": 1934050
+        },
+        {
+          "path": "runs/flowers-vitl128-training-v1/sampling_audit.json",
+          "bytes": 118296
+        },
+        {
+          "path": "runs/flowers-vitl128-training-v1/training_history.csv",
+          "bytes": 19466
+        },
+        {
+          "path": "runs/flowers-vitl128-training-v1/training_summary.json",
+          "bytes": 8501
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/exchange_strata.json",
+          "bytes": 288
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/panel_images.csv",
+          "bytes": 186196
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/prep_summary.json",
+          "bytes": 5818
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/train/baseline_train_tasks.csv",
+          "bytes": 4932087
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/train/baseline_val_tasks.csv",
+          "bytes": 589130
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/train/evidence.npz",
+          "bytes": 11117864
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/train/panel_images.csv",
+          "bytes": 150149
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/train_tasks.csv",
+          "bytes": 9320
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/val/baseline_train_tasks.csv",
+          "bytes": 1233035
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/val/baseline_val_tasks.csv",
+          "bytes": 147256
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/val/evidence.npz",
+          "bytes": 2855964
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/val/panel_images.csv",
+          "bytes": 36105
+        },
+        {
+          "path": "runs/pets-vitl128-features-v1/val_tasks.csv",
+          "bytes": 1051
+        },
+        {
+          "path": "runs/pets-vitl128-training-v1/completed_runs.json",
+          "bytes": 5010
+        },
+        {
+          "path": "runs/pets-vitl128-training-v1/full/seed_2041/conditioned.pt",
+          "bytes": 1934065
+        },
+        {
+          "path": "runs/pets-vitl128-training-v1/full/seed_2041/image_only.pt",
+          "bytes": 1934050
+        },
+        {
+          "path": "runs/pets-vitl128-training-v1/full/seed_2042/conditioned.pt",
+          "bytes": 1934065
+        },
+        {
+          "path": "runs/pets-vitl128-training-v1/full/seed_2042/image_only.pt",
+          "bytes": 1934050
+        },
+        {
+          "path": "runs/pets-vitl128-training-v1/full/seed_2043/conditioned.pt",
+          "bytes": 1934065
+        },
+        {
+          "path": "runs/pets-vitl128-training-v1/full/seed_2043/image_only.pt",
+          "bytes": 1934050
+        },
+        {
+          "path": "runs/pets-vitl128-training-v1/sampling_audit.json",
+          "bytes": 332888
+        },
+        {
+          "path": "runs/pets-vitl128-training-v1/training_history.csv",
+          "bytes": 22309
+        },
+        {
+          "path": "runs/pets-vitl128-training-v1/training_summary.json",
+          "bytes": 8470
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-49/cached_reference_audit.json",
+          "bytes": 8513
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-49/correctness.json",
+          "bytes": 4833
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-49/hardware_windows.json",
+          "bytes": 11370
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-49/panel.csv",
+          "bytes": 4272
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-49/preparation.json",
+          "bytes": 22285
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-49/raw_timings.csv",
+          "bytes": 112376
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-49/summary.json",
+          "bytes": 43759
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-98/cached_reference_audit.json",
+          "bytes": 8532
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-98/correctness.json",
+          "bytes": 4833
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-98/hardware_windows.json",
+          "bytes": 11367
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-98/panel.csv",
+          "bytes": 4272
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-98/preparation.json",
+          "bytes": 22287
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-98/raw_timings.csv",
+          "bytes": 112393
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-b16-98/summary.json",
+          "bytes": 43731
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-l14-128/cached_reference_audit.json",
+          "bytes": 8529
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-l14-128/correctness.json",
+          "bytes": 4833
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-l14-128/hardware_windows.json",
+          "bytes": 11372
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-l14-128/panel.csv",
+          "bytes": 4272
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-l14-128/preparation.json",
+          "bytes": 22204
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-l14-128/raw_timings.csv",
+          "bytes": 111741
+        },
+        {
+          "path": "runs/selector-latency-v1/flowers-l14-128/summary.json",
+          "bytes": 43680
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-147/cached_reference_audit.json",
+          "bytes": 8527
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-147/correctness.json",
+          "bytes": 4833
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-147/hardware_windows.json",
+          "bytes": 11372
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-147/panel.csv",
+          "bytes": 4506
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-147/preparation.json",
+          "bytes": 22857
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-147/raw_timings.csv",
+          "bytes": 112419
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-147/summary.json",
+          "bytes": 43783
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-49/cached_reference_audit.json",
+          "bytes": 8502
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-49/correctness.json",
+          "bytes": 4833
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-49/hardware_windows.json",
+          "bytes": 11364
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-49/panel.csv",
+          "bytes": 4506
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-49/preparation.json",
+          "bytes": 22840
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-49/raw_timings.csv",
+          "bytes": 112420
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-49/summary.json",
+          "bytes": 43568
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-98/cached_reference_audit.json",
+          "bytes": 8518
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-98/correctness.json",
+          "bytes": 4833
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-98/hardware_windows.json",
+          "bytes": 11369
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-98/panel.csv",
+          "bytes": 4506
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-98/preparation.json",
+          "bytes": 22831
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-98/raw_timings.csv",
+          "bytes": 112389
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-b16-98/summary.json",
+          "bytes": 43761
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-l14-128/cached_reference_audit.json",
+          "bytes": 8522
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-l14-128/correctness.json",
+          "bytes": 4833
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-l14-128/hardware_windows.json",
+          "bytes": 11373
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-l14-128/panel.csv",
+          "bytes": 4506
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-l14-128/preparation.json",
+          "bytes": 22843
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-l14-128/raw_timings.csv",
+          "bytes": 110947
+        },
+        {
+          "path": "runs/selector-latency-v1/pets-l14-128/summary.json",
+          "bytes": 43576
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-49/batch_1/predictions.csv",
+          "bytes": 7019731
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-49/batch_1/predictions.npz",
+          "bytes": 1910222
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-49/batch_1/summary.json",
+          "bytes": 13696
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-49/batch_32/predictions.csv",
+          "bytes": 7051357
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-49/batch_32/predictions.npz",
+          "bytes": 1909266
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-49/batch_32/summary.json",
+          "bytes": 16839
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-49/examples.csv",
+          "bytes": 234645
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-49/summary.json",
+          "bytes": 38327
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-49/unique_images.csv",
+          "bytes": 21820
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-98/batch_1/predictions.csv",
+          "bytes": 7061715
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-98/batch_1/predictions.npz",
+          "bytes": 2176649
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-98/batch_1/summary.json",
+          "bytes": 13657
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-98/batch_32/predictions.csv",
+          "bytes": 7089217
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-98/batch_32/predictions.npz",
+          "bytes": 2175426
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-98/batch_32/summary.json",
+          "bytes": 16671
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-98/examples.csv",
+          "bytes": 234645
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-98/summary.json",
+          "bytes": 38120
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-b16-98/unique_images.csv",
+          "bytes": 21820
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-l14-128/batch_1/predictions.csv",
+          "bytes": 7139862
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-l14-128/batch_1/predictions.npz",
+          "bytes": 2773290
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-l14-128/batch_1/summary.json",
+          "bytes": 13534
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-l14-128/batch_32/predictions.csv",
+          "bytes": 7168749
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-l14-128/batch_32/predictions.npz",
+          "bytes": 2772736
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-l14-128/batch_32/summary.json",
+          "bytes": 16566
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-l14-128/examples.csv",
+          "bytes": 234645
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-l14-128/summary.json",
+          "bytes": 37873
+        },
+        {
+          "path": "runs/selector-numerics-v1/flowers-l14-128/unique_images.csv",
+          "bytes": 21820
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-147/batch_1/predictions.csv",
+          "bytes": 4582806
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-147/batch_1/predictions.npz",
+          "bytes": 1107917
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-147/batch_1/summary.json",
+          "bytes": 13353
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-147/batch_32/predictions.csv",
+          "bytes": 4600729
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-147/batch_32/predictions.npz",
+          "bytes": 1107257
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-147/batch_32/summary.json",
+          "bytes": 14347
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-147/examples.csv",
+          "bytes": 153143
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-147/summary.json",
+          "bytes": 34981
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-147/unique_images.csv",
+          "bytes": 18308
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-49/batch_1/predictions.csv",
+          "bytes": 4526081
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-49/batch_1/predictions.npz",
+          "bytes": 1095344
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-49/batch_1/summary.json",
+          "bytes": 13314
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-49/batch_32/predictions.csv",
+          "bytes": 4547566
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-49/batch_32/predictions.npz",
+          "bytes": 1095198
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-49/batch_32/summary.json",
+          "bytes": 14330
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-49/examples.csv",
+          "bytes": 153143
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-49/summary.json",
+          "bytes": 34738
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-49/unique_images.csv",
+          "bytes": 18308
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-98/batch_1/predictions.csv",
+          "bytes": 4545501
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-98/batch_1/predictions.npz",
+          "bytes": 1237013
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-98/batch_1/summary.json",
+          "bytes": 13392
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-98/batch_32/predictions.csv",
+          "bytes": 4563529
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-98/batch_32/predictions.npz",
+          "bytes": 1236395
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-98/batch_32/summary.json",
+          "bytes": 14311
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-98/examples.csv",
+          "bytes": 153143
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-98/summary.json",
+          "bytes": 34979
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-b16-98/unique_images.csv",
+          "bytes": 18308
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-l14-128/batch_1/predictions.csv",
+          "bytes": 4595807
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-l14-128/batch_1/predictions.npz",
+          "bytes": 1615047
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-l14-128/batch_1/summary.json",
+          "bytes": 13275
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-l14-128/batch_32/predictions.csv",
+          "bytes": 4616166
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-l14-128/batch_32/predictions.npz",
+          "bytes": 1615075
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-l14-128/batch_32/summary.json",
+          "bytes": 14273
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-l14-128/examples.csv",
+          "bytes": 153143
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-l14-128/summary.json",
+          "bytes": 34774
+        },
+        {
+          "path": "runs/selector-numerics-v1/pets-l14-128/unique_images.csv",
+          "bytes": 18308
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/archive_evidence.py",
+          "bytes": 2180
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/archive_when_ready.log",
+          "bytes": 342
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/archive_when_ready.py",
+          "bytes": 854
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/controller.log",
+          "bytes": 5761
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/download_model.log",
+          "bytes": 839
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/download_model.py",
+          "bytes": 2239
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/flowers-b16-49.log",
+          "bytes": 2450
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/flowers-b16-98.log",
+          "bytes": 2451
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/flowers-l14-128.log",
+          "bytes": 2453
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/flowers_analysis.log",
+          "bytes": 311
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/flowers_audit.log",
+          "bytes": 841
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/flowers_evaluate.log",
+          "bytes": 1099
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/flowers_features.log",
+          "bytes": 904
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/flowers_geometry.log",
+          "bytes": 228
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/flowers_prepare.log",
+          "bytes": 2219
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/flowers_train.log",
+          "bytes": 16813
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/independent_audit.py",
+          "bytes": 18739
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_controller.log",
+          "bytes": 4706
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_flowers-b16-49.log",
+          "bytes": 854
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_flowers-b16-98.log",
+          "bytes": 854
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_flowers-l14-128.log",
+          "bytes": 855
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_latency_analysis.log",
+          "bytes": 110
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_pets-b16-147.log",
+          "bytes": 852
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_pets-b16-49.log",
+          "bytes": 851
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_pets-b16-98.log",
+          "bytes": 851
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_pets-l14-128.log",
+          "bytes": 852
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_pipeline.py",
+          "bytes": 3824
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_preflight.log",
+          "bytes": 762
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_preflight_v2.log",
+          "bytes": 687
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_preflight_v3.log",
+          "bytes": 222
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/latency_status.json",
+          "bytes": 6264
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/model_download.json",
+          "bytes": 360
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/numerics_controller.log",
+          "bytes": 4158
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/numerics_pipeline.py",
+          "bytes": 3637
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/numerics_status.json",
+          "bytes": 5540
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets-b16-147.log",
+          "bytes": 2454
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets-b16-49.log",
+          "bytes": 2447
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets-b16-98.log",
+          "bytes": 2448
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets-l14-128.log",
+          "bytes": 2450
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets_analysis.log",
+          "bytes": 317
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets_audit.log",
+          "bytes": 847
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets_evaluate.log",
+          "bytes": 1097
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets_features.log",
+          "bytes": 898
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets_geometry.log",
+          "bytes": 231
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets_prepare.log",
+          "bytes": 3517
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pets_train.log",
+          "bytes": 19389
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pipeline.py",
+          "bytes": 3374
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/pipeline_status.json",
+          "bytes": 7471
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/server_tests.txt",
+          "bytes": 875
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/server_tests_final.txt",
+          "bytes": 888
+        },
+        {
+          "path": "runs/vitl-and-latency-pipeline-v1/server_tests_full.txt",
+          "bytes": 882
+        }
+      ]
+    },
+    {
+      "asset_id": 681586471,
+      "name": "vitl128-pets-eval-v1.zip",
+      "bytes": 1080501056,
+      "digest": "sha256:d922e32ee012f2fc6196df76642d67eb6eed5f58837886a5516aa9244e6be589",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a8e0489cbd3fd19f31b/vitl128-pets-eval-v1.zip",
+      "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681586471",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/vitl-and-latency-v1/vitl128-pets-eval-v1.zip",
+      "members": [
+        {
+          "path": "runs/pets-vitl128-eval-v1/eval_summary.json",
+          "bytes": 8427
+        },
+        {
+          "path": "runs/pets-vitl128-eval-v1/examples.csv",
+          "bytes": 1473259
+        },
+        {
+          "path": "runs/pets-vitl128-eval-v1/full/predictions.csv",
+          "bytes": 22657458
+        },
+        {
+          "path": "runs/pets-vitl128-eval-v1/full/predictions.npz",
+          "bytes": 531169654
+        },
+        {
+          "path": "runs/pets-vitl128-eval-v1/random/predictions.csv",
+          "bytes": 11220905
+        },
+        {
+          "path": "runs/pets-vitl128-eval-v1/random/predictions.npz",
+          "bytes": 263414026
+        },
+        {
+          "path": "runs/pets-vitl128-eval-v1/references/predictions.csv",
+          "bytes": 11184314
+        },
+        {
+          "path": "runs/pets-vitl128-eval-v1/references/predictions.npz",
+          "bytes": 274694144
+        }
+      ]
+    },
+    {
+      "asset_id": 681553409,
+      "name": "vitl128-pets-supervision-v1.zip",
+      "bytes": 521463574,
+      "digest": "sha256:d2e58ea5b0cacad5c07c3103bc2183fe4caa8c4ffc9d59930445e303d7cfd212",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a8e0489cbd3fd19f31b/vitl128-pets-supervision-v1.zip",
+      "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681553409",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/vitl-and-latency-v1/vitl128-pets-supervision-v1.zip",
+      "members": [
+        {
+          "path": "runs/pets-vitl128-supervision-v1/panel_images.csv",
+          "bytes": 186196
+        },
+        {
+          "path": "runs/pets-vitl128-supervision-v1/prep_summary.json",
+          "bytes": 4581
+        },
+        {
+          "path": "runs/pets-vitl128-supervision-v1/train/evidence.npz",
+          "bytes": 11117864
+        },
+        {
+          "path": "runs/pets-vitl128-supervision-v1/train/panel_images.csv",
+          "bytes": 150149
+        },
+        {
+          "path": "runs/pets-vitl128-supervision-v1/train/teacher.npz",
+          "bytes": 405970794
+        },
+        {
+          "path": "runs/pets-vitl128-supervision-v1/train_tasks.csv",
+          "bytes": 9320
+        },
+        {
+          "path": "runs/pets-vitl128-supervision-v1/val/evidence.npz",
+          "bytes": 2855964
+        },
+        {
+          "path": "runs/pets-vitl128-supervision-v1/val/panel_images.csv",
+          "bytes": 36105
+        },
+        {
+          "path": "runs/pets-vitl128-supervision-v1/val/teacher.npz",
+          "bytes": 101488709
+        },
+        {
+          "path": "runs/pets-vitl128-supervision-v1/val_tasks.csv",
+          "bytes": 1051
+        }
+      ]
+    }
+  ]
+}

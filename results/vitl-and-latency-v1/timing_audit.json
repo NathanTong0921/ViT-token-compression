@@ -1,0 +1,172 @@
+{
+  "checked_utc": "2026-10-27T13:31:23.838163+00:00",
+  "status": "passed",
+  "scope": "Independent reconstruction from raw_timings.csv, with saved summary.json and hardware_windows.json used only as comparison targets. No statistics or samples changed.",
+  "conditions": [
+    {
+      "condition": "pets-b16-49",
+      "raw_calls": 1600,
+      "timing_windows": 10,
+      "all_windows_without_observed_foreign_pid": true,
+      "all_seed_batch_groups_have_100_calls": true,
+      "uuid": [
+        "GPU-54e1be22-4522-5865-513b-dd7c0cff6195"
+      ]
+    },
+    {
+      "condition": "pets-b16-98",
+      "raw_calls": 1600,
+      "timing_windows": 10,
+      "all_windows_without_observed_foreign_pid": true,
+      "all_seed_batch_groups_have_100_calls": true,
+      "uuid": [
+        "GPU-54e1be22-4522-5865-513b-dd7c0cff6195"
+      ]
+    },
+    {
+      "condition": "pets-b16-147",
+      "raw_calls": 1600,
+      "timing_windows": 10,
+      "all_windows_without_observed_foreign_pid": true,
+      "all_seed_batch_groups_have_100_calls": true,
+      "uuid": [
+        "GPU-54e1be22-4522-5865-513b-dd7c0cff6195"
+      ]
+    },
+    {
+      "condition": "flowers-b16-49",
+      "raw_calls": 1600,
+      "timing_windows": 10,
+      "all_windows_without_observed_foreign_pid": true,
+      "all_seed_batch_groups_have_100_calls": true,
+      "uuid": [
+        "GPU-54e1be22-4522-5865-513b-dd7c0cff6195"
+      ]
+    },
+    {
+      "condition": "flowers-b16-98",
+      "raw_calls": 1600,
+      "timing_windows": 10,
+      "all_windows_without_observed_foreign_pid": true,
+      "all_seed_batch_groups_have_100_calls": true,
+      "uuid": [
+        "GPU-54e1be22-4522-5865-513b-dd7c0cff6195"
+      ]
+    },
+    {
+      "condition": "pets-l14-128",
+      "raw_calls": 1600,
+      "timing_windows": 10,
+      "all_windows_without_observed_foreign_pid": true,
+      "all_seed_batch_groups_have_100_calls": true,
+      "uuid": [
+        "GPU-54e1be22-4522-5865-513b-dd7c0cff6195"
+      ]
+    },
+    {
+      "condition": "flowers-l14-128",
+      "raw_calls": 1600,
+      "timing_windows": 10,
+      "all_windows_without_observed_foreign_pid": true,
+      "all_seed_batch_groups_have_100_calls": true,
+      "uuid": [
+        "GPU-54e1be22-4522-5865-513b-dd7c0cff6195"
+      ]
+    }
+  ],
+  "totals": {
+    "raw_timing_calls": 11200,
+    "timing_windows": 70,
+    "method_seed_batch_groups": 112,
+    "calls_per_group": 100,
+    "scalar_statistic_comparisons": 3360,
+    "maximum_absolute_numeric_difference": 0.0
+  },
+  "checks": [
+    "Every fixed method and all three learned seeds present at both batch sizes.",
+    "Each method/seed/batch has five complete rounds of twenty unique call indices.",
+    "Wall and CUDA-event median, quartiles, p95, mean, extrema and counts reconstruct from raw samples.",
+    "Per-round native-to-method median ratios and their distribution reconstruct from raw samples.",
+    "All seventy timing windows report no foreign compute PID at either boundary; raw row flags agree.",
+    "Batch1 covers 100 unique timed panel images and batch32 covers all128; no hidden input padding."
+  ],
+  "flowers_l14_batch1": {
+    "pooled_native_median_ms": 9.432088500034297,
+    "pooled_conditioned_median_ms": 13.247704999230336,
+    "ratio_of_pooled_medians": 0.7119790560389352,
+    "median_of_paired_round_seed_ratios": 0.9347712054471754,
+    "rounds": [
+      {
+        "round": 0,
+        "native_wall_median_ms": 12.573110499943141,
+        "conditioned_wall_median_ms_by_seed": {
+          "2041": 13.393170000199461,
+          "2042": 13.384773501456948,
+          "2043": 13.426295496174134
+        },
+        "paired_speedup_by_seed": {
+          "2041": 0.938770320973742,
+          "2042": 0.9393592277504392,
+          "2043": 0.936454177068119
+        }
+      },
+      {
+        "round": 1,
+        "native_wall_median_ms": 12.478767002903624,
+        "conditioned_wall_median_ms_by_seed": {
+          "2041": 13.349541502975626,
+          "2042": 13.35521650253213,
+          "2043": 13.318515000719344
+        },
+        "paired_speedup_by_seed": {
+          "2041": 0.9347712054471754,
+          "2042": 0.9343739954000496,
+          "2043": 0.9369488266694623
+        }
+      },
+      {
+        "round": 2,
+        "native_wall_median_ms": 8.82456299950718,
+        "conditioned_wall_median_ms_by_seed": {
+          "2041": 9.493716996075818,
+          "2042": 9.599975997844012,
+          "2043": 9.723393501190003
+        },
+        "paired_speedup_by_seed": {
+          "2041": 0.9295161213626623,
+          "2042": 0.9192276107241334,
+          "2043": 0.9075599993384182
+        }
+      },
+      {
+        "round": 3,
+        "native_wall_median_ms": 9.27730699913809,
+        "conditioned_wall_median_ms_by_seed": {
+          "2041": 9.643965495342854,
+          "2042": 9.46047450270271,
+          "2043": 9.419373000127962
+        },
+        "paired_speedup_by_seed": {
+          "2041": 0.9619805259172872,
+          "2042": 0.9806386557553439,
+          "2043": 0.9849176796600007
+        }
+      },
+      {
+        "round": 4,
+        "native_wall_median_ms": 8.73272749959142,
+        "conditioned_wall_median_ms_by_seed": {
+          "2041": 13.256993501272518,
+          "2042": 13.231795499450527,
+          "2043": 13.258373997814488
+        },
+        "paired_speedup_by_seed": {
+          "2041": 0.6587260904030148,
+          "2042": 0.6599805370294652,
+          "2043": 0.6586575021213705
+        }
+      }
+    ]
+  },
+  "interpretation": "The ratio of pooled medians and the median of round/seed-paired ratios are different estimands and need not agree. Flowers L14 batch1 shows substantial time variation: rounds0/1 have both methods in a slower regime, rounds2/3 have lower medians, and round4 has a low native median alongside higher conditioned medians. The observed within-round mismatch makes a single constant speed factor an incomplete description. Neither value establishes batch1 acceleration; no cause is assigned to the variation. Boundary process checks cannot exclude a transient unobserved process or other system effects."
+}

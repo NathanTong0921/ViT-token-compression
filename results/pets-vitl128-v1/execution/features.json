@@ -1,0 +1,185 @@
+{
+  "run_type": "frozen_clip_feature_cache_and_native_baseline",
+  "started_utc": "2026-10-27T11:56:18.152695+00:00",
+  "code_commit": "e64471f359e817056be8cede1e7ce5bce7f92c2a",
+  "config": {
+    "cache_dir": "runs/pets-vitl128-supervision-v1",
+    "model": "ViT-L/14",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "runs/pets-vitl128-features-v1",
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:0",
+    "prune_after": 12,
+    "keep_patch_tokens": 128,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0,
+    "source_cache_dir": "runs/pets-vitl128-features-v1",
+    "training_steps": 3990,
+    "checkpoint_interval": 133,
+    "coverages": [
+      "full"
+    ],
+    "bootstrap_seed": 2052,
+    "bootstrap_replicates": 2000,
+    "experiment_name": "pets_vitl128_v1",
+    "feature_cache_dir": "runs/pets-vitl128-features-v1",
+    "random_seeds": [
+      2055,
+      2056,
+      2057
+    ]
+  },
+  "model_geometry": {
+    "input_resolution": 224,
+    "patch_size": 14,
+    "patch_tokens": 256,
+    "visual_blocks": 24,
+    "token_dim": 1024,
+    "embedding_dim": 768,
+    "prune_after": 12
+  },
+  "counts": {
+    "train": {
+      "images": 2944,
+      "classes": 37,
+      "tasks": 532,
+      "prefix_shape": [
+        2944,
+        257,
+        1024
+      ],
+      "prefix_bytes": 1549533184
+    },
+    "val": {
+      "images": 736,
+      "classes": 37,
+      "tasks": 66,
+      "prefix_shape": [
+        736,
+        257,
+        1024
+      ],
+      "prefix_bytes": 387383296
+    }
+  },
+  "identity": {
+    "train": {
+      "images_checked": 2944,
+      "max_feature_error_vs_native": 0.0,
+      "multiclass_prediction_disagreements_vs_native": 0
+    },
+    "val": {
+      "images_checked": 736,
+      "max_feature_error_vs_native": 0.0,
+      "multiclass_prediction_disagreements_vs_native": 0
+    }
+  },
+  "baseline": {
+    "train": {
+      "multiclass_accuracy": 0.9279891304347826,
+      "class_count": 37,
+      "binary": {
+        "train": {
+          "image_task_count": 84224,
+          "accuracy": 0.9972335676291794,
+          "geometric_margin": 0.135937432647437
+        },
+        "val": {
+          "image_task_count": 10438,
+          "accuracy": 0.9946349875455068,
+          "geometric_margin": 0.135490169532376
+        }
+      }
+    },
+    "val": {
+      "multiclass_accuracy": 0.9171195652173914,
+      "class_count": 37,
+      "binary": {
+        "train": {
+          "image_task_count": 21054,
+          "accuracy": 0.9946803457775245,
+          "geometric_margin": 0.13499189658636873
+        },
+        "val": {
+          "image_task_count": 2608,
+          "accuracy": 0.9946319018404908,
+          "geometric_margin": 0.13365205267308197
+        }
+      }
+    }
+  },
+  "preprocess": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_image_to_rgb at 0x773801b996c0>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "prompts": [
+    "a photo of a abyssinian, a type of pet.",
+    "a photo of a american bulldog, a type of pet.",
+    "a photo of a american pit bull terrier, a type of pet.",
+    "a photo of a basset hound, a type of pet.",
+    "a photo of a beagle, a type of pet.",
+    "a photo of a bengal, a type of pet.",
+    "a photo of a birman, a type of pet.",
+    "a photo of a bombay, a type of pet.",
+    "a photo of a boxer, a type of pet.",
+    "a photo of a british shorthair, a type of pet.",
+    "a photo of a chihuahua, a type of pet.",
+    "a photo of a egyptian mau, a type of pet.",
+    "a photo of a english cocker spaniel, a type of pet.",
+    "a photo of a english setter, a type of pet.",
+    "a photo of a german shorthaired, a type of pet.",
+    "a photo of a great pyrenees, a type of pet.",
+    "a photo of a havanese, a type of pet.",
+    "a photo of a japanese chin, a type of pet.",
+    "a photo of a keeshond, a type of pet.",
+    "a photo of a leonberger, a type of pet.",
+    "a photo of a maine coon, a type of pet.",
+    "a photo of a miniature pinscher, a type of pet.",
+    "a photo of a newfoundland, a type of pet.",
+    "a photo of a persian, a type of pet.",
+    "a photo of a pomeranian, a type of pet.",
+    "a photo of a pug, a type of pet.",
+    "a photo of a ragdoll, a type of pet.",
+    "a photo of a russian blue, a type of pet.",
+    "a photo of a saint bernard, a type of pet.",
+    "a photo of a samoyed, a type of pet.",
+    "a photo of a scottish terrier, a type of pet.",
+    "a photo of a shiba inu, a type of pet.",
+    "a photo of a siamese, a type of pet.",
+    "a photo of a sphynx, a type of pet.",
+    "a photo of a staffordshire bull terrier, a type of pet.",
+    "a photo of a wheaten terrier, a type of pet.",
+    "a photo of a yorkshire terrier, a type of pet."
+  ],
+  "test_images_used": false,
+  "cost": {
+    "train_seconds": 62.84110787199825,
+    "val_seconds": 16.639501419002045,
+    "model_setup_seconds": 7.737541234000673,
+    "total_wall_seconds": 87.27072555400082,
+    "peak_allocated_gpu_bytes": 1582618112
+  },
+  "cost_scope": "Feature extraction and baseline validation include loading and CPU/I/O; not deployment latency.",
+  "gpu": "NVIDIA RTX A6000",
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4"
+  }
+}

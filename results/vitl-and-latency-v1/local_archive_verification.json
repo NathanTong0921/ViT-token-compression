@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "archive_count": 5,
+  "total_bytes": 3204072261,
+  "archives": [
+    {
+      "name": "vitl128-flowers-eval-v1.zip",
+      "bytes": 724070625,
+      "crc_passed": true,
+      "members_verified": 8,
+      "github_digest_matches": true
+    },
+    {
+      "name": "vitl128-flowers-supervision-v1.zip",
+      "bytes": 781034850,
+      "crc_passed": true,
+      "members_verified": 10,
+      "github_digest_matches": true
+    },
+    {
+      "name": "vitl128-models-and-records-v1.zip",
+      "bytes": 97002156,
+      "crc_passed": true,
+      "members_verified": 209,
+      "github_digest_matches": true
+    },
+    {
+      "name": "vitl128-pets-eval-v1.zip",
+      "bytes": 1080501056,
+      "crc_passed": true,
+      "members_verified": 8,
+      "github_digest_matches": true
+    },
+    {
+      "name": "vitl128-pets-supervision-v1.zip",
+      "bytes": 521463574,
+      "crc_passed": true,
+      "members_verified": 10,
+      "github_digest_matches": true
+    }
+  ]
+}

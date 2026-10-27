@@ -212,8 +212,13 @@ def plot(summary, output):
                                 fmt=marker, markersize=5, color=color, elinewidth=.8, capsize=2,
                                 markerfacecolor=color if point['timing_window_valid'] else 'white', zorder=3)
                     if method == 'conditioned':
-                        ax.annotate(str(point['condition_budget']), (x, y), xytext=(4, 4),
-                                    textcoords='offset points', fontsize=8, color=color)
+                        crowded = dataset == 'Pets' and backbone == 'ViT-B/16' and batch == 1
+                        offset = ({49: (9, -18), 98: (8, 17), 147: (36, -24)}[point['condition_budget']]
+                                  if crowded else (4, 4))
+                        ax.annotate(str(point['condition_budget']), (x, y), xytext=offset,
+                                    textcoords='offset points', fontsize=8, color=color,
+                                    arrowprops={'arrowstyle': '-', 'color': color, 'lw': .5, 'alpha': .6}
+                                    if crowded else None)
             ax.set_title(f'{dataset} · {backbone}\nBatch {batch}', fontsize=10)
             ax.grid(alpha=.18)
             ax.spines[['top', 'right']].set_visible(False)

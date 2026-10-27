@@ -1,0 +1,250 @@
+{
+  "run_type": "frozen_clip_feature_cache_and_native_baseline",
+  "started_utc": "2026-10-27T12:42:33.654676+00:00",
+  "code_commit": "e64471f359e817056be8cede1e7ce5bce7f92c2a",
+  "config": {
+    "cache_dir": "runs/flowers-vitl128-supervision-v1",
+    "model": "ViT-L/14",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/flowers102",
+    "manifest_dir": "data/splits/flowers-v1",
+    "baseline_dir": "runs/flowers-vitl128-features-v1",
+    "prompt_template": "a photo of a {class_name}, a type of flower.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:0",
+    "prune_after": 12,
+    "keep_patch_tokens": 128,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0,
+    "source_cache_dir": "runs/flowers-vitl128-features-v1",
+    "training_steps": 3978,
+    "checkpoint_interval": 153,
+    "coverages": [
+      "full"
+    ],
+    "bootstrap_seed": 2052,
+    "bootstrap_replicates": 2000,
+    "experiment_name": "flowers_vitl128_v1",
+    "feature_cache_dir": "runs/flowers-vitl128-features-v1",
+    "random_seeds": [
+      2055,
+      2056,
+      2057
+    ]
+  },
+  "model_geometry": {
+    "input_resolution": 224,
+    "patch_size": 14,
+    "patch_tokens": 256,
+    "visual_blocks": 24,
+    "token_dim": 1024,
+    "embedding_dim": 768,
+    "prune_after": 12
+  },
+  "counts": {
+    "train": {
+      "images": 1020,
+      "classes": 102,
+      "tasks": 612,
+      "prefix_shape": [
+        1020,
+        257,
+        1024
+      ],
+      "prefix_bytes": 536862720
+    },
+    "val": {
+      "images": 1020,
+      "classes": 102,
+      "tasks": 204,
+      "prefix_shape": [
+        1020,
+        257,
+        1024
+      ],
+      "prefix_bytes": 536862720
+    }
+  },
+  "identity": {
+    "train": {
+      "images_checked": 1020,
+      "max_feature_error_vs_native": 0.0,
+      "multiclass_prediction_disagreements_vs_native": 0
+    },
+    "val": {
+      "images_checked": 1020,
+      "max_feature_error_vs_native": 0.0,
+      "multiclass_prediction_disagreements_vs_native": 0
+    }
+  },
+  "baseline": {
+    "train": {
+      "multiclass_accuracy": 0.7754901960784314,
+      "class_count": 102,
+      "binary": {
+        "train": {
+          "image_task_count": 12240,
+          "accuracy": 0.9848039215686275,
+          "geometric_margin": 0.12216103098329578
+        },
+        "val": {
+          "image_task_count": 4080,
+          "accuracy": 0.9862745098039216,
+          "geometric_margin": 0.12357679664258053
+        }
+      }
+    },
+    "val": {
+      "multiclass_accuracy": 0.7774509803921569,
+      "class_count": 102,
+      "binary": {
+        "train": {
+          "image_task_count": 12240,
+          "accuracy": 0.9843954248366014,
+          "geometric_margin": 0.12332019092047833
+        },
+        "val": {
+          "image_task_count": 4080,
+          "accuracy": 0.9877450980392157,
+          "geometric_margin": 0.12422069793460919
+        }
+      }
+    }
+  },
+  "preprocess": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_image_to_rgb at 0x7b09395a56c0>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "prompts": [
+    "a photo of a pink primrose, a type of flower.",
+    "a photo of a hard-leaved pocket orchid, a type of flower.",
+    "a photo of a canterbury bells, a type of flower.",
+    "a photo of a sweet pea, a type of flower.",
+    "a photo of a english marigold, a type of flower.",
+    "a photo of a tiger lily, a type of flower.",
+    "a photo of a moon orchid, a type of flower.",
+    "a photo of a bird of paradise, a type of flower.",
+    "a photo of a monkshood, a type of flower.",
+    "a photo of a globe thistle, a type of flower.",
+    "a photo of a snapdragon, a type of flower.",
+    "a photo of a colt's foot, a type of flower.",
+    "a photo of a king protea, a type of flower.",
+    "a photo of a spear thistle, a type of flower.",
+    "a photo of a yellow iris, a type of flower.",
+    "a photo of a globe-flower, a type of flower.",
+    "a photo of a purple coneflower, a type of flower.",
+    "a photo of a peruvian lily, a type of flower.",
+    "a photo of a balloon flower, a type of flower.",
+    "a photo of a giant white arum lily, a type of flower.",
+    "a photo of a fire lily, a type of flower.",
+    "a photo of a pincushion flower, a type of flower.",
+    "a photo of a fritillary, a type of flower.",
+    "a photo of a red ginger, a type of flower.",
+    "a photo of a grape hyacinth, a type of flower.",
+    "a photo of a corn poppy, a type of flower.",
+    "a photo of a prince of wales feathers, a type of flower.",
+    "a photo of a stemless gentian, a type of flower.",
+    "a photo of a artichoke, a type of flower.",
+    "a photo of a sweet william, a type of flower.",
+    "a photo of a carnation, a type of flower.",
+    "a photo of a garden phlox, a type of flower.",
+    "a photo of a love in the mist, a type of flower.",
+    "a photo of a mexican aster, a type of flower.",
+    "a photo of a alpine sea holly, a type of flower.",
+    "a photo of a ruby-lipped cattleya, a type of flower.",
+    "a photo of a cape flower, a type of flower.",
+    "a photo of a great masterwort, a type of flower.",
+    "a photo of a siam tulip, a type of flower.",
+    "a photo of a lenten rose, a type of flower.",
+    "a photo of a barbeton daisy, a type of flower.",
+    "a photo of a daffodil, a type of flower.",
+    "a photo of a sword lily, a type of flower.",
+    "a photo of a poinsettia, a type of flower.",
+    "a photo of a bolero deep blue, a type of flower.",
+    "a photo of a wallflower, a type of flower.",
+    "a photo of a marigold, a type of flower.",
+    "a photo of a buttercup, a type of flower.",
+    "a photo of a oxeye daisy, a type of flower.",
+    "a photo of a common dandelion, a type of flower.",
+    "a photo of a petunia, a type of flower.",
+    "a photo of a wild pansy, a type of flower.",
+    "a photo of a primula, a type of flower.",
+    "a photo of a sunflower, a type of flower.",
+    "a photo of a pelargonium, a type of flower.",
+    "a photo of a bishop of llandaff, a type of flower.",
+    "a photo of a gaura, a type of flower.",
+    "a photo of a geranium, a type of flower.",
+    "a photo of a orange dahlia, a type of flower.",
+    "a photo of a pink-yellow dahlia?, a type of flower.",
+    "a photo of a cautleya spicata, a type of flower.",
+    "a photo of a japanese anemone, a type of flower.",
+    "a photo of a black-eyed susan, a type of flower.",
+    "a photo of a silverbush, a type of flower.",
+    "a photo of a californian poppy, a type of flower.",
+    "a photo of a osteospermum, a type of flower.",
+    "a photo of a spring crocus, a type of flower.",
+    "a photo of a bearded iris, a type of flower.",
+    "a photo of a windflower, a type of flower.",
+    "a photo of a tree poppy, a type of flower.",
+    "a photo of a gazania, a type of flower.",
+    "a photo of a azalea, a type of flower.",
+    "a photo of a water lily, a type of flower.",
+    "a photo of a rose, a type of flower.",
+    "a photo of a thorn apple, a type of flower.",
+    "a photo of a morning glory, a type of flower.",
+    "a photo of a passion flower, a type of flower.",
+    "a photo of a lotus, a type of flower.",
+    "a photo of a toad lily, a type of flower.",
+    "a photo of a anthurium, a type of flower.",
+    "a photo of a frangipani, a type of flower.",
+    "a photo of a clematis, a type of flower.",
+    "a photo of a hibiscus, a type of flower.",
+    "a photo of a columbine, a type of flower.",
+    "a photo of a desert-rose, a type of flower.",
+    "a photo of a tree mallow, a type of flower.",
+    "a photo of a magnolia, a type of flower.",
+    "a photo of a cyclamen, a type of flower.",
+    "a photo of a watercress, a type of flower.",
+    "a photo of a canna lily, a type of flower.",
+    "a photo of a hippeastrum, a type of flower.",
+    "a photo of a bee balm, a type of flower.",
+    "a photo of a ball moss, a type of flower.",
+    "a photo of a foxglove, a type of flower.",
+    "a photo of a bougainvillea, a type of flower.",
+    "a photo of a camellia, a type of flower.",
+    "a photo of a mallow, a type of flower.",
+    "a photo of a mexican petunia, a type of flower.",
+    "a photo of a bromelia, a type of flower.",
+    "a photo of a blanket flower, a type of flower.",
+    "a photo of a trumpet creeper, a type of flower.",
+    "a photo of a blackberry lily, a type of flower."
+  ],
+  "test_images_used": false,
+  "cost": {
+    "train_seconds": 11.400369508002768,
+    "val_seconds": 12.879679352001403,
+    "model_setup_seconds": 9.40579260999948,
+    "total_wall_seconds": 33.73128655000619,
+    "peak_allocated_gpu_bytes": 1582618112
+  },
+  "cost_scope": "Feature extraction and baseline validation include loading and CPU/I/O; not deployment latency.",
+  "gpu": "NVIDIA RTX A6000",
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4"
+  }
+}
