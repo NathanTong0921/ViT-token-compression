@@ -55,8 +55,11 @@ class InferencePath:
 
 
 def choose_panel(images, tasks, size=128, seed=2081):
-    """One random validation image per class, then fill without replacement."""
-    rows = sorted((r for r in images if r['split'] == 'val'), key=lambda r: r['image_id'])
+    """Cover classes with an unseen pair, then fill from eligible validation images."""
+    unseen = sorted((t for t in tasks if t['split'] == 'val'), key=lambda t: t['task_id'])
+    eligible_classes = {t[key] for t in unseen for key in ('class_a', 'class_b')}
+    rows = sorted((r for r in images if r['split'] == 'val' and r['class_id'] in eligible_classes),
+                  key=lambda r: r['image_id'])
     labels = np.asarray([r['class_id'] for r in rows])
     classes = np.unique(labels)
     assert len(classes) <= size <= len(rows)
@@ -65,7 +68,6 @@ def choose_panel(images, tasks, size=128, seed=2081):
     remaining = np.setdiff1d(np.arange(len(rows)), selected)
     selected += rng.choice(remaining, size - len(selected), replace=False).tolist()
     rng.shuffle(selected)
-    unseen = sorted((t for t in tasks if t['split'] == 'val'), key=lambda t: t['task_id'])
     panel = []
     for index in selected:
         row = rows[index]

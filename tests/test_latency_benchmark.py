@@ -53,6 +53,18 @@ class LatencyProtocolTests(unittest.TestCase):
         self.assertIsNone(invalid['methods']['conditioned']['paired_round_speedup'])
         self.assertEqual(invalid['methods']['conditioned']['wall_ms']['count'], 6)
 
+    def test_classes_without_unseen_pairs_are_filtered_before_sampling(self):
+        eligible = [{'image_id': f'image_{label}_{i}', 'class_id': label, 'split': 'val'}
+                    for label in (0, 1) for i in range(4)]
+        excluded = [{'image_id': f'ineligible_{i}', 'class_id': 2, 'split': 'val'} for i in range(4)]
+        tasks = [{'task_id': 'unseen', 'class_a': 0, 'class_b': 1, 'split': 'val'},
+                 {'task_id': 'training_only', 'class_a': 0, 'class_b': 2, 'split': 'train'}]
+        panel = benchmark.choose_panel(eligible + excluded, tasks, size=6, seed=2081)
+        self.assertEqual(panel, benchmark.choose_panel(eligible, tasks, size=6, seed=2081))
+        self.assertEqual(len({r['image_id'] for r in panel}), 6)
+        self.assertEqual({r['class_id'] for r in panel}, {0, 1})
+        self.assertEqual({r['task_id'] for r in panel}, {'unseen'})
+
 
 if __name__ == '__main__':
     unittest.main()
