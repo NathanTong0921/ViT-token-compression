@@ -55,7 +55,8 @@ def run(config, source, models, output):
                 padded = np.concatenate([rows, np.repeat(rows[-1], batch_size - len(rows))])
                 checkpoint = torch.load(models / f'seed_{seed}/{method}.pt', map_location=device, weights_only=True)
                 model = TokenSelector(checkpoint['state_dict']['shared_descriptor'],
-                                      conditioned=method == 'conditioned', hidden_dim=checkpoint['hidden_dim']).to(device)
+                                      conditioned=method == 'conditioned', hidden_dim=checkpoint['hidden_dim'],
+                                      token_dim=tokens.shape[-1]).to(device)
                 model.load_state_dict(checkpoint['state_dict'])
                 model.eval().requires_grad_(False)
                 prefix = tokens[torch.as_tensor(saved['image_index'][padded], device=device)]

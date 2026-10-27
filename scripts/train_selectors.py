@@ -91,13 +91,16 @@ def train(config, output):
     assert not set(data["train"]["task_ids"]) & set(data["val"]["task_ids"])
     torch.testing.assert_close(data["train"]["text"], data["val"]["text"], rtol=0, atol=0)
     prior = shared_descriptor(data["train"]["text"], data["train"]["pairs"])
+    token_dim = data["train"]["tokens"].shape[-1]
+    assert data["val"]["tokens"].shape[-1] == token_dim
     synchronize(device)
     preparation_seconds = time.perf_counter() - wall_start
     count = len(data["train"]["targets"])
     history, results = [], []
     for seed in config["training_seeds"]:
         torch.manual_seed(seed)
-        template = TokenSelector(prior, conditioned=True, hidden_dim=config["hidden_dim"]).to(device)
+        template = TokenSelector(prior, conditioned=True, hidden_dim=config["hidden_dim"],
+                                 token_dim=token_dim).to(device)
         initial_state = {key: value.detach().clone() for key, value in template.state_dict().items()}
         parameter_count = sum(parameter.numel() for parameter in template.parameters())
         del template
@@ -107,7 +110,8 @@ def train(config, output):
         seed_output = output / f"seed_{seed}"
         seed_output.mkdir(parents=True, exist_ok=True)
         for arm, conditioned in (("conditioned", True), ("image_only", False)):
-            model = TokenSelector(prior, conditioned=conditioned, hidden_dim=config["hidden_dim"]).to(device)
+            model = TokenSelector(prior, conditioned=conditioned, hidden_dim=config["hidden_dim"],
+                                  token_dim=token_dim).to(device)
             model.load_state_dict(initial_state)
             assert all(torch.equal(value, initial_state[key]) for key, value in model.state_dict().items())
             assert sum(parameter.numel() for parameter in model.parameters()) == parameter_count
@@ -153,6 +157,8 @@ def train(config, output):
             final_evaluation_seconds = time.perf_counter() - before
             checkpoint = {"state_dict": {key: value.detach().cpu() for key, value in model.state_dict().items()},
                           "hidden_dim": config["hidden_dim"], "conditioned": conditioned,
+                          "token_dim": token_dim, "text_dim": data["train"]["text"].shape[-1],
+                          "num_patches": data["train"]["tokens"].shape[1] - 1,
                           "seed": seed, "epoch": config["epochs"], "parameter_count": parameter_count,
                           "config": config, "code_commit": source_commit,
                           "checkpoint_policy": "Fixed final epoch; no validation-based selection."}

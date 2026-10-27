@@ -54,6 +54,25 @@ class TokenSelectorTests(unittest.TestCase):
         torch.testing.assert_close(utility_targets(torch.zeros_like(coefficients), labels, pairs,
                                                    torch.eye(2)), torch.full((2, 3), 1 / 3))
 
+    def test_vitl_dimensions_preserve_matched_arms_and_candidate_invariance(self):
+        text = F.normalize(torch.randn(4, 768), dim=-1)
+        prior = shared_descriptor(text, self.pairs)
+        tokens = torch.randn(2, 257, 1024)
+        candidates = text[torch.tensor([[0, 1], [1, 3]])]
+        conditioned = TokenSelector(prior, conditioned=True, token_dim=1024).eval()
+        image_only = TokenSelector(prior, conditioned=False, token_dim=1024).eval()
+        image_only.load_state_dict(conditioned.state_dict(), strict=True)
+        self.assertEqual(sum(p.numel() for p in conditioned.parameters()), 480641)
+        self.assertEqual(sum(p.numel() for p in conditioned.parameters()),
+                         sum(p.numel() for p in image_only.parameters()))
+        with torch.no_grad():
+            scores = conditioned(tokens, candidates)
+            self.assertEqual(scores.shape, (2, 256))
+            torch.testing.assert_close(scores, conditioned(tokens, candidates.flip(1)), rtol=0, atol=0)
+            torch.testing.assert_close(image_only(tokens, candidates),
+                                       image_only(tokens, text[torch.tensor([[2, 3], [0, 2]])]),
+                                       rtol=0, atol=0)
+
     def test_examples_include_only_pairs_containing_each_image_label(self):
         examples = build_examples(torch.tensor([0, 1, 3]), self.pairs)
         self.assertEqual(examples["image_indices"].tolist(), [0, 0, 1, 1, 2])

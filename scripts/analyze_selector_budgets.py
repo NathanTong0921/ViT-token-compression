@@ -176,7 +176,7 @@ def plot(result, exchange, output):
             ax.plot(budgets, values, marker="o", color=colors[method],
                     linestyle="--" if method in ("full_model", "label_informed_teacher") else "-", label=labels[method])
     for ax, ylabel in zip(axes, ("Task/class-balanced accuracy (%)", "Mean signed geometric margin")):
-        ax.set(xticks=budgets, xlabel="Retained patch tokens (out of 196)", ylabel=ylabel)
+        ax.set(xticks=budgets, xlabel="Retained patch tokens", ylabel=ylabel)
         ax.spines[["top", "right"]].set_visible(False)
         ax.grid(alpha=.2)
     axes[0].legend(frameon=False, fontsize=8)
@@ -191,7 +191,10 @@ def plot(result, exchange, output):
         for i, budget in enumerate(budgets):
             estimate = main[str(budget)]["conditioned_minus_image_only"][metric]
             mean = estimate["mean"] * factor
-            for interval, color, cap, width in (("bonferroni_family_ci95", "#bbbbbb", 5, 3), ("ci95", "#d97925", 3, 1.8)):
+            intervals = [("ci95", "#d97925", 3, 1.8)]
+            if "bonferroni_family_ci95" in estimate:
+                intervals.insert(0, ("bonferroni_family_ci95", "#bbbbbb", 5, 3))
+            for interval, color, cap, width in intervals:
                 low, high = np.asarray(estimate[interval]) * factor
                 ax.errorbar(i, mean, yerr=[[mean - low], [high - mean]],
                             fmt="o", color=color, capsize=cap, elinewidth=width,

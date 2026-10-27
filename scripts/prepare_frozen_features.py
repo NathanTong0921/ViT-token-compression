@@ -137,6 +137,13 @@ def run(config, output):
             del prefixes
     summary = {"run_type": "frozen_clip_feature_cache_and_native_baseline",
                "started_utc": started, "code_commit": commit, "config": config,
+               "model_geometry": {"input_resolution": int(model.visual.input_resolution),
+                                  "patch_size": int(model.visual.conv1.weight.shape[-1]),
+                                  "patch_tokens": pruner.num_patches,
+                                  "visual_blocks": len(pruner.blocks),
+                                  "token_dim": int(model.visual.conv1.weight.shape[0]),
+                                  "embedding_dim": int(text.shape[1]),
+                                  "prune_after": config["prune_after"]},
                "counts": counts, "identity": identities, "baseline": baselines,
                "preprocess": repr(preprocess), "prompts": prompts, "test_images_used": False,
                "cost": {**costs, "model_setup_seconds": setup_seconds,

@@ -125,6 +125,8 @@ def train(config, output):
     train_views = {name: evaluation_view(data["train"], ids) for name, ids in coverage_ids.items()}
     val_view = evaluation_view(data["val"])
     prior = shared_descriptor(data["train"]["text"], data["train"]["pairs"])
+    token_dim = data["train"]["tokens"].shape[-1]
+    assert data["val"]["tokens"].shape[-1] == token_dim
     # Map a sampled (image, task) directly to the precomputed utility target.
     lookup = np.full((len(data["train"]["image_ids"]), len(data["train"]["pairs"])), -1, np.int64)
     train_images = data["train"]["examples"]["image_indices"].cpu().numpy()
@@ -135,7 +137,8 @@ def train(config, output):
     history, results, sampling_records = [], [], []
     for seed in config["training_seeds"]:
         torch.manual_seed(seed)
-        template = TokenSelector(prior, conditioned=True, hidden_dim=config["hidden_dim"]).to(device)
+        template = TokenSelector(prior, conditioned=True, hidden_dim=config["hidden_dim"],
+                                 token_dim=token_dim).to(device)
         initial_state = {key: value.detach().clone() for key, value in template.state_dict().items()}
         parameter_count = sum(parameter.numel() for parameter in template.parameters())
         del template
@@ -165,7 +168,8 @@ def train(config, output):
             seed_output = output / coverage / f"seed_{seed}"
             seed_output.mkdir(parents=True, exist_ok=True)
             for arm, conditioned in (("conditioned", True), ("image_only", False)):
-                model = TokenSelector(prior, conditioned=conditioned, hidden_dim=config["hidden_dim"]).to(device)
+                model = TokenSelector(prior, conditioned=conditioned, hidden_dim=config["hidden_dim"],
+                                      token_dim=token_dim).to(device)
                 model.load_state_dict(initial_state)
                 assert all(torch.equal(value, initial_state[key]) for key, value in model.state_dict().items())
                 assert sum(parameter.numel() for parameter in model.parameters()) == parameter_count
@@ -216,6 +220,8 @@ def train(config, output):
                 final_evaluation_seconds = time.perf_counter() - before
                 checkpoint = {"state_dict": {key: value.detach().cpu() for key, value in model.state_dict().items()},
                               "hidden_dim": config["hidden_dim"], "conditioned": conditioned,
+                              "token_dim": token_dim, "text_dim": data["train"]["text"].shape[-1],
+                              "num_patches": data["train"]["tokens"].shape[1] - 1,
                               "seed": seed, "step": steps, "coverage": coverage, "parameter_count": parameter_count,
                               "config": config, "code_commit": source_commit,
                               "checkpoint_policy": "Fixed final update; no validation-based selection."}
@@ -247,6 +253,8 @@ def train(config, output):
                "train_image_counts": {name: len(ids) for name, ids in coverage_ids.items()},
                "val_image_count": len(data["val"]["image_ids"]),
                "train_task_count": len(data["train"]["task_ids"]), "val_task_count": len(data["val"]["task_ids"]),
+               "selector_dimensions": {"token_dim": token_dim, "text_dim": data["train"]["text"].shape[-1],
+                                       "num_patches": data["train"]["tokens"].shape[1] - 1},
                "train_example_counts": {name: len(view["indices"]) for name, view in train_views.items()},
                "val_example_count": len(val_view["indices"]),
                "frozen_prefix_cache_bytes": sum(split["tokens"].numel() * split["tokens"].element_size() for split in data.values()),

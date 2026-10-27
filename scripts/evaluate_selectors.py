@@ -140,7 +140,7 @@ def run(config, models_dir, output):
                 checkpoint_path = models_dir / f"seed_{seed}" / f"{method}.pt"
                 checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
                 model = TokenSelector(descriptor, conditioned=method == "conditioned",
-                                      hidden_dim=checkpoint["hidden_dim"]).to(device)
+                                      hidden_dim=checkpoint["hidden_dim"], token_dim=prefixes.shape[-1]).to(device)
                 model.load_state_dict(checkpoint["state_dict"])
                 model.eval().requires_grad_(False)
             scores = baseline_scores.copy() if method == "full_model" else np.empty((count, len(text)), np.float32)

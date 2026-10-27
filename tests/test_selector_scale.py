@@ -71,6 +71,13 @@ class SelectorScaleTests(unittest.TestCase):
 
     @unittest.skipUnless(importlib.util.find_spec("torch"), "Training smoke requires PyTorch")
     def test_cpu_training_keeps_update_budget_and_shared_initialization(self):
+        self._run_training_smoke(token_dim=768, text_dim=512)
+
+    @unittest.skipUnless(importlib.util.find_spec("torch"), "Training smoke requires PyTorch")
+    def test_cpu_training_supports_vitl_feature_widths(self):
+        self._run_training_smoke(token_dim=1024, text_dim=768)
+
+    def _run_training_smoke(self, token_dim, text_dim):
         import torch
 
         script = Path(__file__).resolve().parents[1] / "scripts" / "train_selector_scale.py"
@@ -78,7 +85,7 @@ class SelectorScaleTests(unittest.TestCase):
         training = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(training)
         rng = np.random.default_rng(3)
-        text = rng.normal(size=(3, 512)).astype(np.float32)
+        text = rng.normal(size=(3, text_dim)).astype(np.float32)
         text /= np.linalg.norm(text, axis=1, keepdims=True)
         previous_threads = torch.get_num_threads()
         torch.set_num_threads(1)
@@ -91,7 +98,7 @@ class SelectorScaleTests(unittest.TestCase):
                     target.mkdir(parents=True)
                     ids = np.array([f"{split}_{i}" for i in range(len(labels))])
                     np.savez(target / "evidence.npz", image_ids=ids, labels=np.array(labels), text_features=text)
-                    np.save(target / "prefix_tokens.npy", rng.normal(size=(len(labels), 5, 768)).astype(np.float32))
+                    np.save(target / "prefix_tokens.npy", rng.normal(size=(len(labels), 5, token_dim)).astype(np.float32))
                     np.savez(target / "teacher.npz", image_ids=ids,
                              coefficients=rng.normal(size=(len(labels), 4, 3)).astype(np.float32))
                 (old / "train").mkdir(parents=True)
@@ -114,6 +121,8 @@ class SelectorScaleTests(unittest.TestCase):
                 runs = {(row["coverage"], row["arm"]): row for row in summary["runs"]}
                 self.assertEqual(summary["train_image_counts"], {"small": 3, "full": 7})
                 self.assertEqual(summary["val_image_count"], 3)
+                self.assertEqual(summary["selector_dimensions"],
+                                 {"token_dim": token_dim, "text_dim": text_dim, "num_patches": 4})
                 for arm in ("conditioned", "image_only"):
                     self.assertEqual(runs[("small", arm)]["initial_val_kl"], runs[("full", arm)]["initial_val_kl"])
                     for coverage in ("small", "full"):
@@ -123,6 +132,9 @@ class SelectorScaleTests(unittest.TestCase):
                         checkpoint = torch.load(folder / "output" / row["checkpoint"], weights_only=True)
                         self.assertEqual(checkpoint["step"], 4)
                         self.assertEqual(checkpoint["conditioned"], arm == "conditioned")
+                        self.assertEqual(checkpoint["token_dim"], token_dim)
+                        self.assertEqual(checkpoint["text_dim"], text_dim)
+                        self.assertEqual(checkpoint["num_patches"], 4)
                 # A budget sweep trains only the full panel. Removing the small
                 # arm must not change its initialization, draws or final weights.
                 full_config = {**config, "coverages": ["full"], "experiment_name": "budget_smoke"}

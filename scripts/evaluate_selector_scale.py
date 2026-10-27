@@ -94,7 +94,7 @@ def run(config, models_dir, output, random_only=False):
             checkpoint_path = models_dir / coverage / f"seed_{seed}" / f"{method}.pt"
             checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
             model = TokenSelector(descriptor, conditioned=method == "conditioned",
-                                  hidden_dim=checkpoint["hidden_dim"]).to(device)
+                                  hidden_dim=checkpoint["hidden_dim"], token_dim=prefixes.shape[-1]).to(device)
             model.load_state_dict(checkpoint["state_dict"])
             model.eval().requires_grad_(False)
         # These methods are task-independent: run each image once and re-score
@@ -219,7 +219,7 @@ def run(config, models_dir, output, random_only=False):
                "environment": {"python": platform.python_version(), "numpy": np.__version__, "torch": torch.__version__},
                "scope": "All development images; seen training pairs and unseen validation pairs. Official test remains unused.",
                "schema": {"row_alignment": "CSV row_id equals per-row NPZ index within each coverage folder.",
-                          "image_features": "Normalized full 512-dimensional float32 CLIP output, retained for later geometric analysis.",
+                          "image_features": f"Normalized full {text.shape[1]}-dimensional float32 CLIP output, retained for later geometric analysis.",
                           "references": "Full model, attention and label-informed teacher stored once globally; labels only enter the offline teacher.",
                           "task_class_weight": "Within each task split, each task has equal weight and each side contributes one half.",
                           "image_only": "Candidate classes are ignored by this arm. One image forward is exactly reused across candidate pairs.",

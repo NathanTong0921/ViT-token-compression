@@ -24,15 +24,17 @@ class TokenSelector(nn.Module):
     used to form training targets, never as selector inputs.
     """
 
-    def __init__(self, shared_descriptor, conditioned, hidden_dim=128):
+    def __init__(self, shared_descriptor, conditioned, hidden_dim=128, token_dim=768):
         super().__init__()
         self.conditioned = bool(conditioned)
         self.hidden_dim = hidden_dim
+        self.token_dim = int(token_dim)
+        self.context_dim = shared_descriptor.numel()
         self.register_buffer("shared_descriptor", shared_descriptor.detach().float().clone())
-        self.image_norm = nn.LayerNorm(768)
-        self.context_norm = nn.LayerNorm(1024)
+        self.image_norm = nn.LayerNorm(self.token_dim)
+        self.context_norm = nn.LayerNorm(self.context_dim)
         self.scorer = nn.Sequential(
-            nn.Linear(768 + 768 + 1024, hidden_dim),
+            nn.Linear(2 * self.token_dim + self.context_dim, hidden_dim),
             nn.GELU(),
             nn.Linear(hidden_dim, hidden_dim),
             nn.GELU(),
