@@ -61,6 +61,14 @@ Measure CPU image preprocessing and host-to-device transfer separately as descri
 
 Use an available GPU and record process/utilization snapshots around timing rounds. Shared-server CPU conditions and any GPU contention are part of the timing record. If contention makes the benchmark unsuitable, retain that record and repeat the complete affected timing block under the same settings when an uncontended device is available; do not select individual fast samples.
 
+## Numerical follow-up added after the timing preflight
+
+The same-batch online implementation exactly matched the original ranking and output path in the GPU preflight. Comparing different batch shapes nevertheless changed a small number of retained sets, without prediction changes in that small check. Because the reported classification gains are small, the follow-up evaluates all seven existing conditions on their complete unseen-validation queries at batch sizes 1 and 32, using every fixed seed. It keeps unpadded final batches and records their sizes. Task-independent arms may reuse each unique image's computed features for this accuracy audit only; timed requests always run the complete image encoder.
+
+Save pair scores, margins, predictions and selected positions, and compare the exact image/task/model/seed rows with the original cached-batch evaluation. Count actual set intersections and replacements, not shifts in sorted index lists. Report both the conditioned-minus-image-only effect and its change from the original, with ordinary 95% diagnostic image-cluster intervals (2,000 draws, seed 2052). This is an implementation sensitivity check added after the observed preflight discrepancy; it introduces no new training or task selection and does not replace the original budget-adjusted analyses.
+
+The latency request represents one candidate-set query for an independently supplied image. Reusing a full image embedding across multiple candidate sets is a different workload; these timings do not establish a speedup for that setting.
+
 ## Execution and saved evidence
 
 Commit code, configurations and this protocol before substantive runs. Preserve all model outcomes, independent statistics, raw timing samples, model checkpoints and enough scores/features/positions to reconstruct the scientific comparisons. Keep small results and figures in Git, larger scientific evidence locally and in a versioned GitHub Release, and original runs on the server. Remove transfer-only duplicates after verification. Record the observed source versions and costs; deployment timing stays separate from experiment wall time.
