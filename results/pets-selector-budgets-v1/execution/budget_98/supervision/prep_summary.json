@@ -1,0 +1,152 @@
+{
+  "run_type": "budget_matched_full_panel_selector_supervision",
+  "experiment_name": "pets_selector_budget_98_v1",
+  "started_utc": "2026-10-27T08:22:23.828840+00:00",
+  "code_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+  "config": {
+    "cache_dir": "runs/pets-selector-budget-98-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "results/pets-baseline-v1",
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0,
+    "source_cache_dir": "runs/pets-selector-supervision-v1",
+    "training_steps": 3990,
+    "checkpoint_interval": 133,
+    "coverages": [
+      "full"
+    ],
+    "bootstrap_seed": 2052,
+    "bootstrap_replicates": 2000,
+    "experiment_name": "pets_selector_budget_98_v1",
+    "feature_cache_dir": "runs/pets-selector-scale-supervision-v1",
+    "random_seeds": [
+      2055,
+      2056,
+      2057
+    ]
+  },
+  "counts": {
+    "train": {
+      "images": 2944,
+      "classes": 37,
+      "tasks": 532,
+      "prefix_bytes": 890830848,
+      "prefix_images_reused": 2944,
+      "full_split_images_encoded": 0,
+      "teacher_images_reused": 0,
+      "teacher_images_generated": 2944,
+      "response_images_available": 2944,
+      "response_images_unavailable": 0,
+      "teacher_suffix_forward_batches": 23552,
+      "teacher_suffix_forward_examples": 1507328,
+      "teacher_requested_suffix_examples": 1507328
+    },
+    "val": {
+      "images": 736,
+      "classes": 37,
+      "tasks": 66,
+      "prefix_bytes": 222707712,
+      "prefix_images_reused": 736,
+      "full_split_images_encoded": 0,
+      "teacher_images_reused": 0,
+      "teacher_images_generated": 736,
+      "response_images_available": 736,
+      "response_images_unavailable": 0,
+      "teacher_suffix_forward_batches": 5888,
+      "teacher_suffix_forward_examples": 376832,
+      "teacher_requested_suffix_examples": 376832
+    }
+  },
+  "identity": {
+    "train": {
+      "images_checked": 2944,
+      "max_feature_error_vs_source": 0.0,
+      "prediction_disagreements_37class_vs_source": 0
+    },
+    "val": {
+      "images_checked": 736,
+      "max_feature_error_vs_source": 0.0,
+      "prediction_disagreements_37class_vs_source": 0
+    }
+  },
+  "feature_reuse": {
+    "train": {
+      "images": 2944,
+      "prefix_shape": [
+        2944,
+        197,
+        768
+      ],
+      "source": "runs/pets-selector-scale-supervision-v1/train",
+      "storage": "relative symbolic links"
+    },
+    "val": {
+      "images": 736,
+      "prefix_shape": [
+        736,
+        197,
+        768
+      ],
+      "source": "runs/pets-selector-scale-supervision-v1/val",
+      "storage": "relative symbolic links"
+    }
+  },
+  "source_cache": {
+    "path": "runs/pets-selector-scale-supervision-v1",
+    "code_commit": "fa4ed58d895a33d7e8e7d103dfe2c33705211946",
+    "started_utc": "2026-10-18T11:18:22.499768+00:00"
+  },
+  "teacher": {
+    "context_patch_tokens": 98,
+    "probe_count_per_image": 512,
+    "mask_design_seed": 3785732041,
+    "ridge": 0.01,
+    "response_columns": "Class cosine scores in manifest class order.",
+    "response_availability": "Every image has newly computed responses at the requested budget.",
+    "optimization_scope": "Training images and training pairs only; validation teachers are evaluation only.",
+    "test_data_used": false
+  },
+  "cost": {
+    "train_identity_seconds": 4.299856399000419,
+    "train_teacher_seconds": 308.90881630999866,
+    "val_identity_seconds": 1.0279031509999186,
+    "val_teacher_seconds": 77.27365146900047,
+    "model_setup_seconds": 7.934387997000158,
+    "teacher_suffix_forward_batches": 29440,
+    "teacher_suffix_forward_examples": 1884160,
+    "teacher_requested_suffix_examples": 1884160,
+    "total_wall_seconds": 399.6546935639999,
+    "peak_allocated_gpu_bytes": 678656512
+  },
+  "storage": "Prefix tensors and full-model evidence are relative symlinks to the verified full-panel cache; teachers are budget-specific.",
+  "gpu": "NVIDIA RTX A6000",
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4"
+  }
+}

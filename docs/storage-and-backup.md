@@ -1,6 +1,6 @@
 # Storage and backup plan
 
-Status, 2026-10-18: the paired selector pilot, fixed-model task exchange and fixed-update image-coverage experiment are complete. Original baseline, pruning, offline-selection, budget-context and learned-selector evidence are retained locally and on the server; small evidence is versioned in Git. The latest coverage experiment adds about 1.11 GB of recomputable prefix caches on the server and two retained evidence archives totaling 1.38 GB locally and in Release storage. Dataset and CLIP weights remain server working assets. The capacity figures below are planning allowances, not current-use measurements.
+Status, 2026-10-27: the three-budget comparison and H2 are complete. Small statistics, case arrays, figures and audits are versioned in Git; five new scientific ZIP archives totaling 2.57 GB are retained locally and uploaded to the versioned Release. They preserve new teachers, all 12 new checkpoints, raw scores/features/positions, and the 49-token random/probe supplement. Existing 49-token model/evaluation evidence remains in the earlier scale release. Frozen prefixes are reused on the server and can be regenerated; they are intentionally not duplicated in these archives.
 
 The single-stage pruning pilot adds approximately 21.6 MB of scores, embeddings, retained positions, metrics and figure exports under `results/pets-pruning-v1/`. These are small enough for ordinary Git. Its approximately 223 MB prefix cache existed only in host RAM and was released after the run; no persistent prefix cache or selection-supervision cache was created.
 
@@ -77,3 +77,18 @@ The three `results/pets-budget-ranking*` bundles add approximately 209.5 MB, inc
 `results/pets-selector-scale-v1/` retains analysis tables, exchange case arrays, training curves, figures and independent audits in ordinary Git. Two ZIP archives in the local `artifacts/pets-selector-scale-v1/` directory retain the larger evidence: `pets-selector-scale-supervision-v1.zip` (441.90 MB; teachers, probe masks/responses and full-model evidence) and `pets-selector-scale-models-and-evaluation-v1.zip` (941.52 MB; all 12 final selectors, training histories, and per-example scores, full 512D features and selected positions). These scientific backups are retained; they are not transfer-only staging files. Original server outputs remain under the three matching `runs/pets-selector-scale-*` directories.
 
 The [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-scale-v1) holds both archives. Destination recovery passed: both published archives were downloaded, all 34 members matched original server files, all 12 restored checkpoints loaded, and primary results were independently reconstructed. Exact byte counts and recovery evidence are recorded in `results/pets-selector-scale-v1/release_assets.json` and `github_recovery_verification.json`. Temporary recovery downloads/extractions and server transfer-only ZIP copies were removed. Local scientific archives remain retained. Original server analysis outputs are retained in `runs/pets-selector-scale-analysis-v1/`; tracked curated results remain under `results/`. Prefix caches are omitted from the archives because they can be regenerated from the fixed model, preprocessing and image manifests.
+
+
+## Three-budget comparison and H2
+
+`results/pets-selector-budgets-v1/` retains the main and exchange statistics, H2 case-level data and cross-fitted predictions, shared-search selected sets, four figures in PNG/PDF, execution records and independent numerical audits. Five scientific archives live in the project parent directory `artifacts/pets-selector-budgets-v1/` and the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-budgets-v1):
+
+- `pets-selector-budget-98-supervision-v1.zip` (450.63 MB)
+- `pets-selector-budget-98-models-and-evaluation-v1.zip` (743.57 MB)
+- `pets-selector-budget-147-supervision-v1.zip` (449.13 MB)
+- `pets-selector-budget-147-models-and-evaluation-v1.zip` (741.53 MB)
+- `pets-selector-budget-49-and-shared-supplement-v1.zip` (184.34 MB)
+
+Total: 2,569,188,841 bytes. The supplement contains the three random-mask runs at 49 tokens, all three shared-search results, regenerated probe responses for the 144 older validation images, and execution logs. Reused 49-token weights/predictions and the other teacher responses remain in `pets-selector-scale-v1`; restoring this milestone requires that earlier release as well. Public data and the frozen CLIP model plus the preserved preprocessing/manifests/code can regenerate prefix caches. Prefix tensors are not present in either release.
+
+The recovery record distinguishes actual destination downloads from remote content-integrity verification. This avoids claiming that every archive was downloaded again. Small recovery details and the final transfer cleanup record are retained in the result directory; long-term scientific archives are kept locally.

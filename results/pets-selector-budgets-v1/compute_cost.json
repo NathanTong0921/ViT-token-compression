@@ -1,0 +1,208 @@
+{
+  "hardware": "One NVIDIA RTX A6000, physical GPU4",
+  "new_main_stages_process_seconds": 1574.2585140150004,
+  "shared_diagnostic_process_seconds": 27.69447226399643,
+  "total_process_hours": 0.44498694063305466,
+  "scope": "Phase process wall time includesCPU/loading/I/O, not pureGPUkernel time or deployment latency. Shared98/147 areCPUonly. Earlier49model and frozenprefix preparation costs reused, not charged again. CPU statistical analysis/transfers/recovery excluded.",
+  "stages": [
+    {
+      "name": "prepare_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/prepare_selector_budget.py",
+        "--config",
+        "configs/pets_selector_budget_98.json"
+      ],
+      "code_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "started_utc": "2026-10-27T08:22:20.210019+00:00",
+      "status": "complete",
+      "pid": 1073600,
+      "returncode": 0,
+      "wall_seconds": 404.08934722999766,
+      "completed_utc": "2026-10-27T08:29:04.299624+00:00"
+    },
+    {
+      "name": "train_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/train_selector_scale.py",
+        "--config",
+        "configs/pets_selector_budget_98.json",
+        "--output",
+        "runs/pets-selector-budget-98-training-v1"
+      ],
+      "code_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "started_utc": "2026-10-27T08:29:04.304946+00:00",
+      "status": "complete",
+      "pid": 1097757,
+      "returncode": 0,
+      "wall_seconds": 196.31165110599977,
+      "completed_utc": "2026-10-27T08:32:20.617038+00:00"
+    },
+    {
+      "name": "evaluate_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/pets_selector_budget_98.json",
+        "--models",
+        "runs/pets-selector-budget-98-training-v1",
+        "--output",
+        "runs/pets-selector-budget-98-eval-v1"
+      ],
+      "code_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "started_utc": "2026-10-27T08:32:20.637276+00:00",
+      "status": "complete",
+      "pid": 1108713,
+      "returncode": 0,
+      "wall_seconds": 86.11427434600046,
+      "completed_utc": "2026-10-27T08:33:46.755232+00:00"
+    },
+    {
+      "name": "prepare_147",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/prepare_selector_budget.py",
+        "--config",
+        "configs/pets_selector_budget_147.json"
+      ],
+      "code_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "started_utc": "2026-10-27T08:33:46.760556+00:00",
+      "status": "complete",
+      "pid": 1113825,
+      "returncode": 0,
+      "wall_seconds": 569.402583215,
+      "completed_utc": "2026-10-27T08:43:16.163479+00:00"
+    },
+    {
+      "name": "train_147",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/train_selector_scale.py",
+        "--config",
+        "configs/pets_selector_budget_147.json",
+        "--output",
+        "runs/pets-selector-budget-147-training-v1"
+      ],
+      "code_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "started_utc": "2026-10-27T08:43:16.169020+00:00",
+      "status": "complete",
+      "pid": 1145239,
+      "returncode": 0,
+      "wall_seconds": 196.11221862399907,
+      "completed_utc": "2026-10-27T08:46:32.281932+00:00"
+    },
+    {
+      "name": "evaluate_147",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/pets_selector_budget_147.json",
+        "--models",
+        "runs/pets-selector-budget-147-training-v1",
+        "--output",
+        "runs/pets-selector-budget-147-eval-v1"
+      ],
+      "code_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "started_utc": "2026-10-27T08:46:32.286906+00:00",
+      "status": "complete",
+      "pid": 1156112,
+      "returncode": 0,
+      "wall_seconds": 97.6872906130011,
+      "completed_utc": "2026-10-27T08:48:09.975616+00:00"
+    },
+    {
+      "name": "random_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/pets_selector_scale.json",
+        "--models",
+        "runs/pets-selector-scale-training-v1",
+        "--output",
+        "runs/pets-selector-budget-49-random-v1",
+        "--random-only"
+      ],
+      "code_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "started_utc": "2026-10-27T08:48:09.980995+00:00",
+      "status": "complete",
+      "pid": 1161832,
+      "returncode": 0,
+      "wall_seconds": 24.5411488810023,
+      "completed_utc": "2026-10-27T08:48:34.523486+00:00"
+    },
+    {
+      "name": "shared_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/diagnose_shared_budget.py",
+        "--config",
+        "configs/pets_selector_scale.json",
+        "--source",
+        "runs/pets-selector-scale-eval-v1",
+        "--output",
+        "runs/pets-selector-budget-49-shared-v1"
+      ],
+      "code_commit": "0167341b8eaa5a3c302c0ce9d3125e1d21404dc8",
+      "started_utc": "2026-10-27T08:49:54.814502+00:00",
+      "status": "complete",
+      "pid": 1169414,
+      "returncode": 0,
+      "wall_seconds": 20.094311531996937,
+      "completed_utc": "2026-10-27T08:50:14.909048+00:00"
+    },
+    {
+      "name": "shared_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/diagnose_shared_budget.py",
+        "--config",
+        "configs/pets_selector_budget_98.json",
+        "--source",
+        "runs/pets-selector-budget-98-eval-v1",
+        "--output",
+        "runs/pets-selector-budget-98-shared-v1"
+      ],
+      "code_commit": "0167341b8eaa5a3c302c0ce9d3125e1d21404dc8",
+      "started_utc": "2026-10-27T08:50:14.914962+00:00",
+      "status": "complete",
+      "pid": 1170556,
+      "returncode": 0,
+      "wall_seconds": 3.704827009998553,
+      "completed_utc": "2026-10-27T08:50:18.620659+00:00"
+    },
+    {
+      "name": "shared_147",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/diagnose_shared_budget.py",
+        "--config",
+        "configs/pets_selector_budget_147.json",
+        "--source",
+        "runs/pets-selector-budget-147-eval-v1",
+        "--output",
+        "runs/pets-selector-budget-147-shared-v1"
+      ],
+      "code_commit": "0167341b8eaa5a3c302c0ce9d3125e1d21404dc8",
+      "started_utc": "2026-10-27T08:50:18.624740+00:00",
+      "status": "complete",
+      "pid": 1170826,
+      "returncode": 0,
+      "wall_seconds": 3.8953337220009416,
+      "completed_utc": "2026-10-27T08:50:22.520725+00:00"
+    }
+  ]
+}

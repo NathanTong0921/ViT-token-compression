@@ -1,0 +1,1618 @@
+{
+  "audit_type": "Independent raw NPZ, CSV, manifest, feature-score, Top-k checks and independent statistical reconstruction; experiment analysis functions not imported.",
+  "server_checkout_commit_at_audit": "0167341b8eaa5a3c302c0ce9d3125e1d21404dc8",
+  "budgets": {
+    "49": {
+      "raw": {
+        "references": {
+          "budget": 49,
+          "group": "references",
+          "source": "runs/pets-selector-scale-eval-v1/references",
+          "rows_checked": 71358,
+          "coverage": [
+            {
+              "method": "attention",
+              "seed": -1,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "attention",
+              "seed": -1,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "full_model",
+              "seed": -1,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "full_model",
+              "seed": -1,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "label_informed_teacher",
+              "seed": -1,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "label_informed_teacher",
+              "seed": -1,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            }
+          ],
+          "feature_dimension": 512,
+          "maximum_feature_score_error": 0.0,
+          "maximum_feature_norm_error": 2.384185791015625e-07,
+          "maximum_recomputed_margin_error": 0.0,
+          "correctness_disagreements": 0,
+          "topk_positions_disagreements": 0,
+          "csv_alignment_disagreements": 0,
+          "task_independent_feature_max_difference": 0.0,
+          "maximum_full_model_scores_vs_baseline_error": 0.0,
+          "maximum_full_model_features_vs_baseline_error": 0.0,
+          "test_images_or_tasks_used": false,
+          "elapsed_seconds": 5.625732729997253
+        },
+        "full": {
+          "budget": 49,
+          "group": "full",
+          "source": "runs/pets-selector-scale-eval-v1/full",
+          "rows_checked": 142716,
+          "coverage": [
+            {
+              "method": "conditioned",
+              "seed": 2041,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "conditioned",
+              "seed": 2041,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "conditioned",
+              "seed": 2042,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "conditioned",
+              "seed": 2042,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "conditioned",
+              "seed": 2043,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "conditioned",
+              "seed": 2043,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "image_only",
+              "seed": 2041,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "image_only",
+              "seed": 2041,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "image_only",
+              "seed": 2042,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "image_only",
+              "seed": 2042,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "image_only",
+              "seed": 2043,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "image_only",
+              "seed": 2043,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            }
+          ],
+          "feature_dimension": 512,
+          "maximum_feature_score_error": 0.0,
+          "maximum_feature_norm_error": 2.384185791015625e-07,
+          "maximum_recomputed_margin_error": 0.0,
+          "correctness_disagreements": 0,
+          "topk_positions_disagreements": 0,
+          "csv_alignment_disagreements": 0,
+          "task_independent_feature_max_difference": 0.0,
+          "maximum_full_model_scores_vs_baseline_error": null,
+          "maximum_full_model_features_vs_baseline_error": null,
+          "test_images_or_tasks_used": false,
+          "elapsed_seconds": 10.507897282001068
+        },
+        "random": {
+          "budget": 49,
+          "group": "random",
+          "source": "runs/pets-selector-budget-49-random-v1/random",
+          "rows_checked": 71358,
+          "coverage": [
+            {
+              "method": "random",
+              "seed": 2055,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "random",
+              "seed": 2055,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "random",
+              "seed": 2056,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "random",
+              "seed": 2056,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "random",
+              "seed": 2057,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "random",
+              "seed": 2057,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            }
+          ],
+          "feature_dimension": 512,
+          "maximum_feature_score_error": 0.0,
+          "maximum_feature_norm_error": 1.7881393432617188e-07,
+          "maximum_recomputed_margin_error": 0.0,
+          "correctness_disagreements": 0,
+          "topk_positions_disagreements": 0,
+          "csv_alignment_disagreements": 0,
+          "task_independent_feature_max_difference": 0.0,
+          "maximum_full_model_scores_vs_baseline_error": null,
+          "maximum_full_model_features_vs_baseline_error": null,
+          "test_images_or_tasks_used": false,
+          "elapsed_seconds": 3.54490245299894
+        }
+      },
+      "statistics": {
+        "seen": {
+          "images": 736,
+          "tasks": 532,
+          "rows": 21162,
+          "primary": {
+            "accuracy": {
+              "mean": 0.00036439783669700517,
+              "ci95": [
+                -0.000667467160298326,
+                0.0014463352154396461
+              ],
+              "bonferroni_family_ci95": [
+                -0.0009189048331740852,
+                0.001763533161987678
+              ]
+            },
+            "margin": {
+              "mean": -0.0007182319443426893,
+              "ci95": [
+                -0.001259195683200779,
+                -0.0001885409894868851
+              ],
+              "bonferroni_family_ci95": [
+                -0.0013711334677883622,
+                -4.545192640623089e-05
+              ]
+            }
+          },
+          "method_points": {
+            "attention": {
+              "accuracy": 0.972962010288855,
+              "margin": 0.0907961111138346
+            },
+            "conditioned": {
+              "accuracy": 0.9892749967022549,
+              "margin": 0.11482415650264892
+            },
+            "full_model": {
+              "accuracy": 0.9909898100514174,
+              "margin": 0.1257026737345101
+            },
+            "image_only": {
+              "accuracy": 0.9889105988655583,
+              "margin": 0.11554238844699147
+            },
+            "label_informed_teacher": {
+              "accuracy": 0.9995770676691453,
+              "margin": 0.14124402837837174
+            },
+            "random": {
+              "accuracy": 0.9212579145231271,
+              "margin": 0.07403953308304975
+            }
+          },
+          "per_seed": {
+            "attention": [
+              {
+                "seed": -1,
+                "accuracy": 0.972962010288855,
+                "margin": 0.0907961111138346
+              }
+            ],
+            "conditioned": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9893648595171871,
+                "margin": 0.11424547992366366
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9902329837752006,
+                "margin": 0.11519008923180601
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9882271468143774,
+                "margin": 0.11503690035247675
+              }
+            ],
+            "full_model": [
+              {
+                "seed": -1,
+                "accuracy": 0.9909898100514174,
+                "margin": 0.1257026737345101
+              }
+            ],
+            "image_only": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9890334388602818,
+                "margin": 0.11578476226134411
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9883186584882995,
+                "margin": 0.11467579854510382
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9893796992480935,
+                "margin": 0.11616660453452651
+              }
+            ],
+            "label_informed_teacher": [
+              {
+                "seed": -1,
+                "accuracy": 0.9995770676691453,
+                "margin": 0.14124402837837174
+              }
+            ],
+            "random": [
+              {
+                "seed": 2055,
+                "accuracy": 0.9266101108033036,
+                "margin": 0.07498254181821555
+              },
+              {
+                "seed": 2056,
+                "accuracy": 0.9162470320537984,
+                "margin": 0.07271143655027495
+              },
+              {
+                "seed": 2057,
+                "accuracy": 0.9209166007122875,
+                "margin": 0.07442462088065877
+              }
+            ]
+          }
+        },
+        "unseen": {
+          "images": 716,
+          "tasks": 66,
+          "rows": 2624,
+          "primary": {
+            "accuracy": {
+              "mean": 1.3290802764486832e-05,
+              "ci95": [
+                -0.0021864508622530944,
+                0.002141245153160955
+              ],
+              "bonferroni_family_ci95": [
+                -0.0026031117664197475,
+                0.0024639997125310217
+              ]
+            },
+            "margin": {
+              "mean": -0.0009190760098627042,
+              "ci95": [
+                -0.0015640306711698002,
+                -0.00022797197874399778
+              ],
+              "bonferroni_family_ci95": [
+                -0.001744369395000324,
+                -5.7547306591975836e-05
+              ]
+            }
+          },
+          "method_points": {
+            "attention": {
+              "accuracy": 0.9769537480063684,
+              "margin": 0.09062832312962604
+            },
+            "conditioned": {
+              "accuracy": 0.9899189261031254,
+              "margin": 0.11469279310470878
+            },
+            "full_model": {
+              "accuracy": 0.9926435406698448,
+              "margin": 0.12604220506255837
+            },
+            "image_only": {
+              "accuracy": 0.9899056353003607,
+              "margin": 0.11561186911457144
+            },
+            "label_informed_teacher": {
+              "accuracy": 0.9999999999999881,
+              "margin": 0.14205167268483077
+            },
+            "random": {
+              "accuracy": 0.9243753322700619,
+              "margin": 0.07496067768545331
+            }
+          },
+          "per_seed": {
+            "attention": [
+              {
+                "seed": -1,
+                "accuracy": 0.9769537480063684,
+                "margin": 0.09062832312962604
+              }
+            ],
+            "conditioned": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9898724082934495,
+                "margin": 0.11409210356335353
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.990350877192971,
+                "margin": 0.11536277515013146
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9895334928229551,
+                "margin": 0.11462350060064108
+              }
+            ],
+            "full_model": [
+              {
+                "seed": -1,
+                "accuracy": 0.9926435406698448,
+                "margin": 0.12604220506255837
+              }
+            ],
+            "image_only": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9895135566188082,
+                "margin": 0.11572909898011748
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9895135566188082,
+                "margin": 0.11469824112365923
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9906897926634655,
+                "margin": 0.11640826723993772
+              }
+            ],
+            "label_informed_teacher": [
+              {
+                "seed": -1,
+                "accuracy": 0.9999999999999881,
+                "margin": 0.14205167268483077
+              }
+            ],
+            "random": [
+              {
+                "seed": 2055,
+                "accuracy": 0.9262958532695278,
+                "margin": 0.0760984822388939
+              },
+              {
+                "seed": 2056,
+                "accuracy": 0.9238437001594803,
+                "margin": 0.07283335979288685
+              },
+              {
+                "seed": 2057,
+                "accuracy": 0.9229864433811705,
+                "margin": 0.0759501910245794
+              }
+            ]
+          }
+        }
+      }
+    },
+    "98": {
+      "raw": {
+        "references": {
+          "budget": 98,
+          "group": "references",
+          "source": "runs/pets-selector-budget-98-eval-v1/references",
+          "rows_checked": 71358,
+          "coverage": [
+            {
+              "method": "attention",
+              "seed": -1,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "attention",
+              "seed": -1,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "full_model",
+              "seed": -1,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "full_model",
+              "seed": -1,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "label_informed_teacher",
+              "seed": -1,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "label_informed_teacher",
+              "seed": -1,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            }
+          ],
+          "feature_dimension": 512,
+          "maximum_feature_score_error": 0.0,
+          "maximum_feature_norm_error": 1.7881393432617188e-07,
+          "maximum_recomputed_margin_error": 0.0,
+          "correctness_disagreements": 0,
+          "topk_positions_disagreements": 0,
+          "csv_alignment_disagreements": 0,
+          "task_independent_feature_max_difference": 0.0,
+          "maximum_full_model_scores_vs_baseline_error": 0.0,
+          "maximum_full_model_features_vs_baseline_error": 0.0,
+          "test_images_or_tasks_used": false,
+          "elapsed_seconds": 5.085367181000038
+        },
+        "full": {
+          "budget": 98,
+          "group": "full",
+          "source": "runs/pets-selector-budget-98-eval-v1/full",
+          "rows_checked": 142716,
+          "coverage": [
+            {
+              "method": "conditioned",
+              "seed": 2041,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "conditioned",
+              "seed": 2041,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "conditioned",
+              "seed": 2042,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "conditioned",
+              "seed": 2042,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "conditioned",
+              "seed": 2043,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "conditioned",
+              "seed": 2043,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "image_only",
+              "seed": 2041,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "image_only",
+              "seed": 2041,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "image_only",
+              "seed": 2042,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "image_only",
+              "seed": 2042,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "image_only",
+              "seed": 2043,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "image_only",
+              "seed": 2043,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            }
+          ],
+          "feature_dimension": 512,
+          "maximum_feature_score_error": 0.0,
+          "maximum_feature_norm_error": 2.384185791015625e-07,
+          "maximum_recomputed_margin_error": 0.0,
+          "correctness_disagreements": 0,
+          "topk_positions_disagreements": 0,
+          "csv_alignment_disagreements": 0,
+          "task_independent_feature_max_difference": 0.0,
+          "maximum_full_model_scores_vs_baseline_error": null,
+          "maximum_full_model_features_vs_baseline_error": null,
+          "test_images_or_tasks_used": false,
+          "elapsed_seconds": 7.98211928100136
+        },
+        "random": {
+          "budget": 98,
+          "group": "random",
+          "source": "runs/pets-selector-budget-98-eval-v1/random",
+          "rows_checked": 71358,
+          "coverage": [
+            {
+              "method": "random",
+              "seed": 2055,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "random",
+              "seed": 2055,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "random",
+              "seed": 2056,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "random",
+              "seed": 2056,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "random",
+              "seed": 2057,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "random",
+              "seed": 2057,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            }
+          ],
+          "feature_dimension": 512,
+          "maximum_feature_score_error": 0.0,
+          "maximum_feature_norm_error": 1.7881393432617188e-07,
+          "maximum_recomputed_margin_error": 0.0,
+          "correctness_disagreements": 0,
+          "topk_positions_disagreements": 0,
+          "csv_alignment_disagreements": 0,
+          "task_independent_feature_max_difference": 0.0,
+          "maximum_full_model_scores_vs_baseline_error": null,
+          "maximum_full_model_features_vs_baseline_error": null,
+          "test_images_or_tasks_used": false,
+          "elapsed_seconds": 3.5819942820016877
+        }
+      },
+      "statistics": {
+        "seen": {
+          "images": 736,
+          "tasks": 532,
+          "rows": 21162,
+          "primary": {
+            "accuracy": {
+              "mean": -0.00025145099591082984,
+              "ci95": [
+                -0.0008116700614300041,
+                0.000319856959776226
+              ],
+              "bonferroni_family_ci95": [
+                -0.0009189236739669727,
+                0.00041852497718304323
+              ]
+            },
+            "margin": {
+              "mean": 0.0007352297838890466,
+              "ci95": [
+                0.00045583020776222496,
+                0.0010234397815308768
+              ],
+              "bonferroni_family_ci95": [
+                0.00038502732384327937,
+                0.0010959490697192696
+              ]
+            }
+          },
+          "method_points": {
+            "attention": {
+              "accuracy": 0.9881826276216593,
+              "margin": 0.11276198128615797
+            },
+            "conditioned": {
+              "accuracy": 0.9903154267246794,
+              "margin": 0.1256462970493779
+            },
+            "full_model": {
+              "accuracy": 0.9909898100514174,
+              "margin": 0.1257026737345101
+            },
+            "image_only": {
+              "accuracy": 0.9905668777205904,
+              "margin": 0.12491106726548899
+            },
+            "label_informed_teacher": {
+              "accuracy": 0.9994311436485674,
+              "margin": 0.15770830885261006
+            },
+            "random": {
+              "accuracy": 0.9860061337554142,
+              "margin": 0.11090615239963815
+            }
+          },
+          "per_seed": {
+            "attention": [
+              {
+                "seed": -1,
+                "accuracy": 0.9881826276216593,
+                "margin": 0.11276198128615797
+              }
+            ],
+            "conditioned": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9904654728927313,
+                "margin": 0.12576290520451605
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9902948159873098,
+                "margin": 0.12559753897590484
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9901859912939975,
+                "margin": 0.12557844696771303
+              }
+            ],
+            "full_model": [
+              {
+                "seed": -1,
+                "accuracy": 0.9909898100514174,
+                "margin": 0.1257026737345101
+              }
+            ],
+            "image_only": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9907128017411682,
+                "margin": 0.12506515257689146
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9901365255243103,
+                "margin": 0.1249368887902795
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9908513058962929,
+                "margin": 0.12473116042929608
+              }
+            ],
+            "label_informed_teacher": [
+              {
+                "seed": -1,
+                "accuracy": 0.9994311436485674,
+                "margin": 0.15770830885261006
+              }
+            ],
+            "random": [
+              {
+                "seed": 2055,
+                "accuracy": 0.9872996636327395,
+                "margin": 0.11148109282456348
+              },
+              {
+                "seed": 2056,
+                "accuracy": 0.9861866838147736,
+                "margin": 0.11110651354118256
+              },
+              {
+                "seed": 2057,
+                "accuracy": 0.9845320538187305,
+                "margin": 0.11013085083316837
+              }
+            ]
+          }
+        },
+        "unseen": {
+          "images": 716,
+          "tasks": 66,
+          "rows": 2624,
+          "primary": {
+            "accuracy": {
+              "mean": 0.0003920786815523658,
+              "ci95": [
+                -0.0006359676247730163,
+                0.0017203265773991325
+              ],
+              "bonferroni_family_ci95": [
+                -0.0008820193710445802,
+                0.002062528620260622
+              ]
+            },
+            "margin": {
+              "mean": 0.0005728114006644463,
+              "ci95": [
+                0.00020147081967632698,
+                0.00094990676830783
+              ],
+              "bonferroni_family_ci95": [
+                0.00013453531504554559,
+                0.0010269138220274563
+              ]
+            }
+          },
+          "method_points": {
+            "attention": {
+              "accuracy": 0.9899322169058897,
+              "margin": 0.11284119290034048
+            },
+            "conditioned": {
+              "accuracy": 0.9914805954279524,
+              "margin": 0.12590067803034133
+            },
+            "full_model": {
+              "accuracy": 0.9926435406698448,
+              "margin": 0.12604220506255837
+            },
+            "image_only": {
+              "accuracy": 0.9910885167464001,
+              "margin": 0.12532786662967685
+            },
+            "label_informed_teacher": {
+              "accuracy": 0.9996212121212003,
+              "margin": 0.15800462158252404
+            },
+            "random": {
+              "accuracy": 0.9858253588516636,
+              "margin": 0.1114617326652706
+            }
+          },
+          "per_seed": {
+            "attention": [
+              {
+                "seed": -1,
+                "accuracy": 0.9899322169058897,
+                "margin": 0.11284119290034048
+              }
+            ],
+            "conditioned": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9914673046251878,
+                "margin": 0.12573049108700846
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9915071770334813,
+                "margin": 0.12605357722036029
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9914673046251878,
+                "margin": 0.12591796578365538
+              }
+            ],
+            "full_model": [
+              {
+                "seed": -1,
+                "accuracy": 0.9926435406698448,
+                "margin": 0.12604220506255837
+              }
+            ],
+            "image_only": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9918660287081225,
+                "margin": 0.12547855756799872
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9914673046251878,
+                "margin": 0.12546268061757437
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9899322169058896,
+                "margin": 0.12504236170345764
+              }
+            ],
+            "label_informed_teacher": [
+              {
+                "seed": -1,
+                "accuracy": 0.9996212121212003,
+                "margin": 0.15800462158252404
+              }
+            ],
+            "random": [
+              {
+                "seed": 2055,
+                "accuracy": 0.9880183413078036,
+                "margin": 0.1123618838688704
+              },
+              {
+                "seed": 2056,
+                "accuracy": 0.9869019138755867,
+                "margin": 0.11131736819588994
+              },
+              {
+                "seed": 2057,
+                "accuracy": 0.9825558213715997,
+                "margin": 0.11070594593105149
+              }
+            ]
+          }
+        }
+      }
+    },
+    "147": {
+      "raw": {
+        "references": {
+          "budget": 147,
+          "group": "references",
+          "source": "runs/pets-selector-budget-147-eval-v1/references",
+          "rows_checked": 71358,
+          "coverage": [
+            {
+              "method": "attention",
+              "seed": -1,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "attention",
+              "seed": -1,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "full_model",
+              "seed": -1,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "full_model",
+              "seed": -1,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "label_informed_teacher",
+              "seed": -1,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "label_informed_teacher",
+              "seed": -1,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            }
+          ],
+          "feature_dimension": 512,
+          "maximum_feature_score_error": 0.0,
+          "maximum_feature_norm_error": 1.7881393432617188e-07,
+          "maximum_recomputed_margin_error": 0.0,
+          "correctness_disagreements": 0,
+          "topk_positions_disagreements": 0,
+          "csv_alignment_disagreements": 0,
+          "task_independent_feature_max_difference": 0.0,
+          "maximum_full_model_scores_vs_baseline_error": 0.0,
+          "maximum_full_model_features_vs_baseline_error": 0.0,
+          "test_images_or_tasks_used": false,
+          "elapsed_seconds": 4.98807995399693
+        },
+        "full": {
+          "budget": 147,
+          "group": "full",
+          "source": "runs/pets-selector-budget-147-eval-v1/full",
+          "rows_checked": 142716,
+          "coverage": [
+            {
+              "method": "conditioned",
+              "seed": 2041,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "conditioned",
+              "seed": 2041,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "conditioned",
+              "seed": 2042,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "conditioned",
+              "seed": 2042,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "conditioned",
+              "seed": 2043,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "conditioned",
+              "seed": 2043,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "image_only",
+              "seed": 2041,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "image_only",
+              "seed": 2041,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "image_only",
+              "seed": 2042,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "image_only",
+              "seed": 2042,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "image_only",
+              "seed": 2043,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "image_only",
+              "seed": 2043,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            }
+          ],
+          "feature_dimension": 512,
+          "maximum_feature_score_error": 0.0,
+          "maximum_feature_norm_error": 2.384185791015625e-07,
+          "maximum_recomputed_margin_error": 0.0,
+          "correctness_disagreements": 0,
+          "topk_positions_disagreements": 0,
+          "csv_alignment_disagreements": 0,
+          "task_independent_feature_max_difference": 0.0,
+          "maximum_full_model_scores_vs_baseline_error": null,
+          "maximum_full_model_features_vs_baseline_error": null,
+          "test_images_or_tasks_used": false,
+          "elapsed_seconds": 8.133328299998539
+        },
+        "random": {
+          "budget": 147,
+          "group": "random",
+          "source": "runs/pets-selector-budget-147-eval-v1/random",
+          "rows_checked": 71358,
+          "coverage": [
+            {
+              "method": "random",
+              "seed": 2055,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "random",
+              "seed": 2055,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "random",
+              "seed": 2056,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "random",
+              "seed": 2056,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            },
+            {
+              "method": "random",
+              "seed": 2057,
+              "task_split": "seen",
+              "rows": 21162,
+              "images": 736,
+              "tasks": 532
+            },
+            {
+              "method": "random",
+              "seed": 2057,
+              "task_split": "unseen",
+              "rows": 2624,
+              "images": 716,
+              "tasks": 66
+            }
+          ],
+          "feature_dimension": 512,
+          "maximum_feature_score_error": 0.0,
+          "maximum_feature_norm_error": 1.1920928955078125e-07,
+          "maximum_recomputed_margin_error": 0.0,
+          "correctness_disagreements": 0,
+          "topk_positions_disagreements": 0,
+          "csv_alignment_disagreements": 0,
+          "task_independent_feature_max_difference": 0.0,
+          "maximum_full_model_scores_vs_baseline_error": null,
+          "maximum_full_model_features_vs_baseline_error": null,
+          "test_images_or_tasks_used": false,
+          "elapsed_seconds": 3.6547520790009003
+        }
+      },
+      "statistics": {
+        "seen": {
+          "images": 736,
+          "tasks": 532,
+          "rows": 21162,
+          "primary": {
+            "accuracy": {
+              "mean": -0.0003594512597282681,
+              "ci95": [
+                -0.000749152322438316,
+                -1.4842254903569223e-05
+              ],
+              "bonferroni_family_ci95": [
+                -0.0008194068660469825,
+                5.2640798918362825e-05
+              ]
+            },
+            "margin": {
+              "mean": 8.08259991446202e-05,
+              "ci95": [
+                -0.00010259983897506374,
+                0.00025102344831888566
+              ],
+              "bonferroni_family_ci95": [
+                -0.00014331988077270397,
+                0.0002988446977684829
+              ]
+            }
+          },
+          "method_points": {
+            "attention": {
+              "accuracy": 0.9904209537000128,
+              "margin": 0.12173856075030803
+            },
+            "conditioned": {
+              "accuracy": 0.9907259926130847,
+              "margin": 0.12624470120239764
+            },
+            "full_model": {
+              "accuracy": 0.9909898100514174,
+              "margin": 0.1257026737345101
+            },
+            "image_only": {
+              "accuracy": 0.991085443872813,
+              "margin": 0.12616387520325326
+            },
+            "label_informed_teacher": {
+              "accuracy": 0.9993890977443333,
+              "margin": 0.16065981785576877
+            },
+            "random": {
+              "accuracy": 0.9898487996306287,
+              "margin": 0.12064380579737059
+            }
+          },
+          "per_seed": {
+            "attention": [
+              {
+                "seed": -1,
+                "accuracy": 0.9904209537000128,
+                "margin": 0.12173856075030803
+              }
+            ],
+            "conditioned": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9909032449544645,
+                "margin": 0.12611015484722227
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9905668777205903,
+                "margin": 0.12639448994733238
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9907078551641995,
+                "margin": 0.12622945881263847
+              }
+            ],
+            "full_model": [
+              {
+                "seed": -1,
+                "accuracy": 0.9909898100514174,
+                "margin": 0.1257026737345101
+              }
+            ],
+            "image_only": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9913162841313541,
+                "margin": 0.12612551856693102
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9908513058962929,
+                "margin": 0.12619544498656718
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9910887415907922,
+                "margin": 0.1261706620562606
+              }
+            ],
+            "label_informed_teacher": [
+              {
+                "seed": -1,
+                "accuracy": 0.9993890977443333,
+                "margin": 0.16065981785576877
+              }
+            ],
+            "random": [
+              {
+                "seed": 2055,
+                "accuracy": 0.9897234863474207,
+                "margin": 0.12063749708901261
+              },
+              {
+                "seed": 2056,
+                "accuracy": 0.9901365255243102,
+                "margin": 0.12056063291687755
+              },
+              {
+                "seed": 2057,
+                "accuracy": 0.9896863870201551,
+                "margin": 0.12073328738622119
+              }
+            ]
+          }
+        },
+        "unseen": {
+          "images": 716,
+          "tasks": 66,
+          "rows": 2624,
+          "primary": {
+            "accuracy": {
+              "mean": -0.0006313131313131314,
+              "ci95": [
+                -0.0014070307905546357,
+                -0.00012461966423405794
+              ],
+              "bonferroni_family_ci95": [
+                -0.0016173411305113376,
+                0.0
+              ]
+            },
+            "margin": {
+              "mean": 0.00017296429081004337,
+              "ci95": [
+                -0.00010581300805907101,
+                0.00043910385330951337
+              ],
+              "bonferroni_family_ci95": [
+                -0.0001881414657607586,
+                0.0004825552531539753
+              ]
+            }
+          },
+          "method_points": {
+            "attention": {
+              "accuracy": 0.9915071770334813,
+              "margin": 0.12177148800768234
+            },
+            "conditioned": {
+              "accuracy": 0.9911018075491644,
+              "margin": 0.12674311086452755
+            },
+            "full_model": {
+              "accuracy": 0.9926435406698448,
+              "margin": 0.12604220506255837
+            },
+            "image_only": {
+              "accuracy": 0.9917331206804776,
+              "margin": 0.12657014657371757
+            },
+            "label_informed_teacher": {
+              "accuracy": 0.9992224880382656,
+              "margin": 0.1613742374944795
+            },
+            "random": {
+              "accuracy": 0.9909688995215198,
+              "margin": 0.12098992508096056
+            }
+          },
+          "per_seed": {
+            "attention": [
+              {
+                "seed": -1,
+                "accuracy": 0.9915071770334813,
+                "margin": 0.12177148800768234
+              }
+            ],
+            "conditioned": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9907296650717589,
+                "margin": 0.12666849275223813
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9911084529505467,
+                "margin": 0.12686144469568383
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9914673046251878,
+                "margin": 0.12669939514566073
+              }
+            ],
+            "full_model": [
+              {
+                "seed": -1,
+                "accuracy": 0.9926435406698448,
+                "margin": 0.12604220506255837
+              }
+            ],
+            "image_only": [
+              {
+                "seed": 2041,
+                "accuracy": 0.9918460925039757,
+                "margin": 0.12638064432645596
+              },
+              {
+                "seed": 2042,
+                "accuracy": 0.9914872408293346,
+                "margin": 0.12665173994926765
+              },
+              {
+                "seed": 2043,
+                "accuracy": 0.9918660287081225,
+                "margin": 0.1266780554454288
+              }
+            ],
+            "label_informed_teacher": [
+              {
+                "seed": -1,
+                "accuracy": 0.9992224880382656,
+                "margin": 0.1613742374944795
+              }
+            ],
+            "random": [
+              {
+                "seed": 2055,
+                "accuracy": 0.9903309409888242,
+                "margin": 0.12090708565515473
+              },
+              {
+                "seed": 2056,
+                "accuracy": 0.9907097288676121,
+                "margin": 0.12094102912094945
+              },
+              {
+                "seed": 2057,
+                "accuracy": 0.9918660287081225,
+                "margin": 0.12112166046677757
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "random_nested_set_checks": [
+    {
+      "seed": 2055,
+      "images": 736,
+      "rank_scores_exact_across_budgets": true,
+      "sets_nested_49_98_147": true
+    },
+    {
+      "seed": 2056,
+      "images": 736,
+      "rank_scores_exact_across_budgets": true,
+      "sets_nested_49_98_147": true
+    },
+    {
+      "seed": 2057,
+      "images": 736,
+      "rank_scores_exact_across_budgets": true,
+      "sets_nested_49_98_147": true
+    }
+  ],
+  "aggregation": "Equal tasks and equal class sides; average paired fixed seeds before image-cluster numerator/denominator ratio bootstrap; 2000 draws at seed 2052.",
+  "maximum_point_difference_from_analysis": 2.3869795029440866e-14,
+  "maximum_pointwise_ci_difference_from_analysis": 1.734723475976807e-18,
+  "maximum_bonferroni_ci_difference_from_analysis": 2.3852447794681098e-18,
+  "candidate_order_invariance": {
+    "test_file": "tests/test_selector.py",
+    "server_cpu_tests_passed": 5,
+    "exact_candidate_order_reversal_check_passed": true,
+    "gpu_used": false
+  },
+  "official_test_used": false,
+  "status": "passed",
+  "random_seed_reconstruction": [
+    {
+      "seed": 2055,
+      "images": 736,
+      "budgets": [
+        49,
+        98,
+        147
+      ],
+      "exact_scores_match_declared_rng_seed": true
+    },
+    {
+      "seed": 2056,
+      "images": 736,
+      "budgets": [
+        49,
+        98,
+        147
+      ],
+      "exact_scores_match_declared_rng_seed": true
+    },
+    {
+      "seed": 2057,
+      "images": 736,
+      "budgets": [
+        49,
+        98,
+        147
+      ],
+      "exact_scores_match_declared_rng_seed": true
+    }
+  ]
+}

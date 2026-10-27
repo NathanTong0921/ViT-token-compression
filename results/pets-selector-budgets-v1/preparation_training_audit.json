@@ -1,0 +1,415 @@
+{
+  "audited_utc": "2026-10-27T08:47:47.601918+00:00",
+  "status": "passed",
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "1.26.4",
+    "torch": "2.6.0+cu124",
+    "device": "cpu"
+  },
+  "scope": "Independent read-only CPU audit of 98/147-token teacher caches, sampling streams, training histories and all twelve final selector checkpoints. No GPU reruns or final-test data were used.",
+  "ridge_reconstruction_method": "Center mask columns and class responses; standardize mask columns; solve (Z.T Z + n*0.01*I) B = Z.T(Y - mean(Y)); rescale each coefficient by its mask standard deviation and recover the unpenalized intercept. This differs algebraically from the production precomputed projection.",
+  "ridge_numeric_tolerance": 1e-10,
+  "budgets": {
+    "98": {
+      "budget": 98,
+      "preparation_source_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "training_source_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "splits": {
+        "train": {
+          "images": 2944,
+          "tasks": 532,
+          "classes": 37,
+          "prefix_shape": [
+            2944,
+            197,
+            768
+          ],
+          "prefix_reuses_exact_source_file": true,
+          "full_evidence_exact_source": true,
+          "all_arrays_finite": true,
+          "mask_count": 512,
+          "tokens_per_mask": 98,
+          "mask_bank_independently_reconstructed_exact": true,
+          "all_responses_available": true,
+          "all_teachers_new_at_budget": true,
+          "saved_gpu_identity_check": {
+            "images_checked": 2944,
+            "max_feature_error_vs_source": 0.0,
+            "prediction_disagreements_37class_vs_source": 0
+          },
+          "ridge_recomputations": [
+            {
+              "image_id": "Abyssinian_1",
+              "max_coefficient_error": 3.185385982762412e-16,
+              "max_intercept_error": 1.3322676295501878e-14
+            },
+            {
+              "image_id": "english_cocker_spaniel_147",
+              "max_coefficient_error": 2.3418766925686896e-16,
+              "max_intercept_error": 9.658940314238862e-15
+            },
+            {
+              "image_id": "yorkshire_terrier_190",
+              "max_coefficient_error": 2.7189079980505237e-16,
+              "max_intercept_error": 1.1435297153639112e-14
+            }
+          ]
+        },
+        "val": {
+          "images": 736,
+          "tasks": 66,
+          "classes": 37,
+          "prefix_shape": [
+            736,
+            197,
+            768
+          ],
+          "prefix_reuses_exact_source_file": true,
+          "full_evidence_exact_source": true,
+          "all_arrays_finite": true,
+          "mask_count": 512,
+          "tokens_per_mask": 98,
+          "mask_bank_independently_reconstructed_exact": true,
+          "all_responses_available": true,
+          "all_teachers_new_at_budget": true,
+          "saved_gpu_identity_check": {
+            "images_checked": 736,
+            "max_feature_error_vs_source": 0.0,
+            "prediction_disagreements_37class_vs_source": 0
+          },
+          "ridge_recomputations": [
+            {
+              "image_id": "Abyssinian_100",
+              "max_coefficient_error": 2.3809079707781677e-16,
+              "max_intercept_error": 9.547918011776346e-15
+            },
+            {
+              "image_id": "english_cocker_spaniel_155",
+              "max_coefficient_error": 2.8514517136368767e-16,
+              "max_intercept_error": 1.071365218763276e-14
+            },
+            {
+              "image_id": "yorkshire_terrier_187",
+              "max_coefficient_error": 2.719179048593645e-16,
+              "max_intercept_error": 1.099120794378905e-14
+            }
+          ]
+        }
+      },
+      "scope": "Read-only CPU cache, saved-response ridge, sampling and final-checkpoint audit; no GPU inference or training rerun.",
+      "partitions_exact_and_official_test_excluded": true,
+      "core_training_settings_exact_49_baseline": {
+        "model": "ViT-B/16",
+        "prune_after": 6,
+        "hidden_dim": 128,
+        "batch_size": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.01,
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "temperature": 1.0,
+        "training_steps": 3990,
+        "checkpoint_interval": 133,
+        "probe_count": 512,
+        "ridge": 0.01
+      },
+      "sampling_reconstruction": [
+        {
+          "seed": 2041,
+          "draws": 510720,
+          "unique_images": 2944,
+          "image_draw_count_min": 118,
+          "image_draw_count_max": 242,
+          "counts_and_first_batch_independently_exact": true,
+          "exact_49_baseline_sampling": true
+        },
+        {
+          "seed": 2042,
+          "draws": 510720,
+          "unique_images": 2944,
+          "image_draw_count_min": 115,
+          "image_draw_count_max": 242,
+          "counts_and_first_batch_independently_exact": true,
+          "exact_49_baseline_sampling": true
+        },
+        {
+          "seed": 2043,
+          "draws": 510720,
+          "unique_images": 2944,
+          "image_draw_count_min": 117,
+          "image_draw_count_max": 259,
+          "counts_and_first_batch_independently_exact": true,
+          "exact_49_baseline_sampling": true
+        }
+      ],
+      "checkpoints": [
+        {
+          "seed": 2041,
+          "arm": "conditioned",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.46081925370231125,
+          "final_val_kl": 0.950525994175277
+        },
+        {
+          "seed": 2041,
+          "arm": "image_only",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.5946567579585799,
+          "final_val_kl": 0.9662382416250378
+        },
+        {
+          "seed": 2042,
+          "arm": "conditioned",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.46967604146197245,
+          "final_val_kl": 0.9700017476527903
+        },
+        {
+          "seed": 2042,
+          "arm": "image_only",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.5989900043626688,
+          "final_val_kl": 0.990744106327904
+        },
+        {
+          "seed": 2043,
+          "arm": "conditioned",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.45603006685461617,
+          "final_val_kl": 0.9771892287218839
+        },
+        {
+          "seed": 2043,
+          "arm": "image_only",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.5845365578164259,
+          "final_val_kl": 0.9673995877451234
+        }
+      ],
+      "initial_state_evidence": "Training code asserts a shared initial tensor state per seed and both arms; initial checkpoints are not separately saved. The audit independently verifies identical full-panel sampling with the 49-token baseline and all final configurations/capacities.",
+      "passed": true
+    },
+    "147": {
+      "budget": 147,
+      "preparation_source_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "training_source_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+      "splits": {
+        "train": {
+          "images": 2944,
+          "tasks": 532,
+          "classes": 37,
+          "prefix_shape": [
+            2944,
+            197,
+            768
+          ],
+          "prefix_reuses_exact_source_file": true,
+          "full_evidence_exact_source": true,
+          "all_arrays_finite": true,
+          "mask_count": 512,
+          "tokens_per_mask": 147,
+          "mask_bank_independently_reconstructed_exact": true,
+          "all_responses_available": true,
+          "all_teachers_new_at_budget": true,
+          "saved_gpu_identity_check": {
+            "images_checked": 2944,
+            "max_feature_error_vs_source": 0.0,
+            "prediction_disagreements_37class_vs_source": 0
+          },
+          "ridge_recomputations": [
+            {
+              "image_id": "Abyssinian_1",
+              "max_coefficient_error": 4.73322010925703e-16,
+              "max_intercept_error": 4.785061236134425e-14
+            },
+            {
+              "image_id": "english_cocker_spaniel_147",
+              "max_coefficient_error": 3.6651454440872477e-16,
+              "max_intercept_error": 3.702593787124897e-14
+            },
+            {
+              "image_id": "yorkshire_terrier_190",
+              "max_coefficient_error": 4.0196795544900077e-16,
+              "max_intercept_error": 4.04121180963557e-14
+            }
+          ]
+        },
+        "val": {
+          "images": 736,
+          "tasks": 66,
+          "classes": 37,
+          "prefix_shape": [
+            736,
+            197,
+            768
+          ],
+          "prefix_reuses_exact_source_file": true,
+          "full_evidence_exact_source": true,
+          "all_arrays_finite": true,
+          "mask_count": 512,
+          "tokens_per_mask": 147,
+          "mask_bank_independently_reconstructed_exact": true,
+          "all_responses_available": true,
+          "all_teachers_new_at_budget": true,
+          "saved_gpu_identity_check": {
+            "images_checked": 736,
+            "max_feature_error_vs_source": 0.0,
+            "prediction_disagreements_37class_vs_source": 0
+          },
+          "ridge_recomputations": [
+            {
+              "image_id": "Abyssinian_100",
+              "max_coefficient_error": 3.640750895206324e-16,
+              "max_intercept_error": 3.6415315207705135e-14
+            },
+            {
+              "image_id": "english_cocker_spaniel_155",
+              "max_coefficient_error": 4.1275576706523154e-16,
+              "max_intercept_error": 4.18554080283684e-14
+            },
+            {
+              "image_id": "yorkshire_terrier_187",
+              "max_coefficient_error": 4.174720465155435e-16,
+              "max_intercept_error": 4.013456234019941e-14
+            }
+          ]
+        }
+      },
+      "scope": "Read-only CPU cache, saved-response ridge, sampling and final-checkpoint audit; no GPU inference or training rerun.",
+      "partitions_exact_and_official_test_excluded": true,
+      "core_training_settings_exact_49_baseline": {
+        "model": "ViT-B/16",
+        "prune_after": 6,
+        "hidden_dim": 128,
+        "batch_size": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.01,
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "temperature": 1.0,
+        "training_steps": 3990,
+        "checkpoint_interval": 133,
+        "probe_count": 512,
+        "ridge": 0.01
+      },
+      "sampling_reconstruction": [
+        {
+          "seed": 2041,
+          "draws": 510720,
+          "unique_images": 2944,
+          "image_draw_count_min": 118,
+          "image_draw_count_max": 242,
+          "counts_and_first_batch_independently_exact": true,
+          "exact_49_baseline_sampling": true
+        },
+        {
+          "seed": 2042,
+          "draws": 510720,
+          "unique_images": 2944,
+          "image_draw_count_min": 115,
+          "image_draw_count_max": 242,
+          "counts_and_first_batch_independently_exact": true,
+          "exact_49_baseline_sampling": true
+        },
+        {
+          "seed": 2043,
+          "draws": 510720,
+          "unique_images": 2944,
+          "image_draw_count_min": 117,
+          "image_draw_count_max": 259,
+          "counts_and_first_batch_independently_exact": true,
+          "exact_49_baseline_sampling": true
+        }
+      ],
+      "checkpoints": [
+        {
+          "seed": 2041,
+          "arm": "conditioned",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.583349843502317,
+          "final_val_kl": 1.2401149222185017
+        },
+        {
+          "seed": 2041,
+          "arm": "image_only",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.731758097392419,
+          "final_val_kl": 1.2861873624494309
+        },
+        {
+          "seed": 2042,
+          "arm": "conditioned",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.5725887256699139,
+          "final_val_kl": 1.2916522333588587
+        },
+        {
+          "seed": 2042,
+          "arm": "image_only",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.729230569875311,
+          "final_val_kl": 1.273437687745496
+        },
+        {
+          "seed": 2043,
+          "arm": "conditioned",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.5704689289134789,
+          "final_val_kl": 1.272970880481078
+        },
+        {
+          "seed": 2043,
+          "arm": "image_only",
+          "parameters": 348033,
+          "step": 3990,
+          "saved_tensors_finite": true,
+          "curve_complete_points": 31,
+          "final_train_kl": 0.7342316662988776,
+          "final_val_kl": 1.2903999690637453
+        }
+      ],
+      "initial_state_evidence": "Training code asserts a shared initial tensor state per seed and both arms; initial checkpoints are not separately saved. The audit independently verifies identical full-panel sampling with the 49-token baseline and all final configurations/capacities.",
+      "passed": true
+    }
+  }
+}

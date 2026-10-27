@@ -1,0 +1,78 @@
+{
+  "started_utc": "2026-10-27T08:49:54.809159+00:00",
+  "pid": 1169412,
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "4",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "stages": [
+    {
+      "name": "shared_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/diagnose_shared_budget.py",
+        "--config",
+        "configs/pets_selector_scale.json",
+        "--source",
+        "runs/pets-selector-scale-eval-v1",
+        "--output",
+        "runs/pets-selector-budget-49-shared-v1"
+      ],
+      "code_commit": "0167341b8eaa5a3c302c0ce9d3125e1d21404dc8",
+      "started_utc": "2026-10-27T08:49:54.814502+00:00",
+      "status": "complete",
+      "pid": 1169414,
+      "returncode": 0,
+      "wall_seconds": 20.094311531996937,
+      "completed_utc": "2026-10-27T08:50:14.909048+00:00"
+    },
+    {
+      "name": "shared_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/diagnose_shared_budget.py",
+        "--config",
+        "configs/pets_selector_budget_98.json",
+        "--source",
+        "runs/pets-selector-budget-98-eval-v1",
+        "--output",
+        "runs/pets-selector-budget-98-shared-v1"
+      ],
+      "code_commit": "0167341b8eaa5a3c302c0ce9d3125e1d21404dc8",
+      "started_utc": "2026-10-27T08:50:14.914962+00:00",
+      "status": "complete",
+      "pid": 1170556,
+      "returncode": 0,
+      "wall_seconds": 3.704827009998553,
+      "completed_utc": "2026-10-27T08:50:18.620659+00:00"
+    },
+    {
+      "name": "shared_147",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/diagnose_shared_budget.py",
+        "--config",
+        "configs/pets_selector_budget_147.json",
+        "--source",
+        "runs/pets-selector-budget-147-eval-v1",
+        "--output",
+        "runs/pets-selector-budget-147-shared-v1"
+      ],
+      "code_commit": "0167341b8eaa5a3c302c0ce9d3125e1d21404dc8",
+      "started_utc": "2026-10-27T08:50:18.624740+00:00",
+      "status": "complete",
+      "pid": 1170826,
+      "returncode": 0,
+      "wall_seconds": 3.8953337220009416,
+      "completed_utc": "2026-10-27T08:50:22.520725+00:00"
+    }
+  ],
+  "status": "complete",
+  "current_stage": "shared_147",
+  "completed_utc": "2026-10-27T08:50:22.521717+00:00"
+}

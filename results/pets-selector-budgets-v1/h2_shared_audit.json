@@ -1,0 +1,337 @@
+{
+  "status": "passed",
+  "reviewed_utc": "2026-10-27T08:56:37.265555+00:00",
+  "code_commit": "0167341b8eaa5a3c302c0ce9d3125e1d21404dc8",
+  "scope": "Independent CPU reconstruction of H2 fits/CV and shared-library optima; no model training or GPU operations.",
+  "h2": {
+    "49": {
+      "images": 616,
+      "task_pairs": 4315,
+      "primary": {
+        "slope": 0.0009708716825964862,
+        "rank": 7,
+        "columns": 7,
+        "condition_number": 31.039030263604,
+        "bootstrap_rank_deficient": 0,
+        "ci_familywise_three_budgets": [
+          0.0007114353440061276,
+          0.0012581535080699005
+        ]
+      },
+      "image_fixed_effects": {
+        "slope": 0.0012549735966921863,
+        "rank": 6,
+        "columns": 6,
+        "condition_number": 18.019269738226313,
+        "bootstrap_rank_deficient": 0,
+        "ci_familywise_three_budgets": [
+          0.0009617121504734576,
+          0.0015613068384392162
+        ]
+      },
+      "per_seed": [
+        {
+          "seed": 2041,
+          "primary_slope": 0.0009169918861959372,
+          "within_image_slope": 0.0010590587815033827
+        },
+        {
+          "seed": 2042,
+          "primary_slope": 0.0009365854314861436,
+          "within_image_slope": 0.0014089980830947438
+        },
+        {
+          "seed": 2043,
+          "primary_slope": 0.001059037730107375,
+          "within_image_slope": 0.0012968639254784342
+        }
+      ],
+      "held_image_cv": {
+        "fixed_fold_prediction_max_abs_error": 0.0,
+        "incremental_r2": 0.023995678208913462,
+        "ci95": [
+          0.01269674558880248,
+          0.03592403495837424
+        ],
+        "all_folds_image_disjoint": true,
+        "uncertainty": "Resampled fixed cross-fitted predictions; fitting variability not resampled."
+      },
+      "alignment": {
+        "minimum_displacement": 0.012448206604643295,
+        "excluded_at_1e12_and_1e6": 0,
+        "primary": {
+          "slope": 0.012742735904911165,
+          "rank": 7,
+          "columns": 7,
+          "condition_number": 31.039030263604,
+          "bootstrap_rank_deficient": 0,
+          "ci_familywise_three_budgets": [
+            0.009005183871197787,
+            0.01664235617755815
+          ]
+        },
+        "image_fixed_effects": {
+          "slope": 0.014256246233097907,
+          "rank": 6,
+          "columns": 6,
+          "condition_number": 18.019269738226313,
+          "bootstrap_rank_deficient": 0,
+          "ci_familywise_three_budgets": [
+            0.010462455215957924,
+            0.018448967294636718
+          ]
+        }
+      },
+      "identity_max_abs_error": 3.469446951953614e-17
+    },
+    "98": {
+      "images": 616,
+      "task_pairs": 4315,
+      "primary": {
+        "slope": 0.000462166253789989,
+        "rank": 7,
+        "columns": 7,
+        "condition_number": 31.039030263604,
+        "bootstrap_rank_deficient": 0,
+        "ci_familywise_three_budgets": [
+          0.00028631426844580467,
+          0.0006341312024945316
+        ]
+      },
+      "image_fixed_effects": {
+        "slope": 0.0007308351256888356,
+        "rank": 6,
+        "columns": 6,
+        "condition_number": 18.019269738226313,
+        "bootstrap_rank_deficient": 0,
+        "ci_familywise_three_budgets": [
+          0.0005310108329985116,
+          0.0009517225159767389
+        ]
+      },
+      "per_seed": [
+        {
+          "seed": 2041,
+          "primary_slope": 0.0006110639876918635,
+          "within_image_slope": 0.0006684021336365641
+        },
+        {
+          "seed": 2042,
+          "primary_slope": 0.0004577678822302562,
+          "within_image_slope": 0.0006426635607092531
+        },
+        {
+          "seed": 2043,
+          "primary_slope": 0.00031766689144784727,
+          "within_image_slope": 0.0008814396827206868
+        }
+      ],
+      "held_image_cv": {
+        "fixed_fold_prediction_max_abs_error": 0.0,
+        "incremental_r2": 0.011374066780625552,
+        "ci95": [
+          0.003835512465757701,
+          0.020642386490334997
+        ],
+        "all_folds_image_disjoint": true,
+        "uncertainty": "Resampled fixed cross-fitted predictions; fitting variability not resampled."
+      },
+      "alignment": {
+        "minimum_displacement": 0.015163791240995003,
+        "excluded_at_1e12_and_1e6": 0,
+        "primary": {
+          "slope": 0.007771508261489244,
+          "rank": 7,
+          "columns": 7,
+          "condition_number": 31.039030263604,
+          "bootstrap_rank_deficient": 0,
+          "ci_familywise_three_budgets": [
+            0.004122621863879455,
+            0.011180422337456038
+          ]
+        },
+        "image_fixed_effects": {
+          "slope": 0.010386095731916754,
+          "rank": 6,
+          "columns": 6,
+          "condition_number": 18.019269738226313,
+          "bootstrap_rank_deficient": 0,
+          "ci_familywise_three_budgets": [
+            0.006793746815642961,
+            0.013845633322743994
+          ]
+        }
+      },
+      "identity_max_abs_error": 2.7755575615628914e-17
+    },
+    "147": {
+      "images": 616,
+      "task_pairs": 4315,
+      "primary": {
+        "slope": 0.0001705333618089185,
+        "rank": 7,
+        "columns": 7,
+        "condition_number": 31.039030263604,
+        "bootstrap_rank_deficient": 0,
+        "ci_familywise_three_budgets": [
+          8.297011386561701e-05,
+          0.0002607473601946519
+        ]
+      },
+      "image_fixed_effects": {
+        "slope": 0.00018033623132847362,
+        "rank": 6,
+        "columns": 6,
+        "condition_number": 18.019269738226313,
+        "bootstrap_rank_deficient": 0,
+        "ci_familywise_three_budgets": [
+          9.454231985646353e-05,
+          0.0002725959660585477
+        ]
+      },
+      "per_seed": [
+        {
+          "seed": 2041,
+          "primary_slope": 0.00014134800425192023,
+          "within_image_slope": 0.0001334393737285952
+        },
+        {
+          "seed": 2042,
+          "primary_slope": 0.0001603530794044134,
+          "within_image_slope": 0.00022354985864463112
+        },
+        {
+          "seed": 2043,
+          "primary_slope": 0.00020989900177042264,
+          "within_image_slope": 0.0001840194616121949
+        }
+      ],
+      "held_image_cv": {
+        "fixed_fold_prediction_max_abs_error": 0.0,
+        "incremental_r2": 0.006163101873362677,
+        "ci95": [
+          0.0005788810161054397,
+          0.012617980728582614
+        ],
+        "all_folds_image_disjoint": true,
+        "uncertainty": "Resampled fixed cross-fitted predictions; fitting variability not resampled."
+      },
+      "alignment": {
+        "minimum_displacement": 0.008283849891237028,
+        "excluded_at_1e12_and_1e6": 0,
+        "primary": {
+          "slope": 0.005252287859598356,
+          "rank": 7,
+          "columns": 7,
+          "condition_number": 31.039030263604,
+          "bootstrap_rank_deficient": 0,
+          "ci_familywise_three_budgets": [
+            0.0023614613373628287,
+            0.007985128480173529
+          ]
+        },
+        "image_fixed_effects": {
+          "slope": 0.00483433532373459,
+          "rank": 6,
+          "columns": 6,
+          "condition_number": 18.019269738226313,
+          "bootstrap_rank_deficient": 0,
+          "ci_familywise_three_budgets": [
+            0.0019413166383955068,
+            0.00776289316766047
+          ]
+        }
+      },
+      "identity_max_abs_error": 2.5587171270657905e-17
+    }
+  },
+  "shared": {
+    "49": {
+      "images": 616,
+      "task_pairs": 4315,
+      "library_size": 524,
+      "full_library_optima_and_selected_positions_reconstructed": true,
+      "minimum_separate_minus_shared_margin": 0.0,
+      "weak_domination_violations": 0,
+      "metrics": {
+        "separate_margin": 0.15284655885372667,
+        "shared_margin": 0.14666464830703616,
+        "separate_minus_shared_margin": 0.006181910546690538,
+        "separate_accuracy": 1.0,
+        "shared_accuracy": 0.9984307359307358,
+        "shared_both_correct": 0.9968614718614718,
+        "any_shared_both_correct": 0.9994588744588744,
+        "teacher_margin": 0.1423263406940569,
+        "teacher_accuracy": 1.0,
+        "teacher_minus_shared_margin": -0.004338307612979258,
+        "teacher_minus_shared_accuracy": 0.001569264069264069
+      },
+      "probe_supplement": {
+        "images": 144,
+        "seconds": 12.908744321000995,
+        "suffix_examples": 73728,
+        "coefficient_max_abs_error": 0.0,
+        "intercept_max_abs_error": 0.0,
+        "source_teacher_modified": false
+      }
+    },
+    "98": {
+      "images": 616,
+      "task_pairs": 4315,
+      "library_size": 524,
+      "full_library_optima_and_selected_positions_reconstructed": true,
+      "minimum_separate_minus_shared_margin": 0.0,
+      "weak_domination_violations": 0,
+      "metrics": {
+        "separate_margin": 0.1631360283228839,
+        "shared_margin": 0.15673037582481814,
+        "separate_minus_shared_margin": 0.006405652498065756,
+        "separate_accuracy": 0.9997294372294373,
+        "shared_accuracy": 0.9974837662337661,
+        "shared_both_correct": 0.9949675324675327,
+        "any_shared_both_correct": 0.9994588744588744,
+        "teacher_margin": 0.15840353912299773,
+        "teacher_accuracy": 0.9994588744588744,
+        "teacher_minus_shared_margin": 0.0016731632981796197,
+        "teacher_minus_shared_accuracy": 0.0019751082251082248
+      },
+      "probe_supplement": {
+        "images": 0,
+        "seconds": 0.0,
+        "suffix_examples": 0
+      }
+    },
+    "147": {
+      "images": 616,
+      "task_pairs": 4315,
+      "library_size": 524,
+      "full_library_optima_and_selected_positions_reconstructed": true,
+      "minimum_separate_minus_shared_margin": 0.0,
+      "weak_domination_violations": 0,
+      "metrics": {
+        "separate_margin": 0.1632681732884411,
+        "shared_margin": 0.15637519738416217,
+        "separate_minus_shared_margin": 0.00689297590427892,
+        "separate_accuracy": 0.9994588744588744,
+        "shared_accuracy": 0.9970238095238094,
+        "shared_both_correct": 0.994047619047619,
+        "any_shared_both_correct": 0.9989177489177488,
+        "teacher_margin": 0.1619022399936125,
+        "teacher_accuracy": 0.9991341991341992,
+        "teacher_minus_shared_margin": 0.005527042609450331,
+        "teacher_minus_shared_accuracy": 0.0021103896103896107
+      },
+      "probe_supplement": {
+        "images": 0,
+        "seconds": 0.0,
+        "suffix_examples": 0
+      }
+    }
+  },
+  "interpretation": {
+    "h2": "Positive, difficulty-adjusted predictive association in learned selector exchanges across the same development panel; robust to image fixed effects and all fixed seeds, with modest positive held-image prediction gains. This is not a causal angle intervention, final-test confirmation, or evidence that conditioning beats a strong shared selector.",
+    "identity": "The loss/displacement/sin-half-angle/alignment equality follows algebraically. Positive normalized-alignment slopes go beyond merely observing that equality, but remain descriptive associations and do not identify a causal mechanism.",
+    "shared": "Separate choices weakly dominate the shared mean-margin optimum by construction within the same finite library. That fact alone is not a novel empirical finding. The magnitude and existence of shared masks that classify both tasks correctly are informative diagnostics; none is deployable because labels are used.",
+    "scope": "All uncertainty conditions on this task collection and fixed training seeds; CV intervals resample fixed predictions rather than refitting."
+  }
+}

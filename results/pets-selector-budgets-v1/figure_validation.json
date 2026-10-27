@@ -1,0 +1,16 @@
+{
+  "figures": [
+    "budget_comparison",
+    "conditioning_by_budget",
+    "exchange_by_budget",
+    "geometry/h2_geometry"
+  ],
+  "formats": [
+    "png",
+    "pdf"
+  ],
+  "source": "Saved analysis.json, exchange_analysis.json and geometry/analysis.json; no GPU rerun.",
+  "visual_checks": "All four PNGs inspected: titles, legends, axes, error bars and labels legible; no clipping or overlap.",
+  "interpretation": "Delta plots distinguish pointwise95% from three-budget adjusted intervals; H2 held-image prediction is development-only.",
+  "date": "2026-10-27"
+}

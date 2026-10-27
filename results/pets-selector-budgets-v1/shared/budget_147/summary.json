@@ -1,0 +1,115 @@
+{
+  "code_commit": "0167341b8eaa5a3c302c0ce9d3125e1d21404dc8",
+  "budget": 147,
+  "evaluation_source": "runs/pets-selector-budget-147-eval-v1",
+  "teacher_cache": "runs/pets-selector-budget-147-supervision-v1",
+  "image_count": 616,
+  "task_pair_count": 4315,
+  "aggregation": "Equal image weights, then equal unordered task-pair weights within image; image-cluster intervals.",
+  "candidate_library": {
+    "probe_masks": 512,
+    "extras_order": [
+      "task_A_teacher",
+      "task_B_teacher",
+      "attention",
+      "image_only_seed_2041",
+      "image_only_seed_2042",
+      "image_only_seed_2043",
+      "conditioned_task_A_seed_2041",
+      "conditioned_task_B_seed_2041",
+      "conditioned_task_A_seed_2042",
+      "conditioned_task_B_seed_2042",
+      "conditioned_task_A_seed_2043",
+      "conditioned_task_B_seed_2043"
+    ],
+    "size_with_possible_duplicates": 524,
+    "same_library_for_shared_and_separate": true
+  },
+  "scope": "Label-informed measured-library diagnostic. Separate mean-margin advantage is nonnegative by construction, not a deployable improvement or a global optimum.",
+  "metrics": {
+    "separate_margin": {
+      "mean": 0.16326817328844123,
+      "ci95": [
+        0.16058368333255893,
+        0.16558643555220814
+      ]
+    },
+    "shared_margin": {
+      "mean": 0.15637519738416217,
+      "ci95": [
+        0.15364436189314448,
+        0.1587307110780256
+      ]
+    },
+    "separate_minus_shared_margin": {
+      "mean": 0.0068929759042789225,
+      "ci95": [
+        0.006607153047714196,
+        0.007180914408069194
+      ]
+    },
+    "separate_accuracy": {
+      "mean": 0.9994588744588744,
+      "ci95": [
+        0.9983766233766231,
+        1.0
+      ]
+    },
+    "shared_accuracy": {
+      "mean": 0.9970238095238094,
+      "ci95": [
+        0.9948593073593074,
+        0.9987824675324676
+      ]
+    },
+    "shared_both_correct": {
+      "mean": 0.9940476190476191,
+      "ci95": [
+        0.9897186147186147,
+        0.997564935064935
+      ]
+    },
+    "any_shared_both_correct": {
+      "mean": 0.998917748917749,
+      "ci95": [
+        0.9967532467532467,
+        1.0
+      ]
+    },
+    "teacher_margin": {
+      "mean": 0.16190223999361267,
+      "ci95": [
+        0.159126109373472,
+        0.16430515616782973
+      ]
+    },
+    "teacher_accuracy": {
+      "mean": 0.999134199134199,
+      "ci95": [
+        0.9976190476190475,
+        1.0
+      ]
+    },
+    "teacher_minus_shared_margin": {
+      "mean": 0.005527042609450329,
+      "ci95": [
+        0.00492644542282511,
+        0.006091502198963892
+      ]
+    },
+    "teacher_minus_shared_accuracy": {
+      "mean": 0.0021103896103896107,
+      "ci95": [
+        0.0004870129870129869,
+        0.0039502164502164495
+      ]
+    }
+  },
+  "probe_supplement": {
+    "images": 0,
+    "seconds": 0.0,
+    "suffix_examples": 0
+  },
+  "total_wall_seconds": 3.7049011579983926,
+  "cost_scope": "Only missing-probe recovery uses GPU; search/statistics are CPU. Not deployment latency."
+}

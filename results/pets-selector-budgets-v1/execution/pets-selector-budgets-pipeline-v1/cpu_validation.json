@@ -1,0 +1,19 @@
+{
+  "code_commit": "31bbf2d2dfd0b2aee9fac1fd976db9e2b26c8066",
+  "test_runner": "unittest",
+  "passed": true,
+  "total_tests": 26,
+  "groups": [
+    {
+      "pattern": "test_selector_budget*.py",
+      "tests": 10,
+      "seconds": 0.158
+    },
+    {
+      "pattern": "test_selector_scale*.py",
+      "tests": 16,
+      "seconds": 15.247
+    }
+  ],
+  "scope": "CPU unit and synthetic-training tests before any new GPU pipeline stage; budget preparation, full-only pairing, random mask nesting, weighted aggregation and existing evaluation."
+}

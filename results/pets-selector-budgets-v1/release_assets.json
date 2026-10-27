@@ -1,0 +1,396 @@
+{
+  "release_id": 425198891,
+  "tag": "pets-selector-budgets-v1",
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-budgets-v1",
+  "total_bytes": 2569188841,
+  "assets": [
+    {
+      "asset_id": 681008437,
+      "name": "pets-selector-budget-147-models-and-evaluation-v1.zip",
+      "bytes": 741525110,
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-90294580c04e3361aa2a/pets-selector-budget-147-models-and-evaluation-v1.zip",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-budgets-v1/pets-selector-budget-147-models-and-evaluation-v1.zip",
+      "server_transfer_archive": "cache/transfers/pets-selector-budgets-v1/pets-selector-budget-147-models-and-evaluation-v1.zip",
+      "members": [
+        {
+          "path": "runs/pets-selector-budget-147-training-v1/sampling_audit.json",
+          "uncompressed_bytes": 332888
+        },
+        {
+          "path": "runs/pets-selector-budget-147-training-v1/training_summary.json",
+          "uncompressed_bytes": 8429
+        },
+        {
+          "path": "runs/pets-selector-budget-147-training-v1/training_history.csv",
+          "uncompressed_bytes": 22485
+        },
+        {
+          "path": "runs/pets-selector-budget-147-training-v1/completed_runs.json",
+          "uncompressed_bytes": 5011
+        },
+        {
+          "path": "runs/pets-selector-budget-147-training-v1/full/seed_2042/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/pets-selector-budget-147-training-v1/full/seed_2042/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/pets-selector-budget-147-training-v1/full/seed_2041/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/pets-selector-budget-147-training-v1/full/seed_2041/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/pets-selector-budget-147-training-v1/full/seed_2043/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/pets-selector-budget-147-training-v1/full/seed_2043/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/pets-selector-budget-147-eval-v1/eval_summary.json",
+          "uncompressed_bytes": 8548
+        },
+        {
+          "path": "runs/pets-selector-budget-147-eval-v1/examples.csv",
+          "uncompressed_bytes": 1473259
+        },
+        {
+          "path": "runs/pets-selector-budget-147-eval-v1/references/predictions.csv",
+          "uncompressed_bytes": 11203597
+        },
+        {
+          "path": "runs/pets-selector-budget-147-eval-v1/references/predictions.npz",
+          "uncompressed_bytes": 193151239
+        },
+        {
+          "path": "runs/pets-selector-budget-147-eval-v1/full/predictions.csv",
+          "uncompressed_bytes": 22697037
+        },
+        {
+          "path": "runs/pets-selector-budget-147-eval-v1/full/predictions.npz",
+          "uncompressed_bytes": 360459629
+        },
+        {
+          "path": "runs/pets-selector-budget-147-eval-v1/random/predictions.csv",
+          "uncompressed_bytes": 11219912
+        },
+        {
+          "path": "runs/pets-selector-budget-147-eval-v1/random/predictions.npz",
+          "uncompressed_bytes": 169912384
+        }
+      ]
+    },
+    {
+      "asset_id": 680993524,
+      "name": "pets-selector-budget-147-supervision-v1.zip",
+      "bytes": 449129447,
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-90294580c04e3361aa2a/pets-selector-budget-147-supervision-v1.zip",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-budgets-v1/pets-selector-budget-147-supervision-v1.zip",
+      "server_transfer_archive": "cache/transfers/pets-selector-budgets-v1/pets-selector-budget-147-supervision-v1.zip",
+      "members": [
+        {
+          "path": "runs/pets-selector-budget-147-supervision-v1/prep_summary.json",
+          "uncompressed_bytes": 4652
+        },
+        {
+          "path": "runs/pets-selector-budget-147-supervision-v1/panel_images.csv",
+          "uncompressed_bytes": 186196
+        },
+        {
+          "path": "runs/pets-selector-budget-147-supervision-v1/train_tasks.csv",
+          "uncompressed_bytes": 9320
+        },
+        {
+          "path": "runs/pets-selector-budget-147-supervision-v1/val_tasks.csv",
+          "uncompressed_bytes": 1051
+        },
+        {
+          "path": "runs/pets-selector-budget-147-supervision-v1/train/evidence.npz",
+          "uncompressed_bytes": 7868201
+        },
+        {
+          "path": "runs/pets-selector-budget-147-supervision-v1/train/panel_images.csv",
+          "uncompressed_bytes": 150149
+        },
+        {
+          "path": "runs/pets-selector-budget-147-supervision-v1/train/teacher.npz",
+          "uncompressed_bytes": 351267065
+        },
+        {
+          "path": "runs/pets-selector-budget-147-supervision-v1/val/evidence.npz",
+          "uncompressed_bytes": 2019490
+        },
+        {
+          "path": "runs/pets-selector-budget-147-supervision-v1/val/panel_images.csv",
+          "uncompressed_bytes": 36105
+        },
+        {
+          "path": "runs/pets-selector-budget-147-supervision-v1/val/teacher.npz",
+          "uncompressed_bytes": 87811782
+        }
+      ]
+    },
+    {
+      "asset_id": 681010822,
+      "name": "pets-selector-budget-49-and-shared-supplement-v1.zip",
+      "bytes": 184338114,
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-90294580c04e3361aa2a/pets-selector-budget-49-and-shared-supplement-v1.zip",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-budgets-v1/pets-selector-budget-49-and-shared-supplement-v1.zip",
+      "server_transfer_archive": "cache/transfers/pets-selector-budgets-v1/pets-selector-budget-49-and-shared-supplement-v1.zip",
+      "members": [
+        {
+          "path": "runs/pets-selector-budget-49-random-v1/eval_summary.json",
+          "uncompressed_bytes": 3982
+        },
+        {
+          "path": "runs/pets-selector-budget-49-random-v1/examples.csv",
+          "uncompressed_bytes": 1473259
+        },
+        {
+          "path": "runs/pets-selector-budget-49-random-v1/random/predictions.csv",
+          "uncompressed_bytes": 11170443
+        },
+        {
+          "path": "runs/pets-selector-budget-49-random-v1/random/predictions.npz",
+          "uncompressed_bytes": 169743875
+        },
+        {
+          "path": "runs/pets-selector-budget-49-shared-v1/shared_search_cases.npz",
+          "uncompressed_bytes": 898516
+        },
+        {
+          "path": "runs/pets-selector-budget-49-shared-v1/summary.json",
+          "uncompressed_bytes": 3065
+        },
+        {
+          "path": "runs/pets-selector-budget-49-shared-v1/missing_probe_responses.npz",
+          "uncompressed_bytes": 9257526
+        },
+        {
+          "path": "runs/pets-selector-budget-98-shared-v1/shared_search_cases.npz",
+          "uncompressed_bytes": 962475
+        },
+        {
+          "path": "runs/pets-selector-budget-98-shared-v1/summary.json",
+          "uncompressed_bytes": 2994
+        },
+        {
+          "path": "runs/pets-selector-budget-147-shared-v1/shared_search_cases.npz",
+          "uncompressed_bytes": 939894
+        },
+        {
+          "path": "runs/pets-selector-budget-147-shared-v1/summary.json",
+          "uncompressed_bytes": 2996
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/train_98.log",
+          "uncompressed_bytes": 19389
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/prepare_98.log",
+          "uncompressed_bytes": 3416
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/evaluate_147.log",
+          "uncompressed_bytes": 1097
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/pipeline.py",
+          "uncompressed_bytes": 2224
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/train_147.log",
+          "uncompressed_bytes": 19389
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/evaluate_98.log",
+          "uncompressed_bytes": 1100
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/prepare_147.log",
+          "uncompressed_bytes": 3479
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/cpu_validation.json",
+          "uncompressed_bytes": 543
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/pipeline.log",
+          "uncompressed_bytes": 3437
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/pipeline_status.json",
+          "uncompressed_bytes": 4551
+        },
+        {
+          "path": "runs/pets-selector-budgets-pipeline-v1/random_49.log",
+          "uncompressed_bytes": 264
+        },
+        {
+          "path": "runs/pets-selector-budgets-shared-pipeline-v1/shared_147.log",
+          "uncompressed_bytes": 1245
+        },
+        {
+          "path": "runs/pets-selector-budgets-shared-pipeline-v1/pipeline.py",
+          "uncompressed_bytes": 1833
+        },
+        {
+          "path": "runs/pets-selector-budgets-shared-pipeline-v1/pipeline.log",
+          "uncompressed_bytes": 1601
+        },
+        {
+          "path": "runs/pets-selector-budgets-shared-pipeline-v1/pipeline_status.json",
+          "uncompressed_bytes": 2306
+        },
+        {
+          "path": "runs/pets-selector-budgets-shared-pipeline-v1/shared_98.log",
+          "uncompressed_bytes": 1246
+        },
+        {
+          "path": "runs/pets-selector-budgets-shared-pipeline-v1/shared_49.log",
+          "uncompressed_bytes": 1312
+        }
+      ]
+    },
+    {
+      "asset_id": 680993996,
+      "name": "pets-selector-budget-98-models-and-evaluation-v1.zip",
+      "bytes": 743571122,
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-90294580c04e3361aa2a/pets-selector-budget-98-models-and-evaluation-v1.zip",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-budgets-v1/pets-selector-budget-98-models-and-evaluation-v1.zip",
+      "server_transfer_archive": "cache/transfers/pets-selector-budgets-v1/pets-selector-budget-98-models-and-evaluation-v1.zip",
+      "members": [
+        {
+          "path": "runs/pets-selector-budget-98-training-v1/sampling_audit.json",
+          "uncompressed_bytes": 332888
+        },
+        {
+          "path": "runs/pets-selector-budget-98-training-v1/training_summary.json",
+          "uncompressed_bytes": 8436
+        },
+        {
+          "path": "runs/pets-selector-budget-98-training-v1/training_history.csv",
+          "uncompressed_bytes": 22545
+        },
+        {
+          "path": "runs/pets-selector-budget-98-training-v1/completed_runs.json",
+          "uncompressed_bytes": 5023
+        },
+        {
+          "path": "runs/pets-selector-budget-98-training-v1/full/seed_2042/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/pets-selector-budget-98-training-v1/full/seed_2042/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/pets-selector-budget-98-training-v1/full/seed_2041/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/pets-selector-budget-98-training-v1/full/seed_2041/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/pets-selector-budget-98-training-v1/full/seed_2043/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/pets-selector-budget-98-training-v1/full/seed_2043/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/pets-selector-budget-98-eval-v1/eval_summary.json",
+          "uncompressed_bytes": 8539
+        },
+        {
+          "path": "runs/pets-selector-budget-98-eval-v1/examples.csv",
+          "uncompressed_bytes": 1473259
+        },
+        {
+          "path": "runs/pets-selector-budget-98-eval-v1/references/predictions.csv",
+          "uncompressed_bytes": 11148615
+        },
+        {
+          "path": "runs/pets-selector-budget-98-eval-v1/references/predictions.npz",
+          "uncompressed_bytes": 193446130
+        },
+        {
+          "path": "runs/pets-selector-budget-98-eval-v1/full/predictions.csv",
+          "uncompressed_bytes": 22528307
+        },
+        {
+          "path": "runs/pets-selector-budget-98-eval-v1/full/predictions.npz",
+          "uncompressed_bytes": 361895958
+        },
+        {
+          "path": "runs/pets-selector-budget-98-eval-v1/random/predictions.csv",
+          "uncompressed_bytes": 11151637
+        },
+        {
+          "path": "runs/pets-selector-budget-98-eval-v1/random/predictions.npz",
+          "uncompressed_bytes": 170358680
+        }
+      ]
+    },
+    {
+      "asset_id": 680985937,
+      "name": "pets-selector-budget-98-supervision-v1.zip",
+      "bytes": 450625048,
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-90294580c04e3361aa2a/pets-selector-budget-98-supervision-v1.zip",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-budgets-v1/pets-selector-budget-98-supervision-v1.zip",
+      "server_transfer_archive": "cache/transfers/pets-selector-budgets-v1/pets-selector-budget-98-supervision-v1.zip",
+      "members": [
+        {
+          "path": "runs/pets-selector-budget-98-supervision-v1/prep_summary.json",
+          "uncompressed_bytes": 4646
+        },
+        {
+          "path": "runs/pets-selector-budget-98-supervision-v1/panel_images.csv",
+          "uncompressed_bytes": 186196
+        },
+        {
+          "path": "runs/pets-selector-budget-98-supervision-v1/train_tasks.csv",
+          "uncompressed_bytes": 9320
+        },
+        {
+          "path": "runs/pets-selector-budget-98-supervision-v1/val_tasks.csv",
+          "uncompressed_bytes": 1051
+        },
+        {
+          "path": "runs/pets-selector-budget-98-supervision-v1/train/evidence.npz",
+          "uncompressed_bytes": 7868201
+        },
+        {
+          "path": "runs/pets-selector-budget-98-supervision-v1/train/panel_images.csv",
+          "uncompressed_bytes": 150149
+        },
+        {
+          "path": "runs/pets-selector-budget-98-supervision-v1/train/teacher.npz",
+          "uncompressed_bytes": 352462487
+        },
+        {
+          "path": "runs/pets-selector-budget-98-supervision-v1/val/evidence.npz",
+          "uncompressed_bytes": 2019490
+        },
+        {
+          "path": "runs/pets-selector-budget-98-supervision-v1/val/panel_images.csv",
+          "uncompressed_bytes": 36105
+        },
+        {
+          "path": "runs/pets-selector-budget-98-supervision-v1/val/teacher.npz",
+          "uncompressed_bytes": 88111545
+        }
+      ]
+    }
+  ],
+  "dependency": "Reused49-token base teachers/weights/predictions in pets-selector-scale-v1 release. Frozen prefixes are server-only recomputable caches.",
+  "status": "Assets uploaded; draft publication pending final evidence commit."
+}
