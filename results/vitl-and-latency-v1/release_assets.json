@@ -1,8 +1,8 @@
 {
   "release_id": 425401556,
   "tag": "vitl-and-latency-v1",
-  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-0a8e0489cbd3fd19f31b",
-  "draft": true,
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/vitl-and-latency-v1",
+  "draft": false,
   "asset_count": 5,
   "total_bytes": 3204072261,
   "assets": [
@@ -11,7 +11,7 @@
       "name": "vitl128-flowers-eval-v1.zip",
       "bytes": 724070625,
       "digest": "sha256:e8820599ad81c4767004b8fcd340f7c8f1633c2292c286c5404f1904efe1d64c",
-      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a8e0489cbd3fd19f31b/vitl128-flowers-eval-v1.zip",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/vitl-and-latency-v1/vitl128-flowers-eval-v1.zip",
       "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681636804",
       "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/vitl-and-latency-v1/vitl128-flowers-eval-v1.zip",
       "members": [
@@ -54,7 +54,7 @@
       "name": "vitl128-flowers-supervision-v1.zip",
       "bytes": 781034850,
       "digest": "sha256:cdbfe51191b28477a3d343b1b0ed4c9f2a0444feed51e18c6470fff4958d61b9",
-      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a8e0489cbd3fd19f31b/vitl128-flowers-supervision-v1.zip",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/vitl-and-latency-v1/vitl128-flowers-supervision-v1.zip",
       "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681615654",
       "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/vitl-and-latency-v1/vitl128-flowers-supervision-v1.zip",
       "members": [
@@ -105,7 +105,7 @@
       "name": "vitl128-models-and-records-v1.zip",
       "bytes": 97002156,
       "digest": "sha256:5807d414680f7dd834d8e56cc81ad1cd9c1e2f1df86dfcde2b98d64ebdebd38e",
-      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a8e0489cbd3fd19f31b/vitl128-models-and-records-v1.zip",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/vitl-and-latency-v1/vitl128-models-and-records-v1.zip",
       "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681687038",
       "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/vitl-and-latency-v1/vitl128-models-and-records-v1.zip",
       "members": [
@@ -952,7 +952,7 @@
       "name": "vitl128-pets-eval-v1.zip",
       "bytes": 1080501056,
       "digest": "sha256:d922e32ee012f2fc6196df76642d67eb6eed5f58837886a5516aa9244e6be589",
-      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a8e0489cbd3fd19f31b/vitl128-pets-eval-v1.zip",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/vitl-and-latency-v1/vitl128-pets-eval-v1.zip",
       "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681586471",
       "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/vitl-and-latency-v1/vitl128-pets-eval-v1.zip",
       "members": [
@@ -995,7 +995,7 @@
       "name": "vitl128-pets-supervision-v1.zip",
       "bytes": 521463574,
       "digest": "sha256:d2e58ea5b0cacad5c07c3103bc2183fe4caa8c4ffc9d59930445e303d7cfd212",
-      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a8e0489cbd3fd19f31b/vitl128-pets-supervision-v1.zip",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/vitl-and-latency-v1/vitl128-pets-supervision-v1.zip",
       "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681553409",
       "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/vitl-and-latency-v1/vitl128-pets-supervision-v1.zip",
       "members": [
@@ -1041,5 +1041,7 @@
         }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-10-27T13:48:08Z",
+  "release_commit": "f27987c71018d0e78eed09ea300daee6391b7b13"
 }

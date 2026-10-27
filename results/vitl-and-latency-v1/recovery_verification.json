@@ -1,0 +1,407 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-27T13:49:13.036054+00:00",
+  "source": "Independently re-downloaded GitHub release asset; checkpoint bytes loaded from that recovered ZIP, not the retained original.",
+  "github": {
+    "repository": "NathanTong0921/ViT-token-compression",
+    "asset_id": 681687038,
+    "asset_name": "vitl128-models-and-records-v1.zip",
+    "actual_download_bytes": 97002156,
+    "recovered_from_github": true,
+    "download_method": "Authenticated GitHub API redirect followed by resumable signed-storage download; Authorization was not forwarded to storage."
+  },
+  "archive_integrity": {
+    "expected_size_matches": true,
+    "retained_archive_digest_matches": true,
+    "github_asset_digest_matches": true,
+    "zip_crc_passed": true,
+    "archive_members_verified": 209
+  },
+  "checkpoint_count": 12,
+  "datasets": [
+    "pets",
+    "flowers"
+  ],
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "arms": [
+    "image_only",
+    "conditioned"
+  ],
+  "all_checkpoints_weights_only_loaded": true,
+  "all_state_dicts_loaded_strictly": true,
+  "all_dummy_forwards_finite_and_correct_shape": true,
+  "all_fixed_final_steps_match": true,
+  "checkpoints": [
+    {
+      "archive_member": "runs/flowers-vitl128-training-v1/full/seed_2041/conditioned.pt",
+      "dataset": "flowers",
+      "seed": 2041,
+      "arm": "conditioned",
+      "final_step": 3978,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/flowers-vitl128-training-v1/full/seed_2041/image_only.pt",
+      "dataset": "flowers",
+      "seed": 2041,
+      "arm": "image_only",
+      "final_step": 3978,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/flowers-vitl128-training-v1/full/seed_2042/conditioned.pt",
+      "dataset": "flowers",
+      "seed": 2042,
+      "arm": "conditioned",
+      "final_step": 3978,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/flowers-vitl128-training-v1/full/seed_2042/image_only.pt",
+      "dataset": "flowers",
+      "seed": 2042,
+      "arm": "image_only",
+      "final_step": 3978,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/flowers-vitl128-training-v1/full/seed_2043/conditioned.pt",
+      "dataset": "flowers",
+      "seed": 2043,
+      "arm": "conditioned",
+      "final_step": 3978,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/flowers-vitl128-training-v1/full/seed_2043/image_only.pt",
+      "dataset": "flowers",
+      "seed": 2043,
+      "arm": "image_only",
+      "final_step": 3978,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/pets-vitl128-training-v1/full/seed_2041/conditioned.pt",
+      "dataset": "pets",
+      "seed": 2041,
+      "arm": "conditioned",
+      "final_step": 3990,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/pets-vitl128-training-v1/full/seed_2041/image_only.pt",
+      "dataset": "pets",
+      "seed": 2041,
+      "arm": "image_only",
+      "final_step": 3990,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/pets-vitl128-training-v1/full/seed_2042/conditioned.pt",
+      "dataset": "pets",
+      "seed": 2042,
+      "arm": "conditioned",
+      "final_step": 3990,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/pets-vitl128-training-v1/full/seed_2042/image_only.pt",
+      "dataset": "pets",
+      "seed": 2042,
+      "arm": "image_only",
+      "final_step": 3990,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/pets-vitl128-training-v1/full/seed_2043/conditioned.pt",
+      "dataset": "pets",
+      "seed": 2043,
+      "arm": "conditioned",
+      "final_step": 3990,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    },
+    {
+      "archive_member": "runs/pets-vitl128-training-v1/full/seed_2043/image_only.pt",
+      "dataset": "pets",
+      "seed": 2043,
+      "arm": "image_only",
+      "final_step": 3990,
+      "hidden_dim": 128,
+      "token_dim": 1024,
+      "text_dim": 768,
+      "shared_descriptor_dim": 1536,
+      "patch_count": 256,
+      "parameter_count": 480641,
+      "weights_only_load": true,
+      "strict_state_load": true,
+      "dummy_prefix_shape": [
+        2,
+        257,
+        1024
+      ],
+      "dummy_text_shape": [
+        2,
+        2,
+        768
+      ],
+      "output_shape": [
+        2,
+        256
+      ],
+      "output_finite": true
+    }
+  ],
+  "environment": {
+    "python": "3.9.6",
+    "torch": "2.8.0",
+    "device": "cpu"
+  },
+  "transfer_cache_removed_after_success": true,
+  "cleanup_utc": "2026-10-27T13:49:13.038435+00:00"
+}

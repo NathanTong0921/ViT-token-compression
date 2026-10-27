@@ -81,7 +81,9 @@ L/14 十二个阶段进程时间合计 4,402.50 秒（73.38 分钟）；其中�
 
 统一成本表还覆盖已有 B/16 规模／预算实验及重用的教师来源，所列 GPU 阶段墙钟合计 2.153 小时。这是选定阶段的记录，不是项目累计总 GPU 用量、GPU kernel 利用时间或费用；共享前缀只计一次，Pets49 的 small/full 训练分别保留。[成本表与定义](../../results/vitl-and-latency-v1/experiment_costs.json)
 
-小型统计、图表和执行摘要已保存本地。大型原始预测、监督、模型与运行记录的统一归档、GitHub 发布和恢复核验由本轮收尾流程完成；截至本记录写入时仍在进行，未将其标记为全部恢复成功。
+小型统计、图表和执行摘要已纳入版本管理。五份大型档案合计约 3.2 GB，在本地保留并发布至 [GitHub Release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/vitl-and-latency-v1)，服务器原始运行文件继续保留。所有本地档案完整性与上传资产一致；另从 GitHub 重新下载模型与运行记录档案，核验全部 209 个成员和十二个 selector 的严格权重载入、最终步数及前向运行。这项恢复检查不等于重新跑一遍完整准确率评估。[恢复记录](../../results/vitl-and-latency-v1/recovery_verification.json)
+
+服务器传输专用 ZIP、本地恢复临时文件及独立计时代码目录均已清理，原始实验数据和正式保留档案未删除。[清理记录](../../results/vitl-and-latency-v1/transfer_cleanup.json)
 
 ## 对项目的推进与下一步
 
