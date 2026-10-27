@@ -1,0 +1,46 @@
+{
+  "status": "complete",
+  "server_transfer_zip_copies_removed": [
+    {
+      "name": "pets-selector-budget-147-supervision-v1.zip",
+      "bytes": 449129447
+    },
+    {
+      "name": "pets-selector-budget-98-supervision-v1.zip",
+      "bytes": 450625048
+    },
+    {
+      "name": "pets-selector-budget-49-and-shared-supplement-v1.zip",
+      "bytes": 184338114
+    },
+    {
+      "name": "pets-selector-budget-98-models-and-evaluation-v1.zip",
+      "bytes": 743571122
+    },
+    {
+      "name": "pets-selector-budget-147-models-and-evaluation-v1.zip",
+      "bytes": 741525110
+    }
+  ],
+  "local_transfer_metadata_and_helper_files_removed": [
+    "cache/transfers/pets-selector-budgets-v1/pets-selector-budget-98-models-and-evaluation-v1.zip.asset.json",
+    "cache/transfers/pets-selector-budgets-v1/pets-selector-budget-49-and-shared-supplement-v1.zip.asset.json",
+    "cache/transfers/pets-selector-budgets-v1/pets-selector-budget-98-supervision-v1.zip.asset.json",
+    "cache/transfers/pets-selector-budgets-v1/pets-selector-budget-147-supervision-v1.zip.asset.json",
+    "cache/transfers/pets-selector-budgets-v1/release_draft.json",
+    "cache/transfers/pets-selector-budgets-v1/upload_assets_curl.py",
+    "cache/transfers/pets-selector-budgets-v1/plot_budget.log",
+    "cache/transfers/pets-selector-budgets-v1/upload_assets.py",
+    "cache/transfers/pets-selector-budgets-v1/pets-selector-budget-147-models-and-evaluation-v1.zip.asset.json"
+  ],
+  "local_scientific_archives_retained": [
+    "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-budgets-v1/pets-selector-budget-147-models-and-evaluation-v1.zip",
+    "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-budgets-v1/pets-selector-budget-147-supervision-v1.zip",
+    "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-budgets-v1/pets-selector-budget-49-and-shared-supplement-v1.zip",
+    "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-budgets-v1/pets-selector-budget-98-models-and-evaluation-v1.zip",
+    "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/pets-selector-budgets-v1/pets-selector-budget-98-supervision-v1.zip"
+  ],
+  "server_original_experiment_directories_retained": true,
+  "recovery_temporary_downloads": "Removed after the verification recorded in github_recovery_verification.json.",
+  "scientific_data_deleted": false
+}
