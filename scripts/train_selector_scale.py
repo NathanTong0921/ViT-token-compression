@@ -120,7 +120,8 @@ def train(config, output):
     torch.testing.assert_close(data["train"]["text"], data["val"]["text"], rtol=0, atol=0)
     assert all(not item.requires_grad for split in data.values()
                for item in (split["tokens"], split["text"], split["targets"]))
-    coverage_ids = {"small": small_ids, "full": data["train"]["image_ids"]}
+    available_coverages = {"small": small_ids, "full": data["train"]["image_ids"]}
+    coverage_ids = {name: available_coverages[name] for name in config["coverages"]}
     train_views = {name: evaluation_view(data["train"], ids) for name, ids in coverage_ids.items()}
     val_view = evaluation_view(data["val"])
     prior = shared_descriptor(data["train"]["text"], data["train"]["pairs"])
@@ -238,6 +239,7 @@ def train(config, output):
         (output / "sampling_audit.json").write_text(json.dumps(sampling_records, indent=2, allow_nan=False) + "\n")
     synchronize(device)
     summary = {"run_type": "fixed_update_paired_selector_image_coverage", "started_utc": started,
+               "experiment_name": config.get("experiment_name"),
                "code_commit": source_commit, "config": config,
                "environment": {"torch": torch.__version__, "numpy": np.__version__, "python": platform.python_version()},
                "device": str(device),

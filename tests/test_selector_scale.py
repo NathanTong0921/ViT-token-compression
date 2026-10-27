@@ -123,6 +123,19 @@ class SelectorScaleTests(unittest.TestCase):
                         checkpoint = torch.load(folder / "output" / row["checkpoint"], weights_only=True)
                         self.assertEqual(checkpoint["step"], 4)
                         self.assertEqual(checkpoint["conditioned"], arm == "conditioned")
+                # A budget sweep trains only the full panel. Removing the small
+                # arm must not change its initialization, draws or final weights.
+                full_config = {**config, "coverages": ["full"], "experiment_name": "budget_smoke"}
+                with contextlib.redirect_stdout(io.StringIO()):
+                    full_summary = training.train(full_config, folder / "full_only")
+                self.assertEqual(full_summary["train_image_counts"], {"full": 7})
+                self.assertEqual(full_summary["experiment_name"], "budget_smoke")
+                self.assertEqual(len(full_summary["runs"]), 2)
+                for row in full_summary["runs"]:
+                    old = torch.load(folder / "output" / row["checkpoint"], weights_only=True)
+                    new = torch.load(folder / "full_only" / row["checkpoint"], weights_only=True)
+                    for key in old["state_dict"]:
+                        torch.testing.assert_close(old["state_dict"][key], new["state_dict"][key], rtol=0, atol=0)
         finally:
             torch.set_num_threads(previous_threads)
 
