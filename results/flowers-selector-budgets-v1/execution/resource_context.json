@@ -1,0 +1,10 @@
+{
+  "physical_gpu": 4,
+  "gpu_name": "NVIDIA RTX A6000",
+  "observed_before_pipeline_launch": {
+    "memory_used_mib": 2752,
+    "gpu_utilization_percent": 0
+  },
+  "pipeline_launch_utc": "2026-10-27T10:41:01.316062+00:00",
+  "resource_context": "Shared server; other GPU jobs were not modified. Recorded stage times are process wall costs, not exclusive-resource deployment latency."
+}

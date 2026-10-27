@@ -1,0 +1,152 @@
+{
+  "run_type": "budget_matched_full_panel_selector_supervision",
+  "experiment_name": "flowers_selector_budget_49_v1",
+  "started_utc": "2026-10-27T10:41:25.379547+00:00",
+  "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+  "config": {
+    "cache_dir": "runs/flowers-selector-budget-49-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/flowers102",
+    "manifest_dir": "data/splits/flowers-v1",
+    "baseline_dir": "runs/flowers-features-v1",
+    "prompt_template": "a photo of a {class_name}, a type of flower.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": 49,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0,
+    "source_cache_dir": "runs/flowers-features-v1",
+    "training_steps": 3978,
+    "checkpoint_interval": 153,
+    "coverages": [
+      "full"
+    ],
+    "bootstrap_seed": 2052,
+    "bootstrap_replicates": 2000,
+    "experiment_name": "flowers_selector_budget_49_v1",
+    "feature_cache_dir": "runs/flowers-features-v1",
+    "random_seeds": [
+      2055,
+      2056,
+      2057
+    ]
+  },
+  "counts": {
+    "train": {
+      "images": 1020,
+      "classes": 102,
+      "tasks": 612,
+      "prefix_bytes": 308643840,
+      "prefix_images_reused": 1020,
+      "full_split_images_encoded": 0,
+      "teacher_images_reused": 0,
+      "teacher_images_generated": 1020,
+      "response_images_available": 1020,
+      "response_images_unavailable": 0,
+      "teacher_suffix_forward_batches": 8160,
+      "teacher_suffix_forward_examples": 522240,
+      "teacher_requested_suffix_examples": 522240
+    },
+    "val": {
+      "images": 1020,
+      "classes": 102,
+      "tasks": 204,
+      "prefix_bytes": 308643840,
+      "prefix_images_reused": 1020,
+      "full_split_images_encoded": 0,
+      "teacher_images_reused": 0,
+      "teacher_images_generated": 1020,
+      "response_images_available": 1020,
+      "response_images_unavailable": 0,
+      "teacher_suffix_forward_batches": 8160,
+      "teacher_suffix_forward_examples": 522240,
+      "teacher_requested_suffix_examples": 522240
+    }
+  },
+  "identity": {
+    "train": {
+      "images_checked": 1020,
+      "max_feature_error_vs_source": 0.0,
+      "prediction_disagreements_102class_vs_source": 0
+    },
+    "val": {
+      "images_checked": 1020,
+      "max_feature_error_vs_source": 0.0,
+      "prediction_disagreements_102class_vs_source": 0
+    }
+  },
+  "feature_reuse": {
+    "train": {
+      "images": 1020,
+      "prefix_shape": [
+        1020,
+        197,
+        768
+      ],
+      "source": "runs/flowers-features-v1/train",
+      "storage": "relative symbolic links"
+    },
+    "val": {
+      "images": 1020,
+      "prefix_shape": [
+        1020,
+        197,
+        768
+      ],
+      "source": "runs/flowers-features-v1/val",
+      "storage": "relative symbolic links"
+    }
+  },
+  "source_cache": {
+    "path": "runs/flowers-features-v1",
+    "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+    "started_utc": "2026-10-27T10:41:04.274853+00:00"
+  },
+  "teacher": {
+    "context_patch_tokens": 49,
+    "probe_count_per_image": 512,
+    "mask_design_seed": 2738241488,
+    "ridge": 0.01,
+    "response_columns": "Class cosine scores in manifest class order.",
+    "response_availability": "Every image has newly computed responses at the requested budget.",
+    "optimization_scope": "Training images and training pairs only; validation teachers are evaluation only.",
+    "test_data_used": false
+  },
+  "cost": {
+    "train_identity_seconds": 0.5127611409989186,
+    "train_teacher_seconds": 73.21532606799883,
+    "val_identity_seconds": 0.7074833059996308,
+    "val_teacher_seconds": 79.04856553600257,
+    "model_setup_seconds": 4.100712594001379,
+    "teacher_suffix_forward_batches": 16320,
+    "teacher_suffix_forward_examples": 1044480,
+    "teacher_requested_suffix_examples": 1044480,
+    "total_wall_seconds": 157.66001043300275,
+    "peak_allocated_gpu_bytes": 677226496
+  },
+  "storage": "Prefix tensors and full-model evidence are relative symlinks to the verified full-panel cache; teachers are budget-specific.",
+  "gpu": "NVIDIA RTX A6000",
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4"
+  }
+}

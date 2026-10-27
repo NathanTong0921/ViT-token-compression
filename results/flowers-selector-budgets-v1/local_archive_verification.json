@@ -1,0 +1,423 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-27T11:05:48.865680+00:00",
+  "asset_count": 5,
+  "total_archive_bytes": 2412258378,
+  "assets": [
+    {
+      "archive": "flowers-selector-49-supervision-v1.zip",
+      "bytes": 678179424,
+      "members": 10,
+      "local_digest_matches_manifest": true,
+      "all_zip_crc_checks_passed": true,
+      "github_asset_id": 681290881,
+      "github_state": "uploaded",
+      "github_digest_matches_local": true,
+      "server_transfer_duplicates_removed": true,
+      "source_runs_retained_on_server": true,
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.zip",
+      "member_inventory": [
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/panel_images.csv",
+          "bytes": 93238
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/prep_summary.json",
+          "bytes": 4597
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/train/evidence.npz",
+          "bytes": 3111239
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/train/panel_images.csv",
+          "bytes": 47668
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/train/teacher.npz",
+          "bytes": 335961754
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/train_tasks.csv",
+          "bytes": 12174
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/val/evidence.npz",
+          "bytes": 3111378
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/val/panel_images.csv",
+          "bytes": 45628
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/val/teacher.npz",
+          "bytes": 335969501
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/val_tasks.csv",
+          "bytes": 3670
+        }
+      ]
+    },
+    {
+      "archive": "flowers-selector-49-eval-v1.zip",
+      "bytes": 515734236,
+      "members": 8,
+      "local_digest_matches_manifest": true,
+      "all_zip_crc_checks_passed": true,
+      "github_asset_id": 681302313,
+      "github_state": "uploaded",
+      "github_digest_matches_local": true,
+      "server_transfer_duplicates_removed": true,
+      "source_runs_retained_on_server": true,
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.zip",
+      "member_inventory": [
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/eval_summary.json",
+          "bytes": 8563
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/examples.csv",
+          "bytes": 986243
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/full/predictions.csv",
+          "bytes": 15260699
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/full/predictions.npz",
+          "bytes": 258207162
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/random/predictions.csv",
+          "bytes": 7597917
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/random/predictions.npz",
+          "bytes": 116770603
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/references/predictions.csv",
+          "bytes": 7579213
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/references/predictions.npz",
+          "bytes": 133082555
+        }
+      ]
+    },
+    {
+      "archive": "flowers-selector-98-supervision-v1.zip",
+      "bytes": 677318981,
+      "members": 10,
+      "local_digest_matches_manifest": true,
+      "all_zip_crc_checks_passed": true,
+      "github_asset_id": 681312712,
+      "github_state": "uploaded",
+      "github_digest_matches_local": true,
+      "server_transfer_duplicates_removed": true,
+      "source_runs_retained_on_server": true,
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.zip",
+      "member_inventory": [
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/panel_images.csv",
+          "bytes": 93238
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/prep_summary.json",
+          "bytes": 4598
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/train/evidence.npz",
+          "bytes": 3111239
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/train/panel_images.csv",
+          "bytes": 47668
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/train/teacher.npz",
+          "bytes": 335519652
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/train_tasks.csv",
+          "bytes": 12174
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/val/evidence.npz",
+          "bytes": 3111378
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/val/panel_images.csv",
+          "bytes": 45628
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/val/teacher.npz",
+          "bytes": 335551162
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/val_tasks.csv",
+          "bytes": 3670
+        }
+      ]
+    },
+    {
+      "archive": "flowers-selector-98-eval-v1.zip",
+      "bytes": 517396959,
+      "members": 8,
+      "local_digest_matches_manifest": true,
+      "all_zip_crc_checks_passed": true,
+      "github_asset_id": 681326001,
+      "github_state": "uploaded",
+      "github_digest_matches_local": true,
+      "server_transfer_duplicates_removed": true,
+      "source_runs_retained_on_server": true,
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.zip",
+      "member_inventory": [
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/eval_summary.json",
+          "bytes": 8562
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/examples.csv",
+          "bytes": 986243
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/full/predictions.csv",
+          "bytes": 15299057
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/full/predictions.npz",
+          "bytes": 259054111
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/random/predictions.csv",
+          "bytes": 7583512
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/random/predictions.npz",
+          "bytes": 117219303
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/references/predictions.csv",
+          "bytes": 7581211
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/references/predictions.npz",
+          "bytes": 133442129
+        }
+      ]
+    },
+    {
+      "archive": "flowers-selector-models-and-records-v1.zip",
+      "bytes": 23628778,
+      "members": 48,
+      "local_digest_matches_manifest": true,
+      "all_zip_crc_checks_passed": true,
+      "github_asset_id": 681321317,
+      "github_state": "uploaded",
+      "github_digest_matches_local": true,
+      "server_transfer_duplicates_removed": true,
+      "source_runs_retained_on_server": true,
+      "actual_github_restore_verified": true,
+      "restored_checkpoint_count": 12,
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.zip",
+      "member_inventory": [
+        {
+          "path": "runs/flowers-features-v1/exchange_strata.json",
+          "bytes": 287
+        },
+        {
+          "path": "runs/flowers-features-v1/panel_images.csv",
+          "bytes": 93238
+        },
+        {
+          "path": "runs/flowers-features-v1/prep_summary.json",
+          "bytes": 9114
+        },
+        {
+          "path": "runs/flowers-features-v1/train/baseline_train_tasks.csv",
+          "bytes": 693970
+        },
+        {
+          "path": "runs/flowers-features-v1/train/baseline_val_tasks.csv",
+          "bytes": 223218
+        },
+        {
+          "path": "runs/flowers-features-v1/train/evidence.npz",
+          "bytes": 3111239
+        },
+        {
+          "path": "runs/flowers-features-v1/train/panel_images.csv",
+          "bytes": 47668
+        },
+        {
+          "path": "runs/flowers-features-v1/train_tasks.csv",
+          "bytes": 12174
+        },
+        {
+          "path": "runs/flowers-features-v1/val/baseline_train_tasks.csv",
+          "bytes": 693855
+        },
+        {
+          "path": "runs/flowers-features-v1/val/baseline_val_tasks.csv",
+          "bytes": 223201
+        },
+        {
+          "path": "runs/flowers-features-v1/val/evidence.npz",
+          "bytes": 3111378
+        },
+        {
+          "path": "runs/flowers-features-v1/val/panel_images.csv",
+          "bytes": 45628
+        },
+        {
+          "path": "runs/flowers-features-v1/val_tasks.csv",
+          "bytes": 3670
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/completed_runs.json",
+          "bytes": 5026
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/conditioned.pt",
+          "bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/image_only.pt",
+          "bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/conditioned.pt",
+          "bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/image_only.pt",
+          "bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/conditioned.pt",
+          "bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/image_only.pt",
+          "bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/sampling_audit.json",
+          "bytes": 118296
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/training_history.csv",
+          "bytes": 19618
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/training_summary.json",
+          "bytes": 8428
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/completed_runs.json",
+          "bytes": 5035
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/conditioned.pt",
+          "bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/image_only.pt",
+          "bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/conditioned.pt",
+          "bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/image_only.pt",
+          "bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/conditioned.pt",
+          "bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/image_only.pt",
+          "bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/sampling_audit.json",
+          "bytes": 118296
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/training_history.csv",
+          "bytes": 19577
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/training_summary.json",
+          "bytes": 8437
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/archive_evidence.py",
+          "bytes": 2056
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/budget_analysis.log",
+          "bytes": 1197
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/cpu_validation.json",
+          "bytes": 868
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/evaluate_49.log",
+          "bytes": 1102
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/evaluate_98.log",
+          "bytes": 1102
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/features.log",
+          "bytes": 903
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/geometry_analysis.log",
+          "bytes": 453
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/pipeline.log",
+          "bytes": 4561
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/pipeline.py",
+          "bytes": 3590
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/pipeline_status.json",
+          "bytes": 6006
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/prepare_49.log",
+          "bytes": 2166
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/prepare_98.log",
+          "bytes": 2177
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/resource_context.json",
+          "bytes": 387
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/train_49.log",
+          "bytes": 16815
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/train_98.log",
+          "bytes": 16815
+        }
+      ]
+    }
+  ],
+  "all_member_crc_checks_passed": true,
+  "all_github_content_digests_match_retained_archives": true
+}

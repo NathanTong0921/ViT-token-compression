@@ -1,6 +1,6 @@
 # Storage and backup plan
 
-Status, 2026-10-27: the three-budget comparison and H2 are complete. Small statistics, case arrays, figures and audits are versioned in Git; five new scientific ZIP archives totaling 2.57 GB are retained locally and uploaded to the versioned Release. They preserve new teachers, all 12 new checkpoints, raw scores/features/positions, and the 49-token random/probe supplement. Existing 49-token model/evaluation evidence remains in the earlier scale release. Frozen prefixes are reused on the server and can be regenerated; they are intentionally not duplicated in these archives.
+Status, 2026-10-27: the Pets three-budget/H2 study and Flowers102 targeted validation are complete. Small statistics, case arrays, figures and audits are versioned in Git. Flowers adds five scientific archives totaling 2.41 GB, retained locally and in its versioned Release; they preserve both budgets' teachers/predictions and all twelve selectors. Earlier Pets evidence, including the 147-token results, remains intact. Frozen prefixes stay on the server and can be regenerated.
 
 The single-stage pruning pilot adds approximately 21.6 MB of scores, embeddings, retained positions, metrics and figure exports under `results/pets-pruning-v1/`. These are small enough for ordinary Git. Its approximately 223 MB prefix cache existed only in host RAM and was released after the run; no persistent prefix cache or selection-supervision cache was created.
 
@@ -92,3 +92,20 @@ The [versioned release](https://github.com/NathanTong0921/ViT-token-compression/
 Total: 2,569,188,841 bytes. The supplement contains the three random-mask runs at 49 tokens, all three shared-search results, regenerated probe responses for the 144 older validation images, and execution logs. Reused 49-token weights/predictions and the other teacher responses remain in `pets-selector-scale-v1`; restoring this milestone requires that earlier release as well. Public data and the frozen CLIP model plus the preserved preprocessing/manifests/code can regenerate prefix caches. Prefix tensors are not present in either release.
 
 The recovery record distinguishes actual destination downloads from remote content-integrity verification. This avoids claiming that every archive was downloaded again. Small recovery details and the final transfer cleanup record are retained in the result directory; long-term scientific archives are kept locally.
+
+
+## Flowers102 targeted replication
+
+`results/flowers-selector-budgets-v1/` contains all two-budget statistics, exchange/geometry cases, cross-fitted predictions, figures, execution metadata and independent scientific checks. The five local archives in `../artifacts/flowers-selector-budgets-v1/` are also retained in [Release `flowers-selector-budgets-v1`](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/flowers-selector-budgets-v1):
+
+| Archive | Bytes |
+| --- | ---: |
+| flowers-selector-49-supervision-v1.zip | 678,179,424 |
+| flowers-selector-49-eval-v1.zip | 515,734,236 |
+| flowers-selector-98-supervision-v1.zip | 677,318,981 |
+| flowers-selector-98-eval-v1.zip | 517,396,959 |
+| flowers-selector-models-and-records-v1.zip | 23,628,778 |
+
+Total: **2,412,258,378 bytes**. Supervision archives contain both image splits, full-model evidence, probe masks/responses and ridge teachers. Evaluation archives retain all reference, learned and random predictions, full embeddings and retained positions. The small models archive contains all twelve checkpoints, training histories, native-feature evidence and pipeline records. Prefix tensors are intentionally omitted; they can be regenerated from the public data/model plus the saved manifests and code. Flowers archives do not require the earlier Pets Releases for restoration.
+
+All five local archives passed full CRC/content checks and were matched against the uploaded assets. The models-and-records archive was additionally downloaded from GitHub: all twelve checkpoints passed strict loading and forward checks, training summaries were reconstructed, and the native CLIP unseen-task baseline was recovered as 3947/4080. Recovery details distinguish these actual downloads from the large archives' upload-content checks. Original server runs and local scientific archives remain retained; local dataset-download staging and duplicate archive/recovery transfers were removed after verification. The result directory holds the asset, verification and cleanup records.

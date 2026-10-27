@@ -1,0 +1,30 @@
+{
+  "dataset": "Oxford Flowers102",
+  "canonical_archive_md5": "52808999861908f626f3c1f4e79d11fa",
+  "canonical_archive_bytes": 344862509,
+  "archive_verified_against": "https://raw.githubusercontent.com/pytorch/vision/v0.21.0/torchvision/datasets/flowers102.py",
+  "archive_download_url": "https://thor.robots.ox.ac.uk/flowers/102/102flowers.tgz",
+  "archive_source_page": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/",
+  "image_count": 8189,
+  "all_jpeg_pixels_decoded_successfully": true,
+  "image_id_range": [
+    1,
+    8189
+  ],
+  "image_directory": "data/raw/flowers102/images",
+  "image_directory_symlink_target": "jpg",
+  "class_mapping_audit": "class_mapping_audit.json",
+  "official_split_counts": {
+    "train": 1020,
+    "val": 1020,
+    "test": 6149
+  },
+  "verified_date": "2026-10-27",
+  "official_label_md5": "e0620be6f572b9609742df49c70aed4d",
+  "official_split_md5": "a5357ecc9cb78c4bef273ce3793fc85c",
+  "class_mapping_source": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/categories.html",
+  "class_mapping_method": "Official named thumbnail image IDs joined to imagelabels.mat; all 102 published class image counts matched.",
+  "class_names_verified": 102,
+  "transfer_summary": "Slow official direct transfer replaced by a local official byte-range download. Overlapping restart controllers were stopped; uncertain staging bytes were discarded. The final assembled archive and server copy both passed canonical archive verification before extraction.",
+  "local_transfer_staging_removed": true
+}

@@ -1,0 +1,408 @@
+{
+  "release_id": 425312137,
+  "tag": "flowers-selector-budgets-v1",
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-775921766b5c630d6d23",
+  "draft": true,
+  "total_bytes": 2412258378,
+  "asset_count": 5,
+  "assets": [
+    {
+      "asset_id": 681290881,
+      "name": "flowers-selector-49-supervision-v1.zip",
+      "bytes": 678179424,
+      "digest": "sha256:cf231d3ac5e685de99616f404f48090415274bcbd108b37f9762bd7b8cedf5e9",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-775921766b5c630d6d23/flowers-selector-49-supervision-v1.zip",
+      "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681290881",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.zip",
+      "server_transfer_archive": "cache/transfers/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.zip",
+      "members": [
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/panel_images.csv",
+          "uncompressed_bytes": 93238
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/prep_summary.json",
+          "uncompressed_bytes": 4597
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/train/evidence.npz",
+          "uncompressed_bytes": 3111239
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/train/panel_images.csv",
+          "uncompressed_bytes": 47668
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/train/teacher.npz",
+          "uncompressed_bytes": 335961754
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/train_tasks.csv",
+          "uncompressed_bytes": 12174
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/val/evidence.npz",
+          "uncompressed_bytes": 3111378
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/val/panel_images.csv",
+          "uncompressed_bytes": 45628
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/val/teacher.npz",
+          "uncompressed_bytes": 335969501
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-supervision-v1/val_tasks.csv",
+          "uncompressed_bytes": 3670
+        }
+      ]
+    },
+    {
+      "asset_id": 681302313,
+      "name": "flowers-selector-49-eval-v1.zip",
+      "bytes": 515734236,
+      "digest": "sha256:4505d6a530794a74086dcf319cb6ee8df86b86b4c07b0d0a4140561c6154b805",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-775921766b5c630d6d23/flowers-selector-49-eval-v1.zip",
+      "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681302313",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.zip",
+      "server_transfer_archive": "cache/transfers/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.zip",
+      "members": [
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/eval_summary.json",
+          "uncompressed_bytes": 8563
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/examples.csv",
+          "uncompressed_bytes": 986243
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/full/predictions.csv",
+          "uncompressed_bytes": 15260699
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/full/predictions.npz",
+          "uncompressed_bytes": 258207162
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/random/predictions.csv",
+          "uncompressed_bytes": 7597917
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/random/predictions.npz",
+          "uncompressed_bytes": 116770603
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/references/predictions.csv",
+          "uncompressed_bytes": 7579213
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-eval-v1/references/predictions.npz",
+          "uncompressed_bytes": 133082555
+        }
+      ]
+    },
+    {
+      "asset_id": 681312712,
+      "name": "flowers-selector-98-supervision-v1.zip",
+      "bytes": 677318981,
+      "digest": "sha256:0c93bf029da0afa477dbf851bda9e4333815d4c0dcb2c77f8992374da22975c4",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-775921766b5c630d6d23/flowers-selector-98-supervision-v1.zip",
+      "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681312712",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.zip",
+      "server_transfer_archive": "cache/transfers/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.zip",
+      "members": [
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/panel_images.csv",
+          "uncompressed_bytes": 93238
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/prep_summary.json",
+          "uncompressed_bytes": 4598
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/train/evidence.npz",
+          "uncompressed_bytes": 3111239
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/train/panel_images.csv",
+          "uncompressed_bytes": 47668
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/train/teacher.npz",
+          "uncompressed_bytes": 335519652
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/train_tasks.csv",
+          "uncompressed_bytes": 12174
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/val/evidence.npz",
+          "uncompressed_bytes": 3111378
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/val/panel_images.csv",
+          "uncompressed_bytes": 45628
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/val/teacher.npz",
+          "uncompressed_bytes": 335551162
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-supervision-v1/val_tasks.csv",
+          "uncompressed_bytes": 3670
+        }
+      ]
+    },
+    {
+      "asset_id": 681326001,
+      "name": "flowers-selector-98-eval-v1.zip",
+      "bytes": 517396959,
+      "digest": "sha256:4e8ec32c64e10f9b95b4b031ee3d201f7a0d287abc554ee49bbb5a2a99f0eddc",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-775921766b5c630d6d23/flowers-selector-98-eval-v1.zip",
+      "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681326001",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.zip",
+      "server_transfer_archive": "cache/transfers/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.zip",
+      "members": [
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/eval_summary.json",
+          "uncompressed_bytes": 8562
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/examples.csv",
+          "uncompressed_bytes": 986243
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/full/predictions.csv",
+          "uncompressed_bytes": 15299057
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/full/predictions.npz",
+          "uncompressed_bytes": 259054111
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/random/predictions.csv",
+          "uncompressed_bytes": 7583512
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/random/predictions.npz",
+          "uncompressed_bytes": 117219303
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/references/predictions.csv",
+          "uncompressed_bytes": 7581211
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-eval-v1/references/predictions.npz",
+          "uncompressed_bytes": 133442129
+        }
+      ]
+    },
+    {
+      "asset_id": 681321317,
+      "name": "flowers-selector-models-and-records-v1.zip",
+      "bytes": 23628778,
+      "digest": "sha256:a62933b03cfd03665e08ad5d1cfb8db679d7d86a6f46c4d4c25bb957483dcd9a",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-775921766b5c630d6d23/flowers-selector-models-and-records-v1.zip",
+      "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681321317",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.zip",
+      "server_transfer_archive": "cache/transfers/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.zip",
+      "members": [
+        {
+          "path": "runs/flowers-features-v1/exchange_strata.json",
+          "uncompressed_bytes": 287
+        },
+        {
+          "path": "runs/flowers-features-v1/panel_images.csv",
+          "uncompressed_bytes": 93238
+        },
+        {
+          "path": "runs/flowers-features-v1/prep_summary.json",
+          "uncompressed_bytes": 9114
+        },
+        {
+          "path": "runs/flowers-features-v1/train/baseline_train_tasks.csv",
+          "uncompressed_bytes": 693970
+        },
+        {
+          "path": "runs/flowers-features-v1/train/baseline_val_tasks.csv",
+          "uncompressed_bytes": 223218
+        },
+        {
+          "path": "runs/flowers-features-v1/train/evidence.npz",
+          "uncompressed_bytes": 3111239
+        },
+        {
+          "path": "runs/flowers-features-v1/train/panel_images.csv",
+          "uncompressed_bytes": 47668
+        },
+        {
+          "path": "runs/flowers-features-v1/train_tasks.csv",
+          "uncompressed_bytes": 12174
+        },
+        {
+          "path": "runs/flowers-features-v1/val/baseline_train_tasks.csv",
+          "uncompressed_bytes": 693855
+        },
+        {
+          "path": "runs/flowers-features-v1/val/baseline_val_tasks.csv",
+          "uncompressed_bytes": 223201
+        },
+        {
+          "path": "runs/flowers-features-v1/val/evidence.npz",
+          "uncompressed_bytes": 3111378
+        },
+        {
+          "path": "runs/flowers-features-v1/val/panel_images.csv",
+          "uncompressed_bytes": 45628
+        },
+        {
+          "path": "runs/flowers-features-v1/val_tasks.csv",
+          "uncompressed_bytes": 3670
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/completed_runs.json",
+          "uncompressed_bytes": 5026
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/sampling_audit.json",
+          "uncompressed_bytes": 118296
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/training_history.csv",
+          "uncompressed_bytes": 19618
+        },
+        {
+          "path": "runs/flowers-selector-budget-49-training-v1/training_summary.json",
+          "uncompressed_bytes": 8428
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/completed_runs.json",
+          "uncompressed_bytes": 5035
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/conditioned.pt",
+          "uncompressed_bytes": 1401521
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/image_only.pt",
+          "uncompressed_bytes": 1401506
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/sampling_audit.json",
+          "uncompressed_bytes": 118296
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/training_history.csv",
+          "uncompressed_bytes": 19577
+        },
+        {
+          "path": "runs/flowers-selector-budget-98-training-v1/training_summary.json",
+          "uncompressed_bytes": 8437
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/archive_evidence.py",
+          "uncompressed_bytes": 2056
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/budget_analysis.log",
+          "uncompressed_bytes": 1197
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/cpu_validation.json",
+          "uncompressed_bytes": 868
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/evaluate_49.log",
+          "uncompressed_bytes": 1102
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/evaluate_98.log",
+          "uncompressed_bytes": 1102
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/features.log",
+          "uncompressed_bytes": 903
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/geometry_analysis.log",
+          "uncompressed_bytes": 453
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/pipeline.log",
+          "uncompressed_bytes": 4561
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/pipeline.py",
+          "uncompressed_bytes": 3590
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/pipeline_status.json",
+          "uncompressed_bytes": 6006
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/prepare_49.log",
+          "uncompressed_bytes": 2166
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/prepare_98.log",
+          "uncompressed_bytes": 2177
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/resource_context.json",
+          "uncompressed_bytes": 387
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/train_49.log",
+          "uncompressed_bytes": 16815
+        },
+        {
+          "path": "runs/flowers-selector-pipeline-v1/train_98.log",
+          "uncompressed_bytes": 16815
+        }
+      ]
+    }
+  ],
+  "verified_utc": "2026-10-27T11:05:48.865680+00:00",
+  "omitted": "Regenerable frozen prefix token tensors, public raw images, and public frozen CLIP weights."
+}

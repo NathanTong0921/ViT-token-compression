@@ -1,0 +1,35 @@
+{
+  "recorded_utc": "2026-10-27T10:29:15.887461+00:00",
+  "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+  "server_python": ".venv/bin/python",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "test_groups": [
+    {
+      "pattern": "test_selector_geometry.py",
+      "tests": 13,
+      "status": "passed"
+    },
+    {
+      "pattern": "test_selector_budgets.py",
+      "tests": 7,
+      "status": "passed"
+    },
+    {
+      "pattern": "test_selector_budget_prepare.py",
+      "tests": 4,
+      "status": "passed"
+    },
+    {
+      "pattern": "test_flowers.py",
+      "tests": 4,
+      "status": "passed"
+    }
+  ],
+  "total_tests": 28,
+  "status": "passed",
+  "scope": "Targeted tests for two-budget statistics, unchanged cache reuse, and Flowers manifests, before new model predictions."
+}

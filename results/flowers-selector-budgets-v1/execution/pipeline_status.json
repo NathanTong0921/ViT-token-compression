@@ -1,0 +1,195 @@
+{
+  "started_utc": "2026-10-27T10:41:01.316062+00:00",
+  "pid": 1545140,
+  "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "4",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "status": "complete",
+  "stages": [
+    {
+      "name": "features",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/prepare_frozen_features.py",
+        "--config",
+        "configs/flowers_selector_budget_49.json"
+      ],
+      "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+      "started_utc": "2026-10-27T10:41:01.316484+00:00",
+      "status": "complete",
+      "pid": 1545142,
+      "returncode": 0,
+      "wall_seconds": 21.405972335000115,
+      "completed_utc": "2026-10-27T10:41:22.722757+00:00"
+    },
+    {
+      "name": "prepare_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/prepare_selector_budget.py",
+        "--config",
+        "configs/flowers_selector_budget_49.json"
+      ],
+      "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+      "started_utc": "2026-10-27T10:41:22.723808+00:00",
+      "status": "complete",
+      "pid": 1547323,
+      "returncode": 0,
+      "wall_seconds": 160.8591519469992,
+      "completed_utc": "2026-10-27T10:44:03.583563+00:00"
+    },
+    {
+      "name": "train_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/train_selector_scale.py",
+        "--config",
+        "configs/flowers_selector_budget_49.json",
+        "--output",
+        "runs/flowers-selector-budget-49-training-v1"
+      ],
+      "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+      "started_utc": "2026-10-27T10:44:03.584627+00:00",
+      "status": "complete",
+      "pid": 1556185,
+      "returncode": 0,
+      "wall_seconds": 220.1384304309977,
+      "completed_utc": "2026-10-27T10:47:43.723690+00:00"
+    },
+    {
+      "name": "evaluate_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/flowers_selector_budget_49.json",
+        "--models",
+        "runs/flowers-selector-budget-49-training-v1",
+        "--output",
+        "runs/flowers-selector-budget-49-eval-v1"
+      ],
+      "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+      "started_utc": "2026-10-27T10:47:43.724349+00:00",
+      "status": "complete",
+      "pid": 1569766,
+      "returncode": 0,
+      "wall_seconds": 63.40340614099841,
+      "completed_utc": "2026-10-27T10:48:47.128174+00:00"
+    },
+    {
+      "name": "prepare_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/prepare_selector_budget.py",
+        "--config",
+        "configs/flowers_selector_budget_98.json"
+      ],
+      "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+      "started_utc": "2026-10-27T10:48:47.129054+00:00",
+      "status": "complete",
+      "pid": 1573738,
+      "returncode": 0,
+      "wall_seconds": 277.47622160299943,
+      "completed_utc": "2026-10-27T10:53:24.605790+00:00"
+    },
+    {
+      "name": "train_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/train_selector_scale.py",
+        "--config",
+        "configs/flowers_selector_budget_98.json",
+        "--output",
+        "runs/flowers-selector-budget-98-training-v1"
+      ],
+      "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+      "started_utc": "2026-10-27T10:53:24.607032+00:00",
+      "status": "complete",
+      "pid": 1590111,
+      "returncode": 0,
+      "wall_seconds": 204.55263395600196,
+      "completed_utc": "2026-10-27T10:56:49.160447+00:00"
+    },
+    {
+      "name": "evaluate_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/flowers_selector_budget_98.json",
+        "--models",
+        "runs/flowers-selector-budget-98-training-v1",
+        "--output",
+        "runs/flowers-selector-budget-98-eval-v1"
+      ],
+      "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+      "started_utc": "2026-10-27T10:56:49.161083+00:00",
+      "status": "complete",
+      "pid": 1601555,
+      "returncode": 0,
+      "wall_seconds": 68.56479487400065,
+      "completed_utc": "2026-10-27T10:57:57.726390+00:00"
+    },
+    {
+      "name": "budget_analysis",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/analyze_selector_budgets.py",
+        "--budgets",
+        "49",
+        "98",
+        "--source",
+        "49=runs/flowers-selector-budget-49-eval-v1",
+        "--source",
+        "98=runs/flowers-selector-budget-98-eval-v1",
+        "--pruning-summary",
+        "runs/flowers-features-v1/exchange_strata.json",
+        "--output",
+        "results/flowers-selector-budgets-v1"
+      ],
+      "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+      "started_utc": "2026-10-27T10:57:57.727701+00:00",
+      "status": "complete",
+      "pid": 1605215,
+      "returncode": 0,
+      "wall_seconds": 16.631572933001735,
+      "completed_utc": "2026-10-27T10:58:14.360174+00:00"
+    },
+    {
+      "name": "geometry_analysis",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/analyze_selector_geometry.py",
+        "--source",
+        "49=runs/flowers-selector-budget-49-eval-v1",
+        "--source",
+        "98=runs/flowers-selector-budget-98-eval-v1",
+        "--output",
+        "results/flowers-selector-budgets-v1/geometry"
+      ],
+      "code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878",
+      "started_utc": "2026-10-27T10:58:14.361616+00:00",
+      "status": "complete",
+      "pid": 1606363,
+      "returncode": 0,
+      "wall_seconds": 14.86861806899833,
+      "completed_utc": "2026-10-27T10:58:29.231186+00:00"
+    }
+  ],
+  "stage_count": 9,
+  "current_stage": "geometry_analysis",
+  "completed_utc": "2026-10-27T10:58:29.232643+00:00"
+}
