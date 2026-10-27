@@ -97,6 +97,7 @@ def recover_models(path):
               'source_summary_reconstruction': summaries,
               'native_unseen_binary_baseline_reconstruction': baseline_recovery}
     destination = Path('runs/flowers-selector-pipeline-v1/github_recovery_check.json')
+    destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps({'restored_checkpoints': len(recovered), 'reconstructed_training_runs': len(summaries),
                       'record': str(destination)}), flush=True)

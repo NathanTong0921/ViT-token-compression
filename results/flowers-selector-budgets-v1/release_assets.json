@@ -1,8 +1,8 @@
 {
   "release_id": 425312137,
   "tag": "flowers-selector-budgets-v1",
-  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-775921766b5c630d6d23",
-  "draft": true,
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/flowers-selector-budgets-v1",
+  "draft": false,
   "total_bytes": 2412258378,
   "asset_count": 5,
   "assets": [
@@ -11,7 +11,7 @@
       "name": "flowers-selector-49-supervision-v1.zip",
       "bytes": 678179424,
       "digest": "sha256:cf231d3ac5e685de99616f404f48090415274bcbd108b37f9762bd7b8cedf5e9",
-      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-775921766b5c630d6d23/flowers-selector-49-supervision-v1.zip",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.zip",
       "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681290881",
       "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.zip",
       "server_transfer_archive": "cache/transfers/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.zip",
@@ -63,7 +63,7 @@
       "name": "flowers-selector-49-eval-v1.zip",
       "bytes": 515734236,
       "digest": "sha256:4505d6a530794a74086dcf319cb6ee8df86b86b4c07b0d0a4140561c6154b805",
-      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-775921766b5c630d6d23/flowers-selector-49-eval-v1.zip",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.zip",
       "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681302313",
       "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.zip",
       "server_transfer_archive": "cache/transfers/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.zip",
@@ -107,7 +107,7 @@
       "name": "flowers-selector-98-supervision-v1.zip",
       "bytes": 677318981,
       "digest": "sha256:0c93bf029da0afa477dbf851bda9e4333815d4c0dcb2c77f8992374da22975c4",
-      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-775921766b5c630d6d23/flowers-selector-98-supervision-v1.zip",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.zip",
       "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681312712",
       "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.zip",
       "server_transfer_archive": "cache/transfers/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.zip",
@@ -159,7 +159,7 @@
       "name": "flowers-selector-98-eval-v1.zip",
       "bytes": 517396959,
       "digest": "sha256:4e8ec32c64e10f9b95b4b031ee3d201f7a0d287abc554ee49bbb5a2a99f0eddc",
-      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-775921766b5c630d6d23/flowers-selector-98-eval-v1.zip",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.zip",
       "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681326001",
       "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.zip",
       "server_transfer_archive": "cache/transfers/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.zip",
@@ -203,7 +203,7 @@
       "name": "flowers-selector-models-and-records-v1.zip",
       "bytes": 23628778,
       "digest": "sha256:a62933b03cfd03665e08ad5d1cfb8db679d7d86a6f46c4d4c25bb957483dcd9a",
-      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-775921766b5c630d6d23/flowers-selector-models-and-records-v1.zip",
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.zip",
       "download_api_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681321317",
       "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.zip",
       "server_transfer_archive": "cache/transfers/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.zip",
@@ -404,5 +404,7 @@
     }
   ],
   "verified_utc": "2026-10-27T11:05:48.865680+00:00",
-  "omitted": "Regenerable frozen prefix token tensors, public raw images, and public frozen CLIP weights."
+  "omitted": "Regenerable frozen prefix token tensors, public raw images, and public frozen CLIP weights.",
+  "published_at": "2026-10-27T11:09:11Z",
+  "target_commit": "3bb7d0522b6a1d1b6648dd60406961d06fd62854"
 }
