@@ -34,7 +34,12 @@ def evaluation_examples(image_ids, labels, train_tasks, val_tasks):
     return rows
 
 
-def run(config, models_dir, output):
+def random_rankings(image_count, patch_count, seed):
+    """One task-independent random ordering per image, reused across budgets."""
+    return np.random.default_rng(seed).random((image_count, patch_count), dtype=np.float32)
+
+
+def run(config, models_dir, output, random_only=False):
     import clip
     import torch
 
@@ -85,7 +90,7 @@ def run(config, models_dir, output):
     def predict(seed, method, coverage):
         before = time.perf_counter()
         model, checkpoint_path = None, None
-        if seed != -1:
+        if method in ("conditioned", "image_only"):
             checkpoint_path = models_dir / coverage / f"seed_{seed}" / f"{method}.pt"
             checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
             model = TokenSelector(descriptor, conditioned=method == "conditioned",
@@ -94,7 +99,7 @@ def run(config, models_dir, output):
             model.eval().requires_grad_(False)
         # These methods are task-independent: run each image once and re-score
         # its identical feature vector for every relevant candidate pair.
-        unique = method in ("full_model", "attention", "image_only")
+        unique = method in ("full_model", "attention", "image_only", "random")
         image_indices = np.arange(len(ids)) if unique else ix
         n = len(image_indices)
         features = np.empty((n, text.shape[1]), np.float32)
@@ -103,6 +108,7 @@ def run(config, models_dir, output):
         positions = np.full((n, pruner.num_patches), -1, np.int16)
         selector_seconds = finish_seconds = 0.0
         physical = 0
+        random_scores = random_rankings(len(ids), pruner.num_patches, seed) if method == "random" else None
         if method == "full_model":
             features[:] = evidence["full_features"]
             positions[:] = np.arange(pruner.num_patches)
@@ -124,6 +130,8 @@ def run(config, models_dir, output):
                     selector_seconds += time.perf_counter() - before_select
                 elif method == "attention":
                     value = evidence["attention_scores"][image_indices[rows]]
+                elif method == "random":
+                    value = random_scores[image_indices[rows]]
                 else:
                     value = utilities[rows]
                 selected = np.sort(np.argsort(-value, axis=1, kind="stable")[:, :k], axis=1)
@@ -163,9 +171,14 @@ def run(config, models_dir, output):
         return arrays, cost
 
     costs = []
-    groups = [("references", [(-1, x) for x in ("full_model", "attention", "label_informed_teacher")])]
-    groups += [(c, [(s, m) for s in config["training_seeds"] for m in ("conditioned", "image_only")])
-               for c in config["coverages"]]
+    groups = []
+    if not random_only:
+        groups = [("references", [(-1, x) for x in ("full_model", "attention", "label_informed_teacher")])]
+        groups += [(c, [(s, m) for s in config["training_seeds"] for m in ("conditioned", "image_only")])
+                   for c in config["coverages"]]
+    random_seeds = config.get("random_seeds", [2055, 2056, 2057] if random_only else [])
+    if random_seeds:
+        groups.append(("random", [(s, "random") for s in random_seeds]))
     with torch.inference_mode():
         for coverage, jobs in groups:
             folder = output / coverage
@@ -198,7 +211,8 @@ def run(config, models_dir, output):
             np.savez_compressed(folder / "predictions.npz", **packed)
             del parts, records, packed
     summary = {"started_utc": started, "code_commit": commit, "config": config,
-               "models_dir": str(models_dir), "image_count": len(ids), "old_panel_image_count": len(old_ids),
+               "models_dir": str(models_dir), "random_only": random_only,
+               "random_seeds": random_seeds, "image_count": len(ids), "old_panel_image_count": len(old_ids),
                "examples_per_method": count, "cost": {"methods": costs,
                     "total_wall_seconds": time.perf_counter() - before_run,
                     "peak_allocated_gpu_bytes": int(torch.cuda.max_memory_allocated(device)) if device.type == "cuda" else 0},
@@ -208,7 +222,8 @@ def run(config, models_dir, output):
                           "image_features": "Normalized full 512-dimensional float32 CLIP output, retained for later geometric analysis.",
                           "references": "Full model, attention and label-informed teacher stored once globally; labels only enter the offline teacher.",
                           "task_class_weight": "Within each task split, each task has equal weight and each side contributes one half.",
-                          "image_only": "Candidate classes are ignored by this arm. One image forward is exactly reused across candidate pairs."},
+                          "image_only": "Candidate classes are ignored by this arm. One image forward is exactly reused across candidate pairs.",
+                          "random": "Each random seed gives one fixed ordering per image; same image order and seed give nested retained sets across budgets. Seeds index random masks, not trained models."},
                "cost_scope": "Cached-prefix evaluation with fixed padded suffix batches; includes host transfers, excludes prefix extraction. These are experiment costs, not deployment latency."}
     (output / "eval_summary.json").write_text(json.dumps(summary, indent=2, allow_nan=False) + "\n")
     return summary
@@ -219,5 +234,6 @@ if __name__ == "__main__":
     parser.add_argument("--config", required=True, type=Path)
     parser.add_argument("--models", type=Path, default=Path("runs/pets-selector-scale-training-v1"))
     parser.add_argument("--output", type=Path, default=Path("runs/pets-selector-scale-eval-v1"))
+    parser.add_argument("--random-only", action="store_true", help="Add random baselines while reusing an earlier budget's existing model/reference evaluation.")
     args = parser.parse_args()
-    run(json.loads(args.config.read_text()), args.models, args.output)
+    run(json.loads(args.config.read_text()), args.models, args.output, args.random_only)
