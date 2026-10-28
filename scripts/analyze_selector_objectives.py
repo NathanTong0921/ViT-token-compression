@@ -187,7 +187,10 @@ def common_teacher_diagnostics(source, cache, base, seeds, budget, temperature):
                           for i, a, b, n in zip(ix, labels, competitors, norms)])
     keys = [(r["image_id"], r["task_id"]) for r in base]
     output = {}
-    with np.load(source / "full" / "predictions.npz") as data:
+    with np.load(source / "full" / "predictions.npz") as saved:
+        # NPZ members decompress on access; load each needed member once.
+        data = {key: saved[key] for key in ("task_split", "image_ids", "task_ids", "method",
+                "seed", "selection_logits", "keep_patch_tokens", "labels", "class_pairs")}
         chosen = data["task_split"] == "unseen"
         selected_rows = np.flatnonzero(chosen)
         index = {(str(data["image_ids"][i]), str(data["task_ids"][i]),
