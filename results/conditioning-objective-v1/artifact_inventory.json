@@ -1,7 +1,7 @@
 {
   "tag": "conditioning-objective-v1",
   "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/conditioning-objective-v1",
-  "status": "draft; all five uploaded assets verified",
+  "status": "published; all five uploads verified against retained local archives",
   "assets": [
     {
       "name": "conditioning-flowers-49-eval-v1.zip",
@@ -10,7 +10,7 @@
       "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-141ec3bbd19aadcb2434/conditioning-flowers-49-eval-v1.zip",
       "digest": "sha256:3e03567c3a86b4e292a2206e68c3a63f45313e1aaea9827b2cce548e83ea88fc",
       "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/conditioning-objective-v1/conditioning-flowers-49-eval-v1.zip",
-      "server_archive": "/data2/zhao.tong/experiments/cache/transfers/conditioning-objective-v1/conditioning-flowers-49-eval-v1.zip"
+      "server_raw_evidence": "runs/conditioning-objective-pipeline-v1 and runs/{pets,flowers}-selector-rank-{49,98}-{training,eval}-v1 under /data2/zhao.tong/experiments"
     },
     {
       "name": "conditioning-flowers-98-eval-v1.zip",
@@ -19,7 +19,7 @@
       "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-141ec3bbd19aadcb2434/conditioning-flowers-98-eval-v1.zip",
       "digest": "sha256:2ab2dcb8047fd6f32d276299dfc3d1b179f75973e3392f4ff27bd20c7639e408",
       "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/conditioning-objective-v1/conditioning-flowers-98-eval-v1.zip",
-      "server_archive": "/data2/zhao.tong/experiments/cache/transfers/conditioning-objective-v1/conditioning-flowers-98-eval-v1.zip"
+      "server_raw_evidence": "runs/conditioning-objective-pipeline-v1 and runs/{pets,flowers}-selector-rank-{49,98}-{training,eval}-v1 under /data2/zhao.tong/experiments"
     },
     {
       "name": "conditioning-models-and-records-v1.zip",
@@ -28,7 +28,7 @@
       "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-141ec3bbd19aadcb2434/conditioning-models-and-records-v1.zip",
       "digest": "sha256:d85067b8578b51dc52e3f62e7cb75db5505accb73fe93affb74d04293d0f9251",
       "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/conditioning-objective-v1/conditioning-models-and-records-v1.zip",
-      "server_archive": "/data2/zhao.tong/experiments/cache/transfers/conditioning-objective-v1/conditioning-models-and-records-v1.zip"
+      "server_raw_evidence": "runs/conditioning-objective-pipeline-v1 and runs/{pets,flowers}-selector-rank-{49,98}-{training,eval}-v1 under /data2/zhao.tong/experiments"
     },
     {
       "name": "conditioning-pets-49-eval-v1.zip",
@@ -37,7 +37,7 @@
       "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-141ec3bbd19aadcb2434/conditioning-pets-49-eval-v1.zip",
       "digest": "sha256:8edef49272a52097dfa480b1394a624080e1813012d780516f5f10abdef971e0",
       "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/conditioning-objective-v1/conditioning-pets-49-eval-v1.zip",
-      "server_archive": "/data2/zhao.tong/experiments/cache/transfers/conditioning-objective-v1/conditioning-pets-49-eval-v1.zip"
+      "server_raw_evidence": "runs/conditioning-objective-pipeline-v1 and runs/{pets,flowers}-selector-rank-{49,98}-{training,eval}-v1 under /data2/zhao.tong/experiments"
     },
     {
       "name": "conditioning-pets-98-eval-v1.zip",
@@ -46,8 +46,11 @@
       "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-141ec3bbd19aadcb2434/conditioning-pets-98-eval-v1.zip",
       "digest": "sha256:37cb0ffe4281e58e96da25b73a015ae51e26c548849cad508e4d82f73b94054e",
       "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/conditioning-objective-v1/conditioning-pets-98-eval-v1.zip",
-      "server_archive": "/data2/zhao.tong/experiments/cache/transfers/conditioning-objective-v1/conditioning-pets-98-eval-v1.zip"
+      "server_raw_evidence": "runs/conditioning-objective-pipeline-v1 and runs/{pets,flowers}-selector-rank-{49,98}-{training,eval}-v1 under /data2/zhao.tong/experiments"
     }
   ],
-  "reused_prior_evidence": "Frozen CLIP features, budget-specific teacher supervision and original KL checkpoints remain in prior milestone releases."
+  "reused_prior_evidence": "Frozen CLIP features, budget-specific teacher supervision and original KL checkpoints remain in prior milestone releases.",
+  "release_commit": "772be9ef0b065bb6c0463cfed47941d5c4cb2b08",
+  "retained_local_bytes": 2374948933,
+  "transfer_cleanup": "Server ZIP transfer copies removed after local and GitHub verification; original run directories and retained local ZIPs are preserved."
 }

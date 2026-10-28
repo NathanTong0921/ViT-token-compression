@@ -1,6 +1,6 @@
 # Project TODO
 
-更新：2026-10-28。既有预算、H2、外部／跨模型和效率验证已完成；现开始一轮解释与训练目标的聚焦补强，方案见 [conditioning-objective-followup.md](conditioning-objective-followup.md)。保留测试、报告、PPT 和视频仍待完成。
+更新：2026-10-28。既有预算、H2、外部／跨模型和效率验证已完成；已完成一轮解释与训练目标的聚焦补强，方案见 [conditioning-objective-followup.md](conditioning-objective-followup.md)。保留测试、报告、PPT 和视频仍待完成。
 
 目标：回答“任务条件化何时优于强共享选择，以及这种收益能否被学到并泛化”，并完成四页正文报告、PPT 和讲解视频。依据正式 proposal 与当前实验更新；结果可支持或否定假设，完成项目不以获得正结果为前提。
 
