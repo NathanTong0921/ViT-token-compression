@@ -15,6 +15,7 @@ from torch.nn import functional as F
 
 from token_compression.selector import (TokenSelector, build_examples,
                                         shared_descriptor, utility_targets)
+from token_compression.selector_objectives import topk_rank_losses, teacher_topk_diagnostics
 from token_compression.selector_scale import (balanced_example_weights,
                                               balanced_training_stream,
                                               map_stream_images,
@@ -65,23 +66,83 @@ def evaluation_view(data, allowed_ids=None):
             "weights": torch.as_tensor(weights, dtype=torch.float64, device=device)}
 
 
-def example_losses(model, data, indices, temperature):
+def example_logits(model, data, indices):
     images = data["examples"]["image_indices"][indices]
     pairs = data["examples"]["class_pairs"][indices]
-    logits = model(data["tokens"][images], data["text"][pairs])
+    return model(data["tokens"][images], data["text"][pairs])
+
+
+def example_losses(model, data, indices, temperature, objective="kl", keep_count=None):
+    logits = example_logits(model, data, indices)
+    if objective == "topk_rank":
+        return topk_rank_losses(logits, data["targets"][indices], keep_count)
+    if objective != "kl":
+        raise ValueError(f"Unknown selector objective: {objective}")
     return F.kl_div(F.log_softmax(logits / temperature, dim=1),
                     data["targets"][indices], reduction="none").sum(dim=1)
 
 
 @torch.no_grad()
-def evaluate_loss(model, data, view, batch_size, temperature):
+def evaluate_loss(model, data, view, batch_size, temperature, objective="kl", keep_count=None):
     model.eval()
     total = torch.zeros((), dtype=torch.float64, device=data["tokens"].device)
     for start in range(0, len(view["indices"]), batch_size):
         indices = view["indices"][start:start + batch_size]
-        losses = example_losses(model, data, indices, temperature)
+        losses = example_losses(model, data, indices, temperature, objective, keep_count)
         total += (losses.double() * view["weights"][start:start + batch_size]).sum()
     return float(total)
+
+
+@torch.no_grad()
+def evaluate_teacher_diagnostics(model, data, view, batch_size, temperature, keep_count):
+    """Use common metrics at both endpoints regardless of the training loss."""
+    model.eval()
+    totals = {key: torch.zeros((), dtype=torch.float64, device=data["tokens"].device)
+              for key in ("kl", "topk_overlap", "topk_tie_aware_overlap", "teacher_boundary_tie_fraction")}
+    for start in range(0, len(view["indices"]), batch_size):
+        indices = view["indices"][start:start + batch_size]
+        logits = example_logits(model, data, indices)
+        targets = data["targets"][indices]
+        metrics = teacher_topk_diagnostics(logits, targets, keep_count)
+        metrics["kl"] = F.kl_div(F.log_softmax(logits / temperature, dim=1),
+                                 targets, reduction="none").sum(dim=1)
+        weights = view["weights"][start:start + batch_size]
+        for key, values in metrics.items():
+            totals[key] += (values.double() * weights).sum()
+    return {key: float(value) for key, value in totals.items()}
+
+
+def initial_gradient_diagnostics(model, data, order, batch_size, temperature, keep_count, batches=8):
+    """Measure both losses on identical initial batches without updating weights."""
+    was_training = model.training
+    model.eval()
+    parameters = tuple(model.parameters())
+    rows = []
+    for batch in range(min(batches, len(order) // batch_size)):
+        indices = order[batch * batch_size:(batch + 1) * batch_size]
+        logits = example_logits(model, data, indices)
+        targets = data["targets"][indices]
+        losses = {"kl": F.kl_div(F.log_softmax(logits / temperature, dim=1),
+                                  targets, reduction="none").sum(dim=1).mean(),
+                  "topk_rank": topk_rank_losses(logits, targets, keep_count).mean()}
+        row = {"batch": batch, "examples": len(indices)}
+        for name, loss in losses.items():
+            gradients = torch.autograd.grad(loss, parameters, retain_graph=name == "kl")
+            norm = torch.stack([g.detach().double().square().sum() for g in gradients]).sum().sqrt()
+            row[f"{name}_loss"] = float(loss.detach())
+            row[f"{name}_gradient_l2"] = float(norm)
+        rows.append(row)
+    model.train(was_training)
+    return {"batches": rows, "batch_count": len(rows),
+            "mean_kl_gradient_l2": float(np.mean([r["kl_gradient_l2"] for r in rows])),
+            "mean_topk_rank_gradient_l2": float(np.mean([r["topk_rank_gradient_l2"] for r in rows])),
+            "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."}
+
+
+def common_history_metrics(metrics=None):
+    keys = ("kl", "topk_overlap", "topk_tie_aware_overlap", "teacher_boundary_tie_fraction")
+    return {f"{split}_{key}": None if metrics is None else metrics[split][key]
+            for split in ("train", "val") for key in keys}
 
 
 def synchronize(device):
@@ -108,6 +169,14 @@ def train(config, output):
         torch.backends.cuda.matmul.allow_tf32 = False
     cache, old_cache = Path(config["cache_dir"]), Path(config["source_cache_dir"])
     batch_size, temperature = config["batch_size"], config["temperature"]
+    objective = config.get("objective", "kl")
+    if objective not in ("kl", "topk_rank"):
+        raise ValueError(f"Unknown selector objective: {objective}")
+    # The legacy KL path does not require a retention budget during training.
+    keep_count = config.get("keep_patch_tokens")
+    loss_options = {"objective": objective, "keep_count": keep_count}
+    train_key = "train_kl" if objective == "kl" else "train_objective_loss"
+    val_key = "val_kl" if objective == "kl" else "val_objective_loss"
     steps, interval = config["training_steps"], config["checkpoint_interval"]
     assert steps % interval == 0
     data = {split: load_split(cache, split, device, temperature, batch_size)
@@ -134,7 +203,7 @@ def train(config, output):
     lookup[train_images, train_tasks] = np.arange(len(train_images))
     synchronize(device)
     preparation_seconds = time.perf_counter() - wall_start
-    history, results, sampling_records = [], [], []
+    history, results, sampling_records, gradient_records = [], [], [], []
     for seed in config["training_seeds"]:
         torch.manual_seed(seed)
         template = TokenSelector(prior, conditioned=True, hidden_dim=config["hidden_dim"],
@@ -176,13 +245,28 @@ def train(config, output):
                 optimizer = torch.optim.AdamW(model.parameters(), lr=config["learning_rate"],
                                               weight_decay=config["weight_decay"])
                 before = time.perf_counter()
-                initial_train = evaluate_loss(model, data["train"], train_views[coverage], batch_size, temperature)
-                initial_val = evaluate_loss(model, data["val"], val_view, batch_size, temperature)
+                initial_train = evaluate_loss(model, data["train"], train_views[coverage], batch_size, temperature,
+                                              **loss_options)
+                initial_val = evaluate_loss(model, data["val"], val_view, batch_size, temperature, **loss_options)
+                initial_common, initial_gradients = None, None
+                if objective == "topk_rank":
+                    initial_common = {
+                        split: evaluate_teacher_diagnostics(model, data[split], view, batch_size,
+                                                            temperature, keep_count)
+                        for split, view in (("train", train_views[coverage]), ("val", val_view))}
+                    initial_gradients = initial_gradient_diagnostics(
+                        model, data["train"], order, batch_size, temperature, keep_count)
+                    gradient_records.append({"seed": seed, "coverage": coverage, "arm": arm,
+                                             **initial_gradients})
+                    (output / "initial_gradient_diagnostics.json").write_text(
+                        json.dumps(gradient_records, indent=2, allow_nan=False) + "\n")
                 synchronize(device)
                 initial_evaluation_seconds = time.perf_counter() - before
                 history.append({"seed": seed, "coverage": coverage, "arm": arm, "step": 0,
-                                "train_kl": initial_train, "val_kl": initial_val, "train_seconds": 0.,
+                                train_key: initial_train, val_key: initial_val, "train_seconds": 0.,
                                 "validation_seconds": initial_evaluation_seconds, "cumulative_train_seconds": 0.})
+                if objective == "topk_rank":
+                    history[-1].update(objective=objective, **common_history_metrics(initial_common))
                 training_seconds, validation_seconds = 0., 0.
                 for block_start in range(0, steps, interval):
                     model.train()
@@ -192,7 +276,7 @@ def train(config, output):
                     for step in range(block_start, block_start + interval):
                         indices = order[step * batch_size:(step + 1) * batch_size]
                         optimizer.zero_grad(set_to_none=True)
-                        loss = example_losses(model, data["train"], indices, temperature).mean()
+                        loss = example_losses(model, data["train"], indices, temperature, **loss_options).mean()
                         loss.backward()
                         optimizer.step()
                         total += loss.detach()
@@ -201,21 +285,32 @@ def train(config, output):
                     training_seconds += block_seconds
                     train_loss = float(total / interval)
                     before = time.perf_counter()
-                    val_loss = evaluate_loss(model, data["val"], val_view, batch_size, temperature)
+                    val_loss = evaluate_loss(model, data["val"], val_view, batch_size, temperature, **loss_options)
                     synchronize(device)
                     val_seconds = time.perf_counter() - before
                     validation_seconds += val_seconds
                     completed_steps = block_start + interval
                     history.append({"seed": seed, "coverage": coverage, "arm": arm, "step": completed_steps,
-                                    "train_kl": train_loss, "val_kl": val_loss,
+                                    train_key: train_loss, val_key: val_loss,
                                     "train_seconds": block_seconds, "validation_seconds": val_seconds,
                                     "cumulative_train_seconds": training_seconds})
+                    if objective == "topk_rank":
+                        history[-1].update(objective=objective, **common_history_metrics())
                     write_history(output / "training_history.csv", history)
                     print(f"coverage={coverage} seed={seed} arm={arm} step={completed_steps}/{steps} "
-                          f"train_kl={train_loss:.6f} val_kl={val_loss:.6f} "
+                          f"{train_key}={train_loss:.6f} {val_key}={val_loss:.6f} "
                           f"train_seconds={block_seconds:.2f}", flush=True)
                 before = time.perf_counter()
-                final_train = evaluate_loss(model, data["train"], train_views[coverage], batch_size, temperature)
+                final_train = evaluate_loss(model, data["train"], train_views[coverage], batch_size, temperature,
+                                            **loss_options)
+                final_common = None
+                if objective == "topk_rank":
+                    final_common = {
+                        split: evaluate_teacher_diagnostics(model, data[split], view, batch_size,
+                                                            temperature, keep_count)
+                        for split, view in (("train", train_views[coverage]), ("val", val_view))}
+                    history[-1].update(**common_history_metrics(final_common))
+                    write_history(output / "training_history.csv", history)
                 synchronize(device)
                 final_evaluation_seconds = time.perf_counter() - before
                 checkpoint = {"state_dict": {key: value.detach().cpu() for key, value in model.state_dict().items()},
@@ -223,6 +318,7 @@ def train(config, output):
                               "token_dim": token_dim, "text_dim": data["train"]["text"].shape[-1],
                               "num_patches": data["train"]["tokens"].shape[1] - 1,
                               "seed": seed, "step": steps, "coverage": coverage, "parameter_count": parameter_count,
+                              "objective": objective,
                               "config": config, "code_commit": source_commit,
                               "checkpoint_policy": "Fixed final update; no validation-based selection."}
                 torch.save(checkpoint, seed_output / f"{arm}.pt")
@@ -239,6 +335,15 @@ def train(config, output):
                                 "image_draws_reused_between_arms": True,
                                 "clip_parameters_in_optimizer": 0,
                                 "checkpoint": str(Path(coverage) / f"seed_{seed}" / f"{arm}.pt")})
+                if objective == "topk_rank":
+                    results[-1].update(
+                        objective=objective,
+                        initial_train_objective_loss=initial_train, initial_val_objective_loss=initial_val,
+                        final_train_objective_loss=final_train, final_val_objective_loss=val_loss,
+                        initial_train_kl=initial_common["train"]["kl"], initial_val_kl=initial_common["val"]["kl"],
+                        final_train_kl=final_common["train"]["kl"], final_val_kl=final_common["val"]["kl"],
+                        initial_teacher_diagnostics=initial_common, final_teacher_diagnostics=final_common,
+                        initial_gradient_diagnostics=initial_gradients)
                 (output / "completed_runs.json").write_text(json.dumps(results, indent=2, allow_nan=False) + "\n")
                 del model, optimizer
         sampling_records.append(stream_record)
@@ -268,6 +373,15 @@ def train(config, output):
                "curve_train_kl": "Step 0 is balanced full-panel evaluation. Later points are average online losses from the preceding checkpoint_interval updates; final_train_kl in runs is evaluated over the full allowed panel.",
                "capacity_comparison": "Identical architecture and parameter count; image-only uses mean training-pair descriptor. Each seed shares its exact initial state across both coverages and both arms.",
                "runs": results}
+    if objective == "topk_rank":
+        summary.update(
+            run_type="fixed_update_paired_selector_objective", objective=objective,
+            objective_definition="Mean softplus(s_out-s_in) over strict teacher top-k boundary preferences; boundary ties expanded symmetrically, equal target values ignored, uniform targets have zero loss/gradient.",
+            rank_temperature="Raw selector logits at unit scale; existing temperature is retained only for the common KL target and diagnostic.",
+            curve_train_objective_loss="Step 0 is balanced full-panel evaluation. Later points average online rank losses from preceding updates; final_train_objective_loss is a separate balanced full-panel evaluation.",
+            curve_train_kl="Common KL and top-k diagnostics are evaluated on full balanced train/validation panels at initialization and the final step only; intervening CSV values are empty.",
+            initial_gradient_diagnostics="initial_gradient_diagnostics.json",
+            initial_gradient_cost="Included in initial_evaluation_seconds; no rescaling or hyperparameter adjustment was performed.")
     (output / "training_summary.json").write_text(json.dumps(summary, indent=2, allow_nan=False) + "\n")
     print(json.dumps({"wall_seconds": summary["wall_seconds"], "model_runs": len(results),
                       "parameter_count": results[0]["parameter_count"]}), flush=True)
