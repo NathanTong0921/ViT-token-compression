@@ -1,0 +1,452 @@
+[
+  {
+    "seed": 2041,
+    "coverage": "full",
+    "arm": "conditioned",
+    "batches": [
+      {
+        "batch": 0,
+        "examples": 128,
+        "kl_loss": 1.5389270782470703,
+        "kl_gradient_l2": 0.8191017590842762,
+        "topk_rank_loss": 0.6936601996421814,
+        "topk_rank_gradient_l2": 0.07090325221152502
+      },
+      {
+        "batch": 1,
+        "examples": 128,
+        "kl_loss": 1.491231918334961,
+        "kl_gradient_l2": 0.8173292221000844,
+        "topk_rank_loss": 0.6940575838088989,
+        "topk_rank_gradient_l2": 0.06640394174345954
+      },
+      {
+        "batch": 2,
+        "examples": 128,
+        "kl_loss": 1.372084617614746,
+        "kl_gradient_l2": 0.780467789808028,
+        "topk_rank_loss": 0.694091796875,
+        "topk_rank_gradient_l2": 0.06679510748739735
+      },
+      {
+        "batch": 3,
+        "examples": 128,
+        "kl_loss": 1.4544165134429932,
+        "kl_gradient_l2": 0.7705932984375296,
+        "topk_rank_loss": 0.6938984990119934,
+        "topk_rank_gradient_l2": 0.07748417972832045
+      },
+      {
+        "batch": 4,
+        "examples": 128,
+        "kl_loss": 1.463902235031128,
+        "kl_gradient_l2": 0.6788077874951322,
+        "topk_rank_loss": 0.6939448118209839,
+        "topk_rank_gradient_l2": 0.07107511568804799
+      },
+      {
+        "batch": 5,
+        "examples": 128,
+        "kl_loss": 1.4629921913146973,
+        "kl_gradient_l2": 0.6511157435998363,
+        "topk_rank_loss": 0.6938672065734863,
+        "topk_rank_gradient_l2": 0.06799526754406193
+      },
+      {
+        "batch": 6,
+        "examples": 128,
+        "kl_loss": 1.4482600688934326,
+        "kl_gradient_l2": 0.8229361911613376,
+        "topk_rank_loss": 0.6935626864433289,
+        "topk_rank_gradient_l2": 0.07234207351134436
+      },
+      {
+        "batch": 7,
+        "examples": 128,
+        "kl_loss": 1.5237773656845093,
+        "kl_gradient_l2": 0.810278346044054,
+        "topk_rank_loss": 0.6938925385475159,
+        "topk_rank_gradient_l2": 0.06848934032585342
+      }
+    ],
+    "batch_count": 8,
+    "mean_kl_gradient_l2": 0.7688287672162848,
+    "mean_topk_rank_gradient_l2": 0.07018603478000127,
+    "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+  },
+  {
+    "seed": 2041,
+    "coverage": "full",
+    "arm": "image_only",
+    "batches": [
+      {
+        "batch": 0,
+        "examples": 128,
+        "kl_loss": 1.5384299755096436,
+        "kl_gradient_l2": 0.8517908362864408,
+        "topk_rank_loss": 0.6935986280441284,
+        "topk_rank_gradient_l2": 0.07302811326557175
+      },
+      {
+        "batch": 1,
+        "examples": 128,
+        "kl_loss": 1.4908995628356934,
+        "kl_gradient_l2": 0.8443457365889087,
+        "topk_rank_loss": 0.6940251588821411,
+        "topk_rank_gradient_l2": 0.06824962187758629
+      },
+      {
+        "batch": 2,
+        "examples": 128,
+        "kl_loss": 1.3716925382614136,
+        "kl_gradient_l2": 0.8148741442162762,
+        "topk_rank_loss": 0.6940249800682068,
+        "topk_rank_gradient_l2": 0.06902589401164562
+      },
+      {
+        "batch": 3,
+        "examples": 128,
+        "kl_loss": 1.4535921812057495,
+        "kl_gradient_l2": 0.8017431653560761,
+        "topk_rank_loss": 0.6938282251358032,
+        "topk_rank_gradient_l2": 0.08007808015006092
+      },
+      {
+        "batch": 4,
+        "examples": 128,
+        "kl_loss": 1.4638426303863525,
+        "kl_gradient_l2": 0.7083435752115785,
+        "topk_rank_loss": 0.6940139532089233,
+        "topk_rank_gradient_l2": 0.07370003693072168
+      },
+      {
+        "batch": 5,
+        "examples": 128,
+        "kl_loss": 1.4623477458953857,
+        "kl_gradient_l2": 0.6809531190451226,
+        "topk_rank_loss": 0.6937701106071472,
+        "topk_rank_gradient_l2": 0.07024842089497287
+      },
+      {
+        "batch": 6,
+        "examples": 128,
+        "kl_loss": 1.447838544845581,
+        "kl_gradient_l2": 0.8602806789592619,
+        "topk_rank_loss": 0.6935853958129883,
+        "topk_rank_gradient_l2": 0.07495830158774722
+      },
+      {
+        "batch": 7,
+        "examples": 128,
+        "kl_loss": 1.524072289466858,
+        "kl_gradient_l2": 0.8460444130606461,
+        "topk_rank_loss": 0.6940119862556458,
+        "topk_rank_gradient_l2": 0.07103008214206692
+      }
+    ],
+    "batch_count": 8,
+    "mean_kl_gradient_l2": 0.8010469585905389,
+    "mean_topk_rank_gradient_l2": 0.07253981885754666,
+    "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+  },
+  {
+    "seed": 2042,
+    "coverage": "full",
+    "arm": "conditioned",
+    "batches": [
+      {
+        "batch": 0,
+        "examples": 128,
+        "kl_loss": 1.4677814245224,
+        "kl_gradient_l2": 0.6832663455041647,
+        "topk_rank_loss": 0.6945163011550903,
+        "topk_rank_gradient_l2": 0.07503739558872949
+      },
+      {
+        "batch": 1,
+        "examples": 128,
+        "kl_loss": 1.5876649618148804,
+        "kl_gradient_l2": 0.8861472872633496,
+        "topk_rank_loss": 0.6942126154899597,
+        "topk_rank_gradient_l2": 0.07030810255960708
+      },
+      {
+        "batch": 2,
+        "examples": 128,
+        "kl_loss": 1.3428410291671753,
+        "kl_gradient_l2": 0.6253160981444639,
+        "topk_rank_loss": 0.694352388381958,
+        "topk_rank_gradient_l2": 0.07026929237514386
+      },
+      {
+        "batch": 3,
+        "examples": 128,
+        "kl_loss": 1.2995190620422363,
+        "kl_gradient_l2": 0.6124149936799508,
+        "topk_rank_loss": 0.6947944164276123,
+        "topk_rank_gradient_l2": 0.0809155278697404
+      },
+      {
+        "batch": 4,
+        "examples": 128,
+        "kl_loss": 1.3618935346603394,
+        "kl_gradient_l2": 0.7679555657451896,
+        "topk_rank_loss": 0.6943384408950806,
+        "topk_rank_gradient_l2": 0.07717331012209432
+      },
+      {
+        "batch": 5,
+        "examples": 128,
+        "kl_loss": 1.4349400997161865,
+        "kl_gradient_l2": 0.6974525685251075,
+        "topk_rank_loss": 0.6945902109146118,
+        "topk_rank_gradient_l2": 0.07388285835195926
+      },
+      {
+        "batch": 6,
+        "examples": 128,
+        "kl_loss": 1.2511621713638306,
+        "kl_gradient_l2": 0.6650930804824393,
+        "topk_rank_loss": 0.6946990489959717,
+        "topk_rank_gradient_l2": 0.08235858873438652
+      },
+      {
+        "batch": 7,
+        "examples": 128,
+        "kl_loss": 1.439358115196228,
+        "kl_gradient_l2": 0.7956773861516058,
+        "topk_rank_loss": 0.6942309141159058,
+        "topk_rank_gradient_l2": 0.0746023794228863
+      }
+    ],
+    "batch_count": 8,
+    "mean_kl_gradient_l2": 0.7166654156870339,
+    "mean_topk_rank_gradient_l2": 0.07556843187806841,
+    "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+  },
+  {
+    "seed": 2042,
+    "coverage": "full",
+    "arm": "image_only",
+    "batches": [
+      {
+        "batch": 0,
+        "examples": 128,
+        "kl_loss": 1.4673762321472168,
+        "kl_gradient_l2": 0.7117460956065801,
+        "topk_rank_loss": 0.6946002244949341,
+        "topk_rank_gradient_l2": 0.07829049182482335
+      },
+      {
+        "batch": 1,
+        "examples": 128,
+        "kl_loss": 1.5882213115692139,
+        "kl_gradient_l2": 0.9222509641403233,
+        "topk_rank_loss": 0.6942142248153687,
+        "topk_rank_gradient_l2": 0.0729725302463397
+      },
+      {
+        "batch": 2,
+        "examples": 128,
+        "kl_loss": 1.3428951501846313,
+        "kl_gradient_l2": 0.6506009284528379,
+        "topk_rank_loss": 0.6943972706794739,
+        "topk_rank_gradient_l2": 0.07320517914847906
+      },
+      {
+        "batch": 3,
+        "examples": 128,
+        "kl_loss": 1.2996277809143066,
+        "kl_gradient_l2": 0.6413671524437448,
+        "topk_rank_loss": 0.694834291934967,
+        "topk_rank_gradient_l2": 0.08437745246311569
+      },
+      {
+        "batch": 4,
+        "examples": 128,
+        "kl_loss": 1.3620344400405884,
+        "kl_gradient_l2": 0.7976739114468483,
+        "topk_rank_loss": 0.6943973302841187,
+        "topk_rank_gradient_l2": 0.08039788954307191
+      },
+      {
+        "batch": 5,
+        "examples": 128,
+        "kl_loss": 1.4353268146514893,
+        "kl_gradient_l2": 0.7285200999235488,
+        "topk_rank_loss": 0.6945711374282837,
+        "topk_rank_gradient_l2": 0.07704719821852873
+      },
+      {
+        "batch": 6,
+        "examples": 128,
+        "kl_loss": 1.2516536712646484,
+        "kl_gradient_l2": 0.6904458788829126,
+        "topk_rank_loss": 0.6947835683822632,
+        "topk_rank_gradient_l2": 0.08579914487458705
+      },
+      {
+        "batch": 7,
+        "examples": 128,
+        "kl_loss": 1.4395835399627686,
+        "kl_gradient_l2": 0.8332830959444438,
+        "topk_rank_loss": 0.6943234205245972,
+        "topk_rank_gradient_l2": 0.0778794527282579
+      }
+    ],
+    "batch_count": 8,
+    "mean_kl_gradient_l2": 0.7469860158551549,
+    "mean_topk_rank_gradient_l2": 0.07874616738090043,
+    "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+  },
+  {
+    "seed": 2043,
+    "coverage": "full",
+    "arm": "conditioned",
+    "batches": [
+      {
+        "batch": 0,
+        "examples": 128,
+        "kl_loss": 1.3186986446380615,
+        "kl_gradient_l2": 0.6350842025723048,
+        "topk_rank_loss": 0.6931480169296265,
+        "topk_rank_gradient_l2": 0.06837452598455125
+      },
+      {
+        "batch": 1,
+        "examples": 128,
+        "kl_loss": 1.481063961982727,
+        "kl_gradient_l2": 0.7364116797615861,
+        "topk_rank_loss": 0.6929165124893188,
+        "topk_rank_gradient_l2": 0.06957338047079013
+      },
+      {
+        "batch": 2,
+        "examples": 128,
+        "kl_loss": 1.3381879329681396,
+        "kl_gradient_l2": 0.6534611620855841,
+        "topk_rank_loss": 0.6931949257850647,
+        "topk_rank_gradient_l2": 0.06427614622971982
+      },
+      {
+        "batch": 3,
+        "examples": 128,
+        "kl_loss": 1.5364575386047363,
+        "kl_gradient_l2": 0.7452624960870786,
+        "topk_rank_loss": 0.6934575438499451,
+        "topk_rank_gradient_l2": 0.061930552380246376
+      },
+      {
+        "batch": 4,
+        "examples": 128,
+        "kl_loss": 1.5477275848388672,
+        "kl_gradient_l2": 0.854334808945233,
+        "topk_rank_loss": 0.6932535171508789,
+        "topk_rank_gradient_l2": 0.07374572299136951
+      },
+      {
+        "batch": 5,
+        "examples": 128,
+        "kl_loss": 1.3623878955841064,
+        "kl_gradient_l2": 0.664416919789363,
+        "topk_rank_loss": 0.6927453279495239,
+        "topk_rank_gradient_l2": 0.07340929677287963
+      },
+      {
+        "batch": 6,
+        "examples": 128,
+        "kl_loss": 1.455500602722168,
+        "kl_gradient_l2": 0.8102876959324691,
+        "topk_rank_loss": 0.6928784847259521,
+        "topk_rank_gradient_l2": 0.07012086042753571
+      },
+      {
+        "batch": 7,
+        "examples": 128,
+        "kl_loss": 1.6131771802902222,
+        "kl_gradient_l2": 0.7304639534402319,
+        "topk_rank_loss": 0.6932731866836548,
+        "topk_rank_gradient_l2": 0.06943568750220819
+      }
+    ],
+    "batch_count": 8,
+    "mean_kl_gradient_l2": 0.7287153648267313,
+    "mean_topk_rank_gradient_l2": 0.06885827159491259,
+    "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+  },
+  {
+    "seed": 2043,
+    "coverage": "full",
+    "arm": "image_only",
+    "batches": [
+      {
+        "batch": 0,
+        "examples": 128,
+        "kl_loss": 1.3186089992523193,
+        "kl_gradient_l2": 0.6697253406161499,
+        "topk_rank_loss": 0.693083643913269,
+        "topk_rank_gradient_l2": 0.0715555370616933
+      },
+      {
+        "batch": 1,
+        "examples": 128,
+        "kl_loss": 1.4799572229385376,
+        "kl_gradient_l2": 0.7781435070887891,
+        "topk_rank_loss": 0.6928011775016785,
+        "topk_rank_gradient_l2": 0.07296340000831776
+      },
+      {
+        "batch": 2,
+        "examples": 128,
+        "kl_loss": 1.3375725746154785,
+        "kl_gradient_l2": 0.6904948066086903,
+        "topk_rank_loss": 0.6932098865509033,
+        "topk_rank_gradient_l2": 0.06753633984685886
+      },
+      {
+        "batch": 3,
+        "examples": 128,
+        "kl_loss": 1.5365076065063477,
+        "kl_gradient_l2": 0.7867580595745212,
+        "topk_rank_loss": 0.693393349647522,
+        "topk_rank_gradient_l2": 0.06476771355358675
+      },
+      {
+        "batch": 4,
+        "examples": 128,
+        "kl_loss": 1.5473538637161255,
+        "kl_gradient_l2": 0.9076971970205626,
+        "topk_rank_loss": 0.6932175159454346,
+        "topk_rank_gradient_l2": 0.07778362630882574
+      },
+      {
+        "batch": 5,
+        "examples": 128,
+        "kl_loss": 1.3620069026947021,
+        "kl_gradient_l2": 0.7016152300976819,
+        "topk_rank_loss": 0.6927691102027893,
+        "topk_rank_gradient_l2": 0.07690428868772257
+      },
+      {
+        "batch": 6,
+        "examples": 128,
+        "kl_loss": 1.4555879831314087,
+        "kl_gradient_l2": 0.8476173516157095,
+        "topk_rank_loss": 0.6929587125778198,
+        "topk_rank_gradient_l2": 0.07272863752539402
+      },
+      {
+        "batch": 7,
+        "examples": 128,
+        "kl_loss": 1.6128751039505005,
+        "kl_gradient_l2": 0.777902529742397,
+        "topk_rank_loss": 0.6933213472366333,
+        "topk_rank_gradient_l2": 0.07294449924519483
+      }
+    ],
+    "batch_count": 8,
+    "mean_kl_gradient_l2": 0.7699942527955627,
+    "mean_topk_rank_gradient_l2": 0.07214800527969922,
+    "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+  }
+]

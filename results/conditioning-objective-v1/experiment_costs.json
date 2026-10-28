@@ -1,0 +1,63 @@
+{
+  "scope": "New completed gap diagnostic, ranking training and classification evaluation, and successful statistical analyses only. Reuses previously generated frozen features, teachers, and KL baselines; excludes coding, transfer, validation, and the interrupted slow CPU analysis. Not total lifetime GPU utilization.",
+  "stages": [
+    {
+      "stage": "pets_gap",
+      "kind": "CPU analysis wall time",
+      "seconds": 5.025701135993586
+    },
+    {
+      "stage": "pets_train_49",
+      "kind": "GPU process wall time",
+      "seconds": 239.12923910700192
+    },
+    {
+      "stage": "pets_evaluate_49",
+      "kind": "GPU process wall time",
+      "seconds": 59.711678417006624
+    },
+    {
+      "stage": "pets_train_98",
+      "kind": "GPU process wall time",
+      "seconds": 242.07231456099544
+    },
+    {
+      "stage": "pets_evaluate_98",
+      "kind": "GPU process wall time",
+      "seconds": 80.39882274498814
+    },
+    {
+      "stage": "flowers_train_49",
+      "kind": "GPU process wall time",
+      "seconds": 209.40368332900107
+    },
+    {
+      "stage": "flowers_evaluate_49",
+      "kind": "GPU process wall time",
+      "seconds": 54.29747169899929
+    },
+    {
+      "stage": "flowers_train_98",
+      "kind": "GPU process wall time",
+      "seconds": 206.3038904290006
+    },
+    {
+      "stage": "flowers_evaluate_98",
+      "kind": "GPU process wall time",
+      "seconds": 61.85174206699594
+    },
+    {
+      "stage": "pets_objective_analysis",
+      "kind": "CPU analysis wall time",
+      "seconds": 83.81791653198889
+    },
+    {
+      "stage": "flowers_objective_analysis",
+      "kind": "CPU analysis wall time",
+      "seconds": 121.24298549100058
+    }
+  ],
+  "gpu_stage_wall_seconds": 1153.168842353989,
+  "cpu_completed_analysis_seconds": 210.08660315898305,
+  "gpu_stage_wall_hours": 0.3203246784316636
+}

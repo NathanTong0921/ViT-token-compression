@@ -1,0 +1,1620 @@
+{
+  "dataset": "pets",
+  "code_commit": "5a0f8232e6b907fd7974517b2290f726ef2ba596",
+  "budgets": [
+    49,
+    98
+  ],
+  "primary": "[(conditioned - image_only)_rank - (conditioned - image_only)_KL] on unseen validation combinations.",
+  "aggregation": "Equal tasks, equal class sides within each task, then equal images within side. Fixed training seeds are averaged before image-cluster resampling.",
+  "uncertainty": "Paired image-cluster weighted ratio bootstrap conditional on tasks and three fixed seeds. Primary 97.5% intervals adjust across two budgets separately for accuracy and margin within this dataset; secondary intervals are pointwise 95%.",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2085,
+  "scope": "Validation only; test images and reserved test combinations are not read.",
+  "training_objective_caution": "Raw KL and ranking training losses have different targets/scales and are not compared. Common teacher diagnostics and actual pruned-CLIP classification are reported separately.",
+  "sources": {
+    "kl": {
+      "49": "runs/pets-selector-scale-eval-v1",
+      "98": "runs/pets-selector-budget-98-eval-v1"
+    },
+    "rank": {
+      "49": "runs/pets-selector-rank-49-eval-v1",
+      "98": "runs/pets-selector-rank-98-eval-v1"
+    }
+  },
+  "results": {
+    "49": {
+      "image_count": 716,
+      "image_task_examples": 2624,
+      "task_count": 66,
+      "table": [
+        {
+          "objective": "kl",
+          "arm": "conditioned",
+          "accuracy": {
+            "mean": 0.989918926103133,
+            "ci95": [
+              0.986333013492553,
+              0.9931930933527062
+            ]
+          },
+          "margin": {
+            "mean": 0.11469279310470862,
+            "ci95": [
+              0.11236836407594974,
+              0.11725169154167117
+            ]
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": 0.9898724082934407,
+              "margin": 0.11409210356335371
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.9903508771929623,
+              "margin": 0.1153627751501315
+            },
+            {
+              "seed": 2043,
+              "accuracy": 0.9895334928229463,
+              "margin": 0.11462350060064114
+            }
+          ]
+        },
+        {
+          "objective": "kl",
+          "arm": "image_only",
+          "accuracy": {
+            "mean": 0.9899056353003685,
+            "ci95": [
+              0.9856529692546158,
+              0.9936819403291337
+            ]
+          },
+          "margin": {
+            "mean": 0.11561186911457148,
+            "ci95": [
+              0.11309420548737496,
+              0.11816711925629315
+            ]
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": 0.9895135566187996,
+              "margin": 0.11572909898011746
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.9895135566187996,
+              "margin": 0.11469824112365902
+            },
+            {
+              "seed": 2043,
+              "accuracy": 0.9906897926634567,
+              "margin": 0.11640826723993745
+            }
+          ]
+        },
+        {
+          "objective": "rank",
+          "arm": "conditioned",
+          "accuracy": {
+            "mean": 0.9895202020201981,
+            "ci95": [
+              0.9851892968652313,
+              0.9931129684707569
+            ]
+          },
+          "margin": {
+            "mean": 0.11702910609660533,
+            "ci95": [
+              0.11474630761017378,
+              0.11950049173614938
+            ]
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": 0.9891547049441585,
+              "margin": 0.11705250853287202
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.9918660287081138,
+              "margin": 0.1177536010523236
+            },
+            {
+              "seed": 2043,
+              "accuracy": 0.9875398724082732,
+              "margin": 0.11628120870461965
+            }
+          ]
+        },
+        {
+          "objective": "rank",
+          "arm": "image_only",
+          "accuracy": {
+            "mean": 0.9894404572036113,
+            "ci95": [
+              0.9852969027666311,
+              0.9931099635794751
+            ]
+          },
+          "margin": {
+            "mean": 0.11513608815105329,
+            "ci95": [
+              0.11281746083128871,
+              0.1176254732525172
+            ]
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": 0.9888357256778109,
+              "margin": 0.11508416023951604
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.9891347687400117,
+              "margin": 0.11488910856377207
+            },
+            {
+              "seed": 2043,
+              "accuracy": 0.9903508771929622,
+              "margin": 0.1154349956498717
+            }
+          ]
+        }
+      ],
+      "primary_interaction": {
+        "accuracy": {
+          "mean": 6.645401382243508e-05,
+          "ci95": [
+            -0.003393275991797052,
+            0.003502106507229038
+          ],
+          "bonferroni_family_ci95": [
+            -0.003932393463454219,
+            0.003953835751064077
+          ],
+          "individual_interval_level": 0.975
+        },
+        "margin": {
+          "mean": 0.002812093955414691,
+          "ci95": [
+            0.001928188363349541,
+            0.003715174845016961
+          ],
+          "bonferroni_family_ci95": [
+            0.0017710636632056087,
+            0.0038079494391241994
+          ],
+          "individual_interval_level": 0.975
+        }
+      },
+      "secondary_contrasts": {
+        "kl_conditioned_minus_image_only": {
+          "accuracy": {
+            "mean": 1.329080276448705e-05,
+            "ci95": [
+              -0.002083383915848515,
+              0.002175800021117113
+            ]
+          },
+          "margin": {
+            "mean": -0.000919076009862705,
+            "ci95": [
+              -0.0016140021207250797,
+              -0.00024858137860110007
+            ]
+          }
+        },
+        "rank_conditioned_minus_image_only": {
+          "accuracy": {
+            "mean": 7.974481658692197e-05,
+            "ci95": [
+              -0.002459504603044512,
+              0.0024656598688049913
+            ]
+          },
+          "margin": {
+            "mean": 0.0018930179455519888,
+            "ci95": [
+              0.001199895253718566,
+              0.002553056382566787
+            ]
+          }
+        },
+        "conditioned_rank_minus_kl": {
+          "accuracy": {
+            "mean": -0.0003987240829346091,
+            "ci95": [
+              -0.0032729822766620256,
+              0.0022599377202157335
+            ]
+          },
+          "margin": {
+            "mean": 0.0023363129918964913,
+            "ci95": [
+              0.0015729060111561429,
+              0.003086675086832621
+            ]
+          }
+        },
+        "image_only_rank_minus_kl": {
+          "accuracy": {
+            "mean": -0.0004651780967570443,
+            "ci95": [
+              -0.0024670683984976734,
+              0.0015363036374629508
+            ]
+          },
+          "margin": {
+            "mean": -0.00047578096351820237,
+            "ci95": [
+              -0.001255190297198654,
+              0.00029912338633503383
+            ]
+          }
+        }
+      },
+      "per_seed": [
+        {
+          "seed": 2041,
+          "contrasts": {
+            "kl_conditioned_minus_image_only": {
+              "accuracy": 0.0003588516746411482,
+              "margin": -0.001636995416763971
+            },
+            "rank_conditioned_minus_image_only": {
+              "accuracy": 0.0003189792663476873,
+              "margin": 0.001968348293356082
+            },
+            "conditioned_rank_minus_kl": {
+              "accuracy": -0.0007177033492822966,
+              "margin": 0.002960404969518681
+            },
+            "image_only_rank_minus_kl": {
+              "accuracy": -0.0006778309409888358,
+              "margin": -0.0006449387406013725
+            },
+            "interaction": {
+              "accuracy": -3.987240829346082e-05,
+              "margin": 0.00360534371012005
+            }
+          }
+        },
+        {
+          "seed": 2042,
+          "contrasts": {
+            "kl_conditioned_minus_image_only": {
+              "accuracy": 0.0008373205741626793,
+              "margin": 0.0006645340264723662
+            },
+            "rank_conditioned_minus_image_only": {
+              "accuracy": 0.002731259968102073,
+              "margin": 0.0028644924885516563
+            },
+            "conditioned_rank_minus_kl": {
+              "accuracy": 0.0015151515151515152,
+              "margin": 0.002390825902192015
+            },
+            "image_only_rank_minus_kl": {
+              "accuracy": -0.0003787878787878789,
+              "margin": 0.00019086744011272675
+            },
+            "interaction": {
+              "accuracy": 0.0018939393939393938,
+              "margin": 0.0021999584620792847
+            }
+          }
+        },
+        {
+          "seed": 2043,
+          "contrasts": {
+            "kl_conditioned_minus_image_only": {
+              "accuracy": -0.001156299840510367,
+              "margin": -0.0017847666392965063
+            },
+            "rank_conditioned_minus_image_only": {
+              "accuracy": -0.0028110047846889954,
+              "margin": 0.0008462130547482325
+            },
+            "conditioned_rank_minus_kl": {
+              "accuracy": -0.0019936204146730465,
+              "margin": 0.0016577081039787802
+            },
+            "image_only_rank_minus_kl": {
+              "accuracy": -0.00033891547049441775,
+              "margin": -0.0009732715900659634
+            },
+            "interaction": {
+              "accuracy": -0.0016547049441786282,
+              "margin": 0.0026309796940447447
+            }
+          }
+        }
+      ],
+      "common_teacher_diagnostics": {
+        "definition": "Teacher-derived diagnostics, not actual classifier margin or accuracy. Utility regret compares additive teacher sums at equal k, not true CLIP rewards. Stable-index overlap may be arbitrary for tied teachers.",
+        "checks": {
+          "flat_teacher_examples": 0,
+          "teacher_boundary_tied_examples": 0
+        },
+        "table": [
+          {
+            "objective": "kl",
+            "arm": "conditioned",
+            "teacher_kl": {
+              "mean": 0.4994878615673177,
+              "ci95": [
+                0.4723735690284777,
+                0.5270411612114398
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.44100388959411535,
+              "ci95": [
+                0.4358395323500937,
+                0.4460716697650537
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.1470043952669351,
+              "ci95": [
+                0.14286325021102728,
+                0.15073426046485702
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.33441389331177546,
+              "ci95": [
+                0.3302138875871506,
+                0.33874388189500776
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.5796451511540596,
+              "ci95": [
+                0.5759102420261282,
+                0.5834167739761411
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.44100388959411535,
+              "ci95": [
+                0.4358395323500937,
+                0.4460716697650537
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "objective": "kl",
+            "arm": "image_only",
+            "teacher_kl": {
+              "mean": 0.5506321858590272,
+              "ci95": [
+                0.5222590149305933,
+                0.5792836704776297
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.4478353622150611,
+              "ci95": [
+                0.4423469046073309,
+                0.4530565310784204
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.1444388252590927,
+              "ci95": [
+                0.14076547404852524,
+                0.14793239613984432
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.32770409897730723,
+              "ci95": [
+                0.3234667001923426,
+                0.33222784490116786
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.5817326893381575,
+              "ci95": [
+                0.5777011222084439,
+                0.5859715357765469
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.4478353622150611,
+              "ci95": [
+                0.4423469046073309,
+                0.4530565310784204
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "objective": "rank",
+            "arm": "conditioned",
+            "teacher_kl": {
+              "mean": 1.079647701109453,
+              "ci95": [
+                1.0376803265926269,
+                1.124348475866953
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.42465999956601463,
+              "ci95": [
+                0.42011484430151325,
+                0.42917751201272214
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.15145223212262318,
+              "ci95": [
+                0.1471709504866026,
+                0.15529614254661636
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.3425214379928973,
+              "ci95": [
+                0.3385500137639727,
+                0.34651356467402206
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.6928110565406159,
+              "ci95": [
+                0.6849504584300136,
+                0.7006158742998052
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.42465999956601463,
+              "ci95": [
+                0.42011484430151325,
+                0.42917751201272214
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "objective": "rank",
+            "arm": "image_only",
+            "teacher_kl": {
+              "mean": 1.212435655194794,
+              "ci95": [
+                1.1750719916810883,
+                1.2492021890444376
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.4213998198960604,
+              "ci95": [
+                0.4167458432987947,
+                0.42588403683723636
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.15385624181093566,
+              "ci95": [
+                0.15016350467139583,
+                0.1573687839178494
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.3450090821408143,
+              "ci95": [
+                0.3412692824322464,
+                0.3489806763210719
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.6919941229504373,
+              "ci95": [
+                0.6849235881575366,
+                0.6994801324965706
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.4213998198960604,
+              "ci95": [
+                0.4167458432987947,
+                0.42588403683723636
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        ],
+        "secondary_contrasts": {
+          "kl_conditioned_minus_image_only": {
+            "teacher_kl": {
+              "mean": -0.051144324291710085,
+              "ci95": [
+                -0.06603405079519124,
+                -0.036055090986606204
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": -0.006831472620946309,
+              "ci95": [
+                -0.009240723266476592,
+                -0.0045583872851565595
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.0025655700078423887,
+              "ci95": [
+                0.0014019309657698497,
+                0.003824830352843834
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.006709794334468258,
+              "ci95": [
+                0.004667768317307619,
+                0.008686024387047868
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": -0.0020875381840987904,
+              "ci95": [
+                -0.0035968452459980804,
+                -0.000555971954515795
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": -0.006831472620946309,
+              "ci95": [
+                -0.009240723266476592,
+                -0.0045583872851565595
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "rank_conditioned_minus_image_only": {
+            "teacher_kl": {
+              "mean": -0.13278795408533894,
+              "ci95": [
+                -0.17373777304178212,
+                -0.09092175637518961
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.0032601796699541076,
+              "ci95": [
+                0.0009184531172530388,
+                0.005551795925865488
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": -0.0024040096883126095,
+              "ci95": [
+                -0.003880010671386384,
+                -0.0008318550586120226
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": -0.002487644147917278,
+              "ci95": [
+                -0.004271145906237111,
+                -0.0006806630241412877
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.0008169335901798969,
+              "ci95": [
+                -0.0035062465650278147,
+                0.004991241722657033
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.0032601796699541076,
+              "ci95": [
+                0.0009184531172530388,
+                0.005551795925865488
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "conditioned_rank_minus_kl": {
+            "teacher_kl": {
+              "mean": 0.5801598395421366,
+              "ci95": [
+                0.5440122970019926,
+                0.6184779430442857
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": -0.01634389002810055,
+              "ci95": [
+                -0.01889412285699069,
+                -0.013848374724883589
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.004447836855687938,
+              "ci95": [
+                0.003014560463023545,
+                0.00590846605260833
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.008107544681121483,
+              "ci95": [
+                0.005807273258886573,
+                0.010426579532215367
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.11316590538655821,
+              "ci95": [
+                0.1077844446694163,
+                0.11856162033314593
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": -0.01634389002810055,
+              "ci95": [
+                -0.01889412285699069,
+                -0.013848374724883589
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "image_only_rank_minus_kl": {
+            "teacher_kl": {
+              "mean": 0.6618034693357654,
+              "ci95": [
+                0.6245580190447612,
+                0.7016111740911237
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": -0.026435542319001,
+              "ci95": [
+                -0.02916418491919449,
+                -0.023612585797344758
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.009417416551842937,
+              "ci95": [
+                0.008100228474092738,
+                0.010743828520514451
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.017304983163507006,
+              "ci95": [
+                0.01502987431067555,
+                0.01947736813165504
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.11026143361227934,
+              "ci95": [
+                0.10571047118863193,
+                0.11509647444499452
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": -0.026435542319001,
+              "ci95": [
+                -0.02916418491919449,
+                -0.023612585797344758
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "interaction": {
+            "teacher_kl": {
+              "mean": -0.08164362979362894,
+              "ci95": [
+                -0.11959469400663418,
+                -0.04385958041850089
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.0100916522909004,
+              "ci95": [
+                0.007411245910300332,
+                0.012962078613756547
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": -0.004969579696154998,
+              "ci95": [
+                -0.006555465916955552,
+                -0.0034603359202488014
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": -0.009197438482385542,
+              "ci95": [
+                -0.011399249040690621,
+                -0.007004862101714407
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.002904471774278682,
+              "ci95": [
+                -0.0014167047428295507,
+                0.007165356798092114
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.0100916522909004,
+              "ci95": [
+                0.007411245910300332,
+                0.012962078613756547
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      }
+    },
+    "98": {
+      "image_count": 716,
+      "image_task_examples": 2624,
+      "task_count": 66,
+      "table": [
+        {
+          "objective": "kl",
+          "arm": "conditioned",
+          "accuracy": {
+            "mean": 0.9914805954279602,
+            "ci95": [
+              0.9874895112732158,
+              0.9951550145801188
+            ]
+          },
+          "margin": {
+            "mean": 0.12590067803034136,
+            "ci95": [
+              0.12342450461706499,
+              0.12855112362424667
+            ]
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": 0.9914673046251792,
+              "margin": 0.1257304910870084
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.9915071770334727,
+              "margin": 0.1260535772203603
+            },
+            {
+              "seed": 2043,
+              "accuracy": 0.9914673046251792,
+              "margin": 0.12591796578365544
+            }
+          ]
+        },
+        {
+          "objective": "kl",
+          "arm": "image_only",
+          "accuracy": {
+            "mean": 0.9910885167464077,
+            "ci95": [
+              0.9867213176910532,
+              0.9949582859692031
+            ]
+          },
+          "margin": {
+            "mean": 0.12532786662967688,
+            "ci95": [
+              0.12286777959809261,
+              0.1279251385627698
+            ]
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": 0.9918660287081138,
+              "margin": 0.1254785575679988
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.9914673046251792,
+              "margin": 0.12546268061757437
+            },
+            {
+              "seed": 2043,
+              "accuracy": 0.989932216905881,
+              "margin": 0.1250423617034576
+            }
+          ]
+        },
+        {
+          "objective": "rank",
+          "arm": "conditioned",
+          "accuracy": {
+            "mean": 0.9889021796916493,
+            "ci95": [
+              0.9843011947975095,
+              0.9927183351492745
+            ]
+          },
+          "margin": {
+            "mean": 0.12471551382120784,
+            "ci95": [
+              0.12223691173949677,
+              0.1273896526764432
+            ]
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": 0.9894936204146528,
+              "margin": 0.12433032325101188
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.9884569377990229,
+              "margin": 0.12519243050538542
+            },
+            {
+              "seed": 2043,
+              "accuracy": 0.9887559808612238,
+              "margin": 0.12462378770722662
+            }
+          ]
+        },
+        {
+          "objective": "rank",
+          "arm": "image_only",
+          "accuracy": {
+            "mean": 0.9904771398192412,
+            "ci95": [
+              0.9860489000090429,
+              0.9942658281270879
+            ]
+          },
+          "margin": {
+            "mean": 0.1235447949713842,
+            "ci95": [
+              0.1211315234551957,
+              0.1262228494975551
+            ]
+          },
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": 0.9907695374800437,
+              "margin": 0.12376301887343533
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.9910685805422446,
+              "margin": 0.12392987561908075
+            },
+            {
+              "seed": 2043,
+              "accuracy": 0.9895933014353865,
+              "margin": 0.12294149042163624
+            }
+          ]
+        }
+      ],
+      "primary_interaction": {
+        "accuracy": {
+          "mean": -0.001967038809144072,
+          "ci95": [
+            -0.00442102167703736,
+            0.00025635921631526686
+          ],
+          "bonferroni_family_ci95": [
+            -0.004752723520009524,
+            0.0006306235282648642
+          ],
+          "individual_interval_level": 0.975
+        },
+        "margin": {
+          "mean": 0.0005979074491592925,
+          "ci95": [
+            -0.00022571998912612908,
+            0.001388432573340296
+          ],
+          "bonferroni_family_ci95": [
+            -0.00033814820146188567,
+            0.0015495750027393561
+          ],
+          "individual_interval_level": 0.975
+        }
+      },
+      "secondary_contrasts": {
+        "kl_conditioned_minus_image_only": {
+          "accuracy": {
+            "mean": 0.00039207868155236584,
+            "ci95": [
+              -0.0005288183149067595,
+              0.001752045037979257
+            ]
+          },
+          "margin": {
+            "mean": 0.0005728114006644465,
+            "ci95": [
+              0.0001791867227324952,
+              0.0009617158184589237
+            ]
+          }
+        },
+        "rank_conditioned_minus_image_only": {
+          "accuracy": {
+            "mean": -0.0015749601275917065,
+            "ci95": [
+              -0.0037933992637366027,
+              0.00048311179209939344
+            ]
+          },
+          "margin": {
+            "mean": 0.001170718849823739,
+            "ci95": [
+              0.00041159253540450877,
+              0.0018891631896358696
+            ]
+          }
+        },
+        "conditioned_rank_minus_kl": {
+          "accuracy": {
+            "mean": -0.002578415736310473,
+            "ci95": [
+              -0.005224716488078853,
+              -2.620874053026012e-05
+            ]
+          },
+          "margin": {
+            "mean": -0.0011851642091334632,
+            "ci95": [
+              -0.001994012638657254,
+              -0.0003269670194088168
+            ]
+          }
+        },
+        "image_only_rank_minus_kl": {
+          "accuracy": {
+            "mean": -0.0006113769271664009,
+            "ci95": [
+              -0.0024169469988127757,
+              0.001228788361876998
+            ]
+          },
+          "margin": {
+            "mean": -0.0017830716582927539,
+            "ci95": [
+              -0.0025978342430247126,
+              -0.0009578327642814873
+            ]
+          }
+        }
+      },
+      "per_seed": [
+        {
+          "seed": 2041,
+          "contrasts": {
+            "kl_conditioned_minus_image_only": {
+              "accuracy": -0.00039872408293460925,
+              "margin": 0.0002519335190096834
+            },
+            "rank_conditioned_minus_image_only": {
+              "accuracy": -0.0012759170653907498,
+              "margin": 0.0005673043775767028
+            },
+            "conditioned_rank_minus_kl": {
+              "accuracy": -0.001973684210526316,
+              "margin": -0.001400167835996489
+            },
+            "image_only_rank_minus_kl": {
+              "accuracy": -0.0010964912280701754,
+              "margin": -0.001715538694563516
+            },
+            "interaction": {
+              "accuracy": -0.0008771929824561403,
+              "margin": 0.0003153708585670213
+            }
+          }
+        },
+        {
+          "seed": 2042,
+          "contrasts": {
+            "kl_conditioned_minus_image_only": {
+              "accuracy": 3.987240829346082e-05,
+              "margin": 0.0005908966027858641
+            },
+            "rank_conditioned_minus_image_only": {
+              "accuracy": -0.0026116427432216903,
+              "margin": 0.0012625548863044315
+            },
+            "conditioned_rank_minus_kl": {
+              "accuracy": -0.00305023923444976,
+              "margin": -0.0008611467149750795
+            },
+            "image_only_rank_minus_kl": {
+              "accuracy": -0.00039872408293460925,
+              "margin": -0.0015328049984936467
+            },
+            "interaction": {
+              "accuracy": -0.0026515151515151512,
+              "margin": 0.0006716582835185657
+            }
+          }
+        },
+        {
+          "seed": 2043,
+          "contrasts": {
+            "kl_conditioned_minus_image_only": {
+              "accuracy": 0.0015350877192982456,
+              "margin": 0.0008756040801977922
+            },
+            "rank_conditioned_minus_image_only": {
+              "accuracy": -0.0008373205741626793,
+              "margin": 0.0016822972855900817
+            },
+            "conditioned_rank_minus_kl": {
+              "accuracy": -0.0027113237639553424,
+              "margin": -0.001294178076428811
+            },
+            "image_only_rank_minus_kl": {
+              "accuracy": -0.00033891547049441775,
+              "margin": -0.0021008712818211066
+            },
+            "interaction": {
+              "accuracy": -0.002372408293460925,
+              "margin": 0.0008066932053922883
+            }
+          }
+        }
+      ],
+      "common_teacher_diagnostics": {
+        "definition": "Teacher-derived diagnostics, not actual classifier margin or accuracy. Utility regret compares additive teacher sums at equal k, not true CLIP rewards. Stable-index overlap may be arbitrary for tied teachers.",
+        "checks": {
+          "flat_teacher_examples": 0,
+          "teacher_boundary_tied_examples": 0
+        },
+        "table": [
+          {
+            "objective": "kl",
+            "arm": "conditioned",
+            "teacher_kl": {
+              "mean": 0.9659056508264506,
+              "ci95": [
+                0.9264200737636725,
+                1.0055051186085913
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.5513166710065213,
+              "ci95": [
+                0.5490275716562657,
+                0.5536368641356015
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.1068981357852858,
+              "ci95": [
+                0.10389527528562739,
+                0.11000905073018213
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.42521851427645857,
+              "ci95": [
+                0.4221507931442474,
+                0.4281970972386324
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.6831127616315279,
+              "ci95": [
+                0.6801854499318892,
+                0.6860370759480775
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.5513166710065213,
+              "ci95": [
+                0.5490275716562657,
+                0.5536368641356015
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "objective": "kl",
+            "arm": "image_only",
+            "teacher_kl": {
+              "mean": 0.9747939738278286,
+              "ci95": [
+                0.9356387792241287,
+                1.0125945042094782
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.5502207900704146,
+              "ci95": [
+                0.5478599303860974,
+                0.5525899127534674
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.1073127325545668,
+              "ci95": [
+                0.10423133054741608,
+                0.11049820764978874
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.42858236469896355,
+              "ci95": [
+                0.4255482320525803,
+                0.4315414049735377
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.6956516253314324,
+              "ci95": [
+                0.6924093413637812,
+                0.6990292093139436
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.5502207900704146,
+              "ci95": [
+                0.5478599303860974,
+                0.5525899127534674
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "objective": "rank",
+            "arm": "conditioned",
+            "teacher_kl": {
+              "mean": 1.6830108529315773,
+              "ci95": [
+                1.6192626579202414,
+                1.7475074558198658
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.5411683293732168,
+              "ci95": [
+                0.5392434061530861,
+                0.5431383617452578
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.11092256742506888,
+              "ci95": [
+                0.10772992865410413,
+                0.11433663629223577
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.4403807254519813,
+              "ci95": [
+                0.43779261109706946,
+                0.44279535574741186
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.819351692291161,
+              "ci95": [
+                0.813695826736002,
+                0.8252439242189761
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.5411683293732168,
+              "ci95": [
+                0.5392434061530861,
+                0.5431383617452578
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "objective": "rank",
+            "arm": "image_only",
+            "teacher_kl": {
+              "mean": 1.6583093052626041,
+              "ci95": [
+                1.5922169215067843,
+                1.7276845764567217
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.5374660948909074,
+              "ci95": [
+                0.535613863595006,
+                0.5393075335632386
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.11247353853584537,
+              "ci95": [
+                0.10940672673365485,
+                0.11570692629304169
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.4465164195662312,
+              "ci95": [
+                0.44404064456477144,
+                0.44891944003694856
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.8066473856108958,
+              "ci95": [
+                0.8017141470092204,
+                0.8116857178529737
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.5374660948909074,
+              "ci95": [
+                0.535613863595006,
+                0.5393075335632386
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        ],
+        "secondary_contrasts": {
+          "kl_conditioned_minus_image_only": {
+            "teacher_kl": {
+              "mean": -0.008888323001376987,
+              "ci95": [
+                -0.0250008867829213,
+                0.008201075615928043
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.0010958809361064999,
+              "ci95": [
+                -0.0001291793122060991,
+                0.0023558521885336647
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": -0.0004145967692810459,
+              "ci95": [
+                -0.0008958955607611208,
+                5.6271439893345115e-05
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": -0.0033638504225047103,
+              "ci95": [
+                -0.0046264567300339605,
+                -0.0021586543425865753
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": -0.01253886369990448,
+              "ci95": [
+                -0.013883761706890903,
+                -0.01124385321625309
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.0010958809361064999,
+              "ci95": [
+                -0.0001291793122060991,
+                0.0023558521885336647
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "rank_conditioned_minus_image_only": {
+            "teacher_kl": {
+              "mean": 0.024701547668974706,
+              "ci95": [
+                -0.01036977874566492,
+                0.05873907372810847
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.00370223448230967,
+              "ci95": [
+                0.0020853013687661495,
+                0.005349396163394631
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": -0.0015509711107764036,
+              "ci95": [
+                -0.002200005916661633,
+                -0.000831378500953118
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": -0.006135694114250198,
+              "ci95": [
+                -0.007944143458390493,
+                -0.004301599805230097
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.01270430668026659,
+              "ci95": [
+                0.008697860931180619,
+                0.01685608218592174
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.00370223448230967,
+              "ci95": [
+                0.0020853013687661495,
+                0.005349396163394631
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "conditioned_rank_minus_kl": {
+            "teacher_kl": {
+              "mean": 0.7171052021051274,
+              "ci95": [
+                0.6698024445073913,
+                0.761369997943056
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": -0.010148341633304025,
+              "ci95": [
+                -0.012296985994815053,
+                -0.007991847534147696
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.004024431639783062,
+              "ci95": [
+                0.003150345733884121,
+                0.004902598483901513
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.015162211175522512,
+              "ci95": [
+                0.012450040308573367,
+                0.017778906464624464
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.13623893065963352,
+              "ci95": [
+                0.13050935529876628,
+                0.14216772752232146
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": -0.010148341633304025,
+              "ci95": [
+                -0.012296985994815053,
+                -0.007991847534147696
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "image_only_rank_minus_kl": {
+            "teacher_kl": {
+              "mean": 0.683515331434776,
+              "ci95": [
+                0.6357450475318983,
+                0.7311228852013292
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": -0.012754695179507215,
+              "ci95": [
+                -0.015042618652756017,
+                -0.010438544821308546
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": 0.005160805981278424,
+              "ci95": [
+                0.0041868188901987334,
+                0.006113126577545711
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": 0.017934054867267988,
+              "ci95": [
+                0.015194764027753426,
+                0.020728285862582078
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.11099576027946245,
+              "ci95": [
+                0.10622715240016165,
+                0.11606371435429239
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": -0.012754695179507215,
+              "ci95": [
+                -0.015042618652756017,
+                -0.010438544821308546
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "interaction": {
+            "teacher_kl": {
+              "mean": 0.03358987067035171,
+              "ci95": [
+                -0.0022135796299547123,
+                0.06790410103463533
+              ]
+            },
+            "teacher_topk_overlap": {
+              "mean": 0.00260635354620317,
+              "ci95": [
+                0.0006197721001612004,
+                0.004618343517860111
+              ]
+            },
+            "teacher_additive_utility_regret": {
+              "mean": -0.0011363743414953592,
+              "ci95": [
+                -0.0018976834130588099,
+                -0.0003164375120955609
+              ]
+            },
+            "teacher_boundary_violation_fraction": {
+              "mean": -0.0027718436917454894,
+              "ci95": [
+                -0.004903897628307864,
+                -0.0006967686098854118
+              ]
+            },
+            "teacher_topk_rank_loss": {
+              "mean": 0.025243170380171074,
+              "ci95": [
+                0.02101528255300607,
+                0.029730592967832373
+              ]
+            },
+            "teacher_topk_tie_aware_overlap": {
+              "mean": 0.00260635354620317,
+              "ci95": [
+                0.0006197721001612004,
+                0.004618343517860111
+              ]
+            },
+            "teacher_boundary_tie_fraction": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "phase": "analysis",
+  "status": "interrupted_for_repeated_npz_read_fix",
+  "started_utc": "2026-10-28T08:40:29.236234+00:00",
+  "pid": 299864,
+  "code_commit": "705ecd6bd6d62d968a9a5a6070b00c299d6205d3",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "stages": [
+    {
+      "name": "pets_objective_analysis",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/analyze_selector_objectives.py",
+        "--dataset",
+        "pets",
+        "--kl",
+        "49=runs/pets-selector-scale-eval-v1",
+        "--rank",
+        "49=runs/pets-selector-rank-49-eval-v1",
+        "--cache",
+        "49=runs/pets-selector-scale-supervision-v1",
+        "--kl",
+        "98=runs/pets-selector-budget-98-eval-v1",
+        "--rank",
+        "98=runs/pets-selector-rank-98-eval-v1",
+        "--cache",
+        "98=runs/pets-selector-budget-98-supervision-v1",
+        "--output",
+        "results/pets-selector-objectives-v1",
+        "--skip-plots"
+      ],
+      "started_utc": "2026-10-28T08:40:29.239383+00:00",
+      "status": "interrupted"
+    }
+  ],
+  "current_stage": "pets_objective_analysis"
+}

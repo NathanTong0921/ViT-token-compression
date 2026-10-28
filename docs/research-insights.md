@@ -142,6 +142,24 @@
 - **对项目的影响：**效率证据得到补全：当前实现适合批量推理的加速主张，单张请求则没有实测加速。数值扩展将“实现看似等价”落实为可测的选择与分类差异，帮助准确呈现本项目的小幅效应；尚未证明 FP16 是差异的唯一来源，也未做所有硬件／精度设置的遍历。
 - **证据：**[准确率—延迟图](../results/vitl-and-latency-v1/latency_accuracy.png)、[完整延迟汇总](../results/vitl-and-latency-v1/latency_summary.json)、[数值复查](../results/vitl-and-latency-v1/numerical_sensitivity.json)、[阶段成本](../results/vitl-and-latency-v1/experiment_costs.json)。
 
+## I12：有限库专用空间存在，但不足以预测学习器的相对收益
+
+- **状态与来源：**H1→H3 的新增延伸，回应 I2–I3、I6 中离线潜力与可学习优势的差距。Pets49／98 在相同图片及任务对上，分别计算有限库专用／共享最优平均 margin 与两个学习器的实现差距。
+- **观察：**专用减共享的有限库差距为 0.006182／0.006406，实际条件化减图像版为 −0.000797／+0.000511；这里按图片及同图任务对等权，不能与主分类表的任务／类均衡数值直接相减。离线共享选择知道标签和两任务，不是可部署图像版模型。
+- **独立预测检查：**去除教师及学习器 mask 的纯随机 probe 库在 49-token 下提供正向难度调整关联，但两个预算的留出图片增量 R² 区间均跨零。固定两半 probe 的估计相关约 0.65／0.61，有限采样估计仍有变化。
+- **认识与边界：**分解量化了空间与实现差距，但恒等式与有限库正差距本身不证明瓶颈。没有建立可泛化的额外预测价值，也不能用这些标签知情的量做部署决策。
+- **对项目的影响：**补足 H1 与 H3 之间的定量诊断；预测结果限制了一个过强解释。下一步的目标干预用于获得不同于关联和恒等式的证据。
+- **证据：**[Gap 结果与独立复核](../results/pets-conditioning-gap-v1/README.md)、[预先固定协议](conditioning-objective-followup.md)。
+
+## I13：固定训练目标干预改变条件化收益，但改善没有跨设置普遍复现
+
+- **状态与来源：**延伸 I2–I3、I6、I9–I10。保持原教师、模型容量、初始化规则、数据流与更新数，用 Top-k boundary ranking 替换 KL，并对两个 selector 臂同时干预。在 Pets／Flowers、49／98 token、三个固定种子完成 24 个新增模型。
+- **主要结果：**Pets49 的 margin 交互 `(C−U)_rank − (C−U)_KL` 为 +0.002812，预算调整区间 [+0.001771, +0.003808]；Flowers98 为 −0.000812，区间 [−0.001569, −0.000051]，各自三个种子同方向。另两设置的 margin 交互不明确。四个准确率交互的调整区间均包含零。
+- **教师与实际结果：**ranking 的绝对 Top-k 教师重叠率在四设置两臂均低于 KL。Pets49 的相对教师拟合与实际 margin 同时反转；Flowers98 的相对重叠率几乎不变，实际 margin 优势却缩小。因此，单一教师拟合指标不足以解释实际分类差异。
+- **适用范围：**初始 ranking 梯度约为 KL 的 0.08–0.14 倍，多个设置的验证 ranking loss 高于初始化。该干预识别固定配方下训练目标的影响，不能把变化全部归因于边界监督，或声称两个 loss 均已优化至最佳。图片区间以现有三个种子和任务集合为条件。
+- **对项目的影响：**解释深度得到正面推进，形成一次直接干预与跨数据集复核；方法性能未获得通用改善。不继续自动搜索新 loss 或种子，下一步冻结中心主张并用预留测试确认。
+- **证据：**[四设置汇总](../results/conditioning-objective-v1/README.md)、[Pets](../results/pets-selector-objectives-v1/README.md)、[Flowers](../results/flowers-selector-objectives-v1/README.md)、[执行记录](experiments/2026-10-28-conditioning-objective.md)。
+
 ## 如何持续更新
 
 - 有实质新发现时，更新相应条目或新增条目，并链接实验记录与原始结果。普通运行进度留在实验记录里。
@@ -157,3 +175,4 @@
 | 2026-10-27 | 新增 I7–I8：有限的预算依赖 margin 收益与难度调整后的 H2 预测证据 | [三预算与 H2](../results/pets-selector-budgets-v1/README.md)、[执行记录](experiments/2026-10-27-selector-budgets-h2.md) |
 | 2026-10-27 | 新增 I9，并更新 I7–I8：Flowers 的两预算 margin 与 H2 支持、98-token 准确率收益，以及未复现的 Pets 预算符号模式 | [Flowers 外部验证](../results/flowers-selector-budgets-v1/README.md)、[预先固定的协议](flowers-targeted-validation.md) |
 | 2026-10-27 | 新增 I10–I11：L/14 两数据集复核 H2、分类效应的适用范围、依赖批量的真实加速和完整数值敏感性检查 | [跨模型与效率记录](experiments/2026-10-27-vitl-and-latency.md)、[汇总结果](../results/vitl-and-latency-v1/) |
+| 2026-10-28 | 新增 I12–I13：有限库潜力未建立额外留出预测收益；固定训练目标干预对条件化 margin 收益产生设置相关的正负变化 | [聚焦补强](../results/conditioning-objective-v1/README.md)、[运行记录](experiments/2026-10-28-conditioning-objective.md) |

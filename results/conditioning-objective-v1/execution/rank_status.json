@@ -1,0 +1,161 @@
+{
+  "phase": "rank",
+  "status": "complete",
+  "started_utc": "2026-10-28T08:10:52.674853+00:00",
+  "pid": 271906,
+  "code_commit": "705ecd6bd6d62d968a9a5a6070b00c299d6205d3",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "stages": [
+    {
+      "name": "pets_train_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/train_selector_scale.py",
+        "--config",
+        "configs/pets_selector_rank_49.json",
+        "--output",
+        "runs/pets-selector-rank-49-training-v1"
+      ],
+      "started_utc": "2026-10-28T08:10:52.678828+00:00",
+      "status": "complete",
+      "wall_seconds": 239.12923910700192,
+      "completed_utc": "2026-10-28T08:14:51.808239+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "pets_evaluate_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/pets_selector_rank_49.json",
+        "--models",
+        "runs/pets-selector-rank-49-training-v1",
+        "--output",
+        "runs/pets-selector-rank-49-eval-v1"
+      ],
+      "started_utc": "2026-10-28T08:14:51.808852+00:00",
+      "status": "complete",
+      "wall_seconds": 59.711678417006624,
+      "completed_utc": "2026-10-28T08:15:51.520993+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "pets_train_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/train_selector_scale.py",
+        "--config",
+        "configs/pets_selector_rank_98.json",
+        "--output",
+        "runs/pets-selector-rank-98-training-v1"
+      ],
+      "started_utc": "2026-10-28T08:15:51.521667+00:00",
+      "status": "complete",
+      "wall_seconds": 242.07231456099544,
+      "completed_utc": "2026-10-28T08:19:53.594447+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "pets_evaluate_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/pets_selector_rank_98.json",
+        "--models",
+        "runs/pets-selector-rank-98-training-v1",
+        "--output",
+        "runs/pets-selector-rank-98-eval-v1"
+      ],
+      "started_utc": "2026-10-28T08:19:53.595142+00:00",
+      "status": "complete",
+      "wall_seconds": 80.39882274498814,
+      "completed_utc": "2026-10-28T08:21:13.994665+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "flowers_train_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/train_selector_scale.py",
+        "--config",
+        "configs/flowers_selector_rank_49.json",
+        "--output",
+        "runs/flowers-selector-rank-49-training-v1"
+      ],
+      "started_utc": "2026-10-28T08:21:13.995400+00:00",
+      "status": "complete",
+      "wall_seconds": 209.40368332900107,
+      "completed_utc": "2026-10-28T08:24:43.399903+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "flowers_evaluate_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/flowers_selector_rank_49.json",
+        "--models",
+        "runs/flowers-selector-rank-49-training-v1",
+        "--output",
+        "runs/flowers-selector-rank-49-eval-v1"
+      ],
+      "started_utc": "2026-10-28T08:24:43.400662+00:00",
+      "status": "complete",
+      "wall_seconds": 54.29747169899929,
+      "completed_utc": "2026-10-28T08:25:37.698716+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "flowers_train_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/train_selector_scale.py",
+        "--config",
+        "configs/flowers_selector_rank_98.json",
+        "--output",
+        "runs/flowers-selector-rank-98-training-v1"
+      ],
+      "started_utc": "2026-10-28T08:25:37.699557+00:00",
+      "status": "complete",
+      "wall_seconds": 206.3038904290006,
+      "completed_utc": "2026-10-28T08:29:04.004071+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "flowers_evaluate_98",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/flowers_selector_rank_98.json",
+        "--models",
+        "runs/flowers-selector-rank-98-training-v1",
+        "--output",
+        "runs/flowers-selector-rank-98-eval-v1"
+      ],
+      "started_utc": "2026-10-28T08:29:04.004928+00:00",
+      "status": "complete",
+      "wall_seconds": 61.85174206699594,
+      "completed_utc": "2026-10-28T08:30:05.857360+00:00",
+      "exit_code": 0
+    }
+  ],
+  "current_stage": null,
+  "completed_utc": "2026-10-28T08:30:05.858267+00:00"
+}

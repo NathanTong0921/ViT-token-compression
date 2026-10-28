@@ -1,0 +1,146 @@
+{
+  "status": "passed",
+  "dataset": "flowers",
+  "analysis_source": "results/flowers-selector-objectives-v1/analysis.json",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2085,
+  "scope": "Independent raw CSV/NPZ classification reconstruction, strict paired identities, weighted main/secondary effects, per-seed effects, image-bootstrap intervals and recorded training controls. Reference predictions are not read. Common teacher diagnostic metrics are not independently recomputed by this audit.",
+  "budgets": {
+    "49": {
+      "image_count": 1020,
+      "image_task_rows_per_arm_seed": 4080,
+      "raw_unseen_rows_verified_per_objective": 24480,
+      "primary_interaction": {
+        "accuracy": {
+          "mean": -0.0036764705882352975,
+          "ci95": [
+            -0.008823529411764704,
+            0.001554330065359467
+          ],
+          "bonferroni_family_ci95": [
+            -0.009804942810457514,
+            0.0022069035947712454
+          ],
+          "individual_interval_level": 0.975
+        },
+        "margin": {
+          "mean": -0.0007534908776095783,
+          "ci95": [
+            -0.0016781142892315726,
+            0.00021184703572665114
+          ],
+          "bonferroni_family_ci95": [
+            -0.0018160922249265007,
+            0.0003492219895419657
+          ],
+          "individual_interval_level": 0.975
+        }
+      },
+      "training_controls": {
+        "sources": {
+          "kl": {
+            "training_summary": "runs/flowers-selector-budget-49-training-v1/training_summary.json",
+            "sampling_audit": "runs/flowers-selector-budget-49-training-v1/sampling_audit.json"
+          },
+          "rank": {
+            "training_summary": "runs/flowers-selector-rank-49-training-v1/training_summary.json",
+            "sampling_audit": "runs/flowers-selector-rank-49-training-v1/sampling_audit.json"
+          }
+        },
+        "same_teacher_cache": "runs/flowers-selector-budget-49-supervision-v1",
+        "matched_full_coverage_runs_per_objective": 6,
+        "matched_controls": [
+          "model",
+          "prune_after",
+          "keep_patch_tokens",
+          "prompt_template",
+          "manifest_dir",
+          "training_seeds",
+          "hidden_dim",
+          "training_steps",
+          "batch_size",
+          "temperature",
+          "learning_rate",
+          "weight_decay",
+          "cache_dir",
+          "probe_count",
+          "mask_seed",
+          "ridge"
+        ],
+        "initial_common_kl_agrees": true,
+        "recorded_full_sampling_matches": true,
+        "scope": "Checks recorded within-arm initialization assertions and cross-objective initial KL, first batch and per-image draw counts. Historical initial tensors and full ordered sample streams were not saved, so this is not a new tensor/step-by-step replay. Old small-coverage runs are excluded."
+      },
+      "classification_points_intervals_and_per_seed": "passed",
+      "paired_case_csv_and_npz": "passed"
+    },
+    "98": {
+      "image_count": 1020,
+      "image_task_rows_per_arm_seed": 4080,
+      "raw_unseen_rows_verified_per_objective": 24480,
+      "primary_interaction": {
+        "accuracy": {
+          "mean": -0.004166666666666666,
+          "ci95": [
+            -0.008006535947712418,
+            -0.0004901960784313721
+          ],
+          "bonferroni_family_ci95": [
+            -0.008578431372549019,
+            1.3552527156068805e-19
+          ],
+          "individual_interval_level": 0.975
+        },
+        "margin": {
+          "mean": -0.0008116302324385154,
+          "ci95": [
+            -0.0014595720926769999,
+            -0.00015563260470619015
+          ],
+          "bonferroni_family_ci95": [
+            -0.0015692502158782004,
+            -5.111436957283321e-05
+          ],
+          "individual_interval_level": 0.975
+        }
+      },
+      "training_controls": {
+        "sources": {
+          "kl": {
+            "training_summary": "runs/flowers-selector-budget-98-training-v1/training_summary.json",
+            "sampling_audit": "runs/flowers-selector-budget-98-training-v1/sampling_audit.json"
+          },
+          "rank": {
+            "training_summary": "runs/flowers-selector-rank-98-training-v1/training_summary.json",
+            "sampling_audit": "runs/flowers-selector-rank-98-training-v1/sampling_audit.json"
+          }
+        },
+        "same_teacher_cache": "runs/flowers-selector-budget-98-supervision-v1",
+        "matched_full_coverage_runs_per_objective": 6,
+        "matched_controls": [
+          "model",
+          "prune_after",
+          "keep_patch_tokens",
+          "prompt_template",
+          "manifest_dir",
+          "training_seeds",
+          "hidden_dim",
+          "training_steps",
+          "batch_size",
+          "temperature",
+          "learning_rate",
+          "weight_decay",
+          "cache_dir",
+          "probe_count",
+          "mask_seed",
+          "ridge"
+        ],
+        "initial_common_kl_agrees": true,
+        "recorded_full_sampling_matches": true,
+        "scope": "Checks recorded within-arm initialization assertions and cross-objective initial KL, first batch and per-image draw counts. Historical initial tensors and full ordered sample streams were not saved, so this is not a new tensor/step-by-step replay. Old small-coverage runs are excluded."
+      },
+      "classification_points_intervals_and_per_seed": "passed",
+      "paired_case_csv_and_npz": "passed"
+    }
+  }
+}

@@ -1,0 +1,856 @@
+{
+  "run_type": "fixed_update_paired_selector_objective",
+  "started_utc": "2026-10-28T08:21:15.588174+00:00",
+  "experiment_name": "flowers_selector_rank_49_v1",
+  "code_commit": "705ecd6bd6d62d968a9a5a6070b00c299d6205d3",
+  "config": {
+    "cache_dir": "runs/flowers-selector-budget-49-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/flowers102",
+    "manifest_dir": "data/splits/flowers-v1",
+    "baseline_dir": "runs/flowers-features-v1",
+    "prompt_template": "a photo of a {class_name}, a type of flower.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": 49,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0,
+    "source_cache_dir": "runs/flowers-features-v1",
+    "training_steps": 3978,
+    "checkpoint_interval": 153,
+    "coverages": [
+      "full"
+    ],
+    "bootstrap_seed": 2052,
+    "bootstrap_replicates": 2000,
+    "experiment_name": "flowers_selector_rank_49_v1",
+    "feature_cache_dir": "runs/flowers-features-v1",
+    "random_seeds": [
+      2055,
+      2056,
+      2057
+    ],
+    "objective": "topk_rank"
+  },
+  "environment": {
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4",
+    "python": "3.10.12"
+  },
+  "device": "cuda:0",
+  "device_name": "NVIDIA RTX A6000",
+  "train_image_counts": {
+    "full": 1020
+  },
+  "val_image_count": 1020,
+  "train_task_count": 612,
+  "val_task_count": 204,
+  "selector_dimensions": {
+    "token_dim": 768,
+    "text_dim": 512,
+    "num_patches": 196
+  },
+  "train_example_counts": {
+    "full": 12240
+  },
+  "val_example_count": 4080,
+  "frozen_prefix_cache_bytes": 617287680,
+  "preparation_seconds": 3.2835101389937336,
+  "wall_seconds": 207.15951214899542,
+  "peak_cuda_memory_allocated_bytes": 1492400640,
+  "supervision_cost_record": "runs/flowers-selector-budget-49-supervision-v1/prep_summary.json",
+  "training_policy": "Float32 selector only, frozen cached CLIP features; fixed final update with no validation-based selection.",
+  "sampling_policy": "One NumPy PCG64 CPU stream per seed: shuffle equal repetitions of each task/side, then draw uniform image quantiles. Map each quantile into alphabetically sorted available class images. Both arms reuse the identical mapped stream, and both coverages reuse tasks, sides and quantiles.",
+  "sampling_audit": "sampling_audit.json",
+  "evaluation_weighting": "Equal weight per task, equal weight per class within each task, then uniform over available images of that class.",
+  "curve_train_kl": "Common KL and top-k diagnostics are evaluated on full balanced train/validation panels at initialization and the final step only; intervening CSV values are empty.",
+  "capacity_comparison": "Identical architecture and parameter count; image-only uses mean training-pair descriptor. Each seed shares its exact initial state across both coverages and both arms.",
+  "runs": [
+    {
+      "seed": 2041,
+      "coverage": "full",
+      "arm": "conditioned",
+      "parameter_count": 348033,
+      "training_steps": 3978,
+      "training_draws": 509184,
+      "available_training_images": 1020,
+      "initial_train_kl": 2.827881381896878,
+      "initial_val_kl": 2.875380699875235,
+      "final_train_kl": 1.3328306787306434,
+      "final_val_kl": 2.6087961214503235,
+      "training_seconds": 30.306467414047802,
+      "validation_seconds": 2.323037006004597,
+      "initial_evaluation_seconds": 1.0157295520039042,
+      "final_train_evaluation_seconds": 0.5903045619925251,
+      "initial_state_exactly_matches_shared_seed_state": true,
+      "task_class_quantile_stream_reused_between_all_four_runs": true,
+      "image_draws_reused_between_arms": true,
+      "clip_parameters_in_optimizer": 0,
+      "checkpoint": "full/seed_2041/conditioned.pt",
+      "objective": "topk_rank",
+      "initial_train_objective_loss": 0.6941934966427439,
+      "initial_val_objective_loss": 0.694131652411877,
+      "final_train_objective_loss": 0.2252679801725606,
+      "final_val_objective_loss": 1.3442929882483152,
+      "initial_teacher_diagnostics": {
+        "train": {
+          "kl": 2.827881381896878,
+          "topk_overlap": 0.2405078653042247,
+          "topk_tie_aware_overlap": 0.2405078653042247,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 2.875380699875235,
+          "topk_overlap": 0.24024109202254484,
+          "topk_tie_aware_overlap": 0.24024109202254484,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "final_teacher_diagnostics": {
+        "train": {
+          "kl": 1.3328306787306434,
+          "topk_overlap": 0.71415564683966,
+          "topk_tie_aware_overlap": 0.71415564683966,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 2.6087961214503235,
+          "topk_overlap": 0.33701479990108335,
+          "topk_tie_aware_overlap": 0.33701479990108335,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "initial_gradient_diagnostics": {
+        "batches": [
+          {
+            "batch": 0,
+            "examples": 128,
+            "kl_loss": 3.001758575439453,
+            "kl_gradient_l2": 1.9548804741387569,
+            "topk_rank_loss": 0.6937984228134155,
+            "topk_rank_gradient_l2": 0.1541654149627028
+          },
+          {
+            "batch": 1,
+            "examples": 128,
+            "kl_loss": 2.823383331298828,
+            "kl_gradient_l2": 1.8445059724052812,
+            "topk_rank_loss": 0.6940826177597046,
+            "topk_rank_gradient_l2": 0.14125016500861648
+          },
+          {
+            "batch": 2,
+            "examples": 128,
+            "kl_loss": 2.8438568115234375,
+            "kl_gradient_l2": 1.887781434720896,
+            "topk_rank_loss": 0.6942539215087891,
+            "topk_rank_gradient_l2": 0.1496465799686979
+          },
+          {
+            "batch": 3,
+            "examples": 128,
+            "kl_loss": 2.900474786758423,
+            "kl_gradient_l2": 1.9121852799197812,
+            "topk_rank_loss": 0.6942845582962036,
+            "topk_rank_gradient_l2": 0.16444030931644588
+          },
+          {
+            "batch": 4,
+            "examples": 128,
+            "kl_loss": 2.89276385307312,
+            "kl_gradient_l2": 1.9435149739705042,
+            "topk_rank_loss": 0.6944096088409424,
+            "topk_rank_gradient_l2": 0.16019715094420495
+          },
+          {
+            "batch": 5,
+            "examples": 128,
+            "kl_loss": 2.7997422218322754,
+            "kl_gradient_l2": 1.8912915357927254,
+            "topk_rank_loss": 0.6944854259490967,
+            "topk_rank_gradient_l2": 0.15378900578472396
+          },
+          {
+            "batch": 6,
+            "examples": 128,
+            "kl_loss": 3.027740716934204,
+            "kl_gradient_l2": 1.9866856222576288,
+            "topk_rank_loss": 0.6939036250114441,
+            "topk_rank_gradient_l2": 0.16082343167180632
+          },
+          {
+            "batch": 7,
+            "examples": 128,
+            "kl_loss": 2.6957039833068848,
+            "kl_gradient_l2": 1.777662978601133,
+            "topk_rank_loss": 0.6941152811050415,
+            "topk_rank_gradient_l2": 0.14491445668499733
+          }
+        ],
+        "batch_count": 8,
+        "mean_kl_gradient_l2": 1.8998135339758384,
+        "mean_topk_rank_gradient_l2": 0.15365331429277446,
+        "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+      }
+    },
+    {
+      "seed": 2041,
+      "coverage": "full",
+      "arm": "image_only",
+      "parameter_count": 348033,
+      "training_steps": 3978,
+      "training_draws": 509184,
+      "available_training_images": 1020,
+      "initial_train_kl": 2.8271595720433047,
+      "initial_val_kl": 2.874847624251875,
+      "final_train_kl": 1.822992672750519,
+      "final_val_kl": 3.4006756512996024,
+      "training_seconds": 29.717238374985754,
+      "validation_seconds": 2.314501811939408,
+      "initial_evaluation_seconds": 0.7828219099901617,
+      "final_train_evaluation_seconds": 0.5899910070002079,
+      "initial_state_exactly_matches_shared_seed_state": true,
+      "task_class_quantile_stream_reused_between_all_four_runs": true,
+      "image_draws_reused_between_arms": true,
+      "clip_parameters_in_optimizer": 0,
+      "checkpoint": "full/seed_2041/image_only.pt",
+      "objective": "topk_rank",
+      "initial_train_objective_loss": 0.6941851722746112,
+      "initial_val_objective_loss": 0.6941559846786893,
+      "final_train_objective_loss": 0.27614537781055754,
+      "final_val_objective_loss": 1.2102780770437387,
+      "initial_teacher_diagnostics": {
+        "train": {
+          "kl": 2.8271595720433047,
+          "topk_overlap": 0.24007769330690795,
+          "topk_tie_aware_overlap": 0.24007769330690795,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 2.874847624251875,
+          "topk_overlap": 0.24049119212135092,
+          "topk_tie_aware_overlap": 0.24049119212135092,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "final_teacher_diagnostics": {
+        "train": {
+          "kl": 1.822992672750519,
+          "topk_overlap": 0.687218205708085,
+          "topk_tie_aware_overlap": 0.687218205708085,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 3.4006756512996024,
+          "topk_overlap": 0.3346338474429122,
+          "topk_tie_aware_overlap": 0.3346338474429122,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "initial_gradient_diagnostics": {
+        "batches": [
+          {
+            "batch": 0,
+            "examples": 128,
+            "kl_loss": 3.000437021255493,
+            "kl_gradient_l2": 2.027460644858275,
+            "topk_rank_loss": 0.6937797665596008,
+            "topk_rank_gradient_l2": 0.15976698105859694
+          },
+          {
+            "batch": 1,
+            "examples": 128,
+            "kl_loss": 2.8228859901428223,
+            "kl_gradient_l2": 1.909232481632911,
+            "topk_rank_loss": 0.6942405700683594,
+            "topk_rank_gradient_l2": 0.14655654189681763
+          },
+          {
+            "batch": 2,
+            "examples": 128,
+            "kl_loss": 2.843151569366455,
+            "kl_gradient_l2": 1.9618242382556277,
+            "topk_rank_loss": 0.6941558122634888,
+            "topk_rank_gradient_l2": 0.15566632885884368
+          },
+          {
+            "batch": 3,
+            "examples": 128,
+            "kl_loss": 2.8994622230529785,
+            "kl_gradient_l2": 1.9904413927752314,
+            "topk_rank_loss": 0.6942213773727417,
+            "topk_rank_gradient_l2": 0.17124505077737287
+          },
+          {
+            "batch": 4,
+            "examples": 128,
+            "kl_loss": 2.8916139602661133,
+            "kl_gradient_l2": 2.02132073617563,
+            "topk_rank_loss": 0.6945403218269348,
+            "topk_rank_gradient_l2": 0.16695042099159574
+          },
+          {
+            "batch": 5,
+            "examples": 128,
+            "kl_loss": 2.7981972694396973,
+            "kl_gradient_l2": 1.969262356188201,
+            "topk_rank_loss": 0.6943995356559753,
+            "topk_rank_gradient_l2": 0.16014041602798385
+          },
+          {
+            "batch": 6,
+            "examples": 128,
+            "kl_loss": 3.026576280593872,
+            "kl_gradient_l2": 2.067541714606021,
+            "topk_rank_loss": 0.6939469575881958,
+            "topk_rank_gradient_l2": 0.16719870868572995
+          },
+          {
+            "batch": 7,
+            "examples": 128,
+            "kl_loss": 2.6962528228759766,
+            "kl_gradient_l2": 1.8519315948952744,
+            "topk_rank_loss": 0.694261372089386,
+            "topk_rank_gradient_l2": 0.15123833673696993
+          }
+        ],
+        "batch_count": 8,
+        "mean_kl_gradient_l2": 1.9748768949233964,
+        "mean_topk_rank_gradient_l2": 0.1598453481292388,
+        "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+      }
+    },
+    {
+      "seed": 2042,
+      "coverage": "full",
+      "arm": "conditioned",
+      "parameter_count": 348033,
+      "training_steps": 3978,
+      "training_draws": 509184,
+      "available_training_images": 1020,
+      "initial_train_kl": 2.8287210843891035,
+      "initial_val_kl": 2.8769135051845187,
+      "final_train_kl": 1.4691848077131064,
+      "final_val_kl": 2.766122770678325,
+      "training_seconds": 30.114715700023226,
+      "validation_seconds": 2.335647751009674,
+      "initial_evaluation_seconds": 0.7933716879924759,
+      "final_train_evaluation_seconds": 0.5951862450019689,
+      "initial_state_exactly_matches_shared_seed_state": true,
+      "task_class_quantile_stream_reused_between_all_four_runs": true,
+      "image_draws_reused_between_arms": true,
+      "clip_parameters_in_optimizer": 0,
+      "checkpoint": "full/seed_2042/conditioned.pt",
+      "objective": "topk_rank",
+      "initial_train_objective_loss": 0.6962474574937538,
+      "initial_val_objective_loss": 0.6963432753787322,
+      "final_train_objective_loss": 0.2306626753406782,
+      "final_val_objective_loss": 1.3075518892968399,
+      "initial_teacher_diagnostics": {
+        "train": {
+          "kl": 2.8287210843891035,
+          "topk_overlap": 0.2036064388785889,
+          "topk_tie_aware_overlap": 0.2036064388785889,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 2.8769135051845187,
+          "topk_overlap": 0.20431672300613835,
+          "topk_tie_aware_overlap": 0.20431672300613835,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "final_teacher_diagnostics": {
+        "train": {
+          "kl": 1.4691848077131064,
+          "topk_overlap": 0.7095321308115341,
+          "topk_tie_aware_overlap": 0.7095321308115341,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 2.766122770678325,
+          "topk_overlap": 0.3373499338259446,
+          "topk_tie_aware_overlap": 0.3373499338259446,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "initial_gradient_diagnostics": {
+        "batches": [
+          {
+            "batch": 0,
+            "examples": 128,
+            "kl_loss": 2.838667869567871,
+            "kl_gradient_l2": 1.8858110083276651,
+            "topk_rank_loss": 0.696478009223938,
+            "topk_rank_gradient_l2": 0.1715255246092041
+          },
+          {
+            "batch": 1,
+            "examples": 128,
+            "kl_loss": 2.8999385833740234,
+            "kl_gradient_l2": 1.906213658343987,
+            "topk_rank_loss": 0.696148157119751,
+            "topk_rank_gradient_l2": 0.15650735415597666
+          },
+          {
+            "batch": 2,
+            "examples": 128,
+            "kl_loss": 2.6484556198120117,
+            "kl_gradient_l2": 1.7559356844018328,
+            "topk_rank_loss": 0.6962590217590332,
+            "topk_rank_gradient_l2": 0.1636128910894845
+          },
+          {
+            "batch": 3,
+            "examples": 128,
+            "kl_loss": 2.5426888465881348,
+            "kl_gradient_l2": 1.7531978990423427,
+            "topk_rank_loss": 0.6963211894035339,
+            "topk_rank_gradient_l2": 0.16570582892283883
+          },
+          {
+            "batch": 4,
+            "examples": 128,
+            "kl_loss": 2.926985502243042,
+            "kl_gradient_l2": 1.9660090197029274,
+            "topk_rank_loss": 0.6963076591491699,
+            "topk_rank_gradient_l2": 0.1725919009352274
+          },
+          {
+            "batch": 5,
+            "examples": 128,
+            "kl_loss": 2.7812862396240234,
+            "kl_gradient_l2": 1.7978391966308178,
+            "topk_rank_loss": 0.6960389614105225,
+            "topk_rank_gradient_l2": 0.16137780329440948
+          },
+          {
+            "batch": 6,
+            "examples": 128,
+            "kl_loss": 2.7431859970092773,
+            "kl_gradient_l2": 1.9053640783295498,
+            "topk_rank_loss": 0.6965411305427551,
+            "topk_rank_gradient_l2": 0.17592493405263648
+          },
+          {
+            "batch": 7,
+            "examples": 128,
+            "kl_loss": 2.9644527435302734,
+            "kl_gradient_l2": 1.9315247243789269,
+            "topk_rank_loss": 0.6960077285766602,
+            "topk_rank_gradient_l2": 0.15664182578415434
+          }
+        ],
+        "batch_count": 8,
+        "mean_kl_gradient_l2": 1.8627369086447563,
+        "mean_topk_rank_gradient_l2": 0.16548600785549147,
+        "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+      }
+    },
+    {
+      "seed": 2042,
+      "coverage": "full",
+      "arm": "image_only",
+      "parameter_count": 348033,
+      "training_steps": 3978,
+      "training_draws": 509184,
+      "available_training_images": 1020,
+      "initial_train_kl": 2.8295744911846668,
+      "initial_val_kl": 2.877394451778017,
+      "final_train_kl": 1.8101033663072807,
+      "final_val_kl": 3.1148059472806895,
+      "training_seconds": 29.672305925982073,
+      "validation_seconds": 2.329855296004098,
+      "initial_evaluation_seconds": 0.7881904179957928,
+      "final_train_evaluation_seconds": 0.5930781140050385,
+      "initial_state_exactly_matches_shared_seed_state": true,
+      "task_class_quantile_stream_reused_between_all_four_runs": true,
+      "image_draws_reused_between_arms": true,
+      "clip_parameters_in_optimizer": 0,
+      "checkpoint": "full/seed_2042/image_only.pt",
+      "objective": "topk_rank",
+      "initial_train_objective_loss": 0.6962905631297164,
+      "initial_val_objective_loss": 0.696332920853998,
+      "final_train_objective_loss": 0.28260301705358504,
+      "final_val_objective_loss": 1.1757930188932837,
+      "initial_teacher_diagnostics": {
+        "train": {
+          "kl": 2.8295744911846668,
+          "topk_overlap": 0.20123549046685768,
+          "topk_tie_aware_overlap": 0.20123549046685768,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 2.877394451778017,
+          "topk_overlap": 0.20381152088132998,
+          "topk_tie_aware_overlap": 0.20381152088132998,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "final_teacher_diagnostics": {
+        "train": {
+          "kl": 1.8101033663072807,
+          "topk_overlap": 0.6799786435464531,
+          "topk_tie_aware_overlap": 0.6799786435464531,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 3.1148059472806895,
+          "topk_overlap": 0.33330331533124624,
+          "topk_tie_aware_overlap": 0.33330331533124624,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "initial_gradient_diagnostics": {
+        "batches": [
+          {
+            "batch": 0,
+            "examples": 128,
+            "kl_loss": 2.838768243789673,
+            "kl_gradient_l2": 1.9702098759278925,
+            "topk_rank_loss": 0.6965104341506958,
+            "topk_rank_gradient_l2": 0.1794172791305268
+          },
+          {
+            "batch": 1,
+            "examples": 128,
+            "kl_loss": 2.900857925415039,
+            "kl_gradient_l2": 1.9822467257562029,
+            "topk_rank_loss": 0.6961897611618042,
+            "topk_rank_gradient_l2": 0.16323109116260767
+          },
+          {
+            "batch": 2,
+            "examples": 128,
+            "kl_loss": 2.6486992835998535,
+            "kl_gradient_l2": 1.8307911105596333,
+            "topk_rank_loss": 0.6963033676147461,
+            "topk_rank_gradient_l2": 0.17135067576987653
+          },
+          {
+            "batch": 3,
+            "examples": 128,
+            "kl_loss": 2.5439260005950928,
+            "kl_gradient_l2": 1.8333060456263797,
+            "topk_rank_loss": 0.6964152455329895,
+            "topk_rank_gradient_l2": 0.17390889280191155
+          },
+          {
+            "batch": 4,
+            "examples": 128,
+            "kl_loss": 2.9278531074523926,
+            "kl_gradient_l2": 2.0444772246173257,
+            "topk_rank_loss": 0.6964788436889648,
+            "topk_rank_gradient_l2": 0.18056980260196487
+          },
+          {
+            "batch": 5,
+            "examples": 128,
+            "kl_loss": 2.78257417678833,
+            "kl_gradient_l2": 1.8809355916339852,
+            "topk_rank_loss": 0.6959596872329712,
+            "topk_rank_gradient_l2": 0.1693404928363904
+          },
+          {
+            "batch": 6,
+            "examples": 128,
+            "kl_loss": 2.7449686527252197,
+            "kl_gradient_l2": 1.9819997857870886,
+            "topk_rank_loss": 0.6966698169708252,
+            "topk_rank_gradient_l2": 0.18447274626282054
+          },
+          {
+            "batch": 7,
+            "examples": 128,
+            "kl_loss": 2.9654393196105957,
+            "kl_gradient_l2": 2.021669962532448,
+            "topk_rank_loss": 0.6960322260856628,
+            "topk_rank_gradient_l2": 0.16457706021769972
+          }
+        ],
+        "batch_count": 8,
+        "mean_kl_gradient_l2": 1.9432045403051195,
+        "mean_topk_rank_gradient_l2": 0.17335850509797476,
+        "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+      }
+    },
+    {
+      "seed": 2043,
+      "coverage": "full",
+      "arm": "conditioned",
+      "parameter_count": 348033,
+      "training_steps": 3978,
+      "training_draws": 509184,
+      "available_training_images": 1020,
+      "initial_train_kl": 2.802690944611247,
+      "initial_val_kl": 2.850252304375901,
+      "final_train_kl": 1.5921955093494886,
+      "final_val_kl": 3.078661518556742,
+      "training_seconds": 30.038762152020354,
+      "validation_seconds": 2.337138923976454,
+      "initial_evaluation_seconds": 0.7900745750084752,
+      "final_train_evaluation_seconds": 0.594829622990801,
+      "initial_state_exactly_matches_shared_seed_state": true,
+      "task_class_quantile_stream_reused_between_all_four_runs": true,
+      "image_draws_reused_between_arms": true,
+      "clip_parameters_in_optimizer": 0,
+      "checkpoint": "full/seed_2043/conditioned.pt",
+      "objective": "topk_rank",
+      "initial_train_objective_loss": 0.6930940136849104,
+      "initial_val_objective_loss": 0.6933165481715808,
+      "final_train_objective_loss": 0.22560293060739595,
+      "final_val_objective_loss": 1.315781990117302,
+      "initial_teacher_diagnostics": {
+        "train": {
+          "kl": 2.802690944611247,
+          "topk_overlap": 0.24490128925824964,
+          "topk_tie_aware_overlap": 0.24490128925824964,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 2.850252304375901,
+          "topk_overlap": 0.23750499759791602,
+          "topk_tie_aware_overlap": 0.23750499759791602,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "final_teacher_diagnostics": {
+        "train": {
+          "kl": 1.5921955093494886,
+          "topk_overlap": 0.7143257151120429,
+          "topk_tie_aware_overlap": 0.7143257151120429,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 3.078661518556742,
+          "topk_overlap": 0.3393107182254977,
+          "topk_tie_aware_overlap": 0.3393107182254977,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "initial_gradient_diagnostics": {
+        "batches": [
+          {
+            "batch": 0,
+            "examples": 128,
+            "kl_loss": 2.732253074645996,
+            "kl_gradient_l2": 1.8095207334544339,
+            "topk_rank_loss": 0.6933766603469849,
+            "topk_rank_gradient_l2": 0.14612841473033178
+          },
+          {
+            "batch": 1,
+            "examples": 128,
+            "kl_loss": 2.860107421875,
+            "kl_gradient_l2": 1.9167979641659667,
+            "topk_rank_loss": 0.6931725740432739,
+            "topk_rank_gradient_l2": 0.1615037676206935
+          },
+          {
+            "batch": 2,
+            "examples": 128,
+            "kl_loss": 2.798614978790283,
+            "kl_gradient_l2": 1.8760241193570053,
+            "topk_rank_loss": 0.6934915781021118,
+            "topk_rank_gradient_l2": 0.16578584408125574
+          },
+          {
+            "batch": 3,
+            "examples": 128,
+            "kl_loss": 2.7515692710876465,
+            "kl_gradient_l2": 1.7985152811365337,
+            "topk_rank_loss": 0.6930828094482422,
+            "topk_rank_gradient_l2": 0.15491121183299458
+          },
+          {
+            "batch": 4,
+            "examples": 128,
+            "kl_loss": 2.9819047451019287,
+            "kl_gradient_l2": 1.9483239851319258,
+            "topk_rank_loss": 0.6933164000511169,
+            "topk_rank_gradient_l2": 0.15749050057262884
+          },
+          {
+            "batch": 5,
+            "examples": 128,
+            "kl_loss": 2.6594395637512207,
+            "kl_gradient_l2": 1.8203554849084782,
+            "topk_rank_loss": 0.69266277551651,
+            "topk_rank_gradient_l2": 0.163790179091494
+          },
+          {
+            "batch": 6,
+            "examples": 128,
+            "kl_loss": 2.8931665420532227,
+            "kl_gradient_l2": 1.9442414050188859,
+            "topk_rank_loss": 0.6934502124786377,
+            "topk_rank_gradient_l2": 0.14714380919714617
+          },
+          {
+            "batch": 7,
+            "examples": 128,
+            "kl_loss": 2.871497631072998,
+            "kl_gradient_l2": 1.8923694091680856,
+            "topk_rank_loss": 0.6929821372032166,
+            "topk_rank_gradient_l2": 0.15381557890244002
+          }
+        ],
+        "batch_count": 8,
+        "mean_kl_gradient_l2": 1.8757685477926644,
+        "mean_topk_rank_gradient_l2": 0.15632116325362308,
+        "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+      }
+    },
+    {
+      "seed": 2043,
+      "coverage": "full",
+      "arm": "image_only",
+      "parameter_count": 348033,
+      "training_steps": 3978,
+      "training_draws": 509184,
+      "available_training_images": 1020,
+      "initial_train_kl": 2.801973659498313,
+      "initial_val_kl": 2.849351561883939,
+      "final_train_kl": 1.8460303115591499,
+      "final_val_kl": 3.3714374427701914,
+      "training_seconds": 30.20407666101528,
+      "validation_seconds": 2.3363714630395407,
+      "initial_evaluation_seconds": 0.7917267540033208,
+      "final_train_evaluation_seconds": 0.5962057959986851,
+      "initial_state_exactly_matches_shared_seed_state": true,
+      "task_class_quantile_stream_reused_between_all_four_runs": true,
+      "image_draws_reused_between_arms": true,
+      "clip_parameters_in_optimizer": 0,
+      "checkpoint": "full/seed_2043/image_only.pt",
+      "objective": "topk_rank",
+      "initial_train_objective_loss": 0.6930607359052873,
+      "initial_val_objective_loss": 0.6932684428259438,
+      "final_train_objective_loss": 0.2778311333025567,
+      "final_val_objective_loss": 1.180528472816827,
+      "initial_teacher_diagnostics": {
+        "train": {
+          "kl": 2.801973659498313,
+          "topk_overlap": 0.24261037301016497,
+          "topk_tie_aware_overlap": 0.24261037301016497,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 2.849351561883939,
+          "topk_overlap": 0.23658963143871184,
+          "topk_tie_aware_overlap": 0.23658963143871184,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "final_teacher_diagnostics": {
+        "train": {
+          "kl": 1.8460303115591499,
+          "topk_overlap": 0.6851290367257603,
+          "topk_tie_aware_overlap": 0.6851307040585654,
+          "teacher_boundary_tie_fraction": 0.0001633986928104575
+        },
+        "val": {
+          "kl": 3.3714374427701914,
+          "topk_overlap": 0.3359393697524187,
+          "topk_tie_aware_overlap": 0.3359393697524187,
+          "teacher_boundary_tie_fraction": 0.0
+        }
+      },
+      "initial_gradient_diagnostics": {
+        "batches": [
+          {
+            "batch": 0,
+            "examples": 128,
+            "kl_loss": 2.7321763038635254,
+            "kl_gradient_l2": 1.9253222864211974,
+            "topk_rank_loss": 0.6933002471923828,
+            "topk_rank_gradient_l2": 0.154588955519416
+          },
+          {
+            "batch": 1,
+            "examples": 128,
+            "kl_loss": 2.8579370975494385,
+            "kl_gradient_l2": 2.025913804140225,
+            "topk_rank_loss": 0.6930462121963501,
+            "topk_rank_gradient_l2": 0.17012845157271078
+          },
+          {
+            "batch": 2,
+            "examples": 128,
+            "kl_loss": 2.7976529598236084,
+            "kl_gradient_l2": 1.9907350775135297,
+            "topk_rank_loss": 0.6933858394622803,
+            "topk_rank_gradient_l2": 0.17523664316713292
+          },
+          {
+            "batch": 3,
+            "examples": 128,
+            "kl_loss": 2.7514336109161377,
+            "kl_gradient_l2": 1.9053829798797675,
+            "topk_rank_loss": 0.6930367350578308,
+            "topk_rank_gradient_l2": 0.1626816004811994
+          },
+          {
+            "batch": 4,
+            "examples": 128,
+            "kl_loss": 2.9811136722564697,
+            "kl_gradient_l2": 2.0707448602511924,
+            "topk_rank_loss": 0.6932739019393921,
+            "topk_rank_gradient_l2": 0.16622380540780934
+          },
+          {
+            "batch": 5,
+            "examples": 128,
+            "kl_loss": 2.658947467803955,
+            "kl_gradient_l2": 1.924915697177612,
+            "topk_rank_loss": 0.6926543712615967,
+            "topk_rank_gradient_l2": 0.1724440258796622
+          },
+          {
+            "batch": 6,
+            "examples": 128,
+            "kl_loss": 2.893261432647705,
+            "kl_gradient_l2": 2.046280850073449,
+            "topk_rank_loss": 0.6935047507286072,
+            "topk_rank_gradient_l2": 0.15375508374410496
+          },
+          {
+            "batch": 7,
+            "examples": 128,
+            "kl_loss": 2.8700451850891113,
+            "kl_gradient_l2": 2.0125458022897633,
+            "topk_rank_loss": 0.6929374933242798,
+            "topk_rank_gradient_l2": 0.16238856099468865
+          }
+        ],
+        "batch_count": 8,
+        "mean_kl_gradient_l2": 1.987730169718342,
+        "mean_topk_rank_gradient_l2": 0.16468089084584053,
+        "policy": "First eight balanced training minibatches; no optimizer update, rescaling or hyperparameter selection."
+      }
+    }
+  ],
+  "objective": "topk_rank",
+  "objective_definition": "Mean softplus(s_out-s_in) over strict teacher top-k boundary preferences; boundary ties expanded symmetrically, equal target values ignored, uniform targets have zero loss/gradient.",
+  "rank_temperature": "Raw selector logits at unit scale; existing temperature is retained only for the common KL target and diagnostic.",
+  "curve_train_objective_loss": "Step 0 is balanced full-panel evaluation. Later points average online rank losses from preceding updates; final_train_objective_loss is a separate balanced full-panel evaluation.",
+  "initial_gradient_diagnostics": "initial_gradient_diagnostics.json",
+  "initial_gradient_cost": "Included in initial_evaluation_seconds; no rescaling or hyperparameter adjustment was performed."
+}

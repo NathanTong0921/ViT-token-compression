@@ -1,0 +1,77 @@
+{
+  "phase": "analysis",
+  "status": "complete",
+  "started_utc": "2026-10-28T08:51:52.155564+00:00",
+  "pid": 313998,
+  "code_commit": "5a0f8232e6b907fd7974517b2290f726ef2ba596",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "stages": [
+    {
+      "name": "pets_objective_analysis",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/analyze_selector_objectives.py",
+        "--dataset",
+        "pets",
+        "--kl",
+        "49=runs/pets-selector-scale-eval-v1",
+        "--rank",
+        "49=runs/pets-selector-rank-49-eval-v1",
+        "--cache",
+        "49=runs/pets-selector-scale-supervision-v1",
+        "--kl",
+        "98=runs/pets-selector-budget-98-eval-v1",
+        "--rank",
+        "98=runs/pets-selector-rank-98-eval-v1",
+        "--cache",
+        "98=runs/pets-selector-budget-98-supervision-v1",
+        "--output",
+        "results/pets-selector-objectives-v1",
+        "--skip-plots"
+      ],
+      "started_utc": "2026-10-28T08:51:52.159422+00:00",
+      "status": "complete",
+      "wall_seconds": 83.81791653198889,
+      "completed_utc": "2026-10-28T08:53:15.977498+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "flowers_objective_analysis",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/analyze_selector_objectives.py",
+        "--dataset",
+        "flowers",
+        "--kl",
+        "49=runs/flowers-selector-budget-49-eval-v1",
+        "--rank",
+        "49=runs/flowers-selector-rank-49-eval-v1",
+        "--cache",
+        "49=runs/flowers-selector-budget-49-supervision-v1",
+        "--kl",
+        "98=runs/flowers-selector-budget-98-eval-v1",
+        "--rank",
+        "98=runs/flowers-selector-rank-98-eval-v1",
+        "--cache",
+        "98=runs/flowers-selector-budget-98-supervision-v1",
+        "--output",
+        "results/flowers-selector-objectives-v1",
+        "--skip-plots"
+      ],
+      "started_utc": "2026-10-28T08:53:15.978087+00:00",
+      "status": "complete",
+      "wall_seconds": 121.24298549100058,
+      "completed_utc": "2026-10-28T08:55:17.221583+00:00",
+      "exit_code": 0
+    }
+  ],
+  "current_stage": null,
+  "completed_utc": "2026-10-28T08:55:17.222200+00:00"
+}

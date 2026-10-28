@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-28T08:01:28.606691+00:00",
+  "scope": "Independent CPU recomputation from saved case tables, prior exchange/shared records, original server probe responses and held-image predictions. No model inference, test data, or new outcome selection. Full regression coefficient bootstrap not repeated.",
+  "budgets": {
+    "49": {
+      "image_count": 616,
+      "task_pair_count": 4315,
+      "all_three_seed_predictions_match_prior_exchange_records": true,
+      "augmented_reference_matches_prior_common_library": true,
+      "case_csv_matches_npz": true,
+      "maximum_decomposition_residual": 1.3877787807814457e-17,
+      "mean_augmented_potential": 0.006181910546690538,
+      "mean_regret_difference": 0.006979382444256223,
+      "mean_learned_gain": -0.000797471897565685,
+      "summary_mean_and_97_5_intervals_reproduced": true,
+      "probe_half_weighted_correlation": 0.6451547125533522,
+      "fixed_probe_half_indices_verified": true,
+      "regression_gap_coefficient_per_0_01": 0.0013327730888940798,
+      "folds_image_disjoint": true,
+      "max_refit_out_of_fold_prediction_error": 4.5536491244391186e-17,
+      "incremental_out_of_fold_r2": 0.004549632477176507,
+      "incremental_out_of_fold_r2_ci97_5": [
+        -0.00355916340185462,
+        0.01290269207806369
+      ],
+      "ordinary_and_adjusted_interpretation": "49 partial slope positive; 98 partial slope uncertain. Both held-image prediction-gain intervals include zero.",
+      "probe_gaps_recomputed_from_original_measured_responses": true,
+      "probe_gap_max_absolute_errors": {
+        "512": 5.551115123125783e-17,
+        "half_a": 5.551115123125783e-17,
+        "half_b": 5.551115123125783e-17
+      }
+    },
+    "98": {
+      "image_count": 616,
+      "task_pair_count": 4315,
+      "all_three_seed_predictions_match_prior_exchange_records": true,
+      "augmented_reference_matches_prior_common_library": true,
+      "case_csv_matches_npz": true,
+      "maximum_decomposition_residual": 1.3877787807814457e-17,
+      "mean_augmented_potential": 0.006405652498065755,
+      "mean_regret_difference": 0.00589490809921177,
+      "mean_learned_gain": 0.0005107443988539857,
+      "summary_mean_and_97_5_intervals_reproduced": true,
+      "probe_half_weighted_correlation": 0.6123104297067037,
+      "fixed_probe_half_indices_verified": true,
+      "regression_gap_coefficient_per_0_01": 0.000145389119648467,
+      "folds_image_disjoint": true,
+      "max_refit_out_of_fold_prediction_error": 1.734723475976807e-17,
+      "incremental_out_of_fold_r2": -0.0006395076971034006,
+      "incremental_out_of_fold_r2_ci97_5": [
+        -0.0020589805407912774,
+        0.0007124099154199141
+      ],
+      "ordinary_and_adjusted_interpretation": "49 partial slope positive; 98 partial slope uncertain. Both held-image prediction-gain intervals include zero.",
+      "probe_gaps_recomputed_from_original_measured_responses": true,
+      "probe_gap_max_absolute_errors": {
+        "512": 5.551115123125783e-17,
+        "half_a": 5.551115123125783e-17,
+        "half_b": 5.551115123125783e-17
+      }
+    }
+  }
+}

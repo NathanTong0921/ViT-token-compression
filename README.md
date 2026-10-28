@@ -23,6 +23,8 @@ The Pets main evaluation contains 716 development images and 66 unseen class com
 
 The [coverage experiment](results/pets-selector-scale-v1/README.md), [preceding training pilot](results/pets-selector-pilot-v1/README.md), and [fixed-model exchange experiment](results/pets-selector-exchange-v1/README.md) retain their original results and scope. The Pets budget comparison reuses the full-coverage 49-token models unchanged and trains budget-matched 98/147-token models. All seeds and both favorable and unfavorable results are retained.
 
+The focused follow-up is complete: Pets finite-library diagnostics and a fixed KL-versus-Top-k-ranking intervention across Pets/Flowers at 49/98 tokens add 24 matched selectors. Under the fixed training recipe, the objective increases the conditioning margin advantage on Pets49 and decreases it on Flowers98; all four adjusted accuracy-interaction intervals include zero. A probe-only specialization gap does not establish extra held-image predictive value. This strengthens the analysis of potential versus realized task-conditioning benefits without establishing a generally better objective. Earlier classification statements above describe the unchanged KL baseline. See the [combined results](results/conditioning-objective-v1/README.md), [fixed protocol](docs/conditioning-objective-followup.md), and [execution record](docs/experiments/2026-10-28-conditioning-objective.md). Final reserved-data confirmation remains pending.
+
 ## Working approach
 
 - Follow the [project TODO](docs/TODO.md) for remaining experiments and deliverables; update it as evidence changes the next step.

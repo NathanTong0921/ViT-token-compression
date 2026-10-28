@@ -1,0 +1,44 @@
+{
+  "phase": "gap",
+  "status": "complete",
+  "started_utc": "2026-10-28T07:27:11.196622+00:00",
+  "pid": 235265,
+  "code_commit": "0f8d3ebab601f50151b0fa909f47715bd915e1ef",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "stages": [
+    {
+      "name": "pets_gap",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/analyze_conditioning_gap.py",
+        "--config",
+        "49=configs/pets_selector_scale.json",
+        "--config",
+        "98=configs/pets_selector_budget_98.json",
+        "--source",
+        "49=runs/pets-selector-scale-eval-v1",
+        "--source",
+        "98=runs/pets-selector-budget-98-eval-v1",
+        "--shared",
+        "49=runs/pets-selector-budget-49-shared-v1",
+        "--shared",
+        "98=results/pets-selector-budgets-v1/shared/budget_98",
+        "--output",
+        "results/pets-conditioning-gap-v1"
+      ],
+      "started_utc": "2026-10-28T07:27:11.199559+00:00",
+      "status": "complete",
+      "wall_seconds": 5.025701135993586,
+      "completed_utc": "2026-10-28T07:27:16.225447+00:00",
+      "exit_code": 0
+    }
+  ],
+  "current_stage": null,
+  "completed_utc": "2026-10-28T07:27:16.226004+00:00"
+}

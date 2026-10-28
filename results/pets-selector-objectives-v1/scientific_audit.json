@@ -1,0 +1,146 @@
+{
+  "status": "passed",
+  "dataset": "pets",
+  "analysis_source": "results/pets-selector-objectives-v1/analysis.json",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2085,
+  "scope": "Independent raw CSV/NPZ classification reconstruction, strict paired identities, weighted main/secondary effects, per-seed effects, image-bootstrap intervals and recorded training controls. Reference predictions are not read. Common teacher diagnostic metrics are not independently recomputed by this audit.",
+  "budgets": {
+    "49": {
+      "image_count": 716,
+      "image_task_rows_per_arm_seed": 2624,
+      "raw_unseen_rows_verified_per_objective": 15744,
+      "primary_interaction": {
+        "accuracy": {
+          "mean": 6.645401382243508e-05,
+          "ci95": [
+            -0.003393275991797052,
+            0.003502106507229038
+          ],
+          "bonferroni_family_ci95": [
+            -0.003932393463454219,
+            0.003953835751064077
+          ],
+          "individual_interval_level": 0.975
+        },
+        "margin": {
+          "mean": 0.002812093955414691,
+          "ci95": [
+            0.001928188363349541,
+            0.003715174845016961
+          ],
+          "bonferroni_family_ci95": [
+            0.0017710636632056087,
+            0.0038079494391241994
+          ],
+          "individual_interval_level": 0.975
+        }
+      },
+      "training_controls": {
+        "sources": {
+          "kl": {
+            "training_summary": "runs/pets-selector-scale-training-v1/training_summary.json",
+            "sampling_audit": "runs/pets-selector-scale-training-v1/sampling_audit.json"
+          },
+          "rank": {
+            "training_summary": "runs/pets-selector-rank-49-training-v1/training_summary.json",
+            "sampling_audit": "runs/pets-selector-rank-49-training-v1/sampling_audit.json"
+          }
+        },
+        "same_teacher_cache": "runs/pets-selector-scale-supervision-v1",
+        "matched_full_coverage_runs_per_objective": 6,
+        "matched_controls": [
+          "model",
+          "prune_after",
+          "keep_patch_tokens",
+          "prompt_template",
+          "manifest_dir",
+          "training_seeds",
+          "hidden_dim",
+          "training_steps",
+          "batch_size",
+          "temperature",
+          "learning_rate",
+          "weight_decay",
+          "cache_dir",
+          "probe_count",
+          "mask_seed",
+          "ridge"
+        ],
+        "initial_common_kl_agrees": true,
+        "recorded_full_sampling_matches": true,
+        "scope": "Checks recorded within-arm initialization assertions and cross-objective initial KL, first batch and per-image draw counts. Historical initial tensors and full ordered sample streams were not saved, so this is not a new tensor/step-by-step replay. Old small-coverage runs are excluded."
+      },
+      "classification_points_intervals_and_per_seed": "passed",
+      "paired_case_csv_and_npz": "passed"
+    },
+    "98": {
+      "image_count": 716,
+      "image_task_rows_per_arm_seed": 2624,
+      "raw_unseen_rows_verified_per_objective": 15744,
+      "primary_interaction": {
+        "accuracy": {
+          "mean": -0.001967038809144072,
+          "ci95": [
+            -0.00442102167703736,
+            0.00025635921631526686
+          ],
+          "bonferroni_family_ci95": [
+            -0.004752723520009524,
+            0.0006306235282648642
+          ],
+          "individual_interval_level": 0.975
+        },
+        "margin": {
+          "mean": 0.0005979074491592925,
+          "ci95": [
+            -0.00022571998912612908,
+            0.001388432573340296
+          ],
+          "bonferroni_family_ci95": [
+            -0.00033814820146188567,
+            0.0015495750027393561
+          ],
+          "individual_interval_level": 0.975
+        }
+      },
+      "training_controls": {
+        "sources": {
+          "kl": {
+            "training_summary": "runs/pets-selector-budget-98-training-v1/training_summary.json",
+            "sampling_audit": "runs/pets-selector-budget-98-training-v1/sampling_audit.json"
+          },
+          "rank": {
+            "training_summary": "runs/pets-selector-rank-98-training-v1/training_summary.json",
+            "sampling_audit": "runs/pets-selector-rank-98-training-v1/sampling_audit.json"
+          }
+        },
+        "same_teacher_cache": "runs/pets-selector-budget-98-supervision-v1",
+        "matched_full_coverage_runs_per_objective": 6,
+        "matched_controls": [
+          "model",
+          "prune_after",
+          "keep_patch_tokens",
+          "prompt_template",
+          "manifest_dir",
+          "training_seeds",
+          "hidden_dim",
+          "training_steps",
+          "batch_size",
+          "temperature",
+          "learning_rate",
+          "weight_decay",
+          "cache_dir",
+          "probe_count",
+          "mask_seed",
+          "ridge"
+        ],
+        "initial_common_kl_agrees": true,
+        "recorded_full_sampling_matches": true,
+        "scope": "Checks recorded within-arm initialization assertions and cross-objective initial KL, first batch and per-image draw counts. Historical initial tensors and full ordered sample streams were not saved, so this is not a new tensor/step-by-step replay. Old small-coverage runs are excluded."
+      },
+      "classification_points_intervals_and_per_seed": "passed",
+      "paired_case_csv_and_npz": "passed"
+    }
+  }
+}
