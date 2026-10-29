@@ -1,0 +1,285 @@
+{
+  "analysis_status": "complete",
+  "analysis_type": "exploratory",
+  "rationale": "Requested after observing the main component ablations: test the budget difference directly instead of comparing which separate intervals cross zero.",
+  "source_code_commit": "a6e119a661db1512e746ec554e2af34af2899431",
+  "analysis_script": "scripts/analyze_component_budget_interactions.py",
+  "source_array_schema": {
+    "identity_and_weights": [
+      "image_id",
+      "task_id",
+      "class_id",
+      "class_a",
+      "class_b",
+      "task_class_weight"
+    ],
+    "values": [
+      "conditioned_per_seed",
+      "mean_only_per_seed",
+      "difference_only_per_seed"
+    ],
+    "value_axes": [
+      "training_seed",
+      "image_task",
+      "metric"
+    ],
+    "metric_axis": [
+      "accuracy",
+      "margin"
+    ],
+    "seed_order_field": "training_seeds"
+  },
+  "created_utc": "2026-10-29T11:23:24.943156+00:00",
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2093,
+  "estimand": "Task-equal, class-within-task-equal means on unseen validation combinations. Average the three fixed seeds per image/task, then resample whole images with their original row weights and a resampled denominator.",
+  "uncertainty": "Ordinary 95% and two-component-contrast-adjusted 97.5% intervals, separately per dataset and metric. Conditional on existing tasks and three fixed checkpoints; exploratory, not a prespecified confirmatory test.",
+  "units": {
+    "accuracy": "fraction (multiply by 100 for percentage points)",
+    "margin": "normalized geometric margin"
+  },
+  "interpretation": "Positive interaction means adding that missing descriptor component has a larger effect at 49 than at 98 retained patches.",
+  "results": {
+    "pets": {
+      "sources": [
+        "results/pets-selector-ablations-v1/budget_49/paired_cases.npz",
+        "results/pets-selector-ablations-v1/budget_98/paired_cases.npz"
+      ],
+      "image_count": 716,
+      "image_task_examples": 2624,
+      "task_count": 66,
+      "alignment": "Exact image/task identities, class labels, class pairs and task/class weights agree across budgets.",
+      "contrasts": {
+        "mean_only": {
+          "definition": "(conditioned - mean_only)_49 - (conditioned - mean_only)_98",
+          "component_removed_by_ablation": "absolute_difference",
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": 0.0006977671451355662,
+              "margin": 0.0009289457738872075
+            },
+            {
+              "seed": 2042,
+              "accuracy": -0.002392344497607656,
+              "margin": 0.0009303481688410987
+            },
+            {
+              "seed": 2043,
+              "accuracy": -0.0008373205741626793,
+              "margin": -0.00016250625794405441
+            }
+          ],
+          "per_budget_conditioned_minus_ablation": {
+            "49": {
+              "accuracy": -0.001089845826687932,
+              "margin": 0.0007140439832043369
+            },
+            "98": {
+              "accuracy": -0.00024587985114300905,
+              "margin": 0.00014844808827625601
+            }
+          },
+          "accuracy": {
+            "mean": -0.0008439659755449229,
+            "ci95": [
+              -0.0029920745842395694,
+              0.001348651751955781
+            ],
+            "ci97_5": [
+              -0.0033778717994065364,
+              0.0016789609530552133
+            ]
+          },
+          "margin": {
+            "mean": 0.0005655958949280833,
+            "ci95": [
+              -1.680510819399072e-05,
+              0.001127797287297259
+            ],
+            "ci97_5": [
+              -6.825396745638032e-05,
+              0.0012052930263058254
+            ]
+          }
+        },
+        "difference_only": {
+          "definition": "(conditioned - difference_only)_49 - (conditioned - difference_only)_98",
+          "component_removed_by_ablation": "mean",
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": 0.0003787878787878788,
+              "margin": 0.00029030345781843085
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.002711323763955343,
+              "margin": 0.0009648662849812937
+            },
+            {
+              "seed": 2043,
+              "accuracy": -0.002751196172248804,
+              "margin": 0.00011467213387201387
+            }
+          ],
+          "per_budget_conditioned_minus_ablation": {
+            "49": {
+              "accuracy": 0.00037878787878787917,
+              "margin": 0.0009076091229226924
+            },
+            "98": {
+              "accuracy": 0.0002658160552897396,
+              "margin": 0.00045099516403211633
+            }
+          },
+          "accuracy": {
+            "mean": 0.00011297182349813938,
+            "ci95": [
+              -0.001975047175745178,
+              0.0023116799597558907
+            ],
+            "ci97_5": [
+              -0.00223540541232718,
+              0.002665734312381079
+            ]
+          },
+          "margin": {
+            "mean": 0.00045661395889057857,
+            "ci95": [
+              -8.727853728133455e-05,
+              0.0009581716381839379
+            ],
+            "ci97_5": [
+              -0.00014955394078452236,
+              0.0010318710736091097
+            ]
+          }
+        }
+      }
+    },
+    "flowers": {
+      "sources": [
+        "results/flowers-selector-ablations-v1/budget_49/paired_cases.npz",
+        "results/flowers-selector-ablations-v1/budget_98/paired_cases.npz"
+      ],
+      "image_count": 1020,
+      "image_task_examples": 4080,
+      "task_count": 204,
+      "alignment": "Exact image/task identities, class labels, class pairs and task/class weights agree across budgets.",
+      "contrasts": {
+        "mean_only": {
+          "definition": "(conditioned - mean_only)_49 - (conditioned - mean_only)_98",
+          "component_removed_by_ablation": "absolute_difference",
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": -0.0004901960784313725,
+              "margin": 0.0005833171649382016
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.0024509803921568627,
+              "margin": 0.0006186759701342779
+            },
+            {
+              "seed": 2043,
+              "accuracy": -0.0029411764705882353,
+              "margin": 0.0007025780345175571
+            }
+          ],
+          "per_budget_conditioned_minus_ablation": {
+            "49": {
+              "accuracy": 0.0005718954248366016,
+              "margin": 0.0006843408471881253
+            },
+            "98": {
+              "accuracy": 0.0008986928104575163,
+              "margin": 4.9483790658116595e-05
+            }
+          },
+          "accuracy": {
+            "mean": -0.0003267973856209154,
+            "ci95": [
+              -0.004087009803921571,
+              0.0033496732026143793
+            ],
+            "ci97_5": [
+              -0.0044944852941176455,
+              0.003839869281045754
+            ]
+          },
+          "margin": {
+            "mean": 0.0006348570565300115,
+            "ci95": [
+              1.3462121487426973e-05,
+              0.0012684515068138865
+            ],
+            "ci97_5": [
+              -7.679987670505985e-05,
+              0.0013739339501123073
+            ]
+          }
+        },
+        "difference_only": {
+          "definition": "(conditioned - difference_only)_49 - (conditioned - difference_only)_98",
+          "component_removed_by_ablation": "mean",
+          "per_seed": [
+            {
+              "seed": 2041,
+              "accuracy": -0.003676470588235294,
+              "margin": -0.0012035202797786753
+            },
+            {
+              "seed": 2042,
+              "accuracy": 0.0,
+              "margin": 0.0009273427054660171
+            },
+            {
+              "seed": 2043,
+              "accuracy": -0.0012254901960784314,
+              "margin": -0.0018188973433704333
+            }
+          ],
+          "per_budget_conditioned_minus_ablation": {
+            "49": {
+              "accuracy": 0.0008169934640522863,
+              "margin": -0.00013621133445914177
+            },
+            "98": {
+              "accuracy": 0.002450980392156863,
+              "margin": 0.0005621469714352249
+            }
+          },
+          "accuracy": {
+            "mean": -0.0016339869281045748,
+            "ci95": [
+              -0.0053104575163398695,
+              0.0020424836601307195
+            ],
+            "ci97_5": [
+              -0.00580065359477124,
+              0.0024520016339869334
+            ]
+          },
+          "margin": {
+            "mean": -0.0006983583058943659,
+            "ci95": [
+              -0.0012788842091904344,
+              -0.00013971991709452216
+            ],
+            "ci97_5": [
+              -0.0013632197516499983,
+              -5.156679712264738e-05
+            ]
+          }
+        }
+      }
+    }
+  }
+}

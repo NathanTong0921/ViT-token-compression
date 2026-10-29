@@ -1,0 +1,89 @@
+{
+  "phase": "k49",
+  "status": "complete",
+  "started_utc": "2026-10-29T10:52:05.420041+00:00",
+  "pid": 1860859,
+  "code_commit": "6d9ef29a8f93cd5647d9154e40a27eb06bc607ea",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "5",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "stages": [
+    {
+      "name": "pets_train_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/train_selector_scale.py",
+        "--config",
+        "configs/pets_selector_ablations_49.json",
+        "--output",
+        "runs/pets-selector-ablations-49-training-v1"
+      ],
+      "started_utc": "2026-10-29T10:52:05.424448+00:00",
+      "status": "complete",
+      "wall_seconds": 373.4761923480255,
+      "completed_utc": "2026-10-29T10:58:18.901044+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "pets_evaluate_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/pets_selector_ablations_49.json",
+        "--models",
+        "runs/pets-selector-ablations-49-training-v1",
+        "--output",
+        "runs/pets-selector-ablations-49-eval-v1"
+      ],
+      "started_utc": "2026-10-29T10:58:18.901830+00:00",
+      "status": "complete",
+      "wall_seconds": 76.22277415299322,
+      "completed_utc": "2026-10-29T10:59:35.125140+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "flowers_train_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/train_selector_scale.py",
+        "--config",
+        "configs/flowers_selector_ablations_49.json",
+        "--output",
+        "runs/flowers-selector-ablations-49-training-v1"
+      ],
+      "started_utc": "2026-10-29T10:59:35.125870+00:00",
+      "status": "complete",
+      "wall_seconds": 368.2246856580023,
+      "completed_utc": "2026-10-29T11:05:43.351042+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "flowers_evaluate_49",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/evaluate_selector_scale.py",
+        "--config",
+        "configs/flowers_selector_ablations_49.json",
+        "--models",
+        "runs/flowers-selector-ablations-49-training-v1",
+        "--output",
+        "runs/flowers-selector-ablations-49-eval-v1"
+      ],
+      "started_utc": "2026-10-29T11:05:43.351504+00:00",
+      "status": "complete",
+      "wall_seconds": 61.42423132399563,
+      "completed_utc": "2026-10-29T11:06:44.776142+00:00",
+      "exit_code": 0
+    }
+  ],
+  "current_stage": null,
+  "completed_utc": "2026-10-29T11:06:44.776618+00:00"
+}

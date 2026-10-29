@@ -1,0 +1,81 @@
+{
+  "scope": "New training/evaluation process wall times summed across two parallel queues on two GPUs; not GPU utilization time. Reuses existing teacher caches, frozen CLIP features and KL baseline models. CPU analysis/audits reported separately. Excludes coding, tests and data transfer.",
+  "stages": [
+    {
+      "phase": "k49",
+      "stage": "pets_train_49",
+      "seconds": 373.4761923480255,
+      "kind": "GPU process wall time"
+    },
+    {
+      "phase": "k49",
+      "stage": "pets_evaluate_49",
+      "seconds": 76.22277415299322,
+      "kind": "GPU process wall time"
+    },
+    {
+      "phase": "k49",
+      "stage": "flowers_train_49",
+      "seconds": 368.2246856580023,
+      "kind": "GPU process wall time"
+    },
+    {
+      "phase": "k49",
+      "stage": "flowers_evaluate_49",
+      "seconds": 61.42423132399563,
+      "kind": "GPU process wall time"
+    },
+    {
+      "phase": "k98",
+      "stage": "pets_train_98",
+      "seconds": 424.54477847597445,
+      "kind": "GPU process wall time"
+    },
+    {
+      "phase": "k98",
+      "stage": "pets_evaluate_98",
+      "seconds": 104.24743622200913,
+      "kind": "GPU process wall time"
+    },
+    {
+      "phase": "k98",
+      "stage": "flowers_train_98",
+      "seconds": 366.5652253929875,
+      "kind": "GPU process wall time"
+    },
+    {
+      "phase": "k98",
+      "stage": "flowers_evaluate_98",
+      "seconds": 69.8515544780239,
+      "kind": "GPU process wall time"
+    },
+    {
+      "phase": "analysis_pets",
+      "stage": "pets_analysis",
+      "seconds": 9.774277915013954,
+      "kind": "CPU analysis or audit wall time"
+    },
+    {
+      "phase": "analysis_pets",
+      "stage": "pets_audit",
+      "seconds": 12.00208136899164,
+      "kind": "CPU analysis or audit wall time"
+    },
+    {
+      "phase": "analysis_flowers",
+      "stage": "flowers_analysis",
+      "seconds": 12.724644439003896,
+      "kind": "CPU analysis or audit wall time"
+    },
+    {
+      "phase": "analysis_flowers",
+      "stage": "flowers_audit",
+      "seconds": 14.887331214995356,
+      "kind": "CPU analysis or audit wall time"
+    }
+  ],
+  "new_selector_count": 36,
+  "gpu_process_wall_seconds": 1844.5568780520116,
+  "cpu_analysis_audit_seconds": 49.388334938004846,
+  "gpu_process_wall_hours": 0.5123769105700032
+}

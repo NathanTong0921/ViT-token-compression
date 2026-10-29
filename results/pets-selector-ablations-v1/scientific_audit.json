@@ -1,0 +1,252 @@
+{
+  "status": "passed",
+  "dataset": "pets",
+  "analysis_source": "results/pets-selector-ablations-v1/analysis.json",
+  "scope": "Independent raw score reconstruction, identities, weighted effects and paired image bootstrap; all exchange effects and training records. No model inference or new test images.",
+  "budgets": {
+    "49": {
+      "image_count": 716,
+      "task_classification_rows": 2624,
+      "primary_contrasts": {
+        "conditioned_minus_image_only_wide": {
+          "accuracy": {
+            "mean": -0.0002525252525252525,
+            "ci95": [
+              -0.002171437588103696,
+              0.0016568498775303279
+            ],
+            "bonferroni_family_ci95": [
+              -0.002434589351232859,
+              0.0019247009384775178
+            ],
+            "individual_interval_level": 0.975
+          },
+          "margin": {
+            "mean": -0.002524010860355355,
+            "ci95": [
+              -0.003267893632878162,
+              -0.0018234107671832827
+            ],
+            "bonferroni_family_ci95": [
+              -0.003384928296051946,
+              -0.0017137803159461469
+            ],
+            "individual_interval_level": 0.975
+          }
+        },
+        "conditioned_minus_mean_only": {
+          "accuracy": {
+            "mean": -0.001089845826687932,
+            "ci95": [
+              -0.0030531380799455796,
+              0.0008370695692216434
+            ],
+            "bonferroni_family_ci95": [
+              -0.003839111574572972,
+              0.0012788698362927696
+            ],
+            "individual_interval_level": 0.9875
+          },
+          "margin": {
+            "mean": 0.0007140439832043402,
+            "ci95": [
+              0.0002851841541694256,
+              0.0011884276199048327
+            ],
+            "bonferroni_family_ci95": [
+              0.00015189822404001698,
+              0.001290185740987263
+            ],
+            "individual_interval_level": 0.9875
+          }
+        },
+        "conditioned_minus_difference_only": {
+          "accuracy": {
+            "mean": 0.00037878787878787917,
+            "ci95": [
+              -0.001457813536174401,
+              0.0021299927214537867
+            ],
+            "bonferroni_family_ci95": [
+              -0.0018997784560835936,
+              0.002721469004029054
+            ],
+            "individual_interval_level": 0.9875
+          },
+          "margin": {
+            "mean": 0.0009076091229226954,
+            "ci95": [
+              0.0004994212538789308,
+              0.001319382719507704
+            ],
+            "bonferroni_family_ci95": [
+              0.0003831434906562197,
+              0.0014741667095265936
+            ],
+            "individual_interval_level": 0.9875
+          }
+        }
+      },
+      "classification_points_intervals_per_seed": "passed",
+      "paired_case_csv_npz": "passed",
+      "training_controls": {
+        "matched_controls": [
+          "model",
+          "prune_after",
+          "keep_patch_tokens",
+          "prompt_template",
+          "manifest_dir",
+          "training_seeds",
+          "hidden_dim",
+          "training_steps",
+          "batch_size",
+          "temperature",
+          "learning_rate",
+          "weight_decay",
+          "cache_dir",
+          "probe_count",
+          "mask_seed",
+          "ridge"
+        ],
+        "recorded_sampling_matches": true,
+        "parameters": {
+          "conditioned": 348033,
+          "image_only": 348033,
+          "image_only_wide": 347399,
+          "mean_only": 348033,
+          "difference_only": 348033
+        },
+        "initialization": "Descriptor arms match original seed template; wider image-only matches its own seeded architecture. Checked saved assertions and sampling summaries, not historical initial tensors."
+      },
+      "exchange": {
+        "image_count": 616,
+        "task_pairs": 4315,
+        "score_reconstruction": "passed",
+        "own_exchanged_points_intervals_per_seed": "passed",
+        "both_image_only_variants_invariant": true
+      }
+    },
+    "98": {
+      "image_count": 716,
+      "task_classification_rows": 2624,
+      "primary_contrasts": {
+        "conditioned_minus_image_only_wide": {
+          "accuracy": {
+            "mean": 0.00025917065390749594,
+            "ci95": [
+              -0.0007708898167093096,
+              0.0013727348917251193
+            ],
+            "bonferroni_family_ci95": [
+              -0.0009121028720293602,
+              0.001509833875313573
+            ],
+            "individual_interval_level": 0.975
+          },
+          "margin": {
+            "mean": -0.0001733295805826593,
+            "ci95": [
+              -0.0005927122821043874,
+              0.00023345930335877388
+            ],
+            "bonferroni_family_ci95": [
+              -0.0006518013327119056,
+              0.00029537803895434176
+            ],
+            "individual_interval_level": 0.975
+          }
+        },
+        "conditioned_minus_mean_only": {
+          "accuracy": {
+            "mean": -0.00024587985114300905,
+            "ci95": [
+              -0.001021739663133982,
+              0.0005363142387852086
+            ],
+            "bonferroni_family_ci95": [
+              -0.0012313294209580009,
+              0.0008010371388657214
+            ],
+            "individual_interval_level": 0.9875
+          },
+          "margin": {
+            "mean": 0.0001484480882762555,
+            "ci95": [
+              -0.00018157538678702484,
+              0.0004546083737606266
+            ],
+            "bonferroni_family_ci95": [
+              -0.0002845075367535349,
+              0.0005291303537232243
+            ],
+            "individual_interval_level": 0.9875
+          }
+        },
+        "conditioned_minus_difference_only": {
+          "accuracy": {
+            "mean": 0.0002658160552897396,
+            "ci95": [
+              -0.0006320890323114204,
+              0.0011535092137994925
+            ],
+            "bonferroni_family_ci95": [
+              -0.0008689055499413109,
+              0.0014291443664689353
+            ],
+            "individual_interval_level": 0.9875
+          },
+          "margin": {
+            "mean": 0.0004509951640321163,
+            "ci95": [
+              0.00014251937277815285,
+              0.0007774559049651871
+            ],
+            "bonferroni_family_ci95": [
+              4.307625791345317e-05,
+              0.0008719253818458704
+            ],
+            "individual_interval_level": 0.9875
+          }
+        }
+      },
+      "classification_points_intervals_per_seed": "passed",
+      "paired_case_csv_npz": "passed",
+      "training_controls": {
+        "matched_controls": [
+          "model",
+          "prune_after",
+          "keep_patch_tokens",
+          "prompt_template",
+          "manifest_dir",
+          "training_seeds",
+          "hidden_dim",
+          "training_steps",
+          "batch_size",
+          "temperature",
+          "learning_rate",
+          "weight_decay",
+          "cache_dir",
+          "probe_count",
+          "mask_seed",
+          "ridge"
+        ],
+        "recorded_sampling_matches": true,
+        "parameters": {
+          "conditioned": 348033,
+          "image_only": 348033,
+          "image_only_wide": 347399,
+          "mean_only": 348033,
+          "difference_only": 348033
+        },
+        "initialization": "Descriptor arms match original seed template; wider image-only matches its own seeded architecture. Checked saved assertions and sampling summaries, not historical initial tensors."
+      },
+      "exchange": {
+        "image_count": 616,
+        "task_pairs": 4315,
+        "score_reconstruction": "passed",
+        "own_exchanged_points_intervals_per_seed": "passed",
+        "both_image_only_variants_invariant": true
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "phase": "analysis_pets",
+  "status": "complete",
+  "started_utc": "2026-10-29T11:02:39.291502+00:00",
+  "pid": 1899713,
+  "code_commit": "7fcf01c946aae477a99347c6517f97e856c68228",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "stages": [
+    {
+      "name": "pets_analysis",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/analyze_selector_ablations.py",
+        "--dataset",
+        "pets",
+        "--baseline",
+        "49=runs/pets-selector-scale-eval-v1",
+        "--ablations",
+        "49=runs/pets-selector-ablations-49-eval-v1",
+        "--baseline",
+        "98=runs/pets-selector-budget-98-eval-v1",
+        "--ablations",
+        "98=runs/pets-selector-ablations-98-eval-v1",
+        "--output",
+        "results/pets-selector-ablations-v1",
+        "--skip-plots"
+      ],
+      "started_utc": "2026-10-29T11:02:39.295673+00:00",
+      "status": "complete",
+      "wall_seconds": 9.774277915013954,
+      "completed_utc": "2026-10-29T11:02:49.070179+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "pets_audit",
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_selector_ablations.py",
+        "--summary",
+        "results/pets-selector-ablations-v1/analysis.json",
+        "--output",
+        "results/pets-selector-ablations-v1/scientific_audit.json"
+      ],
+      "started_utc": "2026-10-29T11:02:49.070949+00:00",
+      "status": "complete",
+      "wall_seconds": 12.00208136899164,
+      "completed_utc": "2026-10-29T11:03:01.073546+00:00",
+      "exit_code": 0
+    }
+  ],
+  "current_stage": null,
+  "completed_utc": "2026-10-29T11:03:01.074412+00:00"
+}

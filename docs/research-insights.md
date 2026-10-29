@@ -2,7 +2,7 @@
 
 本文件集中保存实验过程中形成的认识，供后续设计实验、写 report 和准备讲解时查阅。每次实验的配置、完整结果和复现步骤仍保存在 [experiments/](experiments/)；这里记录“发现了什么、证据在哪里、改变了什么判断”。
 
-更新日期：2026-10-27。当前证据包括冻结 CLIP ViT-B/16、block 6 的 Pets 三预算及 Flowers 两预算研究，ViT-L/14、block 12 的两数据集 128-token 定向验证，以及七个设置的实际延迟和完整验证集数值敏感性检查。两个数据集的官方测试图片与测试类别对均未使用。
+更新日期：2026-10-29。当前证据包括冻结 CLIP ViT-B/16、block 6 的 Pets 三预算及 Flowers 两预算研究，ViT-L/14、block 12 的两数据集 128-token 定向验证，七个设置的实际延迟和完整验证集数值敏感性检查，以及有限库诊断、训练目标干预、更强图像版基线与任务描述成分消融。两个数据集的官方测试图片与测试类别对均未使用。
 
 ## I1：估计 token 重要性时的压缩程度，会影响最终选择的质量
 
@@ -160,6 +160,24 @@
 - **对项目的影响：**解释深度得到正面推进，形成一次直接干预与跨数据集复核；方法性能未获得通用改善。不继续自动搜索新 loss 或种子，下一步冻结中心主张并用预留测试确认。
 - **证据：**[四设置汇总](../results/conditioning-objective-v1/README.md)、[Pets](../results/pets-selector-objectives-v1/README.md)、[Flowers](../results/flowers-selector-objectives-v1/README.md)、[执行记录](experiments/2026-10-28-conditioning-objective.md)。
 
+## I14：把参数用于更强图像网络，会改变条件化领先的范围
+
+- **状态与来源：**2026-10-29 完成。延伸 proposal 的强共享基线与 H3，并回应 I7、I9 的小幅分类收益。保留原有固定描述的 image-only，新增无文本分支、宽度 199 的图像 MLP：347,399 参数，对比原架构的 348,033 参数。监督、训练图片、更新数及三个种子保持配对，覆盖 Pets／Flowers 的 49／98-token。
+- **主要结果：**条件化减更宽图像版的平均 margin，在 Pets49／98 为 −0.002524／−0.000173，在 Flowers49／98 为 +0.000006／+0.001263。两预算调整区间显示：Pets49 仍落后，Flowers98 仍领先；Pets98 与 Flowers49 原先相对 image-only 的领先不再明确。四设置的准确率差调整区间均跨零。
+- **新认识：**任务信息在模型内部被有用地利用，与超过一个更强图像模型，是两项不同证据。近似相同参数量的分配方式会实质改变 H3 的性能比较；本轮保留下来的领先是 Flowers98 的 margin 收益。
+- **历史结果的更新：**I7、I9 及既有 KL／ranking 比较均针对原 image-only，数值原样保留。本轮更新其基线解释，不把原比较替换成对更宽模型的结论；L/14 与 Pets147 未增加此宽模型对照。
+- **对项目的影响：**加强了 baseline 的可信度，也收窄了性能主张。下一步用固定的最终方案在保留数据上确认核心结果。
+- **证据：**[两数据集汇总](../results/selector-ablations-v1/README.md)、[Pets](../results/pets-selector-ablations-v1/README.md)、[Flowers](../results/flowers-selector-ablations-v1/README.md)、[固定协议](selector-component-ablations.md)。
+
+## I15：均值与差异分量都能提供有用任务信息，其增量作用可被分别测量
+
+- **状态与来源：**2026-10-29 完成。延伸 H1 的任务交换与 H3 的可学习性：将描述中的均值或绝对差分量替换为训练均值，分别训练 mean-only、difference-only，保持架构、训练方案与种子一致。连同 I14 的图像版，共完成 36 个新增模型。
+- **分类结果：**49-token 时，完整描述减 mean-only 的 margin 在 Pets／Flowers 为 +0.000714／+0.000684；98-token 时，完整描述减 difference-only 为 +0.000451／+0.000562。以上四个成分比较均通过四项比较调整，且各自三个种子方向一致：在前一设置加入差异分量、在后一设置加入均值分量，都带来可测的增益。全部成分准确率差的调整区间均跨零。
+- **任务交换结果：**完整描述、mean-only 与 difference-only 在两数据集、两个预算下均保留正向交换 margin 效应；两种 image-only 的交换效应为零。98-token 下 mean-only 与完整描述的分类 margin 差、交换效应差均未明确。均值本身也能承载有用的任务信息，不能把任务依赖只归于差异分量。
+- **预算直接比较：**探索性分析未建立“加入差异分量在 49 比 98 的收益更大”；上面的跨数据集复核支持各预算内的成分作用。加入均值分量的 98 相对 49 增益差在 Flowers 得到支持，Pets 未明确，详见汇总中的直接比较。
+- **对项目的影响：**这是从既有任务交换实验出发的正面延伸：从“模型会使用任务信息”推进到“哪些输入组成部分产生可测作用”。它补充了可学习性与几何分析的解释证据，下一步纳入保留数据确认与报告主线。
+- **证据：**[成分与交换汇总](../results/selector-ablations-v1/README.md)、[Pets 分类与交换图](../results/pets-selector-ablations-v1/README.md)、[Flowers 分类与交换图](../results/flowers-selector-ablations-v1/README.md)、[预算直接比较](../results/selector-ablations-v1/budget_component_interactions.json)。
+
 ## 如何持续更新
 
 - 有实质新发现时，更新相应条目或新增条目，并链接实验记录与原始结果。普通运行进度留在实验记录里。
@@ -176,3 +194,4 @@
 | 2026-10-27 | 新增 I9，并更新 I7–I8：Flowers 的两预算 margin 与 H2 支持、98-token 准确率收益，以及未复现的 Pets 预算符号模式 | [Flowers 外部验证](../results/flowers-selector-budgets-v1/README.md)、[预先固定的协议](flowers-targeted-validation.md) |
 | 2026-10-27 | 新增 I10–I11：L/14 两数据集复核 H2、分类效应的适用范围、依赖批量的真实加速和完整数值敏感性检查 | [跨模型与效率记录](experiments/2026-10-27-vitl-and-latency.md)、[汇总结果](../results/vitl-and-latency-v1/) |
 | 2026-10-28 | 新增 I12–I13：有限库潜力未建立额外留出预测收益；固定训练目标干预对条件化 margin 收益产生设置相关的正负变化 | [聚焦补强](../results/conditioning-objective-v1/README.md)、[运行记录](experiments/2026-10-28-conditioning-objective.md) |
+| 2026-10-29 | 新增 I14–I15：更宽图像基线改变条件化领先范围；均值与差异成分的分类和交换作用得到分别测量 | [两数据集消融](../results/selector-ablations-v1/README.md)、[固定协议](selector-component-ablations.md) |

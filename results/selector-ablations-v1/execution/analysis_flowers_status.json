@@ -1,0 +1,59 @@
+{
+  "phase": "analysis_flowers",
+  "status": "complete",
+  "started_utc": "2026-10-29T11:09:33.794170+00:00",
+  "pid": 1925228,
+  "code_commit": "7fcf01c946aae477a99347c6517f97e856c68228",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "stages": [
+    {
+      "name": "flowers_analysis",
+      "command": [
+        ".venv/bin/python",
+        "-u",
+        "scripts/analyze_selector_ablations.py",
+        "--dataset",
+        "flowers",
+        "--baseline",
+        "49=runs/flowers-selector-budget-49-eval-v1",
+        "--ablations",
+        "49=runs/flowers-selector-ablations-49-eval-v1",
+        "--baseline",
+        "98=runs/flowers-selector-budget-98-eval-v1",
+        "--ablations",
+        "98=runs/flowers-selector-ablations-98-eval-v1",
+        "--output",
+        "results/flowers-selector-ablations-v1",
+        "--skip-plots"
+      ],
+      "started_utc": "2026-10-29T11:09:33.797310+00:00",
+      "status": "complete",
+      "wall_seconds": 12.724644439003896,
+      "completed_utc": "2026-10-29T11:09:46.522143+00:00",
+      "exit_code": 0
+    },
+    {
+      "name": "flowers_audit",
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_selector_ablations.py",
+        "--summary",
+        "results/flowers-selector-ablations-v1/analysis.json",
+        "--output",
+        "results/flowers-selector-ablations-v1/scientific_audit.json"
+      ],
+      "started_utc": "2026-10-29T11:09:46.522770+00:00",
+      "status": "complete",
+      "wall_seconds": 14.887331214995356,
+      "completed_utc": "2026-10-29T11:10:01.410579+00:00",
+      "exit_code": 0
+    }
+  ],
+  "current_stage": null,
+  "completed_utc": "2026-10-29T11:10:01.411384+00:00"
+}
