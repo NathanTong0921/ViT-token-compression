@@ -49,6 +49,7 @@
 - [Pets 完整结果与图表](../pets-selector-ablations-v1/README.md)、[Flowers 完整结果与图表](../flowers-selector-ablations-v1/README.md)：绝对表现、全部种子、主比较、任务交换及逐例 CSV／NPZ。
 - [执行记录](../../docs/experiments/2026-10-29-selector-ablations.md)、[运行状态与测试日志](execution/)、[成本记录](experiment_costs.json)。独立原始得分重建通过，服务器相关测试共 173 项通过。
 - [GitHub Release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/selector-ablations-v1)：36 个新权重、四组原始预测、训练与采样记录。大文件同时保留在本地 `../artifacts/selector-ablations-v1/`，服务器保留原始运行目录。
+- [备份清单](artifact_inventory.json)：五份归档合计约 1.99 GB；已核对本地、服务器清单与 GitHub 文件，清理传输副本。
 - [恢复验证](github_recovery.json)：从 GitHub 重新下载模型归档，全部 36 个 selector 成功载入并执行小批量前向。该检查验证备份可恢复，不是新的分类实验。
 
 本轮使用既定开发图片及未见开发类别组合。训练条件与监督固定，不使用预留测试结果。所有原预算、原 KL、排名目标和跨模型实验记录继续保留。

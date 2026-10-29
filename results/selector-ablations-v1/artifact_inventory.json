@@ -1,0 +1,67 @@
+{
+  "release_tag": "selector-ablations-v1",
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/selector-ablations-v1",
+  "scientific_results_commit": "91050cff2c176ad5893b0d1217bef014cad9395e",
+  "assets": [
+    {
+      "name": "ablations-flowers-49-eval-v1.zip",
+      "bytes": 407359247,
+      "sha256": "ca84e178c139476503200f36e72c4489607820a023d0ac274f6bc592f5d3f368",
+      "members": 4,
+      "asset_id": 688322832,
+      "state": "uploaded",
+      "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/selector-ablations-v1/ablations-flowers-49-eval-v1.zip",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/selector-ablations-v1/ablations-flowers-49-eval-v1.zip",
+      "server_run_evidence": "Original run directories retained under /data2/zhao.tong/experiments/runs"
+    },
+    {
+      "name": "ablations-flowers-98-eval-v1.zip",
+      "bytes": 408236568,
+      "sha256": "77a252505bbf14ada62bf0e37380ab4c752702e902e66f9fc1b7c6c56e55d3eb",
+      "members": 4,
+      "asset_id": 688328971,
+      "state": "uploaded",
+      "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/selector-ablations-v1/ablations-flowers-98-eval-v1.zip",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/selector-ablations-v1/ablations-flowers-98-eval-v1.zip",
+      "server_run_evidence": "Original run directories retained under /data2/zhao.tong/experiments/runs"
+    },
+    {
+      "name": "ablations-models-and-records-v1.zip",
+      "bytes": 50621905,
+      "sha256": "9eb18b32a7f477909a932ec819676036192e226b613584e956aa28394ee98e66",
+      "members": 83,
+      "asset_id": 688297391,
+      "state": "uploaded",
+      "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/selector-ablations-v1/ablations-models-and-records-v1.zip",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/selector-ablations-v1/ablations-models-and-records-v1.zip",
+      "server_run_evidence": "Original run directories retained under /data2/zhao.tong/experiments/runs"
+    },
+    {
+      "name": "ablations-pets-49-eval-v1.zip",
+      "bytes": 561138999,
+      "sha256": "516d804bbbc1b5fba9bce4871f5afa28b68244c3f82b2ee1c02e5eb1d70316cb",
+      "members": 4,
+      "asset_id": 688267735,
+      "state": "uploaded",
+      "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/selector-ablations-v1/ablations-pets-49-eval-v1.zip",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/selector-ablations-v1/ablations-pets-49-eval-v1.zip",
+      "server_run_evidence": "Original run directories retained under /data2/zhao.tong/experiments/runs"
+    },
+    {
+      "name": "ablations-pets-98-eval-v1.zip",
+      "bytes": 562936959,
+      "sha256": "4dd77995561b00eec655443efab84b146234d1823bad7e57bb16484a797da152",
+      "members": 4,
+      "asset_id": 688274371,
+      "state": "uploaded",
+      "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/selector-ablations-v1/ablations-pets-98-eval-v1.zip",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/selector-ablations-v1/ablations-pets-98-eval-v1.zip",
+      "server_run_evidence": "Original run directories retained under /data2/zhao.tong/experiments/runs"
+    }
+  ],
+  "total_archive_bytes": 1990293678,
+  "verification": "Each local archive matches the server manifest and passes ZIP CRC. GitHub reports matching size and digest for all assets.",
+  "recovery": "All 36 new selectors freshly downloaded from GitHub, strictly loaded and executed on synthetic inputs; see github_recovery.json.",
+  "reused_prior_evidence": "Original KL checkpoints, frozen prefix features and budget-specific teacher supervision remain in prior milestone releases.",
+  "transfer_cleanup": "Verified server ZIP transfer copies and earlier local code-sync bundles removed; retained local scientific archives and original server runs preserved."
+}
