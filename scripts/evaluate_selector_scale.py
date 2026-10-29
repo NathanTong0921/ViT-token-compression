@@ -14,6 +14,42 @@ import numpy as np
 from evaluate_selectors import binary_outcomes, read_tasks, utility_correlations, write_rows
 
 
+SELECTOR_METHODS = ("conditioned", "image_only", "mean_only", "difference_only", "image_only_wide")
+TASK_INDEPENDENT_METHODS = ("full_model", "attention", "image_only", "image_only_wide", "random")
+
+
+def evaluation_groups(config, random_only=False):
+    """Choose fixed saved models and optional references without rerunning old arms."""
+    arms = config.get("selector_arms", ["conditioned", "image_only"])
+    if not arms or len(set(arms)) != len(arms) or any(arm not in SELECTOR_METHODS for arm in arms):
+        raise ValueError("selector_arms must name distinct supported selector variants")
+    groups = []
+    if not random_only:
+        if config.get("include_references", True):
+            groups.append(("references", [(-1, x) for x in ("full_model", "attention", "label_informed_teacher")]))
+        groups += [(coverage, [(seed, arm) for seed in config["training_seeds"] for arm in arms])
+                   for coverage in config["coverages"]]
+    random_seeds = config.get("random_seeds", [2055, 2056, 2057] if random_only else [])
+    if random_seeds:
+        groups.append(("random", [(seed, "random") for seed in random_seeds]))
+    return groups, random_seeds
+
+
+def selector_from_checkpoint(checkpoint, descriptor, method, token_dim, device):
+    """Restore the recorded variant; legacy checkpoints retain their original arm."""
+    from token_compression.selector import make_selector
+
+    variant = checkpoint.get("selector_variant")
+    if variant is None:
+        variant = "conditioned" if checkpoint["conditioned"] else "image_only"
+    if variant != method:
+        raise ValueError(f"Checkpoint variant {variant} does not match requested method {method}")
+    model = make_selector(descriptor, variant, hidden_dim=checkpoint["hidden_dim"],
+                          token_dim=token_dim).to(device)
+    model.load_state_dict(checkpoint["state_dict"])
+    return model.eval().requires_grad_(False)
+
+
 def evaluation_examples(image_ids, labels, train_tasks, val_tasks):
     """Enumerate complete tasks without assuming equal image counts by class."""
     labels = np.asarray(labels)
@@ -44,7 +80,7 @@ def run(config, models_dir, output, random_only=False):
     import torch
 
     from token_compression.pruning import SingleStagePruner
-    from token_compression.selector import TokenSelector, shared_descriptor
+    from token_compression.selector import shared_descriptor
 
     started = datetime.now(timezone.utc).isoformat()
     before_run = time.perf_counter()
@@ -90,16 +126,13 @@ def run(config, models_dir, output, random_only=False):
     def predict(seed, method, coverage):
         before = time.perf_counter()
         model, checkpoint_path = None, None
-        if method in ("conditioned", "image_only"):
+        if method in SELECTOR_METHODS:
             checkpoint_path = models_dir / coverage / f"seed_{seed}" / f"{method}.pt"
             checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
-            model = TokenSelector(descriptor, conditioned=method == "conditioned",
-                                  hidden_dim=checkpoint["hidden_dim"], token_dim=prefixes.shape[-1]).to(device)
-            model.load_state_dict(checkpoint["state_dict"])
-            model.eval().requires_grad_(False)
+            model = selector_from_checkpoint(checkpoint, descriptor, method, prefixes.shape[-1], device)
         # These methods are task-independent: run each image once and re-score
         # its identical feature vector for every relevant candidate pair.
-        unique = method in ("full_model", "attention", "image_only", "random")
+        unique = method in TASK_INDEPENDENT_METHODS
         image_indices = np.arange(len(ids)) if unique else ix
         n = len(image_indices)
         features = np.empty((n, text.shape[1]), np.float32)
@@ -171,14 +204,7 @@ def run(config, models_dir, output, random_only=False):
         return arrays, cost
 
     costs = []
-    groups = []
-    if not random_only:
-        groups = [("references", [(-1, x) for x in ("full_model", "attention", "label_informed_teacher")])]
-        groups += [(c, [(s, m) for s in config["training_seeds"] for m in ("conditioned", "image_only")])
-                   for c in config["coverages"]]
-    random_seeds = config.get("random_seeds", [2055, 2056, 2057] if random_only else [])
-    if random_seeds:
-        groups.append(("random", [(s, "random") for s in random_seeds]))
+    groups, random_seeds = evaluation_groups(config, random_only)
     with torch.inference_mode():
         for coverage, jobs in groups:
             folder = output / coverage
@@ -212,6 +238,8 @@ def run(config, models_dir, output, random_only=False):
             del parts, records, packed
     summary = {"started_utc": started, "code_commit": commit, "config": config,
                "models_dir": str(models_dir), "random_only": random_only,
+               "selector_arms": config.get("selector_arms", ["conditioned", "image_only"]) if not random_only else [],
+               "include_references": config.get("include_references", True) and not random_only,
                "random_seeds": random_seeds, "image_count": len(ids), "old_panel_image_count": len(old_ids),
                "examples_per_method": count, "cost": {"methods": costs,
                     "total_wall_seconds": time.perf_counter() - before_run,
@@ -220,9 +248,12 @@ def run(config, models_dir, output, random_only=False):
                "scope": "All development images; seen training pairs and unseen validation pairs. Official test remains unused.",
                "schema": {"row_alignment": "CSV row_id equals per-row NPZ index within each coverage folder.",
                           "image_features": f"Normalized full {text.shape[1]}-dimensional float32 CLIP output, retained for later geometric analysis.",
-                          "references": "Full model, attention and label-informed teacher stored once globally; labels only enter the offline teacher.",
+                          "references": ("Full model, attention and label-informed teacher stored once globally; labels only enter the offline teacher."
+                                         if config.get("include_references", True) and not random_only
+                                         else "Reference predictions omitted in this run; previously saved reference results are reused."),
                           "task_class_weight": "Within each task split, each task has equal weight and each side contributes one half.",
-                          "image_only": "Candidate classes are ignored by this arm. One image forward is exactly reused across candidate pairs.",
+                          "image_only": "Both image_only and image_only_wide ignore candidate classes. One image forward is exactly reused across candidate pairs.",
+                          "descriptor_ablations": "mean_only and difference_only run separately for every image/task; their missing descriptor component is fixed by the training prior saved in the checkpoint.",
                           "random": "Each random seed gives one fixed ordering per image; same image order and seed give nested retained sets across budgets. Seeds index random masks, not trained models."},
                "cost_scope": "Cached-prefix evaluation with fixed padded suffix batches; includes host transfers, excludes prefix extraction. These are experiment costs, not deployment latency."}
     (output / "eval_summary.json").write_text(json.dumps(summary, indent=2, allow_nan=False) + "\n")

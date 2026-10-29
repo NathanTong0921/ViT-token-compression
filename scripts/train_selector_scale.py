@@ -13,7 +13,7 @@ import numpy as np
 import torch
 from torch.nn import functional as F
 
-from token_compression.selector import (TokenSelector, build_examples,
+from token_compression.selector import (TokenSelector, make_selector, build_examples,
                                         shared_descriptor, utility_targets)
 from token_compression.selector_objectives import topk_rank_losses, teacher_topk_diagnostics
 from token_compression.selector_scale import (balanced_example_weights,
@@ -170,6 +170,7 @@ def train(config, output):
     cache, old_cache = Path(config["cache_dir"]), Path(config["source_cache_dir"])
     batch_size, temperature = config["batch_size"], config["temperature"]
     objective = config.get("objective", "kl")
+    arms = config.get("selector_arms", ["conditioned", "image_only"])
     if objective not in ("kl", "topk_rank"):
         raise ValueError(f"Unknown selector objective: {objective}")
     # The legacy KL path does not require a retention budget during training.
@@ -209,8 +210,13 @@ def train(config, output):
         template = TokenSelector(prior, conditioned=True, hidden_dim=config["hidden_dim"],
                                  token_dim=token_dim).to(device)
         initial_state = {key: value.detach().clone() for key, value in template.state_dict().items()}
-        parameter_count = sum(parameter.numel() for parameter in template.parameters())
         del template
+        wide_initial_state = None
+        if "image_only_wide" in arms:
+            torch.manual_seed(seed)
+            template = make_selector(prior, "image_only_wide", config["wide_hidden_dim"], token_dim).to(device)
+            wide_initial_state = {key: value.detach().clone() for key, value in template.state_dict().items()}
+            del template
         stream = balanced_training_stream(data["train"]["pairs_array"], steps * batch_size, seed)
         side_counts = np.bincount(2 * stream["pair_indices"] + stream["sides"])
         stream_record = {"seed": seed, "total_draws": steps * batch_size,
@@ -236,12 +242,13 @@ def train(config, output):
                 "image_draw_counts": {str(i): int(n) for i, n in zip(data["train"]["image_ids"][allowed], image_counts[allowed])}}
             seed_output = output / coverage / f"seed_{seed}"
             seed_output.mkdir(parents=True, exist_ok=True)
-            for arm, conditioned in (("conditioned", True), ("image_only", False)):
-                model = TokenSelector(prior, conditioned=conditioned, hidden_dim=config["hidden_dim"],
-                                      token_dim=token_dim).to(device)
-                model.load_state_dict(initial_state)
-                assert all(torch.equal(value, initial_state[key]) for key, value in model.state_dict().items())
-                assert sum(parameter.numel() for parameter in model.parameters()) == parameter_count
+            for arm in arms:
+                hidden_dim = config["wide_hidden_dim"] if arm == "image_only_wide" else config["hidden_dim"]
+                model = make_selector(prior, arm, hidden_dim, token_dim).to(device)
+                arm_initial_state = wide_initial_state if arm == "image_only_wide" else initial_state
+                model.load_state_dict(arm_initial_state)
+                assert all(torch.equal(value, arm_initial_state[key]) for key, value in model.state_dict().items())
+                parameter_count = sum(parameter.numel() for parameter in model.parameters())
                 optimizer = torch.optim.AdamW(model.parameters(), lr=config["learning_rate"],
                                               weight_decay=config["weight_decay"])
                 before = time.perf_counter()
@@ -314,7 +321,8 @@ def train(config, output):
                 synchronize(device)
                 final_evaluation_seconds = time.perf_counter() - before
                 checkpoint = {"state_dict": {key: value.detach().cpu() for key, value in model.state_dict().items()},
-                              "hidden_dim": config["hidden_dim"], "conditioned": conditioned,
+                              "hidden_dim": hidden_dim, "conditioned": model.conditioned,
+                              "selector_variant": arm,
                               "token_dim": token_dim, "text_dim": data["train"]["text"].shape[-1],
                               "num_patches": data["train"]["tokens"].shape[1] - 1,
                               "seed": seed, "step": steps, "coverage": coverage, "parameter_count": parameter_count,
@@ -330,11 +338,16 @@ def train(config, output):
                                 "training_seconds": training_seconds, "validation_seconds": validation_seconds,
                                 "initial_evaluation_seconds": initial_evaluation_seconds,
                                 "final_train_evaluation_seconds": final_evaluation_seconds,
-                                "initial_state_exactly_matches_shared_seed_state": True,
+                                "initial_state_exactly_matches_shared_seed_state": arm != "image_only_wide",
+                                "initial_state_exactly_matches_own_architecture_seed_state": True,
+                                "initialization_group": "image_only_wide" if arm == "image_only_wide" else "original_descriptor_network",
                                 "task_class_quantile_stream_reused_between_all_four_runs": True,
                                 "image_draws_reused_between_arms": True,
                                 "clip_parameters_in_optimizer": 0,
                                 "checkpoint": str(Path(coverage) / f"seed_{seed}" / f"{arm}.pt")})
+                if "selector_arms" in config:
+                    results[-1].pop("task_class_quantile_stream_reused_between_all_four_runs")
+                    results[-1]["task_class_quantile_stream_reused_between_arms"] = True
                 if objective == "topk_rank":
                     results[-1].update(
                         objective=objective,
@@ -382,6 +395,11 @@ def train(config, output):
             curve_train_kl="Common KL and top-k diagnostics are evaluated on full balanced train/validation panels at initialization and the final step only; intervening CSV values are empty.",
             initial_gradient_diagnostics="initial_gradient_diagnostics.json",
             initial_gradient_cost="Included in initial_evaluation_seconds; no rescaling or hyperparameter adjustment was performed.")
+    if "selector_arms" in config:
+        summary.update(
+            run_type="fixed_update_selector_component_ablations", selector_arms=arms,
+            capacity_comparison="Mean-only and difference-only retain the original network and its exact per-seed initial state; the missing raw descriptor half uses the training-pair mean before context normalization. The image-only-wide arm reallocates parameters to a wider image network, independently initialized with the same seed; its tensor shapes and parameter count differ.",
+            sampling_policy="The same balanced task/class/image stream is reused by every selector arm. Existing full-coverage KL streams are unchanged.")
     (output / "training_summary.json").write_text(json.dumps(summary, indent=2, allow_nan=False) + "\n")
     print(json.dumps({"wall_seconds": summary["wall_seconds"], "model_runs": len(results),
                       "parameter_count": results[0]["parameter_count"]}), flush=True)

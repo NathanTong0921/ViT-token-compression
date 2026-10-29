@@ -24,9 +24,13 @@ class TokenSelector(nn.Module):
     used to form training targets, never as selector inputs.
     """
 
-    def __init__(self, shared_descriptor, conditioned, hidden_dim=128, token_dim=768):
+    def __init__(self, shared_descriptor, conditioned, hidden_dim=128, token_dim=768,
+                 descriptor_mode=None):
         super().__init__()
         self.conditioned = bool(conditioned)
+        self.descriptor_mode = descriptor_mode or ("full" if conditioned else "fixed")
+        if self.descriptor_mode not in ("full", "fixed", "mean_only", "difference_only"):
+            raise ValueError(f"Unknown descriptor mode: {self.descriptor_mode}")
         self.hidden_dim = hidden_dim
         self.token_dim = int(token_dim)
         self.context_dim = shared_descriptor.numel()
@@ -47,10 +51,51 @@ class TokenSelector(nn.Module):
         cls = tokens[:, :1].expand(-1, patches.shape[1], -1)
         if self.conditioned:
             context = pair_descriptor(candidate_text)
+            half = self.context_dim // 2
+            if self.descriptor_mode == "mean_only":
+                context = torch.cat((context[:, :half], self.shared_descriptor[half:].expand(len(tokens), -1)), dim=-1)
+            elif self.descriptor_mode == "difference_only":
+                context = torch.cat((self.shared_descriptor[:half].expand(len(tokens), -1), context[:, half:]), dim=-1)
         else:
             context = self.shared_descriptor.unsqueeze(0).expand(len(tokens), -1)
         context = self.context_norm(context).unsqueeze(1).expand(-1, patches.shape[1], -1)
         return self.scorer(torch.cat((patches, cls, context), dim=-1)).squeeze(-1)
+
+
+class ImageOnlyWideSelector(nn.Module):
+    """Allocate the selector budget to patch/CLS processing without a text branch."""
+
+    def __init__(self, hidden_dim=199, token_dim=768):
+        super().__init__()
+        self.conditioned = False
+        self.hidden_dim = hidden_dim
+        self.token_dim = int(token_dim)
+        self.image_norm = nn.LayerNorm(self.token_dim)
+        self.scorer = nn.Sequential(
+            nn.Linear(2 * self.token_dim, hidden_dim),
+            nn.GELU(),
+            nn.Linear(hidden_dim, hidden_dim),
+            nn.GELU(),
+            nn.Linear(hidden_dim, 1),
+        )
+
+    def forward(self, tokens, candidate_text):
+        tokens = self.image_norm(tokens.float())
+        patches = tokens[:, 1:]
+        cls = tokens[:, :1].expand(-1, patches.shape[1], -1)
+        return self.scorer(torch.cat((patches, cls), dim=-1)).squeeze(-1)
+
+
+def make_selector(shared_descriptor, variant, hidden_dim=128, token_dim=768):
+    """Construct a named arm, with unchanged state keys for the original arms."""
+    if variant == "image_only_wide":
+        return ImageOnlyWideSelector(hidden_dim=hidden_dim, token_dim=token_dim)
+    modes = {"conditioned": "full", "image_only": "fixed",
+             "mean_only": "mean_only", "difference_only": "difference_only"}
+    if variant not in modes:
+        raise ValueError(f"Unknown selector variant: {variant}")
+    return TokenSelector(shared_descriptor, conditioned=variant != "image_only",
+                         hidden_dim=hidden_dim, token_dim=token_dim, descriptor_mode=modes[variant])
 
 
 def build_examples(labels, class_pairs):

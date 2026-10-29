@@ -1,0 +1,50 @@
+{
+  "cache_dir": "runs/flowers-selector-budget-49-supervision-v1",
+  "model": "ViT-B/16",
+  "model_cache": "cache/clip",
+  "data_root": "data/raw/flowers102",
+  "manifest_dir": "data/splits/flowers-v1",
+  "baseline_dir": "runs/flowers-features-v1",
+  "prompt_template": "a photo of a {class_name}, a type of flower.",
+  "balance_seed": 2028,
+  "seed": 2026,
+  "device": "cuda:0",
+  "prune_after": 6,
+  "keep_patch_tokens": 49,
+  "probe_count": 512,
+  "mask_seed": 2031,
+  "ridge": 0.01,
+  "identity_atol": 1e-06,
+  "image_batch_size": 64,
+  "teacher_batch_size": 64,
+  "num_workers": 4,
+  "hidden_dim": 128,
+  "batch_size": 128,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "temperature": 1.0,
+  "source_cache_dir": "runs/flowers-features-v1",
+  "training_steps": 3978,
+  "checkpoint_interval": 153,
+  "coverages": [
+    "full"
+  ],
+  "bootstrap_seed": 2052,
+  "bootstrap_replicates": 2000,
+  "experiment_name": "flowers_selector_ablations_49_v1",
+  "feature_cache_dir": "runs/flowers-features-v1",
+  "random_seeds": [],
+  "objective": "kl",
+  "selector_arms": [
+    "mean_only",
+    "difference_only",
+    "image_only_wide"
+  ],
+  "wide_hidden_dim": 199,
+  "include_references": false
+}
