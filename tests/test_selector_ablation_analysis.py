@@ -1,4 +1,3 @@
-import copy
 import importlib.util
 from pathlib import Path
 import sys
@@ -120,6 +119,24 @@ class AblationAnalysisTest(unittest.TestCase):
             raw["image_only_wide"][field][0, 0, 0] += .1 if field == "scores" else 1
             with self.subTest(field=field), self.assertRaises(AssertionError):
                 analysis.analyze_exchange(base, raw, text, [1, 2, 3], 2, 20, 7)
+
+    def test_exchange_weights_images_equally_with_unequal_pair_counts(self):
+        base = [{"image_id": image, "task_id": f"0{other}", "class_id": 0,
+                 "class_a": 0, "class_b": other}
+                for image, others in (("a", (1, 2, 3)), ("b", (1, 2))) for other in others]
+        raw = {}
+        for method in analysis.METHODS:
+            scores = np.ones((3, len(base), 4)) * .9
+            scores[:, :, 0] = 1
+            for i, row in enumerate(base):
+                if method not in ("image_only", "image_only_wide"):
+                    scores[:, i, row["class_b"]] -= .6 if row["image_id"] == "a" else .2
+            raw[method] = {"scores": scores, "positions": np.tile([0, 1, -1, -1], (3, len(base), 1)),
+                           "source_rows": np.arange(3 * len(base)).reshape(3, len(base))}
+        result, cases, _ = analysis.analyze_exchange(base, raw, np.eye(4), (1, 2, 3), 2, 50, 7)
+        np.testing.assert_allclose(cases["image_pair_weight"], [1 / 6, 1 / 6, 1 / 6, 1 / 2])
+        full = next(row for row in result["table"] if row["method"] == "conditioned")
+        self.assertAlmostEqual(full["own_minus_swapped"]["margin"]["mean"], .4 / np.sqrt(2))
 
     def test_binary_ties_choose_lower_candidate(self):
         scores = np.ones((1, 2, 3))
