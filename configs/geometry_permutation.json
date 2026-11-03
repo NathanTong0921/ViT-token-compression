@@ -1,0 +1,77 @@
+{
+  "protocol": "docs/geometry-permutation.md",
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "draws": 1999,
+  "permutation_seed": 2094,
+  "family_size": 7,
+  "final_test_used": false,
+  "settings": [
+    {
+      "id": "pets_b16_49",
+      "dataset": "pets",
+      "model": "ViT-B/16",
+      "keep_patch_tokens": 49,
+      "source": "runs/pets-selector-scale-eval-v1",
+      "manifest_dir": "data/splits/pets-v1",
+      "geometry_source": "results/pets-selector-budgets-v1/geometry"
+    },
+    {
+      "id": "pets_b16_98",
+      "dataset": "pets",
+      "model": "ViT-B/16",
+      "keep_patch_tokens": 98,
+      "source": "runs/pets-selector-budget-98-eval-v1",
+      "manifest_dir": "data/splits/pets-v1",
+      "geometry_source": "results/pets-selector-budgets-v1/geometry"
+    },
+    {
+      "id": "pets_b16_147",
+      "dataset": "pets",
+      "model": "ViT-B/16",
+      "keep_patch_tokens": 147,
+      "source": "runs/pets-selector-budget-147-eval-v1",
+      "manifest_dir": "data/splits/pets-v1",
+      "geometry_source": "results/pets-selector-budgets-v1/geometry"
+    },
+    {
+      "id": "flowers_b16_49",
+      "dataset": "flowers",
+      "model": "ViT-B/16",
+      "keep_patch_tokens": 49,
+      "source": "runs/flowers-selector-budget-49-eval-v1",
+      "manifest_dir": "data/splits/flowers-v1",
+      "geometry_source": "results/flowers-selector-budgets-v1/geometry"
+    },
+    {
+      "id": "flowers_b16_98",
+      "dataset": "flowers",
+      "model": "ViT-B/16",
+      "keep_patch_tokens": 98,
+      "source": "runs/flowers-selector-budget-98-eval-v1",
+      "manifest_dir": "data/splits/flowers-v1",
+      "geometry_source": "results/flowers-selector-budgets-v1/geometry"
+    },
+    {
+      "id": "pets_l14_128",
+      "dataset": "pets",
+      "model": "ViT-L/14",
+      "keep_patch_tokens": 128,
+      "source": "runs/pets-vitl128-eval-v1",
+      "manifest_dir": "data/splits/pets-v1",
+      "geometry_source": "results/pets-vitl128-v1/geometry"
+    },
+    {
+      "id": "flowers_l14_128",
+      "dataset": "flowers",
+      "model": "ViT-L/14",
+      "keep_patch_tokens": 128,
+      "source": "runs/flowers-vitl128-eval-v1",
+      "manifest_dir": "data/splits/flowers-v1",
+      "geometry_source": "results/flowers-vitl128-v1/geometry"
+    }
+  ]
+}
