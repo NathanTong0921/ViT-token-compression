@@ -1,0 +1,55 @@
+{
+  "release_id": 432759535,
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-3d7c976781ea8233c3e1",
+  "release_is_draft": true,
+  "assets": [
+    {
+      "name": "evidence-conflict-v1.zip",
+      "bytes": 18108279,
+      "asset_id": 705781262,
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-3d7c976781ea8233c3e1/evidence-conflict-v1.zip",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/parallel-research-pilots-v1/evidence-conflict-v1.zip",
+      "files": 179,
+      "local_zip_integrity": "passed",
+      "github_content_digest_matches_local": true
+    },
+    {
+      "name": "core-protection-v1.zip",
+      "bytes": 908703121,
+      "asset_id": 705781229,
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-3d7c976781ea8233c3e1/core-protection-v1.zip",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/parallel-research-pilots-v1/core-protection-v1.zip",
+      "files": 68,
+      "local_zip_integrity": "passed",
+      "github_content_digest_matches_local": true
+    },
+    {
+      "name": "semantic-identity-v1.zip",
+      "bytes": 699473213,
+      "asset_id": 705781261,
+      "download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-3d7c976781ea8233c3e1/semantic-identity-v1.zip",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/parallel-research-pilots-v1/semantic-identity-v1.zip",
+      "files": 158,
+      "local_zip_integrity": "passed",
+      "github_content_digest_matches_local": true
+    }
+  ],
+  "restore_verification": {
+    "asset_id": 705781261,
+    "restore_method": "Authenticated GitHub asset, HTTP range reads of ZIP directory and selected members; member CRCs verified by zipfile",
+    "checkpoint": "runs/flowers-semantic-identity-v1/known_classes/seed_2041_real_text.pt",
+    "model_parameters": 348033,
+    "restored_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "accuracy_percent": 97.11601307189544,
+    "geometric_margin": 0.10739918728100462,
+    "summary_reproduced": true,
+    "bytes_downloaded": 24522204,
+    "requests": 21
+  },
+  "server_raw_runs_retained": true,
+  "recomputed_selector_prefixes_not_duplicated": true
+}
