@@ -26,7 +26,7 @@ The present outcome is
 
 It removes the explicit displacement-magnitude and angle factors. The primary statistic is the existing weighted regression coefficient on `theta_ab / 10 degrees`, controlling for an intercept and the symmetric quadratic basis of the two uncompressed signed geometric margins: min, max, min², min×max, max². Give each image equal total weight and each pair within that image equal weight. Reproduce the previous normalized-alignment point estimate under the identity assignment before computing the new reference distribution.
 
-Secondary descriptive statistics are the same coefficient with image fixed effects, and the image-equal mean alignment. Retain observed per-seed versions of these statistics, but the primary reference analysis uses the seed-mean feature displacement, consistently with the existing H2 diagnostic.
+Secondary descriptive statistics are the same coefficient with image fixed effects, and the image-equal mean alignment. Retain observed per-seed versions of these statistics, but the primary reference analysis uses the seed-mean feature displacement, consistently with the existing H2 diagnostic. For these observed-only per-seed summaries, alignment is defined only on pairs with nonzero displacement and direction difference (threshold 1e-12); report excluded pair identities/counts and recompute image-equal weights on the valid pairs. No per-seed permutation claims use this reduced support.
 
 ## Reference assignments
 
@@ -34,7 +34,9 @@ Draw 1,999 independent uniform task permutations for each image, using master se
 
 Each draw retains every saved selection-derived feature exactly once within its image. Because the task-pair graph is complete, it preserves the multiset of all within-image feature-displacement lengths, while changing their correspondence with the task directions. If a lookup stores only unordered feature pairs, reverse its sign whenever the permuted ordered pair reverses.
 
-Existing geometry records show no zero or near-zero mean-displacement pairs at 1e-12 or 1e-6 in any setting. Verify that every eligible feature and task-direction difference has norm greater than 1e-12. If this fails, stop and document the input discrepancy before interpreting results; do not introduce an outcome-dependent exclusion rule. Whole-graph permutations then preserve the valid support and permit fixed regression weights/design.
+Existing geometry records show no zero or near-zero mean-displacement pairs at 1e-12 or 1e-6 in any setting. Verify that every eligible seed-mean feature and task-direction difference has norm greater than 1e-12. If this fails, stop and document the input discrepancy before interpreting results; do not introduce an outcome-dependent exclusion rule. Whole-graph permutations then preserve the valid support and permit fixed regression weights/design.
+
+Input-stage clarification, 2026-11-03, before any permutation outcomes: the first extraction stopped while preparing an auxiliary seed summary. The existing Pets49 records contain one zero-displacement pair for seed 2042 (image `havanese_151`); all seed-mean pairs are valid. The observed-only per-seed rule above follows the existing normalized-alignment definition. The seven primary populations, statistics and reference permutations are unchanged; preserve the stopped input-stage log.
 
 ## Reporting
 

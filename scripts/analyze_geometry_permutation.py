@@ -18,6 +18,9 @@ import numpy as np
 from token_compression.geometry_permutation import (
     STATISTIC_NAMES, prepare_image, prepare_statistics, run_permutations,
 )
+from token_compression.selector_geometry import (
+    _fit, _scaled_design, demean_by_image, difficulty_features, image_weights,
+)
 
 
 def write_json(path, value):
@@ -173,6 +176,52 @@ def observed_pair_cases(panel, images, budget):
     return {key: np.concatenate([part[key] for part in parts]) for key in parts[0]}
 
 
+def per_seed_statistics(panel, cases):
+    """Auxiliary seed diagnostics use each seed's defined-alignment support.
+
+    A single seed can select identical tokens for two tasks even when the
+    seed-mean graph has nonzero displacement. Only this descriptive per-seed
+    fit omits such undefined pairs and recomputes its image-equal weights.
+    """
+    lookup = {key: i for i, key in enumerate(zip(panel["image_ids"], panel["task_ids"]))}
+    row_a, row_b = [np.asarray([lookup[key] for key in zip(cases["image_ids"], cases[field])])
+                   for field in ("task_a", "task_b")]
+    direction = panel["task_directions"][row_a] - panel["task_directions"][row_b]
+    norm_direction = np.linalg.norm(direction, axis=1)
+    features = np.column_stack([difficulty_features(cases["base_margin_a"], cases["base_margin_b"]),
+                                cases["angle_degrees"] / 10.])
+    results = []
+    for index, seed in enumerate(panel["training_seeds"]):
+        vectors = panel["seed_features"][index].astype(np.float64)
+        displacement = vectors[row_a] - vectors[row_b]
+        norm_displacement = np.linalg.norm(displacement, axis=1)
+        valid = (norm_displacement > 1e-12) & (norm_direction > 1e-12)
+        alignment = np.einsum("ij,ij->i", displacement[valid], direction[valid])
+        alignment /= norm_displacement[valid] * norm_direction[valid]
+        ids = cases["image_ids"][valid]
+        weights = image_weights(ids)
+        slopes = []
+        for fixed in (False, True):
+            x, target = features[valid], alignment
+            if fixed:
+                x, target = demean_by_image(x, ids), demean_by_image(target, ids)
+            design, (_, scale) = _scaled_design(x, weights, intercept=not fixed)
+            coefficient, _, _ = _fit(design, target, weights)
+            slopes.append(float(coefficient[-1] / scale[-1]))
+        results.append({
+            "training_seed": int(seed),
+            "difficulty_adjusted_slope": slopes[0], "image_fixed_effects_slope": slopes[1],
+            "mean_alignment": float(weights @ alignment),
+            "total_pair_count": len(valid), "eligible_pair_count": int(valid.sum()),
+            "excluded_pair_count": int((~valid).sum()), "eligible_image_count": len(np.unique(ids)),
+            "excluded_pairs": [{"image_id": str(cases["image_ids"][i]),
+                                "task_a": str(cases["task_a"][i]), "task_b": str(cases["task_b"][i])}
+                               for i in np.flatnonzero(~valid)],
+            "minimum_displacement_norm": 1e-12, "minimum_direction_norm": 1e-12,
+        })
+    return results
+
+
 def audit_existing_geometry(setting, cases, observed, statistics):
     root = Path(setting["geometry_source"])
     budget = str(setting["keep_patch_tokens"])
@@ -229,6 +278,7 @@ def run(config, output, panel_root, from_panels=False, prepare_only=False):
         "interpretation": "Exploratory within-image assignment reference, conditional on saved feature vectors, task directions, development panel and three fixed training seeds.",
         "multiplicity": "One-sided upper-tail reference probability with Bonferroni correction across all seven primary settings. Secondary statistics are descriptive.",
         "seed_aggregation": "Average normalized feature vectors in float64 without renormalization; calculate alignment after averaging.",
+        "per_seed_diagnostics": "Descriptive observed statistics use each seed's nonzero-displacement pairs, with image-equal weights and both regression fits recomputed on that support; excluded pair identities are recorded. Primary seed-mean support and permutation graphs are unchanged.",
         "weighting": "Equal total weight per image; equal weight per unordered task pair within image.",
         "settings": {},
     }
@@ -258,11 +308,7 @@ def run(config, output, panel_root, from_panels=False, prepare_only=False):
         observed = statistics.evaluate([image.alignment() for image in images])
         cases = observed_pair_cases(panel, images, setting["keep_patch_tokens"])
         audit = audit_existing_geometry(setting, cases, observed, statistics)
-        per_seed = []
-        for index, seed in enumerate(seeds):
-            seed_images = panel_images(panel, setting, seed_index=index)
-            values = statistics.evaluate([image.alignment() for image in seed_images])
-            per_seed.append({"training_seed": seed, **dict(zip(STATISTIC_NAMES, values.tolist()))})
+        per_seed = per_seed_statistics(panel, cases)
         folder = output / name
         folder.mkdir(exist_ok=True)
         write_cases(folder / "observed_pair_cases", cases)

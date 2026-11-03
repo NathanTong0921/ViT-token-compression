@@ -146,6 +146,46 @@ class GeometryPermutationIOTests(unittest.TestCase):
             with self.assertRaisesRegex(AssertionError, "outside the development manifest"):
                 runner.build_panel(setting, seeds)
 
+    def test_one_undefined_seed_pair_does_not_change_primary_mean_graph(self):
+        with tempfile.TemporaryDirectory() as directory:
+            setting, seeds = fixture(Path(directory))
+            panel, _ = runner.build_panel(setting, seeds)
+            # Exactly one task pair has identical vectors in the middle seed.
+            # Other seeds still provide a valid complete seed-mean graph.
+            panel["seed_features"][1, 1] = panel["seed_features"][1, 0]
+            images = runner.panel_images(panel, setting)
+            cases = runner.observed_pair_cases(panel, images, 2)
+            self.assertEqual(len(cases["image_ids"]), 108)
+            self.assertTrue(np.all(cases["displacement_norm"] > 1e-12))
+            diagnostics = runner.per_seed_statistics(panel, cases)
+            self.assertEqual([row["excluded_pair_count"] for row in diagnostics], [0, 1, 0])
+            middle = diagnostics[1]
+            self.assertEqual(middle["total_pair_count"], 108)
+            self.assertEqual(middle["eligible_pair_count"], 107)
+            self.assertEqual(middle["eligible_image_count"], 36)
+            self.assertEqual(middle["excluded_pairs"], [{"image_id": "image_000", "task_a": "0_1", "task_b": "0_2"}])
+            # Reconstruct the seed target independently and compare the original
+            # regression routine on exactly the valid support.
+            lookup = dict(zip(zip(panel["image_ids"], panel["task_ids"]), range(108)))
+            targets, valid = [], []
+            for image, a, b in zip(cases["image_ids"], cases["task_a"], cases["task_b"]):
+                i, j = lookup[image, a], lookup[image, b]
+                delta = panel["seed_features"][1, i].astype(float) - panel["seed_features"][1, j]
+                direction = panel["task_directions"][i] - panel["task_directions"][j]
+                keep = np.linalg.norm(delta) > 1e-12
+                valid.append(keep)
+                if keep:
+                    targets.append(np.dot(delta, direction) / (np.linalg.norm(delta) * np.linalg.norm(direction)))
+            subset = {key: values[np.asarray(valid)] for key, values in cases.items()}
+            subset["alignment"] = np.asarray(targets)
+            for fixed, key in ((False, "difficulty_adjusted_slope"), (True, "image_fixed_effects_slope")):
+                expected = adjusted_angle_association(subset, outcome="alignment", replicates=2,
+                                                      image_fixed_effects=fixed, family_size=1)
+                self.assertAlmostEqual(middle[key], expected["angle_slope"], places=12)
+            per_image = [np.mean(subset["alignment"][subset["image_ids"] == image])
+                         for image in np.unique(subset["image_ids"])]
+            self.assertAlmostEqual(middle["mean_alignment"], np.mean(per_image), places=12)
+
     def test_full_runner_reproduces_h2_and_reruns_only_from_saved_panels(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
