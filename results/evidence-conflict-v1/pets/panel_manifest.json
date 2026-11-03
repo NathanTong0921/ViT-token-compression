@@ -1,0 +1,5010 @@
+{
+  "source_manifest": "data/splits/pets-v1",
+  "image_split": "val",
+  "task_split": "val",
+  "distractor_rule": "two text-nearest valid development neighbors excluding both source labels",
+  "background_rgb": [
+    127,
+    127,
+    127
+  ],
+  "eligibility": {
+    "eligible_source_class_pairs": 461,
+    "source_classes": 37,
+    "candidate_task_split": "val"
+  },
+  "panels": [
+    {
+      "panel_id": "composite_0000",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "english_setter_188",
+          "class_id": 13,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "yorkshire_terrier_16",
+          "class_id": 36,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 13,
+          "distractor": 12,
+          "task_id": "12_13",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 13,
+          "distractor": 17,
+          "task_id": "13_17",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 36,
+          "distractor": 24,
+          "task_id": "24_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 36,
+          "distractor": 34,
+          "task_id": "34_36",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            375,
+            500
+          ],
+          "resized_size": [
+            84,
+            112
+          ],
+          "paste_xy": [
+            70,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0001",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "British_Shorthair_170",
+          "class_id": 9,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Maine_Coon_13",
+          "class_id": 20,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 14,
+          "task_id": "09_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 4,
+          "task_id": "04_09",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 20,
+          "distractor": 19,
+          "task_id": "19_20",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 20,
+          "distractor": 24,
+          "task_id": "20_24",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            342
+          ],
+          "resized_size": [
+            112,
+            77
+          ],
+          "paste_xy": [
+            0,
+            73
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            388
+          ],
+          "resized_size": [
+            112,
+            87
+          ],
+          "paste_xy": [
+            112,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0002",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "boxer_160",
+          "class_id": 8,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "leonberger_130",
+          "class_id": 19,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 8,
+          "distractor": 25,
+          "task_id": "08_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 8,
+          "distractor": 24,
+          "task_id": "08_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 20,
+          "task_id": "19_20",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 15,
+          "task_id": "15_19",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            394,
+            491
+          ],
+          "resized_size": [
+            90,
+            112
+          ],
+          "paste_xy": [
+            67,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0003",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "english_setter_13",
+          "class_id": 13,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "newfoundland_182",
+          "class_id": 22,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 13,
+          "distractor": 12,
+          "task_id": "12_13",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 13,
+          "distractor": 17,
+          "task_id": "13_17",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 22,
+          "distractor": 24,
+          "task_id": "22_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 22,
+          "distractor": 23,
+          "task_id": "22_23",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            332,
+            500
+          ],
+          "resized_size": [
+            112,
+            169
+          ],
+          "paste_xy": [
+            0,
+            27
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0004",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "Ragdoll_18",
+          "class_id": 26,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "japanese_chin_139",
+          "class_id": 17,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 5,
+          "task_id": "05_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 13,
+          "task_id": "13_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 17,
+          "distractor": 13,
+          "task_id": "13_17",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 17,
+          "distractor": 12,
+          "task_id": "12_17",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            0,
+            74
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0005",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "great_pyrenees_135",
+          "class_id": 15,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "german_shorthaired_155",
+          "class_id": 14,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 15,
+          "distractor": 35,
+          "task_id": "15_35",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 15,
+          "distractor": 19,
+          "task_id": "15_19",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 14,
+          "distractor": 9,
+          "task_id": "09_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 14,
+          "distractor": 11,
+          "task_id": "11_14",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            420,
+            315
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            294
+          ],
+          "resized_size": [
+            190,
+            112
+          ],
+          "paste_xy": [
+            17,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0006",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "great_pyrenees_101",
+          "class_id": 15,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "shiba_inu_107",
+          "class_id": 31,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 15,
+          "distractor": 35,
+          "task_id": "15_35",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 15,
+          "distractor": 19,
+          "task_id": "15_19",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 31,
+          "distractor": 29,
+          "task_id": "29_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 31,
+          "distractor": 30,
+          "task_id": "30_31",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0007",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Siamese_208",
+          "class_id": 32,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "newfoundland_173",
+          "class_id": 22,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 32,
+          "distractor": 24,
+          "task_id": "24_32",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 32,
+          "distractor": 20,
+          "task_id": "20_32",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 22,
+          "distractor": 24,
+          "task_id": "22_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 22,
+          "distractor": 23,
+          "task_id": "22_23",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0008",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "samoyed_10",
+          "class_id": 29,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "staffordshire_bull_terrier_106",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 29,
+          "distractor": 31,
+          "task_id": "29_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 29,
+          "distractor": 23,
+          "task_id": "23_29",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 36,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 27,
+          "task_id": "27_34",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            357
+          ],
+          "resized_size": [
+            157,
+            112
+          ],
+          "paste_xy": [
+            33,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            75,
+            112
+          ],
+          "paste_xy": [
+            74,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0009",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "yorkshire_terrier_15",
+          "class_id": 36,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "wheaten_terrier_133",
+          "class_id": 35,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 36,
+          "distractor": 24,
+          "task_id": "24_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 36,
+          "distractor": 34,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 35,
+          "distractor": 15,
+          "task_id": "15_35",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 35,
+          "distractor": 11,
+          "task_id": "11_35",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            480,
+            500
+          ],
+          "resized_size": [
+            112,
+            117
+          ],
+          "paste_xy": [
+            0,
+            53
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0010",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "newfoundland_139",
+          "class_id": 22,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "pug_180",
+          "class_id": 25,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 22,
+          "distractor": 24,
+          "task_id": "22_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 22,
+          "distractor": 23,
+          "task_id": "22_23",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 25,
+          "distractor": 8,
+          "task_id": "08_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 25,
+          "distractor": 6,
+          "task_id": "06_25",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            300,
+            214
+          ],
+          "resized_size": [
+            157,
+            112
+          ],
+          "paste_xy": [
+            33,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0011",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Ragdoll_131",
+          "class_id": 26,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Abyssinian_137",
+          "class_id": 0,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 5,
+          "task_id": "05_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 13,
+          "task_id": "13_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 0,
+          "distractor": 30,
+          "task_id": "00_30",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 0,
+          "distractor": 6,
+          "task_id": "00_06",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            366
+          ],
+          "resized_size": [
+            153,
+            112
+          ],
+          "paste_xy": [
+            35,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            1600,
+            1200
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0012",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "Bombay_156",
+          "class_id": 7,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "pomeranian_166",
+          "class_id": 24,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 7,
+          "distractor": 23,
+          "task_id": "07_23",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 7,
+          "distractor": 34,
+          "task_id": "07_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 24,
+          "distractor": 36,
+          "task_id": "24_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 24,
+          "distractor": 32,
+          "task_id": "24_32",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            359
+          ],
+          "resized_size": [
+            112,
+            80
+          ],
+          "paste_xy": [
+            0,
+            72
+          ]
+        },
+        {
+          "original_size": [
+            189,
+            300
+          ],
+          "resized_size": [
+            112,
+            178
+          ],
+          "paste_xy": [
+            112,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0013",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "newfoundland_142",
+          "class_id": 22,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "german_shorthaired_156",
+          "class_id": 14,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 22,
+          "distractor": 24,
+          "task_id": "22_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 22,
+          "distractor": 23,
+          "task_id": "22_23",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 14,
+          "distractor": 9,
+          "task_id": "09_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 14,
+          "distractor": 11,
+          "task_id": "11_14",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            375,
+            500
+          ],
+          "resized_size": [
+            84,
+            112
+          ],
+          "paste_xy": [
+            70,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0014",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "Egyptian_Mau_136",
+          "class_id": 11,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Bengal_14",
+          "class_id": 5,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 11,
+          "distractor": 14,
+          "task_id": "11_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 11,
+          "distractor": 35,
+          "task_id": "11_35",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 5,
+          "distractor": 4,
+          "task_id": "04_05",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 5,
+          "distractor": 26,
+          "task_id": "05_26",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            246,
+            280
+          ],
+          "resized_size": [
+            112,
+            127
+          ],
+          "paste_xy": [
+            0,
+            48
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0015",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "samoyed_166",
+          "class_id": 29,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "boxer_179",
+          "class_id": 8,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 29,
+          "distractor": 31,
+          "task_id": "29_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 29,
+          "distractor": 23,
+          "task_id": "23_29",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 8,
+          "distractor": 25,
+          "task_id": "08_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 8,
+          "distractor": 24,
+          "task_id": "08_24",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0016",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "havanese_186",
+          "class_id": 16,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "boxer_107",
+          "class_id": 8,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 16,
+          "distractor": 24,
+          "task_id": "16_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 16,
+          "distractor": 6,
+          "task_id": "06_16",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 8,
+          "distractor": 25,
+          "task_id": "08_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 8,
+          "distractor": 24,
+          "task_id": "08_24",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            417,
+            500
+          ],
+          "resized_size": [
+            93,
+            112
+          ],
+          "paste_xy": [
+            65,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0017",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Maine_Coon_108",
+          "class_id": 20,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "staffordshire_bull_terrier_167",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 20,
+          "distractor": 19,
+          "task_id": "19_20",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 20,
+          "distractor": 24,
+          "task_id": "20_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 36,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 27,
+          "task_id": "27_34",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0018",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "basset_hound_123",
+          "class_id": 3,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Ragdoll_145",
+          "class_id": 26,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 3,
+          "distractor": 31,
+          "task_id": "03_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 3,
+          "distractor": 22,
+          "task_id": "03_22",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 26,
+          "distractor": 5,
+          "task_id": "05_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 26,
+          "distractor": 13,
+          "task_id": "13_26",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            0,
+            74
+          ]
+        },
+        {
+          "original_size": [
+            320,
+            213
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0019",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "beagle_144",
+          "class_id": 4,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "english_cocker_spaniel_188",
+          "class_id": 12,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 4,
+          "distractor": 5,
+          "task_id": "04_05",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 4,
+          "distractor": 23,
+          "task_id": "04_23",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 12,
+          "distractor": 13,
+          "task_id": "12_13",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 12,
+          "distractor": 36,
+          "task_id": "12_36",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            375,
+            500
+          ],
+          "resized_size": [
+            84,
+            112
+          ],
+          "paste_xy": [
+            70,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0020",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "wheaten_terrier_147",
+          "class_id": 35,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Birman_104",
+          "class_id": 6,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 35,
+          "distractor": 15,
+          "task_id": "15_35",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 35,
+          "distractor": 11,
+          "task_id": "11_35",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 6,
+          "distractor": 25,
+          "task_id": "06_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 6,
+          "distractor": 16,
+          "task_id": "06_16",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            0,
+            28
+          ]
+        },
+        {
+          "original_size": [
+            357,
+            500
+          ],
+          "resized_size": [
+            112,
+            157
+          ],
+          "paste_xy": [
+            112,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0021",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "British_Shorthair_148",
+          "class_id": 9,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Siamese_191",
+          "class_id": 32,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 14,
+          "task_id": "09_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 4,
+          "task_id": "04_09",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 32,
+          "distractor": 24,
+          "task_id": "24_32",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 32,
+          "distractor": 20,
+          "task_id": "20_32",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            281
+          ],
+          "resized_size": [
+            199,
+            112
+          ],
+          "paste_xy": [
+            12,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            317,
+            500
+          ],
+          "resized_size": [
+            71,
+            112
+          ],
+          "paste_xy": [
+            76,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0022",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "Russian_Blue_119",
+          "class_id": 27,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "great_pyrenees_100",
+          "class_id": 15,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 34,
+          "task_id": "27_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 25,
+          "task_id": "25_27",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 15,
+          "distractor": 35,
+          "task_id": "15_35",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 15,
+          "distractor": 19,
+          "task_id": "15_19",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0023",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "scottish_terrier_166",
+          "class_id": 30,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "yorkshire_terrier_10",
+          "class_id": 36,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 30,
+          "distractor": 2,
+          "task_id": "02_30",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 30,
+          "distractor": 31,
+          "task_id": "30_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 36,
+          "distractor": 24,
+          "task_id": "24_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 36,
+          "distractor": 34,
+          "task_id": "34_36",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            0,
+            74
+          ]
+        },
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            112,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0024",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Birman_134",
+          "class_id": 6,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Abyssinian_197",
+          "class_id": 0,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 6,
+          "distractor": 25,
+          "task_id": "06_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 6,
+          "distractor": 16,
+          "task_id": "06_16",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 0,
+          "distractor": 30,
+          "task_id": "00_30",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 0,
+          "distractor": 26,
+          "task_id": "00_26",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            375,
+            500
+          ],
+          "resized_size": [
+            84,
+            112
+          ],
+          "paste_xy": [
+            70,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            190,
+            300
+          ],
+          "resized_size": [
+            71,
+            112
+          ],
+          "paste_xy": [
+            76,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0025",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Russian_Blue_13",
+          "class_id": 27,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Ragdoll_145",
+          "class_id": 26,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 34,
+          "task_id": "27_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 25,
+          "task_id": "25_27",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 26,
+          "distractor": 5,
+          "task_id": "05_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 26,
+          "distractor": 13,
+          "task_id": "13_26",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            600,
+            900
+          ],
+          "resized_size": [
+            75,
+            112
+          ],
+          "paste_xy": [
+            74,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            320,
+            213
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0026",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Persian_217",
+          "class_id": 23,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "havanese_155",
+          "class_id": 16,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 23,
+          "distractor": 7,
+          "task_id": "07_23",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 23,
+          "distractor": 29,
+          "task_id": "23_29",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 16,
+          "distractor": 24,
+          "task_id": "16_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 16,
+          "distractor": 6,
+          "task_id": "06_16",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            300,
+            226
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            387
+          ],
+          "resized_size": [
+            145,
+            112
+          ],
+          "paste_xy": [
+            39,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0027",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "boxer_13",
+          "class_id": 8,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "german_shorthaired_181",
+          "class_id": 14,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 8,
+          "distractor": 25,
+          "task_id": "08_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 8,
+          "distractor": 24,
+          "task_id": "08_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 14,
+          "distractor": 9,
+          "task_id": "09_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 14,
+          "distractor": 11,
+          "task_id": "11_14",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            0,
+            28
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0028",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "basset_hound_173",
+          "class_id": 3,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "staffordshire_bull_terrier_159",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 3,
+          "distractor": 31,
+          "task_id": "03_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 3,
+          "distractor": 22,
+          "task_id": "03_22",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 36,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 27,
+          "task_id": "27_34",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0029",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "japanese_chin_127",
+          "class_id": 17,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "staffordshire_bull_terrier_159",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 17,
+          "distractor": 13,
+          "task_id": "13_17",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 17,
+          "distractor": 12,
+          "task_id": "12_17",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 36,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 27,
+          "task_id": "27_34",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            375,
+            500
+          ],
+          "resized_size": [
+            112,
+            149
+          ],
+          "paste_xy": [
+            0,
+            37
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0030",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Ragdoll_18",
+          "class_id": 26,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "leonberger_101",
+          "class_id": 19,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 5,
+          "task_id": "05_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 13,
+          "task_id": "13_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 20,
+          "task_id": "19_20",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 15,
+          "task_id": "15_19",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0031",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "english_cocker_spaniel_188",
+          "class_id": 12,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "yorkshire_terrier_112",
+          "class_id": 36,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 12,
+          "distractor": 13,
+          "task_id": "12_13",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 12,
+          "distractor": 17,
+          "task_id": "12_17",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 36,
+          "distractor": 24,
+          "task_id": "24_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 36,
+          "distractor": 34,
+          "task_id": "34_36",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            375,
+            500
+          ],
+          "resized_size": [
+            84,
+            112
+          ],
+          "paste_xy": [
+            70,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            483,
+            500
+          ],
+          "resized_size": [
+            108,
+            112
+          ],
+          "paste_xy": [
+            58,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0032",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Bengal_14",
+          "class_id": 5,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Bombay_126",
+          "class_id": 7,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 5,
+          "distractor": 11,
+          "task_id": "05_11",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 5,
+          "distractor": 4,
+          "task_id": "04_05",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 7,
+          "distractor": 23,
+          "task_id": "07_23",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 7,
+          "distractor": 24,
+          "task_id": "07_24",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            297,
+            225
+          ],
+          "resized_size": [
+            148,
+            112
+          ],
+          "paste_xy": [
+            38,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0033",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "staffordshire_bull_terrier_191",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Abyssinian_118",
+          "class_id": 0,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 34,
+          "distractor": 36,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 34,
+          "distractor": 27,
+          "task_id": "27_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 0,
+          "distractor": 30,
+          "task_id": "00_30",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 0,
+          "distractor": 6,
+          "task_id": "00_06",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            112,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0034",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Russian_Blue_195",
+          "class_id": 27,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "samoyed_133",
+          "class_id": 29,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 34,
+          "task_id": "27_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 25,
+          "task_id": "25_27",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 29,
+          "distractor": 31,
+          "task_id": "29_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 29,
+          "distractor": 23,
+          "task_id": "23_29",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            335,
+            500
+          ],
+          "resized_size": [
+            75,
+            112
+          ],
+          "paste_xy": [
+            74,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0035",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "Ragdoll_183",
+          "class_id": 26,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "boxer_138",
+          "class_id": 8,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 5,
+          "task_id": "05_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 13,
+          "task_id": "13_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 8,
+          "distractor": 25,
+          "task_id": "08_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 8,
+          "distractor": 24,
+          "task_id": "08_24",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            436
+          ],
+          "resized_size": [
+            112,
+            98
+          ],
+          "paste_xy": [
+            0,
+            63
+          ]
+        },
+        {
+          "original_size": [
+            375,
+            500
+          ],
+          "resized_size": [
+            112,
+            149
+          ],
+          "paste_xy": [
+            112,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0036",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "samoyed_133",
+          "class_id": 29,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "miniature_pinscher_166",
+          "class_id": 21,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 29,
+          "distractor": 31,
+          "task_id": "29_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 29,
+          "distractor": 23,
+          "task_id": "23_29",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 21,
+          "distractor": 4,
+          "task_id": "04_21",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 21,
+          "distractor": 9,
+          "task_id": "09_21",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            0,
+            74
+          ]
+        },
+        {
+          "original_size": [
+            300,
+            201
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0037",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "staffordshire_bull_terrier_1",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "boxer_190",
+          "class_id": 8,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 34,
+          "distractor": 36,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 34,
+          "distractor": 27,
+          "task_id": "27_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 8,
+          "distractor": 25,
+          "task_id": "08_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 8,
+          "distractor": 24,
+          "task_id": "08_24",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            299,
+            500
+          ],
+          "resized_size": [
+            67,
+            112
+          ],
+          "paste_xy": [
+            78,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0038",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Ragdoll_202",
+          "class_id": 26,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "British_Shorthair_182",
+          "class_id": 9,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 5,
+          "task_id": "05_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 13,
+          "task_id": "13_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 9,
+          "distractor": 14,
+          "task_id": "09_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 9,
+          "distractor": 4,
+          "task_id": "04_09",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            427,
+            500
+          ],
+          "resized_size": [
+            96,
+            112
+          ],
+          "paste_xy": [
+            64,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0039",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "Bombay_144",
+          "class_id": 7,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "staffordshire_bull_terrier_132",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 7,
+          "distractor": 23,
+          "task_id": "07_23",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 7,
+          "distractor": 24,
+          "task_id": "07_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 36,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 27,
+          "task_id": "27_34",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            321,
+            250
+          ],
+          "resized_size": [
+            112,
+            87
+          ],
+          "paste_xy": [
+            0,
+            68
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0040",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "staffordshire_bull_terrier_181",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "newfoundland_101",
+          "class_id": 22,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 34,
+          "distractor": 36,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 34,
+          "distractor": 27,
+          "task_id": "27_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 22,
+          "distractor": 24,
+          "task_id": "22_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 22,
+          "distractor": 23,
+          "task_id": "22_23",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0041",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Persian_150",
+          "class_id": 23,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "samoyed_138",
+          "class_id": 29,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 23,
+          "distractor": 7,
+          "task_id": "07_23",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 23,
+          "distractor": 22,
+          "task_id": "22_23",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 29,
+          "distractor": 31,
+          "task_id": "29_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 29,
+          "distractor": 36,
+          "task_id": "29_36",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            75,
+            112
+          ],
+          "paste_xy": [
+            74,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0042",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Egyptian_Mau_162",
+          "class_id": 11,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Russian_Blue_117",
+          "class_id": 27,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 11,
+          "distractor": 5,
+          "task_id": "05_11",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 11,
+          "distractor": 14,
+          "task_id": "11_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 27,
+          "distractor": 34,
+          "task_id": "27_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 27,
+          "distractor": 25,
+          "task_id": "25_27",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            3264,
+            2448
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0043",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "Maine_Coon_157",
+          "class_id": 20,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "leonberger_137",
+          "class_id": 19,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 20,
+          "distractor": 24,
+          "task_id": "20_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 20,
+          "distractor": 32,
+          "task_id": "20_32",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 15,
+          "task_id": "15_19",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 32,
+          "task_id": "19_32",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            0,
+            28
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0044",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "pug_187",
+          "class_id": 25,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Birman_142",
+          "class_id": 6,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 25,
+          "distractor": 8,
+          "task_id": "08_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 25,
+          "distractor": 27,
+          "task_id": "25_27",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 6,
+          "distractor": 16,
+          "task_id": "06_16",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 6,
+          "distractor": 8,
+          "task_id": "06_08",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            300,
+            225
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0045",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "english_cocker_spaniel_116",
+          "class_id": 12,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Bengal_143",
+          "class_id": 5,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 12,
+          "distractor": 13,
+          "task_id": "12_13",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 12,
+          "distractor": 36,
+          "task_id": "12_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 5,
+          "distractor": 11,
+          "task_id": "05_11",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 5,
+          "distractor": 4,
+          "task_id": "04_05",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            300,
+            225
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0046",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "British_Shorthair_210",
+          "class_id": 9,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "staffordshire_bull_terrier_1",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 14,
+          "task_id": "09_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 4,
+          "task_id": "04_09",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 36,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 27,
+          "task_id": "27_34",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            299,
+            500
+          ],
+          "resized_size": [
+            67,
+            112
+          ],
+          "paste_xy": [
+            78,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0047",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "boxer_160",
+          "class_id": 8,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "great_pyrenees_128",
+          "class_id": 15,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 8,
+          "distractor": 25,
+          "task_id": "08_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 8,
+          "distractor": 24,
+          "task_id": "08_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 15,
+          "distractor": 35,
+          "task_id": "15_35",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 15,
+          "distractor": 19,
+          "task_id": "15_19",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            394,
+            491
+          ],
+          "resized_size": [
+            112,
+            140
+          ],
+          "paste_xy": [
+            0,
+            42
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0048",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "english_cocker_spaniel_128",
+          "class_id": 12,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "shiba_inu_153",
+          "class_id": 31,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 12,
+          "distractor": 13,
+          "task_id": "12_13",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 12,
+          "distractor": 36,
+          "task_id": "12_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 31,
+          "distractor": 29,
+          "task_id": "29_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 31,
+          "distractor": 30,
+          "task_id": "30_31",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            416
+          ],
+          "resized_size": [
+            135,
+            112
+          ],
+          "paste_xy": [
+            44,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0049",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "english_cocker_spaniel_160",
+          "class_id": 12,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Ragdoll_158",
+          "class_id": 26,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 12,
+          "distractor": 13,
+          "task_id": "12_13",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 12,
+          "distractor": 36,
+          "task_id": "12_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 26,
+          "distractor": 5,
+          "task_id": "05_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 26,
+          "distractor": 13,
+          "task_id": "13_26",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            413,
+            500
+          ],
+          "resized_size": [
+            93,
+            112
+          ],
+          "paste_xy": [
+            65,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            378
+          ],
+          "resized_size": [
+            148,
+            112
+          ],
+          "paste_xy": [
+            38,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0050",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Egyptian_Mau_115",
+          "class_id": 11,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "miniature_pinscher_153",
+          "class_id": 21,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 11,
+          "distractor": 5,
+          "task_id": "05_11",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 11,
+          "distractor": 14,
+          "task_id": "11_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 21,
+          "distractor": 4,
+          "task_id": "04_21",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 21,
+          "distractor": 9,
+          "task_id": "09_21",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            386,
+            417
+          ],
+          "resized_size": [
+            104,
+            112
+          ],
+          "paste_xy": [
+            60,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            216,
+            300
+          ],
+          "resized_size": [
+            81,
+            112
+          ],
+          "paste_xy": [
+            71,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0051",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "British_Shorthair_181",
+          "class_id": 9,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "wheaten_terrier_115",
+          "class_id": 35,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 14,
+          "task_id": "09_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 4,
+          "task_id": "04_09",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 35,
+          "distractor": 15,
+          "task_id": "15_35",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 35,
+          "distractor": 11,
+          "task_id": "11_35",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            0,
+            28
+          ]
+        },
+        {
+          "original_size": [
+            375,
+            500
+          ],
+          "resized_size": [
+            112,
+            149
+          ],
+          "paste_xy": [
+            112,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0052",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "german_shorthaired_115",
+          "class_id": 14,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "yorkshire_terrier_10",
+          "class_id": 36,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 14,
+          "distractor": 9,
+          "task_id": "09_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 14,
+          "distractor": 11,
+          "task_id": "11_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 36,
+          "distractor": 24,
+          "task_id": "24_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 36,
+          "distractor": 34,
+          "task_id": "34_36",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            75,
+            112
+          ],
+          "paste_xy": [
+            74,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0053",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "British_Shorthair_204",
+          "class_id": 9,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "german_shorthaired_112",
+          "class_id": 14,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 4,
+          "task_id": "04_09",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 19,
+          "task_id": "09_19",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 14,
+          "distractor": 11,
+          "task_id": "11_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 14,
+          "distractor": 23,
+          "task_id": "14_23",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            0,
+            74
+          ]
+        },
+        {
+          "original_size": [
+            375,
+            500
+          ],
+          "resized_size": [
+            112,
+            149
+          ],
+          "paste_xy": [
+            112,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0054",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "shiba_inu_18",
+          "class_id": 31,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "scottish_terrier_120",
+          "class_id": 30,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 31,
+          "distractor": 29,
+          "task_id": "29_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 31,
+          "distractor": 3,
+          "task_id": "03_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 30,
+          "distractor": 2,
+          "task_id": "02_30",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 30,
+          "distractor": 0,
+          "task_id": "00_30",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            75,
+            112
+          ],
+          "paste_xy": [
+            74,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            416,
+            500
+          ],
+          "resized_size": [
+            93,
+            112
+          ],
+          "paste_xy": [
+            65,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0055",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "japanese_chin_168",
+          "class_id": 17,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "english_cocker_spaniel_106",
+          "class_id": 12,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 17,
+          "distractor": 13,
+          "task_id": "13_17",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 17,
+          "distractor": 34,
+          "task_id": "17_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 12,
+          "distractor": 13,
+          "task_id": "12_13",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 12,
+          "distractor": 36,
+          "task_id": "12_36",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            334,
+            500
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            0,
+            28
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0056",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "Ragdoll_119",
+          "class_id": 26,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "staffordshire_bull_terrier_107",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 5,
+          "task_id": "05_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 13,
+          "task_id": "13_26",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 36,
+          "task_id": "34_36",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 27,
+          "task_id": "27_34",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            432
+          ],
+          "resized_size": [
+            112,
+            97
+          ],
+          "paste_xy": [
+            112,
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0057",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "basset_hound_112",
+          "class_id": 3,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Maine_Coon_141",
+          "class_id": 20,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 3,
+          "distractor": 31,
+          "task_id": "03_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 3,
+          "distractor": 22,
+          "task_id": "03_22",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 20,
+          "distractor": 19,
+          "task_id": "19_20",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 20,
+          "distractor": 24,
+          "task_id": "20_24",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            374,
+            500
+          ],
+          "resized_size": [
+            112,
+            150
+          ],
+          "paste_xy": [
+            0,
+            37
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0058",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "scottish_terrier_129",
+          "class_id": 30,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "Russian_Blue_187",
+          "class_id": 27,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 30,
+          "distractor": 2,
+          "task_id": "02_30",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 30,
+          "distractor": 31,
+          "task_id": "30_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 27,
+          "distractor": 34,
+          "task_id": "27_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 27,
+          "distractor": 25,
+          "task_id": "25_27",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            335
+          ],
+          "resized_size": [
+            167,
+            112
+          ],
+          "paste_xy": [
+            28,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0059",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "Siamese_163",
+          "class_id": 32,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "english_cocker_spaniel_104",
+          "class_id": 12,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 32,
+          "distractor": 24,
+          "task_id": "24_32",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 32,
+          "distractor": 20,
+          "task_id": "20_32",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 12,
+          "distractor": 13,
+          "task_id": "12_13",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 12,
+          "distractor": 36,
+          "task_id": "12_36",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            447
+          ],
+          "resized_size": [
+            112,
+            100
+          ],
+          "paste_xy": [
+            112,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0060",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "samoyed_169",
+          "class_id": 29,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "pug_160",
+          "class_id": 25,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 29,
+          "distractor": 31,
+          "task_id": "29_31",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 29,
+          "distractor": 23,
+          "task_id": "23_29",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 25,
+          "distractor": 8,
+          "task_id": "08_25",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 25,
+          "distractor": 6,
+          "task_id": "06_25",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            0,
+            74
+          ]
+        },
+        {
+          "original_size": [
+            300,
+            225
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0061",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "havanese_128",
+          "class_id": 16,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "British_Shorthair_181",
+          "class_id": 9,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 16,
+          "distractor": 24,
+          "task_id": "16_24",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 16,
+          "distractor": 6,
+          "task_id": "06_16",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 9,
+          "distractor": 14,
+          "task_id": "09_14",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 9,
+          "distractor": 4,
+          "task_id": "04_09",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            375,
+            500
+          ],
+          "resized_size": [
+            112,
+            149
+          ],
+          "paste_xy": [
+            0,
+            37
+          ]
+        },
+        {
+          "original_size": [
+            333,
+            500
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            112,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0062",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "great_pyrenees_159",
+          "class_id": 15,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "leonberger_147",
+          "class_id": 19,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 15,
+          "distractor": 35,
+          "task_id": "15_35",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 15,
+          "distractor": 8,
+          "task_id": "08_15",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 20,
+          "task_id": "19_20",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 32,
+          "task_id": "19_32",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            479
+          ],
+          "resized_size": [
+            117,
+            112
+          ],
+          "paste_xy": [
+            53,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            333
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0063",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "Russian_Blue_200",
+          "class_id": 27,
+          "split": "val",
+          "official_split": "trainval"
+        },
+        {
+          "image_id": "leonberger_114",
+          "class_id": 19,
+          "split": "val",
+          "official_split": "trainval"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 34,
+          "task_id": "27_34",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 25,
+          "task_id": "25_27",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 20,
+          "task_id": "19_20",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 15,
+          "task_id": "15_19",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            334
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            375
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    }
+  ]
+}

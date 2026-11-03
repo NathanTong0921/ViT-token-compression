@@ -1,0 +1,22 @@
+{
+  "pets": {
+    "held_classes_absent_from_training_images": true,
+    "training_evaluation_images_disjoint": true,
+    "training_evaluation_tasks_disjoint": true,
+    "original_validation_tasks_preserved": true,
+    "added_pairs_all_touch_held_class": true,
+    "known_known_pairs_unchanged": true,
+    "protocols_record_no_final_test_use": true,
+    "protocols_record_no_official_test_use": true
+  },
+  "flowers": {
+    "held_classes_absent_from_training_images": true,
+    "training_evaluation_images_disjoint": true,
+    "training_evaluation_tasks_disjoint": true,
+    "original_validation_tasks_preserved": true,
+    "added_pairs_all_touch_held_class": true,
+    "known_known_pairs_unchanged": true,
+    "protocols_record_no_final_test_use": true,
+    "protocols_record_no_official_test_use": true
+  }
+}

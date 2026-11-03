@@ -1,0 +1,16 @@
+{
+  "trained_models": 48,
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "additional_heldout_evaluations": 24,
+  "new_teacher_queries": 0,
+  "training_loop_plus_initial_validation_seconds": 1284.2396221060771,
+  "semantic_suffix_evaluation_and_save_seconds": 99.09998944413383,
+  "core_selector_and_suffix_seconds": 73.61550643725786,
+  "evidence_dataset_evaluation_seconds": 7.234966119052842,
+  "sum_recorded_compute_stage_hours": 0.4067194678073671,
+  "scope": "Sum of recorded stage timers, not exclusive GPU reservation hours. Training timers include initial validation loss; suffix evaluation timers include saving. Excludes cache/model loading, un-timed teacher validation, CPU analysis, development, backup, and plotting. Existing prefix/teacher generation costs are reused, not charged again."
+}

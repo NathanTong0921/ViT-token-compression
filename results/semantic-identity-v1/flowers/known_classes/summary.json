@@ -1,0 +1,147 @@
+{
+  "strata": {
+    "unseen_combinations": {
+      "images": 1020,
+      "examples": 4080,
+      "tasks": 204,
+      "full_model_accuracy_percent": 96.74019607843137,
+      "full_model_margin": 0.10996972411911277,
+      "metrics": {
+        "correct": {
+          "unit": "percentage points",
+          "arms": {
+            "real_text": {
+              "mean": 97.11601307189544,
+              "per_seed": [
+                97.15686274509804,
+                96.98529411764707,
+                97.20588235294119
+              ]
+            },
+            "permuted_2097": {
+              "mean": 97.15686274509804,
+              "per_seed": [
+                97.05882352941177,
+                97.20588235294119,
+                97.20588235294117
+              ]
+            },
+            "permuted_2098": {
+              "mean": 97.18954248366015,
+              "per_seed": [
+                97.35294117647058,
+                97.0343137254902,
+                97.18137254901961
+              ]
+            },
+            "image_only_wide": {
+              "mean": 96.91176470588235,
+              "per_seed": [
+                97.08333333333333,
+                96.88725490196079,
+                96.76470588235294
+              ]
+            }
+          },
+          "contrasts": {
+            "real_minus_permuted_mean": {
+              "estimate": -0.057189542483660046,
+              "ci95": [
+                -0.22875816993464043,
+                0.10620915032679745
+              ],
+              "images": 1020,
+              "examples": 4080
+            },
+            "real_minus_wide": {
+              "estimate": 0.20424836601307184,
+              "ci95": [
+                -0.0326797385620915,
+                0.457516339869281
+              ],
+              "images": 1020,
+              "examples": 4080
+            },
+            "permuted_mean_minus_wide": {
+              "estimate": 0.26143790849673193,
+              "ci95": [
+                0.06535947712418294,
+                0.46160130718954234
+              ],
+              "images": 1020,
+              "examples": 4080
+            }
+          }
+        },
+        "margin": {
+          "unit": "geometric margin",
+          "arms": {
+            "real_text": {
+              "mean": 0.10739918728100462,
+              "per_seed": [
+                0.10707892480595903,
+                0.10750647965929852,
+                0.10761215708652361
+              ]
+            },
+            "permuted_2097": {
+              "mean": 0.10690955115539562,
+              "per_seed": [
+                0.10678640480648527,
+                0.10704347722185582,
+                0.1068987720657413
+              ]
+            },
+            "permuted_2098": {
+              "mean": 0.10692901627031845,
+              "per_seed": [
+                0.1062654669631746,
+                0.10724624349213985,
+                0.10727533871083735
+              ]
+            },
+            "image_only_wide": {
+              "mean": 0.10613582801385443,
+              "per_seed": [
+                0.10549490991503334,
+                0.10636402545736856,
+                0.10654854853119952
+              ]
+            }
+          },
+          "contrasts": {
+            "real_minus_permuted_mean": {
+              "estimate": 0.0004799036117094824,
+              "ci95": [
+                0.0001722109844138008,
+                0.0007950499158730107
+              ],
+              "images": 1020,
+              "examples": 4080
+            },
+            "real_minus_wide": {
+              "estimate": 0.0012633592665866563,
+              "ci95": [
+                0.0008406586077976765,
+                0.0016897960253613833
+              ],
+              "images": 1020,
+              "examples": 4080
+            },
+            "permuted_mean_minus_wide": {
+              "estimate": 0.0007834556538357135,
+              "ci95": [
+                0.0004208498321053876,
+                0.0011408392614968904
+              ],
+              "images": 1020,
+              "examples": 4080
+            }
+          }
+        }
+      }
+    }
+  },
+  "interactions": {},
+  "uncertainty": "Paired image bootstrap after averaging all fixed weight seeds and both mappings; conditional on this class/task partition. Mapping-specific and seed-specific estimates retained."
+}

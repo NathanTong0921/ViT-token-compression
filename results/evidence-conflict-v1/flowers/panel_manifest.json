@@ -1,0 +1,5010 @@
+{
+  "source_manifest": "data/splits/flowers-v1",
+  "image_split": "val",
+  "task_split": "val",
+  "distractor_rule": "two text-nearest valid development neighbors excluding both source labels",
+  "background_rgb": [
+    127,
+    127,
+    127
+  ],
+  "eligibility": {
+    "eligible_source_class_pairs": 5151,
+    "source_classes": 102,
+    "candidate_task_split": "val"
+  },
+  "panels": [
+    {
+      "panel_id": "composite_0000",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_08008",
+          "class_id": 101,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_07002",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 101,
+          "distractor": 45,
+          "task_id": "045_101",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 101,
+          "distractor": 21,
+          "task_id": "021_101",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 2,
+          "task_id": "002_034",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 34,
+          "distractor": 46,
+          "task_id": "034_046",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            638,
+            500
+          ],
+          "resized_size": [
+            112,
+            88
+          ],
+          "paste_xy": [
+            0,
+            68
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            667
+          ],
+          "resized_size": [
+            112,
+            149
+          ],
+          "paste_xy": [
+            112,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0001",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_07230",
+          "class_id": 6,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03420",
+          "class_id": 22,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 6,
+          "distractor": 11,
+          "task_id": "006_011",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 6,
+          "distractor": 55,
+          "task_id": "006_055",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 22,
+          "distractor": 41,
+          "task_id": "022_041",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 22,
+          "distractor": 38,
+          "task_id": "022_038",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            702,
+            500
+          ],
+          "resized_size": [
+            112,
+            80
+          ],
+          "paste_xy": [
+            0,
+            72
+          ]
+        },
+        {
+          "original_size": [
+            596,
+            500
+          ],
+          "resized_size": [
+            112,
+            94
+          ],
+          "paste_xy": [
+            112,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0002",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_08185",
+          "class_id": 61,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_07139",
+          "class_id": 44,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 61,
+          "distractor": 69,
+          "task_id": "061_069",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 61,
+          "distractor": 42,
+          "task_id": "042_061",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 44,
+          "distractor": 43,
+          "task_id": "043_044",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 44,
+          "distractor": 1,
+          "task_id": "001_044",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            713,
+            500
+          ],
+          "resized_size": [
+            160,
+            112
+          ],
+          "paste_xy": [
+            32,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0003",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_02250",
+          "class_id": 40,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_01522",
+          "class_id": 43,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 40,
+          "distractor": 28,
+          "task_id": "028_040",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 40,
+          "distractor": 62,
+          "task_id": "040_062",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 43,
+          "distractor": 20,
+          "task_id": "020_043",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 43,
+          "distractor": 76,
+          "task_id": "043_076",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            703,
+            500
+          ],
+          "resized_size": [
+            157,
+            112
+          ],
+          "paste_xy": [
+            33,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            501
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0004",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_07008",
+          "class_id": 38,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_07786",
+          "class_id": 97,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 38,
+          "distractor": 20,
+          "task_id": "020_038",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 38,
+          "distractor": 82,
+          "task_id": "038_082",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 97,
+          "distractor": 53,
+          "task_id": "053_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 97,
+          "distractor": 89,
+          "task_id": "089_097",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            668
+          ],
+          "resized_size": [
+            112,
+            150
+          ],
+          "paste_xy": [
+            0,
+            37
+          ]
+        },
+        {
+          "original_size": [
+            546,
+            500
+          ],
+          "resized_size": [
+            112,
+            103
+          ],
+          "paste_xy": [
+            112,
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0005",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_00479",
+          "class_id": 87,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05774",
+          "class_id": 12,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 87,
+          "distractor": 2,
+          "task_id": "002_087",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 87,
+          "distractor": 86,
+          "task_id": "086_087",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 12,
+          "distractor": 33,
+          "task_id": "012_033",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 12,
+          "distractor": 74,
+          "task_id": "012_074",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            644,
+            500
+          ],
+          "resized_size": [
+            112,
+            87
+          ],
+          "paste_xy": [
+            0,
+            68
+          ]
+        },
+        {
+          "original_size": [
+            782,
+            500
+          ],
+          "resized_size": [
+            112,
+            72
+          ],
+          "paste_xy": [
+            112,
+            76
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0006",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_07421",
+          "class_id": 93,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_07012",
+          "class_id": 38,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 93,
+          "distractor": 10,
+          "task_id": "010_093",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 93,
+          "distractor": 1,
+          "task_id": "001_093",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 38,
+          "distractor": 20,
+          "task_id": "020_038",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 38,
+          "distractor": 82,
+          "task_id": "038_082",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            620
+          ],
+          "resized_size": [
+            112,
+            139
+          ],
+          "paste_xy": [
+            0,
+            42
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            667
+          ],
+          "resized_size": [
+            112,
+            149
+          ],
+          "paste_xy": [
+            112,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0007",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_06506",
+          "class_id": 25,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_02461",
+          "class_id": 75,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 25,
+          "distractor": 51,
+          "task_id": "025_051",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 25,
+          "distractor": 80,
+          "task_id": "025_080",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 75,
+          "distractor": 42,
+          "task_id": "042_075",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 75,
+          "distractor": 88,
+          "task_id": "075_088",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            500
+          ],
+          "resized_size": [
+            112,
+            112
+          ],
+          "paste_xy": [
+            56,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            644,
+            500
+          ],
+          "resized_size": [
+            144,
+            112
+          ],
+          "paste_xy": [
+            40,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0008",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_00549",
+          "class_id": 87,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05674",
+          "class_id": 3,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 87,
+          "distractor": 2,
+          "task_id": "002_087",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 87,
+          "distractor": 86,
+          "task_id": "086_087",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 3,
+          "distractor": 15,
+          "task_id": "003_015",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 3,
+          "distractor": 68,
+          "task_id": "003_068",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            676,
+            500
+          ],
+          "resized_size": [
+            112,
+            83
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            644
+          ],
+          "resized_size": [
+            112,
+            144
+          ],
+          "paste_xy": [
+            112,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0009",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_07114",
+          "class_id": 9,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06049",
+          "class_id": 13,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 93,
+          "task_id": "009_093",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 9,
+          "distractor": 64,
+          "task_id": "009_064",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 13,
+          "distractor": 7,
+          "task_id": "007_013",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 13,
+          "distractor": 27,
+          "task_id": "013_027",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            625
+          ],
+          "resized_size": [
+            90,
+            112
+          ],
+          "paste_xy": [
+            67,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            525
+          ],
+          "resized_size": [
+            107,
+            112
+          ],
+          "paste_xy": [
+            58,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0010",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_05265",
+          "class_id": 27,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_08106",
+          "class_id": 5,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 13,
+          "task_id": "013_027",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 46,
+          "task_id": "027_046",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 5,
+          "distractor": 33,
+          "task_id": "005_033",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 5,
+          "distractor": 16,
+          "task_id": "005_016",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            648,
+            500
+          ],
+          "resized_size": [
+            112,
+            86
+          ],
+          "paste_xy": [
+            0,
+            69
+          ]
+        },
+        {
+          "original_size": [
+            540,
+            500
+          ],
+          "resized_size": [
+            112,
+            104
+          ],
+          "paste_xy": [
+            112,
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0011",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_05880",
+          "class_id": 62,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06185",
+          "class_id": 18,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 62,
+          "distractor": 47,
+          "task_id": "047_062",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 62,
+          "distractor": 40,
+          "task_id": "040_062",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 18,
+          "distractor": 96,
+          "task_id": "018_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 18,
+          "distractor": 57,
+          "task_id": "018_057",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            752,
+            500
+          ],
+          "resized_size": [
+            112,
+            74
+          ],
+          "paste_xy": [
+            0,
+            75
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0012",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_00222",
+          "class_id": 76,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05773",
+          "class_id": 12,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 76,
+          "distractor": 43,
+          "task_id": "043_076",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 76,
+          "distractor": 38,
+          "task_id": "038_076",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 12,
+          "distractor": 33,
+          "task_id": "012_033",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 12,
+          "distractor": 74,
+          "task_id": "012_074",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            750,
+            500
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            0,
+            74
+          ]
+        },
+        {
+          "original_size": [
+            751,
+            500
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0013",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_07753",
+          "class_id": 97,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03836",
+          "class_id": 16,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 97,
+          "distractor": 53,
+          "task_id": "053_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 97,
+          "distractor": 89,
+          "task_id": "089_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 16,
+          "distractor": 5,
+          "task_id": "005_016",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 16,
+          "distractor": 77,
+          "task_id": "016_077",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            733,
+            501
+          ],
+          "resized_size": [
+            164,
+            112
+          ],
+          "paste_xy": [
+            30,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0014",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_01556",
+          "class_id": 43,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05138",
+          "class_id": 1,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 43,
+          "distractor": 20,
+          "task_id": "020_043",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 43,
+          "distractor": 76,
+          "task_id": "043_076",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 1,
+          "distractor": 92,
+          "task_id": "001_092",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 1,
+          "distractor": 93,
+          "task_id": "001_093",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            655,
+            501
+          ],
+          "resized_size": [
+            146,
+            112
+          ],
+          "paste_xy": [
+            39,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            766
+          ],
+          "resized_size": [
+            73,
+            112
+          ],
+          "paste_xy": [
+            75,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0015",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_07724",
+          "class_id": 96,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_04205",
+          "class_id": 51,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 96,
+          "distractor": 18,
+          "task_id": "018_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 96,
+          "distractor": 69,
+          "task_id": "069_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 51,
+          "distractor": 25,
+          "task_id": "025_051",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 51,
+          "distractor": 22,
+          "task_id": "022_051",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            730,
+            500
+          ],
+          "resized_size": [
+            112,
+            77
+          ],
+          "paste_xy": [
+            0,
+            73
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            667
+          ],
+          "resized_size": [
+            112,
+            149
+          ],
+          "paste_xy": [
+            112,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0016",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_06867",
+          "class_id": 26,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06070",
+          "class_id": 13,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 45,
+          "task_id": "026_045",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 26,
+          "distractor": 3,
+          "task_id": "003_026",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 13,
+          "distractor": 7,
+          "task_id": "007_013",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 13,
+          "distractor": 27,
+          "task_id": "013_027",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            752,
+            500
+          ],
+          "resized_size": [
+            112,
+            74
+          ],
+          "paste_xy": [
+            0,
+            75
+          ]
+        },
+        {
+          "original_size": [
+            715,
+            500
+          ],
+          "resized_size": [
+            112,
+            78
+          ],
+          "paste_xy": [
+            112,
+            73
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0017",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_02055",
+          "class_id": 79,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05221",
+          "class_id": 27,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 79,
+          "distractor": 36,
+          "task_id": "036_079",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 79,
+          "distractor": 50,
+          "task_id": "050_079",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 27,
+          "distractor": 13,
+          "task_id": "013_027",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 27,
+          "distractor": 46,
+          "task_id": "027_046",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            501,
+            667
+          ],
+          "resized_size": [
+            84,
+            112
+          ],
+          "paste_xy": [
+            70,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            666,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0018",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_03480",
+          "class_id": 29,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05524",
+          "class_id": 65,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 29,
+          "distractor": 48,
+          "task_id": "029_048",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 29,
+          "distractor": 81,
+          "task_id": "029_081",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 65,
+          "distractor": 97,
+          "task_id": "065_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 65,
+          "distractor": 31,
+          "task_id": "031_065",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            624,
+            500
+          ],
+          "resized_size": [
+            140,
+            112
+          ],
+          "paste_xy": [
+            42,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0019",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_05958",
+          "class_id": 68,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_08119",
+          "class_id": 56,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 68,
+          "distractor": 37,
+          "task_id": "037_068",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 68,
+          "distractor": 4,
+          "task_id": "004_068",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 56,
+          "distractor": 33,
+          "task_id": "033_056",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 56,
+          "distractor": 48,
+          "task_id": "048_056",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            575,
+            500
+          ],
+          "resized_size": [
+            129,
+            112
+          ],
+          "paste_xy": [
+            47,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            624,
+            501
+          ],
+          "resized_size": [
+            139,
+            112
+          ],
+          "paste_xy": [
+            42,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0020",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_03821",
+          "class_id": 36,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_04774",
+          "class_id": 84,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 36,
+          "distractor": 32,
+          "task_id": "032_036",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 36,
+          "distractor": 23,
+          "task_id": "023_036",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 84,
+          "distractor": 0,
+          "task_id": "000_084",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 84,
+          "distractor": 73,
+          "task_id": "073_084",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            534,
+            501
+          ],
+          "resized_size": [
+            112,
+            105
+          ],
+          "paste_xy": [
+            0,
+            59
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0021",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_02543",
+          "class_id": 75,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_07102",
+          "class_id": 9,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 75,
+          "distractor": 42,
+          "task_id": "042_075",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 75,
+          "distractor": 88,
+          "task_id": "075_088",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 9,
+          "distractor": 93,
+          "task_id": "009_093",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 9,
+          "distractor": 64,
+          "task_id": "009_064",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            626,
+            500
+          ],
+          "resized_size": [
+            140,
+            112
+          ],
+          "paste_xy": [
+            42,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0022",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_03064",
+          "class_id": 91,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06937",
+          "class_id": 33,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 91,
+          "distractor": 73,
+          "task_id": "073_091",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 91,
+          "distractor": 7,
+          "task_id": "007_091",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 33,
+          "distractor": 11,
+          "task_id": "011_033",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 33,
+          "distractor": 12,
+          "task_id": "012_033",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            508
+          ],
+          "resized_size": [
+            112,
+            114
+          ],
+          "paste_xy": [
+            112,
+            55
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0023",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_04529",
+          "class_id": 70,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03234",
+          "class_id": 64,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 70,
+          "distractor": 17,
+          "task_id": "017_070",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 70,
+          "distractor": 96,
+          "task_id": "070_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 64,
+          "distractor": 58,
+          "task_id": "058_064",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 64,
+          "distractor": 48,
+          "task_id": "048_064",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            589
+          ],
+          "resized_size": [
+            112,
+            132
+          ],
+          "paste_xy": [
+            0,
+            46
+          ]
+        },
+        {
+          "original_size": [
+            750,
+            500
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0024",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_04207",
+          "class_id": 51,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_07213",
+          "class_id": 6,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 51,
+          "distractor": 25,
+          "task_id": "025_051",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 51,
+          "distractor": 22,
+          "task_id": "022_051",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 6,
+          "distractor": 11,
+          "task_id": "006_011",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 6,
+          "distractor": 55,
+          "task_id": "006_055",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            574
+          ],
+          "resized_size": [
+            98,
+            112
+          ],
+          "paste_xy": [
+            63,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            658,
+            500
+          ],
+          "resized_size": [
+            147,
+            112
+          ],
+          "paste_xy": [
+            38,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0025",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_07336",
+          "class_id": 93,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_04128",
+          "class_id": 28,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 93,
+          "distractor": 10,
+          "task_id": "010_093",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 93,
+          "distractor": 1,
+          "task_id": "001_093",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 28,
+          "distractor": 15,
+          "task_id": "015_028",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 28,
+          "distractor": 40,
+          "task_id": "028_040",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            666
+          ],
+          "resized_size": [
+            112,
+            149
+          ],
+          "paste_xy": [
+            0,
+            37
+          ]
+        },
+        {
+          "original_size": [
+            666,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0026",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_07700",
+          "class_id": 96,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03086",
+          "class_id": 91,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 96,
+          "distractor": 18,
+          "task_id": "018_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 96,
+          "distractor": 69,
+          "task_id": "069_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 91,
+          "distractor": 73,
+          "task_id": "073_091",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 91,
+          "distractor": 7,
+          "task_id": "007_091",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            538,
+            500
+          ],
+          "resized_size": [
+            121,
+            112
+          ],
+          "paste_xy": [
+            51,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0027",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_05339",
+          "class_id": 69,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06506",
+          "class_id": 25,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 69,
+          "distractor": 96,
+          "task_id": "069_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 69,
+          "distractor": 61,
+          "task_id": "061_069",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 25,
+          "distractor": 51,
+          "task_id": "025_051",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 25,
+          "distractor": 80,
+          "task_id": "025_080",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            668,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            500
+          ],
+          "resized_size": [
+            112,
+            112
+          ],
+          "paste_xy": [
+            112,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0028",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_04110",
+          "class_id": 28,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06840",
+          "class_id": 23,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 28,
+          "distractor": 15,
+          "task_id": "015_028",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 28,
+          "distractor": 40,
+          "task_id": "028_040",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 23,
+          "distractor": 36,
+          "task_id": "023_036",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 23,
+          "distractor": 78,
+          "task_id": "023_078",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            955
+          ],
+          "resized_size": [
+            59,
+            112
+          ],
+          "paste_xy": [
+            82,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0029",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_08104",
+          "class_id": 6,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_02745",
+          "class_id": 57,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 6,
+          "distractor": 11,
+          "task_id": "006_011",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 6,
+          "distractor": 55,
+          "task_id": "006_055",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 57,
+          "distractor": 18,
+          "task_id": "018_057",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 57,
+          "distractor": 11,
+          "task_id": "011_057",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            627,
+            500
+          ],
+          "resized_size": [
+            140,
+            112
+          ],
+          "paste_xy": [
+            42,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            752,
+            500
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0030",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_07006",
+          "class_id": 34,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03067",
+          "class_id": 91,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 34,
+          "distractor": 2,
+          "task_id": "002_034",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 34,
+          "distractor": 46,
+          "task_id": "034_046",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 91,
+          "distractor": 73,
+          "task_id": "073_091",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 91,
+          "distractor": 7,
+          "task_id": "007_091",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            752
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            0,
+            28
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            631
+          ],
+          "resized_size": [
+            112,
+            141
+          ],
+          "paste_xy": [
+            112,
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0031",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_07842",
+          "class_id": 98,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_07743",
+          "class_id": 96,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 98,
+          "distractor": 72,
+          "task_id": "072_098",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 98,
+          "distractor": 41,
+          "task_id": "041_098",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 96,
+          "distractor": 18,
+          "task_id": "018_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 96,
+          "distractor": 69,
+          "task_id": "069_096",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            529,
+            500
+          ],
+          "resized_size": [
+            112,
+            106
+          ],
+          "paste_xy": [
+            0,
+            59
+          ]
+        },
+        {
+          "original_size": [
+            557,
+            500
+          ],
+          "resized_size": [
+            112,
+            101
+          ],
+          "paste_xy": [
+            112,
+            61
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0032",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_04654",
+          "class_id": 47,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_00665",
+          "class_id": 88,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 47,
+          "distractor": 82,
+          "task_id": "047_082",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 47,
+          "distractor": 62,
+          "task_id": "047_062",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 88,
+          "distractor": 92,
+          "task_id": "088_092",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 88,
+          "distractor": 75,
+          "task_id": "075_088",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            625,
+            500
+          ],
+          "resized_size": [
+            112,
+            90
+          ],
+          "paste_xy": [
+            0,
+            67
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0033",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_03564",
+          "class_id": 71,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_04952",
+          "class_id": 19,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 71,
+          "distractor": 42,
+          "task_id": "042_071",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 71,
+          "distractor": 63,
+          "task_id": "063_071",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 42,
+          "task_id": "019_042",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 19,
+          "distractor": 63,
+          "task_id": "019_063",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            750,
+            500
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            0,
+            74
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0034",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_06510",
+          "class_id": 25,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03142",
+          "class_id": 10,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 25,
+          "distractor": 51,
+          "task_id": "025_051",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 25,
+          "distractor": 80,
+          "task_id": "025_080",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 10,
+          "distractor": 93,
+          "task_id": "010_093",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 10,
+          "distractor": 75,
+          "task_id": "010_075",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            594,
+            500
+          ],
+          "resized_size": [
+            133,
+            112
+          ],
+          "paste_xy": [
+            45,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            601
+          ],
+          "resized_size": [
+            93,
+            112
+          ],
+          "paste_xy": [
+            65,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0035",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_04656",
+          "class_id": 47,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03033",
+          "class_id": 91,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 47,
+          "distractor": 82,
+          "task_id": "047_082",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 47,
+          "distractor": 62,
+          "task_id": "047_062",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 91,
+          "distractor": 73,
+          "task_id": "073_091",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 91,
+          "distractor": 7,
+          "task_id": "007_091",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            560,
+            500
+          ],
+          "resized_size": [
+            125,
+            112
+          ],
+          "paste_xy": [
+            49,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0036",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_05603",
+          "class_id": 31,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05339",
+          "class_id": 69,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 31,
+          "distractor": 4,
+          "task_id": "004_031",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 31,
+          "distractor": 65,
+          "task_id": "031_065",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 69,
+          "distractor": 96,
+          "task_id": "069_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 69,
+          "distractor": 61,
+          "task_id": "061_069",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            668,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0037",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_04392",
+          "class_id": 35,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06276",
+          "class_id": 60,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 35,
+          "distractor": 80,
+          "task_id": "035_080",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 35,
+          "distractor": 51,
+          "task_id": "035_051",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 60,
+          "distractor": 87,
+          "task_id": "060_087",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 60,
+          "distractor": 34,
+          "task_id": "034_060",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            666,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            700
+          ],
+          "resized_size": [
+            112,
+            157
+          ],
+          "paste_xy": [
+            112,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0038",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_02019",
+          "class_id": 79,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_04719",
+          "class_id": 54,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 79,
+          "distractor": 36,
+          "task_id": "036_079",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 79,
+          "distractor": 50,
+          "task_id": "050_079",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 54,
+          "distractor": 50,
+          "task_id": "050_054",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 54,
+          "distractor": 58,
+          "task_id": "054_058",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            666,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            751,
+            500
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            112,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0039",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_00304",
+          "class_id": 72,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06436",
+          "class_id": 8,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 72,
+          "distractor": 66,
+          "task_id": "066_072",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 72,
+          "distractor": 98,
+          "task_id": "072_098",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 8,
+          "distractor": 82,
+          "task_id": "008_082",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 8,
+          "distractor": 22,
+          "task_id": "008_022",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            752,
+            500
+          ],
+          "resized_size": [
+            112,
+            74
+          ],
+          "paste_xy": [
+            0,
+            75
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            750
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            112,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0040",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_04654",
+          "class_id": 47,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_07932",
+          "class_id": 99,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 47,
+          "distractor": 82,
+          "task_id": "047_082",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 47,
+          "distractor": 62,
+          "task_id": "047_062",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 99,
+          "distractor": 53,
+          "task_id": "053_099",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 99,
+          "distractor": 72,
+          "task_id": "072_099",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            625,
+            500
+          ],
+          "resized_size": [
+            140,
+            112
+          ],
+          "paste_xy": [
+            42,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            544
+          ],
+          "resized_size": [
+            103,
+            112
+          ],
+          "paste_xy": [
+            60,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0041",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_08116",
+          "class_id": 92,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_07767",
+          "class_id": 97,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 92,
+          "distractor": 1,
+          "task_id": "001_092",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 92,
+          "distractor": 88,
+          "task_id": "088_092",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 97,
+          "distractor": 53,
+          "task_id": "053_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 97,
+          "distractor": 89,
+          "task_id": "089_097",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            646,
+            500
+          ],
+          "resized_size": [
+            145,
+            112
+          ],
+          "paste_xy": [
+            39,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0042",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_04374",
+          "class_id": 35,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_02581",
+          "class_id": 83,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 35,
+          "distractor": 80,
+          "task_id": "035_080",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 35,
+          "distractor": 51,
+          "task_id": "035_051",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 83,
+          "distractor": 76,
+          "task_id": "076_083",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 83,
+          "distractor": 66,
+          "task_id": "066_083",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            750,
+            500
+          ],
+          "resized_size": [
+            112,
+            75
+          ],
+          "paste_xy": [
+            0,
+            74
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0043",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_05065",
+          "class_id": 58,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05116",
+          "class_id": 1,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 58,
+          "distractor": 64,
+          "task_id": "058_064",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 58,
+          "distractor": 77,
+          "task_id": "058_077",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 1,
+          "distractor": 92,
+          "task_id": "001_092",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 1,
+          "distractor": 93,
+          "task_id": "001_093",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            752,
+            500
+          ],
+          "resized_size": [
+            112,
+            74
+          ],
+          "paste_xy": [
+            0,
+            75
+          ]
+        },
+        {
+          "original_size": [
+            666,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0044",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_06585",
+          "class_id": 24,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_07184",
+          "class_id": 5,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 24,
+          "distractor": 67,
+          "task_id": "024_067",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 24,
+          "distractor": 30,
+          "task_id": "024_030",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 5,
+          "distractor": 33,
+          "task_id": "005_033",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 5,
+          "distractor": 16,
+          "task_id": "005_016",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            689,
+            500
+          ],
+          "resized_size": [
+            112,
+            81
+          ],
+          "paste_xy": [
+            0,
+            71
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            751
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            112,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0045",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_02632",
+          "class_id": 83,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03104",
+          "class_id": 10,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 83,
+          "distractor": 76,
+          "task_id": "076_083",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 83,
+          "distractor": 66,
+          "task_id": "066_083",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 10,
+          "distractor": 93,
+          "task_id": "010_093",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 10,
+          "distractor": 75,
+          "task_id": "010_075",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            714,
+            500
+          ],
+          "resized_size": [
+            160,
+            112
+          ],
+          "paste_xy": [
+            32,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            691
+          ],
+          "resized_size": [
+            81,
+            112
+          ],
+          "paste_xy": [
+            71,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0046",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_05424",
+          "class_id": 53,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06157",
+          "class_id": 18,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 53,
+          "distractor": 99,
+          "task_id": "053_099",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 53,
+          "distractor": 14,
+          "task_id": "014_053",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 18,
+          "distractor": 96,
+          "task_id": "018_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 18,
+          "distractor": 57,
+          "task_id": "018_057",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            647,
+            500
+          ],
+          "resized_size": [
+            112,
+            87
+          ],
+          "paste_xy": [
+            0,
+            68
+          ]
+        },
+        {
+          "original_size": [
+            715,
+            500
+          ],
+          "resized_size": [
+            112,
+            78
+          ],
+          "paste_xy": [
+            112,
+            73
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0047",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_06682",
+          "class_id": 15,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05339",
+          "class_id": 69,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 15,
+          "distractor": 50,
+          "task_id": "015_050",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 15,
+          "distractor": 28,
+          "task_id": "015_028",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 69,
+          "distractor": 96,
+          "task_id": "069_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 69,
+          "distractor": 61,
+          "task_id": "061_069",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            794,
+            500
+          ],
+          "resized_size": [
+            178,
+            112
+          ],
+          "paste_xy": [
+            23,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            668,
+            500
+          ],
+          "resized_size": [
+            150,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0048",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_08009",
+          "class_id": 101,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06103",
+          "class_id": 63,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 101,
+          "distractor": 45,
+          "task_id": "045_101",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 101,
+          "distractor": 21,
+          "task_id": "021_101",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 63,
+          "distractor": 71,
+          "task_id": "063_071",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 63,
+          "distractor": 7,
+          "task_id": "007_063",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            577,
+            500
+          ],
+          "resized_size": [
+            112,
+            97
+          ],
+          "paste_xy": [
+            0,
+            63
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            750
+          ],
+          "resized_size": [
+            112,
+            168
+          ],
+          "paste_xy": [
+            112,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0049",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_06446",
+          "class_id": 32,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_02571",
+          "class_id": 83,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 32,
+          "distractor": 36,
+          "task_id": "032_036",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 32,
+          "distractor": 28,
+          "task_id": "028_032",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 83,
+          "distractor": 76,
+          "task_id": "076_083",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 83,
+          "distractor": 66,
+          "task_id": "066_083",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            666,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0050",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_07124",
+          "class_id": 44,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05192",
+          "class_id": 4,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 44,
+          "distractor": 43,
+          "task_id": "043_044",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 44,
+          "distractor": 1,
+          "task_id": "001_044",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 4,
+          "distractor": 68,
+          "task_id": "004_068",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 4,
+          "distractor": 31,
+          "task_id": "004_031",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            510,
+            500
+          ],
+          "resized_size": [
+            112,
+            110
+          ],
+          "paste_xy": [
+            112,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0051",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_07753",
+          "class_id": 97,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03248",
+          "class_id": 64,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 97,
+          "distractor": 53,
+          "task_id": "053_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 97,
+          "distractor": 89,
+          "task_id": "089_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 64,
+          "distractor": 58,
+          "task_id": "058_064",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 64,
+          "distractor": 48,
+          "task_id": "048_064",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            733,
+            501
+          ],
+          "resized_size": [
+            164,
+            112
+          ],
+          "paste_xy": [
+            30,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            752,
+            500
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0052",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_05913",
+          "class_id": 67,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06603",
+          "class_id": 24,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 67,
+          "distractor": 15,
+          "task_id": "015_067",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 67,
+          "distractor": 49,
+          "task_id": "049_067",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 24,
+          "distractor": 30,
+          "task_id": "024_030",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 24,
+          "distractor": 45,
+          "task_id": "024_045",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            500,
+            506
+          ],
+          "resized_size": [
+            112,
+            113
+          ],
+          "paste_xy": [
+            0,
+            55
+          ]
+        },
+        {
+          "original_size": [
+            522,
+            500
+          ],
+          "resized_size": [
+            112,
+            107
+          ],
+          "paste_xy": [
+            112,
+            58
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0053",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_00255",
+          "class_id": 72,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_04487",
+          "class_id": 70,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 72,
+          "distractor": 66,
+          "task_id": "066_072",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 72,
+          "distractor": 98,
+          "task_id": "072_098",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 70,
+          "distractor": 17,
+          "task_id": "017_070",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 70,
+          "distractor": 96,
+          "task_id": "070_096",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            670,
+            500
+          ],
+          "resized_size": [
+            150,
+            112
+          ],
+          "paste_xy": [
+            37,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0054",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_07786",
+          "class_id": 97,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_04088",
+          "class_id": 28,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 97,
+          "distractor": 53,
+          "task_id": "053_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 97,
+          "distractor": 89,
+          "task_id": "089_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 28,
+          "distractor": 15,
+          "task_id": "015_028",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 28,
+          "distractor": 40,
+          "task_id": "028_040",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            546,
+            500
+          ],
+          "resized_size": [
+            122,
+            112
+          ],
+          "paste_xy": [
+            51,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            668,
+            500
+          ],
+          "resized_size": [
+            150,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0055",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_05168",
+          "class_id": 4,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06907",
+          "class_id": 30,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 4,
+          "distractor": 68,
+          "task_id": "004_068",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 4,
+          "distractor": 31,
+          "task_id": "004_031",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 30,
+          "distractor": 77,
+          "task_id": "030_077",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 30,
+          "distractor": 49,
+          "task_id": "030_049",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            756,
+            500
+          ],
+          "resized_size": [
+            169,
+            112
+          ],
+          "paste_xy": [
+            27,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            670,
+            500
+          ],
+          "resized_size": [
+            150,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0056",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_05447",
+          "class_id": 53,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_01934",
+          "class_id": 77,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 53,
+          "distractor": 99,
+          "task_id": "053_099",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 53,
+          "distractor": 14,
+          "task_id": "014_053",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 77,
+          "distractor": 30,
+          "task_id": "030_077",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 77,
+          "distractor": 48,
+          "task_id": "048_077",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            666,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            752,
+            500
+          ],
+          "resized_size": [
+            112,
+            74
+          ],
+          "paste_xy": [
+            112,
+            75
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0057",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_05524",
+          "class_id": 65,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03568",
+          "class_id": 71,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 65,
+          "distractor": 97,
+          "task_id": "065_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 65,
+          "distractor": 31,
+          "task_id": "031_065",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 71,
+          "distractor": 42,
+          "task_id": "042_071",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 71,
+          "distractor": 63,
+          "task_id": "063_071",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            624,
+            500
+          ],
+          "resized_size": [
+            140,
+            112
+          ],
+          "paste_xy": [
+            42,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            540,
+            500
+          ],
+          "resized_size": [
+            121,
+            112
+          ],
+          "paste_xy": [
+            51,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0058",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_03033",
+          "class_id": 91,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_02239",
+          "class_id": 40,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 91,
+          "distractor": 73,
+          "task_id": "073_091",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 91,
+          "distractor": 7,
+          "task_id": "007_091",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 40,
+          "distractor": 28,
+          "task_id": "028_040",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 40,
+          "distractor": 62,
+          "task_id": "040_062",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            667,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            112,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0059",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_04985",
+          "class_id": 46,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_05583",
+          "class_id": 65,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 46,
+          "distractor": 73,
+          "task_id": "046_073",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 46,
+          "distractor": 94,
+          "task_id": "046_094",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 65,
+          "distractor": 97,
+          "task_id": "065_097",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 65,
+          "distractor": 31,
+          "task_id": "031_065",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            521,
+            500
+          ],
+          "resized_size": [
+            117,
+            112
+          ],
+          "paste_xy": [
+            53,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            751,
+            500
+          ],
+          "resized_size": [
+            168,
+            112
+          ],
+          "paste_xy": [
+            28,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0060",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_05265",
+          "class_id": 27,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_04512",
+          "class_id": 70,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 13,
+          "task_id": "013_027",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 27,
+          "distractor": 46,
+          "task_id": "027_046",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 70,
+          "distractor": 17,
+          "task_id": "017_070",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 70,
+          "distractor": 96,
+          "task_id": "070_096",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            648,
+            500
+          ],
+          "resized_size": [
+            145,
+            112
+          ],
+          "paste_xy": [
+            39,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            666,
+            500
+          ],
+          "resized_size": [
+            149,
+            112
+          ],
+          "paste_xy": [
+            37,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0061",
+      "layout": "vertical",
+      "sources": [
+        {
+          "image_id": "image_05834",
+          "class_id": 37,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_00017",
+          "class_id": 76,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 37,
+          "distractor": 68,
+          "task_id": "037_068",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 37,
+          "distractor": 96,
+          "task_id": "037_096",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 76,
+          "distractor": 43,
+          "task_id": "043_076",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 76,
+          "distractor": 38,
+          "task_id": "038_076",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            624,
+            500
+          ],
+          "resized_size": [
+            140,
+            112
+          ],
+          "paste_xy": [
+            42,
+            0
+          ]
+        },
+        {
+          "original_size": [
+            531,
+            500
+          ],
+          "resized_size": [
+            119,
+            112
+          ],
+          "paste_xy": [
+            52,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0062",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_04654",
+          "class_id": 47,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_06456",
+          "class_id": 32,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 47,
+          "distractor": 82,
+          "task_id": "047_082",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 47,
+          "distractor": 62,
+          "task_id": "047_062",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 32,
+          "distractor": 36,
+          "task_id": "032_036",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 32,
+          "distractor": 28,
+          "task_id": "028_032",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            625,
+            500
+          ],
+          "resized_size": [
+            112,
+            90
+          ],
+          "paste_xy": [
+            0,
+            67
+          ]
+        },
+        {
+          "original_size": [
+            697,
+            500
+          ],
+          "resized_size": [
+            112,
+            80
+          ],
+          "paste_xy": [
+            112,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "composite_0063",
+      "layout": "horizontal",
+      "sources": [
+        {
+          "image_id": "image_03310",
+          "class_id": 7,
+          "split": "val",
+          "official_split": "valid"
+        },
+        {
+          "image_id": "image_03744",
+          "class_id": 36,
+          "split": "val",
+          "official_split": "valid"
+        }
+      ],
+      "tasks": [
+        {
+          "object_slot": 0,
+          "label": 7,
+          "distractor": 63,
+          "task_id": "007_063",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 0,
+          "label": 7,
+          "distractor": 13,
+          "task_id": "007_013",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 36,
+          "distractor": 32,
+          "task_id": "032_036",
+          "task_split": "val"
+        },
+        {
+          "object_slot": 1,
+          "label": 36,
+          "distractor": 23,
+          "task_id": "023_036",
+          "task_split": "val"
+        }
+      ],
+      "transforms": [
+        {
+          "original_size": [
+            666,
+            500
+          ],
+          "resized_size": [
+            112,
+            84
+          ],
+          "paste_xy": [
+            0,
+            70
+          ]
+        },
+        {
+          "original_size": [
+            500,
+            600
+          ],
+          "resized_size": [
+            112,
+            134
+          ],
+          "paste_xy": [
+            112,
+            45
+          ]
+        }
+      ]
+    }
+  ]
+}

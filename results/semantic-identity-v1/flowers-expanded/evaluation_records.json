@@ -1,0 +1,74 @@
+[
+  {
+    "seed": 2041,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2041_real_text.pt",
+    "evaluation_seconds": 3.1759428419172764
+  },
+  {
+    "seed": 2041,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2041_permuted_2097.pt",
+    "evaluation_seconds": 2.9987758840434253
+  },
+  {
+    "seed": 2041,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2041_permuted_2098.pt",
+    "evaluation_seconds": 3.03390205593314
+  },
+  {
+    "seed": 2041,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2041_image_only_wide.pt",
+    "evaluation_seconds": 0.46831143891904503
+  },
+  {
+    "seed": 2042,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2042_real_text.pt",
+    "evaluation_seconds": 3.0289070958970115
+  },
+  {
+    "seed": 2042,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2042_permuted_2097.pt",
+    "evaluation_seconds": 3.0167390930000693
+  },
+  {
+    "seed": 2042,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2042_permuted_2098.pt",
+    "evaluation_seconds": 3.0333976169349626
+  },
+  {
+    "seed": 2042,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2042_image_only_wide.pt",
+    "evaluation_seconds": 0.45418623404111713
+  },
+  {
+    "seed": 2043,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2043_real_text.pt",
+    "evaluation_seconds": 3.000232194084674
+  },
+  {
+    "seed": 2043,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2043_permuted_2097.pt",
+    "evaluation_seconds": 3.0067439780104905
+  },
+  {
+    "seed": 2043,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2043_permuted_2098.pt",
+    "evaluation_seconds": 2.9961516009643674
+  },
+  {
+    "seed": 2043,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-semantic-identity-v1/class_holdout/seed_2043_image_only_wide.pt",
+    "evaluation_seconds": 0.4423080279957503
+  }
+]

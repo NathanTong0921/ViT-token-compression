@@ -1,0 +1,599 @@
+{
+  "code_commit": "43f5c4fad29bb976cbb53c6e01fb5aefbfd5af21",
+  "final_test_used": false,
+  "regimes": {
+    "known_classes": {
+      "strata": {
+        "unseen_combinations": {
+          "images": 716,
+          "examples": 2624,
+          "tasks": 66,
+          "full_model_accuracy_percent": 99.26435406698563,
+          "full_model_margin": 0.12604220506255834,
+          "metrics": {
+            "correct": {
+              "unit": "percentage points",
+              "arms": {
+                "real_text": {
+                  "mean": 98.99189261031366,
+                  "per_seed": [
+                    98.98724082934608,
+                    99.03508771929825,
+                    98.95334928229664
+                  ]
+                },
+                "permuted_2097": {
+                  "mean": 99.01847421584263,
+                  "per_seed": [
+                    99.18460925039872,
+                    98.9114832535885,
+                    98.95933014354067
+                  ]
+                },
+                "permuted_2098": {
+                  "mean": 99.03176501860712,
+                  "per_seed": [
+                    99.03110047846889,
+                    98.99322169059012,
+                    99.07097288676235
+                  ]
+                },
+                "image_only_wide": {
+                  "mean": 99.01714513556618,
+                  "per_seed": [
+                    98.98923444976077,
+                    98.99122807017542,
+                    99.07097288676235
+                  ]
+                }
+              },
+              "contrasts": {
+                "real_minus_permuted_mean": {
+                  "estimate": -0.033227006911217404,
+                  "ci95": [
+                    -0.22565939748835537,
+                    0.13864827487407003
+                  ],
+                  "images": 716,
+                  "examples": 2624
+                },
+                "real_minus_wide": {
+                  "estimate": -0.025252525252525304,
+                  "ci95": [
+                    -0.208024717421051,
+                    0.16907655347228678
+                  ],
+                  "images": 716,
+                  "examples": 2624
+                },
+                "permuted_mean_minus_wide": {
+                  "estimate": 0.007974481658692098,
+                  "ci95": [
+                    -0.14508296145109895,
+                    0.17138573288462888
+                  ],
+                  "images": 716,
+                  "examples": 2624
+                }
+              }
+            },
+            "margin": {
+              "unit": "geometric margin",
+              "arms": {
+                "real_text": {
+                  "mean": 0.1146927931027215,
+                  "per_seed": [
+                    0.11409210356335352,
+                    0.11536277515013157,
+                    0.11462350060064115
+                  ]
+                },
+                "permuted_2097": {
+                  "mean": 0.1148214422602615,
+                  "per_seed": [
+                    0.11459782964612879,
+                    0.11566050856201295,
+                    0.11420598827704632
+                  ]
+                },
+                "permuted_2098": {
+                  "mean": 0.11469981306986869,
+                  "per_seed": [
+                    0.11394955695911872,
+                    0.11445348686329991,
+                    0.11569639483894194
+                  ]
+                },
+                "image_only_wide": {
+                  "mean": 0.11721680395320731,
+                  "per_seed": [
+                    0.11722213699683905,
+                    0.11749415430823862,
+                    0.11693412059011464
+                  ]
+                }
+              },
+              "contrasts": {
+                "real_minus_permuted_mean": {
+                  "estimate": -6.783468275779544e-05,
+                  "ci95": [
+                    -0.0004956768919962987,
+                    0.00034248309106945686
+                  ],
+                  "images": 716,
+                  "examples": 2624
+                },
+                "real_minus_wide": {
+                  "estimate": -0.0025240108513468625,
+                  "ci95": [
+                    -0.0032607827796167135,
+                    -0.0017702443240818111
+                  ],
+                  "images": 716,
+                  "examples": 2624
+                },
+                "permuted_mean_minus_wide": {
+                  "estimate": -0.0024561761672522407,
+                  "ci95": [
+                    -0.003061841410786769,
+                    -0.001797805745243381
+                  ],
+                  "images": 716,
+                  "examples": 2624
+                }
+              }
+            }
+          }
+        }
+      },
+      "interactions": {},
+      "uncertainty": "Paired image bootstrap after averaging all fixed weight seeds and both mappings; conditional on this class/task partition. Mapping-specific and seed-specific estimates retained."
+    },
+    "class_holdout": {
+      "strata": {
+        "known_known": {
+          "images": 517,
+          "examples": 1508,
+          "tasks": 38,
+          "full_model_accuracy_percent": 99.52216066481994,
+          "full_model_margin": 0.1263051833756987,
+          "metrics": {
+            "correct": {
+              "unit": "percentage points",
+              "arms": {
+                "real_text": {
+                  "mean": 99.29709141274236,
+                  "per_seed": [
+                    99.45983379501384,
+                    99.1101108033241,
+                    99.32132963988919
+                  ]
+                },
+                "permuted_2097": {
+                  "mean": 99.33864265927977,
+                  "per_seed": [
+                    99.1759002770083,
+                    99.38365650969529,
+                    99.4563711911357
+                  ]
+                },
+                "permuted_2098": {
+                  "mean": 99.33864265927977,
+                  "per_seed": [
+                    98.97506925207755,
+                    99.38365650969529,
+                    99.65720221606645
+                  ]
+                },
+                "image_only_wide": {
+                  "mean": 99.27400738688826,
+                  "per_seed": [
+                    99.38711911357339,
+                    99.18628808864264,
+                    99.24861495844874
+                  ]
+                }
+              },
+              "contrasts": {
+                "real_minus_permuted_mean": {
+                  "estimate": -0.041551246537396086,
+                  "ci95": [
+                    -0.28122783078890357,
+                    0.16702790802738804
+                  ],
+                  "images": 517,
+                  "examples": 1508
+                },
+                "real_minus_wide": {
+                  "estimate": 0.02308402585410894,
+                  "ci95": [
+                    -0.2753048706191908,
+                    0.3185088765971958
+                  ],
+                  "images": 517,
+                  "examples": 1508
+                },
+                "permuted_mean_minus_wide": {
+                  "estimate": 0.06463527239150504,
+                  "ci95": [
+                    -0.14219781324494196,
+                    0.30635068292983036
+                  ],
+                  "images": 517,
+                  "examples": 1508
+                }
+              }
+            },
+            "margin": {
+              "unit": "geometric margin",
+              "arms": {
+                "real_text": {
+                  "mean": 0.11664855975049504,
+                  "per_seed": [
+                    0.11624882300754792,
+                    0.11620856055079783,
+                    0.11748829514508242
+                  ]
+                },
+                "permuted_2097": {
+                  "mean": 0.11548049667720502,
+                  "per_seed": [
+                    0.11474989244609655,
+                    0.11579823179820772,
+                    0.11589336535602987
+                  ]
+                },
+                "permuted_2098": {
+                  "mean": 0.1153721919333739,
+                  "per_seed": [
+                    0.11408426319976167,
+                    0.11566162860538617,
+                    0.1163706844119578
+                  ]
+                },
+                "image_only_wide": {
+                  "mean": 0.11854077617882014,
+                  "per_seed": [
+                    0.11824197683121299,
+                    0.11888391134367628,
+                    0.11849644002315997
+                  ]
+                }
+              },
+              "contrasts": {
+                "real_minus_permuted_mean": {
+                  "estimate": 0.0012222154114983586,
+                  "ci95": [
+                    0.0006835558542814094,
+                    0.0017732761745738736
+                  ],
+                  "images": 517,
+                  "examples": 1508
+                },
+                "real_minus_wide": {
+                  "estimate": -0.0018922164306106497,
+                  "ci95": [
+                    -0.0026596045343156194,
+                    -0.0011281149572697567
+                  ],
+                  "images": 517,
+                  "examples": 1508
+                },
+                "permuted_mean_minus_wide": {
+                  "estimate": -0.0031144318391502536,
+                  "ci95": [
+                    -0.0038095352892894155,
+                    -0.0024416368278280536
+                  ],
+                  "images": 517,
+                  "examples": 1508
+                }
+              }
+            }
+          }
+        },
+        "known_new": {
+          "images": 518,
+          "examples": 1036,
+          "tasks": 26,
+          "full_model_accuracy_percent": 98.83097165991904,
+          "full_model_margin": 0.1236586374194215,
+          "metrics": {
+            "correct": {
+              "unit": "percentage points",
+              "arms": {
+                "real_text": {
+                  "mean": 98.80060728744941,
+                  "per_seed": [
+                    98.83603238866398,
+                    98.64372469635627,
+                    98.92206477732795
+                  ]
+                },
+                "permuted_2097": {
+                  "mean": 98.5391363022942,
+                  "per_seed": [
+                    98.63360323886641,
+                    98.44129554655872,
+                    98.54251012145751
+                  ]
+                },
+                "permuted_2098": {
+                  "mean": 98.67408906882594,
+                  "per_seed": [
+                    98.7348178137652,
+                    98.73987854251013,
+                    98.54757085020243
+                  ]
+                },
+                "image_only_wide": {
+                  "mean": 98.89676113360325,
+                  "per_seed": [
+                    98.7348178137652,
+                    98.93218623481783,
+                    99.02327935222674
+                  ]
+                }
+              },
+              "contrasts": {
+                "real_minus_permuted_mean": {
+                  "estimate": 0.19399460188933879,
+                  "ci95": [
+                    -0.08650044008913799,
+                    0.4885354939556717
+                  ],
+                  "images": 518,
+                  "examples": 1036
+                },
+                "real_minus_wide": {
+                  "estimate": -0.0961538461538462,
+                  "ci95": [
+                    -0.3694126370249082,
+                    0.16314845868458877
+                  ],
+                  "images": 518,
+                  "examples": 1036
+                },
+                "permuted_mean_minus_wide": {
+                  "estimate": -0.29014844804318496,
+                  "ci95": [
+                    -0.5362374544513757,
+                    -0.0945484701579932
+                  ],
+                  "images": 518,
+                  "examples": 1036
+                }
+              }
+            },
+            "margin": {
+              "unit": "geometric margin",
+              "arms": {
+                "real_text": {
+                  "mean": 0.11219417254773593,
+                  "per_seed": [
+                    0.11177736032531645,
+                    0.11180128380774076,
+                    0.11300387365238858
+                  ]
+                },
+                "permuted_2097": {
+                  "mean": 0.11153652171418552,
+                  "per_seed": [
+                    0.11089209590105675,
+                    0.11242942792498502,
+                    0.1112880416538232
+                  ]
+                },
+                "permuted_2098": {
+                  "mean": 0.11222699209880409,
+                  "per_seed": [
+                    0.11169133650584728,
+                    0.11263524505953347,
+                    0.11235439385395754
+                  ]
+                },
+                "image_only_wide": {
+                  "mean": 0.1148560708645267,
+                  "per_seed": [
+                    0.11497735764770273,
+                    0.11462690467801423,
+                    0.11496394985527589
+                  ]
+                }
+              },
+              "contrasts": {
+                "real_minus_permuted_mean": {
+                  "estimate": 0.00031241555388324973,
+                  "ci95": [
+                    -0.00040617705164396804,
+                    0.0010314534290889975
+                  ],
+                  "images": 518,
+                  "examples": 1036
+                },
+                "real_minus_wide": {
+                  "estimate": -0.00266189831914663,
+                  "ci95": [
+                    -0.0035236191223613194,
+                    -0.0018326126221866507
+                  ],
+                  "images": 518,
+                  "examples": 1036
+                },
+                "permuted_mean_minus_wide": {
+                  "estimate": -0.0029743138733627477,
+                  "ci95": [
+                    -0.00378010622752105,
+                    -0.002165509112383994
+                  ],
+                  "images": 518,
+                  "examples": 1036
+                }
+              }
+            }
+          }
+        },
+        "new_new": {
+          "images": 80,
+          "examples": 80,
+          "tasks": 2,
+          "full_model_accuracy_percent": 100.0,
+          "full_model_margin": 0.15203199647367002,
+          "metrics": {
+            "correct": {
+              "unit": "percentage points",
+              "arms": {
+                "real_text": {
+                  "mean": 100.0,
+                  "per_seed": [
+                    100.0,
+                    100.0,
+                    100.0
+                  ]
+                },
+                "permuted_2097": {
+                  "mean": 100.0,
+                  "per_seed": [
+                    100.0,
+                    100.0,
+                    100.0
+                  ]
+                },
+                "permuted_2098": {
+                  "mean": 100.0,
+                  "per_seed": [
+                    100.0,
+                    100.0,
+                    100.0
+                  ]
+                },
+                "image_only_wide": {
+                  "mean": 100.0,
+                  "per_seed": [
+                    100.0,
+                    100.0,
+                    100.0
+                  ]
+                }
+              },
+              "contrasts": {
+                "real_minus_permuted_mean": {
+                  "estimate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0
+                  ],
+                  "images": 80,
+                  "examples": 80
+                },
+                "real_minus_wide": {
+                  "estimate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0
+                  ],
+                  "images": 80,
+                  "examples": 80
+                },
+                "permuted_mean_minus_wide": {
+                  "estimate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0
+                  ],
+                  "images": 80,
+                  "examples": 80
+                }
+              }
+            },
+            "margin": {
+              "unit": "geometric margin",
+              "arms": {
+                "real_text": {
+                  "mean": 0.1338075926527381,
+                  "per_seed": [
+                    0.13301474526524545,
+                    0.131473503401503,
+                    0.1369345239363611
+                  ]
+                },
+                "permuted_2097": {
+                  "mean": 0.1336098583415151,
+                  "per_seed": [
+                    0.13382460335269572,
+                    0.13426274256780743,
+                    0.132742229430005
+                  ]
+                },
+                "permuted_2098": {
+                  "mean": 0.13248968929983676,
+                  "per_seed": [
+                    0.13168310546316211,
+                    0.1330920373555273,
+                    0.1326939236838371
+                  ]
+                },
+                "image_only_wide": {
+                  "mean": 0.13781435042619705,
+                  "per_seed": [
+                    0.137956727296114,
+                    0.13805948048830033,
+                    0.13742684032768013
+                  ]
+                }
+              },
+              "contrasts": {
+                "real_minus_permuted_mean": {
+                  "estimate": 0.0007578182965517045,
+                  "ci95": [
+                    -0.0013319924124516548,
+                    0.002845232367981226
+                  ],
+                  "images": 80,
+                  "examples": 80
+                },
+                "real_minus_wide": {
+                  "estimate": -0.004006757773458959,
+                  "ci95": [
+                    -0.006681119692511857,
+                    -0.0014208601741120277
+                  ],
+                  "images": 80,
+                  "examples": 80
+                },
+                "permuted_mean_minus_wide": {
+                  "estimate": -0.0047645760700106635,
+                  "ci95": [
+                    -0.006846338135655972,
+                    -0.0026696719438768935
+                  ],
+                  "images": 80,
+                  "examples": 80
+                }
+              }
+            }
+          }
+        }
+      },
+      "interactions": {
+        "correct": {
+          "contrast": "new_new minus known_known",
+          "estimate": 0.04155124653739607,
+          "ci95": [
+            -0.1602546843080673,
+            0.26101274437604477
+          ]
+        },
+        "margin": {
+          "contrast": "new_new minus known_known",
+          "estimate": -0.00046439711494665405,
+          "ci95": [
+            -0.002652824182325159,
+            0.0018040668634055838
+          ]
+        }
+      },
+      "uncertainty": "Paired image bootstrap after averaging all fixed weight seeds and both mappings; conditional on this class/task partition. Mapping-specific and seed-specific estimates retained."
+    }
+  }
+}

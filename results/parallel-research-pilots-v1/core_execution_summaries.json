@@ -1,0 +1,553 @@
+{
+  "pets_b16_98": {
+    "setting": "pets_b16_98",
+    "started_utc": "2026-11-03T13:30:10.838062+00:00",
+    "elapsed_seconds": 34.953112930990756,
+    "git_commit": "30f794d96f28985743f6668302abc6538cda33d3",
+    "config": {
+      "cache_dir": "runs/pets-selector-budget-98-supervision-v1",
+      "model": "ViT-B/16",
+      "model_cache": "cache/clip",
+      "data_root": "data/raw/oxford-iiit-pet",
+      "manifest_dir": "data/splits/pets-v1",
+      "baseline_dir": "results/pets-baseline-v1",
+      "prompt_template": "a photo of a {class_name}, a type of pet.",
+      "balance_seed": 2028,
+      "seed": 2026,
+      "device": "cuda:0",
+      "prune_after": 6,
+      "keep_patch_tokens": 98,
+      "probe_count": 512,
+      "mask_seed": 2031,
+      "ridge": 0.01,
+      "identity_atol": 1e-06,
+      "image_batch_size": 64,
+      "teacher_batch_size": 64,
+      "num_workers": 4,
+      "hidden_dim": 128,
+      "batch_size": 128,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "temperature": 1.0,
+      "source_cache_dir": "runs/pets-selector-supervision-v1",
+      "training_steps": 3990,
+      "checkpoint_interval": 133,
+      "coverages": [
+        "full"
+      ],
+      "bootstrap_seed": 2052,
+      "bootstrap_replicates": 2000,
+      "experiment_name": "pets_selector_ablations_98_v1",
+      "feature_cache_dir": "runs/pets-selector-scale-supervision-v1",
+      "random_seeds": [],
+      "objective": "kl",
+      "selector_arms": [
+        "mean_only",
+        "difference_only",
+        "image_only_wide"
+      ],
+      "wide_hidden_dim": 199,
+      "include_references": false
+    },
+    "cache_dir": "/data2/zhao.tong/experiments/runs/pets-selector-budget-98-supervision-v1",
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "random_core_seeds": [
+      2211,
+      2212,
+      2213
+    ],
+    "variants": [
+      "conditioned",
+      "wide",
+      "top_50",
+      "random_50_2211",
+      "random_50_2212",
+      "random_50_2213",
+      "top_75",
+      "random_75_2211",
+      "random_75_2212",
+      "random_75_2213"
+    ],
+    "protected_counts": {
+      "0": 0,
+      "50": 49,
+      "75": 73,
+      "100": 98
+    },
+    "scope": "All existing validation images on unseen validation class pairs; no reserved test data.",
+    "image_count": 716,
+    "image_task_count": 2624,
+    "task_count": 66,
+    "runs": [
+      {
+        "seed": 2041,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/pets-selector-budget-98-training-v1/full/seed_2041/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/pets-selector-ablations-98-training-v1/full/seed_2041/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.39646843704394996,
+        "suffix_seconds": 5.541514041018672,
+        "unique_image_masks": 24144,
+        "raw_image_masks": 26240
+      },
+      {
+        "seed": 2042,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/pets-selector-budget-98-training-v1/full/seed_2042/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/pets-selector-ablations-98-training-v1/full/seed_2042/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.3637531320564449,
+        "suffix_seconds": 5.400253655039705,
+        "unique_image_masks": 24097,
+        "raw_image_masks": 26240
+      },
+      {
+        "seed": 2043,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/pets-selector-budget-98-training-v1/full/seed_2043/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/pets-selector-ablations-98-training-v1/full/seed_2043/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.33172222203575075,
+        "suffix_seconds": 5.436858687084168,
+        "unique_image_masks": 24123,
+        "raw_image_masks": 26240
+      }
+    ],
+    "implementation": "Frozen selectors. Fixed spatially sorted k. Rank ties use patch index. Random cores are nested image-local subsets of the wide top-k. Identical image/mask pairs reuse one fixed-batch suffix result.",
+    "cost_scope": "Cached-prefix replay only; this two-selector diagnostic does not establish deployment speed."
+  },
+  "flowers_b16_98": {
+    "setting": "flowers_b16_98",
+    "started_utc": "2026-11-03T13:19:42.493250+00:00",
+    "elapsed_seconds": 54.06530553009361,
+    "git_commit": "25d2f82b832269bfdf3ec97d6d5e16502fa2ab82",
+    "config": {
+      "cache_dir": "runs/flowers-selector-budget-98-supervision-v1",
+      "model": "ViT-B/16",
+      "model_cache": "cache/clip",
+      "data_root": "data/raw/flowers102",
+      "manifest_dir": "data/splits/flowers-v1",
+      "baseline_dir": "runs/flowers-features-v1",
+      "prompt_template": "a photo of a {class_name}, a type of flower.",
+      "balance_seed": 2028,
+      "seed": 2026,
+      "device": "cuda:0",
+      "prune_after": 6,
+      "keep_patch_tokens": 98,
+      "probe_count": 512,
+      "mask_seed": 2031,
+      "ridge": 0.01,
+      "identity_atol": 1e-06,
+      "image_batch_size": 64,
+      "teacher_batch_size": 64,
+      "num_workers": 4,
+      "hidden_dim": 128,
+      "batch_size": 128,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "temperature": 1.0,
+      "source_cache_dir": "runs/flowers-features-v1",
+      "training_steps": 3978,
+      "checkpoint_interval": 153,
+      "coverages": [
+        "full"
+      ],
+      "bootstrap_seed": 2052,
+      "bootstrap_replicates": 2000,
+      "experiment_name": "flowers_selector_ablations_98_v1",
+      "feature_cache_dir": "runs/flowers-features-v1",
+      "random_seeds": [],
+      "objective": "kl",
+      "selector_arms": [
+        "mean_only",
+        "difference_only",
+        "image_only_wide"
+      ],
+      "wide_hidden_dim": 199,
+      "include_references": false
+    },
+    "cache_dir": "/data2/zhao.tong/experiments/runs/flowers-selector-budget-98-supervision-v1",
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "random_core_seeds": [
+      2211,
+      2212,
+      2213
+    ],
+    "variants": [
+      "conditioned",
+      "wide",
+      "top_50",
+      "random_50_2211",
+      "random_50_2212",
+      "random_50_2213",
+      "top_75",
+      "random_75_2211",
+      "random_75_2212",
+      "random_75_2213"
+    ],
+    "protected_counts": {
+      "0": 0,
+      "50": 49,
+      "75": 73,
+      "100": 98
+    },
+    "scope": "All existing validation images on unseen validation class pairs; no reserved test data.",
+    "image_count": 1020,
+    "image_task_count": 4080,
+    "task_count": 204,
+    "runs": [
+      {
+        "seed": 2041,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/flowers-selector-budget-98-training-v1/full/seed_2041/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-98-training-v1/full/seed_2041/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.6090875689405948,
+        "suffix_seconds": 8.576082772924565,
+        "unique_image_masks": 37739,
+        "raw_image_masks": 40800
+      },
+      {
+        "seed": 2042,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/flowers-selector-budget-98-training-v1/full/seed_2042/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-98-training-v1/full/seed_2042/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.578276940039359,
+        "suffix_seconds": 8.467557243071496,
+        "unique_image_masks": 37739,
+        "raw_image_masks": 40800
+      },
+      {
+        "seed": 2043,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/flowers-selector-budget-98-training-v1/full/seed_2043/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-98-training-v1/full/seed_2043/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.5349765670252964,
+        "suffix_seconds": 8.56833519297652,
+        "unique_image_masks": 37738,
+        "raw_image_masks": 40800
+      }
+    ],
+    "implementation": "Frozen selectors. Fixed spatially sorted k. Rank ties use patch index. Random cores are nested image-local subsets of the wide top-k. Identical image/mask pairs reuse one fixed-batch suffix result.",
+    "cost_scope": "Cached-prefix replay only; this two-selector diagnostic does not establish deployment speed."
+  },
+  "pets_b16_49": {
+    "setting": "pets_b16_49",
+    "started_utc": "2026-11-03T13:19:10.454782+00:00",
+    "elapsed_seconds": 28.598786352900788,
+    "git_commit": "25d2f82b832269bfdf3ec97d6d5e16502fa2ab82",
+    "config": {
+      "cache_dir": "runs/pets-selector-scale-supervision-v1",
+      "model": "ViT-B/16",
+      "model_cache": "cache/clip",
+      "data_root": "data/raw/oxford-iiit-pet",
+      "manifest_dir": "data/splits/pets-v1",
+      "baseline_dir": "results/pets-baseline-v1",
+      "prompt_template": "a photo of a {class_name}, a type of pet.",
+      "balance_seed": 2028,
+      "seed": 2026,
+      "device": "cuda:0",
+      "prune_after": 6,
+      "keep_patch_tokens": 49,
+      "probe_count": 512,
+      "mask_seed": 2031,
+      "ridge": 0.01,
+      "identity_atol": 1e-06,
+      "image_batch_size": 64,
+      "teacher_batch_size": 64,
+      "num_workers": 4,
+      "hidden_dim": 128,
+      "batch_size": 128,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "temperature": 1.0,
+      "source_cache_dir": "runs/pets-selector-supervision-v1",
+      "training_steps": 3990,
+      "checkpoint_interval": 133,
+      "coverages": [
+        "full"
+      ],
+      "bootstrap_seed": 2052,
+      "bootstrap_replicates": 2000,
+      "experiment_name": "pets_selector_ablations_49_v1",
+      "objective": "kl",
+      "selector_arms": [
+        "mean_only",
+        "difference_only",
+        "image_only_wide"
+      ],
+      "wide_hidden_dim": 199,
+      "include_references": false,
+      "random_seeds": []
+    },
+    "cache_dir": "/data2/zhao.tong/experiments/runs/pets-selector-scale-supervision-v1",
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "random_core_seeds": [
+      2211,
+      2212,
+      2213
+    ],
+    "variants": [
+      "conditioned",
+      "wide",
+      "top_50",
+      "random_50_2211",
+      "random_50_2212",
+      "random_50_2213",
+      "top_75",
+      "random_75_2211",
+      "random_75_2212",
+      "random_75_2213"
+    ],
+    "protected_counts": {
+      "0": 0,
+      "50": 24,
+      "75": 36,
+      "100": 49
+    },
+    "scope": "All existing validation images on unseen validation class pairs; no reserved test data.",
+    "image_count": 716,
+    "image_task_count": 2624,
+    "task_count": 66,
+    "runs": [
+      {
+        "seed": 2041,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/pets-selector-scale-training-v1/full/seed_2041/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/pets-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.41160933405626565,
+        "suffix_seconds": 3.3707214879104868,
+        "unique_image_masks": 23830,
+        "raw_image_masks": 26240
+      },
+      {
+        "seed": 2042,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/pets-selector-scale-training-v1/full/seed_2042/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/pets-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.34133611794095486,
+        "suffix_seconds": 3.223945821984671,
+        "unique_image_masks": 23466,
+        "raw_image_masks": 26240
+      },
+      {
+        "seed": 2043,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/pets-selector-scale-training-v1/full/seed_2043/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/pets-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.3446780820377171,
+        "suffix_seconds": 3.299353635055013,
+        "unique_image_masks": 23954,
+        "raw_image_masks": 26240
+      }
+    ],
+    "implementation": "Frozen selectors. Fixed spatially sorted k. Rank ties use patch index. Random cores are nested image-local subsets of the wide top-k. Identical image/mask pairs reuse one fixed-batch suffix result.",
+    "cost_scope": "Cached-prefix replay only; this two-selector diagnostic does not establish deployment speed."
+  },
+  "flowers_b16_49": {
+    "setting": "flowers_b16_49",
+    "started_utc": "2026-11-03T13:30:54.564901+00:00",
+    "elapsed_seconds": 44.10256859892979,
+    "git_commit": "30f794d96f28985743f6668302abc6538cda33d3",
+    "config": {
+      "cache_dir": "runs/flowers-selector-budget-49-supervision-v1",
+      "model": "ViT-B/16",
+      "model_cache": "cache/clip",
+      "data_root": "data/raw/flowers102",
+      "manifest_dir": "data/splits/flowers-v1",
+      "baseline_dir": "runs/flowers-features-v1",
+      "prompt_template": "a photo of a {class_name}, a type of flower.",
+      "balance_seed": 2028,
+      "seed": 2026,
+      "device": "cuda:0",
+      "prune_after": 6,
+      "keep_patch_tokens": 49,
+      "probe_count": 512,
+      "mask_seed": 2031,
+      "ridge": 0.01,
+      "identity_atol": 1e-06,
+      "image_batch_size": 64,
+      "teacher_batch_size": 64,
+      "num_workers": 4,
+      "hidden_dim": 128,
+      "batch_size": 128,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "temperature": 1.0,
+      "source_cache_dir": "runs/flowers-features-v1",
+      "training_steps": 3978,
+      "checkpoint_interval": 153,
+      "coverages": [
+        "full"
+      ],
+      "bootstrap_seed": 2052,
+      "bootstrap_replicates": 2000,
+      "experiment_name": "flowers_selector_ablations_49_v1",
+      "feature_cache_dir": "runs/flowers-features-v1",
+      "random_seeds": [],
+      "objective": "kl",
+      "selector_arms": [
+        "mean_only",
+        "difference_only",
+        "image_only_wide"
+      ],
+      "wide_hidden_dim": 199,
+      "include_references": false
+    },
+    "cache_dir": "/data2/zhao.tong/experiments/runs/flowers-selector-budget-49-supervision-v1",
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "random_core_seeds": [
+      2211,
+      2212,
+      2213
+    ],
+    "variants": [
+      "conditioned",
+      "wide",
+      "top_50",
+      "random_50_2211",
+      "random_50_2212",
+      "random_50_2213",
+      "top_75",
+      "random_75_2211",
+      "random_75_2212",
+      "random_75_2213"
+    ],
+    "protected_counts": {
+      "0": 0,
+      "50": 24,
+      "75": 36,
+      "100": 49
+    },
+    "scope": "All existing validation images on unseen validation class pairs; no reserved test data.",
+    "image_count": 1020,
+    "image_task_count": 4080,
+    "task_count": 204,
+    "runs": [
+      {
+        "seed": 2041,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/flowers-selector-budget-49-training-v1/full/seed_2041/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.5845559809822589,
+        "suffix_seconds": 5.388312867027707,
+        "unique_image_masks": 37730,
+        "raw_image_masks": 40800
+      },
+      {
+        "seed": 2042,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/flowers-selector-budget-49-training-v1/full/seed_2042/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.5929345219628885,
+        "suffix_seconds": 5.2347605609102175,
+        "unique_image_masks": 37727,
+        "raw_image_masks": 40800
+      },
+      {
+        "seed": 2043,
+        "checkpoint_paths": {
+          "conditioned": "/data2/zhao.tong/experiments/runs/flowers-selector-budget-49-training-v1/full/seed_2043/conditioned.pt",
+          "image_only_wide": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt"
+        },
+        "parameters": {
+          "conditioned": 348033,
+          "image_only_wide": 347399
+        },
+        "selector_seconds": 0.535929965088144,
+        "suffix_seconds": 5.4824816030450165,
+        "unique_image_masks": 37737,
+        "raw_image_masks": 40800
+      }
+    ],
+    "implementation": "Frozen selectors. Fixed spatially sorted k. Rank ties use patch index. Random cores are nested image-local subsets of the wide top-k. Identical image/mask pairs reuse one fixed-batch suffix result.",
+    "cost_scope": "Cached-prefix replay only; this two-selector diagnostic does not establish deployment speed."
+  }
+}

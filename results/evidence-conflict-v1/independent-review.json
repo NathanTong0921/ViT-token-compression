@@ -1,0 +1,426 @@
+{
+  "source_root": "/data2/zhao.tong/experiments/runs/evidence-conflict-v1",
+  "source_code_commit": "43f5c4fad29bb976cbb53c6e01fb5aefbfd5af21",
+  "analysis_type": "Read-only secondary analysis of completed exploratory pilot; no new training or GPU inference.",
+  "four_task_definition": "On each composite, two binary tasks per each of two source objects. Separate feasibility: every task has at least one correct mask. Common feasibility: one mask gets all four correct. Conflict: separate feasibility without common feasibility.",
+  "library": "35 masks: 32 fixed random, uniform, tile0, tile1; attention excluded, mask positions identical across layers at each budget.",
+  "primary_subset": "All four tasks correct under the native full CLIP model. All-image counts also retained.",
+  "datasets": {
+    "pets": {
+      "native_task_accuracy": 0.90625,
+      "native_all_four_correct_count": 46,
+      "composites": 64,
+      "unique_source_images": 118,
+      "unique_source_classes": 31,
+      "original_cls_diagnostic": [
+        {
+          "layer": "0",
+          "keep": "196",
+          "method": "native_full",
+          "images": "74",
+          "binary_examples": "264",
+          "multiclass_accuracy": "0.918918918918919",
+          "binary_accuracy": "0.9924242424242424",
+          "binary_mean_cosine_margin": "0.11554457247257233"
+        },
+        {
+          "layer": "3",
+          "keep": "0",
+          "method": "cls_only",
+          "images": "74",
+          "binary_examples": "264",
+          "multiclass_accuracy": "0.02702702702702703",
+          "binary_accuracy": "0.5",
+          "binary_mean_cosine_margin": "-5.89702176512219e-06"
+        },
+        {
+          "layer": "6",
+          "keep": "0",
+          "method": "cls_only",
+          "images": "74",
+          "binary_examples": "264",
+          "multiclass_accuracy": "0.02702702702702703",
+          "binary_accuracy": "0.5",
+          "binary_mean_cosine_margin": "6.371352355927229e-05"
+        }
+      ],
+      "layout_native_task_accuracy": {
+        "horizontal": {
+          "images": 28,
+          "task_accuracy": 0.9107142857142857
+        },
+        "vertical": {
+          "images": 36,
+          "task_accuracy": 0.9027777777777778
+        }
+      },
+      "four_way": [
+        {
+          "layer": 3,
+          "keep": 16,
+          "source_predictions": "/data2/zhao.tong/experiments/runs/evidence-conflict-v1/pets/composite_layer3_k16.npz",
+          "all_images": {
+            "images": 64,
+            "separately_feasible_count": 59,
+            "common_feasible_count": 54,
+            "conflict_count": 5,
+            "conflict_fraction": 0.078125
+          },
+          "native_all_four_correct": {
+            "images": 46,
+            "separately_feasible_count": 44,
+            "common_feasible_count": 40,
+            "conflict_count": 4,
+            "conflict_fraction": 0.08695652173913043
+          }
+        },
+        {
+          "layer": 3,
+          "keep": 49,
+          "source_predictions": "/data2/zhao.tong/experiments/runs/evidence-conflict-v1/pets/composite_layer3_k49.npz",
+          "all_images": {
+            "images": 64,
+            "separately_feasible_count": 63,
+            "common_feasible_count": 61,
+            "conflict_count": 2,
+            "conflict_fraction": 0.03125
+          },
+          "native_all_four_correct": {
+            "images": 46,
+            "separately_feasible_count": 46,
+            "common_feasible_count": 46,
+            "conflict_count": 0,
+            "conflict_fraction": 0.0
+          }
+        },
+        {
+          "layer": 6,
+          "keep": 16,
+          "source_predictions": "/data2/zhao.tong/experiments/runs/evidence-conflict-v1/pets/composite_layer6_k16.npz",
+          "all_images": {
+            "images": 64,
+            "separately_feasible_count": 57,
+            "common_feasible_count": 47,
+            "conflict_count": 10,
+            "conflict_fraction": 0.15625
+          },
+          "native_all_four_correct": {
+            "images": 46,
+            "separately_feasible_count": 44,
+            "common_feasible_count": 38,
+            "conflict_count": 6,
+            "conflict_fraction": 0.13043478260869565
+          }
+        },
+        {
+          "layer": 6,
+          "keep": 49,
+          "source_predictions": "/data2/zhao.tong/experiments/runs/evidence-conflict-v1/pets/composite_layer6_k49.npz",
+          "all_images": {
+            "images": 64,
+            "separately_feasible_count": 63,
+            "common_feasible_count": 61,
+            "conflict_count": 2,
+            "conflict_fraction": 0.03125
+          },
+          "native_all_four_correct": {
+            "images": 46,
+            "separately_feasible_count": 46,
+            "common_feasible_count": 46,
+            "conflict_count": 0,
+            "conflict_fraction": 0.0
+          }
+        }
+      ],
+      "angle_adjusted_mean_margin_contrasts": [
+        {
+          "layer": "3",
+          "keep": "16",
+          "outcome": "mean_margin_gap",
+          "different_object_coefficient": "0.009942783575585796",
+          "design_full_rank": "True",
+          "angle_adjusted_different_object_coefficient": "0.0014683412373824372",
+          "angle_design_full_rank": "True",
+          "same_object_angle_min": "46.79520094403337",
+          "same_object_angle_max": "84.39790941391728",
+          "different_object_angle_min": "51.816829911259056",
+          "different_object_angle_max": "119.34827086019955",
+          "common_difficulty_cells": "18",
+          "common_difficulty_and_angle_cells": "18",
+          "difficulty_and_angle_matched_pairs_per_group": "67",
+          "matched_effective_pairs_per_group": "123",
+          "difficulty_bin_standardized_difference": "0.009847115286313341"
+        },
+        {
+          "layer": "3",
+          "keep": "49",
+          "outcome": "mean_margin_gap",
+          "different_object_coefficient": "0.017045206184170873",
+          "design_full_rank": "True",
+          "angle_adjusted_different_object_coefficient": "0.006439781991498234",
+          "angle_design_full_rank": "True",
+          "same_object_angle_min": "46.79520094403337",
+          "same_object_angle_max": "84.39790941391728",
+          "different_object_angle_min": "51.816829911259056",
+          "different_object_angle_max": "119.34827086019955",
+          "common_difficulty_cells": "18",
+          "common_difficulty_and_angle_cells": "18",
+          "difficulty_and_angle_matched_pairs_per_group": "67",
+          "matched_effective_pairs_per_group": "123",
+          "difficulty_bin_standardized_difference": "0.016205878487329545"
+        },
+        {
+          "layer": "6",
+          "keep": "16",
+          "outcome": "mean_margin_gap",
+          "different_object_coefficient": "0.012649805607800386",
+          "design_full_rank": "True",
+          "angle_adjusted_different_object_coefficient": "0.003002665521687413",
+          "angle_design_full_rank": "True",
+          "same_object_angle_min": "46.79520094403337",
+          "same_object_angle_max": "84.39790941391728",
+          "different_object_angle_min": "51.816829911259056",
+          "different_object_angle_max": "119.34827086019955",
+          "common_difficulty_cells": "18",
+          "common_difficulty_and_angle_cells": "18",
+          "difficulty_and_angle_matched_pairs_per_group": "67",
+          "matched_effective_pairs_per_group": "123",
+          "difficulty_bin_standardized_difference": "0.012075179699225952"
+        },
+        {
+          "layer": "6",
+          "keep": "49",
+          "outcome": "mean_margin_gap",
+          "different_object_coefficient": "0.018360030521113152",
+          "design_full_rank": "True",
+          "angle_adjusted_different_object_coefficient": "0.007693805924584789",
+          "angle_design_full_rank": "True",
+          "same_object_angle_min": "46.79520094403337",
+          "same_object_angle_max": "84.39790941391728",
+          "different_object_angle_min": "51.816829911259056",
+          "different_object_angle_max": "119.34827086019955",
+          "common_difficulty_cells": "18",
+          "common_difficulty_and_angle_cells": "18",
+          "difficulty_and_angle_matched_pairs_per_group": "67",
+          "matched_effective_pairs_per_group": "123",
+          "difficulty_bin_standardized_difference": "0.017956154716976612"
+        }
+      ]
+    },
+    "flowers": {
+      "native_task_accuracy": 0.859375,
+      "native_all_four_correct_count": 38,
+      "composites": 64,
+      "unique_source_images": 118,
+      "unique_source_classes": 71,
+      "original_cls_diagnostic": [
+        {
+          "layer": "0",
+          "keep": "196",
+          "method": "native_full",
+          "images": "204",
+          "binary_examples": "816",
+          "multiclass_accuracy": "0.6519607843137255",
+          "binary_accuracy": "0.9669117647058824",
+          "binary_mean_cosine_margin": "0.09711728990077972"
+        },
+        {
+          "layer": "3",
+          "keep": "0",
+          "method": "cls_only",
+          "images": "204",
+          "binary_examples": "816",
+          "multiclass_accuracy": "0.00980392156862745",
+          "binary_accuracy": "0.5",
+          "binary_mean_cosine_margin": "2.2022601115168072e-05"
+        },
+        {
+          "layer": "6",
+          "keep": "0",
+          "method": "cls_only",
+          "images": "204",
+          "binary_examples": "816",
+          "multiclass_accuracy": "0.00980392156862745",
+          "binary_accuracy": "0.5024509803921569",
+          "binary_mean_cosine_margin": "8.007686847122386e-05"
+        }
+      ],
+      "layout_native_task_accuracy": {
+        "horizontal": {
+          "images": 35,
+          "task_accuracy": 0.8785714285714286
+        },
+        "vertical": {
+          "images": 29,
+          "task_accuracy": 0.8362068965517241
+        }
+      },
+      "four_way": [
+        {
+          "layer": 3,
+          "keep": 16,
+          "source_predictions": "/data2/zhao.tong/experiments/runs/evidence-conflict-v1/flowers/composite_layer3_k16.npz",
+          "all_images": {
+            "images": 64,
+            "separately_feasible_count": 62,
+            "common_feasible_count": 52,
+            "conflict_count": 10,
+            "conflict_fraction": 0.15625
+          },
+          "native_all_four_correct": {
+            "images": 38,
+            "separately_feasible_count": 38,
+            "common_feasible_count": 36,
+            "conflict_count": 2,
+            "conflict_fraction": 0.05263157894736842
+          }
+        },
+        {
+          "layer": 3,
+          "keep": 49,
+          "source_predictions": "/data2/zhao.tong/experiments/runs/evidence-conflict-v1/flowers/composite_layer3_k49.npz",
+          "all_images": {
+            "images": 64,
+            "separately_feasible_count": 62,
+            "common_feasible_count": 54,
+            "conflict_count": 8,
+            "conflict_fraction": 0.125
+          },
+          "native_all_four_correct": {
+            "images": 38,
+            "separately_feasible_count": 38,
+            "common_feasible_count": 37,
+            "conflict_count": 1,
+            "conflict_fraction": 0.02631578947368421
+          }
+        },
+        {
+          "layer": 6,
+          "keep": 16,
+          "source_predictions": "/data2/zhao.tong/experiments/runs/evidence-conflict-v1/flowers/composite_layer6_k16.npz",
+          "all_images": {
+            "images": 64,
+            "separately_feasible_count": 56,
+            "common_feasible_count": 46,
+            "conflict_count": 10,
+            "conflict_fraction": 0.15625
+          },
+          "native_all_four_correct": {
+            "images": 38,
+            "separately_feasible_count": 35,
+            "common_feasible_count": 33,
+            "conflict_count": 2,
+            "conflict_fraction": 0.05263157894736842
+          }
+        },
+        {
+          "layer": 6,
+          "keep": 49,
+          "source_predictions": "/data2/zhao.tong/experiments/runs/evidence-conflict-v1/flowers/composite_layer6_k49.npz",
+          "all_images": {
+            "images": 64,
+            "separately_feasible_count": 61,
+            "common_feasible_count": 56,
+            "conflict_count": 5,
+            "conflict_fraction": 0.078125
+          },
+          "native_all_four_correct": {
+            "images": 38,
+            "separately_feasible_count": 38,
+            "common_feasible_count": 38,
+            "conflict_count": 0,
+            "conflict_fraction": 0.0
+          }
+        }
+      ],
+      "angle_adjusted_mean_margin_contrasts": [
+        {
+          "layer": "3",
+          "keep": "16",
+          "outcome": "mean_margin_gap",
+          "different_object_coefficient": "0.008522493140380902",
+          "design_full_rank": "True",
+          "angle_adjusted_different_object_coefficient": "-0.0010194719267417065",
+          "angle_design_full_rank": "True",
+          "same_object_angle_min": "38.30507282972179",
+          "same_object_angle_max": "78.40857779398235",
+          "different_object_angle_min": "64.45539975725325",
+          "different_object_angle_max": "109.47778127447258",
+          "common_difficulty_cells": "18",
+          "common_difficulty_and_angle_cells": "16",
+          "difficulty_and_angle_matched_pairs_per_group": "55",
+          "matched_effective_pairs_per_group": "122",
+          "difficulty_bin_standardized_difference": "0.008002174331142434"
+        },
+        {
+          "layer": "3",
+          "keep": "49",
+          "outcome": "mean_margin_gap",
+          "different_object_coefficient": "0.014796427893933345",
+          "design_full_rank": "True",
+          "angle_adjusted_different_object_coefficient": "0.005435183392087598",
+          "angle_design_full_rank": "True",
+          "same_object_angle_min": "38.30507282972179",
+          "same_object_angle_max": "78.40857779398235",
+          "different_object_angle_min": "64.45539975725325",
+          "different_object_angle_max": "109.47778127447258",
+          "common_difficulty_cells": "18",
+          "common_difficulty_and_angle_cells": "16",
+          "difficulty_and_angle_matched_pairs_per_group": "55",
+          "matched_effective_pairs_per_group": "122",
+          "difficulty_bin_standardized_difference": "0.014195282793860146"
+        },
+        {
+          "layer": "6",
+          "keep": "16",
+          "outcome": "mean_margin_gap",
+          "different_object_coefficient": "0.008881220208033584",
+          "design_full_rank": "True",
+          "angle_adjusted_different_object_coefficient": "-0.0009571531399286406",
+          "angle_design_full_rank": "True",
+          "same_object_angle_min": "38.30507282972179",
+          "same_object_angle_max": "78.40857779398235",
+          "different_object_angle_min": "64.45539975725325",
+          "different_object_angle_max": "109.47778127447258",
+          "common_difficulty_cells": "18",
+          "common_difficulty_and_angle_cells": "16",
+          "difficulty_and_angle_matched_pairs_per_group": "55",
+          "matched_effective_pairs_per_group": "122",
+          "difficulty_bin_standardized_difference": "0.008596191737700614"
+        },
+        {
+          "layer": "6",
+          "keep": "49",
+          "outcome": "mean_margin_gap",
+          "different_object_coefficient": "0.013617714478111553",
+          "design_full_rank": "True",
+          "angle_adjusted_different_object_coefficient": "0.0038994988602004312",
+          "angle_design_full_rank": "True",
+          "same_object_angle_min": "38.30507282972179",
+          "same_object_angle_max": "78.40857779398235",
+          "different_object_angle_min": "64.45539975725325",
+          "different_object_angle_max": "109.47778127447258",
+          "common_difficulty_cells": "18",
+          "common_difficulty_and_angle_cells": "16",
+          "difficulty_and_angle_matched_pairs_per_group": "55",
+          "matched_effective_pairs_per_group": "122",
+          "difficulty_bin_standardized_difference": "0.012830220094619413"
+        }
+      ]
+    }
+  },
+  "conclusions": [
+    "Composite native task accuracy is viable (Pets90.625%, Flowers85.9375%); both layouts remain usable.",
+    "CLS-only native suffix inference is near binary chance at both tested layers. This does not support CLS-alone sufficiency as the explanation for current selector results. It does not measure all information decodable from CLS.",
+    "At49 patches, each native-both-correct pair has a common correct bank mask in both datasets/layers. Four-way common feasibility is also complete except one Flowers image at block3.",
+    "At16 patches, four-way conflicts on native-all-four-correct images occur in4/46 and6/46 Pets composites and2/38 Flowers composites at both layers. This is a small, concrete library-relative conflict signal, not a learned-selector advantage.",
+    "Different-object margin gaps are larger, but direction-angle adjustment removes most of the16-patch contrast.49-patch adjusted coefficients remain descriptively positive, while classification feasibility is nearly saturated.",
+    "No consistent depth-mediated reduction in conflict appears. A causal claim about shared information is not established by this screen."
+  ],
+  "design_obstacles": [
+    "Task object and text-direction angle change together; overlap of their angle distributions is limited, especially Flowers. Matching during task construction would be preferable to relying on regression.",
+    "At49 patches the panel creates a confidence tradeoff more clearly than an accuracy requirement for separate masks.",
+    "Source images can recur and the panel is small. The four-way counts are secondary exploratory summaries, with no independent confirmation yet.",
+    "Library choices use correct labels for feasibility diagnosis; common-mask existence does not show a shared selector can learn it, and missing masks from this finite library do not prove global impossibility."
+  ]
+}
