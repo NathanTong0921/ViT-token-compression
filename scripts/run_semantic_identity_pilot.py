@@ -170,7 +170,8 @@ def summarize(data, predictions, arms, seeds, strata, replicates):
     return report
 
 
-def run(config, output, regimes, permutation_seeds, partition_seed, replicates):
+def run(config, output, regimes, permutation_seeds, partition_seed, replicates, holdout_block=0,
+        fixed_mappings=None, reuse_references=None):
     import clip
     from token_compression.pruning import SingleStagePruner
 
@@ -184,14 +185,18 @@ def run(config, output, regimes, permutation_seeds, partition_seed, replicates):
     batch_size, temperature = config["batch_size"], config["temperature"]
     val = load_data(cache, "val", device, batch_size, temperature)
     classes = len(val["text"])
-    seen, held = class_partition(classes, partition_seed)
+    seen, held = class_partition(classes, partition_seed, holdout_block=holdout_block)
     backbone, _ = clip.load(config["model"], device=device, jit=False, download_root=config["model_cache"])
     backbone.eval().requires_grad_(False)
     pruner = SingleStagePruner(backbone.visual, config["prune_after"])
     arms = ["real_text"] + [f"permuted_{seed}" for seed in permutation_seeds] + ["image_only_wide"]
     protocol = dict(config=config, code_commit=commit, regimes=regimes, arms=arms,
-                    partition_seed=partition_seed, seen_classes=seen.tolist(), held_classes=held.tolist(),
+                    partition_seed=partition_seed, holdout_block=holdout_block,
+                    seen_classes=seen.tolist(), held_classes=held.tolist(),
                     permutation_seeds=permutation_seeds, training_seeds=config["training_seeds"],
+                    fixed_descriptor_mappings=None if fixed_mappings is None else
+                        {arm: np.asarray(value).tolist() for arm, value in fixed_mappings.items()},
+                    reference_reuse_source=str(reuse_references) if reuse_references is not None else None,
                     final_test_used=False, official_test_used=False,
                     evaluation="Original cached validation images and validation task combinations only",
                     label_use="Original labels/text for teacher and CLIP scoring; only selector candidate encodings permuted.")
@@ -209,6 +214,26 @@ def run(config, output, regimes, permutation_seeds, partition_seed, replicates):
         for seed in permutation_seeds:
             mappings[f"permuted_{seed}"] = class_permutation(classes, seed,
                 (seen, held) if regime == "class_holdout" else None)
+        if fixed_mappings is not None:
+            for arm, value in fixed_mappings.items():
+                assert arm in mappings
+                mapping = np.asarray(value, dtype=np.int64)
+                np.testing.assert_array_equal(np.sort(mapping), np.arange(classes))
+                if regime == "class_holdout":
+                    np.testing.assert_array_equal(np.sort(mapping[seen]), seen)
+                    np.testing.assert_array_equal(np.sort(mapping[held]), held)
+                mappings[arm] = mapping
+        reference_records = {}
+        if reuse_references is not None:
+            assert regime == "class_holdout"
+            reference_protocol = json.loads((reuse_references / "protocol.json").read_text())
+            np.testing.assert_array_equal(reference_protocol["held_classes"], held)
+            assert reference_protocol["training_seeds"] == config["training_seeds"]
+            for key in ("cache_dir", "model", "prune_after", "keep_patch_tokens", "training_steps",
+                        "batch_size", "learning_rate", "weight_decay", "hidden_dim", "temperature"):
+                assert reference_protocol["config"][key] == config[key]
+            reference_records = {(row["seed"], row["arm"]): row for row in
+                json.loads((reuse_references / regime / "training_records.json").read_text())}
         if regime == "class_holdout":
             assert not np.isin(data["labels"], held).any()
             assert not np.isin(data["pairs_array"], held).any()
@@ -245,25 +270,39 @@ def run(config, output, regimes, permutation_seeds, partition_seed, replicates):
                 torch.manual_seed(seed)
                 model = make_model(prior, arm, config, token_dim, device)
                 mapping = mapping_tensors[arm]
-                optimizer = torch.optim.AdamW(model.parameters(), lr=config["learning_rate"], weight_decay=config["weight_decay"])
-                synchronize(device)
-                started = time.perf_counter()
-                initial = teacher_loss(model, val, mapping, batch_size, temperature)
-                model.train()
-                for step in range(config["training_steps"]):
-                    ix = order[step * batch_size:(step + 1) * batch_size]
-                    optimizer.zero_grad(set_to_none=True)
-                    loss = losses(model, data, ix, mapping, temperature).mean()
-                    loss.backward()
-                    optimizer.step()
-                synchronize(device)
-                training_seconds = time.perf_counter() - started
-                final_train = teacher_loss(model, data, mapping, batch_size, temperature)
-                final_val = teacher_loss(model, val, mapping, batch_size, temperature)
                 filename = f"seed_{seed}_{arm}"
+                source_checkpoint = None
+                if reuse_references is not None and arm in ("real_text", "image_only_wide"):
+                    source_checkpoint = reuse_references / regime / f"{filename}.pt"
+                    saved = torch.load(source_checkpoint, map_location=device, weights_only=True)
+                    np.testing.assert_array_equal(saved["mapping"], mappings[arm])
+                    model.load_state_dict(saved["state_dict"])
+                    previous = reference_records[(seed, arm)]
+                    initial, final_train, final_val = [previous[key] for key in
+                        ("initial_val_kl", "final_train_kl", "final_val_kl")]
+                    training_seconds = 0.
+                else:
+                    optimizer = torch.optim.AdamW(model.parameters(), lr=config["learning_rate"], weight_decay=config["weight_decay"])
+                    synchronize(device)
+                    started = time.perf_counter()
+                    initial = teacher_loss(model, val, mapping, batch_size, temperature)
+                    model.train()
+                    for step in range(config["training_steps"]):
+                        ix = order[step * batch_size:(step + 1) * batch_size]
+                        optimizer.zero_grad(set_to_none=True)
+                        loss = losses(model, data, ix, mapping, temperature).mean()
+                        loss.backward()
+                        optimizer.step()
+                    synchronize(device)
+                    training_seconds = time.perf_counter() - started
+                    final_train = teacher_loss(model, data, mapping, batch_size, temperature)
+                    final_val = teacher_loss(model, val, mapping, batch_size, temperature)
+                    del optimizer
                 torch.save(dict(state_dict={k: v.detach().cpu() for k, v in model.state_dict().items()},
                                 arm=arm, seed=seed, regime=regime, mapping=mappings[arm].tolist(),
                                 config=config, code_commit=commit, token_dim=token_dim,
+                                source_checkpoint=str(source_checkpoint) if source_checkpoint else None,
+                                trained_in_this_run=source_checkpoint is None,
                                 final_test_used=False), folder / f"{filename}.pt")
                 before_eval = time.perf_counter()
                 predictions[(seed, arm)] = evaluate_model(model, val, mapping, pruner,
@@ -272,11 +311,13 @@ def run(config, output, regimes, permutation_seeds, partition_seed, replicates):
                 record = dict(seed=seed, regime=regime, arm=arm, initial_val_kl=initial,
                               final_train_kl=final_train, final_val_kl=final_val,
                               parameters=sum(p.numel() for p in model.parameters()),
+                              source_checkpoint=str(source_checkpoint) if source_checkpoint else None,
+                              trained_in_this_run=source_checkpoint is None,
                               training_seconds=training_seconds, evaluation_seconds=time.perf_counter() - before_eval)
                 records.append(record)
                 write_json(folder / "training_records.json", records)
                 print(json.dumps(record), flush=True)
-                del model, optimizer
+                del model
         write_json(folder / "sampling_audit.json", sampling)
         reports[regime] = summarize(val, predictions, arms, config["training_seeds"], strata, replicates)
         write_json(folder / "summary.json", reports[regime])
@@ -292,9 +333,12 @@ if __name__ == "__main__":
     parser.add_argument("--regimes", nargs="+", choices=["known_classes", "class_holdout"], default=["known_classes", "class_holdout"])
     parser.add_argument("--permutation-seeds", nargs="+", type=int, default=[2097, 2098])
     parser.add_argument("--partition-seed", type=int, default=2099)
+    parser.add_argument("--holdout-block", type=int, default=0,
+                        help="Disjoint block of the fixed class permutation; 0 preserves the original partition, 1 switches familiarity.")
     parser.add_argument("--bootstrap-replicates", type=int, default=2000)
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
     if args.device:
         config["device"] = args.device
-    run(config, args.output, args.regimes, args.permutation_seeds, args.partition_seed, args.bootstrap_replicates)
+    run(config, args.output, args.regimes, args.permutation_seeds, args.partition_seed,
+        args.bootstrap_replicates, args.holdout_block)

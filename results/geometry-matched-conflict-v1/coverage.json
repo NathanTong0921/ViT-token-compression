@@ -1,0 +1,60 @@
+{
+  "pets": {
+    "all_native_difficulties": {
+      "matched_composites": 19,
+      "total_composites": 64,
+      "coverage_fraction": 0.296875,
+      "reasons": {
+        "no_joint_caliper_match": 12,
+        "no_margin_overlap": 7,
+        "matched": 19,
+        "no_angle_overlap": 26
+      },
+      "meets_20_composite_screen": false,
+      "unique_source_images": 36
+    },
+    "native_both_correct": {
+      "matched_composites": 19,
+      "total_composites": 64,
+      "coverage_fraction": 0.296875,
+      "reasons": {
+        "no_angle_overlap": 25,
+        "no_joint_caliper_match": 11,
+        "no_margin_overlap": 6,
+        "matched": 19,
+        "no_different_candidates": 3
+      },
+      "meets_20_composite_screen": false,
+      "unique_source_images": 36
+    }
+  },
+  "flowers": {
+    "all_native_difficulties": {
+      "matched_composites": 7,
+      "total_composites": 64,
+      "coverage_fraction": 0.109375,
+      "reasons": {
+        "no_angle_overlap": 37,
+        "no_joint_caliper_match": 16,
+        "no_margin_overlap": 4,
+        "matched": 7
+      },
+      "meets_20_composite_screen": false,
+      "unique_source_images": 14
+    },
+    "native_both_correct": {
+      "matched_composites": 6,
+      "total_composites": 64,
+      "coverage_fraction": 0.09375,
+      "reasons": {
+        "no_angle_overlap": 36,
+        "no_joint_caliper_match": 16,
+        "no_margin_overlap": 3,
+        "matched": 6,
+        "no_different_candidates": 3
+      },
+      "meets_20_composite_screen": false,
+      "unique_source_images": 12
+    }
+  }
+}

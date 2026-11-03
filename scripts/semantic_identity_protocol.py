@@ -5,8 +5,12 @@ import numpy as np
 from token_compression.selector_scale import balanced_training_stream
 
 
-def class_partition(class_count, seed=2099, fraction=.25):
-    held = np.sort(np.random.default_rng(seed).permutation(class_count)[:int(np.ceil(class_count * fraction))])
+def class_partition(class_count, seed=2099, fraction=.25, holdout_block=0):
+    count = int(np.ceil(class_count * fraction))
+    start = holdout_block * count
+    if start < 0 or start + count > class_count:
+        raise ValueError("The requested disjoint holdout block exceeds the class dictionary")
+    held = np.sort(np.random.default_rng(seed).permutation(class_count)[start:start + count])
     seen = np.setdiff1d(np.arange(class_count), held)
     return seen, held
 

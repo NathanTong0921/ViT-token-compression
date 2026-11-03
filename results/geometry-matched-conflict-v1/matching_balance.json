@@ -1,0 +1,114 @@
+{
+  "pets": {
+    "all_native_difficulties": {
+      "matched_composites": 19,
+      "unique_source_images": 36,
+      "source_images_reused": 2,
+      "maximum_source_image_reuse": 2,
+      "angle_degrees": {
+        "same_mean": 69.4381225462385,
+        "different_mean": 71.09036873874051,
+        "paired_signed_difference_mean": 1.6522461925019873,
+        "paired_absolute_difference_mean": 2.0124988731887954,
+        "paired_absolute_difference_max": 4.557539695144001
+      },
+      "margin_min": {
+        "same_mean": 0.07261959041185317,
+        "different_mean": 0.07353064408078891,
+        "paired_signed_difference_mean": 0.0009110536689357309,
+        "paired_absolute_difference_mean": 0.006321354279123778,
+        "paired_absolute_difference_max": 0.014234135545376184
+      },
+      "margin_max": {
+        "same_mean": 0.1125346257165352,
+        "different_mean": 0.11196014702943605,
+        "paired_signed_difference_mean": -0.0005744786870991615,
+        "paired_absolute_difference_mean": 0.002621151774144621,
+        "paired_absolute_difference_max": 0.013062528216421343
+      }
+    },
+    "native_both_correct": {
+      "matched_composites": 19,
+      "unique_source_images": 36,
+      "source_images_reused": 2,
+      "maximum_source_image_reuse": 2,
+      "angle_degrees": {
+        "same_mean": 69.4381225462385,
+        "different_mean": 71.09036873874051,
+        "paired_signed_difference_mean": 1.6522461925019873,
+        "paired_absolute_difference_mean": 2.0124988731887954,
+        "paired_absolute_difference_max": 4.557539695144001
+      },
+      "margin_min": {
+        "same_mean": 0.07261959041185317,
+        "different_mean": 0.07353064408078891,
+        "paired_signed_difference_mean": 0.0009110536689357309,
+        "paired_absolute_difference_mean": 0.006321354279123778,
+        "paired_absolute_difference_max": 0.014234135545376184
+      },
+      "margin_max": {
+        "same_mean": 0.1125346257165352,
+        "different_mean": 0.11196014702943605,
+        "paired_signed_difference_mean": -0.0005744786870991615,
+        "paired_absolute_difference_mean": 0.002621151774144621,
+        "paired_absolute_difference_max": 0.013062528216421343
+      }
+    }
+  },
+  "flowers": {
+    "all_native_difficulties": {
+      "matched_composites": 7,
+      "unique_source_images": 14,
+      "source_images_reused": 0,
+      "maximum_source_image_reuse": 1,
+      "angle_degrees": {
+        "same_mean": 67.11918273193467,
+        "different_mean": 67.92287462137523,
+        "paired_signed_difference_mean": 0.8036918894405432,
+        "paired_absolute_difference_mean": 1.6921715624086988,
+        "paired_absolute_difference_max": 3.5929962169527982
+      },
+      "margin_min": {
+        "same_mean": 0.06555582400275188,
+        "different_mean": 0.06311139716393091,
+        "paired_signed_difference_mean": -0.0024444268388209784,
+        "paired_absolute_difference_mean": 0.0027043424272274086,
+        "paired_absolute_difference_max": 0.008159454600890112
+      },
+      "margin_max": {
+        "same_mean": 0.0970920941660356,
+        "different_mean": 0.09756600675357767,
+        "paired_signed_difference_mean": 0.00047391258754206556,
+        "paired_absolute_difference_mean": 0.00534218464930828,
+        "paired_absolute_difference_max": 0.011815198456067072
+      }
+    },
+    "native_both_correct": {
+      "matched_composites": 6,
+      "unique_source_images": 12,
+      "source_images_reused": 0,
+      "maximum_source_image_reuse": 1,
+      "angle_degrees": {
+        "same_mean": 67.59675811450569,
+        "different_mean": 68.35840955005254,
+        "paired_signed_difference_mean": 0.761651435546843,
+        "paired_absolute_difference_mean": 1.7982110540096912,
+        "paired_absolute_difference_max": 3.5929962169527982
+      },
+      "margin_min": {
+        "same_mean": 0.07551043370946499,
+        "different_mean": 0.07401851149765554,
+        "paired_signed_difference_mean": -0.0014919222118094562,
+        "paired_absolute_difference_mean": 0.0017951570649502914,
+        "paired_absolute_difference_max": 0.00653520540563865
+      },
+      "margin_max": {
+        "same_mean": 0.09902344293959425,
+        "different_mean": 0.09957634095839334,
+        "paired_signed_difference_mean": 0.0005528980187990765,
+        "paired_absolute_difference_mean": 0.0062325487575263265,
+        "paired_absolute_difference_max": 0.011815198456067072
+      }
+    }
+  }
+}

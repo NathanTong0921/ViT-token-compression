@@ -1,0 +1,52 @@
+{
+  "pets": {
+    "all_native_difficulties": {
+      "matched_composites": 64,
+      "total_composites": 64,
+      "coverage_fraction": 1.0,
+      "reasons": {
+        "matched": 64
+      },
+      "meets_20_composite_screen": true,
+      "unique_source_images": 118
+    },
+    "native_both_correct": {
+      "matched_composites": 64,
+      "total_composites": 64,
+      "coverage_fraction": 1.0,
+      "reasons": {
+        "matched": 64
+      },
+      "meets_20_composite_screen": true,
+      "unique_source_images": 118
+    }
+  },
+  "flowers": {
+    "all_native_difficulties": {
+      "matched_composites": 56,
+      "total_composites": 64,
+      "coverage_fraction": 0.875,
+      "reasons": {
+        "matched": 56,
+        "no_joint_caliper_match": 4,
+        "no_margin_overlap": 2,
+        "no_angle_overlap": 2
+      },
+      "meets_20_composite_screen": true,
+      "unique_source_images": 104
+    },
+    "native_both_correct": {
+      "matched_composites": 54,
+      "total_composites": 64,
+      "coverage_fraction": 0.84375,
+      "reasons": {
+        "matched": 54,
+        "no_joint_caliper_match": 5,
+        "no_margin_overlap": 2,
+        "no_angle_overlap": 3
+      },
+      "meets_20_composite_screen": true,
+      "unique_source_images": 101
+    }
+  }
+}
