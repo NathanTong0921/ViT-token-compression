@@ -119,7 +119,9 @@ class MatchedReplacementTests(unittest.TestCase):
             backbone = torch.nn.Module()
             backbone.visual = types.SimpleNamespace()
             fake_clip = types.SimpleNamespace(load=lambda *args, **kwargs: (backbone, None))
-            with patch.dict(sys.modules, {"clip": fake_clip}), patch("token_compression.pruning.SingleStagePruner", TinyPruner):
+            # Import the patched module before snapshotting sys.modules; otherwise
+            # patch.dict removes its new entry but leaves the package attribute.
+            with patch("token_compression.pruning.SingleStagePruner", TinyPruner), patch.dict(sys.modules, {"clip": fake_clip}):
                 summary = evaluation.run(source, output)
             self.assertTrue(all(r["reused_image_masks"] > 0 for r in summary["runs"]))
             self.assertTrue(all(r["new_suffix_image_masks"] > 0 for r in summary["runs"]))

@@ -1,0 +1,211 @@
+{
+  "audited_utc": "2026-11-03T14:32:49.186427+00:00",
+  "method": "Independent set-based reconstruction from cached original C/U logits; no analysis helper reused. Endpoints compared with prior core-protection cosine scores.",
+  "records": [
+    {
+      "setting": "pets_b16_49",
+      "seed": 2041,
+      "image_task_rows": 2624,
+      "checked_masks": 26240,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2042,
+      "image_task_rows": 2624,
+      "checked_masks": 26240,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2043,
+      "image_task_rows": 2624,
+      "checked_masks": 26240,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "pets_b16_98",
+      "seed": 2041,
+      "image_task_rows": 2624,
+      "checked_masks": 26240,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "pets_b16_98",
+      "seed": 2042,
+      "image_task_rows": 2624,
+      "checked_masks": 26240,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "pets_b16_98",
+      "seed": 2043,
+      "image_task_rows": 2624,
+      "checked_masks": 26240,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2041,
+      "image_task_rows": 4080,
+      "checked_masks": 40800,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2042,
+      "image_task_rows": 4080,
+      "checked_masks": 40800,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2043,
+      "image_task_rows": 4080,
+      "checked_masks": 40800,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2041,
+      "image_task_rows": 4080,
+      "checked_masks": 40800,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2042,
+      "image_task_rows": 4080,
+      "checked_masks": 40800,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2043,
+      "image_task_rows": 4080,
+      "checked_masks": 40800,
+      "count_mismatches": 0,
+      "common_set_loss": 0,
+      "removed_identity_mismatches": 0,
+      "added_identity_mismatches": 0,
+      "top_ranking_mismatches": 0,
+      "stored_count_mismatches": 0,
+      "endpoint_mask_mismatches": 0,
+      "endpoint_score_max_error": 0.0
+    }
+  ],
+  "costs": [
+    {
+      "setting": "pets_b16_49",
+      "evaluator_elapsed_seconds": 25.51721553003881,
+      "suffix_seconds": 8.8043192201294,
+      "new_image_masks": 62038,
+      "reused_image_masks": 10388
+    },
+    {
+      "setting": "pets_b16_98",
+      "evaluator_elapsed_seconds": 31.50623236305546,
+      "suffix_seconds": 14.397212220006622,
+      "new_image_masks": 62903,
+      "reused_image_masks": 10037
+    },
+    {
+      "setting": "flowers_b16_49",
+      "evaluator_elapsed_seconds": 39.84511978190858,
+      "suffix_seconds": 13.63438011193648,
+      "new_image_masks": 97791,
+      "reused_image_masks": 15416
+    },
+    {
+      "setting": "flowers_b16_98",
+      "evaluator_elapsed_seconds": 50.718209796003066,
+      "suffix_seconds": 22.499132240889594,
+      "new_image_masks": 97913,
+      "reused_image_masks": 15305
+    }
+  ],
+  "all_checks_exact": true,
+  "totals": {
+    "evaluator_elapsed_seconds": 147.58677747100592,
+    "suffix_seconds": 59.3350437929621,
+    "new_image_masks": 320645,
+    "reused_image_masks": 51146
+  }
+}

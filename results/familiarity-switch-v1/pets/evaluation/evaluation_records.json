@@ -1,0 +1,170 @@
+[
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2041_real_text.pt",
+    "evaluation_seconds": 0.9969203689834103
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2041_permuted_2097.pt",
+    "evaluation_seconds": 0.783092895988375
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2041_permuted_2098.pt",
+    "evaluation_seconds": 0.7828079540049657
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2041_image_only_wide.pt",
+    "evaluation_seconds": 0.18224003806244582
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2042_real_text.pt",
+    "evaluation_seconds": 0.7827418310334906
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2042_permuted_2097.pt",
+    "evaluation_seconds": 0.8005616479786113
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2042_permuted_2098.pt",
+    "evaluation_seconds": 0.7791545009240508
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2042_image_only_wide.pt",
+    "evaluation_seconds": 0.17691695201210678
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2043_real_text.pt",
+    "evaluation_seconds": 0.7910677989711985
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2043_permuted_2097.pt",
+    "evaluation_seconds": 0.7854856390040368
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2043_permuted_2098.pt",
+    "evaluation_seconds": 0.7967941839015111
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/original/class_holdout/seed_2043_image_only_wide.pt",
+    "evaluation_seconds": 0.17505152302328497
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2041_real_text.pt",
+    "evaluation_seconds": 0.7796344939852133
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2041_permuted_2097.pt",
+    "evaluation_seconds": 0.7790047000162303
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2041_permuted_2098.pt",
+    "evaluation_seconds": 0.7784959910204634
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2041_image_only_wide.pt",
+    "evaluation_seconds": 0.17567804700229317
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2042_real_text.pt",
+    "evaluation_seconds": 0.7789278069976717
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2042_permuted_2097.pt",
+    "evaluation_seconds": 0.7789956950582564
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2042_permuted_2098.pt",
+    "evaluation_seconds": 0.7894301130436361
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2042_image_only_wide.pt",
+    "evaluation_seconds": 0.1796924480004236
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2043_real_text.pt",
+    "evaluation_seconds": 0.7826295549748465
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2043_permuted_2097.pt",
+    "evaluation_seconds": 0.7830630840035155
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2043_permuted_2098.pt",
+    "evaluation_seconds": 0.7878423780202866
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-training-v1/switched/class_holdout/seed_2043_image_only_wide.pt",
+    "evaluation_seconds": 0.1757407810073346
+  }
+]

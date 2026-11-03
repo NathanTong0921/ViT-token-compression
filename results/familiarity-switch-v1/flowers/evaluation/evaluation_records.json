@@ -1,0 +1,170 @@
+[
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2041_real_text.pt",
+    "evaluation_seconds": 0.8811175860464573
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2041_permuted_2097.pt",
+    "evaluation_seconds": 0.7286113749723881
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2041_permuted_2098.pt",
+    "evaluation_seconds": 0.7293258659774438
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2041_image_only_wide.pt",
+    "evaluation_seconds": 0.3002843559952453
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2042_real_text.pt",
+    "evaluation_seconds": 0.7308663070434704
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2042_permuted_2097.pt",
+    "evaluation_seconds": 0.7298074519494548
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2042_permuted_2098.pt",
+    "evaluation_seconds": 0.7239010890480131
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2042_image_only_wide.pt",
+    "evaluation_seconds": 0.29906061210203916
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2043_real_text.pt",
+    "evaluation_seconds": 0.7196884059812874
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2043_permuted_2097.pt",
+    "evaluation_seconds": 0.7261584700318053
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2043_permuted_2098.pt",
+    "evaluation_seconds": 0.7238586930325255
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/original/class_holdout/seed_2043_image_only_wide.pt",
+    "evaluation_seconds": 0.298370131989941
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2041_real_text.pt",
+    "evaluation_seconds": 0.7275295880390331
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2041_permuted_2097.pt",
+    "evaluation_seconds": 0.7223686520010233
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2041_permuted_2098.pt",
+    "evaluation_seconds": 0.7272288730600849
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2041_image_only_wide.pt",
+    "evaluation_seconds": 0.3008874449878931
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2042_real_text.pt",
+    "evaluation_seconds": 0.7247056500054896
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2042_permuted_2097.pt",
+    "evaluation_seconds": 0.7334374940255657
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2042_permuted_2098.pt",
+    "evaluation_seconds": 0.7231966920662671
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2042_image_only_wide.pt",
+    "evaluation_seconds": 0.30168184801004827
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2043_real_text.pt",
+    "evaluation_seconds": 0.7217477780068293
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2043_permuted_2097.pt",
+    "evaluation_seconds": 0.7215638610068709
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2043_permuted_2098.pt",
+    "evaluation_seconds": 0.7156702310312539
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2043_image_only_wide.pt",
+    "evaluation_seconds": 0.29676943900994956
+  }
+]

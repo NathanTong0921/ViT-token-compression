@@ -1,0 +1,50 @@
+{
+  "frozen_design_commit": "54a006a",
+  "phase_checks": {
+    "geometry-matched-conflict-v1": {
+      "design_byte_identical_to_committed": true,
+      "evaluation_code_commit": "54a006a3462fc514374eaf8f1115b5a8cca70b6e",
+      "matched_composite_panels_checked": 51,
+      "all_selected_tasks_in_allowed_splits": true,
+      "all_matched_calipers_pass": true,
+      "all_correct_panel_native_margins_positive": true,
+      "one_present_source_label_per_task": true
+    },
+    "geometry-matched-conflict-devpool-v1": {
+      "design_byte_identical_to_committed": true,
+      "evaluation_code_commit": "54a006a3462fc514374eaf8f1115b5a8cca70b6e",
+      "matched_composite_panels_checked": 238,
+      "all_selected_tasks_in_allowed_splits": true,
+      "all_matched_calipers_pass": true,
+      "all_correct_panel_native_margins_positive": true,
+      "one_present_source_label_per_task": true
+    }
+  },
+  "fixed_library_checks": {
+    "pets": {
+      "16": {
+        "masks_per_image": 35,
+        "method_order_identical": true,
+        "all_image_mask_positions_identical_across_layers": true
+      },
+      "49": {
+        "masks_per_image": 35,
+        "method_order_identical": true,
+        "all_image_mask_positions_identical_across_layers": true
+      }
+    },
+    "flowers": {
+      "16": {
+        "masks_per_image": 35,
+        "method_order_identical": true,
+        "all_image_mask_positions_identical_across_layers": true
+      },
+      "49": {
+        "masks_per_image": 35,
+        "method_order_identical": true,
+        "all_image_mask_positions_identical_across_layers": true
+      }
+    }
+  },
+  "selection_rule": "No pruning outcomes used for matching; evaluate-only reads committed designs without rebuilding."
+}

@@ -1,0 +1,928 @@
+{
+  "primary_outcome": "different-object minus same-object joint-conflict rate",
+  "evaluation_code_commit": "54a006a3462fc514374eaf8f1115b5a8cca70b6e",
+  "task_pool": "val",
+  "margin_units": "geometric signed margin",
+  "bootstrap_seed": 2111,
+  "bootstrap_replicates": 2000,
+  "uncertainty_scope": "paired composite bootstrap conditional on selected tasks/classes/source panel; reused source images are not independent across composites",
+  "zero_event_interpretation": "zero-width empirical bootstrap intervals with no conflicts do not establish equivalence",
+  "datasets": {
+    "pets": {
+      "all_native_difficulties_layer3_k16": {
+        "composites": 19,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.00434087407714025,
+            "different_mean": 0.006362309251137871,
+            "different_minus_same": 0.0020214351739976225,
+            "paired_image_bootstrap_ci95": [
+              -0.0005794182574634264,
+              0.004856697852992478
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "native_both_correct_layer3_k16": {
+        "composites": 19,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.00434087407714025,
+            "different_mean": 0.006362309251137871,
+            "different_minus_same": 0.0020214351739976225,
+            "paired_image_bootstrap_ci95": [
+              -0.0005794182574634264,
+              0.004856697852992478
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "all_native_difficulties_layer3_k49": {
+        "composites": 19,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.004784326911653537,
+            "different_mean": 0.013854355171439745,
+            "different_minus_same": 0.009070028259786206,
+            "paired_image_bootstrap_ci95": [
+              0.0037279723289549574,
+              0.014530993300904913
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "native_both_correct_layer3_k49": {
+        "composites": 19,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.004784326911653537,
+            "different_mean": 0.013854355171439745,
+            "different_minus_same": 0.009070028259786206,
+            "paired_image_bootstrap_ci95": [
+              0.0037279723289549574,
+              0.014530993300904913
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "all_native_difficulties_layer6_k16": {
+        "composites": 19,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.006373666814513901,
+            "different_mean": 0.009364816149291926,
+            "different_minus_same": 0.0029911493347780246,
+            "paired_image_bootstrap_ci95": [
+              -0.0010345265128478898,
+              0.007352679798981266
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "native_both_correct_layer6_k16": {
+        "composites": 19,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.006373666814513901,
+            "different_mean": 0.009364816149291926,
+            "different_minus_same": 0.0029911493347780246,
+            "paired_image_bootstrap_ci95": [
+              -0.0010345265128478898,
+              0.007352679798981266
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "all_native_difficulties_layer6_k49": {
+        "composites": 19,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.0045075669433695155,
+            "different_mean": 0.013707659780599723,
+            "different_minus_same": 0.009200092837230209,
+            "paired_image_bootstrap_ci95": [
+              0.00416380740781515,
+              0.014953580359354339
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "native_both_correct_layer6_k49": {
+        "composites": 19,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 19,
+            "different_count": 19,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.0045075669433695155,
+            "different_mean": 0.013707659780599723,
+            "different_minus_same": 0.009200092837230209,
+            "paired_image_bootstrap_ci95": [
+              0.00416380740781515,
+              0.014953580359354339
+            ],
+            "units": "geometric margin"
+          }
+        }
+      }
+    },
+    "flowers": {
+      "all_native_difficulties_layer3_k16": {
+        "composites": 7,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 7,
+            "different_count": 7,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 7,
+            "different_count": 7,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.005602329817814287,
+            "different_mean": 0.005679081978637632,
+            "different_minus_same": 7.67521608233441e-05,
+            "paired_image_bootstrap_ci95": [
+              -0.005896868010317329,
+              0.006504222797948858
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "native_both_correct_layer3_k16": {
+        "composites": 6,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 6,
+            "different_count": 6,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 6,
+            "different_count": 6,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.0038669908097705152,
+            "different_mean": 0.005777933248654048,
+            "different_minus_same": 0.0019109424388835325,
+            "paired_image_bootstrap_ci95": [
+              -0.0037338967072832138,
+              0.008180161602516738
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "all_native_difficulties_layer3_k49": {
+        "composites": 7,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 7,
+            "different_count": 7,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 7,
+            "different_count": 7,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.007150198185853297,
+            "different_mean": 0.009353207002303437,
+            "different_minus_same": 0.002203008816450141,
+            "paired_image_bootstrap_ci95": [
+              -0.0013314363098728545,
+              0.006026116024947868
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "native_both_correct_layer3_k49": {
+        "composites": 6,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 6,
+            "different_count": 6,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 6,
+            "different_count": 6,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.008341897883495514,
+            "different_mean": 0.009068223172645603,
+            "different_minus_same": 0.0007263252891500892,
+            "paired_image_bootstrap_ci95": [
+              -0.0023883360299111044,
+              0.0035629011120537706
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "all_native_difficulties_layer6_k16": {
+        "composites": 7,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 14.285714285714285,
+            "different_mean": 0.0,
+            "different_minus_same": -14.285714285714285,
+            "paired_image_bootstrap_ci95": [
+              -42.857142857142854,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 1,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 1
+          },
+          "common_feasible": {
+            "same_mean": 85.71428571428571,
+            "different_mean": 100.0,
+            "different_minus_same": 14.285714285714285,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              42.857142857142854
+            ],
+            "units": "percentage points",
+            "same_count": 6,
+            "different_count": 7,
+            "different_only": 1,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 7,
+            "different_count": 7,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.0072605032859316705,
+            "different_mean": 0.007482879801998065,
+            "different_minus_same": 0.0002223765160663943,
+            "paired_image_bootstrap_ci95": [
+              -0.002577107946495286,
+              0.003921512591595045
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "native_both_correct_layer6_k16": {
+        "composites": 6,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 6,
+            "different_count": 6,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 6,
+            "different_count": 6,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.00740283126866443,
+            "different_mean": 0.005991541675437852,
+            "different_minus_same": -0.0014112895932265775,
+            "paired_image_bootstrap_ci95": [
+              -0.002893462731103892,
+              0.0004903490390162439
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "all_native_difficulties_layer6_k49": {
+        "composites": 7,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 7,
+            "different_count": 7,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 7,
+            "different_count": 7,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.007563565303740759,
+            "different_mean": 0.012129620414033643,
+            "different_minus_same": 0.004566055110292883,
+            "paired_image_bootstrap_ci95": [
+              2.8632984098327296e-05,
+              0.010872463550042354
+            ],
+            "units": "geometric margin"
+          }
+        }
+      },
+      "native_both_correct_layer6_k49": {
+        "composites": 6,
+        "outcomes": {
+          "conflict": {
+            "same_mean": 0.0,
+            "different_mean": 0.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 0,
+            "different_count": 0,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "common_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 6,
+            "different_count": 6,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "separately_feasible": {
+            "same_mean": 100.0,
+            "different_mean": 100.0,
+            "different_minus_same": 0.0,
+            "paired_image_bootstrap_ci95": [
+              0.0,
+              0.0
+            ],
+            "units": "percentage points",
+            "same_count": 6,
+            "different_count": 6,
+            "different_only": 0,
+            "same_only": 0
+          },
+          "mean_margin_gap": {
+            "same_mean": 0.00639869040804935,
+            "different_mean": 0.011603245799886785,
+            "different_minus_same": 0.0052045553918374345,
+            "paired_image_bootstrap_ci95": [
+              -4.0335958786987446e-05,
+              0.01269742294128503
+            ],
+            "units": "geometric margin"
+          }
+        }
+      }
+    }
+  }
+}

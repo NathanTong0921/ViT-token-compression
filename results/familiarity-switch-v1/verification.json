@@ -1,0 +1,64 @@
+{
+  "pets": {
+    "status": "passed",
+    "tasks": 89,
+    "rows": 3525,
+    "images": 396,
+    "holdout_group_sizes": [
+      10,
+      10
+    ],
+    "identical_class_codes_across_fits": true,
+    "exact_reused_checkpoints": [
+      "original/seed_2041_real_text",
+      "original/seed_2041_image_only_wide",
+      "original/seed_2042_real_text",
+      "original/seed_2042_image_only_wide",
+      "original/seed_2043_real_text",
+      "original/seed_2043_image_only_wide"
+    ],
+    "new_training_runs": 18,
+    "shared_panel_lengths_verified": true,
+    "equal_task_and_true_class_weights_verified": true,
+    "training_image_and_task_overlap": false,
+    "full_model_outcomes_independently_verified": true,
+    "oriented_estimate_and_did_independently_recomputed": true,
+    "final_test_used": false,
+    "official_test_used": false,
+    "task_sources": {
+      "original_train": 81,
+      "original_val": 8
+    }
+  },
+  "flowers": {
+    "status": "passed",
+    "tasks": 114,
+    "rows": 2280,
+    "images": 520,
+    "holdout_group_sizes": [
+      26,
+      26
+    ],
+    "identical_class_codes_across_fits": true,
+    "exact_reused_checkpoints": [
+      "original/seed_2041_real_text",
+      "original/seed_2041_image_only_wide",
+      "original/seed_2042_real_text",
+      "original/seed_2042_image_only_wide",
+      "original/seed_2043_real_text",
+      "original/seed_2043_image_only_wide"
+    ],
+    "new_training_runs": 18,
+    "shared_panel_lengths_verified": true,
+    "equal_task_and_true_class_weights_verified": true,
+    "training_image_and_task_overlap": false,
+    "full_model_outcomes_independently_verified": true,
+    "oriented_estimate_and_did_independently_recomputed": true,
+    "final_test_used": false,
+    "official_test_used": false,
+    "task_sources": {
+      "original_train": 93,
+      "original_val": 21
+    }
+  }
+}

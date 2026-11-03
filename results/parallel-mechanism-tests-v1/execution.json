@@ -1,0 +1,30 @@
+{
+  "code_commit": "54a006a",
+  "final_test_used": false,
+  "settings": {
+    "pets": {
+      "new_training_fits": 18,
+      "reused_fits": 6,
+      "training_seconds": 486.0015398194082,
+      "original_panel_evaluation_seconds": 13.822170945000835,
+      "identical_panel_evaluation_seconds": 15.401970427017659,
+      "process_elapsed_seconds": 557,
+      "exit_status": 0
+    },
+    "flowers": {
+      "new_training_fits": 18,
+      "reused_fits": 6,
+      "training_seconds": 474.6185122882016,
+      "original_panel_evaluation_seconds": 28.89284160058014,
+      "identical_panel_evaluation_seconds": 15.00783789542038,
+      "process_elapsed_seconds": 548,
+      "exit_status": 0
+    }
+  },
+  "matched_replacement": {
+    "process_elapsed_seconds": 189,
+    "exit_status": 0,
+    "code_commit": "d4d9eb4"
+  },
+  "cost_note": "Training interval includes initial teacher validation; evaluation intervals include saved output. GPU stage time is approximate elapsed process work, not GPU active-kernel utilization. Reused backbone/prefix/supervision generation is not recounted."
+}
