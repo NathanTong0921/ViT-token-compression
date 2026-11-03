@@ -88,3 +88,28 @@ CPU verification:
 ```bash
 PYTHONPATH=src python3 -m unittest discover -s tests -p 'test_core_protection.py'
 ```
+
+## Exploratory completion of the dataset-by-budget comparison
+
+The initial Pets49 and Flowers98 results showed opposite directions for the
+top-ranked versus random-core margin contrast. Because dataset and token budget
+changed together, these two settings alone cannot attribute the difference to
+either factor. We therefore add Pets98 and Flowers49, completing both datasets
+at both budgets. The selectors, three training seeds, three random-core seeds,
+protected fractions, and evaluation rules remain unchanged.
+
+This extension was chosen after observing the initial pilot. Its two new settings
+are exploratory; the original four-comparison adjusted intervals describe only
+Pets49 and Flowers98. Any pooled eight-comparison family requires new adjustment,
+or should be presented with ordinary descriptive intervals and explicit scope.
+The existing analysis output's four-comparison language is not a family-wide
+inference for all four settings.
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/evaluate_core_protection.py --setting pets_b16_98 --device cuda:0 --output runs/core-protection-v1/pets_b16_98
+PYTHONPATH=src .venv/bin/python scripts/evaluate_core_protection.py --setting flowers_b16_49 --device cuda:0 --output runs/core-protection-v1/flowers_b16_49
+```
+
+Analyze each output using the same analysis command and its corresponding setting
+directory. Actual replacement counts remain essential: a fixed protected fraction
+can alter different numbers of the original conditioned tokens.

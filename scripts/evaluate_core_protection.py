@@ -24,6 +24,16 @@ SETTINGS = {
         "conditioned_dir": "runs/flowers-selector-budget-98-training-v1",
         "wide_dir": "runs/flowers-selector-ablations-98-training-v1",
     },
+    "pets_b16_98": {
+        "config": "configs/pets_selector_ablations_98.json",
+        "conditioned_dir": "runs/pets-selector-budget-98-training-v1",
+        "wide_dir": "runs/pets-selector-ablations-98-training-v1",
+    },
+    "flowers_b16_49": {
+        "config": "configs/flowers_selector_ablations_49.json",
+        "conditioned_dir": "runs/flowers-selector-budget-49-training-v1",
+        "wide_dir": "runs/flowers-selector-ablations-49-training-v1",
+    },
 }
 RANDOM_SEEDS = (2211, 2212, 2213)
 PERCENTAGES = (50, 75)
