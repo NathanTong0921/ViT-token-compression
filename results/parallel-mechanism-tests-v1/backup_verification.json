@@ -1,0 +1,69 @@
+{
+  "release_id": 432810919,
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-e8b0f40a559ff7bdd673",
+  "release_draft": true,
+  "assets": [
+    {
+      "name": "matched-replacement-v1.zip",
+      "bytes": 887600257,
+      "files": 68,
+      "sources": [
+        "runs/matched-replacement-v1"
+      ],
+      "github_asset_id": 705914343,
+      "local_file": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/parallel-mechanism-tests-v1/matched-replacement-v1.zip",
+      "server_file": "/data2/zhao.tong/artifacts/parallel-mechanism-tests-v1/matched-replacement-v1.zip",
+      "content_verified": true
+    },
+    {
+      "name": "pets-familiarity-switch-v1.zip",
+      "bytes": 253166800,
+      "files": 92,
+      "sources": [
+        "runs/pets-familiarity-switch-training-v1",
+        "runs/pets-familiarity-switch-evaluation-v1"
+      ],
+      "github_asset_id": 705934835,
+      "local_file": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/parallel-mechanism-tests-v1/pets-familiarity-switch-v1.zip",
+      "server_file": "/data2/zhao.tong/artifacts/parallel-mechanism-tests-v1/pets-familiarity-switch-v1.zip",
+      "content_verified": true
+    },
+    {
+      "name": "flowers-familiarity-switch-v1.zip",
+      "bytes": 267943909,
+      "files": 92,
+      "sources": [
+        "runs/flowers-familiarity-switch-training-v1",
+        "runs/flowers-familiarity-switch-evaluation-v1"
+      ],
+      "github_asset_id": 705933600,
+      "local_file": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/parallel-mechanism-tests-v1/flowers-familiarity-switch-v1.zip",
+      "server_file": "/data2/zhao.tong/artifacts/parallel-mechanism-tests-v1/flowers-familiarity-switch-v1.zip",
+      "content_verified": true
+    }
+  ],
+  "total_bytes": 1408710966,
+  "restore_verification": {
+    "checked_utc": "2026-11-03T14:47:12.219415+00:00",
+    "asset_id": 705933600,
+    "asset": "flowers-familiarity-switch-v1.zip",
+    "remote_zip_crc_checks": true,
+    "restored_files": [
+      "runs/flowers-familiarity-switch-evaluation-v1/evaluation_panel.npz",
+      "runs/flowers-familiarity-switch-evaluation-v1/summary.json",
+      "runs/flowers-familiarity-switch-evaluation-v1/switched/seed_2041_real_text.npz",
+      "runs/flowers-familiarity-switch-evaluation-v1/switched/seed_2042_real_text.npz",
+      "runs/flowers-familiarity-switch-evaluation-v1/switched/seed_2043_real_text.npz",
+      "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2041_real_text.pt"
+    ],
+    "downloaded_bytes": 14338421,
+    "summary_max_abs_error": 0.0,
+    "new_checkpoint_loaded": true,
+    "selector_forward_shape": [
+      1,
+      196
+    ]
+  },
+  "reused_input_archive": "parallel-research-pilots-v1",
+  "scientific_code_and_results_commit": "31e91acaca9c5f74845e407166975b06f0a69f89"
+}

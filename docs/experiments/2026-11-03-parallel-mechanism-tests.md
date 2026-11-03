@@ -11,3 +11,5 @@
 本轮25项针对性科学／实现测试通过。合并运行发现一次测试mock的模块身份隔离问题，仅修正测试上下文顺序；实验执行代码与结果不受影响。研究结果、对应proposal和成本见[统一汇总](../../results/parallel-mechanism-tests-v1/README.md)。
 
 本轮新增约1.41GB完整归档：等替换量887.6MB，Pets熟悉度253.2MB，Flowers熟悉度267.9MB。保存服务器原始运行、本地artifacts目录和GitHub归档。小型结果和图表随仓库版本保存，传输中间件完成后清理。
+
+三份归档均完成本地与GitHub内容核对。从GitHub范围读取恢复一份本轮新训练模型及三个种子的预测，模型加载与前向成功，恢复预测重算的四项分组汇总与原值完全一致。记录在 `results/parallel-mechanism-tests-v1/backup_verification.json`。
