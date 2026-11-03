@@ -1,0 +1,705 @@
+{
+  "code_commit": "6e19750dfed4d1384285c21aefa43cff4a79dd0a",
+  "analysis_role": "Exploratory descriptive point estimates from existing objective comparisons; no new resampling or significance tests.",
+  "scope": "Existing development images and unseen development class combinations; frozen CLIP ViT-B/16, block 6. The image-only arm is the original fixed-context selector, not the later wide variant.",
+  "reserved_test_used": false,
+  "new_training": false,
+  "new_inference": false,
+  "units": "Signed geometric classification margin, cosine-score difference divided by the class text-direction norm.",
+  "weighting": "Use saved task_class_weight: each task equally weighted, then its two classes equally weighted, then images within each task/class equally weighted. Average the three fixed seeds before the aggregate correlation; also report each seed separately.",
+  "definitions": {
+    "teacher_predicted_margin_change": "regret_KL - regret_rank; the common teacher top-k utility and intercept cancel for each image/task.",
+    "actual_margin_change": "Actual pruned-CLIP margin_rank - margin_KL, from saved predictions.",
+    "conditioning_interaction": "The conditioned arm's KL-to-ranking change minus the original image-only arm's change.",
+    "actual_minus_teacher_change": "Change in the signed actual-minus-surrogate residual; this is not an absolute teacher-error estimate.",
+    "mean_absolute_change_discrepancy": "Weighted absolute difference between actual and teacher-predicted changes; after seed averaging in the seed_mean row.",
+    "weighted_change_correlation": "Weighted Pearson correlation across image/task rows under the same task/class-balanced weights; descriptive only."
+  },
+  "gradient_record_interpretation": "These historical records measure initial raw gradient L2 norms, not parameter-update norms. With AdamW, a constant positive loss scaling approximately cancels between first and second moments (apart from epsilon/numerical effects); the norm ratio alone does not establish smaller effective updates. KL and ranking can still differ in gradient direction and relative coordinate magnitudes.",
+  "settings": {
+    "pets_49": {
+      "dataset": "pets",
+      "retained_patch_tokens": 49,
+      "source_cases": "results/pets-selector-objectives-v1/budget_49/paired_cases.npz",
+      "source_gradient_records": "results/pets-selector-objectives-v1/execution/budget_49/initial_gradient_diagnostics.json",
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "image_task_count": 2624,
+      "image_count": 716,
+      "task_count": 66,
+      "contrasts": {
+        "conditioned": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": -0.004447836855687938,
+            "actual_margin_change": 0.002336312991896491,
+            "actual_minus_teacher_change": 0.006784149847584429,
+            "mean_absolute_change_discrepancy": 0.015043791738050875,
+            "weighted_change_correlation": 0.5726248074752457
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": -0.005736139010610035,
+              "actual_margin_change": 0.0029604049695186796,
+              "actual_minus_teacher_change": 0.008696543980128712,
+              "mean_absolute_change_discrepancy": 0.020846225091192782,
+              "weighted_change_correlation": 0.5012122138415632
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": -0.005871527964559899,
+              "actual_margin_change": 0.0023908259021920147,
+              "actual_minus_teacher_change": 0.008262353866751913,
+              "mean_absolute_change_discrepancy": 0.021477874648798884,
+              "weighted_change_correlation": 0.4518076344382919
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": -0.0017358435918938806,
+              "actual_margin_change": 0.001657708103978779,
+              "actual_minus_teacher_change": 0.003393551695872659,
+              "mean_absolute_change_discrepancy": 0.020853322731590265,
+              "weighted_change_correlation": 0.5579308307720223
+            }
+          ]
+        },
+        "image_only": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": -0.009417416551842939,
+            "actual_margin_change": -0.0004757809635182027,
+            "actual_minus_teacher_change": 0.008941635588324736,
+            "mean_absolute_change_discrepancy": 0.014589931936086018,
+            "weighted_change_correlation": 0.4818811040963235
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": -0.010692642757877919,
+              "actual_margin_change": -0.000644938740601372,
+              "actual_minus_teacher_change": 0.01004770401727655,
+              "mean_absolute_change_discrepancy": 0.019674583700843358,
+              "weighted_change_correlation": 0.43860986955630377
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": -0.009745859694509027,
+              "actual_margin_change": 0.00019086744011272732,
+              "actual_minus_teacher_change": 0.009936727134621754,
+              "mean_absolute_change_discrepancy": 0.019428807793832478,
+              "weighted_change_correlation": 0.4431321107835525
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": -0.007813747203141866,
+              "actual_margin_change": -0.000973271590065963,
+              "actual_minus_teacher_change": 0.006840475613075902,
+              "mean_absolute_change_discrepancy": 0.017850451735177828,
+              "weighted_change_correlation": 0.4453070876056583
+            }
+          ]
+        },
+        "conditioning_interaction": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": 0.004969579696155,
+            "actual_margin_change": 0.0028120939554146934,
+            "actual_minus_teacher_change": -0.0021574857407403066,
+            "mean_absolute_change_discrepancy": 0.015728048436736898,
+            "weighted_change_correlation": 0.5222412827052442
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": 0.004956503747267886,
+              "actual_margin_change": 0.0036053437101200517,
+              "actual_minus_teacher_change": -0.0013511600371478353,
+              "mean_absolute_change_discrepancy": 0.024268022643623835,
+              "weighted_change_correlation": 0.444967608321866
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": 0.003874331729949128,
+              "actual_margin_change": 0.0021999584620792873,
+              "actual_minus_teacher_change": -0.0016743732678698412,
+              "mean_absolute_change_discrepancy": 0.02446380625760225,
+              "weighted_change_correlation": 0.4340192247636675
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": 0.006077903611247985,
+              "actual_margin_change": 0.002630979694044742,
+              "actual_minus_teacher_change": -0.0034469239172032432,
+              "mean_absolute_change_discrepancy": 0.025418339788393293,
+              "weighted_change_correlation": 0.5231871260273935
+            }
+          ]
+        }
+      },
+      "recorded_initial_gradient_norms": [
+        {
+          "training_seed": 2041,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.584572256410302,
+          "mean_initial_rank_gradient_l2": 0.19838142879989223,
+          "ratio_of_mean_initial_l2": 0.1251955712321422
+        },
+        {
+          "training_seed": 2041,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.6509210720344305,
+          "mean_initial_rank_gradient_l2": 0.2063826212249186,
+          "ratio_of_mean_initial_l2": 0.12501059240257514
+        },
+        {
+          "training_seed": 2042,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.6196253607980347,
+          "mean_initial_rank_gradient_l2": 0.2034208605441653,
+          "ratio_of_mean_initial_l2": 0.125597477952515
+        },
+        {
+          "training_seed": 2042,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.701748827243021,
+          "mean_initial_rank_gradient_l2": 0.21313510583736328,
+          "ratio_of_mean_initial_l2": 0.12524474965125165
+        },
+        {
+          "training_seed": 2043,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.768711738405857,
+          "mean_initial_rank_gradient_l2": 0.20864859112518558,
+          "ratio_of_mean_initial_l2": 0.11796641962315517
+        },
+        {
+          "training_seed": 2043,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.8932656192424542,
+          "mean_initial_rank_gradient_l2": 0.22196618295243958,
+          "ratio_of_mean_initial_l2": 0.11723985303301189
+        }
+      ]
+    },
+    "pets_98": {
+      "dataset": "pets",
+      "retained_patch_tokens": 98,
+      "source_cases": "results/pets-selector-objectives-v1/budget_98/paired_cases.npz",
+      "source_gradient_records": "results/pets-selector-objectives-v1/execution/budget_98/initial_gradient_diagnostics.json",
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "image_task_count": 2624,
+      "image_count": 716,
+      "task_count": 66,
+      "contrasts": {
+        "conditioned": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": -0.00402443163978306,
+            "actual_margin_change": -0.001185164209133462,
+            "actual_minus_teacher_change": 0.002839267430649599,
+            "mean_absolute_change_discrepancy": 0.009493824102131839,
+            "weighted_change_correlation": 0.5391042050893988
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": -0.0043348713674565085,
+              "actual_margin_change": -0.0014001678359964976,
+              "actual_minus_teacher_change": 0.0029347035314600117,
+              "mean_absolute_change_discrepancy": 0.012828449556030953,
+              "weighted_change_correlation": 0.4741956311737061
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": -0.004123403839992932,
+              "actual_margin_change": -0.0008611467149750788,
+              "actual_minus_teacher_change": 0.003262257125017854,
+              "mean_absolute_change_discrepancy": 0.013045847770289946,
+              "weighted_change_correlation": 0.4554697848108278
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": -0.0036150197118997394,
+              "actual_margin_change": -0.0012941780764288086,
+              "actual_minus_teacher_change": 0.002320841635470931,
+              "mean_absolute_change_discrepancy": 0.014096125831843784,
+              "weighted_change_correlation": 0.4475080440682966
+            }
+          ]
+        },
+        "image_only": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": -0.005160805981278421,
+            "actual_margin_change": -0.0017830716582927539,
+            "actual_minus_teacher_change": 0.0033777343229856663,
+            "mean_absolute_change_discrepancy": 0.009078746055561481,
+            "weighted_change_correlation": 0.559020493267552
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": -0.005572371161730496,
+              "actual_margin_change": -0.001715538694563519,
+              "actual_minus_teacher_change": 0.0038568324671669767,
+              "mean_absolute_change_discrepancy": 0.012010010396128158,
+              "weighted_change_correlation": 0.503930264274024
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": -0.004474853000871043,
+              "actual_margin_change": -0.001532804998493646,
+              "actual_minus_teacher_change": 0.0029420480023773974,
+              "mean_absolute_change_discrepancy": 0.011980336935777304,
+              "weighted_change_correlation": 0.48465132727137195
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": -0.005435193781233722,
+              "actual_margin_change": -0.0021008712818210975,
+              "actual_minus_teacher_change": 0.003334322499412625,
+              "mean_absolute_change_discrepancy": 0.012887956829900155,
+              "weighted_change_correlation": 0.49456415919471486
+            }
+          ]
+        },
+        "conditioning_interaction": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": 0.00113637434149536,
+            "actual_margin_change": 0.0005979074491592922,
+            "actual_minus_teacher_change": -0.0005384668923360677,
+            "mean_absolute_change_discrepancy": 0.00969165210939305,
+            "weighted_change_correlation": 0.40581533851105667
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": 0.0012374997942739862,
+              "actual_margin_change": 0.0003153708585670211,
+              "actual_minus_teacher_change": -0.000922128935706965,
+              "mean_absolute_change_discrepancy": 0.015453683695572477,
+              "weighted_change_correlation": 0.410043059931537
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": 0.0003514491608781104,
+              "actual_margin_change": 0.000671658283518567,
+              "actual_minus_teacher_change": 0.0003202091226404564,
+              "mean_absolute_change_discrepancy": 0.015678359245576697,
+              "weighted_change_correlation": 0.3728265193736482
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": 0.0018201740693339831,
+              "actual_margin_change": 0.0008066932053922885,
+              "actual_minus_teacher_change": -0.0010134808639416944,
+              "mean_absolute_change_discrepancy": 0.016759106609978622,
+              "weighted_change_correlation": 0.38712223067947793
+            }
+          ]
+        }
+      },
+      "recorded_initial_gradient_norms": [
+        {
+          "training_seed": 2041,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.5675473922528209,
+          "mean_initial_rank_gradient_l2": 0.07769568131402002,
+          "ratio_of_mean_initial_l2": 0.13689725717109724
+        },
+        {
+          "training_seed": 2041,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.5923638932662862,
+          "mean_initial_rank_gradient_l2": 0.08044928771214385,
+          "ratio_of_mean_initial_l2": 0.13581058640922153
+        },
+        {
+          "training_seed": 2042,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.5823411110326447,
+          "mean_initial_rank_gradient_l2": 0.07908905031274474,
+          "ratio_of_mean_initial_l2": 0.13581223927759273
+        },
+        {
+          "training_seed": 2042,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.6118294523467549,
+          "mean_initial_rank_gradient_l2": 0.08245281233173454,
+          "ratio_of_mean_initial_l2": 0.13476437267849004
+        },
+        {
+          "training_seed": 2043,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.5739335197401176,
+          "mean_initial_rank_gradient_l2": 0.07891396097903527,
+          "ratio_of_mean_initial_l2": 0.13749669302250936
+        },
+        {
+          "training_seed": 2043,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.6110244251910706,
+          "mean_initial_rank_gradient_l2": 0.08329909844133886,
+          "ratio_of_mean_initial_l2": 0.13632695356702113
+        }
+      ]
+    },
+    "flowers_49": {
+      "dataset": "flowers",
+      "retained_patch_tokens": 49,
+      "source_cases": "results/flowers-selector-objectives-v1/budget_49/paired_cases.npz",
+      "source_gradient_records": "results/flowers-selector-objectives-v1/execution/budget_49/initial_gradient_diagnostics.json",
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "image_task_count": 4080,
+      "image_count": 1020,
+      "task_count": 204,
+      "contrasts": {
+        "conditioned": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": -0.009849421011439647,
+            "actual_margin_change": -0.0010850819701859458,
+            "actual_minus_teacher_change": 0.008764339041253701,
+            "mean_absolute_change_discrepancy": 0.01712762175897753,
+            "weighted_change_correlation": 0.6615703399083273
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": -0.007856071706293348,
+              "actual_margin_change": -0.0005992661422191765,
+              "actual_minus_teacher_change": 0.007256805564074169,
+              "mean_absolute_change_discrepancy": 0.023743193026521243,
+              "weighted_change_correlation": 0.5792060443747852
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": -0.013539700999016382,
+              "actual_margin_change": -0.0014203536573852062,
+              "actual_minus_teacher_change": 0.012119347341631177,
+              "mean_absolute_change_discrepancy": 0.02562328650111697,
+              "weighted_change_correlation": 0.6305751648414992
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": -0.008152490329009212,
+              "actual_margin_change": -0.001235626110953454,
+              "actual_minus_teacher_change": 0.006916864218055758,
+              "mean_absolute_change_discrepancy": 0.024423465976279507,
+              "weighted_change_correlation": 0.5667316210131104
+            }
+          ]
+        },
+        "image_only": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": -0.007130966639096048,
+            "actual_margin_change": -0.0003315910925763672,
+            "actual_minus_teacher_change": 0.006799375546519679,
+            "mean_absolute_change_discrepancy": 0.015887367127058016,
+            "weighted_change_correlation": 0.5691787022459337
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": -0.003385658962314084,
+              "actual_margin_change": 0.0007538478685444033,
+              "actual_minus_teacher_change": 0.004139506830858487,
+              "mean_absolute_change_discrepancy": 0.022363377699975064,
+              "weighted_change_correlation": 0.512650726815575
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": -0.008863153063495464,
+              "actual_margin_change": -0.00045385777029059016,
+              "actual_minus_teacher_change": 0.008409295293204874,
+              "mean_absolute_change_discrepancy": 0.02326676364451451,
+              "weighted_change_correlation": 0.5621333457128015
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": -0.009144087891478593,
+              "actual_margin_change": -0.0012947633759829156,
+              "actual_minus_teacher_change": 0.007849324515495677,
+              "mean_absolute_change_discrepancy": 0.02229197225130049,
+              "weighted_change_correlation": 0.5223269539310164
+            }
+          ]
+        },
+        "conditioning_interaction": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": -0.0027184543723436008,
+            "actual_margin_change": -0.0007534908776095789,
+            "actual_minus_teacher_change": 0.001964963494734022,
+            "mean_absolute_change_discrepancy": 0.019349179422011455,
+            "weighted_change_correlation": 0.5791333702169601
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": -0.004470412743979262,
+              "actual_margin_change": -0.0013531140107635804,
+              "actual_minus_teacher_change": 0.0031172987332156823,
+              "mean_absolute_change_discrepancy": 0.029796115796228834,
+              "weighted_change_correlation": 0.5238894125018252
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": -0.004676547935520919,
+              "actual_margin_change": -0.0009664958870946162,
+              "actual_minus_teacher_change": 0.003710052048426302,
+              "mean_absolute_change_discrepancy": 0.030147653664384877,
+              "weighted_change_correlation": 0.5892803251678602
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": 0.0009915975624693802,
+              "actual_margin_change": 5.913726502946131e-05,
+              "actual_minus_teacher_change": -0.0009324602974399186,
+              "mean_absolute_change_discrepancy": 0.03141346272725531,
+              "weighted_change_correlation": 0.511309927222389
+            }
+          ]
+        }
+      },
+      "recorded_initial_gradient_norms": [
+        {
+          "training_seed": 2041,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.8998135339758384,
+          "mean_initial_rank_gradient_l2": 0.15365331429277446,
+          "ratio_of_mean_initial_l2": 0.08087810279528654
+        },
+        {
+          "training_seed": 2041,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.9748768949233964,
+          "mean_initial_rank_gradient_l2": 0.1598453481292388,
+          "ratio_of_mean_initial_l2": 0.08093939857220268
+        },
+        {
+          "training_seed": 2042,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.8627369086447563,
+          "mean_initial_rank_gradient_l2": 0.16548600785549147,
+          "ratio_of_mean_initial_l2": 0.0888402474270463
+        },
+        {
+          "training_seed": 2042,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.9432045403051195,
+          "mean_initial_rank_gradient_l2": 0.17335850509797476,
+          "ratio_of_mean_initial_l2": 0.0892126904308047
+        },
+        {
+          "training_seed": 2043,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.8757685477926644,
+          "mean_initial_rank_gradient_l2": 0.15632116325362308,
+          "ratio_of_mean_initial_l2": 0.08333712783358911
+        },
+        {
+          "training_seed": 2043,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 1.987730169718342,
+          "mean_initial_rank_gradient_l2": 0.16468089084584053,
+          "ratio_of_mean_initial_l2": 0.08284871526057057
+        }
+      ]
+    },
+    "flowers_98": {
+      "dataset": "flowers",
+      "retained_patch_tokens": 98,
+      "source_cases": "results/flowers-selector-objectives-v1/budget_98/paired_cases.npz",
+      "source_gradient_records": "results/flowers-selector-objectives-v1/execution/budget_98/initial_gradient_diagnostics.json",
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "image_task_count": 4080,
+      "image_count": 1020,
+      "task_count": 204,
+      "contrasts": {
+        "conditioned": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": -0.005870999869246749,
+            "actual_margin_change": -0.0031800142597767393,
+            "actual_minus_teacher_change": 0.0026909856094700095,
+            "mean_absolute_change_discrepancy": 0.009154666754442506,
+            "weighted_change_correlation": 0.6128989067729087
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": -0.004375818214719818,
+              "actual_margin_change": -0.001853491471861808,
+              "actual_minus_teacher_change": 0.002522326742858011,
+              "mean_absolute_change_discrepancy": 0.013221691424909258,
+              "weighted_change_correlation": 0.5802529247705576
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": -0.006604654805975562,
+              "actual_margin_change": -0.0037938775987993046,
+              "actual_minus_teacher_change": 0.0028107772071762575,
+              "mean_absolute_change_discrepancy": 0.014018760222811046,
+              "weighted_change_correlation": 0.586201429666554
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": -0.006632526587044866,
+              "actual_margin_change": -0.0038926737086691066,
+              "actual_minus_teacher_change": 0.0027398528783757602,
+              "mean_absolute_change_discrepancy": 0.014560009623416002,
+              "weighted_change_correlation": 0.5327242051366302
+            }
+          ]
+        },
+        "image_only": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": -0.0055891575904268185,
+            "actual_margin_change": -0.002368384027338224,
+            "actual_minus_teacher_change": 0.0032207735630885954,
+            "mean_absolute_change_discrepancy": 0.008644660455749645,
+            "weighted_change_correlation": 0.6546835572234755
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": -0.004744394475035539,
+              "actual_margin_change": -0.0017841374258642344,
+              "actual_minus_teacher_change": 0.002960257049171305,
+              "mean_absolute_change_discrepancy": 0.01301145733035175,
+              "weighted_change_correlation": 0.559612645699097
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": -0.005888930492477991,
+              "actual_margin_change": -0.002794518045896117,
+              "actual_minus_teacher_change": 0.0030944124465818726,
+              "mean_absolute_change_discrepancy": 0.012618079452599872,
+              "weighted_change_correlation": 0.5865058839684476
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": -0.0061341478037669275,
+              "actual_margin_change": -0.0025264966102543206,
+              "actual_minus_teacher_change": 0.0036076511935126078,
+              "mean_absolute_change_discrepancy": 0.013156720177649524,
+              "weighted_change_correlation": 0.6256158148040702
+            }
+          ]
+        },
+        "conditioning_interaction": {
+          "seed_mean": {
+            "teacher_predicted_margin_change": -0.00028184227881993006,
+            "actual_margin_change": -0.0008116302324385153,
+            "actual_minus_teacher_change": -0.0005297879536185855,
+            "mean_absolute_change_discrepancy": 0.010711811012873456,
+            "weighted_change_correlation": 0.5472156545789978
+          },
+          "per_seed": [
+            {
+              "training_seed": 2041,
+              "teacher_predicted_margin_change": 0.0003685762603157204,
+              "actual_margin_change": -6.935404599757385e-05,
+              "actual_minus_teacher_change": -0.0004379303063132939,
+              "mean_absolute_change_discrepancy": 0.01749614686915769,
+              "weighted_change_correlation": 0.51459933774043
+            },
+            {
+              "training_seed": 2042,
+              "teacher_predicted_margin_change": -0.0007157243134975718,
+              "actual_margin_change": -0.0009993595529031866,
+              "actual_minus_teacher_change": -0.000283635239405615,
+              "mean_absolute_change_discrepancy": 0.017961304198719615,
+              "weighted_change_correlation": 0.5307452381666252
+            },
+            {
+              "training_seed": 2043,
+              "teacher_predicted_margin_change": -0.0004983787832779384,
+              "actual_margin_change": -0.0013661770984147855,
+              "actual_minus_teacher_change": -0.0008677983151368474,
+              "mean_absolute_change_discrepancy": 0.018511967749274542,
+              "weighted_change_correlation": 0.5255903333792369
+            }
+          ]
+        }
+      },
+      "recorded_initial_gradient_norms": [
+        {
+          "training_seed": 2041,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.7688287672162848,
+          "mean_initial_rank_gradient_l2": 0.07018603478000127,
+          "ratio_of_mean_initial_l2": 0.09128955337366652
+        },
+        {
+          "training_seed": 2041,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.8010469585905389,
+          "mean_initial_rank_gradient_l2": 0.07253981885754666,
+          "ratio_of_mean_initial_l2": 0.09055626275041628
+        },
+        {
+          "training_seed": 2042,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.7166654156870339,
+          "mean_initial_rank_gradient_l2": 0.07556843187806841,
+          "ratio_of_mean_initial_l2": 0.10544450760976719
+        },
+        {
+          "training_seed": 2042,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.7469860158551549,
+          "mean_initial_rank_gradient_l2": 0.07874616738090043,
+          "ratio_of_mean_initial_l2": 0.10541852954335598
+        },
+        {
+          "training_seed": 2043,
+          "arm": "conditioned",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.7287153648267313,
+          "mean_initial_rank_gradient_l2": 0.06885827159491259,
+          "ratio_of_mean_initial_l2": 0.09449268523559294
+        },
+        {
+          "training_seed": 2043,
+          "arm": "image_only",
+          "batch_count": 8,
+          "mean_initial_kl_gradient_l2": 0.7699942527955627,
+          "mean_initial_rank_gradient_l2": 0.07214800527969922,
+          "ratio_of_mean_initial_l2": 0.09369940751863622
+        }
+      ]
+    }
+  }
+}

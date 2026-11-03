@@ -1,0 +1,60 @@
+{
+  "created_at_utc": "2026-11-03T10:10:13.305122+00:00",
+  "code_commit": "6e19750dfed4d1384285c21aefa43cff4a79dd0a",
+  "numpy_version": "1.26.4",
+  "final_test_used": false,
+  "scope": "Training-cache text dictionaries only. All unordered class pairs are enumerated algebraically; this is not classification evaluation and does not access reserved images or outcomes.",
+  "interpretation": "Checks information retained by the raw pair mean for the fixed known-class dictionary. The linear-algebra identity is not a new theorem, and the diagnostic does not show which computation the trained selector learned.",
+  "datasets": {
+    "pets": {
+      "source_path": "runs/pets-selector-scale-supervision-v1/train/evidence.npz",
+      "array_read": "text_features",
+      "source_dtype": "float32",
+      "calculation_dtype": "float64",
+      "text_shape": [
+        37,
+        512
+      ],
+      "matrix_rank": 37,
+      "row_full_rank": true,
+      "rank_tolerance": 5.293052827482493e-13,
+      "pinv_rcond": 1e-15,
+      "largest_singular_value": 4.655818504199708,
+      "smallest_singular_value": 0.18826572959278573,
+      "condition_number": 24.73003724188216,
+      "class_vector_norm_min": 0.9999999280734244,
+      "class_vector_norm_max": 1.0000000426488853,
+      "unordered_pair_count": 666,
+      "exact_identity_relation": "mean(T[a], T[b]) @ pinv(T) = 0.5 * (e_a + e_b), when T has full row rank",
+      "identity_coefficient_max_abs_error": 1.9984014443252818e-15,
+      "top_two_class_recovery_count": 666,
+      "top_two_class_recovery_fraction": 1.0,
+      "top_two_class_recovery_percent": 100.0
+    },
+    "flowers": {
+      "source_path": "runs/flowers-selector-budget-49-supervision-v1/train/evidence.npz",
+      "array_read": "text_features",
+      "source_dtype": "float32",
+      "calculation_dtype": "float64",
+      "text_shape": [
+        102,
+        512
+      ],
+      "matrix_rank": 102,
+      "row_full_rank": true,
+      "rank_tolerance": 9.000590548259738e-13,
+      "pinv_rcond": 1e-15,
+      "largest_singular_value": 7.917003171729876,
+      "smallest_singular_value": 0.11425494530277022,
+      "condition_number": 69.29243325748563,
+      "class_vector_norm_min": 0.9999999201874654,
+      "class_vector_norm_max": 1.0000000650148353,
+      "unordered_pair_count": 5151,
+      "exact_identity_relation": "mean(T[a], T[b]) @ pinv(T) = 0.5 * (e_a + e_b), when T has full row rank",
+      "identity_coefficient_max_abs_error": 1.887379141862766e-15,
+      "top_two_class_recovery_count": 5151,
+      "top_two_class_recovery_fraction": 1.0,
+      "top_two_class_recovery_percent": 100.0
+    }
+  }
+}

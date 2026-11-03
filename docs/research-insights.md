@@ -190,6 +190,16 @@
 - **对项目的影响：**对 H2 的解释证据是正面补强，且覆盖全部既有预算／数据集／模型设置。此轮是开发阶段最后的定向延伸；下一步固定最终确认的模型、比较与统计量，再用预留图片和类别组合检验中心结论。
 - **证据：**[七设置汇总](../results/geometry-permutation-v1/README.md)、[完整参照统计](../results/geometry-permutation-v1/analysis.json)、[固定协议与输入阶段说明](geometry-permutation.md)。
 
+## I17：三项诊断把后续研究从结果比较推进到信息与资源的来源
+
+**状态：代数关系已核对；机制解释和改进方案待检验。**
+
+- **从哪里来：**I14 的参数重分配、I15 的 mean-only 任务作用，以及 I13 的目标干预；用户同时要求不局限于这些例子。
+- **证据：**固定上下文图像版的348,033参数可折叠为214,913参数，六个检查点分数／集合核对通过；Pets与Flowers文本字典行满秩，原始类别对均值可恢复两类身份；Pets49条件化模型由KL改ranking时教师预测margin降低0.004448，实际增加0.002336。详见[完整诊断](../results/mechanism-diagnostics-v1/README.md)。
+- **改变的判断：**旧同架构对照与参数利用充分的共享对照检验不同问题；已知类别的组合泛化需要与语义迁移分开；监督拟合质量需要在实际选择的mask上检查。初始梯度范数不能单独说明AdamW更新大小。
+- **新延伸：**任务证据冲突与表征信息共享；语义／身份及未见类别；共享核心保护；低维任务通道；结构化mask上的教师误差，见[扩展方案](research-expansion.md)。
+- **对项目的影响：**对应H1／H3，提供更有区分力的实验方向。这些核查本身不等于新的机制发现；下一阶段要用干预检验解释。
+
 ## 如何持续更新
 
 - 有实质新发现时，更新相应条目或新增条目，并链接实验记录与原始结果。普通运行进度留在实验记录里。
@@ -208,3 +218,4 @@
 | 2026-10-28 | 新增 I12–I13：有限库潜力未建立额外留出预测收益；固定训练目标干预对条件化 margin 收益产生设置相关的正负变化 | [聚焦补强](../results/conditioning-objective-v1/README.md)、[运行记录](experiments/2026-10-28-conditioning-objective.md) |
 | 2026-10-29 | 新增 I14–I15：更宽图像基线改变条件化领先范围；均值与差异成分的分类和交换作用得到分别测量 | [两数据集消融](../results/selector-ablations-v1/README.md)、[固定协议](selector-component-ablations.md) |
 | 2026-11-03 | 新增 I16：七设置的归一化 alignment—夹角斜率均超过同图任务对应打乱参照；开发阶段定向延伸完成 | [对应关系结果](../results/geometry-permutation-v1/README.md)、[固定协议](geometry-permutation.md) |
+| 2026-11-03 | 新增 I17：三项机制线索诊断；重新开放开发并设计更大胆的任务／泛化／结构干预 | [诊断](../results/mechanism-diagnostics-v1/README.md)、[扩展方案](research-expansion.md) |
