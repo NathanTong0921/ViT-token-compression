@@ -56,7 +56,7 @@ def run(source, output):
 
     plt.rcParams.update({"font.size": 10, "pdf.fonttype": 42, "ps.fonttype": 42})
     fig, ax = plt.subplots(figsize=(8.7, 5.7))
-    fig.subplots_adjust(left=.28, right=.79, bottom=.25, top=.89)
+    fig.subplots_adjust(left=.28, right=.79, bottom=.28, top=.89)
     positions, headers = [], []
     previous, current = None, 0.
     for row in rows:

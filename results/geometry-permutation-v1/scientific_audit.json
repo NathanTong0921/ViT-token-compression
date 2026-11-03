@@ -1,0 +1,163 @@
+{
+  "status": "passed",
+  "scope": "Independent raw prediction/manifests reconstruction, exact saved feature checks, old-H2 identity reproduction, direct weighted nuisance residualization, all 1999 references for all three statistics, all-draw complete-pair norm preservation, and seven-setting reference-tail correction. No geometry-permutation implementation is imported.",
+  "source": "results/geometry-permutation-v1/analysis.json",
+  "final_test_used": false,
+  "settings": {
+    "pets_b16_49": {
+      "status": "passed",
+      "image_count": 616,
+      "pair_count": 4315,
+      "all_draws_recomputed": 1999,
+      "all_draws_preserve_complete_pair_norm_multisets": true,
+      "raw_task_directions_angles_and_full_margins_fixed": true,
+      "per_seed_observed_statistics_match": true,
+      "observed_statistic_max_abs_error": 7.28583859910259e-17,
+      "all_reference_statistics_max_abs_error": 4.163336342344337e-17,
+      "direct_signed_vector_max_abs_error": 3.2404634531246757e-15,
+      "primary_exceedance_count": 0,
+      "primary_upper_tail": 0.0005,
+      "primary_bonferroni_upper_tail": 0.0035,
+      "raw_panel": {
+        "raw_feature_dtype": "float32",
+        "raw_features_exactly_preserved": true,
+        "development_manifests_verified": true,
+        "image_count": 616,
+        "image_task_count": 2524
+      }
+    },
+    "pets_b16_98": {
+      "status": "passed",
+      "image_count": 616,
+      "pair_count": 4315,
+      "all_draws_recomputed": 1999,
+      "all_draws_preserve_complete_pair_norm_multisets": true,
+      "raw_task_directions_angles_and_full_margins_fixed": true,
+      "per_seed_observed_statistics_match": true,
+      "observed_statistic_max_abs_error": 2.7755575615628914e-17,
+      "all_reference_statistics_max_abs_error": 5.984795992119984e-17,
+      "direct_signed_vector_max_abs_error": 4.6178338930502605e-15,
+      "primary_exceedance_count": 0,
+      "primary_upper_tail": 0.0005,
+      "primary_bonferroni_upper_tail": 0.0035,
+      "raw_panel": {
+        "raw_feature_dtype": "float32",
+        "raw_features_exactly_preserved": true,
+        "development_manifests_verified": true,
+        "image_count": 616,
+        "image_task_count": 2524
+      }
+    },
+    "pets_b16_147": {
+      "status": "passed",
+      "image_count": 616,
+      "pair_count": 4315,
+      "all_draws_recomputed": 1999,
+      "all_draws_preserve_complete_pair_norm_multisets": true,
+      "raw_task_directions_angles_and_full_margins_fixed": true,
+      "per_seed_observed_statistics_match": true,
+      "observed_statistic_max_abs_error": 4.85722573273506e-17,
+      "all_reference_statistics_max_abs_error": 9.985502008591496e-17,
+      "direct_signed_vector_max_abs_error": 1.0172418463127997e-14,
+      "primary_exceedance_count": 0,
+      "primary_upper_tail": 0.0005,
+      "primary_bonferroni_upper_tail": 0.0035,
+      "raw_panel": {
+        "raw_feature_dtype": "float32",
+        "raw_features_exactly_preserved": true,
+        "development_manifests_verified": true,
+        "image_count": 616,
+        "image_task_count": 2524
+      }
+    },
+    "flowers_b16_49": {
+      "status": "passed",
+      "image_count": 1020,
+      "pair_count": 6120,
+      "all_draws_recomputed": 1999,
+      "all_draws_preserve_complete_pair_norm_multisets": true,
+      "raw_task_directions_angles_and_full_margins_fixed": true,
+      "per_seed_observed_statistics_match": true,
+      "observed_statistic_max_abs_error": 3.122502256758253e-17,
+      "all_reference_statistics_max_abs_error": 3.415236843329339e-17,
+      "direct_signed_vector_max_abs_error": 1.6237011735142914e-15,
+      "primary_exceedance_count": 0,
+      "primary_upper_tail": 0.0005,
+      "primary_bonferroni_upper_tail": 0.0035,
+      "raw_panel": {
+        "raw_feature_dtype": "float32",
+        "raw_features_exactly_preserved": true,
+        "development_manifests_verified": true,
+        "image_count": 1020,
+        "image_task_count": 4080
+      }
+    },
+    "flowers_b16_98": {
+      "status": "passed",
+      "image_count": 1020,
+      "pair_count": 6120,
+      "all_draws_recomputed": 1999,
+      "all_draws_preserve_complete_pair_norm_multisets": true,
+      "raw_task_directions_angles_and_full_margins_fixed": true,
+      "per_seed_observed_statistics_match": true,
+      "observed_statistic_max_abs_error": 5.551115123125783e-17,
+      "all_reference_statistics_max_abs_error": 5.204170427930421e-17,
+      "direct_signed_vector_max_abs_error": 3.462508058049707e-15,
+      "primary_exceedance_count": 0,
+      "primary_upper_tail": 0.0005,
+      "primary_bonferroni_upper_tail": 0.0035,
+      "raw_panel": {
+        "raw_feature_dtype": "float32",
+        "raw_features_exactly_preserved": true,
+        "development_manifests_verified": true,
+        "image_count": 1020,
+        "image_task_count": 4080
+      }
+    },
+    "pets_l14_128": {
+      "status": "passed",
+      "image_count": 616,
+      "pair_count": 4315,
+      "all_draws_recomputed": 1999,
+      "all_draws_preserve_complete_pair_norm_multisets": true,
+      "raw_task_directions_angles_and_full_margins_fixed": true,
+      "per_seed_observed_statistics_match": true,
+      "observed_statistic_max_abs_error": 4.0332320816460765e-17,
+      "all_reference_statistics_max_abs_error": 7.892991815694472e-17,
+      "direct_signed_vector_max_abs_error": 5.201568342716456e-15,
+      "primary_exceedance_count": 0,
+      "primary_upper_tail": 0.0005,
+      "primary_bonferroni_upper_tail": 0.0035,
+      "raw_panel": {
+        "raw_feature_dtype": "float32",
+        "raw_features_exactly_preserved": true,
+        "development_manifests_verified": true,
+        "image_count": 616,
+        "image_task_count": 2524
+      }
+    },
+    "flowers_l14_128": {
+      "status": "passed",
+      "image_count": 1020,
+      "pair_count": 6120,
+      "all_draws_recomputed": 1999,
+      "all_draws_preserve_complete_pair_norm_multisets": true,
+      "raw_task_directions_angles_and_full_margins_fixed": true,
+      "per_seed_observed_statistics_match": true,
+      "observed_statistic_max_abs_error": 3.2959746043559335e-17,
+      "all_reference_statistics_max_abs_error": 5.702903427273753e-17,
+      "direct_signed_vector_max_abs_error": 3.3653635433950058e-15,
+      "primary_exceedance_count": 0,
+      "primary_upper_tail": 0.0005,
+      "primary_bonferroni_upper_tail": 0.0035,
+      "raw_panel": {
+        "raw_feature_dtype": "float32",
+        "raw_features_exactly_preserved": true,
+        "development_manifests_verified": true,
+        "image_count": 1020,
+        "image_task_count": 4080
+      }
+    }
+  },
+  "shared_mapping_across_settings": "Identical dataset/image/sorted-task keys verified; the same documented deterministic RNG key is independently regenerated for every setting and all seeds share each assignment."
+}

@@ -1,0 +1,725 @@
+{
+  "status": "passed",
+  "archive_name": "geometry-permutation-evidence-v1.zip",
+  "archive_bytes": 164387286,
+  "server_manifest_matches": true,
+  "zip_crc_passed": true,
+  "member_count": 28,
+  "compact_panels": {
+    "pets_b16_49": {
+      "all_arrays_readable": true,
+      "arrays": {
+        "training_seeds": {
+          "shape": [
+            3
+          ],
+          "dtype": "int64"
+        },
+        "image_ids": {
+          "shape": [
+            2524
+          ],
+          "dtype": "<U30"
+        },
+        "task_ids": {
+          "shape": [
+            2524
+          ],
+          "dtype": "<U5"
+        },
+        "labels": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "class_pairs": {
+          "shape": [
+            2524,
+            2
+          ],
+          "dtype": "int64"
+        },
+        "competitors": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "seed_features": {
+          "shape": [
+            3,
+            2524,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "task_directions": {
+          "shape": [
+            2524,
+            512
+          ],
+          "dtype": "float64"
+        },
+        "full_margins": {
+          "shape": [
+            2524
+          ],
+          "dtype": "float64"
+        },
+        "unique_image_ids": {
+          "shape": [
+            616
+          ],
+          "dtype": "<U30"
+        },
+        "image_index": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "full_image_features": {
+          "shape": [
+            616,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "text_features": {
+          "shape": [
+            37,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "source_rows_per_seed": {
+          "shape": [
+            3,
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "reference_rows": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        }
+      }
+    },
+    "pets_b16_98": {
+      "all_arrays_readable": true,
+      "arrays": {
+        "training_seeds": {
+          "shape": [
+            3
+          ],
+          "dtype": "int64"
+        },
+        "image_ids": {
+          "shape": [
+            2524
+          ],
+          "dtype": "<U30"
+        },
+        "task_ids": {
+          "shape": [
+            2524
+          ],
+          "dtype": "<U5"
+        },
+        "labels": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "class_pairs": {
+          "shape": [
+            2524,
+            2
+          ],
+          "dtype": "int64"
+        },
+        "competitors": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "seed_features": {
+          "shape": [
+            3,
+            2524,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "task_directions": {
+          "shape": [
+            2524,
+            512
+          ],
+          "dtype": "float64"
+        },
+        "full_margins": {
+          "shape": [
+            2524
+          ],
+          "dtype": "float64"
+        },
+        "unique_image_ids": {
+          "shape": [
+            616
+          ],
+          "dtype": "<U30"
+        },
+        "image_index": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "full_image_features": {
+          "shape": [
+            616,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "text_features": {
+          "shape": [
+            37,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "source_rows_per_seed": {
+          "shape": [
+            3,
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "reference_rows": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        }
+      }
+    },
+    "pets_b16_147": {
+      "all_arrays_readable": true,
+      "arrays": {
+        "training_seeds": {
+          "shape": [
+            3
+          ],
+          "dtype": "int64"
+        },
+        "image_ids": {
+          "shape": [
+            2524
+          ],
+          "dtype": "<U30"
+        },
+        "task_ids": {
+          "shape": [
+            2524
+          ],
+          "dtype": "<U5"
+        },
+        "labels": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "class_pairs": {
+          "shape": [
+            2524,
+            2
+          ],
+          "dtype": "int64"
+        },
+        "competitors": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "seed_features": {
+          "shape": [
+            3,
+            2524,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "task_directions": {
+          "shape": [
+            2524,
+            512
+          ],
+          "dtype": "float64"
+        },
+        "full_margins": {
+          "shape": [
+            2524
+          ],
+          "dtype": "float64"
+        },
+        "unique_image_ids": {
+          "shape": [
+            616
+          ],
+          "dtype": "<U30"
+        },
+        "image_index": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "full_image_features": {
+          "shape": [
+            616,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "text_features": {
+          "shape": [
+            37,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "source_rows_per_seed": {
+          "shape": [
+            3,
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "reference_rows": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        }
+      }
+    },
+    "flowers_b16_49": {
+      "all_arrays_readable": true,
+      "arrays": {
+        "training_seeds": {
+          "shape": [
+            3
+          ],
+          "dtype": "int64"
+        },
+        "image_ids": {
+          "shape": [
+            4080
+          ],
+          "dtype": "<U11"
+        },
+        "task_ids": {
+          "shape": [
+            4080
+          ],
+          "dtype": "<U7"
+        },
+        "labels": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "class_pairs": {
+          "shape": [
+            4080,
+            2
+          ],
+          "dtype": "int64"
+        },
+        "competitors": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "seed_features": {
+          "shape": [
+            3,
+            4080,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "task_directions": {
+          "shape": [
+            4080,
+            512
+          ],
+          "dtype": "float64"
+        },
+        "full_margins": {
+          "shape": [
+            4080
+          ],
+          "dtype": "float64"
+        },
+        "unique_image_ids": {
+          "shape": [
+            1020
+          ],
+          "dtype": "<U11"
+        },
+        "image_index": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "full_image_features": {
+          "shape": [
+            1020,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "text_features": {
+          "shape": [
+            102,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "source_rows_per_seed": {
+          "shape": [
+            3,
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "reference_rows": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        }
+      }
+    },
+    "flowers_b16_98": {
+      "all_arrays_readable": true,
+      "arrays": {
+        "training_seeds": {
+          "shape": [
+            3
+          ],
+          "dtype": "int64"
+        },
+        "image_ids": {
+          "shape": [
+            4080
+          ],
+          "dtype": "<U11"
+        },
+        "task_ids": {
+          "shape": [
+            4080
+          ],
+          "dtype": "<U7"
+        },
+        "labels": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "class_pairs": {
+          "shape": [
+            4080,
+            2
+          ],
+          "dtype": "int64"
+        },
+        "competitors": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "seed_features": {
+          "shape": [
+            3,
+            4080,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "task_directions": {
+          "shape": [
+            4080,
+            512
+          ],
+          "dtype": "float64"
+        },
+        "full_margins": {
+          "shape": [
+            4080
+          ],
+          "dtype": "float64"
+        },
+        "unique_image_ids": {
+          "shape": [
+            1020
+          ],
+          "dtype": "<U11"
+        },
+        "image_index": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "full_image_features": {
+          "shape": [
+            1020,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "text_features": {
+          "shape": [
+            102,
+            512
+          ],
+          "dtype": "float32"
+        },
+        "source_rows_per_seed": {
+          "shape": [
+            3,
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "reference_rows": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        }
+      }
+    },
+    "pets_l14_128": {
+      "all_arrays_readable": true,
+      "arrays": {
+        "training_seeds": {
+          "shape": [
+            3
+          ],
+          "dtype": "int64"
+        },
+        "image_ids": {
+          "shape": [
+            2524
+          ],
+          "dtype": "<U30"
+        },
+        "task_ids": {
+          "shape": [
+            2524
+          ],
+          "dtype": "<U5"
+        },
+        "labels": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "class_pairs": {
+          "shape": [
+            2524,
+            2
+          ],
+          "dtype": "int64"
+        },
+        "competitors": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "seed_features": {
+          "shape": [
+            3,
+            2524,
+            768
+          ],
+          "dtype": "float32"
+        },
+        "task_directions": {
+          "shape": [
+            2524,
+            768
+          ],
+          "dtype": "float64"
+        },
+        "full_margins": {
+          "shape": [
+            2524
+          ],
+          "dtype": "float64"
+        },
+        "unique_image_ids": {
+          "shape": [
+            616
+          ],
+          "dtype": "<U30"
+        },
+        "image_index": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "full_image_features": {
+          "shape": [
+            616,
+            768
+          ],
+          "dtype": "float32"
+        },
+        "text_features": {
+          "shape": [
+            37,
+            768
+          ],
+          "dtype": "float32"
+        },
+        "source_rows_per_seed": {
+          "shape": [
+            3,
+            2524
+          ],
+          "dtype": "int64"
+        },
+        "reference_rows": {
+          "shape": [
+            2524
+          ],
+          "dtype": "int64"
+        }
+      }
+    },
+    "flowers_l14_128": {
+      "all_arrays_readable": true,
+      "arrays": {
+        "training_seeds": {
+          "shape": [
+            3
+          ],
+          "dtype": "int64"
+        },
+        "image_ids": {
+          "shape": [
+            4080
+          ],
+          "dtype": "<U11"
+        },
+        "task_ids": {
+          "shape": [
+            4080
+          ],
+          "dtype": "<U7"
+        },
+        "labels": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "class_pairs": {
+          "shape": [
+            4080,
+            2
+          ],
+          "dtype": "int64"
+        },
+        "competitors": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "seed_features": {
+          "shape": [
+            3,
+            4080,
+            768
+          ],
+          "dtype": "float32"
+        },
+        "task_directions": {
+          "shape": [
+            4080,
+            768
+          ],
+          "dtype": "float64"
+        },
+        "full_margins": {
+          "shape": [
+            4080
+          ],
+          "dtype": "float64"
+        },
+        "unique_image_ids": {
+          "shape": [
+            1020
+          ],
+          "dtype": "<U11"
+        },
+        "image_index": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "full_image_features": {
+          "shape": [
+            1020,
+            768
+          ],
+          "dtype": "float32"
+        },
+        "text_features": {
+          "shape": [
+            102,
+            768
+          ],
+          "dtype": "float32"
+        },
+        "source_rows_per_seed": {
+          "shape": [
+            3,
+            4080
+          ],
+          "dtype": "int64"
+        },
+        "reference_rows": {
+          "shape": [
+            4080
+          ],
+          "dtype": "int64"
+        }
+      }
+    }
+  },
+  "scope": "Read every compact panel array from the retained local ZIP; source-to-panel fidelity and full statistical recomputation independently verified in scientific_audit.json."
+}

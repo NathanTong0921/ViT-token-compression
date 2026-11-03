@@ -1,0 +1,23 @@
+{
+  "release_tag": "geometry-permutation-v1",
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/geometry-permutation-v1",
+  "scientific_analysis_code_commit": "4493f0b4f0b13903a3b4f1804eb34ebc3862ba2c",
+  "assets": [
+    {
+      "name": "geometry-permutation-evidence-v1.zip",
+      "bytes": 164387286,
+      "sha256": "6b76b09b04b28908db212f8db5c2f66b411f45f7162d7e61ef24ce6e7c412e0d",
+      "members": 28,
+      "asset_id": 705004771,
+      "state": "uploaded",
+      "url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0488f9133a2b1ab8ccb0/geometry-permutation-evidence-v1.zip",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/geometry-permutation-v1/geometry-permutation-evidence-v1.zip",
+      "server_run_evidence": "/data2/zhao.tong/experiments/runs/geometry-permutation-v1/panels"
+    }
+  ],
+  "total_archive_bytes": 164387286,
+  "verification": "Local archive matches server manifest; ZIP CRC and every array in all seven compact panels readable. GitHub asset size and digest match the verified archive. See archive_verification.json.",
+  "source_fidelity": "Independent audit rebuilt panels from raw predictions and manifests and recomputed all observed and reference statistics; see scientific_audit.json.",
+  "reused_prior_evidence": "Original predictions, model checkpoints and frozen features remain on the server and in earlier milestone releases.",
+  "transfer_cleanup": "Server ZIP transfer copies and local earlier code-sync bundles removed after archive verification; retained local scientific archive and original server panels preserved."
+}

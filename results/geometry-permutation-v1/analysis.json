@@ -1,0 +1,1354 @@
+{
+  "code_commit": "4493f0b4f0b13903a3b4f1804eb34ebc3862ba2c",
+  "started_at_utc": "2026-11-03T09:04:39.259313+00:00",
+  "config": {
+    "protocol": "docs/geometry-permutation.md",
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "draws": 1999,
+    "permutation_seed": 2094,
+    "family_size": 7,
+    "final_test_used": false,
+    "settings": [
+      {
+        "id": "pets_b16_49",
+        "dataset": "pets",
+        "model": "ViT-B/16",
+        "keep_patch_tokens": 49,
+        "source": "runs/pets-selector-scale-eval-v1",
+        "manifest_dir": "data/splits/pets-v1",
+        "geometry_source": "results/pets-selector-budgets-v1/geometry"
+      },
+      {
+        "id": "pets_b16_98",
+        "dataset": "pets",
+        "model": "ViT-B/16",
+        "keep_patch_tokens": 98,
+        "source": "runs/pets-selector-budget-98-eval-v1",
+        "manifest_dir": "data/splits/pets-v1",
+        "geometry_source": "results/pets-selector-budgets-v1/geometry"
+      },
+      {
+        "id": "pets_b16_147",
+        "dataset": "pets",
+        "model": "ViT-B/16",
+        "keep_patch_tokens": 147,
+        "source": "runs/pets-selector-budget-147-eval-v1",
+        "manifest_dir": "data/splits/pets-v1",
+        "geometry_source": "results/pets-selector-budgets-v1/geometry"
+      },
+      {
+        "id": "flowers_b16_49",
+        "dataset": "flowers",
+        "model": "ViT-B/16",
+        "keep_patch_tokens": 49,
+        "source": "runs/flowers-selector-budget-49-eval-v1",
+        "manifest_dir": "data/splits/flowers-v1",
+        "geometry_source": "results/flowers-selector-budgets-v1/geometry"
+      },
+      {
+        "id": "flowers_b16_98",
+        "dataset": "flowers",
+        "model": "ViT-B/16",
+        "keep_patch_tokens": 98,
+        "source": "runs/flowers-selector-budget-98-eval-v1",
+        "manifest_dir": "data/splits/flowers-v1",
+        "geometry_source": "results/flowers-selector-budgets-v1/geometry"
+      },
+      {
+        "id": "pets_l14_128",
+        "dataset": "pets",
+        "model": "ViT-L/14",
+        "keep_patch_tokens": 128,
+        "source": "runs/pets-vitl128-eval-v1",
+        "manifest_dir": "data/splits/pets-v1",
+        "geometry_source": "results/pets-vitl128-v1/geometry"
+      },
+      {
+        "id": "flowers_l14_128",
+        "dataset": "flowers",
+        "model": "ViT-L/14",
+        "keep_patch_tokens": 128,
+        "source": "runs/flowers-vitl128-eval-v1",
+        "manifest_dir": "data/splits/flowers-v1",
+        "geometry_source": "results/flowers-vitl128-v1/geometry"
+      }
+    ]
+  },
+  "final_test_used": false,
+  "from_compact_panels": false,
+  "status": "complete",
+  "primary_statistic": "difficulty_adjusted_slope",
+  "scope": "Unseen validation class combinations on development images; all complete within-image task graphs.",
+  "interpretation": "Exploratory within-image assignment reference, conditional on saved feature vectors, task directions, development panel and three fixed training seeds.",
+  "multiplicity": "One-sided upper-tail reference probability with Bonferroni correction across all seven primary settings. Secondary statistics are descriptive.",
+  "seed_aggregation": "Average normalized feature vectors in float64 without renormalization; calculate alignment after averaging.",
+  "per_seed_diagnostics": "Descriptive observed statistics use each seed's nonzero-displacement pairs, with image-equal weights and both regression fits recomputed on that support; excluded pair identities are recorded. Primary seed-mean support and permutation graphs are unchanged.",
+  "weighting": "Equal total weight per image; equal weight per unordered task pair within image.",
+  "settings": {
+    "pets_b16_49": {
+      "setting": {
+        "id": "pets_b16_49",
+        "dataset": "pets",
+        "model": "ViT-B/16",
+        "keep_patch_tokens": 49,
+        "source": "runs/pets-selector-scale-eval-v1",
+        "manifest_dir": "data/splits/pets-v1",
+        "geometry_source": "results/pets-selector-budgets-v1/geometry"
+      },
+      "panel_path": "runs/geometry-permutation-v1/panels/pets_b16_49.npz",
+      "panel_metadata": {
+        "schema_version": 1,
+        "setting": {
+          "id": "pets_b16_49",
+          "dataset": "pets",
+          "model": "ViT-B/16",
+          "keep_patch_tokens": 49,
+          "source": "runs/pets-selector-scale-eval-v1",
+          "manifest_dir": "data/splits/pets-v1",
+          "geometry_source": "results/pets-selector-budgets-v1/geometry"
+        },
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "task_split": "unseen",
+        "image_split": "val",
+        "final_test_used": false,
+        "sources": {
+          "conditioned": "runs/pets-selector-scale-eval-v1/full/predictions.npz",
+          "full_model": "runs/pets-selector-scale-eval-v1/references/predictions.npz"
+        },
+        "source_row_field": "row_id",
+        "feature_axes": [
+          "training_seed",
+          "image_task",
+          "feature"
+        ],
+        "feature_aggregation": "Convert saved normalized feature vectors to float64, then average seeds; do not renormalize the average.",
+        "direction_definition": "normalize(text_features[true_class] - text_features[competing_class]) in float64",
+        "full_margin_definition": "dot(saved full-model image feature, oriented unit task direction) in float64",
+        "image_count": 616,
+        "image_task_count": 2524,
+        "feature_dimension": 512,
+        "single_task_image_count_excluded": 100,
+        "selected_image_count_before_pair_eligibility": 716,
+        "array_bytes_uncompressed": 27812328,
+        "development_image_count_in_manifest": 736,
+        "development_task_count_in_manifest": 66,
+        "selected_rows_match_development_manifests": true
+      },
+      "panel_file_bytes": 15705878,
+      "input_reproduction_audit": {
+        "existing_pair_source": "results/pets-selector-budgets-v1/geometry/budget_49/seed_mean_cases.npz",
+        "existing_summary_source": "results/pets-selector-budgets-v1/geometry/analysis.json",
+        "same_image_task_pairs": true,
+        "pair_field_max_abs_errors": {
+          "base_margin_a": 0.0,
+          "base_margin_b": 0.0,
+          "angle_degrees": 0.0,
+          "displacement_norm": 1.1102230246251565e-16,
+          "alignment": 3.3306690738754696e-16,
+          "exchange_loss": 2.7755575615628914e-17
+        },
+        "alignment_slope_max_abs_error": 3.2959746043559335e-17,
+        "exchange_loss_slope_max_abs_error": 2.3852447794681098e-18
+      },
+      "observed_statistics": {
+        "difficulty_adjusted_slope": 0.012742735904911132,
+        "image_fixed_effects_slope": 0.0142562462330979,
+        "mean_alignment": 0.027048301349220878
+      },
+      "observed_statistics_per_seed": [
+        {
+          "training_seed": 2041,
+          "difficulty_adjusted_slope": 0.008037047493949692,
+          "image_fixed_effects_slope": 0.008122863413168127,
+          "mean_alignment": 0.01641313478364903,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2042,
+          "difficulty_adjusted_slope": 0.009655516559357199,
+          "image_fixed_effects_slope": 0.012433674328690266,
+          "mean_alignment": 0.0177725041551151,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4314,
+          "excluded_pair_count": 1,
+          "eligible_image_count": 616,
+          "excluded_pairs": [
+            {
+              "image_id": "havanese_151",
+              "task_a": "06_16",
+              "task_b": "16_24"
+            }
+          ],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2043,
+          "difficulty_adjusted_slope": 0.009632685947457484,
+          "image_fixed_effects_slope": 0.00995523337952819,
+          "mean_alignment": 0.020725676051203422,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        }
+      ],
+      "design": {
+        "difficulty_adjusted_slope": {
+          "design_rank": 7,
+          "design_columns": 7,
+          "baseline_rank": 6,
+          "angle_unit": "10 degrees"
+        },
+        "image_fixed_effects_slope": {
+          "design_rank": 6,
+          "design_columns": 6,
+          "baseline_rank": 5,
+          "angle_unit": "10 degrees"
+        },
+        "image_count": 616,
+        "pair_count": 4315
+      },
+      "statistics": {
+        "difficulty_adjusted_slope": {
+          "observed": 0.012742735904911132,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -4.712518433600093e-06,
+          "null_std": 0.001744334917975559,
+          "null_quantiles_025_50_975": [
+            -0.003295215927964006,
+            -5.030734248582057e-05,
+            0.0033842627548197183
+          ],
+          "observed_minus_null_mean": 0.012747448423344732,
+          "role": "primary",
+          "bonferroni_upper_tail_p": 0.0035,
+          "above_assignment_reference_after_seven_settings": true
+        },
+        "image_fixed_effects_slope": {
+          "observed": 0.0142562462330979,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -7.778945808312819e-06,
+          "null_std": 0.001800375383603471,
+          "null_quantiles_025_50_975": [
+            -0.0034664332942712967,
+            -2.1891431664023012e-05,
+            0.0036274816500190626
+          ],
+          "observed_minus_null_mean": 0.014264025178906214,
+          "role": "descriptive"
+        },
+        "mean_alignment": {
+          "observed": 0.027048301349220878,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": 4.113834921908295e-05,
+          "null_std": 0.0017385757361225752,
+          "null_quantiles_025_50_975": [
+            -0.003208884691884704,
+            1.5926542212720658e-05,
+            0.003586683026764439
+          ],
+          "observed_minus_null_mean": 0.027007163000001794,
+          "role": "descriptive"
+        }
+      },
+      "permutation_wall_seconds": 2.68884391291067
+    },
+    "pets_b16_98": {
+      "setting": {
+        "id": "pets_b16_98",
+        "dataset": "pets",
+        "model": "ViT-B/16",
+        "keep_patch_tokens": 98,
+        "source": "runs/pets-selector-budget-98-eval-v1",
+        "manifest_dir": "data/splits/pets-v1",
+        "geometry_source": "results/pets-selector-budgets-v1/geometry"
+      },
+      "panel_path": "runs/geometry-permutation-v1/panels/pets_b16_98.npz",
+      "panel_metadata": {
+        "schema_version": 1,
+        "setting": {
+          "id": "pets_b16_98",
+          "dataset": "pets",
+          "model": "ViT-B/16",
+          "keep_patch_tokens": 98,
+          "source": "runs/pets-selector-budget-98-eval-v1",
+          "manifest_dir": "data/splits/pets-v1",
+          "geometry_source": "results/pets-selector-budgets-v1/geometry"
+        },
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "task_split": "unseen",
+        "image_split": "val",
+        "final_test_used": false,
+        "sources": {
+          "conditioned": "runs/pets-selector-budget-98-eval-v1/full/predictions.npz",
+          "full_model": "runs/pets-selector-budget-98-eval-v1/references/predictions.npz"
+        },
+        "source_row_field": "row_id",
+        "feature_axes": [
+          "training_seed",
+          "image_task",
+          "feature"
+        ],
+        "feature_aggregation": "Convert saved normalized feature vectors to float64, then average seeds; do not renormalize the average.",
+        "direction_definition": "normalize(text_features[true_class] - text_features[competing_class]) in float64",
+        "full_margin_definition": "dot(saved full-model image feature, oriented unit task direction) in float64",
+        "image_count": 616,
+        "image_task_count": 2524,
+        "feature_dimension": 512,
+        "single_task_image_count_excluded": 100,
+        "selected_image_count_before_pair_eligibility": 716,
+        "array_bytes_uncompressed": 27812328,
+        "development_image_count_in_manifest": 736,
+        "development_task_count_in_manifest": 66,
+        "selected_rows_match_development_manifests": true
+      },
+      "panel_file_bytes": 15712765,
+      "input_reproduction_audit": {
+        "existing_pair_source": "results/pets-selector-budgets-v1/geometry/budget_98/seed_mean_cases.npz",
+        "existing_summary_source": "results/pets-selector-budgets-v1/geometry/analysis.json",
+        "same_image_task_pairs": true,
+        "pair_field_max_abs_errors": {
+          "base_margin_a": 0.0,
+          "base_margin_b": 0.0,
+          "angle_degrees": 0.0,
+          "displacement_norm": 5.551115123125783e-17,
+          "alignment": 2.983724378680108e-16,
+          "exchange_loss": 2.7755575615628914e-17
+        },
+        "alignment_slope_max_abs_error": 1.9081958235744878e-17,
+        "exchange_loss_slope_max_abs_error": 9.75781955236954e-19
+      },
+      "observed_statistics": {
+        "difficulty_adjusted_slope": 0.0077715082614892425,
+        "image_fixed_effects_slope": 0.010386095731916735,
+        "mean_alignment": 0.02494319092670458
+      },
+      "observed_statistics_per_seed": [
+        {
+          "training_seed": 2041,
+          "difficulty_adjusted_slope": 0.007146207274396896,
+          "image_fixed_effects_slope": 0.007873065172100485,
+          "mean_alignment": 0.015671161071190508,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2042,
+          "difficulty_adjusted_slope": 0.0048484007512552465,
+          "image_fixed_effects_slope": 0.006351697318140819,
+          "mean_alignment": 0.016143905931559052,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2043,
+          "difficulty_adjusted_slope": 0.003467866427221124,
+          "image_fixed_effects_slope": 0.006075105440633544,
+          "mean_alignment": 0.017712525082548128,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        }
+      ],
+      "design": {
+        "difficulty_adjusted_slope": {
+          "design_rank": 7,
+          "design_columns": 7,
+          "baseline_rank": 6,
+          "angle_unit": "10 degrees"
+        },
+        "image_fixed_effects_slope": {
+          "design_rank": 6,
+          "design_columns": 6,
+          "baseline_rank": 5,
+          "angle_unit": "10 degrees"
+        },
+        "image_count": 616,
+        "pair_count": 4315
+      },
+      "statistics": {
+        "difficulty_adjusted_slope": {
+          "observed": 0.0077715082614892425,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": 1.4810106623116881e-05,
+          "null_std": 0.001461281282701248,
+          "null_quantiles_025_50_975": [
+            -0.0028352750635165327,
+            3.133163819672894e-05,
+            0.0027883120468948923
+          ],
+          "observed_minus_null_mean": 0.007756698154866125,
+          "role": "primary",
+          "bonferroni_upper_tail_p": 0.0035,
+          "above_assignment_reference_after_seven_settings": true
+        },
+        "image_fixed_effects_slope": {
+          "observed": 0.010386095731916735,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": 1.0309788026847439e-05,
+          "null_std": 0.0015086514663120595,
+          "null_quantiles_025_50_975": [
+            -0.002939736630567385,
+            4.3561445253962876e-05,
+            0.003093600622456065
+          ],
+          "observed_minus_null_mean": 0.010375785943889888,
+          "role": "descriptive"
+        },
+        "mean_alignment": {
+          "observed": 0.02494319092670458,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": 1.564846611340177e-05,
+          "null_std": 0.0014668096142870228,
+          "null_quantiles_025_50_975": [
+            -0.002959293588737953,
+            1.4039160994669675e-05,
+            0.0028046491969151268
+          ],
+          "observed_minus_null_mean": 0.02492754246059118,
+          "role": "descriptive"
+        }
+      },
+      "permutation_wall_seconds": 2.6873318989528343
+    },
+    "pets_b16_147": {
+      "setting": {
+        "id": "pets_b16_147",
+        "dataset": "pets",
+        "model": "ViT-B/16",
+        "keep_patch_tokens": 147,
+        "source": "runs/pets-selector-budget-147-eval-v1",
+        "manifest_dir": "data/splits/pets-v1",
+        "geometry_source": "results/pets-selector-budgets-v1/geometry"
+      },
+      "panel_path": "runs/geometry-permutation-v1/panels/pets_b16_147.npz",
+      "panel_metadata": {
+        "schema_version": 1,
+        "setting": {
+          "id": "pets_b16_147",
+          "dataset": "pets",
+          "model": "ViT-B/16",
+          "keep_patch_tokens": 147,
+          "source": "runs/pets-selector-budget-147-eval-v1",
+          "manifest_dir": "data/splits/pets-v1",
+          "geometry_source": "results/pets-selector-budgets-v1/geometry"
+        },
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "task_split": "unseen",
+        "image_split": "val",
+        "final_test_used": false,
+        "sources": {
+          "conditioned": "runs/pets-selector-budget-147-eval-v1/full/predictions.npz",
+          "full_model": "runs/pets-selector-budget-147-eval-v1/references/predictions.npz"
+        },
+        "source_row_field": "row_id",
+        "feature_axes": [
+          "training_seed",
+          "image_task",
+          "feature"
+        ],
+        "feature_aggregation": "Convert saved normalized feature vectors to float64, then average seeds; do not renormalize the average.",
+        "direction_definition": "normalize(text_features[true_class] - text_features[competing_class]) in float64",
+        "full_margin_definition": "dot(saved full-model image feature, oriented unit task direction) in float64",
+        "image_count": 616,
+        "image_task_count": 2524,
+        "feature_dimension": 512,
+        "single_task_image_count_excluded": 100,
+        "selected_image_count_before_pair_eligibility": 716,
+        "array_bytes_uncompressed": 27812328,
+        "development_image_count_in_manifest": 736,
+        "development_task_count_in_manifest": 66,
+        "selected_rows_match_development_manifests": true
+      },
+      "panel_file_bytes": 15712597,
+      "input_reproduction_audit": {
+        "existing_pair_source": "results/pets-selector-budgets-v1/geometry/budget_147/seed_mean_cases.npz",
+        "existing_summary_source": "results/pets-selector-budgets-v1/geometry/analysis.json",
+        "same_image_task_pairs": true,
+        "pair_field_max_abs_errors": {
+          "base_margin_a": 0.0,
+          "base_margin_b": 0.0,
+          "angle_degrees": 0.0,
+          "displacement_norm": 5.551115123125783e-17,
+          "alignment": 8.396061623727746e-16,
+          "exchange_loss": 2.168404344971009e-17
+        },
+        "alignment_slope_max_abs_error": 1.734723475976807e-18,
+        "exchange_loss_slope_max_abs_error": 2.168404344971009e-19
+      },
+      "observed_statistics": {
+        "difficulty_adjusted_slope": 0.005252287859598356,
+        "image_fixed_effects_slope": 0.004834335323734592,
+        "mean_alignment": 0.013276237632030658
+      },
+      "observed_statistics_per_seed": [
+        {
+          "training_seed": 2041,
+          "difficulty_adjusted_slope": 0.004452908926384791,
+          "image_fixed_effects_slope": 0.0025352662046965705,
+          "mean_alignment": 0.008420734609645335,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2042,
+          "difficulty_adjusted_slope": 0.002652547462372748,
+          "image_fixed_effects_slope": 0.0034465132711968233,
+          "mean_alignment": 0.008820638618089282,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2043,
+          "difficulty_adjusted_slope": 0.0035867988563429596,
+          "image_fixed_effects_slope": 0.0019821778457059357,
+          "mean_alignment": 0.008239258196075358,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        }
+      ],
+      "design": {
+        "difficulty_adjusted_slope": {
+          "design_rank": 7,
+          "design_columns": 7,
+          "baseline_rank": 6,
+          "angle_unit": "10 degrees"
+        },
+        "image_fixed_effects_slope": {
+          "design_rank": 6,
+          "design_columns": 6,
+          "baseline_rank": 5,
+          "angle_unit": "10 degrees"
+        },
+        "image_count": 616,
+        "pair_count": 4315
+      },
+      "statistics": {
+        "difficulty_adjusted_slope": {
+          "observed": 0.005252287859598356,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": 3.6790273330318006e-05,
+          "null_std": 0.0011558467744623654,
+          "null_quantiles_025_50_975": [
+            -0.002348861267508557,
+            2.9800221183320007e-05,
+            0.002261269178035066
+          ],
+          "observed_minus_null_mean": 0.005215497586268038,
+          "role": "primary",
+          "bonferroni_upper_tail_p": 0.0035,
+          "above_assignment_reference_after_seven_settings": true
+        },
+        "image_fixed_effects_slope": {
+          "observed": 0.004834335323734592,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": 2.0632525071788006e-06,
+          "null_std": 0.0012334278062724156,
+          "null_quantiles_025_50_975": [
+            -0.002345543086615765,
+            -6.050684855208722e-06,
+            0.0024175717346954172
+          ],
+          "observed_minus_null_mean": 0.004832272071227413,
+          "role": "descriptive"
+        },
+        "mean_alignment": {
+          "observed": 0.013276237632030658,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": 3.4440037528627194e-05,
+          "null_std": 0.0011635442523512168,
+          "null_quantiles_025_50_975": [
+            -0.0022743934493239,
+            6.528047019433057e-05,
+            0.0022369675678736343
+          ],
+          "observed_minus_null_mean": 0.01324179759450203,
+          "role": "descriptive"
+        }
+      },
+      "permutation_wall_seconds": 2.663627761998214
+    },
+    "flowers_b16_49": {
+      "setting": {
+        "id": "flowers_b16_49",
+        "dataset": "flowers",
+        "model": "ViT-B/16",
+        "keep_patch_tokens": 49,
+        "source": "runs/flowers-selector-budget-49-eval-v1",
+        "manifest_dir": "data/splits/flowers-v1",
+        "geometry_source": "results/flowers-selector-budgets-v1/geometry"
+      },
+      "panel_path": "runs/geometry-permutation-v1/panels/flowers_b16_49.npz",
+      "panel_metadata": {
+        "schema_version": 1,
+        "setting": {
+          "id": "flowers_b16_49",
+          "dataset": "flowers",
+          "model": "ViT-B/16",
+          "keep_patch_tokens": 49,
+          "source": "runs/flowers-selector-budget-49-eval-v1",
+          "manifest_dir": "data/splits/flowers-v1",
+          "geometry_source": "results/flowers-selector-budgets-v1/geometry"
+        },
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "task_split": "unseen",
+        "image_split": "val",
+        "final_test_used": false,
+        "sources": {
+          "conditioned": "runs/flowers-selector-budget-49-eval-v1/full/predictions.npz",
+          "full_model": "runs/flowers-selector-budget-49-eval-v1/references/predictions.npz"
+        },
+        "source_row_field": "row_id",
+        "feature_axes": [
+          "training_seed",
+          "image_task",
+          "feature"
+        ],
+        "feature_aggregation": "Convert saved normalized feature vectors to float64, then average seeds; do not renormalize the average.",
+        "direction_definition": "normalize(text_features[true_class] - text_features[competing_class]) in float64",
+        "full_margin_definition": "dot(saved full-model image feature, oriented unit task direction) in float64",
+        "image_count": 1020,
+        "image_task_count": 4080,
+        "feature_dimension": 512,
+        "single_task_image_count_excluded": 0,
+        "selected_image_count_before_pair_eligibility": 1020,
+        "array_bytes_uncompressed": 44742120,
+        "development_image_count_in_manifest": 1020,
+        "development_task_count_in_manifest": 204,
+        "selected_rows_match_development_manifests": true
+      },
+      "panel_file_bytes": 26509309,
+      "input_reproduction_audit": {
+        "existing_pair_source": "results/flowers-selector-budgets-v1/geometry/budget_49/seed_mean_cases.npz",
+        "existing_summary_source": "results/flowers-selector-budgets-v1/geometry/analysis.json",
+        "same_image_task_pairs": true,
+        "pair_field_max_abs_errors": {
+          "base_margin_a": 0.0,
+          "base_margin_b": 0.0,
+          "angle_degrees": 0.0,
+          "displacement_norm": 1.1102230246251565e-16,
+          "alignment": 2.7755575615628914e-16,
+          "exchange_loss": 2.42861286636753e-17
+        },
+        "alignment_slope_max_abs_error": 1.0408340855860843e-17,
+        "exchange_loss_slope_max_abs_error": 8.673617379884035e-19
+      },
+      "observed_statistics": {
+        "difficulty_adjusted_slope": 0.010262697782707598,
+        "image_fixed_effects_slope": 0.010106227620912206,
+        "mean_alignment": 0.03559498888096052
+      },
+      "observed_statistics_per_seed": [
+        {
+          "training_seed": 2041,
+          "difficulty_adjusted_slope": 0.008102327704294554,
+          "image_fixed_effects_slope": 0.008922705904298537,
+          "mean_alignment": 0.022667966715079778,
+          "total_pair_count": 6120,
+          "eligible_pair_count": 6120,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 1020,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2042,
+          "difficulty_adjusted_slope": 0.007700441429295615,
+          "image_fixed_effects_slope": 0.007826234401525089,
+          "mean_alignment": 0.02611392844137872,
+          "total_pair_count": 6120,
+          "eligible_pair_count": 6120,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 1020,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2043,
+          "difficulty_adjusted_slope": 0.007548660179579048,
+          "image_fixed_effects_slope": 0.006489814594865228,
+          "mean_alignment": 0.023127578363268883,
+          "total_pair_count": 6120,
+          "eligible_pair_count": 6120,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 1020,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        }
+      ],
+      "design": {
+        "difficulty_adjusted_slope": {
+          "design_rank": 7,
+          "design_columns": 7,
+          "baseline_rank": 6,
+          "angle_unit": "10 degrees"
+        },
+        "image_fixed_effects_slope": {
+          "design_rank": 6,
+          "design_columns": 6,
+          "baseline_rank": 5,
+          "angle_unit": "10 degrees"
+        },
+        "image_count": 1020,
+        "pair_count": 6120
+      },
+      "statistics": {
+        "difficulty_adjusted_slope": {
+          "observed": 0.010262697782707598,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -3.484849762063785e-05,
+          "null_std": 0.0017561710295652057,
+          "null_quantiles_025_50_975": [
+            -0.0034731126265741845,
+            -3.045774883664296e-05,
+            0.003404944925356851
+          ],
+          "observed_minus_null_mean": 0.010297546280328236,
+          "role": "primary",
+          "bonferroni_upper_tail_p": 0.0035,
+          "above_assignment_reference_after_seven_settings": true
+        },
+        "image_fixed_effects_slope": {
+          "observed": 0.010106227620912206,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -4.7240063102934385e-05,
+          "null_std": 0.002049770026796207,
+          "null_quantiles_025_50_975": [
+            -0.004121045846837671,
+            1.4910960364727194e-05,
+            0.003960918504419572
+          ],
+          "observed_minus_null_mean": 0.01015346768401514,
+          "role": "descriptive"
+        },
+        "mean_alignment": {
+          "observed": 0.03559498888096052,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -6.331189167812564e-05,
+          "null_std": 0.0015369131007928892,
+          "null_quantiles_025_50_975": [
+            -0.0031374931068149843,
+            -6.762473199375455e-05,
+            0.002984858310960707
+          ],
+          "observed_minus_null_mean": 0.035658300772638644,
+          "role": "descriptive"
+        }
+      },
+      "permutation_wall_seconds": 4.369600931997411
+    },
+    "flowers_b16_98": {
+      "setting": {
+        "id": "flowers_b16_98",
+        "dataset": "flowers",
+        "model": "ViT-B/16",
+        "keep_patch_tokens": 98,
+        "source": "runs/flowers-selector-budget-98-eval-v1",
+        "manifest_dir": "data/splits/flowers-v1",
+        "geometry_source": "results/flowers-selector-budgets-v1/geometry"
+      },
+      "panel_path": "runs/geometry-permutation-v1/panels/flowers_b16_98.npz",
+      "panel_metadata": {
+        "schema_version": 1,
+        "setting": {
+          "id": "flowers_b16_98",
+          "dataset": "flowers",
+          "model": "ViT-B/16",
+          "keep_patch_tokens": 98,
+          "source": "runs/flowers-selector-budget-98-eval-v1",
+          "manifest_dir": "data/splits/flowers-v1",
+          "geometry_source": "results/flowers-selector-budgets-v1/geometry"
+        },
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "task_split": "unseen",
+        "image_split": "val",
+        "final_test_used": false,
+        "sources": {
+          "conditioned": "runs/flowers-selector-budget-98-eval-v1/full/predictions.npz",
+          "full_model": "runs/flowers-selector-budget-98-eval-v1/references/predictions.npz"
+        },
+        "source_row_field": "row_id",
+        "feature_axes": [
+          "training_seed",
+          "image_task",
+          "feature"
+        ],
+        "feature_aggregation": "Convert saved normalized feature vectors to float64, then average seeds; do not renormalize the average.",
+        "direction_definition": "normalize(text_features[true_class] - text_features[competing_class]) in float64",
+        "full_margin_definition": "dot(saved full-model image feature, oriented unit task direction) in float64",
+        "image_count": 1020,
+        "image_task_count": 4080,
+        "feature_dimension": 512,
+        "single_task_image_count_excluded": 0,
+        "selected_image_count_before_pair_eligibility": 1020,
+        "array_bytes_uncompressed": 44742120,
+        "development_image_count_in_manifest": 1020,
+        "development_task_count_in_manifest": 204,
+        "selected_rows_match_development_manifests": true
+      },
+      "panel_file_bytes": 26517015,
+      "input_reproduction_audit": {
+        "existing_pair_source": "results/flowers-selector-budgets-v1/geometry/budget_98/seed_mean_cases.npz",
+        "existing_summary_source": "results/flowers-selector-budgets-v1/geometry/analysis.json",
+        "same_image_task_pairs": true,
+        "pair_field_max_abs_errors": {
+          "base_margin_a": 0.0,
+          "base_margin_b": 0.0,
+          "angle_degrees": 0.0,
+          "displacement_norm": 1.1102230246251565e-16,
+          "alignment": 3.3306690738754696e-16,
+          "exchange_loss": 3.2959746043559335e-17
+        },
+        "alignment_slope_max_abs_error": 2.42861286636753e-17,
+        "exchange_loss_slope_max_abs_error": 8.673617379884035e-19
+      },
+      "observed_statistics": {
+        "difficulty_adjusted_slope": 0.01576576143121112,
+        "image_fixed_effects_slope": 0.01370796115269327,
+        "mean_alignment": 0.060377000053025785
+      },
+      "observed_statistics_per_seed": [
+        {
+          "training_seed": 2041,
+          "difficulty_adjusted_slope": 0.011780826135550846,
+          "image_fixed_effects_slope": 0.00871299962999755,
+          "mean_alignment": 0.041036543863963854,
+          "total_pair_count": 6120,
+          "eligible_pair_count": 6120,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 1020,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2042,
+          "difficulty_adjusted_slope": 0.011839289982485296,
+          "image_fixed_effects_slope": 0.009443962504874007,
+          "mean_alignment": 0.040241926090471704,
+          "total_pair_count": 6120,
+          "eligible_pair_count": 6120,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 1020,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2043,
+          "difficulty_adjusted_slope": 0.01104944660089984,
+          "image_fixed_effects_slope": 0.011588255148460463,
+          "mean_alignment": 0.04169663136138288,
+          "total_pair_count": 6120,
+          "eligible_pair_count": 6120,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 1020,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        }
+      ],
+      "design": {
+        "difficulty_adjusted_slope": {
+          "design_rank": 7,
+          "design_columns": 7,
+          "baseline_rank": 6,
+          "angle_unit": "10 degrees"
+        },
+        "image_fixed_effects_slope": {
+          "design_rank": 6,
+          "design_columns": 6,
+          "baseline_rank": 5,
+          "angle_unit": "10 degrees"
+        },
+        "image_count": 1020,
+        "pair_count": 6120
+      },
+      "statistics": {
+        "difficulty_adjusted_slope": {
+          "observed": 0.01576576143121112,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": 4.3447430972065794e-05,
+          "null_std": 0.0018128656696459614,
+          "null_quantiles_025_50_975": [
+            -0.0034467902037587316,
+            5.281165324218194e-05,
+            0.003645258834427919
+          ],
+          "observed_minus_null_mean": 0.015722314000239053,
+          "role": "primary",
+          "bonferroni_upper_tail_p": 0.0035,
+          "above_assignment_reference_after_seven_settings": true
+        },
+        "image_fixed_effects_slope": {
+          "observed": 0.01370796115269327,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -1.3033847500648958e-05,
+          "null_std": 0.0021294964809462995,
+          "null_quantiles_025_50_975": [
+            -0.00414580420012876,
+            -6.247658485928739e-05,
+            0.00411215169235685
+          ],
+          "observed_minus_null_mean": 0.01372099500019392,
+          "role": "descriptive"
+        },
+        "mean_alignment": {
+          "observed": 0.060377000053025785,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -3.80669537643561e-05,
+          "null_std": 0.0015621504858491465,
+          "null_quantiles_025_50_975": [
+            -0.0030647336017556007,
+            -4.103805043175507e-05,
+            0.0029844051097814616
+          ],
+          "observed_minus_null_mean": 0.06041506700679014,
+          "role": "descriptive"
+        }
+      },
+      "permutation_wall_seconds": 4.344384886906482
+    },
+    "pets_l14_128": {
+      "setting": {
+        "id": "pets_l14_128",
+        "dataset": "pets",
+        "model": "ViT-L/14",
+        "keep_patch_tokens": 128,
+        "source": "runs/pets-vitl128-eval-v1",
+        "manifest_dir": "data/splits/pets-v1",
+        "geometry_source": "results/pets-vitl128-v1/geometry"
+      },
+      "panel_path": "runs/geometry-permutation-v1/panels/pets_l14_128.npz",
+      "panel_metadata": {
+        "schema_version": 1,
+        "setting": {
+          "id": "pets_l14_128",
+          "dataset": "pets",
+          "model": "ViT-L/14",
+          "keep_patch_tokens": 128,
+          "source": "runs/pets-vitl128-eval-v1",
+          "manifest_dir": "data/splits/pets-v1",
+          "geometry_source": "results/pets-vitl128-v1/geometry"
+        },
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "task_split": "unseen",
+        "image_split": "val",
+        "final_test_used": false,
+        "sources": {
+          "conditioned": "runs/pets-vitl128-eval-v1/full/predictions.npz",
+          "full_model": "runs/pets-vitl128-eval-v1/references/predictions.npz"
+        },
+        "source_row_field": "row_id",
+        "feature_axes": [
+          "training_seed",
+          "image_task",
+          "feature"
+        ],
+        "feature_aggregation": "Convert saved normalized feature vectors to float64, then average seeds; do not renormalize the average.",
+        "direction_definition": "normalize(text_features[true_class] - text_features[competing_class]) in float64",
+        "full_margin_definition": "dot(saved full-model image feature, oriented unit task direction) in float64",
+        "image_count": 616,
+        "image_task_count": 2524,
+        "feature_dimension": 768,
+        "single_task_image_count_excluded": 100,
+        "selected_image_count_before_pair_eligibility": 716,
+        "array_bytes_uncompressed": 41403880,
+        "development_image_count_in_manifest": 736,
+        "development_task_count_in_manifest": 66,
+        "selected_rows_match_development_manifests": true
+      },
+      "panel_file_bytes": 25908692,
+      "input_reproduction_audit": {
+        "existing_pair_source": "results/pets-vitl128-v1/geometry/budget_128/seed_mean_cases.npz",
+        "existing_summary_source": "results/pets-vitl128-v1/geometry/analysis.json",
+        "same_image_task_pairs": true,
+        "pair_field_max_abs_errors": {
+          "base_margin_a": 0.0,
+          "base_margin_b": 0.0,
+          "angle_degrees": 0.0,
+          "displacement_norm": 2.7755575615628914e-17,
+          "alignment": 3.0531133177191805e-16,
+          "exchange_loss": 9.703609443745265e-18
+        },
+        "alignment_slope_max_abs_error": 3.469446951953614e-18,
+        "exchange_loss_slope_max_abs_error": 3.2526065174565133e-19
+      },
+      "observed_statistics": {
+        "difficulty_adjusted_slope": 0.003691207418659887,
+        "image_fixed_effects_slope": 0.00466930854198737,
+        "mean_alignment": 0.009068825374649366
+      },
+      "observed_statistics_per_seed": [
+        {
+          "training_seed": 2041,
+          "difficulty_adjusted_slope": 0.0010538495513156396,
+          "image_fixed_effects_slope": 0.0020698863159986157,
+          "mean_alignment": 0.00480064325415897,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2042,
+          "difficulty_adjusted_slope": 0.003074085400357703,
+          "image_fixed_effects_slope": 0.003705147946515744,
+          "mean_alignment": 0.0061877160229878965,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2043,
+          "difficulty_adjusted_slope": 0.002322445606318369,
+          "image_fixed_effects_slope": 0.0030044159435782753,
+          "mean_alignment": 0.007333897840348461,
+          "total_pair_count": 4315,
+          "eligible_pair_count": 4315,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 616,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        }
+      ],
+      "design": {
+        "difficulty_adjusted_slope": {
+          "design_rank": 7,
+          "design_columns": 7,
+          "baseline_rank": 6,
+          "angle_unit": "10 degrees"
+        },
+        "image_fixed_effects_slope": {
+          "design_rank": 6,
+          "design_columns": 6,
+          "baseline_rank": 5,
+          "angle_unit": "10 degrees"
+        },
+        "image_count": 616,
+        "pair_count": 4315
+      },
+      "statistics": {
+        "difficulty_adjusted_slope": {
+          "observed": 0.003691207418659887,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -9.383506145315763e-06,
+          "null_std": 0.0011497889259621554,
+          "null_quantiles_025_50_975": [
+            -0.002300594464604704,
+            5.962632932034347e-07,
+            0.0023179457825781603
+          ],
+          "observed_minus_null_mean": 0.0037005909248052026,
+          "role": "primary",
+          "bonferroni_upper_tail_p": 0.0035,
+          "above_assignment_reference_after_seven_settings": true
+        },
+        "image_fixed_effects_slope": {
+          "observed": 0.00466930854198737,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -1.998587682137874e-05,
+          "null_std": 0.001279178094444241,
+          "null_quantiles_025_50_975": [
+            -0.002527959602778362,
+            7.456236773230773e-07,
+            0.0024682892859956944
+          ],
+          "observed_minus_null_mean": 0.004689294418808749,
+          "role": "descriptive"
+        },
+        "mean_alignment": {
+          "observed": 0.009068825374649366,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": 2.6995650089262134e-05,
+          "null_std": 0.0010492171680322885,
+          "null_quantiles_025_50_975": [
+            -0.0020042171185970874,
+            3.980915916483349e-05,
+            0.0020849178617769865
+          ],
+          "observed_minus_null_mean": 0.009041829724560104,
+          "role": "descriptive"
+        }
+      },
+      "permutation_wall_seconds": 2.643938968074508
+    },
+    "flowers_l14_128": {
+      "setting": {
+        "id": "flowers_l14_128",
+        "dataset": "flowers",
+        "model": "ViT-L/14",
+        "keep_patch_tokens": 128,
+        "source": "runs/flowers-vitl128-eval-v1",
+        "manifest_dir": "data/splits/flowers-v1",
+        "geometry_source": "results/flowers-vitl128-v1/geometry"
+      },
+      "panel_path": "runs/geometry-permutation-v1/panels/flowers_l14_128.npz",
+      "panel_metadata": {
+        "schema_version": 1,
+        "setting": {
+          "id": "flowers_l14_128",
+          "dataset": "flowers",
+          "model": "ViT-L/14",
+          "keep_patch_tokens": 128,
+          "source": "runs/flowers-vitl128-eval-v1",
+          "manifest_dir": "data/splits/flowers-v1",
+          "geometry_source": "results/flowers-vitl128-v1/geometry"
+        },
+        "training_seeds": [
+          2041,
+          2042,
+          2043
+        ],
+        "task_split": "unseen",
+        "image_split": "val",
+        "final_test_used": false,
+        "sources": {
+          "conditioned": "runs/flowers-vitl128-eval-v1/full/predictions.npz",
+          "full_model": "runs/flowers-vitl128-eval-v1/references/predictions.npz"
+        },
+        "source_row_field": "row_id",
+        "feature_axes": [
+          "training_seed",
+          "image_task",
+          "feature"
+        ],
+        "feature_aggregation": "Convert saved normalized feature vectors to float64, then average seeds; do not renormalize the average.",
+        "direction_definition": "normalize(text_features[true_class] - text_features[competing_class]) in float64",
+        "full_margin_definition": "dot(saved full-model image feature, oriented unit task direction) in float64",
+        "image_count": 1020,
+        "image_task_count": 4080,
+        "feature_dimension": 768,
+        "single_task_image_count_excluded": 0,
+        "selected_image_count_before_pair_eligibility": 1020,
+        "array_bytes_uncompressed": 66780648,
+        "development_image_count_in_manifest": 1020,
+        "development_task_count_in_manifest": 204,
+        "selected_rows_match_development_manifests": true
+      },
+      "panel_file_bytes": 39070535,
+      "input_reproduction_audit": {
+        "existing_pair_source": "results/flowers-vitl128-v1/geometry/budget_128/seed_mean_cases.npz",
+        "existing_summary_source": "results/flowers-vitl128-v1/geometry/analysis.json",
+        "same_image_task_pairs": true,
+        "pair_field_max_abs_errors": {
+          "base_margin_a": 0.0,
+          "base_margin_b": 0.0,
+          "angle_degrees": 0.0,
+          "displacement_norm": 5.551115123125783e-17,
+          "alignment": 2.498001805406602e-16,
+          "exchange_loss": 2.42861286636753e-17
+        },
+        "alignment_slope_max_abs_error": 8.673617379884035e-18,
+        "exchange_loss_slope_max_abs_error": 1.0842021724855044e-18
+      },
+      "observed_statistics": {
+        "difficulty_adjusted_slope": 0.007469335258383761,
+        "image_fixed_effects_slope": 0.009633313743613927,
+        "mean_alignment": 0.020338492454625767
+      },
+      "observed_statistics_per_seed": [
+        {
+          "training_seed": 2041,
+          "difficulty_adjusted_slope": 0.00677557776702151,
+          "image_fixed_effects_slope": 0.008612198187941119,
+          "mean_alignment": 0.01495037961574052,
+          "total_pair_count": 6120,
+          "eligible_pair_count": 6120,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 1020,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2042,
+          "difficulty_adjusted_slope": 0.006545806644148209,
+          "image_fixed_effects_slope": 0.006487767190557815,
+          "mean_alignment": 0.01365007549017061,
+          "total_pair_count": 6120,
+          "eligible_pair_count": 6120,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 1020,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        },
+        {
+          "training_seed": 2043,
+          "difficulty_adjusted_slope": 0.0028425559433475295,
+          "image_fixed_effects_slope": 0.006201351906573004,
+          "mean_alignment": 0.011159851345938988,
+          "total_pair_count": 6120,
+          "eligible_pair_count": 6120,
+          "excluded_pair_count": 0,
+          "eligible_image_count": 1020,
+          "excluded_pairs": [],
+          "minimum_displacement_norm": 1e-12,
+          "minimum_direction_norm": 1e-12
+        }
+      ],
+      "design": {
+        "difficulty_adjusted_slope": {
+          "design_rank": 7,
+          "design_columns": 7,
+          "baseline_rank": 6,
+          "angle_unit": "10 degrees"
+        },
+        "image_fixed_effects_slope": {
+          "design_rank": 6,
+          "design_columns": 6,
+          "baseline_rank": 5,
+          "angle_unit": "10 degrees"
+        },
+        "image_count": 1020,
+        "pair_count": 6120
+      },
+      "statistics": {
+        "difficulty_adjusted_slope": {
+          "observed": 0.007469335258383761,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -1.6656677103886622e-05,
+          "null_std": 0.0015131292429047226,
+          "null_quantiles_025_50_975": [
+            -0.002925780436751808,
+            -4.579828754787487e-05,
+            0.003037439315609759
+          ],
+          "observed_minus_null_mean": 0.007485991935487647,
+          "role": "primary",
+          "bonferroni_upper_tail_p": 0.0035,
+          "above_assignment_reference_after_seven_settings": true
+        },
+        "image_fixed_effects_slope": {
+          "observed": 0.009633313743613927,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -4.4646898728690805e-05,
+          "null_std": 0.0017992365703770575,
+          "null_quantiles_025_50_975": [
+            -0.0036778165541837163,
+            -4.647625975098645e-05,
+            0.0035998629230285808
+          ],
+          "observed_minus_null_mean": 0.009677960642342618,
+          "role": "descriptive"
+        },
+        "mean_alignment": {
+          "observed": 0.020338492454625767,
+          "upper_tail_p": 0.0005,
+          "exceedance_count": 0,
+          "null_mean": -4.569931370520174e-06,
+          "null_std": 0.0010910089412311608,
+          "null_quantiles_025_50_975": [
+            -0.002199501432365502,
+            -5.883543961574871e-06,
+            0.0021366961493922967
+          ],
+          "observed_minus_null_mean": 0.02034306238599629,
+          "role": "descriptive"
+        }
+      },
+      "permutation_wall_seconds": 4.364689529989846
+    }
+  },
+  "completed_at_utc": "2026-11-03T09:05:41.808229+00:00",
+  "total_wall_seconds": 62.54889894800726
+}

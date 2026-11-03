@@ -1,0 +1,15 @@
+.........................................{"stage": "input_verified", "setting": "fixture", "images": 36, "pairs": 108}
+{"stage": "permutations_complete", "setting": "fixture", "primary": {"observed": -0.011720388884096648, "upper_tail_p": 0.4166666666666667, "exceedance_count": 4, "null_mean": -0.02016081064656067, "null_std": 0.06042012506033925, "null_quantiles_025_50_975": [-0.1273514659600507, -0.024335700234362052, 0.06075564401004377], "observed_minus_null_mean": 0.008440421762464023, "role": "primary", "bonferroni_upper_tail_p": 0.4166666666666667, "above_assignment_reference_after_seven_settings": false}}
+{"stage": "input_verified", "setting": "fixture", "images": 36, "pairs": 108}
+{"stage": "permutations_complete", "setting": "fixture", "primary": {"observed": -0.011720388884096648, "upper_tail_p": 0.4166666666666667, "exceedance_count": 4, "null_mean": -0.02016081064656067, "null_std": 0.06042012506033925, "null_quantiles_025_50_975": [-0.1273514659600507, -0.024335700234362052, 0.06075564401004377], "observed_minus_null_mean": 0.008440421762464023, "role": "primary", "bonferroni_upper_tail_p": 0.4166666666666667, "above_assignment_reference_after_seven_settings": false}}
+..............................................................{"coverage": "full", "seed": 101, "method": "mean_only", "seconds": 0.005377118941396475}
+{"coverage": "full", "seed": 101, "method": "difference_only", "seconds": 0.004412776092067361}
+{"coverage": "full", "seed": 101, "method": "image_only_wide", "seconds": 0.003374947002157569}
+...........................................{"budget": 49, "slope_per_10_degrees": -0.014643287060357906, "interval_familywise": [-0.015132351368345339, -0.01377935575714216], "image_fixed_effect_slope": -0.015452335906479138, "incremental_cv_r2": 0.963732906115843}
+{"budget": 49, "slope_per_10_degrees": -0.014643287060357906, "interval_familywise": [-0.015153503350475252, -0.013775773292601596], "image_fixed_effect_slope": -0.015452335906479138, "incremental_cv_r2": 0.963732906115843}
+{"budget": 98, "slope_per_10_degrees": -0.014643287060357906, "interval_familywise": [-0.015153503350475252, -0.013775773292601596], "image_fixed_effect_slope": -0.015452335906479138, "incremental_cv_r2": 0.963732906115843}
+................................................
+----------------------------------------------------------------------
+Ran 194 tests in 5.750s
+
+OK

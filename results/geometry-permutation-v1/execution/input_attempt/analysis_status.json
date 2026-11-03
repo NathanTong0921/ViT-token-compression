@@ -1,0 +1,27 @@
+{
+  "stage": "analysis",
+  "status": "failed",
+  "command": [
+    ".venv/bin/python",
+    "-u",
+    "scripts/analyze_geometry_permutation.py",
+    "--config",
+    "configs/geometry_permutation.json",
+    "--output",
+    "results/geometry-permutation-v1",
+    "--panel-root",
+    "runs/geometry-permutation-v1/panels"
+  ],
+  "started_utc": "2026-11-03T08:56:42.279812+00:00",
+  "code_commit": "115e0ced2cbf55ba62b5fe4506a2a3b1416305e2",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "gpu_used": false,
+  "reserved_test_used": false,
+  "exit_code": 1,
+  "wall_seconds": 5.805477526970208,
+  "completed_utc": "2026-11-03T08:56:48.090581+00:00"
+}

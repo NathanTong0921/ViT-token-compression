@@ -1,0 +1,26 @@
+{
+  "scope": "Reuses existing feature predictions and three fixed trained seeds. New CPU analysis and independent audit only; no new training, supervision generation or image inference. Excludes coding, tests, plotting, archival and transfer.",
+  "stages": [
+    {
+      "stage": "analysis",
+      "seconds": 62.73943309497554,
+      "kind": "CPU process wall time",
+      "code_commit": "4493f0b4f0b13903a3b4f1804eb34ebc3862ba2c"
+    },
+    {
+      "stage": "audit",
+      "seconds": 60.068495846004225,
+      "kind": "CPU process wall time",
+      "code_commit": "4493f0b4f0b13903a3b4f1804eb34ebc3862ba2c"
+    }
+  ],
+  "new_selector_count": 0,
+  "new_gpu_process_wall_seconds": 0,
+  "successful_cpu_analysis_audit_seconds": 122.80792894097976,
+  "input_attempt_stopped_before_permutations": {
+    "seconds": 5.805477526970208,
+    "code_commit": "115e0ced2cbf55ba62b5fe4506a2a3b1416305e2",
+    "reason": "Undefined auxiliary per-seed alignment for an existing zero-displacement pair; primary seed-mean populations unchanged."
+  },
+  "all_recorded_cpu_process_seconds": 128.61340646794997
+}

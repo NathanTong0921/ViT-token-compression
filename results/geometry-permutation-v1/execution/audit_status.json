@@ -1,0 +1,25 @@
+{
+  "stage": "audit",
+  "status": "complete",
+  "command": [
+    ".venv/bin/python",
+    "-u",
+    "scripts/audit_geometry_permutation.py",
+    "--summary",
+    "results/geometry-permutation-v1/analysis.json",
+    "--output",
+    "results/geometry-permutation-v1/scientific_audit.json"
+  ],
+  "started_utc": "2026-11-03T09:05:41.901966+00:00",
+  "code_commit": "4493f0b4f0b13903a3b4f1804eb34ebc3862ba2c",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "PYTHONPATH": "src"
+  },
+  "gpu_used": false,
+  "reserved_test_used": false,
+  "exit_code": 0,
+  "wall_seconds": 60.068495846004225,
+  "completed_utc": "2026-11-03T09:06:41.974683+00:00"
+}
