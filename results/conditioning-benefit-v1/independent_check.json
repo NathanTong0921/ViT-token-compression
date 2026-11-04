@@ -1,0 +1,343 @@
+{
+  "status": "passed",
+  "scope": "Independent arithmetic from saved feature/outcome/prediction arrays, all double-holdout split checks, one real fold refit and one source-to-target refit. No bootstrap resampling, selector training or CLIP inference.",
+  "panel_checks": [
+    {
+      "mode": "double_holdout",
+      "setting": "pets_b16_49",
+      "source": null,
+      "panel": "primary",
+      "rows": 2624,
+      "runs": 3,
+      "point_estimates": 32,
+      "per_run_estimates": 96,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "flowers_b16_98",
+      "source": null,
+      "panel": "primary",
+      "rows": 4080,
+      "runs": 3,
+      "point_estimates": 32,
+      "per_run_estimates": 96,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "flowers_b16_49",
+      "source": null,
+      "panel": "primary",
+      "rows": 4080,
+      "runs": 3,
+      "point_estimates": 32,
+      "per_run_estimates": 96,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "pets_b16_98",
+      "source": null,
+      "panel": "primary",
+      "rows": 2624,
+      "runs": 3,
+      "point_estimates": 32,
+      "per_run_estimates": 96,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "pets_b16_49",
+      "source": null,
+      "panel": "mix",
+      "rows": 2624,
+      "runs": 6,
+      "point_estimates": 32,
+      "per_run_estimates": 192,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "flowers_b16_98",
+      "source": null,
+      "panel": "mix",
+      "rows": 4080,
+      "runs": 6,
+      "point_estimates": 32,
+      "per_run_estimates": 192,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "flowers_b16_49",
+      "source": null,
+      "panel": "mix",
+      "rows": 4080,
+      "runs": 6,
+      "point_estimates": 32,
+      "per_run_estimates": 192,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "pets_b16_98",
+      "source": null,
+      "panel": "mix",
+      "rows": 2624,
+      "runs": 6,
+      "point_estimates": 32,
+      "per_run_estimates": 192,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "pets_b16_49",
+      "source": null,
+      "panel": "increment",
+      "rows": 2624,
+      "runs": 6,
+      "point_estimates": 22,
+      "per_run_estimates": 132,
+      "routing_per_run_verified": false
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "flowers_b16_98",
+      "source": null,
+      "panel": "increment",
+      "rows": 4080,
+      "runs": 6,
+      "point_estimates": 22,
+      "per_run_estimates": 132,
+      "routing_per_run_verified": false
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "flowers_b16_49",
+      "source": null,
+      "panel": "increment",
+      "rows": 4080,
+      "runs": 6,
+      "point_estimates": 22,
+      "per_run_estimates": 132,
+      "routing_per_run_verified": false
+    },
+    {
+      "mode": "double_holdout",
+      "setting": "pets_b16_98",
+      "source": null,
+      "panel": "increment",
+      "rows": 2624,
+      "runs": 6,
+      "point_estimates": 22,
+      "per_run_estimates": 132,
+      "routing_per_run_verified": false
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "flowers_b16_49",
+      "source": "pets_b16_49",
+      "panel": "mix",
+      "rows": 4080,
+      "runs": 6,
+      "point_estimates": 32,
+      "per_run_estimates": 192,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "flowers_b16_49",
+      "source": "pets_b16_49",
+      "panel": "increment",
+      "rows": 4080,
+      "runs": 6,
+      "point_estimates": 22,
+      "per_run_estimates": 132,
+      "routing_per_run_verified": false
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "flowers_b16_49",
+      "source": "pets_b16_49",
+      "panel": "primary",
+      "rows": 4080,
+      "runs": 3,
+      "point_estimates": 32,
+      "per_run_estimates": 96,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "pets_b16_49",
+      "source": "flowers_b16_49",
+      "panel": "mix",
+      "rows": 2624,
+      "runs": 6,
+      "point_estimates": 32,
+      "per_run_estimates": 192,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "pets_b16_49",
+      "source": "flowers_b16_49",
+      "panel": "increment",
+      "rows": 2624,
+      "runs": 6,
+      "point_estimates": 22,
+      "per_run_estimates": 132,
+      "routing_per_run_verified": false
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "pets_b16_49",
+      "source": "flowers_b16_49",
+      "panel": "primary",
+      "rows": 2624,
+      "runs": 3,
+      "point_estimates": 32,
+      "per_run_estimates": 96,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "flowers_b16_98",
+      "source": "pets_b16_98",
+      "panel": "mix",
+      "rows": 4080,
+      "runs": 6,
+      "point_estimates": 32,
+      "per_run_estimates": 192,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "flowers_b16_98",
+      "source": "pets_b16_98",
+      "panel": "increment",
+      "rows": 4080,
+      "runs": 6,
+      "point_estimates": 22,
+      "per_run_estimates": 132,
+      "routing_per_run_verified": false
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "flowers_b16_98",
+      "source": "pets_b16_98",
+      "panel": "primary",
+      "rows": 4080,
+      "runs": 3,
+      "point_estimates": 32,
+      "per_run_estimates": 96,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "pets_b16_98",
+      "source": "flowers_b16_98",
+      "panel": "mix",
+      "rows": 2624,
+      "runs": 6,
+      "point_estimates": 32,
+      "per_run_estimates": 192,
+      "routing_per_run_verified": true
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "pets_b16_98",
+      "source": "flowers_b16_98",
+      "panel": "increment",
+      "rows": 2624,
+      "runs": 6,
+      "point_estimates": 22,
+      "per_run_estimates": 132,
+      "routing_per_run_verified": false
+    },
+    {
+      "mode": "cross_dataset",
+      "setting": "pets_b16_98",
+      "source": "flowers_b16_98",
+      "panel": "primary",
+      "rows": 2624,
+      "runs": 3,
+      "point_estimates": 32,
+      "per_run_estimates": 96,
+      "routing_per_run_verified": true
+    }
+  ],
+  "split_checks": [
+    {
+      "setting": "pets_b16_49",
+      "cells": 25,
+      "all_images_and_tasks_excluded": true,
+      "every_row_predicted_once": true,
+      "seed_assignment_reproduced": true
+    },
+    {
+      "setting": "pets_b16_98",
+      "cells": 25,
+      "all_images_and_tasks_excluded": true,
+      "every_row_predicted_once": true,
+      "seed_assignment_reproduced": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "cells": 25,
+      "all_images_and_tasks_excluded": true,
+      "every_row_predicted_once": true,
+      "seed_assignment_reproduced": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "cells": 25,
+      "all_images_and_tasks_excluded": true,
+      "every_row_predicted_once": true,
+      "seed_assignment_reproduced": true
+    }
+  ],
+  "refit_checks": [
+    {
+      "mode": "double_holdout",
+      "setting": "pets_b16_49",
+      "panel": "primary",
+      "model": "selection",
+      "image_fold": 0,
+      "task_fold": 0,
+      "independent_solver": "augmented weighted least squares with explicit ridge penalty rows",
+      "fit_max_error": 6.8833827526759706e-15,
+      "prediction_max_error": 2.949029909160572e-16
+    },
+    {
+      "mode": "cross_dataset",
+      "source": "flowers_b16_98",
+      "target": "pets_b16_98",
+      "panel": "mix",
+      "model": "selection",
+      "independent_solver": "source-only augmented weighted least squares",
+      "fit_max_error": 1.887379141862766e-14,
+      "prediction_max_error": 1.194790794079026e-16
+    }
+  ],
+  "maximum_errors": {
+    "estimate_mean": 5.10702591327572e-15,
+    "mse": 5.041540102057596e-18,
+    "per_run": 1.1102230246251565e-14,
+    "row_metrics": 0.0,
+    "input_target_identity": 2.7755575615628914e-17
+  },
+  "checked_counts": {
+    "estimate_mean": 688,
+    "mse": 528,
+    "per_run": 3360,
+    "row_metrics": 712,
+    "input_target_identity": 12
+  },
+  "panels": 24,
+  "scope_exclusions": [
+    "Bootstrap intervals were not recomputed.",
+    "Raw CLIP scores and selector feature extraction were not reexecuted.",
+    "Only two probe fits were independently refitted; other panels were checked arithmetically from saved predictions."
+  ]
+}

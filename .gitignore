@@ -31,3 +31,7 @@ dist/
 *.ckpt
 *.safetensors
 *.log
+
+# Per-example benefit probes are backed up as a versioned release attachment.
+/results/conditioning-benefit-v1/**/inputs.npz
+/results/conditioning-benefit-v1/**/predictions.npz

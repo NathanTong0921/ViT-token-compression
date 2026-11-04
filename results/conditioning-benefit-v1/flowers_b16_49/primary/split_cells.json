@@ -1,0 +1,352 @@
+[
+  {
+    "image_fold": 0,
+    "task_fold": 0,
+    "training_rows": 2607,
+    "held_rows": 163,
+    "training_images": 816,
+    "held_images": 134,
+    "training_tasks": 163,
+    "held_tasks": 40,
+    "training_gain": [
+      0.0004527304611850542,
+      0.0005565526642895106
+    ]
+  },
+  {
+    "image_fold": 0,
+    "task_fold": 1,
+    "training_rows": 2602,
+    "held_rows": 158,
+    "training_images": 816,
+    "held_images": 115,
+    "training_tasks": 163,
+    "held_tasks": 40,
+    "training_gain": [
+      0.00011891530398261311,
+      0.00023021179798044593
+    ]
+  },
+  {
+    "image_fold": 0,
+    "task_fold": 2,
+    "training_rows": 2600,
+    "held_rows": 156,
+    "training_images": 808,
+    "held_images": 111,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      0.0003307853232954094,
+      0.00041873659078891476
+    ]
+  },
+  {
+    "image_fold": 0,
+    "task_fold": 3,
+    "training_rows": 2612,
+    "held_rows": 168,
+    "training_images": 809,
+    "held_images": 120,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      0.0001397533854611786,
+      0.0002212202088025958
+    ]
+  },
+  {
+    "image_fold": 0,
+    "task_fold": 4,
+    "training_rows": 2635,
+    "held_rows": 171,
+    "training_images": 816,
+    "held_images": 126,
+    "training_tasks": 164,
+    "held_tasks": 40,
+    "training_gain": [
+      0.00013850046348059492,
+      0.00025099086882116506
+    ]
+  },
+  {
+    "image_fold": 1,
+    "task_fold": 0,
+    "training_rows": 2606,
+    "held_rows": 162,
+    "training_images": 816,
+    "held_images": 139,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      -1.5814629478235465e-05,
+      0.0001278208484351405
+    ]
+  },
+  {
+    "image_fold": 1,
+    "task_fold": 1,
+    "training_rows": 2615,
+    "held_rows": 171,
+    "training_images": 816,
+    "held_images": 130,
+    "training_tasks": 163,
+    "held_tasks": 39,
+    "training_gain": [
+      -0.0004478934706869086,
+      -0.0003289579632861207
+    ]
+  },
+  {
+    "image_fold": 1,
+    "task_fold": 2,
+    "training_rows": 2601,
+    "held_rows": 157,
+    "training_images": 807,
+    "held_images": 117,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      -1.3078283472725791e-05,
+      6.248251961451784e-05
+    ]
+  },
+  {
+    "image_fold": 1,
+    "task_fold": 3,
+    "training_rows": 2612,
+    "held_rows": 168,
+    "training_images": 808,
+    "held_images": 122,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      -3.239475102012536e-05,
+      2.462337494292033e-05
+    ]
+  },
+  {
+    "image_fold": 1,
+    "task_fold": 4,
+    "training_rows": 2622,
+    "held_rows": 158,
+    "training_images": 816,
+    "held_images": 122,
+    "training_tasks": 164,
+    "held_tasks": 40,
+    "training_gain": [
+      -0.0002650635753420302,
+      -0.0001325407632579944
+    ]
+  },
+  {
+    "image_fold": 2,
+    "task_fold": 0,
+    "training_rows": 2606,
+    "held_rows": 162,
+    "training_images": 816,
+    "held_images": 138,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      -6.782508678704892e-05,
+      5.560909414815953e-05
+    ]
+  },
+  {
+    "image_fold": 2,
+    "task_fold": 1,
+    "training_rows": 2608,
+    "held_rows": 164,
+    "training_images": 816,
+    "held_images": 118,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      -0.0005741399057204433,
+      -0.00042454587535624124
+    ]
+  },
+  {
+    "image_fold": 2,
+    "task_fold": 2,
+    "training_rows": 2587,
+    "held_rows": 143,
+    "training_images": 806,
+    "held_images": 109,
+    "training_tasks": 163,
+    "held_tasks": 40,
+    "training_gain": [
+      -0.00021361937026110817,
+      -0.00010699979915798276
+    ]
+  },
+  {
+    "image_fold": 2,
+    "task_fold": 3,
+    "training_rows": 2628,
+    "held_rows": 184,
+    "training_images": 806,
+    "held_images": 138,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      -0.00021017056863822996,
+      -0.00014321881576518256
+    ]
+  },
+  {
+    "image_fold": 2,
+    "task_fold": 4,
+    "training_rows": 2627,
+    "held_rows": 163,
+    "training_images": 816,
+    "held_images": 127,
+    "training_tasks": 164,
+    "held_tasks": 38,
+    "training_gain": [
+      -0.00018649992722291517,
+      -6.900342031717729e-05
+    ]
+  },
+  {
+    "image_fold": 3,
+    "task_fold": 0,
+    "training_rows": 2607,
+    "held_rows": 163,
+    "training_images": 816,
+    "held_images": 134,
+    "training_tasks": 163,
+    "held_tasks": 40,
+    "training_gain": [
+      0.00036647905361216897,
+      0.00046644270183820254
+    ]
+  },
+  {
+    "image_fold": 3,
+    "task_fold": 1,
+    "training_rows": 2603,
+    "held_rows": 159,
+    "training_images": 816,
+    "held_images": 121,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      -4.666670952854002e-05,
+      5.985271123142836e-05
+    ]
+  },
+  {
+    "image_fold": 3,
+    "task_fold": 2,
+    "training_rows": 2637,
+    "held_rows": 193,
+    "training_images": 809,
+    "held_images": 135,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      0.00027447014784970673,
+      0.00033583115508953955
+    ]
+  },
+  {
+    "image_fold": 3,
+    "task_fold": 3,
+    "training_rows": 2590,
+    "held_rows": 146,
+    "training_images": 807,
+    "held_images": 114,
+    "training_tasks": 163,
+    "held_tasks": 40,
+    "training_gain": [
+      0.00025155836215310414,
+      0.0002858504499554489
+    ]
+  },
+  {
+    "image_fold": 3,
+    "task_fold": 4,
+    "training_rows": 2619,
+    "held_rows": 155,
+    "training_images": 816,
+    "held_images": 123,
+    "training_tasks": 164,
+    "held_tasks": 40,
+    "training_gain": [
+      8.283556421970846e-05,
+      0.00017864022494515515
+    ]
+  },
+  {
+    "image_fold": 4,
+    "task_fold": 0,
+    "training_rows": 2614,
+    "held_rows": 170,
+    "training_images": 816,
+    "held_images": 135,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      0.00025753464688366677,
+      0.0003545255113076684
+    ]
+  },
+  {
+    "image_fold": 4,
+    "task_fold": 1,
+    "training_rows": 2612,
+    "held_rows": 168,
+    "training_images": 816,
+    "held_images": 126,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      -0.000282366340931705,
+      -0.00017106009817445888
+    ]
+  },
+  {
+    "image_fold": 4,
+    "task_fold": 2,
+    "training_rows": 2615,
+    "held_rows": 171,
+    "training_images": 810,
+    "held_images": 128,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      0.00025576411902812667,
+      0.00032349718916256615
+    ]
+  },
+  {
+    "image_fold": 4,
+    "task_fold": 3,
+    "training_rows": 2598,
+    "held_rows": 154,
+    "training_images": 810,
+    "held_images": 116,
+    "training_tasks": 163,
+    "held_tasks": 41,
+    "training_gain": [
+      -0.00011489690958725413,
+      -2.634115870836484e-05
+    ]
+  },
+  {
+    "image_fold": 4,
+    "task_fold": 4,
+    "training_rows": 2617,
+    "held_rows": 153,
+    "training_images": 816,
+    "held_images": 122,
+    "training_tasks": 164,
+    "held_tasks": 40,
+    "training_gain": [
+      -5.748575801177129e-05,
+      4.6585561355775105e-05
+    ]
+  }
+]

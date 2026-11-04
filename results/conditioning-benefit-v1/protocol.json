@@ -1,0 +1,31 @@
+{
+  "git_commit": "0d97885319b5ee160df6f6d614bb39e79d8b1e6b",
+  "core_archive": "/data2/zhao.tong/artifacts/parallel-research-pilots-v1/core-protection-v1.zip",
+  "hybrid_archive": "/data2/zhao.tong/artifacts/hybrid-followup-v1/hybrid-specificity-v1.zip",
+  "settings": [
+    "pets_b16_49",
+    "pets_b16_98",
+    "flowers_b16_49",
+    "flowers_b16_98"
+  ],
+  "models": [
+    "mean",
+    "base",
+    "selection",
+    "difficulty_base",
+    "difficulty_selection"
+  ],
+  "outcomes": [
+    "geom",
+    "raw"
+  ],
+  "ridge": 0.001,
+  "image_fold_seed": 2351,
+  "task_fold_seed": 2352,
+  "bootstrap_seed": 2353,
+  "bootstrap_replicates": 2000,
+  "final_test_used": false,
+  "new_selector_training": false,
+  "new_clip_inference": false,
+  "uncertainty": "Image bootstrap conditional on fixed tasks/runs and fitted probes; four-setting adjusted intervals per outcome/metric."
+}

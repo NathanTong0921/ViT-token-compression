@@ -1,0 +1,654 @@
+{
+  "estimates": {
+    "base_r2_geom": {
+      "mean": 0.0012874053190715662,
+      "ci95": [
+        0.0006439905654142597,
+        0.0021448757329416415
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0004933965292648973,
+        0.0023582487075024133
+      ]
+    },
+    "base_within_r2_geom": {
+      "mean": -0.0007314726103355706,
+      "ci95": [
+        -0.0012644177768489917,
+        -0.00022715172950125162
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0013831603238095471,
+        -0.00014277531756700645
+      ]
+    },
+    "selection_r2_geom": {
+      "mean": 0.023787656153509196,
+      "ci95": [
+        0.01564578086058468,
+        0.03390520566495802
+      ],
+      "four_setting_adjusted_ci95": [
+        0.013669509549980915,
+        0.036557893293472365
+      ]
+    },
+    "selection_within_r2_geom": {
+      "mean": -0.0010794550507453593,
+      "ci95": [
+        -0.002752497445866747,
+        0.0006226752343790664
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0031960231341740973,
+        0.0012258076942442536
+      ]
+    },
+    "difficulty_base_r2_geom": {
+      "mean": 0.00033908850928454637,
+      "ci95": [
+        -0.001415963834962397,
+        0.0022458086060520048
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0018206110358180163,
+        0.0028764553863797958
+      ]
+    },
+    "difficulty_base_within_r2_geom": {
+      "mean": -0.000994893803206054,
+      "ci95": [
+        -0.0025423583899554904,
+        0.000507015731987956
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0032420745425517775,
+        0.000952381444824582
+      ]
+    },
+    "difficulty_selection_r2_geom": {
+      "mean": 0.023319607529751374,
+      "ci95": [
+        0.015242328501141553,
+        0.03355649962861325
+      ],
+      "four_setting_adjusted_ci95": [
+        0.012932956025480825,
+        0.03634835694076183
+      ]
+    },
+    "difficulty_selection_within_r2_geom": {
+      "mean": -0.0012852691228637525,
+      "ci95": [
+        -0.0033728868616353493,
+        0.0007766189016287435
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0040720371708952,
+        0.0012164558746959426
+      ]
+    },
+    "selection_increment_r2_geom": {
+      "mean": 0.022500250834437612,
+      "ci95": [
+        0.014811997806192263,
+        0.03205066787124013
+      ],
+      "four_setting_adjusted_ci95": [
+        0.013126013546837107,
+        0.034658625374636536
+      ]
+    },
+    "selection_increment_within_r2_geom": {
+      "mean": -0.0003479824404098364,
+      "ci95": [
+        -0.0018368878783021044,
+        0.0013551347482637472
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0022392933836869176,
+        0.0018230109830337533
+      ]
+    },
+    "difficulty_adjusted_increment_r2_geom": {
+      "mean": 0.02298051902046689,
+      "ci95": [
+        0.015265152157401918,
+        0.032620059355836166
+      ],
+      "four_setting_adjusted_ci95": [
+        0.013602125924401796,
+        0.0350739626670757
+      ]
+    },
+    "base_r2_raw": {
+      "mean": -0.0001457965942819328,
+      "ci95": [
+        -0.0009908308765018692,
+        0.0007137048185925667
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0012422665319725009,
+        0.0009419218665891956
+      ]
+    },
+    "base_within_r2_raw": {
+      "mean": 0.0007085691653592185,
+      "ci95": [
+        -0.0003504831999800284,
+        0.001734872010887553
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0007257692739446417,
+        0.0020338768794585372
+      ]
+    },
+    "selection_r2_raw": {
+      "mean": 0.020684040400322234,
+      "ci95": [
+        0.013462386582308356,
+        0.030092546759256752
+      ],
+      "four_setting_adjusted_ci95": [
+        0.011728441317424506,
+        0.03209521999642938
+      ]
+    },
+    "selection_within_r2_raw": {
+      "mean": 0.0004486205077968153,
+      "ci95": [
+        -0.0014403284722669385,
+        0.002402051958013785
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0021162924746142104,
+        0.002946404396881156
+      ]
+    },
+    "difficulty_base_r2_raw": {
+      "mean": -0.0009321374303077334,
+      "ci95": [
+        -0.0028566253665074704,
+        0.0009057703716965147
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.003362388587143138,
+        0.0013165542795402184
+      ]
+    },
+    "difficulty_base_within_r2_raw": {
+      "mean": 0.0005247118533174833,
+      "ci95": [
+        -0.0013747534352977376,
+        0.0022558472315786712
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0019978503622732984,
+        0.002637244533358189
+      ]
+    },
+    "difficulty_selection_r2_raw": {
+      "mean": 0.020296791120398394,
+      "ci95": [
+        0.013069729033178917,
+        0.029642979749008404
+      ],
+      "four_setting_adjusted_ci95": [
+        0.011175119173229322,
+        0.03188309367238248
+      ]
+    },
+    "difficulty_selection_within_r2_raw": {
+      "mean": 0.00031539275293945845,
+      "ci95": [
+        -0.0021092479886975326,
+        0.0024806000523107585
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0028741998524102947,
+        0.0030191811614892344
+      ]
+    },
+    "selection_increment_r2_raw": {
+      "mean": 0.020829836994604056,
+      "ci95": [
+        0.013460768104771712,
+        0.030155138108092176
+      ],
+      "four_setting_adjusted_ci95": [
+        0.011691444949977946,
+        0.0324433742129975
+      ]
+    },
+    "selection_increment_within_r2_raw": {
+      "mean": -0.00025994865756238695,
+      "ci95": [
+        -0.0017693948862414729,
+        0.0013398544926893766
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0021439568074777533,
+        0.0018035652788795076
+      ]
+    },
+    "difficulty_adjusted_increment_r2_raw": {
+      "mean": 0.021228928550706204,
+      "ci95": [
+        0.013865677093832726,
+        0.030551649701563346
+      ],
+      "four_setting_adjusted_ci95": [
+        0.012096552690971535,
+        0.033005617623755264
+      ]
+    },
+    "route_minus_base_accuracy": {
+      "mean": 0.0008938064859117663,
+      "ci95": [
+        0.00019767581116239953,
+        0.001737712703660272
+      ],
+      "four_setting_adjusted_ci95": [
+        0.00012180817352882095,
+        0.0020158188304767915
+      ]
+    },
+    "route_minus_base_geom": {
+      "mean": 5.121194970330356e-06,
+      "ci95": [
+        -0.00017739380009887208,
+        0.00018511039655366357
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00022373749399633475,
+        0.0002524497775383252
+      ]
+    },
+    "route_minus_base_raw": {
+      "mean": 1.4762216827405166e-05,
+      "ci95": [
+        -0.0001539838035982412,
+        0.00018594234757356807
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.000199681561349802,
+        0.00024379772825901933
+      ]
+    },
+    "route_minus_alternative_accuracy": {
+      "mean": -0.00019603934077618669,
+      "ci95": [
+        -0.00045935169348102715,
+        0.0
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0005607460262519218,
+        0.0
+      ]
+    },
+    "route_minus_alternative_geom": {
+      "mean": 6.851785242129128e-05,
+      "ci95": [
+        -1.9934924985031586e-05,
+        0.0001624034636719574
+      ],
+      "four_setting_adjusted_ci95": [
+        -4.08641410050287e-05,
+        0.00018508573896599124
+      ]
+    },
+    "route_minus_alternative_raw": {
+      "mean": 6.487614231096123e-05,
+      "ci95": [
+        -1.8254706010520257e-05,
+        0.00015366344736948383
+      ],
+      "four_setting_adjusted_ci95": [
+        -3.977801614121809e-05,
+        0.00017449518555693694
+      ]
+    },
+    "route_minus_training_fixed_accuracy": {
+      "mean": -0.00019603934077618669,
+      "ci95": [
+        -0.00045935169348102715,
+        0.0
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0005607460262519218,
+        0.0
+      ]
+    },
+    "route_minus_training_fixed_geom": {
+      "mean": 6.851785242129128e-05,
+      "ci95": [
+        -1.9934924985031586e-05,
+        0.0001624034636719574
+      ],
+      "four_setting_adjusted_ci95": [
+        -4.08641410050287e-05,
+        0.00018508573896599124
+      ]
+    },
+    "route_minus_training_fixed_raw": {
+      "mean": 6.487614231096123e-05,
+      "ci95": [
+        -1.8254706010520257e-05,
+        0.00015366344736948383
+      ],
+      "four_setting_adjusted_ci95": [
+        -3.977801614121809e-05,
+        0.00017449518555693694
+      ]
+    },
+    "route_alternative_fraction": {
+      "mean": 0.7418394471026061,
+      "ci95": [
+        0.7188550309721341,
+        0.7655849066500299
+      ],
+      "four_setting_adjusted_ci95": [
+        0.7139156233004467,
+        0.7715491432727636
+      ]
+    }
+  },
+  "mse": {
+    "mse_mean_geom": 4.936300216256063e-05,
+    "within_mse_mean_geom": 1.919916967368147e-05,
+    "mse_mean_raw": 4.3103246306588044e-05,
+    "within_mse_mean_raw": 1.6385918416444204e-05,
+    "mse_base_geom": 4.9299451971011205e-05,
+    "within_mse_base_geom": 1.9213213340438953e-05,
+    "mse_base_raw": 4.310953061310204e-05,
+    "within_mse_base_raw": 1.637430785990822e-05,
+    "mse_selection_geom": 4.8188772040412706e-05,
+    "within_mse_selection_geom": 1.9219894314355844e-05,
+    "mse_selection_raw": 4.2211697018597536e-05,
+    "within_mse_selection_raw": 1.63785673574035e-05,
+    "mse_difficulty_base_geom": 4.9346263735743515e-05,
+    "within_mse_difficulty_base_geom": 1.9218270808616517e-05,
+    "mse_difficulty_base_raw": 4.314342445583819e-05,
+    "within_mse_difficulty_base_raw": 1.6377320530823603e-05,
+    "mse_difficulty_selection_geom": 4.8211876325639444e-05,
+    "within_mse_difficulty_selection_geom": 1.9223845773647673e-05,
+    "mse_difficulty_selection_raw": 4.222838871969214e-05,
+    "within_mse_difficulty_selection_raw": 1.63807504165254e-05,
+    "within_signal_geom": 1.919916967368147e-05,
+    "within_signal_raw": 1.6385918416444204e-05
+  },
+  "per_run": [
+    {
+      "run_id": [
+        2041,
+        2042
+      ],
+      "base_r2_geom": 0.0010627731603723989,
+      "base_within_r2_geom": -0.0006943147401918814,
+      "selection_r2_geom": 0.021744448409567796,
+      "selection_within_r2_geom": -0.000847285992965352,
+      "difficulty_base_r2_geom": 0.0003554452688763199,
+      "difficulty_base_within_r2_geom": -0.0009358030870221246,
+      "difficulty_selection_r2_geom": 0.021536589464959732,
+      "difficulty_selection_within_r2_geom": -0.0009171876497358067,
+      "selection_increment_r2_geom": 0.0206816752491954,
+      "selection_increment_within_r2_geom": -0.00015297125277355885,
+      "difficulty_adjusted_increment_r2_geom": 0.02118114419608342,
+      "base_r2_raw": 0.0005762010676458873,
+      "base_within_r2_raw": 0.0011650640287196312,
+      "selection_r2_raw": 0.018553055288155984,
+      "selection_within_r2_raw": 0.0013103904271808409,
+      "difficulty_base_r2_raw": -0.00014253061557711888,
+      "difficulty_base_within_r2_raw": 0.0008197529338980214,
+      "difficulty_selection_r2_raw": 0.018271251137289668,
+      "difficulty_selection_within_r2_raw": 0.0011214365580470842,
+      "selection_increment_r2_raw": 0.01797685422051012,
+      "selection_increment_within_r2_raw": 0.00014532639846118303,
+      "difficulty_adjusted_increment_r2_raw": 0.01841378175286683,
+      "route_minus_base_accuracy": 0.0019138755980861615,
+      "route_minus_base_geom": -1.2733267450157544e-05,
+      "route_minus_base_raw": 1.0982184912979879e-05,
+      "route_minus_alternative_accuracy": -0.00039872408293461695,
+      "route_minus_alternative_geom": 0.00011138490945235106,
+      "route_minus_alternative_raw": 9.34050618960545e-05,
+      "route_minus_training_fixed_accuracy": -0.00039872408293461695,
+      "route_minus_training_fixed_geom": 0.00011138490945235106,
+      "route_minus_training_fixed_raw": 9.34050618960545e-05,
+      "route_alternative_fraction": 0.7585526315789483
+    },
+    {
+      "run_id": [
+        2041,
+        2043
+      ],
+      "base_r2_geom": 0.0015105356827721517,
+      "base_within_r2_geom": -0.0009028148670071623,
+      "selection_r2_geom": 0.022766814316104944,
+      "selection_within_r2_geom": -0.002631391413439932,
+      "difficulty_base_r2_geom": -0.0009569418972112942,
+      "difficulty_base_within_r2_geom": -0.0012088938940053584,
+      "difficulty_selection_r2_geom": 0.021069089529736518,
+      "difficulty_selection_within_r2_geom": -0.0026819218755771423,
+      "selection_increment_r2_geom": 0.021256278633332803,
+      "selection_increment_within_r2_geom": -0.0017285765464328312,
+      "difficulty_adjusted_increment_r2_geom": 0.022026031426947826,
+      "base_r2_raw": 0.0014216922238280416,
+      "base_within_r2_raw": 0.004182428794104465,
+      "selection_r2_raw": 0.020781946474862978,
+      "selection_within_r2_raw": 0.0028471385320589793,
+      "difficulty_base_r2_raw": -0.0009306459427309566,
+      "difficulty_base_within_r2_raw": 0.003796884850356008,
+      "difficulty_selection_r2_raw": 0.019118265309547633,
+      "difficulty_selection_within_r2_raw": 0.0027033887557323943,
+      "selection_increment_r2_raw": 0.019360254251034936,
+      "selection_increment_within_r2_raw": -0.0013352902620455017,
+      "difficulty_adjusted_increment_r2_raw": 0.020048911252278617,
+      "route_minus_base_accuracy": -0.0003787878787878861,
+      "route_minus_base_geom": -6.319955803188942e-05,
+      "route_minus_base_raw": -2.408429647556764e-05,
+      "route_minus_alternative_accuracy": -0.00039872408293461695,
+      "route_minus_alternative_geom": -5.056631388543706e-05,
+      "route_minus_alternative_raw": -5.087418692629215e-05,
+      "route_minus_training_fixed_accuracy": -0.00039872408293461695,
+      "route_minus_training_fixed_geom": -5.056631388543706e-05,
+      "route_minus_training_fixed_raw": -5.087418692629215e-05,
+      "route_alternative_fraction": 0.7612838915470503
+    },
+    {
+      "run_id": [
+        2042,
+        2041
+      ],
+      "base_r2_geom": 0.0006203456243839556,
+      "base_within_r2_geom": -0.0007080636157823506,
+      "selection_r2_geom": 0.01747426414391451,
+      "selection_within_r2_geom": -0.00039981977866765384,
+      "difficulty_base_r2_geom": 0.0001629023099445348,
+      "difficulty_base_within_r2_geom": 0.0008450668384529791,
+      "difficulty_selection_r2_geom": 0.017360101571214592,
+      "difficulty_selection_within_r2_geom": 0.001122530001324673,
+      "selection_increment_r2_geom": 0.01685391851953054,
+      "selection_increment_within_r2_geom": 0.000308243837114654,
+      "difficulty_adjusted_increment_r2_geom": 0.017197199261270005,
+      "base_r2_raw": -0.0006253286790929291,
+      "base_within_r2_raw": 0.0003392812864422279,
+      "selection_r2_raw": 0.015122459780611441,
+      "selection_within_r2_raw": 0.0006272541977080381,
+      "difficulty_base_r2_raw": -0.0007942469597035373,
+      "difficulty_base_within_r2_raw": 0.002069520111089851,
+      "difficulty_selection_r2_raw": 0.015210960259638973,
+      "difficulty_selection_within_r2_raw": 0.0023185622747949886,
+      "selection_increment_r2_raw": 0.01574778845970435,
+      "selection_increment_within_r2_raw": 0.0002879729112658125,
+      "difficulty_adjusted_increment_r2_raw": 0.016005207219342496,
+      "route_minus_base_accuracy": 0.0007775119617225031,
+      "route_minus_base_geom": 0.00011773919140718377,
+      "route_minus_base_raw": 0.00011248662221161034,
+      "route_minus_alternative_accuracy": -0.0003787878787878861,
+      "route_minus_alternative_geom": 3.7222766461790293e-05,
+      "route_minus_alternative_raw": 4.438705760183596e-05,
+      "route_minus_training_fixed_accuracy": -0.0003787878787878861,
+      "route_minus_training_fixed_geom": 3.7222766461790293e-05,
+      "route_minus_training_fixed_raw": 4.438705760183596e-05,
+      "route_alternative_fraction": 0.7598883572567794
+    },
+    {
+      "run_id": [
+        2042,
+        2043
+      ],
+      "base_r2_geom": 0.0005116413887440441,
+      "base_within_r2_geom": -0.0020681756682563446,
+      "selection_r2_geom": 0.022122135826047384,
+      "selection_within_r2_geom": -0.0015414633352781593,
+      "difficulty_base_r2_geom": 0.0021421545866208147,
+      "difficulty_base_within_r2_geom": 0.00015817428120290522,
+      "difficulty_selection_r2_geom": 0.0241695061561088,
+      "difficulty_selection_within_r2_geom": 0.000547535382524833,
+      "selection_increment_r2_geom": 0.021610494437303365,
+      "selection_increment_within_r2_geom": 0.0005267123329781012,
+      "difficulty_adjusted_increment_r2_geom": 0.022027351569487954,
+      "base_r2_raw": -0.0009584425846009825,
+      "base_within_r2_raw": 0.0008976128537286909,
+      "selection_r2_raw": 0.019080618046025455,
+      "selection_within_r2_raw": 0.0014756032618485904,
+      "difficulty_base_r2_raw": 0.001022893817005266,
+      "difficulty_base_within_r2_raw": 0.0033879001360521688,
+      "difficulty_selection_r2_raw": 0.021378319521865752,
+      "difficulty_selection_within_r2_raw": 0.0038274338556104626,
+      "selection_increment_r2_raw": 0.02003906063062642,
+      "selection_increment_within_r2_raw": 0.0005779904081199702,
+      "difficulty_adjusted_increment_r2_raw": 0.020355425704860538,
+      "route_minus_base_accuracy": 0.0015151515151515444,
+      "route_minus_base_geom": 0.0001381905932963156,
+      "route_minus_base_raw": 0.0001325591397508885,
+      "route_minus_alternative_accuracy": 0.0,
+      "route_minus_alternative_geom": 7.13611977436007e-05,
+      "route_minus_alternative_raw": 6.669514665478282e-05,
+      "route_minus_training_fixed_accuracy": 0.0,
+      "route_minus_training_fixed_geom": 7.13611977436007e-05,
+      "route_minus_training_fixed_raw": 6.669514665478282e-05,
+      "route_alternative_fraction": 0.7606259968102084
+    },
+    {
+      "run_id": [
+        2043,
+        2041
+      ],
+      "base_r2_geom": 0.0017092056215343154,
+      "base_within_r2_geom": 0.0003273757293149604,
+      "selection_r2_geom": 0.0325919254220679,
+      "selection_within_r2_geom": 0.0021827881178508868,
+      "difficulty_base_r2_geom": -0.0006033707912524999,
+      "difficulty_base_within_r2_geom": -0.0031496939891413334,
+      "difficulty_selection_r2_geom": 0.030644122516580996,
+      "difficulty_selection_within_r2_geom": -0.001202644681589149,
+      "selection_increment_r2_geom": 0.030882719800533632,
+      "selection_increment_within_r2_geom": 0.0018554123885359706,
+      "difficulty_adjusted_increment_r2_geom": 0.03124749330783342,
+      "base_r2_raw": -0.001173279360282553,
+      "base_within_r2_raw": -0.0014369933729383444,
+      "selection_r2_raw": 0.027874703274124668,
+      "selection_within_r2_raw": 0.00011789846190535247,
+      "difficulty_base_r2_raw": -0.0033046706695833983,
+      "difficulty_base_within_r2_raw": -0.0047493340745534685,
+      "difficulty_selection_r2_raw": 0.026024882904220892,
+      "difficulty_selection_within_r2_raw": -0.0030951487541879263,
+      "selection_increment_r2_raw": 0.02904798263440715,
+      "selection_increment_within_r2_raw": 0.0015548918348437762,
+      "difficulty_adjusted_increment_r2_raw": 0.029329553573804165,
+      "route_minus_base_accuracy": 0.0003787878787878861,
+      "route_minus_base_geom": -3.3627413623852964e-05,
+      "route_minus_base_raw": -2.826445645383933e-05,
+      "route_minus_alternative_accuracy": 0.0,
+      "route_minus_alternative_geom": 0.00021434262696538666,
+      "route_minus_alternative_raw": 0.00021811301568954247,
+      "route_minus_training_fixed_accuracy": 0.0,
+      "route_minus_training_fixed_geom": 0.00021434262696538666,
+      "route_minus_training_fixed_raw": 0.00021811301568954247,
+      "route_alternative_fraction": 0.7049840510366839
+    },
+    {
+      "run_id": [
+        2043,
+        2042
+      ],
+      "base_r2_geom": 0.002500873518618607,
+      "base_within_r2_geom": -0.0003450965103599657,
+      "selection_r2_geom": 0.027038325877353775,
+      "selection_within_r2_geom": -0.0027728888536979746,
+      "difficulty_base_r2_geom": 0.001058281875387701,
+      "difficulty_base_within_r2_geom": -0.0021546230531663824,
+      "difficulty_selection_r2_geom": 0.026150164953960497,
+      "difficulty_selection_within_r2_geom": -0.004596436202066956,
+      "selection_increment_r2_geom": 0.024537452358735227,
+      "selection_increment_within_r2_geom": -0.0024277923433380956,
+      "difficulty_adjusted_increment_r2_geom": 0.025091883078572862,
+      "base_r2_raw": 0.00014147926862073668,
+      "base_within_r2_raw": -0.0009441826699290168,
+      "selection_r2_raw": 0.023905517376394125,
+      "selection_within_r2_raw": -0.0034778143450067134,
+      "difficulty_base_r2_raw": -0.001287753598503416,
+      "difficulty_base_within_r2_raw": -0.0027473416807641815,
+      "difficulty_selection_r2_raw": 0.022968931048138796,
+      "difficulty_selection_within_r2_raw": -0.005297994851353849,
+      "selection_increment_r2_raw": 0.02376403810777348,
+      "selection_increment_within_r2_raw": -0.002533631675077698,
+      "difficulty_adjusted_increment_r2_raw": 0.024256684646642226,
+      "route_minus_base_accuracy": 0.001156299840510389,
+      "route_minus_base_geom": -0.00011564237577561732,
+      "route_minus_base_raw": -0.00011510589298164074,
+      "route_minus_alternative_accuracy": 0.0,
+      "route_minus_alternative_geom": 2.7361927790056002e-05,
+      "route_minus_alternative_raw": 1.7530758949843662e-05,
+      "route_minus_training_fixed_accuracy": 0.0,
+      "route_minus_training_fixed_geom": 2.7361927790056002e-05,
+      "route_minus_training_fixed_raw": 1.7530758949843662e-05,
+      "route_alternative_fraction": 0.7057017543859662
+    }
+  ],
+  "mode": "cross_dataset",
+  "setting": "pets_b16_98",
+  "source": "flowers_b16_98",
+  "panel": "mix",
+  "rows": 2624,
+  "images": 716,
+  "tasks": 66,
+  "run_ids": [
+    [
+      2041,
+      2042
+    ],
+    [
+      2041,
+      2043
+    ],
+    [
+      2042,
+      2041
+    ],
+    [
+      2042,
+      2043
+    ],
+    [
+      2043,
+      2041
+    ],
+    [
+      2043,
+      2042
+    ]
+  ],
+  "feature_names": [
+    "text_distance",
+    "inverse_text_distance",
+    "shared_boundary_gap",
+    "selection_disagreement",
+    "conditional_boundary_gap",
+    "rank_disagreement",
+    "disagreement_x_shared_boundary",
+    "donor_disagreement_excess"
+  ],
+  "routing": true
+}

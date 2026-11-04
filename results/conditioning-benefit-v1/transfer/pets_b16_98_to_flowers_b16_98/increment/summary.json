@@ -1,0 +1,484 @@
+{
+  "estimates": {
+    "base_r2_geom": {
+      "mean": 6.972868454380166e-05,
+      "ci95": [
+        -0.0011384781661918698,
+        0.0013151249921779372
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0015906949776757274,
+        0.0016366837186455364
+      ]
+    },
+    "base_within_r2_geom": {
+      "mean": -0.0005806401426786678,
+      "ci95": [
+        -0.0015701168234663666,
+        0.0004354624556174737
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0018120259007185114,
+        0.0006564662128979705
+      ]
+    },
+    "selection_r2_geom": {
+      "mean": -0.0007370399142212491,
+      "ci95": [
+        -0.004055828784051324,
+        0.002551706715741013
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.004844514848219517,
+        0.0036045040036088386
+      ]
+    },
+    "selection_within_r2_geom": {
+      "mean": 4.757471264804636e-05,
+      "ci95": [
+        -0.001573726668751213,
+        0.001588046880517431
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0021663991875057174,
+        0.0019806753796092003
+      ]
+    },
+    "difficulty_base_r2_geom": {
+      "mean": -1.1497166785279234e-05,
+      "ci95": [
+        -0.0019432873445406895,
+        0.0020447598824007082
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0026469242243722354,
+        0.0027637766038436534
+      ]
+    },
+    "difficulty_base_within_r2_geom": {
+      "mean": -0.001267021480413577,
+      "ci95": [
+        -0.0031277274834712043,
+        0.0006376958768051967
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0035609552272275594,
+        0.0010841046313779148
+      ]
+    },
+    "difficulty_selection_r2_geom": {
+      "mean": -0.0005075829502154683,
+      "ci95": [
+        -0.0038456513044575038,
+        0.0028519272073700783
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.004568586832568107,
+        0.0036732802118929373
+      ]
+    },
+    "difficulty_selection_within_r2_geom": {
+      "mean": -0.00044645322668479537,
+      "ci95": [
+        -0.002586054502379931,
+        0.0015792718612125914
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.003280808276050577,
+        0.002253061340640268
+      ]
+    },
+    "selection_increment_r2_geom": {
+      "mean": -0.0008067685987651319,
+      "ci95": [
+        -0.004287607767181058,
+        0.0028444892015341196
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0053943390669022725,
+        0.003860599478492456
+      ]
+    },
+    "selection_increment_within_r2_geom": {
+      "mean": 0.0006282148553267764,
+      "ci95": [
+        -0.0006484969351936259,
+        0.001795617121592262
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0010222411545988746,
+        0.002054494602904915
+      ]
+    },
+    "difficulty_adjusted_increment_r2_geom": {
+      "mean": -0.0004960857834300929,
+      "ci95": [
+        -0.003863636677965392,
+        0.0030665323482101502
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0048949683715563035,
+        0.004005480032266098
+      ]
+    },
+    "base_r2_raw": {
+      "mean": -6.423929178089871e-05,
+      "ci95": [
+        -0.0012503853982449077,
+        0.001148661609684495
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0016290283206928976,
+        0.001527436674618348
+      ]
+    },
+    "base_within_r2_raw": {
+      "mean": -0.0008097997713778504,
+      "ci95": [
+        -0.0019135895647905577,
+        0.0003471645161620065
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0022364500831936725,
+        0.0005905146357972022
+      ]
+    },
+    "selection_r2_raw": {
+      "mean": -0.0015790871690453123,
+      "ci95": [
+        -0.0051906551888579785,
+        0.0021632377180715633
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.006191359649035655,
+        0.0031577680900868907
+      ]
+    },
+    "selection_within_r2_raw": {
+      "mean": -8.398357001615508e-05,
+      "ci95": [
+        -0.001959325310497373,
+        0.0016700009795361068
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.002642966426587362,
+        0.0021198880914551264
+      ]
+    },
+    "difficulty_base_r2_raw": {
+      "mean": -0.0004114481469088549,
+      "ci95": [
+        -0.002553237560405863,
+        0.001888671764393023
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.003353388251118103,
+        0.0025050882279785743
+      ]
+    },
+    "difficulty_base_within_r2_raw": {
+      "mean": -0.0016010480817896244,
+      "ci95": [
+        -0.003898636379019399,
+        0.0007179012454276347
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.004482723785753895,
+        0.0012620623737039133
+      ]
+    },
+    "difficulty_selection_r2_raw": {
+      "mean": -0.001564605819380116,
+      "ci95": [
+        -0.005374861322072372,
+        0.0021101590149434774
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.006131464365938083,
+        0.0032295119123223505
+      ]
+    },
+    "difficulty_selection_within_r2_raw": {
+      "mean": -0.0006686090240439757,
+      "ci95": [
+        -0.003328948643684393,
+        0.001798527652728429
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.004061420444777961,
+        0.0026479416056043757
+      ]
+    },
+    "selection_increment_r2_raw": {
+      "mean": -0.0015148478772645268,
+      "ci95": [
+        -0.005510025623216757,
+        0.002677975068889778
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.006515001238679456,
+        0.0038892808656041987
+      ]
+    },
+    "selection_increment_within_r2_raw": {
+      "mean": 0.0007258162013617567,
+      "ci95": [
+        -0.0007046716508001277,
+        0.0020817166738467704
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0011415173471143044,
+        0.0023872888352033843
+      ]
+    },
+    "difficulty_adjusted_increment_r2_raw": {
+      "mean": -0.0011531576724713218,
+      "ci95": [
+        -0.005021245814328426,
+        0.0028557555686581507
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0060899062162738,
+        0.0041624382368952925
+      ]
+    }
+  },
+  "mse": {
+    "mse_mean_geom": 0.00016099525515803263,
+    "within_mse_mean_geom": 8.441383538100118e-05,
+    "mse_mean_raw": 0.0001285427238406028,
+    "within_mse_mean_raw": 6.80986258582698e-05,
+    "mse_base_geom": 0.00016098402917067266,
+    "within_mse_base_geom": 8.446284944242087e-05,
+    "mse_base_raw": 0.0001285509813341459,
+    "within_mse_base_raw": 6.815377210992097e-05,
+    "mse_selection_geom": 0.00016111391508708434,
+    "within_mse_selection_geom": 8.440981941703941e-05,
+    "mse_selection_raw": 0.00012874570400649363,
+    "within_mse_selection_raw": 6.810434502398257e-05,
+    "mse_difficulty_base_geom": 0.00016099710614733283,
+    "within_mse_difficulty_base_geom": 8.4520789523673e-05,
+    "mse_difficulty_base_raw": 0.0001285956125061256,
+    "within_mse_difficulty_base_raw": 6.820765503257269e-05,
+    "mse_difficulty_selection_geom": 0.00016107697360461643,
+    "within_mse_difficulty_selection_geom": 8.445152221018388e-05,
+    "mse_difficulty_selection_raw": 0.00012874384253436276,
+    "within_mse_difficulty_selection_raw": 6.814415721404364e-05,
+    "within_signal_geom": 8.441383538100118e-05,
+    "within_signal_raw": 6.80986258582698e-05
+  },
+  "per_run": [
+    {
+      "run_id": [
+        2041,
+        2042
+      ],
+      "base_r2_geom": 0.0023215482238134744,
+      "base_within_r2_geom": -0.0004978509230799677,
+      "selection_r2_geom": -0.0019570058967282034,
+      "selection_within_r2_geom": 0.00015047072567830888,
+      "difficulty_base_r2_geom": 0.004994545600936373,
+      "difficulty_base_within_r2_geom": -5.796643482813835e-05,
+      "difficulty_selection_r2_geom": 0.00015583750708525468,
+      "difficulty_selection_within_r2_geom": 0.0005293858293836662,
+      "selection_increment_r2_geom": -0.0042785541205416465,
+      "selection_increment_within_r2_geom": 0.0006483216487582442,
+      "difficulty_adjusted_increment_r2_geom": -0.004838708093851152,
+      "base_r2_raw": 0.001932682379991002,
+      "base_within_r2_raw": -0.001221817966649219,
+      "selection_r2_raw": -0.004508605151137823,
+      "selection_within_r2_raw": -0.0007196152868957917,
+      "difficulty_base_r2_raw": 0.004580002148339757,
+      "difficulty_base_within_r2_raw": -0.0010003947969001725,
+      "difficulty_selection_r2_raw": -0.0024608233447382943,
+      "difficulty_selection_within_r2_raw": -0.0005311607719933331,
+      "selection_increment_r2_raw": -0.006441287531128878,
+      "selection_increment_within_r2_raw": 0.0005022026797535538,
+      "difficulty_adjusted_increment_r2_raw": -0.007040825493078108
+    },
+    {
+      "run_id": [
+        2041,
+        2043
+      ],
+      "base_r2_geom": 0.00137933879371277,
+      "base_within_r2_geom": -0.0011869732813247769,
+      "selection_r2_geom": -0.0020931342661794083,
+      "selection_within_r2_geom": -5.382510908669147e-05,
+      "difficulty_base_r2_geom": 0.0034375218454042455,
+      "difficulty_base_within_r2_geom": -0.0010596664779638498,
+      "difficulty_selection_r2_geom": -0.0004324673887659003,
+      "difficulty_selection_within_r2_geom": 6.450822192760608e-05,
+      "selection_increment_r2_geom": -0.0034724730598922385,
+      "selection_increment_within_r2_geom": 0.0011331481722380858,
+      "difficulty_adjusted_increment_r2_geom": -0.0038699892341701103,
+      "base_r2_raw": 0.0009274559164351714,
+      "base_within_r2_raw": -0.0017027134808778044,
+      "selection_r2_raw": -0.004763101076452836,
+      "selection_within_r2_raw": -0.0005807316466155399,
+      "difficulty_base_r2_raw": 0.002952598528679573,
+      "difficulty_base_within_r2_raw": -0.001636853906717084,
+      "difficulty_selection_r2_raw": -0.0031680372646325505,
+      "difficulty_selection_within_r2_raw": -0.0004961776999485856,
+      "selection_increment_r2_raw": -0.005690556992887968,
+      "selection_increment_within_r2_raw": 0.0011219818342622034,
+      "difficulty_adjusted_increment_r2_raw": -0.0061206357933122155
+    },
+    {
+      "run_id": [
+        2042,
+        2041
+      ],
+      "base_r2_geom": 0.0002671494379631323,
+      "base_within_r2_geom": -0.000918974960812946,
+      "selection_r2_geom": -0.0017775418289576184,
+      "selection_within_r2_geom": -0.0010775403898111158,
+      "difficulty_base_r2_geom": 1.87269991449579e-05,
+      "difficulty_base_within_r2_geom": -0.0016647165704699596,
+      "difficulty_selection_r2_geom": -0.001615941493999351,
+      "difficulty_selection_within_r2_geom": -0.0015975774090959405,
+      "selection_increment_r2_geom": -0.0020446912669207454,
+      "selection_increment_within_r2_geom": -0.00015856542899822615,
+      "difficulty_adjusted_increment_r2_geom": -0.0016346684931444117,
+      "base_r2_raw": 0.00023350196755611563,
+      "base_within_r2_raw": -0.0011761181402554222,
+      "selection_r2_raw": -0.002697124185674138,
+      "selection_within_r2_raw": -0.0010686967072974785,
+      "difficulty_base_r2_raw": -0.000131696710300222,
+      "difficulty_base_within_r2_raw": -0.0017715591095073258,
+      "difficulty_selection_r2_raw": -0.002574312953327329,
+      "difficulty_selection_within_r2_raw": -0.0014404949605593131,
+      "selection_increment_r2_raw": -0.0029306261532302644,
+      "selection_increment_within_r2_raw": 0.00010742143295792665,
+      "difficulty_adjusted_increment_r2_raw": -0.0024426162430270706
+    },
+    {
+      "run_id": [
+        2042,
+        2043
+      ],
+      "base_r2_geom": 0.0004529469541602049,
+      "base_within_r2_geom": -0.00036180672458785423,
+      "selection_r2_geom": -0.0015971994311350102,
+      "selection_within_r2_geom": -3.719843554184088e-05,
+      "difficulty_base_r2_geom": 9.858423730313426e-05,
+      "difficulty_base_within_r2_geom": -0.0012346864964332127,
+      "difficulty_selection_r2_geom": -0.0014811566882670935,
+      "difficulty_selection_within_r2_geom": -0.0006446401260586931,
+      "selection_increment_r2_geom": -0.0020501463852951635,
+      "selection_increment_within_r2_geom": 0.00032460828904602853,
+      "difficulty_adjusted_increment_r2_geom": -0.001579740925570302,
+      "base_r2_raw": 0.00040939572770049004,
+      "base_within_r2_raw": -0.0006457726737354452,
+      "selection_r2_raw": -0.002226300850453722,
+      "selection_within_r2_raw": 4.495934617121389e-05,
+      "difficulty_base_r2_raw": -0.0001775235251628704,
+      "difficulty_base_within_r2_raw": -0.0012463220454017598,
+      "difficulty_selection_r2_raw": -0.0022650281056870725,
+      "difficulty_selection_within_r2_raw": -0.0003170068108613311,
+      "selection_increment_r2_raw": -0.002635696578154321,
+      "selection_increment_within_r2_raw": 0.0006907320199065724,
+      "difficulty_adjusted_increment_r2_raw": -0.002087504580524235
+    },
+    {
+      "run_id": [
+        2043,
+        2041
+      ],
+      "base_r2_geom": -0.0016425016291412575,
+      "base_within_r2_geom": -0.00036669953595791505,
+      "selection_r2_geom": 0.0009621992198858287,
+      "selection_within_r2_geom": 0.0007609953953091608,
+      "difficulty_base_r2_geom": -0.003023971740170328,
+      "difficulty_base_within_r2_geom": -0.0013878006299070655,
+      "difficulty_selection_r2_geom": 0.000300322670430897,
+      "difficulty_selection_within_r2_geom": -1.685591065858638e-05,
+      "selection_increment_r2_geom": 0.002604700849027128,
+      "selection_increment_within_r2_geom": 0.0011276949312671932,
+      "difficulty_adjusted_increment_r2_geom": 0.003324294410601213,
+      "base_r2_raw": -0.0016861476073981585,
+      "base_within_r2_raw": -0.0001103359091068068,
+      "selection_r2_raw": 0.001407518094193927,
+      "selection_within_r2_raw": 0.0010608024309792796,
+      "difficulty_base_r2_raw": -0.0035800293983219156,
+      "difficulty_base_within_r2_raw": -0.0015821748872988373,
+      "difficulty_selection_r2_raw": 0.00032143289607833303,
+      "difficulty_selection_within_r2_raw": -0.00012680394285857766,
+      "selection_increment_r2_raw": 0.0030936657015921665,
+      "selection_increment_within_r2_raw": 0.0011711383400859875,
+      "difficulty_adjusted_increment_r2_raw": 0.0039014622944003106
+    },
+    {
+      "run_id": [
+        2043,
+        2042
+      ],
+      "base_r2_geom": -0.0012649126297574753,
+      "base_within_r2_geom": -0.00029882976989492605,
+      "selection_r2_geom": 0.001217836056935373,
+      "selection_within_r2_geom": 0.0005276032474591519,
+      "difficulty_base_r2_geom": -0.003005985560449842,
+      "difficulty_base_within_r2_geom": -0.0018222382720178842,
+      "difficulty_selection_r2_geom": 0.0002161706638554861,
+      "difficulty_selection_within_r2_geom": -0.0006275901021188801,
+      "selection_increment_r2_geom": 0.002482748686692838,
+      "selection_increment_within_r2_geom": 0.0008264330173540231,
+      "difficulty_adjusted_increment_r2_geom": 0.003222156224305232,
+      "base_r2_raw": -0.0013531459435669468,
+      "base_within_r2_raw": -0.00034053163421021715,
+      "selection_r2_raw": 0.0015528744755627377,
+      "selection_within_r2_raw": 0.0004953466534053375,
+      "difficulty_base_r2_raw": -0.0036650896675813893,
+      "difficulty_base_within_r2_raw": -0.0022236236914106033,
+      "difficulty_selection_r2_raw": 6.382112164549092e-05,
+      "difficulty_selection_within_r2_raw": -0.0009948204527006066,
+      "selection_increment_r2_raw": 0.0029060204191297184,
+      "selection_increment_within_r2_raw": 0.0008358782876154996,
+      "difficulty_adjusted_increment_r2_raw": 0.0037289107892268442
+    }
+  ],
+  "mode": "cross_dataset",
+  "setting": "flowers_b16_98",
+  "source": "pets_b16_98",
+  "panel": "increment",
+  "rows": 4080,
+  "images": 1020,
+  "tasks": 204,
+  "run_ids": [
+    [
+      2041,
+      2042
+    ],
+    [
+      2041,
+      2043
+    ],
+    [
+      2042,
+      2041
+    ],
+    [
+      2042,
+      2043
+    ],
+    [
+      2043,
+      2041
+    ],
+    [
+      2043,
+      2042
+    ]
+  ],
+  "feature_names": [
+    "text_distance",
+    "inverse_text_distance",
+    "shared_boundary_gap",
+    "selection_disagreement",
+    "conditional_boundary_gap",
+    "rank_disagreement",
+    "disagreement_x_shared_boundary",
+    "donor_disagreement_excess"
+  ],
+  "routing": false
+}

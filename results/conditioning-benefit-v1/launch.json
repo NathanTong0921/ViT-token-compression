@@ -1,0 +1,15 @@
+{
+  "pid": 1515865,
+  "start_utc": "2026-11-04T09:04:43.695994+00:00",
+  "command": [
+    ".venv/bin/python",
+    "-u",
+    "scripts/analyze_conditioning_benefit.py",
+    "--core-archive",
+    "/data2/zhao.tong/artifacts/parallel-research-pilots-v1/core-protection-v1.zip",
+    "--hybrid-archive",
+    "/data2/zhao.tong/artifacts/hybrid-followup-v1/hybrid-specificity-v1.zip",
+    "--output",
+    "runs/conditioning-benefit-v1"
+  ]
+}

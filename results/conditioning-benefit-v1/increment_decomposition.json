@@ -1,0 +1,703 @@
+{
+  "analysis_status": "Post-result descriptive arithmetic check using saved arrays only; no new model fitting, tuning, or bootstrap.",
+  "purpose": "Check whether predictability of increment = mix - primary is consistent with inheritance of the starting primary difference; correlations do not establish a causal explanation.",
+  "outcome": "signed geometric margin (column 0)",
+  "model": "selection; saved double-holdout out-of-fold predictions",
+  "definitions": {
+    "primary": "C_s - U_s",
+    "mix": "CU_s,t - UU_s,t for each of six ordered distinct-seed pairs (s,t)",
+    "increment": "mix - primary, matching primary seed s to the recipient seed in (s,t)",
+    "weights": "Use the saved row weights in each inputs.npz and normalize them to sum to one over all rows in that setting.",
+    "weighted_correlation": "For vectors x,y on the same rows, sum_i w_i*(x_i-mean_w(x))*(y_i-mean_w(y)) / sqrt(sum_i w_i*(x_i-mean_w(x))^2 * sum_i w_i*(y_i-mean_w(y))^2). Computed separately for each ordered seed pair.",
+    "run_aggregation": "Arithmetic mean over all six ordered seed pairs; the per-run values are also retained. The six pairs share models and are not independent replicates.",
+    "prediction_sd_ratio": "Weighted standard deviation of the selection-model mix prediction divided by that of its matching primary prediction, computed separately per ordered seed pair.",
+    "coefficient_summary": "Arithmetic mean of the saved standardized selection-model coefficients over all 25 image-fold/task-fold fits, for geometric margin only. Standardization is fit-specific; these correlated-feature coefficients are descriptive, not causal effects.",
+    "identity_check": "Maximum absolute discrepancy between saved increment target and saved mix target minus matching primary target over rows, separately per ordered seed pair."
+  },
+  "settings": {
+    "pets_b16_49": {
+      "n_rows": 2624,
+      "per_run": [
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2042,
+          "corr_increment_target_negative_primary_target": 0.7982563365087194,
+          "corr_increment_target_mix_target": -0.005731053290920279,
+          "corr_increment_prediction_negative_primary_prediction": 0.9054131040189204,
+          "corr_increment_prediction_mix_prediction": -0.8387752013387957,
+          "sd_mix_prediction_over_primary_prediction": 0.3377099786061146,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2043,
+          "corr_increment_target_negative_primary_target": 0.7773989924440613,
+          "corr_increment_target_mix_target": 0.012101923483976871,
+          "corr_increment_prediction_negative_primary_prediction": 0.9001614780929373,
+          "corr_increment_prediction_mix_prediction": -0.838140893766409,
+          "sd_mix_prediction_over_primary_prediction": 0.33895488691728765,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2041,
+          "corr_increment_target_negative_primary_target": 0.7700504335657247,
+          "corr_increment_target_mix_target": 1.052165626103061e-05,
+          "corr_increment_prediction_negative_primary_prediction": 0.9035445134705368,
+          "corr_increment_prediction_mix_prediction": -0.7984975186625645,
+          "sd_mix_prediction_over_primary_prediction": 0.342249884789087,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2043,
+          "corr_increment_target_negative_primary_target": 0.7833155764023918,
+          "corr_increment_target_mix_target": -0.0481082168384627,
+          "corr_increment_prediction_negative_primary_prediction": 0.8991173767833687,
+          "corr_increment_prediction_mix_prediction": -0.8033214160984783,
+          "sd_mix_prediction_over_primary_prediction": 0.3466029405421685,
+          "max_increment_identity_error": 6.938893903907228e-18
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2041,
+          "corr_increment_target_negative_primary_target": 0.815935251013796,
+          "corr_increment_target_mix_target": -0.03589056804549977,
+          "corr_increment_prediction_negative_primary_prediction": 0.9286092543527499,
+          "corr_increment_prediction_mix_prediction": -0.8608246975296916,
+          "sd_mix_prediction_over_primary_prediction": 0.3380488831538785,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2042,
+          "corr_increment_target_negative_primary_target": 0.819553717849449,
+          "corr_increment_target_mix_target": -0.0474060581735193,
+          "corr_increment_prediction_negative_primary_prediction": 0.929091852566536,
+          "corr_increment_prediction_mix_prediction": -0.864393542449245,
+          "sd_mix_prediction_over_primary_prediction": 0.3427247963357391,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        }
+      ],
+      "mean_over_runs": {
+        "corr_increment_target_negative_primary_target": 0.7940850512973571,
+        "corr_increment_target_mix_target": -0.02083724186802736,
+        "corr_increment_prediction_negative_primary_prediction": 0.9109895965475082,
+        "corr_increment_prediction_mix_prediction": -0.8339922116408641,
+        "sd_mix_prediction_over_primary_prediction": 0.3410485617240459,
+        "max_increment_identity_error": 1.2721305490496585e-17
+      },
+      "selection_coefficients": {
+        "primary": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary"
+          ],
+          "mean_standardized_coefficient": [
+            -0.0003100348531103658,
+            -0.00021712762967693422,
+            -0.000989079576600612,
+            -0.0019223353930448066,
+            0.00012165846447061836,
+            -0.0017112920578983225,
+            0.0006252111997368795
+          ],
+          "positive_coefficient_fraction": [
+            0.48,
+            0.48,
+            0.16,
+            0.0,
+            0.8,
+            0.0,
+            0.8
+          ]
+        },
+        "mix": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary",
+            "donor_disagreement_excess"
+          ],
+          "mean_standardized_coefficient": [
+            -0.0009712241594525881,
+            -0.0008907090595832849,
+            -0.00047205911070996066,
+            -0.00020992019919716348,
+            1.9851461685926963e-05,
+            -0.0008109075056722325,
+            0.00027537594833635114,
+            -0.0002190281066693311
+          ],
+          "positive_coefficient_fraction": [
+            0.2,
+            0.16,
+            0.12,
+            0.24,
+            0.64,
+            0.0,
+            0.84,
+            0.04
+          ]
+        },
+        "increment": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary",
+            "donor_disagreement_excess"
+          ],
+          "mean_standardized_coefficient": [
+            -0.0007059239833629517,
+            -0.000787286862376705,
+            0.0004742339209748042,
+            0.0011115560426097567,
+            -8.984273977841185e-05,
+            0.0006860431704122492,
+            -0.00045025581020728385,
+            0.001074326146116618
+          ],
+          "positive_coefficient_fraction": [
+            0.24,
+            0.24,
+            0.8,
+            1.0,
+            0.2,
+            1.0,
+            0.2,
+            1.0
+          ]
+        }
+      }
+    },
+    "pets_b16_98": {
+      "n_rows": 2624,
+      "per_run": [
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2042,
+          "corr_increment_target_negative_primary_target": 0.7174031044201817,
+          "corr_increment_target_mix_target": 0.18830781738221683,
+          "corr_increment_prediction_negative_primary_prediction": 0.8159378931873722,
+          "corr_increment_prediction_mix_prediction": -0.14437956445563,
+          "sd_mix_prediction_over_primary_prediction": 0.42049000937953385,
+          "max_increment_identity_error": 6.938893903907228e-18
+        },
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2043,
+          "corr_increment_target_negative_primary_target": 0.7973018898751425,
+          "corr_increment_target_mix_target": 0.17891160223910269,
+          "corr_increment_prediction_negative_primary_prediction": 0.8117667208733172,
+          "corr_increment_prediction_mix_prediction": -0.15059363838674164,
+          "sd_mix_prediction_over_primary_prediction": 0.42325674979351635,
+          "max_increment_identity_error": 3.469446951953614e-18
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2041,
+          "corr_increment_target_negative_primary_target": 0.8010639579356374,
+          "corr_increment_target_mix_target": 0.18130066929750582,
+          "corr_increment_prediction_negative_primary_prediction": 0.8078812826117673,
+          "corr_increment_prediction_mix_prediction": -0.14182984395275267,
+          "sd_mix_prediction_over_primary_prediction": 0.4211891639702515,
+          "max_increment_identity_error": 6.938893903907228e-18
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2043,
+          "corr_increment_target_negative_primary_target": 0.8478760248589822,
+          "corr_increment_target_mix_target": 0.06418435043029609,
+          "corr_increment_prediction_negative_primary_prediction": 0.8089620088508593,
+          "corr_increment_prediction_mix_prediction": -0.15306355692249876,
+          "sd_mix_prediction_over_primary_prediction": 0.4184042214738761,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2041,
+          "corr_increment_target_negative_primary_target": 0.8173577817776706,
+          "corr_increment_target_mix_target": 0.2161313791696087,
+          "corr_increment_prediction_negative_primary_prediction": 0.8357034370085388,
+          "corr_increment_prediction_mix_prediction": -0.05402393134255187,
+          "sd_mix_prediction_over_primary_prediction": 0.39456481362720525,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2042,
+          "corr_increment_target_negative_primary_target": 0.844217901459261,
+          "corr_increment_target_mix_target": 0.24857960193794948,
+          "corr_increment_prediction_negative_primary_prediction": 0.8274749875597879,
+          "corr_increment_prediction_mix_prediction": -0.06021560366915626,
+          "sd_mix_prediction_over_primary_prediction": 0.39110272996363993,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        }
+      ],
+      "mean_over_runs": {
+        "corr_increment_target_negative_primary_target": 0.8042034433878126,
+        "corr_increment_target_mix_target": 0.17956923674277991,
+        "corr_increment_prediction_negative_primary_prediction": 0.8179543883486072,
+        "corr_increment_prediction_mix_prediction": -0.1173510231215552,
+        "sd_mix_prediction_over_primary_prediction": 0.41150128136800385,
+        "max_increment_identity_error": 9.830099697201907e-18
+      },
+      "selection_coefficients": {
+        "primary": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary"
+          ],
+          "mean_standardized_coefficient": [
+            -9.164657162097287e-05,
+            0.00010770222970443388,
+            0.0012274518107915989,
+            0.00029890042817589063,
+            -0.0001614012402344521,
+            0.0003197531961257507,
+            -0.001134549539919199
+          ],
+          "positive_coefficient_fraction": [
+            0.32,
+            0.48,
+            1.0,
+            0.92,
+            0.04,
+            0.96,
+            0.0
+          ]
+        },
+        "mix": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary",
+            "donor_disagreement_excess"
+          ],
+          "mean_standardized_coefficient": [
+            0.00015600922803273254,
+            9.125966754163341e-05,
+            -9.182040582602552e-05,
+            -7.474804793123158e-05,
+            -1.3461797855944216e-05,
+            0.00017988720187585197,
+            4.043189666778518e-05,
+            -7.28944694192733e-05
+          ],
+          "positive_coefficient_fraction": [
+            0.72,
+            0.64,
+            0.4,
+            0.24,
+            0.4,
+            0.96,
+            0.48,
+            0.28
+          ]
+        },
+        "increment": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary",
+            "donor_disagreement_excess"
+          ],
+          "mean_standardized_coefficient": [
+            0.00026648388444817364,
+            3.139461874525401e-06,
+            -0.001330752269835462,
+            -0.0004183071531102395,
+            0.00016863454340879588,
+            -0.00014223823884784592,
+            0.0011576458187372131,
+            0.0003056297019220111
+          ],
+          "positive_coefficient_fraction": [
+            0.84,
+            0.64,
+            0.0,
+            0.04,
+            1.0,
+            0.2,
+            0.96,
+            1.0
+          ]
+        }
+      }
+    },
+    "flowers_b16_49": {
+      "n_rows": 4080,
+      "per_run": [
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2042,
+          "corr_increment_target_negative_primary_target": 0.7849392381903204,
+          "corr_increment_target_mix_target": 0.007801189275802043,
+          "corr_increment_prediction_negative_primary_prediction": 0.5213250636173238,
+          "corr_increment_prediction_mix_prediction": 0.15801296829043615,
+          "sd_mix_prediction_over_primary_prediction": 0.434964086636143,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2043,
+          "corr_increment_target_negative_primary_target": 0.7847599298290652,
+          "corr_increment_target_mix_target": -0.005514928477953019,
+          "corr_increment_prediction_negative_primary_prediction": 0.5793387305994075,
+          "corr_increment_prediction_mix_prediction": 0.11999121289630765,
+          "sd_mix_prediction_over_primary_prediction": 0.42361849997768436,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2041,
+          "corr_increment_target_negative_primary_target": 0.7439162066639712,
+          "corr_increment_target_mix_target": 0.0668724338716529,
+          "corr_increment_prediction_negative_primary_prediction": 0.5467942510773944,
+          "corr_increment_prediction_mix_prediction": 0.09898129360911401,
+          "sd_mix_prediction_over_primary_prediction": 0.4372357705792878,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2043,
+          "corr_increment_target_negative_primary_target": 0.7499287625923895,
+          "corr_increment_target_mix_target": 0.056962845911944684,
+          "corr_increment_prediction_negative_primary_prediction": 0.5573743979739153,
+          "corr_increment_prediction_mix_prediction": 0.10500612590464352,
+          "sd_mix_prediction_over_primary_prediction": 0.4347108820114159,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2041,
+          "corr_increment_target_negative_primary_target": 0.7690455075466415,
+          "corr_increment_target_mix_target": 0.022739467439614792,
+          "corr_increment_prediction_negative_primary_prediction": 0.562883250633967,
+          "corr_increment_prediction_mix_prediction": 0.07131562961848933,
+          "sd_mix_prediction_over_primary_prediction": 0.41256997098856124,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2042,
+          "corr_increment_target_negative_primary_target": 0.776435382744939,
+          "corr_increment_target_mix_target": -3.216155653465318e-05,
+          "corr_increment_prediction_negative_primary_prediction": 0.5731941481122785,
+          "corr_increment_prediction_mix_prediction": 0.0839004764358344,
+          "sd_mix_prediction_over_primary_prediction": 0.41231710647060155,
+          "max_increment_identity_error": 2.7755575615628914e-17
+        }
+      ],
+      "mean_over_runs": {
+        "corr_increment_target_negative_primary_target": 0.7681708379278877,
+        "corr_increment_target_mix_target": 0.02480480774408779,
+        "corr_increment_prediction_negative_primary_prediction": 0.5568183070023811,
+        "corr_increment_prediction_mix_prediction": 0.10620128445913751,
+        "sd_mix_prediction_over_primary_prediction": 0.4259027194439489,
+        "max_increment_identity_error": 1.61907524424502e-17
+      },
+      "selection_coefficients": {
+        "primary": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary"
+          ],
+          "mean_standardized_coefficient": [
+            0.0035604464644680366,
+            0.0025995059893858673,
+            -0.0022213803984747556,
+            -0.0001922341860293427,
+            0.0003634799680873154,
+            -0.0008410912729590079,
+            0.002511457516664818
+          ],
+          "positive_coefficient_fraction": [
+            0.96,
+            0.92,
+            0.08,
+            0.36,
+            0.88,
+            0.0,
+            0.96
+          ]
+        },
+        "mix": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary",
+            "donor_disagreement_excess"
+          ],
+          "mean_standardized_coefficient": [
+            -0.00023442419898522595,
+            -0.0007117351218478414,
+            -0.0008650543177484512,
+            -0.00030048173260749275,
+            5.894944162859764e-05,
+            6.136713706616873e-05,
+            0.0008536197898095449,
+            0.00028120158617871274
+          ],
+          "positive_coefficient_fraction": [
+            0.4,
+            0.16,
+            0.04,
+            0.04,
+            0.64,
+            0.64,
+            0.92,
+            1.0
+          ]
+        },
+        "increment": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary",
+            "donor_disagreement_excess"
+          ],
+          "mean_standardized_coefficient": [
+            -0.003721635885444917,
+            -0.003278677152223087,
+            0.0014278791220991105,
+            -0.0003259218157698312,
+            -0.0002952242088636228,
+            0.0006220345182301621,
+            -0.0017731191681542697,
+            0.0017560323653301596
+          ],
+          "positive_coefficient_fraction": [
+            0.0,
+            0.0,
+            0.92,
+            0.12,
+            0.08,
+            1.0,
+            0.04,
+            1.0
+          ]
+        }
+      }
+    },
+    "flowers_b16_98": {
+      "n_rows": 4080,
+      "per_run": [
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2042,
+          "corr_increment_target_negative_primary_target": 0.7876547009022435,
+          "corr_increment_target_mix_target": 0.056779657205100836,
+          "corr_increment_prediction_negative_primary_prediction": 0.40092474160808256,
+          "corr_increment_prediction_mix_prediction": 0.17507610167268842,
+          "sd_mix_prediction_over_primary_prediction": 0.8170996866413698,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2043,
+          "corr_increment_target_negative_primary_target": 0.7414312133909032,
+          "corr_increment_target_mix_target": 0.07477125754962403,
+          "corr_increment_prediction_negative_primary_prediction": 0.4023270359907087,
+          "corr_increment_prediction_mix_prediction": 0.1899616507250028,
+          "sd_mix_prediction_over_primary_prediction": 0.8151635502611851,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2041,
+          "corr_increment_target_negative_primary_target": 0.7989143077317344,
+          "corr_increment_target_mix_target": 0.1041308149918976,
+          "corr_increment_prediction_negative_primary_prediction": 0.4172720064206902,
+          "corr_increment_prediction_mix_prediction": 0.18312776337410014,
+          "sd_mix_prediction_over_primary_prediction": 0.8313736367699991,
+          "max_increment_identity_error": 2.7755575615628914e-17
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2043,
+          "corr_increment_target_negative_primary_target": 0.7936054276506822,
+          "corr_increment_target_mix_target": 0.09977228685755596,
+          "corr_increment_prediction_negative_primary_prediction": 0.40835358168979025,
+          "corr_increment_prediction_mix_prediction": 0.20493451380775932,
+          "sd_mix_prediction_over_primary_prediction": 0.8290913456241039,
+          "max_increment_identity_error": 2.7755575615628914e-17
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2041,
+          "corr_increment_target_negative_primary_target": 0.8097874447973675,
+          "corr_increment_target_mix_target": 0.11641918535863731,
+          "corr_increment_prediction_negative_primary_prediction": 0.43333635487022304,
+          "corr_increment_prediction_mix_prediction": 0.19825361979397438,
+          "sd_mix_prediction_over_primary_prediction": 0.8092877284151488,
+          "max_increment_identity_error": 1.3877787807814457e-17
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2042,
+          "corr_increment_target_negative_primary_target": 0.8341842921639067,
+          "corr_increment_target_mix_target": 0.05979831138716,
+          "corr_increment_prediction_negative_primary_prediction": 0.4175496790787356,
+          "corr_increment_prediction_mix_prediction": 0.22141468405005932,
+          "sd_mix_prediction_over_primary_prediction": 0.8093369171107955,
+          "max_increment_identity_error": 2.7755575615628914e-17
+        }
+      ],
+      "mean_over_runs": {
+        "corr_increment_target_negative_primary_target": 0.7942628977728062,
+        "corr_increment_target_mix_target": 0.08527858555832929,
+        "corr_increment_prediction_negative_primary_prediction": 0.4132938999430384,
+        "corr_increment_prediction_mix_prediction": 0.19546138890393072,
+        "sd_mix_prediction_over_primary_prediction": 0.818558810803767,
+        "max_increment_identity_error": 2.0816681711721685e-17
+      },
+      "selection_coefficients": {
+        "primary": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary"
+          ],
+          "mean_standardized_coefficient": [
+            0.00029911613938036195,
+            0.0004590082170455777,
+            -0.00017745534698911862,
+            0.0003886817349767059,
+            0.0002509317104066195,
+            -0.00035305922963065436,
+            0.00021453840231905883
+          ],
+          "positive_coefficient_fraction": [
+            0.68,
+            0.76,
+            0.36,
+            0.96,
+            1.0,
+            0.08,
+            0.64
+          ]
+        },
+        "mix": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary",
+            "donor_disagreement_excess"
+          ],
+          "mean_standardized_coefficient": [
+            -0.00033859226517971085,
+            -0.00034454971602159253,
+            7.547230405606392e-05,
+            0.00012399922594629012,
+            0.00010892722359718627,
+            0.00023868091392965102,
+            -1.3983918549596808e-06,
+            -2.9641934437948117e-05
+          ],
+          "positive_coefficient_fraction": [
+            0.16,
+            0.2,
+            0.48,
+            0.92,
+            0.96,
+            0.96,
+            0.52,
+            0.32
+          ]
+        },
+        "increment": {
+          "n_fits": 25,
+          "feature_names": [
+            "text_distance",
+            "inverse_text_distance",
+            "shared_boundary_gap",
+            "selection_disagreement",
+            "conditional_boundary_gap",
+            "rank_disagreement",
+            "disagreement_x_shared_boundary",
+            "donor_disagreement_excess"
+          ],
+          "mean_standardized_coefficient": [
+            -0.000672310321019005,
+            -0.0008581863724055858,
+            0.000240479525340709,
+            -0.00026882627233311277,
+            -0.00013422016723430355,
+            0.0004495694982610835,
+            -0.00021641956317020204,
+            0.0006758556066630571
+          ],
+          "positive_coefficient_fraction": [
+            0.08,
+            0.04,
+            0.6,
+            0.04,
+            0.08,
+            1.0,
+            0.36,
+            1.0
+          ]
+        }
+      }
+    }
+  }
+}
