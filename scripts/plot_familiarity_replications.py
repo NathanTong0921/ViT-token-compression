@@ -57,7 +57,8 @@ def run(root):
                 if row == 0:
                     ax.set_title(title, weight="bold", pad=10)
         fig.suptitle(comparison, weight="bold", fontsize=12, y=.98)
-        fig.text(.55, .045, "Means of 3 paired training seeds and 2 fixed code maps; bars: paired image-bootstrap 95% intervals.",
+        detail = "Means of 3 paired training seeds and 2 fixed code maps" if name == "identity" else "Means of 3 paired training seeds"
+        fig.text(.55, .045, detail + "; bars: paired image-bootstrap 95% intervals.",
                  ha="center", fontsize=8)
         fig.text(.55, .025, "Aggregates weight partitions equally and jointly resample shared image IDs. New partitions are 2100/2101.",
                  ha="center", fontsize=8)
