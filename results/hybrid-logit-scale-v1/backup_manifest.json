@@ -1,0 +1,21 @@
+{
+  "derived_data_storage": "Git: results/hybrid-logit-scale-v1, including all row_metrics.npz; local and server repositories retain identical committed files.",
+  "server_raw_run": "/data2/zhao.tong/experiments/runs/hybrid-logit-scale-v1",
+  "new_weights_or_gpu_outputs": false,
+  "sources": [
+    {
+      "archive": "hybrid-distillation-v1.zip",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/hybrid-followup-v1/hybrid-distillation-v1.zip",
+      "server_archive": "/data2/zhao.tong/artifacts/hybrid-followup-v1/hybrid-distillation-v1.zip",
+      "github_manifest": "results/hybrid-followup-v1/backup_manifest.json"
+    },
+    {
+      "archive": "shared-residual-and-prior-v1.zip",
+      "local_archive": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/familiarity-residual-v1/shared-residual-and-prior-v1.zip",
+      "server_archive": "/data2/zhao.tong/artifacts/familiarity-residual-v1/shared-residual-and-prior-v1.zip",
+      "github_manifest": "results/familiarity-residual-v1/backup_manifest.json"
+    }
+  ],
+  "source_archives_extracted": false,
+  "independent_check": "independent_check.json"
+}

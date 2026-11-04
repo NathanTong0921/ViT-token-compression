@@ -1,0 +1,583 @@
+{
+  "setting": "flowers_b16_49",
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "images": 1020,
+  "rows": 4080,
+  "k": 49,
+  "uniform_limit_kl": 1.3862943611198906,
+  "contrasts": {
+    "task": {
+      "effects": {
+        "raw_reduction": {
+          "mean": 1.4792966228951523,
+          "ci95": [
+            1.4229592001793105,
+            1.5340920538406781
+          ],
+          "bonferroni_family_ci95": [
+            1.4071291789234086,
+            1.5586988615130253
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_target_overlap": {
+          "mean": 0.7030262104841932,
+          "ci95": [
+            0.7010837251567278,
+            0.7050506035747612
+          ],
+          "bonferroni_family_ci95": [
+            0.7004260384709422,
+            0.7058412809568257
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "new_target_overlap": {
+          "mean": 0.7003884887288236,
+          "ci95": [
+            0.6979156245831644,
+            0.7029714802587679
+          ],
+          "bonferroni_family_ci95": [
+            0.6972296557511874,
+            0.7040474175781399
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "target_overlap_change": {
+          "mean": -0.002637721755368816,
+          "ci95": [
+            -0.0043217286914765925,
+            -0.0009298719487795142
+          ],
+          "bonferroni_family_ci95": [
+            -0.004838810524209686,
+            -0.0003634161998132588
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_new_mask_overlap": {
+          "mean": 0.7767723756169115,
+          "ci95": [
+            0.7738908896892083,
+            0.7793995931705997
+          ],
+          "bonferroni_family_ci95": [
+            0.7730402925058901,
+            0.7803883775732497
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_new_rank_correlation": {
+          "mean": 0.8224970357659344,
+          "ci95": [
+            0.8197257714035308,
+            0.8251901988507704
+          ],
+          "bonferroni_family_ci95": [
+            0.8188213642439179,
+            0.8260147513172142
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_remaining": {
+          "mean": 0.3674072544723904,
+          "ci95": [
+            0.3628179936668972,
+            0.3721752960268921
+          ],
+          "bonferroni_family_ci95": [
+            0.36137206450573395,
+            0.37352964439595765
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_removable": {
+          "mean": 1.1118893684227649,
+          "ci95": [
+            1.0581927858614895,
+            1.165885291443407
+          ],
+          "bonferroni_family_ci95": [
+            1.0407162518009017,
+            1.1904332049883146
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_old_cal_minus_new_raw": {
+          "mean": 0.36722852021832525,
+          "ci95": [
+            0.3627216840261551,
+            0.371978200112612
+          ],
+          "bonferroni_family_ci95": [
+            0.3612012025509842,
+            0.373327347905399
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_remaining": {
+          "mean": 0.340916443841706,
+          "ci95": [
+            0.33586624640319424,
+            0.34595427718511296
+          ],
+          "bonferroni_family_ci95": [
+            0.3343267831584238,
+            0.34746942313476853
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_removable": {
+          "mean": 1.1383801790534491,
+          "ci95": [
+            1.0854377916936389,
+            1.1915472415860568
+          ],
+          "bonferroni_family_ci95": [
+            1.0686443294653902,
+            1.2160764905572625
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_old_cal_minus_new_raw": {
+          "mean": 0.3452272666813009,
+          "ci95": [
+            0.3402198007123121,
+            0.3505143670352304
+          ],
+          "bonferroni_family_ci95": [
+            0.3386825134064118,
+            0.35204389258910873
+          ],
+          "individual_interval_level": 0.9916666666666667
+        }
+      },
+      "ratios_of_aggregates": {
+        "global_removed_fraction": 0.7516338178658656,
+        "row_removed_fraction": 0.769541524961714
+      },
+      "per_seed": [
+        {
+          "seed": 2041,
+          "raw_reduction": 1.4339616551217185,
+          "old_target_overlap": 0.7003251300520205,
+          "new_target_overlap": 0.6891656662665064,
+          "target_overlap_change": -0.011159463785514209,
+          "old_new_mask_overlap": 0.792206882753101,
+          "old_new_rank_correlation": 0.8541950007548436,
+          "global_remaining": 0.33519476568701,
+          "global_removable": 1.0987668894347085,
+          "global_old_cal_minus_new_raw": 0.33482280637731654,
+          "row_remaining": 0.3058920881155066,
+          "row_removable": 1.1280695670062117,
+          "row_old_cal_minus_new_raw": 0.3106658785829687
+        },
+        {
+          "seed": 2042,
+          "raw_reduction": 1.5647310256915914,
+          "old_target_overlap": 0.7243997599039612,
+          "new_target_overlap": 0.7188225290116044,
+          "target_overlap_change": -0.005577230892356944,
+          "old_new_mask_overlap": 0.7825030012004799,
+          "old_new_rank_correlation": 0.8136192192900409,
+          "global_remaining": 0.41937133938667726,
+          "global_removable": 1.1453596863049138,
+          "global_old_cal_minus_new_raw": 0.41934478728412355,
+          "row_remaining": 0.3957168840582782,
+          "row_removable": 1.1690141416333133,
+          "row_old_cal_minus_new_raw": 0.4001753781140173
+        },
+        {
+          "seed": 2043,
+          "raw_reduction": 1.4391971878721523,
+          "old_target_overlap": 0.6843537414965982,
+          "new_target_overlap": 0.6931772709083632,
+          "target_overlap_change": 0.008823529411764707,
+          "old_new_mask_overlap": 0.7556072428971586,
+          "old_new_rank_correlation": 0.7996768872529193,
+          "global_remaining": 0.347655658343486,
+          "global_removable": 1.0915415295286661,
+          "global_old_cal_minus_new_raw": 0.34751796699353565,
+          "row_remaining": 0.32114035935133317,
+          "row_removable": 1.118056828520819,
+          "row_old_cal_minus_new_raw": 0.3248405433469164
+        }
+      ]
+    },
+    "image": {
+      "effects": {
+        "raw_reduction": {
+          "mean": 1.3186882999328307,
+          "ci95": [
+            1.2720925524287334,
+            1.3656613158283906
+          ],
+          "bonferroni_family_ci95": [
+            1.2552933746120845,
+            1.3844010566047296
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_target_overlap": {
+          "mean": 0.7158613445378145,
+          "ci95": [
+            0.7139353658129907,
+            0.717920543217285
+          ],
+          "bonferroni_family_ci95": [
+            0.7131557692521441,
+            0.7186321750922577
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "new_target_overlap": {
+          "mean": 0.7082549686541263,
+          "ci95": [
+            0.7056955698946231,
+            0.7108400026677311
+          ],
+          "bonferroni_family_ci95": [
+            0.7049775396269595,
+            0.7117220082477417
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "target_overlap_change": {
+          "mean": -0.007606375883686802,
+          "ci95": [
+            -0.009167000133386678,
+            -0.006025743630785639
+          ],
+          "bonferroni_family_ci95": [
+            -0.009754763016317631,
+            -0.005624993052776663
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_new_mask_overlap": {
+          "mean": 0.8014672535680921,
+          "ci95": [
+            0.7982723089235667,
+            0.8044284380418802
+          ],
+          "bonferroni_family_ci95": [
+            0.7973319327731069,
+            0.8052176981903845
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_new_rank_correlation": {
+          "mean": 0.8398377971058898,
+          "ci95": [
+            0.8369139408073766,
+            0.842712503593346
+          ],
+          "bonferroni_family_ci95": [
+            0.8359977181636272,
+            0.8434933355557296
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_remaining": {
+          "mean": 0.38053074130423176,
+          "ci95": [
+            0.3758835877324302,
+            0.38530327865134767
+          ],
+          "bonferroni_family_ci95": [
+            0.37456689243654806,
+            0.3865989388818609
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_removable": {
+          "mean": 0.9381575586285973,
+          "ci95": [
+            0.8943444551990963,
+            0.9835495365277239
+          ],
+          "bonferroni_family_ci95": [
+            0.8766362000978877,
+            1.002421312567025
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_old_cal_minus_new_raw": {
+          "mean": 0.38047835043555794,
+          "ci95": [
+            0.3758509698776812,
+            0.38521911930863484
+          ],
+          "bonferroni_family_ci95": [
+            0.3745535910209723,
+            0.38652561355322096
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_remaining": {
+          "mean": 0.36001781574872177,
+          "ci95": [
+            0.35503282886431614,
+            0.3650966231568123
+          ],
+          "bonferroni_family_ci95": [
+            0.3534049476287838,
+            0.36649447278990904
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_removable": {
+          "mean": 0.9586704841841084,
+          "ci95": [
+            0.915228433648842,
+            1.0038295825436867
+          ],
+          "bonferroni_family_ci95": [
+            0.8976442545876215,
+            1.0228961001638963
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_old_cal_minus_new_raw": {
+          "mean": 0.3656260353210698,
+          "ci95": [
+            0.36074535309987377,
+            0.37078958471149254
+          ],
+          "bonferroni_family_ci95": [
+            0.3592145764114786,
+            0.37240438668141423
+          ],
+          "individual_interval_level": 0.9916666666666667
+        }
+      },
+      "ratios_of_aggregates": {
+        "global_removed_fraction": 0.7114323822213208,
+        "row_removed_fraction": 0.726987935081353
+      },
+      "per_seed": [
+        {
+          "seed": 2041,
+          "raw_reduction": 1.2746711805209214,
+          "old_target_overlap": 0.7140156062424966,
+          "new_target_overlap": 0.6990496198479389,
+          "target_overlap_change": -0.014965986394557824,
+          "old_new_mask_overlap": 0.8169667867146858,
+          "old_new_rank_correlation": 0.8713144905684452,
+          "global_remaining": 0.3496233655862179,
+          "global_removable": 0.9250478149347034,
+          "global_old_cal_minus_new_raw": 0.34962769970764823,
+          "row_remaining": 0.32999675182057736,
+          "row_removable": 0.944674428700344,
+          "row_old_cal_minus_new_raw": 0.3342981133290942
+        },
+        {
+          "seed": 2042,
+          "raw_reduction": 1.344031012433307,
+          "old_target_overlap": 0.7240546218487391,
+          "new_target_overlap": 0.7250500200080028,
+          "target_overlap_change": 0.0009953981592637053,
+          "old_new_mask_overlap": 0.7847138855542215,
+          "old_new_rank_correlation": 0.8057002707932565,
+          "global_remaining": 0.4292857728210766,
+          "global_removable": 0.9147452396122303,
+          "global_old_cal_minus_new_raw": 0.42914170513396666,
+          "row_remaining": 0.4091800812573857,
+          "row_removable": 0.934850931175921,
+          "row_old_cal_minus_new_raw": 0.4149131136824117
+        },
+        {
+          "seed": 2043,
+          "raw_reduction": 1.337362706844262,
+          "old_target_overlap": 0.7095138055222084,
+          "new_target_overlap": 0.7006652661064422,
+          "target_overlap_change": -0.008848539415766308,
+          "old_new_mask_overlap": 0.8027210884353738,
+          "old_new_rank_correlation": 0.842498629955968,
+          "global_remaining": 0.3626830855054026,
+          "global_removable": 0.9746796213388593,
+          "global_old_cal_minus_new_raw": 0.36266564646505856,
+          "row_remaining": 0.34087661416820164,
+          "row_removable": 0.9964860926760601,
+          "row_old_cal_minus_new_raw": 0.34766687895170434
+        }
+      ]
+    }
+  },
+  "model_table": [
+    {
+      "model": "shared",
+      "condition": "raw",
+      "kl": 2.044161614339503,
+      "target_overlap": 0.7309790582899824
+    },
+    {
+      "model": "shared",
+      "condition": "global_scale",
+      "kl": 1.2174000197810728,
+      "target_overlap": 0.7309790582899824
+    },
+    {
+      "model": "shared",
+      "condition": "row_standardized_scale",
+      "kl": 1.2021788310927461,
+      "target_overlap": 0.7309790582899824
+    },
+    {
+      "model": "original_task",
+      "condition": "raw",
+      "kl": 2.3412210945476053,
+      "target_overlap": 0.7030262104841936
+    },
+    {
+      "model": "original_task",
+      "condition": "global_scale",
+      "kl": 1.2291529918707764,
+      "target_overlap": 0.7030262104841936
+    },
+    {
+      "model": "original_task",
+      "condition": "row_standardized_scale",
+      "kl": 1.207151738333752,
+      "target_overlap": 0.7030262104841936
+    },
+    {
+      "model": "original_image",
+      "condition": "raw",
+      "kl": 2.164890340219354,
+      "target_overlap": 0.7158613445378149
+    },
+    {
+      "model": "original_image",
+      "condition": "global_scale",
+      "kl": 1.2266803907220818,
+      "target_overlap": 0.7158613445378149
+    },
+    {
+      "model": "original_image",
+      "condition": "row_standardized_scale",
+      "kl": 1.211828075607594,
+      "target_overlap": 0.7158613445378149
+    },
+    {
+      "model": "hybrid_task",
+      "condition": "raw",
+      "kl": 0.8619244716524513,
+      "target_overlap": 0.7003884887288245
+    },
+    {
+      "model": "hybrid_task",
+      "condition": "global_scale",
+      "kl": 0.8617457373983854,
+      "target_overlap": 0.7003884887288245
+    },
+    {
+      "model": "hybrid_task",
+      "condition": "row_standardized_scale",
+      "kl": 0.8662352944920462,
+      "target_overlap": 0.7003884887288245
+    },
+    {
+      "model": "hybrid_image",
+      "condition": "raw",
+      "kl": 0.846202040286524,
+      "target_overlap": 0.7082549686541281
+    },
+    {
+      "model": "hybrid_image",
+      "condition": "global_scale",
+      "kl": 0.8461496494178494,
+      "target_overlap": 0.7082549686541281
+    },
+    {
+      "model": "hybrid_image",
+      "condition": "row_standardized_scale",
+      "kl": 0.8518102598588726,
+      "target_overlap": 0.7082549686541281
+    }
+  ],
+  "boundary_fits": [],
+  "calibration_fit_count": 150,
+  "prior_fit_audits": [
+    {
+      "seed": 2041,
+      "model": "original_task",
+      "prior_kl_absolute_error": 6.818734510360969e-08,
+      "prior_overlap_absolute_error": 5.551115123125783e-16
+    },
+    {
+      "seed": 2041,
+      "model": "hybrid_task",
+      "prior_kl_absolute_error": 2.394150455664601e-08,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "seed": 2041,
+      "model": "original_image",
+      "prior_kl_absolute_error": 5.959269033795067e-08,
+      "prior_overlap_absolute_error": 2.220446049250313e-16
+    },
+    {
+      "seed": 2041,
+      "model": "hybrid_image",
+      "prior_kl_absolute_error": 2.129138909623407e-08,
+      "prior_overlap_absolute_error": 2.220446049250313e-16
+    },
+    {
+      "seed": 2042,
+      "model": "original_task",
+      "prior_kl_absolute_error": 2.7915535216749277e-08,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "seed": 2042,
+      "model": "hybrid_task",
+      "prior_kl_absolute_error": 1.78614610879535e-08,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "seed": 2042,
+      "model": "original_image",
+      "prior_kl_absolute_error": 5.7715827228577155e-08,
+      "prior_overlap_absolute_error": 2.220446049250313e-16
+    },
+    {
+      "seed": 2042,
+      "model": "hybrid_image",
+      "prior_kl_absolute_error": 2.1453815390870545e-08,
+      "prior_overlap_absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "seed": 2043,
+      "model": "original_task",
+      "prior_kl_absolute_error": 7.151260783544444e-08,
+      "prior_overlap_absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "seed": 2043,
+      "model": "hybrid_task",
+      "prior_kl_absolute_error": 1.9992622890541156e-08,
+      "prior_overlap_absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "seed": 2043,
+      "model": "original_image",
+      "prior_kl_absolute_error": 5.8701730587529255e-08,
+      "prior_overlap_absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "seed": 2043,
+      "model": "hybrid_image",
+      "prior_kl_absolute_error": 2.4735423376220922e-08,
+      "prior_overlap_absolute_error": 4.440892098500626e-16
+    }
+  ],
+  "decomposition_max_error": 8.881784197001252e-16,
+  "all_transformed_masks_exact": true,
+  "elapsed_seconds": 11.564928598003462
+}

@@ -1,0 +1,132 @@
+{
+  "status": "passed",
+  "scope": "Independent aggregation of saved row_metrics and source examples: task/class weights, model/contrast/seed means, decomposition, aggregate ratios, ordinary and six-family conditional intervals, image-fold mapping and saved scale records. No recalibration, new selector training or CLIP inference. Stored topk_exact flags reviewed, transformed token masks not independently reconstructed here.",
+  "maximum_absolute_errors": {
+    "summary_points": 2.4424906541753444e-15,
+    "per_seed_points": 4.440892098500626e-16,
+    "model_table": 4.440892098500626e-16,
+    "ci_limits": 0.0,
+    "fractions": 2.220446049250313e-15,
+    "row_decomposition": 8.881784197001252e-16,
+    "fold_scales": 0.0
+  },
+  "counts": {
+    "fold_records": 450,
+    "model_table_values": 90,
+    "contrast_point_comparisons": 144,
+    "per_seed_point_comparisons": 216,
+    "summary_table_comparisons": 48,
+    "fraction_comparisons": 24,
+    "interval_limit_comparisons": 288
+  },
+  "flowers_budget_fold_files_identical": true,
+  "all_450_fits_interior": true,
+  "interval_scope": "Image-cluster resampling after seed averaging, conditional on the fixed OOF scale fits and fold design; calibration is not refit in each draw.",
+  "settings": [
+    {
+      "setting": "pets_b16_49",
+      "image_count": 716,
+      "row_count": 2624,
+      "fold_rows": [
+        549,
+        503,
+        532,
+        530,
+        510
+      ],
+      "boundary_fit_count": 0,
+      "arm_results": [
+        {
+          "arm": "task",
+          "raw_reduction": 1.3665027704465338,
+          "global_removed_fraction": 0.5634123651962862,
+          "row_removed_fraction": 0.5892731876385524,
+          "global_remaining": 0.5965982125019744,
+          "old_cal_minus_new_raw": 0.5965938876953945,
+          "target_overlap_change": 0.02275792294589287,
+          "old_new_mask_overlap": 0.8110749004545996
+        },
+        {
+          "arm": "image",
+          "raw_reduction": 1.2672797045977755,
+          "global_removed_fraction": 0.5300541717475503,
+          "row_removed_fraction": 0.5506689442623321,
+          "global_remaining": 0.5955528104047214,
+          "old_cal_minus_new_raw": 0.5955207684457011,
+          "target_overlap_change": 0.00033810174787618334,
+          "old_new_mask_overlap": 0.8596333908363984
+        }
+      ]
+    },
+    {
+      "setting": "flowers_b16_49",
+      "image_count": 1020,
+      "row_count": 4080,
+      "fold_rows": [
+        816,
+        816,
+        816,
+        816,
+        816
+      ],
+      "boundary_fit_count": 0,
+      "arm_results": [
+        {
+          "arm": "task",
+          "raw_reduction": 1.4792966228951538,
+          "global_removed_fraction": 0.7516338178658634,
+          "row_removed_fraction": 0.7695415249617127,
+          "global_remaining": 0.3674072544723911,
+          "old_cal_minus_new_raw": 0.3672285202183253,
+          "target_overlap_change": -0.0026377217553688144,
+          "old_new_mask_overlap": 0.7767723756169136
+        },
+        {
+          "arm": "image",
+          "raw_reduction": 1.31868829993283,
+          "global_removed_fraction": 0.7114323822213214,
+          "row_removed_fraction": 0.7269879350813533,
+          "global_remaining": 0.38053074130423237,
+          "old_cal_minus_new_raw": 0.3804783504355578,
+          "target_overlap_change": -0.007606375883686808,
+          "old_new_mask_overlap": 0.801467253568094
+        }
+      ]
+    },
+    {
+      "setting": "flowers_b16_98",
+      "image_count": 1020,
+      "row_count": 4080,
+      "fold_rows": [
+        816,
+        816,
+        816,
+        816,
+        816
+      ],
+      "boundary_fit_count": 0,
+      "arm_results": [
+        {
+          "arm": "task",
+          "raw_reduction": 0.35221501952924994,
+          "global_removed_fraction": 0.6274257045636457,
+          "row_removed_fraction": 0.6526039480621911,
+          "global_remaining": 0.13122626274321214,
+          "old_cal_minus_new_raw": 0.13105024349720665,
+          "target_overlap_change": 0.01122615712951848,
+          "old_new_mask_overlap": 0.8527402627717753
+        },
+        {
+          "arm": "image",
+          "raw_reduction": 0.3423754221031842,
+          "global_removed_fraction": 0.5895514530979179,
+          "row_removed_fraction": 0.6108190479049631,
+          "global_remaining": 0.140527494497239,
+          "old_cal_minus_new_raw": 0.14051957200381215,
+          "target_overlap_change": 0.013311157796451919,
+          "old_new_mask_overlap": 0.8559757236227825
+        }
+      ]
+    }
+  ]
+}

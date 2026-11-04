@@ -1,0 +1,583 @@
+{
+  "setting": "pets_b16_49",
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "images": 716,
+  "rows": 2624,
+  "k": 49,
+  "uniform_limit_kl": 1.3862943611198906,
+  "contrasts": {
+    "task": {
+      "effects": {
+        "raw_reduction": {
+          "mean": 1.3665027704465333,
+          "ci95": [
+            1.3111104765027843,
+            1.4262983724810379
+          ],
+          "bonferroni_family_ci95": [
+            1.2985703570729399,
+            1.448944591149012
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_target_overlap": {
+          "mean": 0.7919096984886455,
+          "ci95": [
+            0.7875792131452827,
+            0.796398832785015
+          ],
+          "bonferroni_family_ci95": [
+            0.7862020601999271,
+            0.7980919052097311
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "new_target_overlap": {
+          "mean": 0.8146676214345382,
+          "ci95": [
+            0.8105483081001497,
+            0.8189732001416684
+          ],
+          "bonferroni_family_ci95": [
+            0.80912234763231,
+            0.8199695797982834
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "target_overlap_change": {
+          "mean": 0.022757922945892885,
+          "ci95": [
+            0.02028130061132798,
+            0.025242821199702992
+          ],
+          "bonferroni_family_ci95": [
+            0.019500387521480016,
+            0.025955925471993622
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_new_mask_overlap": {
+          "mean": 0.8110749004545991,
+          "ci95": [
+            0.8057206047223513,
+            0.8163252548621074
+          ],
+          "bonferroni_family_ci95": [
+            0.8039473892899265,
+            0.8181023630755565
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_new_rank_correlation": {
+          "mean": 0.7369383823895921,
+          "ci95": [
+            0.7297727672008568,
+            0.7441563222639582
+          ],
+          "bonferroni_family_ci95": [
+            0.7267337876959808,
+            0.7466887700208059
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_remaining": {
+          "mean": 0.5965982125019744,
+          "ci95": [
+            0.5879452147194665,
+            0.6059884124644154
+          ],
+          "bonferroni_family_ci95": [
+            0.5838884576977529,
+            0.6086993146318808
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_removable": {
+          "mean": 0.7699045579445594,
+          "ci95": [
+            0.7165125142014693,
+            0.8271488078772671
+          ],
+          "bonferroni_family_ci95": [
+            0.7032345236478954,
+            0.8505066965451177
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_old_cal_minus_new_raw": {
+          "mean": 0.5965938876953942,
+          "ci95": [
+            0.5879593348406315,
+            0.6059471996942805
+          ],
+          "bonferroni_family_ci95": [
+            0.5838865161781037,
+            0.6086482540893423
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_remaining": {
+          "mean": 0.5612593269885917,
+          "ci95": [
+            0.5523320924158533,
+            0.5703301181533909
+          ],
+          "bonferroni_family_ci95": [
+            0.548875744426991,
+            0.5734151673989292
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_removable": {
+          "mean": 0.805243443457942,
+          "ci95": [
+            0.7510241132312135,
+            0.8625994872302701
+          ],
+          "bonferroni_family_ci95": [
+            0.7400026910365318,
+            0.8855620067489711
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_old_cal_minus_new_raw": {
+          "mean": 0.5767246267054471,
+          "ci95": [
+            0.5683609022469868,
+            0.5856025226839695
+          ],
+          "bonferroni_family_ci95": [
+            0.5652486588958909,
+            0.5883869159635142
+          ],
+          "individual_interval_level": 0.9916666666666667
+        }
+      },
+      "ratios_of_aggregates": {
+        "global_removed_fraction": 0.5634123651962863,
+        "row_removed_fraction": 0.5892731876385525
+      },
+      "per_seed": [
+        {
+          "seed": 2041,
+          "raw_reduction": 1.3853364510094386,
+          "old_target_overlap": 0.7891559255281059,
+          "new_target_overlap": 0.8084566123099954,
+          "target_overlap_change": 0.01930068678188979,
+          "old_new_mask_overlap": 0.8043904403866808,
+          "old_new_rank_correlation": 0.7366036149135088,
+          "global_remaining": 0.5836337787336077,
+          "global_removable": 0.801702672275831,
+          "global_old_cal_minus_new_raw": 0.5836222500660149,
+          "row_remaining": 0.5472964210554198,
+          "row_removable": 0.8380400299540189,
+          "row_old_cal_minus_new_raw": 0.563385628143708
+        },
+        {
+          "seed": 2042,
+          "raw_reduction": 1.406658843783905,
+          "old_target_overlap": 0.8069174559776061,
+          "new_target_overlap": 0.8348415682062296,
+          "target_overlap_change": 0.027924112228623506,
+          "old_new_mask_overlap": 0.8143532532630274,
+          "old_new_rank_correlation": 0.7361730064141724,
+          "global_remaining": 0.6485150231801383,
+          "global_removable": 0.7581438206037666,
+          "global_old_cal_minus_new_raw": 0.6486212655015327,
+          "row_remaining": 0.6151683633140937,
+          "row_removable": 0.7914904804698112,
+          "row_old_cal_minus_new_raw": 0.6280922824937863
+        },
+        {
+          "seed": 2043,
+          "raw_reduction": 1.3075130165462583,
+          "old_target_overlap": 0.779655713960225,
+          "new_target_overlap": 0.8007046837873905,
+          "target_overlap_change": 0.021048969827165316,
+          "old_new_mask_overlap": 0.8144810077140903,
+          "old_new_rank_correlation": 0.7380385258410933,
+          "global_remaining": 0.5576458355921773,
+          "global_removable": 0.749867180954081,
+          "global_old_cal_minus_new_raw": 0.5575381475186362,
+          "row_remaining": 0.5213131965962617,
+          "row_removable": 0.7861998199499965,
+          "row_old_cal_minus_new_raw": 0.5386959694788485
+        }
+      ]
+    },
+    "image": {
+      "effects": {
+        "raw_reduction": {
+          "mean": 1.2672797045977762,
+          "ci95": [
+            1.2200299584687422,
+            1.3190890176567474
+          ],
+          "bonferroni_family_ci95": [
+            1.206757252499187,
+            1.3365855661134018
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_target_overlap": {
+          "mean": 0.8188555805097146,
+          "ci95": [
+            0.8152504990058789,
+            0.8223306807853243
+          ],
+          "bonferroni_family_ci95": [
+            0.8143142137680845,
+            0.8234561223435459
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "new_target_overlap": {
+          "mean": 0.8191936822575911,
+          "ci95": [
+            0.8151982424662473,
+            0.8233093546228607
+          ],
+          "bonferroni_family_ci95": [
+            0.8139083593647695,
+            0.8245526844598053
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "target_overlap_change": {
+          "mean": 0.00033810174787618394,
+          "ci95": [
+            -0.0016063930673522581,
+            0.0023514259578509616
+          ],
+          "bonferroni_family_ci95": [
+            -0.0020612000866461317,
+            0.002846907920910471
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_new_mask_overlap": {
+          "mean": 0.8596333908363978,
+          "ci95": [
+            0.8554722582070644,
+            0.8637461826612152
+          ],
+          "bonferroni_family_ci95": [
+            0.8539452019912334,
+            0.8650238386779512
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "old_new_rank_correlation": {
+          "mean": 0.8086000770593808,
+          "ci95": [
+            0.8036013414863956,
+            0.8134115640185272
+          ],
+          "bonferroni_family_ci95": [
+            0.8020029807078974,
+            0.8149020416734816
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_remaining": {
+          "mean": 0.5955528104047223,
+          "ci95": [
+            0.5874028960541492,
+            0.604414655074104
+          ],
+          "bonferroni_family_ci95": [
+            0.5841818792630559,
+            0.6075916648504573
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_removable": {
+          "mean": 0.6717268941930545,
+          "ci95": [
+            0.6256742260679856,
+            0.7211798522027301
+          ],
+          "bonferroni_family_ci95": [
+            0.6123391007459977,
+            0.7383618271531285
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "global_old_cal_minus_new_raw": {
+          "mean": 0.5955207684457006,
+          "ci95": [
+            0.587389183136838,
+            0.604286805120269
+          ],
+          "bonferroni_family_ci95": [
+            0.5842233025891698,
+            0.607481805774009
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_remaining": {
+          "mean": 0.5694281275818377,
+          "ci95": [
+            0.5609068171328937,
+            0.5781332260851445
+          ],
+          "bonferroni_family_ci95": [
+            0.5579856317384431,
+            0.5806624417499939
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_removable": {
+          "mean": 0.6978515770159374,
+          "ci95": [
+            0.651768513279095,
+            0.7477622875328944
+          ],
+          "bonferroni_family_ci95": [
+            0.638562396270488,
+            0.7646904752435231
+          ],
+          "individual_interval_level": 0.9916666666666667
+        },
+        "row_old_cal_minus_new_raw": {
+          "mean": 0.5833352850600624,
+          "ci95": [
+            0.5752587850938816,
+            0.5919861356402861
+          ],
+          "bonferroni_family_ci95": [
+            0.5723632749845432,
+            0.594639469513318
+          ],
+          "individual_interval_level": 0.9916666666666667
+        }
+      },
+      "ratios_of_aggregates": {
+        "global_removed_fraction": 0.5300541717475503,
+        "row_removed_fraction": 0.550668944262332
+      },
+      "per_seed": [
+        {
+          "seed": 2041,
+          "raw_reduction": 1.300616371255915,
+          "old_target_overlap": 0.8154269602577872,
+          "new_target_overlap": 0.8145631936985318,
+          "target_overlap_change": -0.0008637665592552813,
+          "old_new_mask_overlap": 0.8502762588288902,
+          "old_new_rank_correlation": 0.8058089665410896,
+          "global_remaining": 0.5882697912079281,
+          "global_removable": 0.7123465800479867,
+          "global_old_cal_minus_new_raw": 0.5882472335222888,
+          "row_remaining": 0.560556478196389,
+          "row_removable": 0.7400598930595258,
+          "row_old_cal_minus_new_raw": 0.5759598452182411
+        },
+        {
+          "seed": 2042,
+          "raw_reduction": 1.3218477148475916,
+          "old_target_overlap": 0.8330029619503301,
+          "new_target_overlap": 0.8382539140057934,
+          "target_overlap_change": 0.0052509520554633315,
+          "old_new_mask_overlap": 0.8560036454773293,
+          "old_new_rank_correlation": 0.7941120948645924,
+          "global_remaining": 0.6471092061284033,
+          "global_removable": 0.6747385087191881,
+          "global_old_cal_minus_new_raw": 0.6472225277377482,
+          "row_remaining": 0.6209731967224791,
+          "row_removable": 0.7008745181251123,
+          "row_old_cal_minus_new_raw": 0.6337398365092893
+        },
+        {
+          "seed": 2043,
+          "raw_reduction": 1.1793750276898212,
+          "old_target_overlap": 0.8081368193210297,
+          "new_target_overlap": 0.8047639390684502,
+          "target_overlap_change": -0.003372880252579501,
+          "old_new_mask_overlap": 0.8726202682029748,
+          "old_new_rank_correlation": 0.8258791697724611,
+          "global_remaining": 0.5512794338778332,
+          "global_removable": 0.6280955938119878,
+          "global_old_cal_minus_new_raw": 0.5510925440770665,
+          "row_remaining": 0.526754707826647,
+          "row_removable": 0.6526203198631743,
+          "row_old_cal_minus_new_raw": 0.5403061734526573
+        }
+      ]
+    }
+  },
+  "model_table": [
+    {
+      "model": "shared",
+      "condition": "raw",
+      "kl": 1.7243950802501151,
+      "target_overlap": 0.8321504518872941
+    },
+    {
+      "model": "shared",
+      "condition": "global_scale",
+      "kl": 1.1417126922879277,
+      "target_overlap": 0.8321504518872941
+    },
+    {
+      "model": "shared",
+      "condition": "row_standardized_scale",
+      "kl": 1.1311421393176821,
+      "target_overlap": 0.8321504518872941
+    },
+    {
+      "model": "original_task",
+      "condition": "raw",
+      "kl": 1.9433687553652694,
+      "target_overlap": 0.7919096984886459
+    },
+    {
+      "model": "original_task",
+      "condition": "global_scale",
+      "kl": 1.1734598726141305,
+      "target_overlap": 0.7919096984886459
+    },
+    {
+      "model": "original_task",
+      "condition": "row_standardized_scale",
+      "kl": 1.1535906116241836,
+      "target_overlap": 0.7919096984886459
+    },
+    {
+      "model": "original_image",
+      "condition": "raw",
+      "kl": 1.834969725089758,
+      "target_overlap": 0.8188555805097161
+    },
+    {
+      "model": "original_image",
+      "condition": "global_scale",
+      "kl": 1.1632107889376837,
+      "target_overlap": 0.8188555805097161
+    },
+    {
+      "model": "original_image",
+      "condition": "row_standardized_scale",
+      "kl": 1.151025305552045,
+      "target_overlap": 0.8188555805097161
+    },
+    {
+      "model": "hybrid_task",
+      "condition": "raw",
+      "kl": 0.576865984918736,
+      "target_overlap": 0.8146676214345389
+    },
+    {
+      "model": "hybrid_task",
+      "condition": "global_scale",
+      "kl": 0.576861660112156,
+      "target_overlap": 0.8146676214345389
+    },
+    {
+      "model": "hybrid_task",
+      "condition": "row_standardized_scale",
+      "kl": 0.5923312846355918,
+      "target_overlap": 0.8146676214345389
+    },
+    {
+      "model": "hybrid_image",
+      "condition": "raw",
+      "kl": 0.5676900204919824,
+      "target_overlap": 0.8191936822575921
+    },
+    {
+      "model": "hybrid_image",
+      "condition": "global_scale",
+      "kl": 0.5676579785329621,
+      "target_overlap": 0.8191936822575921
+    },
+    {
+      "model": "hybrid_image",
+      "condition": "row_standardized_scale",
+      "kl": 0.5815971779702066,
+      "target_overlap": 0.8191936822575921
+    }
+  ],
+  "boundary_fits": [],
+  "calibration_fit_count": 150,
+  "prior_fit_audits": [
+    {
+      "seed": 2041,
+      "model": "original_task",
+      "prior_kl_absolute_error": 6.524907369964694e-08,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "seed": 2041,
+      "model": "hybrid_task",
+      "prior_kl_absolute_error": 1.1722427029070559e-08,
+      "prior_overlap_absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "seed": 2041,
+      "model": "original_image",
+      "prior_kl_absolute_error": 5.397021340947106e-08,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "seed": 2041,
+      "model": "hybrid_image",
+      "prior_kl_absolute_error": 1.4728914643491464e-08,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "seed": 2042,
+      "model": "original_task",
+      "prior_kl_absolute_error": 3.961276484609755e-08,
+      "prior_overlap_absolute_error": 2.220446049250313e-16
+    },
+    {
+      "seed": 2042,
+      "model": "hybrid_task",
+      "prior_kl_absolute_error": 1.0196557376218607e-08,
+      "prior_overlap_absolute_error": 2.220446049250313e-16
+    },
+    {
+      "seed": 2042,
+      "model": "original_image",
+      "prior_kl_absolute_error": 5.092095056724588e-08,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "seed": 2042,
+      "model": "hybrid_image",
+      "prior_kl_absolute_error": 5.7650858531488325e-09,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "seed": 2043,
+      "model": "original_task",
+      "prior_kl_absolute_error": 3.6403097203319135e-08,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "seed": 2043,
+      "model": "hybrid_task",
+      "prior_kl_absolute_error": 1.4372036560850177e-08,
+      "prior_overlap_absolute_error": 0.0
+    },
+    {
+      "seed": 2043,
+      "model": "original_image",
+      "prior_kl_absolute_error": 5.654371881824716e-08,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "seed": 2043,
+      "model": "hybrid_image",
+      "prior_kl_absolute_error": 1.574711439022991e-08,
+      "prior_overlap_absolute_error": 1.1102230246251565e-16
+    }
+  ],
+  "decomposition_max_error": 8.881784197001252e-16,
+  "all_transformed_masks_exact": true,
+  "elapsed_seconds": 8.626409391057678
+}

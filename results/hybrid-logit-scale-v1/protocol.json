@@ -1,0 +1,41 @@
+{
+  "git_commit": "fc020aa1304126d91f082cabf2f638cc867526b1",
+  "new_archive": "/data2/zhao.tong/artifacts/hybrid-followup-v1/hybrid-distillation-v1.zip",
+  "old_archive": "/data2/zhao.tong/artifacts/familiarity-residual-v1/shared-residual-and-prior-v1.zip",
+  "settings": [
+    "pets_b16_49",
+    "flowers_b16_49",
+    "flowers_b16_98"
+  ],
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "models": [
+    "shared",
+    "original_task",
+    "original_image",
+    "hybrid_task",
+    "hybrid_image"
+  ],
+  "conditions": [
+    "raw",
+    "global_scale",
+    "row_standardized_scale"
+  ],
+  "image_fold_seed": 2341,
+  "folds": 5,
+  "alpha_bounds": [
+    0.0001,
+    10000.0
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2342,
+  "training_or_clip_inference": false,
+  "final_test_used": false,
+  "python": "3.10.12",
+  "numpy": "1.26.4",
+  "cpu_threads": 1,
+  "scope": "Cross-fitted development-set probability diagnosis. Adjusted intervals span six setting/arm comparisons per metric, conditional on fitted scales. Residual KL differences are not pure ranking effects."
+}
