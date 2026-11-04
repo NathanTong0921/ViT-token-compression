@@ -58,7 +58,7 @@ def plot(source,output):
     fig.legend(handles=[Line2D([0],[0],color=color,marker="o",label=label) for _,_,label,color in definitions],
                loc="upper center",bbox_to_anchor=(.60,.90),ncol=2,frameon=False,fontsize=9)
     fig.text(.20,.09,"Same KL loss; target changes from soft utility to uniform hybrid-mask membership.\n"
-             "Three paired seeds; thick bars: image-bootstrap95% intervals. Thin blue: three-setting adjustment.\n"
+             "Three paired seeds; thick bars: image-bootstrap 95% intervals. Thin blue: three-setting adjustment.\n"
              "Target × conditioning = (task − image) with hybrid target minus the same effect with original target.",
              fontsize=8.7,linespacing=1.5,va="center")
     for ext in ("png","pdf"):fig.savefig(output/f"hybrid_distillation.{ext}",dpi=220,facecolor="white")
@@ -68,8 +68,8 @@ def plot(source,output):
         writer=csv.DictWriter(f,fieldnames=fields);writer.writeheader();writer.writerows(rows)
 
     fit_rows=[]
-    fig,axes=plt.subplots(1,3,figsize=(11.4,4.6),sharey=True)
-    fig.subplots_adjust(left=.08,right=.98,bottom=.24,top=.78,wspace=.20)
+    fig,axes=plt.subplots(1,3,figsize=(11.4,5.2),sharey=True)
+    fig.subplots_adjust(left=.08,right=.98,bottom=.25,top=.70,wspace=.20)
     for ax,(setting,title) in zip(axes,SETTINGS):
         records=results[setting]["target_fit"]
         for ai,(arm,label,color) in enumerate((("task_residual","Task correction","#2166ac"),("image_residual","Image correction","#d97925"))):
@@ -79,7 +79,7 @@ def plot(source,output):
                 ax.plot([0,1],means,ls=style,marker="o",color=color,label=f"{label}, {'original' if ti==0 else 'hybrid'} target")
                 for split,mean in zip(("train","val"),means):
                     fit_rows.append({"setting":setting,"arm":arm,"training_target":training,"split":split,"mean_overlap_percent":mean})
-        ax.set_title(title,loc="left");ax.set_xticks([0,1],["Training","Unseen validation"])
+        ax.set_title(title,loc="left");ax.set_xticks([0,1],["Training","Validation"])
         ax.grid(axis="y",color="#eeeeee");ax.set_xlim(-.12,1.12)
     axes[0].set_ylabel("Top-k overlap with hybrid teacher (%)")
     fig.suptitle("Does the hybrid mask transfer to unseen images and class pairs?",fontsize=13,fontweight="bold",y=.97)

@@ -1,0 +1,1344 @@
+{
+  "setting": "flowers_b16_49",
+  "source": "/data2/zhao.tong/experiments/runs/hybrid-specificity-v1/flowers_b16_49",
+  "git_commit": "ae7fedda3670e0279e728229f598a493800ea9e3",
+  "primary_seed_pairs": [
+    [
+      2041,
+      2042
+    ],
+    [
+      2041,
+      2043
+    ],
+    [
+      2042,
+      2041
+    ],
+    [
+      2042,
+      2043
+    ],
+    [
+      2043,
+      2041
+    ],
+    [
+      2043,
+      2042
+    ]
+  ],
+  "reference_seed_pairs": [
+    [
+      2041,
+      2041
+    ],
+    [
+      2042,
+      2042
+    ],
+    [
+      2043,
+      2043
+    ]
+  ],
+  "primary_family_size": 4,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2311,
+  "classification_image_count": 1020,
+  "classification_task_count": 204,
+  "classification_image_task_count": 4080,
+  "primary": "C_s+U_t minus U_s+U_t; six ordered distinct-seed pairs, same 50%-exclusive rule; four dataset/budget settings.",
+  "uncertainty": "Average outcomes across fixed seed pairs before paired image bootstrap; pairs are correlated, not independent replicates. Adjust four primary comparisons separately for accuracy and margin.",
+  "classification": {
+    "table": [
+      {
+        "method": "conditioned",
+        "accuracy": {
+          "mean": 0.9682189542483627,
+          "ci95": [
+            0.9620098039215653,
+            0.9741830065359444
+          ]
+        },
+        "margin": {
+          "mean": 0.0902148648533228,
+          "ci95": [
+            0.0880172842134441,
+            0.09231295055600344
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.9674019607843104,
+            "margin": 0.08953590868906011
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.9674019607843104,
+            "margin": 0.08953590868906011
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.9678921568627418,
+            "margin": 0.0909396178771665
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.9678921568627418,
+            "margin": 0.0909396178771665
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.9693627450980359,
+            "margin": 0.09016906799374144
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.9693627450980359,
+            "margin": 0.09016906799374144
+          }
+        ]
+      },
+      {
+        "method": "shared_recipient",
+        "accuracy": {
+          "mean": 0.9673202614379052,
+          "ci95": [
+            0.9606209150326764,
+            0.9733680555555522
+          ]
+        },
+        "margin": {
+          "mean": 0.09020925276925294,
+          "ci95": [
+            0.08793502373883154,
+            0.09235058149162483
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.9659313725490163,
+            "margin": 0.08939228776509262
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.9659313725490163,
+            "margin": 0.08939228776509262
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.9678921568627418,
+            "margin": 0.09086323981369401
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.9678921568627418,
+            "margin": 0.09086323981369401
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.9681372549019575,
+            "margin": 0.09037223072897214
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.9681372549019575,
+            "margin": 0.09037223072897214
+          }
+        ]
+      },
+      {
+        "method": "shared_donor",
+        "accuracy": {
+          "mean": 0.9673202614379052,
+          "ci95": [
+            0.9606209150326764,
+            0.9733680555555522
+          ]
+        },
+        "margin": {
+          "mean": 0.09020925276925294,
+          "ci95": [
+            0.08793502373883154,
+            0.09235058149162483
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.9678921568627418,
+            "margin": 0.09086323981369401
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.9681372549019575,
+            "margin": 0.09037223072897214
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.9659313725490163,
+            "margin": 0.08939228776509262
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.9681372549019575,
+            "margin": 0.09037223072897214
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.9659313725490163,
+            "margin": 0.08939228776509262
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.9678921568627418,
+            "margin": 0.09086323981369401
+          }
+        ]
+      },
+      {
+        "method": "cu_half",
+        "accuracy": {
+          "mean": 0.9686274509803888,
+          "ci95": [
+            0.96192708333333,
+            0.974754901960781
+          ]
+        },
+        "margin": {
+          "mean": 0.09198019745263998,
+          "ci95": [
+            0.08974906959488038,
+            0.09411350517826743
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.9681372549019575,
+            "margin": 0.0918892150830979
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.9696078431372516,
+            "margin": 0.09174328985288294
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.9681372549019575,
+            "margin": 0.09186592810852559
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.9676470588235261,
+            "margin": 0.09216628859928112
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.9693627450980359,
+            "margin": 0.09204137088490777
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.9688725490196045,
+            "margin": 0.09217509218714402
+          }
+        ]
+      },
+      {
+        "method": "uu_half",
+        "accuracy": {
+          "mean": 0.966380718954245,
+          "ci95": [
+            0.9590686274509771,
+            0.9727951388888856
+          ]
+        },
+        "margin": {
+          "mean": 0.09097657608380838,
+          "ci95": [
+            0.08868427683588281,
+            0.09311419448214037
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.9649509803921535,
+            "margin": 0.0910054106152267
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.9674019607843104,
+            "margin": 0.09064832087074115
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.9642156862745065,
+            "margin": 0.0910819414428071
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.9671568627450947,
+            "margin": 0.09127450843727282
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.9674019607843104,
+            "margin": 0.09058984635877101
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.9671568627450947,
+            "margin": 0.09125942877803044
+          }
+        ]
+      }
+    ],
+    "contrasts": {
+      "cu_minus_uu": {
+        "accuracy": {
+          "mean": 0.002246732026143789,
+          "ci95": [
+            0.0001633986928104575,
+            0.00437091503267974
+          ],
+          "bonferroni_family_ci95": [
+            -0.00042917687908496706,
+            0.005024509803921569
+          ],
+          "individual_interval_level": 0.9875
+        },
+        "margin": {
+          "mean": 0.001003621368831638,
+          "ci95": [
+            0.0005894074064841896,
+            0.0014242220398679455
+          ],
+          "bonferroni_family_ci95": [
+            0.0004892204196957827,
+            0.0015154379991752069
+          ],
+          "individual_interval_level": 0.9875
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.0031862745098039215,
+            "margin": 0.0008838044678713609
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.0022058823529411764,
+            "margin": 0.0010949689821415972
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.00392156862745098,
+            "margin": 0.0007839866657183865
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.0004901960784313725,
+            "margin": 0.0008917801620083556
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.00196078431372549,
+            "margin": 0.0014515245261367395
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.001715686274509804,
+            "margin": 0.0009156634091133882
+          }
+        ]
+      },
+      "cu_minus_conditioned": {
+        "accuracy": {
+          "mean": 0.0004084967320261436,
+          "ci95": [
+            -0.0022886029411764704,
+            0.0031464460784313697
+          ]
+        },
+        "margin": {
+          "mean": 0.0017653325993171652,
+          "ci95": [
+            0.001282072828485549,
+            0.0022210434162190703
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.0007352941176470588,
+            "margin": 0.0023533063940377533
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.0022058823529411764,
+            "margin": 0.002207381163822707
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.00024509803921568627,
+            "margin": 0.0009263102313591632
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": -0.00024509803921568627,
+            "margin": 0.0012266707221150687
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.0,
+            "margin": 0.0018723028911661302
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": -0.0004901960784313725,
+            "margin": 0.002006024193402166
+          }
+        ]
+      },
+      "cu_minus_shared_recipient": {
+        "accuracy": {
+          "mean": 0.0013071895424836603,
+          "ci95": [
+            -0.0007761437908496736,
+            0.0035130718954248363
+          ]
+        },
+        "margin": {
+          "mean": 0.0017709446833870889,
+          "ci95": [
+            0.001386178690707721,
+            0.002183699953209915
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.0022058823529411764,
+            "margin": 0.0024969273180054583
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.003676470588235294,
+            "margin": 0.0023510020877904087
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.00024509803921568627,
+            "margin": 0.0010026882948317166
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": -0.00024509803921568627,
+            "margin": 0.0013030487855876204
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.0012254901960784314,
+            "margin": 0.0016691401559356474
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.0007352941176470588,
+            "margin": 0.0018028614581716764
+          }
+        ]
+      },
+      "cu_minus_shared_donor": {
+        "accuracy": {
+          "mean": 0.0013071895424836603,
+          "ci95": [
+            -0.0007761437908496736,
+            0.0035130718954248363
+          ]
+        },
+        "margin": {
+          "mean": 0.0017709446833870889,
+          "ci95": [
+            0.001386178690707721,
+            0.0021836999532099145
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.00024509803921568627,
+            "margin": 0.0010259752694041682
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.0014705882352941176,
+            "margin": 0.0013710591239107512
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.0022058823529411764,
+            "margin": 0.0024736403434330164
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": -0.0004901960784313725,
+            "margin": 0.0017940578703092471
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.003431372549019608,
+            "margin": 0.0026490831198153057
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.000980392156862745,
+            "margin": 0.0013118523734500422
+          }
+        ]
+      },
+      "uu_minus_shared_recipient": {
+        "accuracy": {
+          "mean": -0.0009395424836601313,
+          "ci95": [
+            -0.0030228758169934637,
+            0.0010620915032679738
+          ]
+        },
+        "margin": {
+          "mean": 0.000767323314555451,
+          "ci95": [
+            0.00045721421007846743,
+            0.0010790486798773731
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": -0.000980392156862745,
+            "margin": 0.0016131228501341
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.0014705882352941176,
+            "margin": 0.001256033105648816
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": -0.003676470588235294,
+            "margin": 0.00021870162911332891
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": -0.0007352941176470588,
+            "margin": 0.0004112686235792641
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": -0.0007352941176470588,
+            "margin": 0.00021761562979891015
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": -0.000980392156862745,
+            "margin": 0.0008871980490582881
+          }
+        ]
+      },
+      "uu_minus_shared_donor": {
+        "accuracy": {
+          "mean": -0.0009395424836601313,
+          "ci95": [
+            -0.0030228758169934637,
+            0.0010620915032679738
+          ]
+        },
+        "margin": {
+          "mean": 0.000767323314555451,
+          "ci95": [
+            0.0004572142100784674,
+            0.0010790486798773731
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": -0.0029411764705882353,
+            "margin": 0.00014217080153280573
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": -0.0007352941176470588,
+            "margin": 0.0002760901417691534
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": -0.001715686274509804,
+            "margin": 0.0016896536777146257
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": -0.000980392156862745,
+            "margin": 0.0009022777083009003
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.0014705882352941176,
+            "margin": 0.0011975585936785708
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": -0.0007352941176470588,
+            "margin": 0.00039618896433665313
+          }
+        ]
+      },
+      "hybrid_increment_interaction": {
+        "accuracy": {
+          "mean": 0.0013480392156862738,
+          "ci95": [
+            -0.0017156862745098041,
+            0.0044944852941176386
+          ]
+        },
+        "margin": {
+          "mean": 0.0009980092847617146,
+          "ci95": [
+            0.0005066074379479745,
+            0.0014830465421149072
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.001715686274509804,
+            "margin": 0.0007401835439036557
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.0007352941176470588,
+            "margin": 0.0009513480581738927
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.00392156862745098,
+            "margin": 0.0007076086022458317
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.0004901960784313725,
+            "margin": 0.0008154020985358025
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.0007352941176470588,
+            "margin": 0.0016546872613672297
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.0004901960784313725,
+            "margin": 0.001118826144343878
+          }
+        ]
+      }
+    },
+    "full_reference": {
+      "accuracy": {
+        "mean": 0.9674019607843104,
+        "ci95": [
+          0.9602941176470555,
+          0.9742647058823496
+        ]
+      },
+      "margin": {
+        "mean": 0.10996972390460732,
+        "ci95": [
+          0.10737491767951524,
+          0.1124484632806951
+        ]
+      }
+    }
+  },
+  "fixed_displacement": {
+    "2": {
+      "weighted_pair_row_coverage": 1.0,
+      "image_count": 1020,
+      "row_count": 4080,
+      "per_seed_pair": [
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2042,
+          "weighted_coverage": 1.0,
+          "accuracy": 0.00024509803921568627,
+          "margin": 0.0004603266709305879
+        },
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2043,
+          "weighted_coverage": 1.0,
+          "accuracy": -0.0004901960784313725,
+          "margin": 0.0006000944421298916
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2041,
+          "weighted_coverage": 1.0,
+          "accuracy": 0.0014705882352941176,
+          "margin": 0.00017255749519699666
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2043,
+          "weighted_coverage": 1.0,
+          "accuracy": 0.0012254901960784314,
+          "margin": 0.0002608763543157673
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2041,
+          "weighted_coverage": 1.0,
+          "accuracy": -0.0014705882352941176,
+          "margin": 0.00037612909476087043
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2042,
+          "weighted_coverage": 1.0,
+          "accuracy": -0.0004901960784313725,
+          "margin": 6.497411588092533e-05
+        }
+      ],
+      "estimand": "Original task/class row weights times equal pair weights, restricted to jointly feasible pair/rows. Pair eligibility can differ; images are resampled jointly.",
+      "accuracy": {
+        "mean": 8.169934640522866e-05,
+        "ci95": [
+          -0.0027777777777777788,
+          0.0028604983660130666
+        ]
+      },
+      "margin": {
+        "mean": 0.00032249302886917303,
+        "ci95": [
+          -0.00029444688614914714,
+          0.0009184389233906676
+        ]
+      }
+    },
+    "4": {
+      "weighted_pair_row_coverage": 1.0,
+      "image_count": 1020,
+      "row_count": 4080,
+      "per_seed_pair": [
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2042,
+          "weighted_coverage": 1.0,
+          "accuracy": 0.000980392156862745,
+          "margin": 0.0007337574698585414
+        },
+        {
+          "recipient_seed": 2041,
+          "donor_seed": 2043,
+          "weighted_coverage": 1.0,
+          "accuracy": -0.0004901960784313725,
+          "margin": 0.0008155329383177365
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2041,
+          "weighted_coverage": 1.0,
+          "accuracy": 0.003676470588235294,
+          "margin": 0.0001389718844133739
+        },
+        {
+          "recipient_seed": 2042,
+          "donor_seed": 2043,
+          "weighted_coverage": 1.0,
+          "accuracy": -0.00024509803921568627,
+          "margin": 0.0004145794429136844
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2041,
+          "weighted_coverage": 1.0,
+          "accuracy": -0.000980392156862745,
+          "margin": 0.0006856782407491045
+        },
+        {
+          "recipient_seed": 2043,
+          "donor_seed": 2042,
+          "weighted_coverage": 1.0,
+          "accuracy": -0.000980392156862745,
+          "margin": 0.0003588877593446676
+        }
+      ],
+      "estimand": "Original task/class row weights times equal pair weights, restricted to jointly feasible pair/rows. Pair eligibility can differ; images are resampled jointly.",
+      "accuracy": {
+        "mean": 0.0003267973856209153,
+        "ci95": [
+          -0.0023703022875817,
+          0.0029421977124182946
+        ]
+      },
+      "margin": {
+        "mean": 0.0005245679559328514,
+        "ci95": [
+          -6.284233275847769e-05,
+          0.0010763928561942472
+        ]
+      }
+    }
+  },
+  "exchange": {
+    "table": [
+      {
+        "method": "conditioned",
+        "accuracy": {
+          "mean": 0.0035130718954248406,
+          "ci95": [
+            0.0008714596949891056,
+            0.005855119825708067
+          ]
+        },
+        "margin": {
+          "mean": 0.00303101449988021,
+          "ci95": [
+            0.0027724647138909738,
+            0.003295116317661872
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.005964052287581697,
+            "margin": 0.003017216643851829
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.005964052287581697,
+            "margin": 0.003017216643851829
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.0025326797385620907,
+            "margin": 0.003009904952140697
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.0025326797385620907,
+            "margin": 0.003009904952140697
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.002042483660130718,
+            "margin": 0.003065921903648098
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.002042483660130718,
+            "margin": 0.003065921903648098
+          }
+        ]
+      },
+      {
+        "method": "shared_recipient",
+        "accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "margin": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.0,
+            "margin": 0.0
+          }
+        ]
+      },
+      {
+        "method": "shared_donor",
+        "accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "margin": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.0,
+            "margin": 0.0
+          }
+        ]
+      },
+      {
+        "method": "cu_half",
+        "accuracy": {
+          "mean": 0.0006672113289760347,
+          "ci95": [
+            -0.0005582788671023966,
+            0.0018790849673202615
+          ]
+        },
+        "margin": {
+          "mean": 0.0013461809181898043,
+          "ci95": [
+            0.0012036614816209124,
+            0.0014832969930114641
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.0005718954248366011,
+            "margin": 0.0011560081046753054
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.001797385620915032,
+            "margin": 0.0011638231295076145
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.0004084967320261433,
+            "margin": 0.001570286087162769
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.0013071895424836592,
+            "margin": 0.0014224527312760187
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": -0.0003267973856209146,
+            "margin": 0.0014273080326218275
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.00024509803921568605,
+            "margin": 0.0013372074238952802
+          }
+        ]
+      },
+      {
+        "method": "uu_half",
+        "accuracy": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "margin": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "per_seed_pair": [
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2042,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2041,
+            "donor_seed": 2043,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2041,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2042,
+            "donor_seed": 2043,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2041,
+            "accuracy": 0.0,
+            "margin": 0.0
+          },
+          {
+            "recipient_seed": 2043,
+            "donor_seed": 2042,
+            "accuracy": 0.0,
+            "margin": 0.0
+          }
+        ]
+      }
+    ],
+    "image_count": 1020,
+    "task_pair_count": 6120
+  },
+  "replacement_counts": [
+    {
+      "recipient_seed": 2041,
+      "donor_seed": 2042,
+      "cu_disagreement": 26.23455882352936,
+      "uu_disagreement": 22.26568627450976,
+      "cu_actual_replacements": 12.870588235294091,
+      "uu_actual_replacements": 10.88235294117645
+    },
+    {
+      "recipient_seed": 2041,
+      "donor_seed": 2043,
+      "cu_disagreement": 26.34019607843132,
+      "uu_disagreement": 21.82647058823525,
+      "cu_actual_replacements": 12.919362745098013,
+      "uu_actual_replacements": 10.669607843137234
+    },
+    {
+      "recipient_seed": 2042,
+      "donor_seed": 2041,
+      "cu_disagreement": 25.640441176470535,
+      "uu_disagreement": 22.26568627450976,
+      "cu_actual_replacements": 12.56887254901958,
+      "uu_actual_replacements": 10.88235294117645
+    },
+    {
+      "recipient_seed": 2042,
+      "donor_seed": 2043,
+      "cu_disagreement": 24.62034313725485,
+      "uu_disagreement": 21.52843137254898,
+      "cu_actual_replacements": 12.06225490196076,
+      "uu_actual_replacements": 10.52156862745096
+    },
+    {
+      "recipient_seed": 2043,
+      "donor_seed": 2041,
+      "cu_disagreement": 27.088970588235238,
+      "uu_disagreement": 21.82647058823525,
+      "cu_actual_replacements": 13.296078431372521,
+      "uu_actual_replacements": 10.669607843137234
+    },
+    {
+      "recipient_seed": 2043,
+      "donor_seed": 2042,
+      "cu_disagreement": 26.54779411764701,
+      "uu_disagreement": 21.52843137254898,
+      "cu_actual_replacements": 13.027205882352915,
+      "uu_actual_replacements": 10.52156862745096
+    }
+  ],
+  "historical_same_seed_reference": [
+    {
+      "seed": 2041,
+      "cu_minus_c": {
+        "accuracy": 0.0024509803921568627,
+        "margin": 0.0020667789303094246
+      },
+      "cu_minus_u": {
+        "accuracy": 0.00392156862745098,
+        "margin": 0.0022103998542771317
+      }
+    },
+    {
+      "seed": 2042,
+      "cu_minus_c": {
+        "accuracy": 0.0007352941176470588,
+        "margin": 0.0013057563675766292
+      },
+      "cu_minus_u": {
+        "accuracy": 0.0007352941176470588,
+        "margin": 0.00138213443104918
+      }
+    },
+    {
+      "seed": 2043,
+      "cu_minus_c": {
+        "accuracy": 0.00024509803921568627,
+        "margin": 0.002179892137030652
+      },
+      "cu_minus_u": {
+        "accuracy": 0.0014705882352941176,
+        "margin": 0.001976729401800163
+      }
+    }
+  ],
+  "execution": [
+    {
+      "recipient_seed": 2041,
+      "donor_seed": 2042,
+      "primary": true,
+      "unique_masks": 21419,
+      "reused_masks": 6120,
+      "new_masks": 15299,
+      "new_suffix_seconds": 2.3695540940389037,
+      "endpoint_masks_exact": true,
+      "endpoint_score_max_error": 0.0,
+      "historical_half_score_max_error": null
+    },
+    {
+      "recipient_seed": 2041,
+      "donor_seed": 2043,
+      "primary": true,
+      "unique_masks": 21419,
+      "reused_masks": 6331,
+      "new_masks": 15088,
+      "new_suffix_seconds": 2.197641687002033,
+      "endpoint_masks_exact": true,
+      "endpoint_score_max_error": 0.0,
+      "historical_half_score_max_error": null
+    },
+    {
+      "recipient_seed": 2042,
+      "donor_seed": 2041,
+      "primary": true,
+      "unique_masks": 21418,
+      "reused_masks": 6629,
+      "new_masks": 14789,
+      "new_suffix_seconds": 2.1787352360552177,
+      "endpoint_masks_exact": true,
+      "endpoint_score_max_error": 0.0,
+      "historical_half_score_max_error": null
+    },
+    {
+      "recipient_seed": 2042,
+      "donor_seed": 2043,
+      "primary": true,
+      "unique_masks": 21414,
+      "reused_masks": 6250,
+      "new_masks": 15164,
+      "new_suffix_seconds": 2.222359523992054,
+      "endpoint_masks_exact": true,
+      "endpoint_score_max_error": 0.0,
+      "historical_half_score_max_error": null
+    },
+    {
+      "recipient_seed": 2043,
+      "donor_seed": 2041,
+      "primary": true,
+      "unique_masks": 21419,
+      "reused_masks": 6645,
+      "new_masks": 14774,
+      "new_suffix_seconds": 2.070083786966279,
+      "endpoint_masks_exact": true,
+      "endpoint_score_max_error": 0.0,
+      "historical_half_score_max_error": null
+    },
+    {
+      "recipient_seed": 2043,
+      "donor_seed": 2042,
+      "primary": true,
+      "unique_masks": 21417,
+      "reused_masks": 6841,
+      "new_masks": 14576,
+      "new_suffix_seconds": 2.0468685548985377,
+      "endpoint_masks_exact": true,
+      "endpoint_score_max_error": 0.0,
+      "historical_half_score_max_error": null
+    },
+    {
+      "recipient_seed": 2041,
+      "donor_seed": 2041,
+      "primary": false,
+      "unique_masks": 17340,
+      "reused_masks": 5470,
+      "new_masks": 11870,
+      "new_suffix_seconds": 1.7316581780323759,
+      "endpoint_masks_exact": true,
+      "endpoint_score_max_error": 0.0,
+      "historical_half_score_max_error": 0.0
+    },
+    {
+      "recipient_seed": 2042,
+      "donor_seed": 2042,
+      "primary": false,
+      "unique_masks": 17340,
+      "reused_masks": 5459,
+      "new_masks": 11881,
+      "new_suffix_seconds": 1.6810888350009918,
+      "endpoint_masks_exact": true,
+      "endpoint_score_max_error": 0.0,
+      "historical_half_score_max_error": 0.0
+    },
+    {
+      "recipient_seed": 2043,
+      "donor_seed": 2043,
+      "primary": false,
+      "unique_masks": 17339,
+      "reused_masks": 5562,
+      "new_masks": 11777,
+      "new_suffix_seconds": 1.6531785869738087,
+      "endpoint_masks_exact": true,
+      "endpoint_score_max_error": 0.0,
+      "historical_half_score_max_error": 0.0
+    }
+  ]
+}

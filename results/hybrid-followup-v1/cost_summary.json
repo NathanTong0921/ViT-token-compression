@@ -1,0 +1,42 @@
+{
+  "scope": "Incremental recorded stages only; excludes earlier CLIP/teacher preparation, original fits, loading, CPU analysis and transfer. Not deployment latency or total project GPU hours.",
+  "new_branch_fits": 18,
+  "settings": {
+    "pets_b16_49": {
+      "target_generation_seconds": 40.87812115100678,
+      "hidden_feature_cache_seconds": 0.2804666329175234,
+      "branch_training_seconds": 79.09965199697763,
+      "selector_replay_seconds": 0.32404134899843484,
+      "new_suffix_seconds": 1.0209144519176334
+    },
+    "flowers_b16_98": {
+      "target_generation_seconds": 10.02247460896615,
+      "hidden_feature_cache_seconds": 0.19803539395797998,
+      "branch_training_seconds": 80.21054741193075,
+      "selector_replay_seconds": 0.47926880687009543,
+      "new_suffix_seconds": 3.2871906709624454
+    },
+    "flowers_b16_49": {
+      "target_generation_seconds": 7.582141143037006,
+      "hidden_feature_cache_seconds": 0.19035887904465199,
+      "branch_training_seconds": 81.17228301090654,
+      "selector_replay_seconds": 0.47614133101888,
+      "new_suffix_seconds": 1.8377661709673703
+    }
+  },
+  "specificity_new_suffix_seconds_by_setting": {
+    "pets_b16_49": 10.835961205302738,
+    "flowers_b16_98": 29.08267032133881,
+    "flowers_b16_49": 18.151168482960202,
+    "pets_b16_98": 18.868510095751844
+  },
+  "totals": {
+    "target_generation_seconds": 58.482736903009936,
+    "hidden_feature_cache_seconds": 0.6688609059201553,
+    "branch_training_seconds": 240.48248241981491,
+    "selector_replay_seconds": 1.2794514868874103,
+    "new_suffix_seconds": 6.145871293847449,
+    "specificity_new_suffix_seconds": 76.9383101053536,
+    "recorded_stage_hours": 0.10666603142078707
+  }
+}

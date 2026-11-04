@@ -1,0 +1,110 @@
+[
+  {
+    "recipient_seed": 2041,
+    "donor_seed": 2042,
+    "primary": true,
+    "unique_masks": 13737,
+    "reused_masks": 4107,
+    "new_masks": 9630,
+    "new_suffix_seconds": 1.4708690360421315,
+    "endpoint_masks_exact": true,
+    "endpoint_score_max_error": 0.0,
+    "historical_half_score_max_error": null
+  },
+  {
+    "recipient_seed": 2041,
+    "donor_seed": 2043,
+    "primary": true,
+    "unique_masks": 13714,
+    "reused_masks": 4407,
+    "new_masks": 9307,
+    "new_suffix_seconds": 1.3051385340513662,
+    "endpoint_masks_exact": true,
+    "endpoint_score_max_error": 0.0,
+    "historical_half_score_max_error": null
+  },
+  {
+    "recipient_seed": 2042,
+    "donor_seed": 2041,
+    "primary": true,
+    "unique_masks": 13652,
+    "reused_masks": 4590,
+    "new_masks": 9062,
+    "new_suffix_seconds": 1.2669485301012173,
+    "endpoint_masks_exact": true,
+    "endpoint_score_max_error": 0.0,
+    "historical_half_score_max_error": null
+  },
+  {
+    "recipient_seed": 2042,
+    "donor_seed": 2043,
+    "primary": true,
+    "unique_masks": 13590,
+    "reused_masks": 4269,
+    "new_masks": 9321,
+    "new_suffix_seconds": 1.2964436750626191,
+    "endpoint_masks_exact": true,
+    "endpoint_score_max_error": 0.0,
+    "historical_half_score_max_error": null
+  },
+  {
+    "recipient_seed": 2043,
+    "donor_seed": 2041,
+    "primary": true,
+    "unique_masks": 13764,
+    "reused_masks": 4586,
+    "new_masks": 9178,
+    "new_suffix_seconds": 1.2980607430217788,
+    "endpoint_masks_exact": true,
+    "endpoint_score_max_error": 0.0,
+    "historical_half_score_max_error": null
+  },
+  {
+    "recipient_seed": 2043,
+    "donor_seed": 2042,
+    "primary": true,
+    "unique_masks": 13730,
+    "reused_masks": 5012,
+    "new_masks": 8718,
+    "new_suffix_seconds": 1.2483214769745246,
+    "endpoint_masks_exact": true,
+    "endpoint_score_max_error": 0.0,
+    "historical_half_score_max_error": null
+  },
+  {
+    "recipient_seed": 2041,
+    "donor_seed": 2041,
+    "primary": false,
+    "unique_masks": 11035,
+    "reused_masks": 4202,
+    "new_masks": 6833,
+    "new_suffix_seconds": 0.971693731029518,
+    "endpoint_masks_exact": true,
+    "endpoint_score_max_error": 0.0,
+    "historical_half_score_max_error": 0.0
+  },
+  {
+    "recipient_seed": 2042,
+    "donor_seed": 2042,
+    "primary": false,
+    "unique_masks": 10874,
+    "reused_masks": 4142,
+    "new_masks": 6732,
+    "new_suffix_seconds": 0.974214424029924,
+    "endpoint_masks_exact": true,
+    "endpoint_score_max_error": 0.0,
+    "historical_half_score_max_error": 0.0
+  },
+  {
+    "recipient_seed": 2043,
+    "donor_seed": 2043,
+    "primary": false,
+    "unique_masks": 11039,
+    "reused_masks": 4265,
+    "new_masks": 6774,
+    "new_suffix_seconds": 1.0042710549896583,
+    "endpoint_masks_exact": true,
+    "endpoint_score_max_error": 0.0,
+    "historical_half_score_max_error": 0.0
+  }
+]

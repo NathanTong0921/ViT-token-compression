@@ -1,0 +1,125 @@
+{
+  "setting": "pets_b16_98",
+  "config": {
+    "cache_dir": "runs/pets-selector-budget-98-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/oxford-iiit-pet",
+    "manifest_dir": "data/splits/pets-v1",
+    "baseline_dir": "results/pets-baseline-v1",
+    "prompt_template": "a photo of a {class_name}, a type of pet.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:7",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0,
+    "source_cache_dir": "runs/pets-selector-supervision-v1",
+    "training_steps": 3990,
+    "checkpoint_interval": 133,
+    "coverages": [
+      "full"
+    ],
+    "bootstrap_seed": 2052,
+    "bootstrap_replicates": 2000,
+    "experiment_name": "pets_selector_ablations_98_v1",
+    "feature_cache_dir": "runs/pets-selector-scale-supervision-v1",
+    "random_seeds": [],
+    "objective": "kl",
+    "selector_arms": [
+      "mean_only",
+      "difference_only",
+      "image_only_wide"
+    ],
+    "wide_hidden_dim": 199,
+    "include_references": false
+  },
+  "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/pets_b16_98",
+  "git_commit": "ae7fedda3670e0279e728229f598a493800ea9e3",
+  "source_git_commit": "30f794d96f28985743f6668302abc6538cda33d3",
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "methods": [
+    "conditioned",
+    "shared_recipient",
+    "shared_donor",
+    "cu_half",
+    "uu_half",
+    "cu_d2",
+    "uu_d2",
+    "cu_d4",
+    "uu_d4"
+  ],
+  "primary_seed_pairs": [
+    [
+      2041,
+      2042
+    ],
+    [
+      2041,
+      2043
+    ],
+    [
+      2042,
+      2041
+    ],
+    [
+      2042,
+      2043
+    ],
+    [
+      2043,
+      2041
+    ],
+    [
+      2043,
+      2042
+    ]
+  ],
+  "reference_seed_pairs": [
+    [
+      2041,
+      2041
+    ],
+    [
+      2042,
+      2042
+    ],
+    [
+      2043,
+      2043
+    ]
+  ],
+  "fixed_d": [
+    2,
+    4
+  ],
+  "primary": "C_s+U_t minus U_s+U_t, all ordered s != t; 50% of each pair's exclusive positions.",
+  "fixed_d_scope": "Secondary: exactly d replacements on joint-feasible pair/image/task rows; invalid stored masks are recipient placeholders excluded from that analysis.",
+  "final_test_used": false,
+  "selector_parameter_counts": {
+    "cu": 695432,
+    "uu": 694798
+  },
+  "compute_scope": "Two existing selector evaluations and one frozen suffix at equal k; no measured full inference latency.",
+  "sources_use": "No new fit; all fixed seeds retained. Validation images and unseen validation combinations only."
+}

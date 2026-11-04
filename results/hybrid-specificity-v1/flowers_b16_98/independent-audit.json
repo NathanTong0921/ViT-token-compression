@@ -1,0 +1,44 @@
+{
+  "setting": "flowers_b16_98",
+  "status": "passed",
+  "seed_pairs_checked": 9,
+  "rows": 4080,
+  "independent_set_based_masks": true,
+  "exact_fixed_d_feasibility": true,
+  "shared_mixtures_task_independent": true,
+  "original_endpoint_max_error": 0.0,
+  "independent_mean_max_error": 2.8754776337791554e-14,
+  "primary_image_bootstrap_reproduced": true,
+  "primary_bootstrap_scope": "Independent raw outcomes and weights; existing generic image-bootstrap helper reused.",
+  "reconstructed_contrasts": {
+    "cu_minus_uu": {
+      "accuracy": 0.002696078431372544,
+      "margin": 0.0010929849962961324
+    },
+    "cu_minus_conditioned": {
+      "accuracy": -0.0003676470588235294,
+      "margin": 0.00045584796991871224
+    },
+    "cu_minus_shared_recipient": {
+      "accuracy": 0.0016748366013071881,
+      "margin": 0.0017192072187630178
+    },
+    "cu_minus_shared_donor": {
+      "accuracy": 0.0016748366013071881,
+      "margin": 0.0017192072187630254
+    },
+    "uu_minus_shared_recipient": {
+      "accuracy": -0.0010212418300653595,
+      "margin": 0.0006262222224668932
+    },
+    "uu_minus_shared_donor": {
+      "accuracy": -0.0010212418300653595,
+      "margin": 0.000626222222466888
+    },
+    "hybrid_increment_interaction": {
+      "accuracy": 0.00065359477124183,
+      "margin": -0.0001703742525481826
+    }
+  },
+  "final_test_used": false
+}

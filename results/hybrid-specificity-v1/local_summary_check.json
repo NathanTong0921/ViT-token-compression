@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "setting": "pets_b16_49",
+      "image_rows": 716,
+      "contrasts_checked": 14,
+      "max_abs_point_estimate_error": 8.673617379884035e-19,
+      "endpoints_exact": true,
+      "same_seed_history_exact": true
+    },
+    {
+      "setting": "pets_b16_98",
+      "image_rows": 716,
+      "contrasts_checked": 14,
+      "max_abs_point_estimate_error": 6.776263578034403e-20,
+      "endpoints_exact": true,
+      "same_seed_history_exact": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "image_rows": 1020,
+      "contrasts_checked": 14,
+      "max_abs_point_estimate_error": 1.734723475976807e-18,
+      "endpoints_exact": true,
+      "same_seed_history_exact": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "image_rows": 1020,
+      "contrasts_checked": 14,
+      "max_abs_point_estimate_error": 1.3010426069826053e-18,
+      "endpoints_exact": true,
+      "same_seed_history_exact": true
+    }
+  ],
+  "total_contrast_metric_checks": 56
+}

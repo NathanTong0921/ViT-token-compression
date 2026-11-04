@@ -1,0 +1,200 @@
+[
+  {
+    "seed": 2041,
+    "arm": "task_residual",
+    "initial_val": {
+      "hybrid_target_kl": 2.0615143149945085,
+      "original_target_kl": 0.5723056941270354,
+      "hybrid_mask_overlap": 0.7233193277310925
+    },
+    "hybrid_trained": {
+      "train": {
+        "hybrid_target_kl": 0.866892899375628,
+        "original_target_kl": 1.926987432099246,
+        "hybrid_mask_overlap": 0.7041333199946646
+      },
+      "val": {
+        "hybrid_target_kl": 0.892857756012795,
+        "original_target_kl": 2.1028870081054225,
+        "hybrid_mask_overlap": 0.6891656662665065
+      }
+    },
+    "original_trained": {
+      "train": {
+        "hybrid_target_kl": 2.3885138610073557,
+        "original_target_kl": 0.19481245100244618,
+        "hybrid_mask_overlap": 0.7165666266506598
+      },
+      "val": {
+        "hybrid_target_kl": 2.3268193668886727,
+        "original_target_kl": 0.684978017561804,
+        "hybrid_mask_overlap": 0.700325130052021
+      }
+    }
+  },
+  {
+    "seed": 2041,
+    "arm": "image_residual",
+    "initial_val": {
+      "hybrid_target_kl": 2.0615143149945085,
+      "original_target_kl": 0.5723056941270354,
+      "hybrid_mask_overlap": 0.7233193277310925
+    },
+    "hybrid_trained": {
+      "train": {
+        "hybrid_target_kl": 0.8521211710533284,
+        "original_target_kl": 1.9011782137810982,
+        "hybrid_mask_overlap": 0.7129985327464318
+      },
+      "val": {
+        "hybrid_target_kl": 0.8755891837252705,
+        "original_target_kl": 2.0309002666642857,
+        "hybrid_mask_overlap": 0.6990496198479391
+      }
+    },
+    "original_trained": {
+      "train": {
+        "hybrid_target_kl": 2.24877674083889,
+        "original_target_kl": 0.2820892259894013,
+        "hybrid_mask_overlap": 0.7334883953581434
+      },
+      "val": {
+        "hybrid_target_kl": 2.150260325944891,
+        "original_target_kl": 0.5790560258436017,
+        "hybrid_mask_overlap": 0.7140156062424968
+      }
+    }
+  },
+  {
+    "seed": 2042,
+    "arm": "task_residual",
+    "initial_val": {
+      "hybrid_target_kl": 2.0599430767636675,
+      "original_target_kl": 0.5746111460214973,
+      "hybrid_mask_overlap": 0.7436724689875949
+    },
+    "hybrid_trained": {
+      "train": {
+        "hybrid_target_kl": 0.7986554446246693,
+        "original_target_kl": 1.9336175138416878,
+        "hybrid_mask_overlap": 0.7272242230225423
+      },
+      "val": {
+        "hybrid_target_kl": 0.8118578445750708,
+        "original_target_kl": 2.107412481870429,
+        "hybrid_mask_overlap": 0.7188225290116045
+      }
+    },
+    "original_trained": {
+      "train": {
+        "hybrid_target_kl": 2.4554958622732195,
+        "original_target_kl": 0.20945985722358398,
+        "hybrid_mask_overlap": 0.7405695611577965
+      },
+      "val": {
+        "hybrid_target_kl": 2.3765888602125878,
+        "original_target_kl": 0.611899665782146,
+        "hybrid_mask_overlap": 0.7243997599039613
+      }
+    }
+  },
+  {
+    "seed": 2042,
+    "arm": "image_residual",
+    "initial_val": {
+      "hybrid_target_kl": 2.0599430767636675,
+      "original_target_kl": 0.5746111460214973,
+      "hybrid_mask_overlap": 0.7436724689875949
+    },
+    "hybrid_trained": {
+      "train": {
+        "hybrid_target_kl": 0.7880564002770615,
+        "original_target_kl": 2.0357804713003773,
+        "hybrid_mask_overlap": 0.7334783913565426
+      },
+      "val": {
+        "hybrid_target_kl": 0.7983104507201443,
+        "original_target_kl": 2.132973592830639,
+        "hybrid_mask_overlap": 0.7250500200080031
+      }
+    },
+    "original_trained": {
+      "train": {
+        "hybrid_target_kl": 2.2403990867626815,
+        "original_target_kl": 0.2810314587212214,
+        "hybrid_mask_overlap": 0.7416199813258636
+      },
+      "val": {
+        "hybrid_target_kl": 2.142341426891439,
+        "original_target_kl": 0.5792641003273756,
+        "hybrid_mask_overlap": 0.7240546218487394
+      }
+    }
+  },
+  {
+    "seed": 2043,
+    "arm": "task_residual",
+    "initial_val": {
+      "hybrid_target_kl": 2.011027299130664,
+      "original_target_kl": 0.5781813879116146,
+      "hybrid_mask_overlap": 0.7259453781512605
+    },
+    "hybrid_trained": {
+      "train": {
+        "hybrid_target_kl": 0.854495473206043,
+        "original_target_kl": 1.9130257659792604,
+        "hybrid_mask_overlap": 0.7105158730158726
+      },
+      "val": {
+        "hybrid_target_kl": 0.8810577525738995,
+        "original_target_kl": 2.1017626264369955,
+        "hybrid_mask_overlap": 0.6931772709083636
+      }
+    },
+    "original_trained": {
+      "train": {
+        "hybrid_target_kl": 2.390827399053994,
+        "original_target_kl": 0.1940822748789751,
+        "hybrid_mask_overlap": 0.7020791649993329
+      },
+      "val": {
+        "hybrid_target_kl": 2.320254888926067,
+        "original_target_kl": 0.6633580525517555,
+        "hybrid_mask_overlap": 0.6843537414965986
+      }
+    }
+  },
+  {
+    "seed": 2043,
+    "arm": "image_residual",
+    "initial_val": {
+      "hybrid_target_kl": 2.011027299130664,
+      "original_target_kl": 0.5781813879116146,
+      "hybrid_mask_overlap": 0.7259453781512605
+    },
+    "hybrid_trained": {
+      "train": {
+        "hybrid_target_kl": 0.839909183151192,
+        "original_target_kl": 1.952590927475564,
+        "hybrid_mask_overlap": 0.7170218087234893
+      },
+      "val": {
+        "hybrid_target_kl": 0.8647064189335295,
+        "original_target_kl": 2.0821910695556336,
+        "hybrid_mask_overlap": 0.7006652661064426
+      }
+    },
+    "original_trained": {
+      "train": {
+        "hybrid_target_kl": 2.287316341639733,
+        "original_target_kl": 0.2826686296679173,
+        "hybrid_mask_overlap": 0.7303938241963449
+      },
+      "val": {
+        "hybrid_target_kl": 2.202069091811484,
+        "original_target_kl": 0.587972183675875,
+        "hybrid_mask_overlap": 0.7095138055222088
+      }
+    }
+  }
+]

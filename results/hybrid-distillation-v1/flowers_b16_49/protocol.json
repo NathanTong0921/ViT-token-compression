@@ -1,0 +1,73 @@
+{
+  "setting": "flowers_b16_49",
+  "config": {
+    "cache_dir": "runs/flowers-selector-budget-49-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/flowers102",
+    "manifest_dir": "data/splits/flowers-v1",
+    "baseline_dir": "runs/flowers-features-v1",
+    "prompt_template": "a photo of a {class_name}, a type of flower.",
+    "balance_seed": 2028,
+    "seed": 2026,
+    "device": "cuda:3",
+    "prune_after": 6,
+    "keep_patch_tokens": 49,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "ridge": 0.01,
+    "identity_atol": 1e-06,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "hidden_dim": 128,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "temperature": 1.0,
+    "source_cache_dir": "runs/flowers-features-v1",
+    "training_steps": 3978,
+    "checkpoint_interval": 153,
+    "coverages": [
+      "full"
+    ],
+    "bootstrap_seed": 2052,
+    "bootstrap_replicates": 2000,
+    "experiment_name": "flowers_selector_ablations_49_v1",
+    "feature_cache_dir": "runs/flowers-features-v1",
+    "random_seeds": [],
+    "objective": "kl",
+    "selector_arms": [
+      "mean_only",
+      "difference_only",
+      "image_only_wide"
+    ],
+    "wide_hidden_dim": 199,
+    "include_references": false
+  },
+  "git_commit": "ae7fedda3670e0279e728229f598a493800ea9e3",
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "methods": [
+    "shared",
+    "task_residual",
+    "image_residual"
+  ],
+  "original_source": "/data2/zhao.tong/experiments/runs/shared-residual-v1/flowers_b16_49",
+  "shared_dir": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1",
+  "conditioned_dir": "/data2/zhao.tong/experiments/runs/flowers-selector-budget-49-training-v1",
+  "primary": "Task minus image correction under hybrid supervision, with three-setting adjusted intervals.",
+  "target": "Uniform 1/k on fixed50%-exclusive hybrid mask from C_s and U_s. Same softmax KL loss; only target changes.",
+  "secondary": "Target-by-conditioning interaction against historical original-utility KL, ordinary paired95% intervals.",
+  "teacher_labels": "No true label input in hybrid generation. Frozen C/U teachers were previously trained with supervised utilities.",
+  "validation": "Val targets only diagnose fitting; val examples never optimize weights. Final fixed step, no checkpoint selection.",
+  "final_test_used": false
+}

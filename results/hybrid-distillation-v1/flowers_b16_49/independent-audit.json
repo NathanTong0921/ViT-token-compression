@@ -1,0 +1,60 @@
+{
+  "setting": "flowers_b16_49",
+  "status": "passed",
+  "new_branches": 6,
+  "target_rows_checked": 48960,
+  "train_val_images_and_class_pairs_disjoint": true,
+  "all_target_masks_fixed_k_and_half_exclusive_replacement": true,
+  "validation_hybrid_masks_match_previous_experiment": true,
+  "historical_shared_endpoint_exact": true,
+  "shared_and_image_correction_task_independent": true,
+  "same_training_recipe_and_sampling_audit": true,
+  "independent_mean_max_error": 6.938893903907228e-18,
+  "validation_hybrid_kl_max_error": 7.151260783544444e-08,
+  "validation_mask_overlap_independently_recomputed": true,
+  "primary_and_interaction_bootstrap_reproduced": true,
+  "scope": "Training target set structure checked; exact rank-priority matches checked on validation via historical masks. Raw validation logits independently verify hybrid-target KL and mask fit. Training target-fit losses are not independently rerun.",
+  "reconstructed_contrasts": {
+    "task_residual_minus_image_residual": {
+      "accuracy": -0.0010620915032679738,
+      "margin": -0.0005189245232921371
+    },
+    "task_residual_minus_shared": {
+      "accuracy": -0.0024509803921568627,
+      "margin": -0.00035823281530371126
+    },
+    "image_residual_minus_shared": {
+      "accuracy": -0.001388888888888889,
+      "margin": 0.0001606917079884257
+    },
+    "target_by_conditioning_interaction": {
+      "accuracy": -0.0022058823529411764,
+      "margin": -0.00011387365015413757
+    },
+    "task_target_change": {
+      "accuracy": -0.0028594771241830055,
+      "margin": -0.0007220608766187485
+    },
+    "image_target_change": {
+      "accuracy": -0.00065359477124183,
+      "margin": -0.0006081872264646141
+    },
+    "hybrid_task_minus_hybrid_teacher": {
+      "accuracy": -0.004493464052287575,
+      "margin": -0.002214654044345872
+    },
+    "hybrid_image_minus_hybrid_teacher": {
+      "accuracy": -0.0034313725490196048,
+      "margin": -0.0016957295210537281
+    },
+    "hybrid_teacher_minus_shared": {
+      "accuracy": 0.002042483660130719,
+      "margin": 0.0018564212290421564
+    },
+    "hybrid_teacher_minus_conditioned": {
+      "accuracy": 0.0011437908496732027,
+      "margin": 0.0018508091449722386
+    }
+  },
+  "final_test_used": false
+}
