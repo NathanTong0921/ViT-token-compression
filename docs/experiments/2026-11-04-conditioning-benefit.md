@@ -31,3 +31,5 @@ The extra mixing-increment outcome has positive R² at both 49-token settings. B
 Independent review verifies all 24 panels' MSE/R², within-image centering and routing, all 25-cell split assignments in each setting, and separate-solver reproduction of one actual fold and one cross-dataset fit. Maximum reproduced prediction discrepancy is below 3e-16. Scope is recorded in `independent_check.json`; bootstrap and CLIP were not rerun.
 
 All 28 input/prediction arrays are backed up in a 115,185,448-byte release ZIP, retained locally and on the server. Git keeps the small summaries, fitted probes, folds, figures and manifest. This adds no new model weights. The final reserved test remains untouched. I30 records the scientific consequence; next training remains a separately specified follow-up.
+
+Serialization follow-up: generated CSV line endings were normalized to LF and the writer updated accordingly. Numerical values, folds, saved arrays and fits were unchanged; the analysis protocol records the original execution commit.
