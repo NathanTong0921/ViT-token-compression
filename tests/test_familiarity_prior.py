@@ -46,6 +46,16 @@ class FamiliarityPriorTests(unittest.TestCase):
         true_effect0, true_effect1 = sign * effects0, sign * effects1
         np.testing.assert_allclose(sign * (true_effect1 - true_effect0), effects1 - effects0)
 
+    def test_role_accuracy_is_exactly_candidate_choice_shift(self):
+        truth = np.array([True, False, True, False])
+        sign = np.where(truth, 1., -1.)
+        real = np.array([[1, 0, 1, 0], [1, 1, 0, 0]], dtype=float)
+        controls = np.array([[[0, 0, 1, 1], [1, 0, 0, 0]],
+                             [[1, 0, 1, 0], [0, 1, 1, 1]]], dtype=float)
+        choice_effect = real - controls.mean(axis=1)
+        correct_effect = (real == truth).astype(float) - (controls == truth).astype(float).mean(axis=1)
+        np.testing.assert_allclose(sign * (correct_effect[1] - correct_effect[0]), choice_effect[1] - choice_effect[0])
+
     def test_pure_prior_produces_role_effect_without_better_discrimination(self):
         n = 8
         truth = np.array([True, False] * 4)

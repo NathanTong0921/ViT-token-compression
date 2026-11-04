@@ -14,6 +14,8 @@ Let `y=+1` for H0 images and `−1` for H1 images. The true-class margin is `m=y
 
 This identity holds per row. With the existing equal task/class-side weights, its average equals the mean task midpoint shift. It does not equal the change in class separation. For each task, let `a` and `b` be the average change `r_1−r_0` on H0 and H1 images. Report `(a+b)/2` as the midpoint shift and `(a−b)/2` as the half-separation change, along with both original group means. A positive midpoint can arise when scores of both image classes move toward newly familiar H0. These formulas are definitions; the empirical questions concern their measured magnitude and whether an additive shift predicts changes on different images.
 
+The accuracy version has a second exact identity. Let `A=1[predict H0]`. Binary correctness is `c=(1−y)/2+yA`, so the role-oriented semantic accuracy change is exactly `Δ(A_real−mean(A_identity))` per row. Its aggregate therefore measures a change in candidate-choice frequency. This does not erase the observed familiarity effect, but it is not a direct measure of improved image discrimination. Report ordinary task/class-balanced real-minus-identity accuracy in each phase separately. Correction-induced changes in the role statistic indicate changed candidate preference; their practical usefulness requires the accompanying absolute/balanced accuracy results.
+
 The same decomposition is reported against the wide image-only control. Raw within-task AUC toward H0 is also reported per model, then averaged over tasks/seeds/mappings. One constant added to every image of a task leaves that raw AUC unchanged. AUC phase changes are not the earlier oriented seen-minus-held contrast.
 
 ## Fixed correction and prediction experiment
