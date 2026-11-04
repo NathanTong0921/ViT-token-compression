@@ -104,3 +104,10 @@ prefix replay examples. Existing block6 model/teacher backups are referenced
 without duplication. Full prefix caches and raw teacher responses remain on
 the server. Local and GitHub copies are listed in
 [`backup_manifest.json`](../../results/depth-intervention-v1/backup_manifest.json).
+
+Both archives completed local and GitHub verification. The larger training archive
+was uploaded directly from the server after the local route proved slow; the
+partial duplicate upload was removed. The retained GitHub training asset has a
+`-server.zip` suffix; its bytes match the local/server training ZIP. The local raw
+transfer copy was deleted after audits, retaining the verified archives and all
+curated scientific results.

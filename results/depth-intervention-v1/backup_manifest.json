@@ -14,6 +14,19 @@
       "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/depth-intervention-v1/depth-intervention-evaluation-v1.zip",
       "server_path": "/data2/zhao.tong/artifacts/depth-intervention-v1/depth-intervention-evaluation-v1.zip",
       "local_and_github_verified": true
+    },
+    {
+      "file": "depth-intervention-training-v1.zip",
+      "bytes": 1106594390,
+      "files": 161,
+      "sha256": "41233ab9e1fbd902bd0059959bfbabaf3d3df0c5ac45383bb3411830555dfaad",
+      "github_asset_id": 709099123,
+      "github_asset_name": "depth-intervention-training-v1-server.zip",
+      "github_asset_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/709099123",
+      "github_asset_digest": "sha256:41233ab9e1fbd902bd0059959bfbabaf3d3df0c5ac45383bb3411830555dfaad",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/depth-intervention-v1/depth-intervention-training-v1.zip",
+      "server_path": "/data2/zhao.tong/artifacts/depth-intervention-v1/depth-intervention-training-v1.zip",
+      "local_and_github_verified": true
     }
   ],
   "dependencies": {
@@ -32,5 +45,9 @@
   },
   "server_raw_runs_retained": true,
   "full_prefix_caches_included": false,
-  "raw_teacher_responses_included": false
+  "raw_teacher_responses_included": false,
+  "backup_status": "complete",
+  "training_archive_upload_route": "server_direct",
+  "training_archive_successful_upload_seconds": 224.45282921299804,
+  "partial_local_upload_removed": true
 }
