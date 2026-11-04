@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "settings": [
+    {
+      "status": "passed",
+      "setting": "flowers_b16_98",
+      "images": 1020,
+      "rows": 4080,
+      "tasks": 204,
+      "seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "fit_rows": {
+        "train": {
+          "rows": 12240,
+          "models": [
+            "shared",
+            "kl_task",
+            "kl_image",
+            "set_task",
+            "set_image"
+          ],
+          "metrics": [
+            "overlap",
+            "exact_set",
+            "set_loss",
+            "hybrid_kl",
+            "teacher_boundary_gap",
+            "score_std",
+            "std_floor"
+          ]
+        },
+        "val": {
+          "rows": 4080,
+          "models": [
+            "shared",
+            "kl_task",
+            "kl_image",
+            "set_task",
+            "set_image"
+          ],
+          "metrics": [
+            "overlap",
+            "exact_set",
+            "set_loss",
+            "hybrid_kl",
+            "teacher_boundary_gap",
+            "score_std",
+            "std_floor"
+          ]
+        }
+      },
+      "numeric_values_checked": 8144558,
+      "maximum_numeric_error": 1.7763568394002505e-14,
+      "bootstrap_replicates": 2000,
+      "bootstrap_seed": 2372,
+      "all_saved_point_estimates_intervals_seed_values_reproduced": true,
+      "same_shared_outputs_and_teacher_targets_verified": true,
+      "scope": "Raw score/mask/identity reconstruction and all published arithmetic; no checkpoint replay, optimizer or CLIP inference."
+    }
+  ],
+  "scope": "Independent NumPy reconstruction, no project analysis imports and no additional comparisons."
+}

@@ -1,0 +1,27 @@
+{
+  "backup_status": "complete",
+  "release_id": 433837358,
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-de32b41a14740a8529c7",
+  "release_status": "draft",
+  "archives": [
+    {
+      "file": "set-distillation-v1.zip",
+      "bytes": 210999734,
+      "members": 110,
+      "sha256": "a7d54c938bcbedd6c8de7fcb1f8e0d517e499ebf74f463ba05e269660d3fa720",
+      "github_asset_id": 709274638,
+      "github_asset_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/709274638",
+      "github_asset_digest": "sha256:a7d54c938bcbedd6c8de7fcb1f8e0d517e499ebf74f463ba05e269660d3fa720",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/set-distillation-v1/set-distillation-v1.zip",
+      "server_path": "/data2/zhao.tong/artifacts/set-distillation-v1/set-distillation-v1.zip",
+      "local_and_github_verified": true
+    }
+  ],
+  "dependencies": {
+    "historical_hybrid_kl_fits_and_targets": "results/hybrid-followup-v1/backup_manifest.json",
+    "archive": "hybrid-distillation-v1.zip"
+  },
+  "server_raw_runs_retained": true,
+  "upload_route": "server_direct",
+  "upload_seconds": 44.87432366795838
+}

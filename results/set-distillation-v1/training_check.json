@@ -1,0 +1,1055 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-04T11:27:26.288750+00:00",
+  "scope": "Read-only checkpoint/configuration, stored sampling/target identity, per-row fit consistency, validation-logit recomputation, CPU selector replay and cost audit. No optimizer or CLIP suffix rerun.",
+  "settings": [
+    {
+      "setting": "pets_b16_49",
+      "execution_exit_code": 0,
+      "config_fields_match_old_kl": true,
+      "stored_sampling_audit_exact": true,
+      "paired_initial_loss_equal": true,
+      "new_models": 6
+    },
+    {
+      "setting": "flowers_b16_49",
+      "execution_exit_code": 0,
+      "config_fields_match_old_kl": true,
+      "stored_sampling_audit_exact": true,
+      "paired_initial_loss_equal": true,
+      "new_models": 6
+    },
+    {
+      "setting": "flowers_b16_98",
+      "execution_exit_code": 0,
+      "config_fields_match_old_kl": true,
+      "stored_sampling_audit_exact": true,
+      "paired_initial_loss_equal": true,
+      "new_models": 6
+    }
+  ],
+  "checkpoints": [
+    {
+      "setting": "pets_b16_49",
+      "seed": 2041,
+      "arm": "task_residual",
+      "steps": 3990,
+      "branch_parameters": 9801,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2041,
+      "arm": "image_residual",
+      "steps": 3990,
+      "branch_parameters": 9850,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2042,
+      "arm": "task_residual",
+      "steps": 3990,
+      "branch_parameters": 9801,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2042,
+      "arm": "image_residual",
+      "steps": 3990,
+      "branch_parameters": 9850,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2043,
+      "arm": "task_residual",
+      "steps": 3990,
+      "branch_parameters": 9801,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2043,
+      "arm": "image_residual",
+      "steps": 3990,
+      "branch_parameters": 9850,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2041,
+      "arm": "task_residual",
+      "steps": 3978,
+      "branch_parameters": 9801,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2041,
+      "arm": "image_residual",
+      "steps": 3978,
+      "branch_parameters": 9850,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2042,
+      "arm": "task_residual",
+      "steps": 3978,
+      "branch_parameters": 9801,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2042,
+      "arm": "image_residual",
+      "steps": 3978,
+      "branch_parameters": 9850,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2043,
+      "arm": "task_residual",
+      "steps": 3978,
+      "branch_parameters": 9801,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2043,
+      "arm": "image_residual",
+      "steps": 3978,
+      "branch_parameters": 9850,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2041,
+      "arm": "task_residual",
+      "steps": 3978,
+      "branch_parameters": 9801,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2041,
+      "arm": "image_residual",
+      "steps": 3978,
+      "branch_parameters": 9850,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2042,
+      "arm": "task_residual",
+      "steps": 3978,
+      "branch_parameters": 9801,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2042,
+      "arm": "image_residual",
+      "steps": 3978,
+      "branch_parameters": 9850,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2043,
+      "arm": "task_residual",
+      "steps": 3978,
+      "branch_parameters": 9801,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2043,
+      "arm": "image_residual",
+      "steps": 3978,
+      "branch_parameters": 9850,
+      "frozen_base_parameters": 347399,
+      "finite_state": true,
+      "configuration_shared_base_and_teacher_source_exact": true,
+      "all_training_curve_steps_present": true
+    }
+  ],
+  "fit_checks": [
+    {
+      "setting": "pets_b16_49",
+      "seed": 2041,
+      "split": "train",
+      "rows": 84653,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 2.5424107263916085e-14,
+      "minimum_loss_minus_missing_fraction": 0.03232340803559941,
+      "std_floor_fraction": 0.0
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2041,
+      "split": "val",
+      "rows": 2624,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 2.098321516541546e-14,
+      "minimum_loss_minus_missing_fraction": 0.04152274192595973,
+      "std_floor_fraction": 0.0,
+      "validation_online_vs_cached_fit": {
+        "max_error_by_metric": {
+          "overlap": 0.0,
+          "exact_set": 0.0,
+          "set_loss": 3.5179454188627446e-07,
+          "hybrid_kl": 5.386169337207036e-07,
+          "teacher_boundary_gap": 1.2897270100786784e-06,
+          "score_std": 3.243324473434228e-07,
+          "std_floor": 0.0
+        },
+        "overlap_mismatch_count": 0,
+        "comparison_scope": "online batch64 logits versus cached batch128 fit; floating-point shape changes can move boundary tokens"
+      }
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2042,
+      "split": "train",
+      "rows": 84653,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 5.6288307348495437e-14,
+      "minimum_loss_minus_missing_fraction": 0.028585469540284625,
+      "std_floor_fraction": 0.0
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2042,
+      "split": "val",
+      "rows": 2624,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 2.5202062658991053e-14,
+      "minimum_loss_minus_missing_fraction": 0.032128935261648506,
+      "std_floor_fraction": 0.0,
+      "validation_online_vs_cached_fit": {
+        "max_error_by_metric": {
+          "overlap": 0.0,
+          "exact_set": 0.0,
+          "set_loss": 3.5377440948947125e-07,
+          "hybrid_kl": 7.643812320878851e-07,
+          "teacher_boundary_gap": 1.1960054173698609e-06,
+          "score_std": 5.099536797281701e-07,
+          "std_floor": 0.0
+        },
+        "overlap_mismatch_count": 0,
+        "comparison_scope": "online batch64 logits versus cached batch128 fit; floating-point shape changes can move boundary tokens"
+      }
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2043,
+      "split": "train",
+      "rows": 84653,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 1.9095836023552692e-14,
+      "minimum_loss_minus_missing_fraction": 0.03259728392776173,
+      "std_floor_fraction": 0.0
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2043,
+      "split": "val",
+      "rows": 2624,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 1.7430501486614958e-14,
+      "minimum_loss_minus_missing_fraction": 0.06029868703715657,
+      "std_floor_fraction": 0.0,
+      "validation_online_vs_cached_fit": {
+        "max_error_by_metric": {
+          "overlap": 0.0,
+          "exact_set": 0.0,
+          "set_loss": 3.664059843311307e-07,
+          "hybrid_kl": 5.450654558813994e-07,
+          "teacher_boundary_gap": 1.4083862023284155e-06,
+          "score_std": 3.9537838958381144e-07,
+          "std_floor": 0.0
+        },
+        "overlap_mismatch_count": 0,
+        "comparison_scope": "online batch64 logits versus cached batch128 fit; floating-point shape changes can move boundary tokens"
+      }
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2041,
+      "split": "train",
+      "rows": 12240,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 7.882583474838611e-15,
+      "minimum_loss_minus_missing_fraction": 0.11258276901683029,
+      "std_floor_fraction": 0.0
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2041,
+      "split": "val",
+      "rows": 4080,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 3.9968028886505635e-15,
+      "minimum_loss_minus_missing_fraction": 0.1282748695538969,
+      "std_floor_fraction": 0.0,
+      "validation_online_vs_cached_fit": {
+        "max_error_by_metric": {
+          "overlap": 0.0,
+          "exact_set": 0.0,
+          "set_loss": 4.152479304853074e-07,
+          "hybrid_kl": 8.050189421737741e-07,
+          "teacher_boundary_gap": 1.9483181925572524e-06,
+          "score_std": 3.8061937424060943e-07,
+          "std_floor": 0.0
+        },
+        "overlap_mismatch_count": 0,
+        "comparison_scope": "online batch64 logits versus cached batch128 fit; floating-point shape changes can move boundary tokens"
+      }
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2042,
+      "split": "train",
+      "rows": 12240,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 9.2148511043888e-15,
+      "minimum_loss_minus_missing_fraction": 0.08527327678641494,
+      "std_floor_fraction": 0.0
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2042,
+      "split": "val",
+      "rows": 4080,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 4.6629367034256575e-15,
+      "minimum_loss_minus_missing_fraction": 0.1357596334145994,
+      "std_floor_fraction": 0.0,
+      "validation_online_vs_cached_fit": {
+        "max_error_by_metric": {
+          "overlap": 0.0,
+          "exact_set": 0.0,
+          "set_loss": 3.7471977154535097e-07,
+          "hybrid_kl": 5.980447173037362e-07,
+          "teacher_boundary_gap": 1.6232187540765608e-06,
+          "score_std": 3.3718356085010726e-07,
+          "std_floor": 0.0
+        },
+        "overlap_mismatch_count": 0,
+        "comparison_scope": "online batch64 logits versus cached batch128 fit; floating-point shape changes can move boundary tokens"
+      }
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2043,
+      "split": "train",
+      "rows": 12240,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 1.1102230246251565e-14,
+      "minimum_loss_minus_missing_fraction": 0.117180949267076,
+      "std_floor_fraction": 0.0
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2043,
+      "split": "val",
+      "rows": 4080,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 3.552713678800501e-15,
+      "minimum_loss_minus_missing_fraction": 0.14409247162390726,
+      "std_floor_fraction": 0.0,
+      "validation_online_vs_cached_fit": {
+        "max_error_by_metric": {
+          "overlap": 0.0,
+          "exact_set": 0.0,
+          "set_loss": 5.132428484433404e-07,
+          "hybrid_kl": 6.227978155415315e-07,
+          "teacher_boundary_gap": 1.4719808096863574e-06,
+          "score_std": 3.9684750419155534e-07,
+          "std_floor": 0.0
+        },
+        "overlap_mismatch_count": 0,
+        "comparison_scope": "online batch64 logits versus cached batch128 fit; floating-point shape changes can move boundary tokens"
+      }
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2041,
+      "split": "train",
+      "rows": 12240,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 5.440092820663267e-15,
+      "minimum_loss_minus_missing_fraction": 0.09161772928675826,
+      "std_floor_fraction": 0.0
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2041,
+      "split": "val",
+      "rows": 4080,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 3.6637359812630166e-15,
+      "minimum_loss_minus_missing_fraction": 0.09976904185450808,
+      "std_floor_fraction": 0.0,
+      "validation_online_vs_cached_fit": {
+        "max_error_by_metric": {
+          "overlap": 0.0,
+          "exact_set": 0.0,
+          "set_loss": 4.280328221861751e-07,
+          "hybrid_kl": 7.44259929241764e-07,
+          "teacher_boundary_gap": 3.321841830050687e-06,
+          "score_std": 6.777143105596295e-07,
+          "std_floor": 0.0
+        },
+        "overlap_mismatch_count": 0,
+        "comparison_scope": "online batch64 logits versus cached batch128 fit; floating-point shape changes can move boundary tokens"
+      }
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2042,
+      "split": "train",
+      "rows": 12240,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 4.3298697960381105e-15,
+      "minimum_loss_minus_missing_fraction": 0.09024405570662752,
+      "std_floor_fraction": 0.0
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2042,
+      "split": "val",
+      "rows": 4080,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 2.0539125955565396e-15,
+      "minimum_loss_minus_missing_fraction": 0.08507148009173726,
+      "std_floor_fraction": 0.0,
+      "validation_online_vs_cached_fit": {
+        "max_error_by_metric": {
+          "overlap": 0.0,
+          "exact_set": 0.0,
+          "set_loss": 3.6366244565710915e-07,
+          "hybrid_kl": 7.032465072498439e-07,
+          "teacher_boundary_gap": 1.8471144884735224e-06,
+          "score_std": 6.225364976852887e-07,
+          "std_floor": 0.0
+        },
+        "overlap_mismatch_count": 0,
+        "comparison_scope": "online batch64 logits versus cached batch128 fit; floating-point shape changes can move boundary tokens"
+      }
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2043,
+      "split": "train",
+      "rows": 12240,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 4.107825191113079e-15,
+      "minimum_loss_minus_missing_fraction": 0.08040276747577046,
+      "std_floor_fraction": 0.0
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2043,
+      "split": "val",
+      "rows": 4080,
+      "models": 5,
+      "target_masks_and_row_identity_exact": true,
+      "weighted_aggregate_max_error": 1.5543122344752192e-15,
+      "minimum_loss_minus_missing_fraction": 0.09133505395480568,
+      "std_floor_fraction": 0.0,
+      "validation_online_vs_cached_fit": {
+        "max_error_by_metric": {
+          "overlap": 0.0,
+          "exact_set": 0.0,
+          "set_loss": 3.528244504891198e-07,
+          "hybrid_kl": 7.256048002446391e-07,
+          "teacher_boundary_gap": 1.905258000700627e-06,
+          "score_std": 4.0962392389154445e-07,
+          "std_floor": 0.0
+        },
+        "overlap_mismatch_count": 0,
+        "comparison_scope": "online batch64 logits versus cached batch128 fit; floating-point shape changes can move boundary tokens"
+      }
+    }
+  ],
+  "gradient_records": [
+    {
+      "setting": "pets_b16_49",
+      "seed": 2041,
+      "arm": "task_residual",
+      "hybrid_kl": {
+        "loss": 1.6771132946014404,
+        "branch_gradient_norm": 0.16636255383491516
+      },
+      "set_hinge": {
+        "loss": 0.5026083588600159,
+        "branch_gradient_norm": 0.017157424241304398
+      },
+      "set_to_kl_gradient_norm_ratio": 0.10313272936606904
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2041,
+      "arm": "image_residual",
+      "hybrid_kl": {
+        "loss": 1.6771132946014404,
+        "branch_gradient_norm": 1.250173568725586
+      },
+      "set_hinge": {
+        "loss": 0.5026083588600159,
+        "branch_gradient_norm": 0.2196827530860901
+      },
+      "set_to_kl_gradient_norm_ratio": 0.17572180262140114
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2042,
+      "arm": "task_residual",
+      "hybrid_kl": {
+        "loss": 1.8902485370635986,
+        "branch_gradient_norm": 0.33138102293014526
+      },
+      "set_hinge": {
+        "loss": 0.4616941213607788,
+        "branch_gradient_norm": 0.02855503000319004
+      },
+      "set_to_kl_gradient_norm_ratio": 0.08616978048622116
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2042,
+      "arm": "image_residual",
+      "hybrid_kl": {
+        "loss": 1.8902485370635986,
+        "branch_gradient_norm": 1.0642660856246948
+      },
+      "set_hinge": {
+        "loss": 0.4616941213607788,
+        "branch_gradient_norm": 0.14528489112854004
+      },
+      "set_to_kl_gradient_norm_ratio": 0.13651181137023813
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2043,
+      "arm": "task_residual",
+      "hybrid_kl": {
+        "loss": 1.7116103172302246,
+        "branch_gradient_norm": 0.13595952093601227
+      },
+      "set_hinge": {
+        "loss": 0.49812841415405273,
+        "branch_gradient_norm": 0.026876341551542282
+      },
+      "set_to_kl_gradient_norm_ratio": 0.19767899567836306
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2043,
+      "arm": "image_residual",
+      "hybrid_kl": {
+        "loss": 1.7116103172302246,
+        "branch_gradient_norm": 1.0413601398468018
+      },
+      "set_hinge": {
+        "loss": 0.49812841415405273,
+        "branch_gradient_norm": 0.09709692746400833
+      },
+      "set_to_kl_gradient_norm_ratio": 0.09324048784726158
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2041,
+      "arm": "task_residual",
+      "hybrid_kl": {
+        "loss": 2.277127504348755,
+        "branch_gradient_norm": 0.18064747750759125
+      },
+      "set_hinge": {
+        "loss": 0.6850945949554443,
+        "branch_gradient_norm": 0.023434340953826904
+      },
+      "set_to_kl_gradient_norm_ratio": 0.12972415268207738
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2041,
+      "arm": "image_residual",
+      "hybrid_kl": {
+        "loss": 2.277127504348755,
+        "branch_gradient_norm": 2.1266398429870605
+      },
+      "set_hinge": {
+        "loss": 0.6850945949554443,
+        "branch_gradient_norm": 0.17530910670757294
+      },
+      "set_to_kl_gradient_norm_ratio": 0.08243478898680617
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2042,
+      "arm": "task_residual",
+      "hybrid_kl": {
+        "loss": 2.121492862701416,
+        "branch_gradient_norm": 0.4142416715621948
+      },
+      "set_hinge": {
+        "loss": 0.643707275390625,
+        "branch_gradient_norm": 0.024888988584280014
+      },
+      "set_to_kl_gradient_norm_ratio": 0.0600832564488702
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2042,
+      "arm": "image_residual",
+      "hybrid_kl": {
+        "loss": 2.121492862701416,
+        "branch_gradient_norm": 1.5248795747756958
+      },
+      "set_hinge": {
+        "loss": 0.643707275390625,
+        "branch_gradient_norm": 0.1737143099308014
+      },
+      "set_to_kl_gradient_norm_ratio": 0.11392001886860746
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2043,
+      "arm": "task_residual",
+      "hybrid_kl": {
+        "loss": 1.9661904573440552,
+        "branch_gradient_norm": 0.24105042219161987
+      },
+      "set_hinge": {
+        "loss": 0.6436887979507446,
+        "branch_gradient_norm": 0.027681663632392883
+      },
+      "set_to_kl_gradient_norm_ratio": 0.11483764840862924
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2043,
+      "arm": "image_residual",
+      "hybrid_kl": {
+        "loss": 1.9661904573440552,
+        "branch_gradient_norm": 1.4966496229171753
+      },
+      "set_hinge": {
+        "loss": 0.6436887979507446,
+        "branch_gradient_norm": 0.13146381080150604
+      },
+      "set_to_kl_gradient_norm_ratio": 0.08783873579259323
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2041,
+      "arm": "task_residual",
+      "hybrid_kl": {
+        "loss": 0.984783947467804,
+        "branch_gradient_norm": 0.10165372490882874
+      },
+      "set_hinge": {
+        "loss": 0.4814383387565613,
+        "branch_gradient_norm": 0.021633747965097427
+      },
+      "set_to_kl_gradient_norm_ratio": 0.21281805447365867
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2041,
+      "arm": "image_residual",
+      "hybrid_kl": {
+        "loss": 0.984783947467804,
+        "branch_gradient_norm": 0.9616461396217346
+      },
+      "set_hinge": {
+        "loss": 0.4814383387565613,
+        "branch_gradient_norm": 0.16317138075828552
+      },
+      "set_to_kl_gradient_norm_ratio": 0.1696792344244935
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2042,
+      "arm": "task_residual",
+      "hybrid_kl": {
+        "loss": 0.9289181232452393,
+        "branch_gradient_norm": 0.18589331209659576
+      },
+      "set_hinge": {
+        "loss": 0.46468648314476013,
+        "branch_gradient_norm": 0.029828643426299095
+      },
+      "set_to_kl_gradient_norm_ratio": 0.16046108969643422
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2042,
+      "arm": "image_residual",
+      "hybrid_kl": {
+        "loss": 0.9289181232452393,
+        "branch_gradient_norm": 0.7347643971443176
+      },
+      "set_hinge": {
+        "loss": 0.46468648314476013,
+        "branch_gradient_norm": 0.14681096374988556
+      },
+      "set_to_kl_gradient_norm_ratio": 0.1998068555314744
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2043,
+      "arm": "task_residual",
+      "hybrid_kl": {
+        "loss": 0.8044295310974121,
+        "branch_gradient_norm": 0.0817347839474678
+      },
+      "set_hinge": {
+        "loss": 0.45935988426208496,
+        "branch_gradient_norm": 0.010623165406286716
+      },
+      "set_to_kl_gradient_norm_ratio": 0.12997116886140406
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2043,
+      "arm": "image_residual",
+      "hybrid_kl": {
+        "loss": 0.8044295310974121,
+        "branch_gradient_norm": 0.5534068942070007
+      },
+      "set_hinge": {
+        "loss": 0.45935988426208496,
+        "branch_gradient_norm": 0.21069391071796417
+      },
+      "set_to_kl_gradient_norm_ratio": 0.3807215141760676
+    }
+  ],
+  "scope_exclusions": [
+    "No optimizer replay",
+    "No full CLIP suffix rerun",
+    "Stored sampling summaries compared, not all optimizer draw indices"
+  ],
+  "cpu_replay": {
+    "status": "passed",
+    "base_copy_checks": [
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "base_copy_exact_bytes": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "base_copy_exact_bytes": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "base_copy_exact_bytes": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "base_copy_exact_bytes": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "base_copy_exact_bytes": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "base_copy_exact_bytes": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "base_copy_exact_bytes": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "base_copy_exact_bytes": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "base_copy_exact_bytes": true
+      }
+    ],
+    "selector_replay_checks": [
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "method": "shared",
+        "max_logit_error": 1.3113021850585938e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "method": "task_residual",
+        "max_logit_error": 1.430511474609375e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "method": "image_residual",
+        "max_logit_error": 2.086162567138672e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "method": "shared",
+        "max_logit_error": 2.0265579223632812e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "method": "task_residual",
+        "max_logit_error": 9.5367431640625e-07,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "method": "image_residual",
+        "max_logit_error": 1.4901161193847656e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "method": "shared",
+        "max_logit_error": 1.1920928955078125e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "method": "task_residual",
+        "max_logit_error": 1.6689300537109375e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "method": "image_residual",
+        "max_logit_error": 2.9802322387695312e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "method": "shared",
+        "max_logit_error": 2.6226043701171875e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "method": "task_residual",
+        "max_logit_error": 2.2649765014648438e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "method": "image_residual",
+        "max_logit_error": 2.5033950805664062e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "method": "shared",
+        "max_logit_error": 2.6226043701171875e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "method": "task_residual",
+        "max_logit_error": 3.5762786865234375e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "method": "image_residual",
+        "max_logit_error": 5.9604644775390625e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "method": "shared",
+        "max_logit_error": 1.6689300537109375e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "method": "task_residual",
+        "max_logit_error": 2.6226043701171875e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "method": "image_residual",
+        "max_logit_error": 4.649162292480469e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "method": "shared",
+        "max_logit_error": 3.337860107421875e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "method": "task_residual",
+        "max_logit_error": 3.337860107421875e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "method": "image_residual",
+        "max_logit_error": 3.337860107421875e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "method": "shared",
+        "max_logit_error": 2.384185791015625e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "method": "task_residual",
+        "max_logit_error": 2.5033950805664062e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "method": "image_residual",
+        "max_logit_error": 2.9802322387695312e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "method": "shared",
+        "max_logit_error": 2.6226043701171875e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "method": "task_residual",
+        "max_logit_error": 2.6226043701171875e-06,
+        "all_retained_positions_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "method": "image_residual",
+        "max_logit_error": 2.9802322387695312e-06,
+        "all_retained_positions_exact": true
+      }
+    ],
+    "branch_replays": 18,
+    "base_replays": 9,
+    "sample_count": 3,
+    "maximum_logit_error": 5.9604644775390625e-06,
+    "absolute_tolerance": 2e-05,
+    "relative_tolerance": 2e-05,
+    "scope": "CPU replay of each selector on one saved validation prefix and candidate pair per setting; no CLIP suffix rerun."
+  }
+}
