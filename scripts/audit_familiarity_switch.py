@@ -12,10 +12,16 @@ def read(path):
     return json.loads(path.read_text())
 
 
-def audit(root, dataset):
-    training = root / f"{dataset}-familiarity-switch-training-v1"
-    evaluation = root / f"{dataset}-familiarity-switch-evaluation-v1"
+def audit(root, dataset, partition_seed=None):
+    stem = f"{dataset}-familiarity-switch"
+    if partition_seed is not None:
+        stem += f"-partition-{partition_seed}"
+    training = root / f"{stem}-training-v1"
+    evaluation = root / f"{stem}-evaluation-v1"
     plan, protocol = read(training / "frozen_plan.json"), read(evaluation / "protocol.json")
+    assert plan["partition_seed"] == protocol["partition_seed"]
+    if partition_seed is not None:
+        assert plan["partition_seed"] == partition_seed
     summary = read(evaluation / "summary.json")
     with np.load(evaluation / "evaluation_panel.npz") as saved:
         panel = {key: saved[key].copy() for key in saved.files}
@@ -66,7 +72,8 @@ def audit(root, dataset):
                 assert all(len(saved[field]) == len(weights) for field in saved.files)
                 predictions[(phase, record["seed"], record["arm"])] = {
                     field: saved[field].astype(float) for field in ("correct", "margin")}
-    assert len(reused) == 6 and len(trained) == 18
+    total_models = 2 * 4 * len(plan["training_seeds"])
+    assert len(trained) == plan["new_fits"] and len(reused) == total_models - plan["new_fits"]
     for metric in ("correct", "margin"):
         per_phase = {}
         for phase in ("original", "switched"):
@@ -91,7 +98,8 @@ def audit(root, dataset):
     np.testing.assert_allclose(panel["full_margin"], margin, atol=1e-7)
     np.testing.assert_array_equal(panel["full_correct"], correct)
     assert not plan["final_test_used"] and not protocol["final_test_used"] and not protocol["official_test_used"]
-    return dict(status="passed", tasks=len(tasks), rows=len(weights), images=len(np.unique(panel["image_ids"])),
+    return dict(status="passed", partition_seed=plan["partition_seed"],
+                tasks=len(tasks), rows=len(weights), images=len(np.unique(panel["image_ids"])),
                 holdout_group_sizes=[len(h0), len(h1)], identical_class_codes_across_fits=True,
                 exact_reused_checkpoints=reused, new_training_runs=len(trained),
                 shared_panel_lengths_verified=True, equal_task_and_true_class_weights_verified=True,
@@ -105,5 +113,8 @@ def audit(root, dataset):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--runs-root", type=Path, default=Path("runs"))
+    parser.add_argument("--partition-seed", type=int,
+                        help="Use partition-specific run roots; omit for historical 2099 roots.")
     args = parser.parse_args()
-    print(json.dumps({dataset: audit(args.runs_root, dataset) for dataset in ("pets", "flowers")}, indent=2))
+    print(json.dumps({dataset: audit(args.runs_root, dataset, args.partition_seed)
+                      for dataset in ("pets", "flowers")}, indent=2))

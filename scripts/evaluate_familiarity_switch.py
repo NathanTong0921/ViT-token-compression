@@ -41,10 +41,12 @@ def run(original_dir, switched_dir, output, device_name, replicates):
     model_dirs = {"original": original_dir, "switched": switched_dir}
     protocols = {phase: json.loads((folder / "protocol.json").read_text()) for phase, folder in model_dirs.items()}
     old, new = protocols["original"], protocols["switched"]
+    partition_seed = old["partition_seed"]
+    assert new["partition_seed"] == partition_seed
     class_count = len(old["seen_classes"]) + len(old["held_classes"])
     for phase, block in (("original", 0), ("switched", 1)):
         np.testing.assert_array_equal(protocols[phase]["held_classes"],
-            class_partition(class_count, 2099, holdout_block=block)[1])
+            class_partition(class_count, partition_seed, holdout_block=block)[1])
     assert old["arms"] == new["arms"] and old["training_seeds"] == new["training_seeds"]
     for key in ("cache_dir", "model", "prune_after", "keep_patch_tokens", "training_steps", "batch_size"):
         assert old["config"][key] == new["config"][key]
@@ -73,7 +75,7 @@ def run(original_dir, switched_dir, output, device_name, replicates):
     protocol = dict(code_commit=commit, model_roots={k: str(v) for k, v in model_dirs.items()},
                     original_held_classes=old["held_classes"], switched_held_classes=new["held_classes"],
                     arms=old["arms"], training_seeds=old["training_seeds"],
-                    partition_seed=2099, partition_blocks=[0, 1],
+                    partition_seed=partition_seed, partition_blocks=[0, 1],
                     class_count=class_count, config=config, final_test_used=False, official_test_used=False,
                     training_audits={phase: {key: value[key] for key in ("training_images", "training_tasks", "training_class_ids")}
                                      for phase, value in audits.items()},
