@@ -1,0 +1,354 @@
+{
+  "description": "Raw class-score reconstruction with independently rebuilt equal-task/class weights; raw logit top-k, token replacement, and residual variation checks. Historical endpoint records originate from the run-time alignment check.",
+  "settings": [
+    {
+      "setting": "pets_b16_49",
+      "source": "/data2/zhao.tong/experiments/runs/shared-residual-v1/pets_b16_49",
+      "rows": 2624,
+      "weight_sum": 0.9999999999999999,
+      "maximum_classification_mean_error": 1.587618925213974e-14,
+      "seed_records": [
+        {
+          "seed": 2041,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "weighted_accuracy_margin": [
+            [
+              0.9898923444975974,
+              0.11722213698714155
+            ],
+            [
+              0.9910685805422544,
+              0.11720486226863472
+            ],
+            [
+              0.9906698564593258,
+              0.1173454171458652
+            ]
+          ],
+          "topk_masks_exact": true,
+          "retained_positions_unique": true,
+          "replacement_counts_exact": true,
+          "residual_patch_std_exact": true
+        },
+        {
+          "seed": 2042,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "weighted_accuracy_margin": [
+            [
+              0.9899122807017441,
+              0.11749415411591912
+            ],
+            [
+              0.9895135566188097,
+              0.11776229061047493
+            ],
+            [
+              0.989553429027109,
+              0.11758615803222137
+            ]
+          ],
+          "topk_masks_exact": true,
+          "retained_positions_unique": true,
+          "replacement_counts_exact": true,
+          "residual_patch_std_exact": true
+        },
+        {
+          "seed": 2043,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "weighted_accuracy_margin": [
+            [
+              0.9907097288676133,
+              0.11693412047158469
+            ],
+            [
+              0.9898923444975974,
+              0.11716798050732359
+            ],
+            [
+              0.9903110047846847,
+              0.11762647076429707
+            ]
+          ],
+          "topk_masks_exact": true,
+          "retained_positions_unique": true,
+          "replacement_counts_exact": true,
+          "residual_patch_std_exact": true
+        }
+      ],
+      "historical_endpoint_records": [
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/pets_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/pets_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/pets_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        }
+      ]
+    },
+    {
+      "setting": "flowers_b16_49",
+      "source": "/data2/zhao.tong/experiments/runs/shared-residual-v1/flowers_b16_49",
+      "rows": 4080,
+      "weight_sum": 1.0,
+      "maximum_classification_mean_error": 4.579669976578771e-16,
+      "seed_records": [
+        {
+          "seed": 2041,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "weighted_accuracy_margin": [
+            [
+              0.9659313725490163,
+              0.08939228776509252
+            ],
+            [
+              0.9681372549019575,
+              0.09041276554767554
+            ],
+            [
+              0.9674019607843105,
+              0.09053065771379307
+            ]
+          ],
+          "topk_masks_exact": true,
+          "retained_positions_unique": true,
+          "replacement_counts_exact": true,
+          "residual_patch_std_exact": true
+        },
+        {
+          "seed": 2042,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "weighted_accuracy_margin": [
+            [
+              0.9678921568627418,
+              0.09086323981369382
+            ],
+            [
+              0.9674019607843104,
+              0.09067781439515361
+            ],
+            [
+              0.9659313725490164,
+              0.09125549342998214
+            ]
+          ],
+          "topk_masks_exact": true,
+          "retained_positions_unique": true,
+          "replacement_counts_exact": true,
+          "residual_patch_std_exact": true
+        },
+        {
+          "seed": 2043,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "weighted_accuracy_margin": [
+            [
+              0.9681372549019575,
+              0.0903722307289722
+            ],
+            [
+              0.9676470588235261,
+              0.09062866254887456
+            ],
+            [
+              0.9664215686274478,
+              0.09114824396734254
+            ]
+          ],
+          "topk_masks_exact": true,
+          "retained_positions_unique": true,
+          "replacement_counts_exact": true,
+          "residual_patch_std_exact": true
+        }
+      ],
+      "historical_endpoint_records": [
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        }
+      ]
+    },
+    {
+      "setting": "flowers_b16_98",
+      "source": "/data2/zhao.tong/experiments/runs/shared-residual-v1/flowers_b16_98",
+      "rows": 4080,
+      "weight_sum": 1.0,
+      "maximum_classification_mean_error": 4.163336342344337e-16,
+      "seed_records": [
+        {
+          "seed": 2041,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "weighted_accuracy_margin": [
+            [
+              0.97083333333333,
+              0.10549490959974986
+            ],
+            [
+              0.9698529411764673,
+              0.10573354295371126
+            ],
+            [
+              0.9705882352941144,
+              0.10566030452974214
+            ]
+          ],
+          "topk_masks_exact": true,
+          "retained_positions_unique": true,
+          "replacement_counts_exact": true,
+          "residual_patch_std_exact": true
+        },
+        {
+          "seed": 2042,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "weighted_accuracy_margin": [
+            [
+              0.9688725490196045,
+              0.10636402521225125
+            ],
+            [
+              0.9705882352941143,
+              0.10607077962473452
+            ],
+            [
+              0.9698529411764674,
+              0.1060563698271561
+            ]
+          ],
+          "topk_masks_exact": true,
+          "retained_positions_unique": true,
+          "replacement_counts_exact": true,
+          "residual_patch_std_exact": true
+        },
+        {
+          "seed": 2043,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "weighted_accuracy_margin": [
+            [
+              0.9676470588235261,
+              0.10654854821094197
+            ],
+            [
+              0.9671568627450947,
+              0.10588218966885135
+            ],
+            [
+              0.9676470588235262,
+              0.10631928323422685
+            ]
+          ],
+          "topk_masks_exact": true,
+          "retained_positions_unique": true,
+          "replacement_counts_exact": true,
+          "residual_patch_std_exact": true
+        }
+      ],
+      "historical_endpoint_records": [
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_98",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_98",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_98",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        }
+      ]
+    }
+  ],
+  "final_test_used": false
+}

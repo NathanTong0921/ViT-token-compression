@@ -1,0 +1,295 @@
+{
+  "description": "Independent means and paired bootstrap intervals reconstructed from backed-up per-image weighted contributions. These arrays already average the three seeds; this does not re-read per-seed class scores or checkpoints.",
+  "settings": [
+    {
+      "setting": "pets_b16_49",
+      "maximum_estimate_error": 0.0,
+      "checks": [
+        {
+          "panel": "classification",
+          "method_or_contrast": "shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "task_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "task_residual_minus_image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "task_residual_minus_shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "image_residual_minus_shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "task_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "task_residual_minus_image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "task_residual_minus_shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "image_residual_minus_shared",
+          "means_and_intervals_match": true
+        }
+      ],
+      "historical_endpoint_records": [
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/pets_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/pets_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/pets_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        }
+      ]
+    },
+    {
+      "setting": "flowers_b16_49",
+      "maximum_estimate_error": 0.0,
+      "checks": [
+        {
+          "panel": "classification",
+          "method_or_contrast": "shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "task_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "task_residual_minus_image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "task_residual_minus_shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "image_residual_minus_shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "task_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "task_residual_minus_image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "task_residual_minus_shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "image_residual_minus_shared",
+          "means_and_intervals_match": true
+        }
+      ],
+      "historical_endpoint_records": [
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_49",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        }
+      ]
+    },
+    {
+      "setting": "flowers_b16_98",
+      "maximum_estimate_error": 0.0,
+      "checks": [
+        {
+          "panel": "classification",
+          "method_or_contrast": "shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "task_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "task_residual_minus_image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "task_residual_minus_shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "classification",
+          "method_or_contrast": "image_residual_minus_shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "task_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "task_residual_minus_image_residual",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "task_residual_minus_shared",
+          "means_and_intervals_match": true
+        },
+        {
+          "panel": "exchange",
+          "method_or_contrast": "image_residual_minus_shared",
+          "means_and_intervals_match": true
+        }
+      ],
+      "historical_endpoint_records": [
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_98",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_98",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        },
+        {
+          "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_98",
+          "retained_masks_exact": true,
+          "full_model_scores_exact": true,
+          "cosine_score_max_absolute_error": 0.0,
+          "accuracy_flip_rows": 0,
+          "balanced_accuracy_change": 0.0,
+          "balanced_margin_change": 0.0
+        }
+      ]
+    }
+  ],
+  "bootstrap_replicates": 2000,
+  "full_raw_score_audit": "Outside this contribution-only audit; recorded separately in independent-audit.json.",
+  "base_checkpoint_bundle": "Outside this contribution-only audit; recorded separately in base-checkpoint-manifest.json.",
+  "confirmed_completed_fits": 18,
+  "final_test_used": false
+}

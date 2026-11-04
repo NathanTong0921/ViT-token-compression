@@ -47,7 +47,8 @@ def audit_curated(root):
                         "historical_endpoint_records": [r["historical_shared_endpoint"] for r in summary["evaluation_records"]]})
     return {"description": "Independent means and paired bootstrap intervals reconstructed from backed-up per-image weighted contributions. These arrays already average the three seeds; this does not re-read per-seed class scores or checkpoints.",
             "settings": results, "bootstrap_replicates": 2000,
-            "full_raw_score_audit": "pending server reconnection", "base_checkpoint_bundle": "pending server reconnection",
+            "full_raw_score_audit": "Outside this contribution-only audit; recorded separately in independent-audit.json.",
+            "base_checkpoint_bundle": "Outside this contribution-only audit; recorded separately in base-checkpoint-manifest.json.",
             "confirmed_completed_fits": 18, "final_test_used": False}
 
 

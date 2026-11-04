@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "source": "Existing local directional score arrays and independent historical summaries",
+  "final_test_used": false,
+  "new_checkpoint_audit": "passed in separate server audit",
+  "new_checkpoints_verified": 96,
+  "paired_initial_validation_losses_compared": 48,
+  "initial_validation_loss_max_difference": 0.0,
+  "summed_recorded_training_seconds": 2560.7206522638444,
+  "datasets": {
+    "pets": {
+      "historical_numeric_values_compared": 150,
+      "historical_max_absolute_difference": 0.0,
+      "partitions": {
+        "2099": {
+          "directional_choice_and_margin_reconstructed": true,
+          "source_predictions_verified": 24
+        },
+        "2100": {
+          "directional_choice_and_margin_reconstructed": true,
+          "source_predictions_verified": 24
+        },
+        "2101": {
+          "directional_choice_and_margin_reconstructed": true,
+          "source_predictions_verified": 24
+        }
+      },
+      "source_prediction_aggregate_numeric_values_compared": 565,
+      "source_prediction_aggregate_max_difference": 0.0
+    },
+    "flowers": {
+      "historical_numeric_values_compared": 150,
+      "historical_max_absolute_difference": 0.0,
+      "partitions": {
+        "2099": {
+          "directional_choice_and_margin_reconstructed": true,
+          "source_predictions_verified": 24
+        },
+        "2100": {
+          "directional_choice_and_margin_reconstructed": true,
+          "source_predictions_verified": 24
+        },
+        "2101": {
+          "directional_choice_and_margin_reconstructed": true,
+          "source_predictions_verified": 24
+        }
+      },
+      "source_prediction_aggregate_numeric_values_compared": 565,
+      "source_prediction_aggregate_max_difference": 0.0
+    }
+  }
+}

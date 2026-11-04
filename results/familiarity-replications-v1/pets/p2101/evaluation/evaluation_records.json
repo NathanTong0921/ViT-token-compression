@@ -1,0 +1,170 @@
+[
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2041_real_text.pt",
+    "evaluation_seconds": 0.9421119899488986
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2041_permuted_2097.pt",
+    "evaluation_seconds": 0.7769144420744851
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2041_permuted_2098.pt",
+    "evaluation_seconds": 0.7767683049896732
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2041_image_only_wide.pt",
+    "evaluation_seconds": 0.18138758500572294
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2042_real_text.pt",
+    "evaluation_seconds": 0.7866092709591612
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2042_permuted_2097.pt",
+    "evaluation_seconds": 0.9527219730662182
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2042_permuted_2098.pt",
+    "evaluation_seconds": 0.9512231959961355
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2042_image_only_wide.pt",
+    "evaluation_seconds": 0.21804167598020285
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2043_real_text.pt",
+    "evaluation_seconds": 0.9546034500235692
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2043_permuted_2097.pt",
+    "evaluation_seconds": 0.9493603990413249
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2043_permuted_2098.pt",
+    "evaluation_seconds": 0.9175937270047143
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2043_image_only_wide.pt",
+    "evaluation_seconds": 0.1760470219887793
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2041_real_text.pt",
+    "evaluation_seconds": 0.7807906260713935
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2041_permuted_2097.pt",
+    "evaluation_seconds": 0.7784778889035806
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2041_permuted_2098.pt",
+    "evaluation_seconds": 0.7895102640613914
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2041_image_only_wide.pt",
+    "evaluation_seconds": 0.17380308103747666
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2042_real_text.pt",
+    "evaluation_seconds": 0.772630560095422
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2042_permuted_2097.pt",
+    "evaluation_seconds": 0.7760900360299274
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2042_permuted_2098.pt",
+    "evaluation_seconds": 0.7763068729545921
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2042_image_only_wide.pt",
+    "evaluation_seconds": 0.18005570804234594
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "real_text",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2043_real_text.pt",
+    "evaluation_seconds": 0.7812099719885737
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2043_permuted_2097.pt",
+    "evaluation_seconds": 0.7784783269744366
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2043_permuted_2098.pt",
+    "evaluation_seconds": 0.7801082889782265
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/pets-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2043_image_only_wide.pt",
+    "evaluation_seconds": 0.17654451599810272
+  }
+]

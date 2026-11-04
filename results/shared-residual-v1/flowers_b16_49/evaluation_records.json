@@ -1,0 +1,71 @@
+[
+  {
+    "seed": 2041,
+    "shared_feature_cache_seconds": 0.08977922704070807,
+    "identical_initial_val_loss": true,
+    "online_selector_seconds": {
+      "shared": 0.023412915063090622,
+      "task_residual": 0.10791465803049505,
+      "image_residual": 0.027486698934808373
+    },
+    "unique_suffix_seconds": 0.7841043149819598,
+    "unique_image_masks": 5883,
+    "raw_image_masks": 12240,
+    "timing_scope": "Batched selector replay and deduplicated cached-prefix suffix evaluation; not end-to-end latency.",
+    "historical_shared_endpoint": {
+      "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_49",
+      "retained_masks_exact": true,
+      "full_model_scores_exact": true,
+      "cosine_score_max_absolute_error": 0.0,
+      "accuracy_flip_rows": 0,
+      "balanced_accuracy_change": 0.0,
+      "balanced_margin_change": 0.0
+    }
+  },
+  {
+    "seed": 2042,
+    "shared_feature_cache_seconds": 0.041846255073323846,
+    "identical_initial_val_loss": true,
+    "online_selector_seconds": {
+      "shared": 0.023474649991840124,
+      "task_residual": 0.1092796929879114,
+      "image_residual": 0.027533530024811625
+    },
+    "unique_suffix_seconds": 0.5984950510319322,
+    "unique_image_masks": 5775,
+    "raw_image_masks": 12240,
+    "timing_scope": "Batched selector replay and deduplicated cached-prefix suffix evaluation; not end-to-end latency.",
+    "historical_shared_endpoint": {
+      "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_49",
+      "retained_masks_exact": true,
+      "full_model_scores_exact": true,
+      "cosine_score_max_absolute_error": 0.0,
+      "accuracy_flip_rows": 0,
+      "balanced_accuracy_change": 0.0,
+      "balanced_margin_change": 0.0
+    }
+  },
+  {
+    "seed": 2043,
+    "shared_feature_cache_seconds": 0.04060651094187051,
+    "identical_initial_val_loss": true,
+    "online_selector_seconds": {
+      "shared": 0.02139113110024482,
+      "task_residual": 0.10297057789284736,
+      "image_residual": 0.026382282027043402
+    },
+    "unique_suffix_seconds": 0.6084675260353833,
+    "unique_image_masks": 5983,
+    "raw_image_masks": 12240,
+    "timing_scope": "Batched selector replay and deduplicated cached-prefix suffix evaluation; not end-to-end latency.",
+    "historical_shared_endpoint": {
+      "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/flowers_b16_49",
+      "retained_masks_exact": true,
+      "full_model_scores_exact": true,
+      "cosine_score_max_absolute_error": 0.0,
+      "accuracy_flip_rows": 0,
+      "balanced_accuracy_change": 0.0,
+      "balanced_margin_change": 0.0
+    }
+  }
+]

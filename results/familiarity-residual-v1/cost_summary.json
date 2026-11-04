@@ -1,0 +1,8 @@
+{
+  "new_selector_fits": 96,
+  "new_residual_branch_fits": 18,
+  "familiarity_training_seconds": 2560.7206522638444,
+  "residual_training_seconds": 237.85250848182477,
+  "total_new_training_loop_gpu_hours": 0.7773814335404636,
+  "scope": "Sum of measured per-fit training loops on cached features; excludes reused frozen encoder/teacher generation, earlier shared-base fitting, new feature caching, replay evaluation, CPU analysis, and queue/connection time. Not the entire project GPU consumption."
+}

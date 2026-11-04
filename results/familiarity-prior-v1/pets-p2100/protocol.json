@@ -1,0 +1,27 @@
+{
+  "source": "runs/pets-familiarity-switch-partition-2100-evaluation-v1",
+  "cache": "runs/pets-selector-scale-supervision-v1",
+  "code_commit": "35ff233b5a7db451af209833ffb3e83da14ef56b",
+  "partition_seed": 2100,
+  "folds": 5,
+  "fold_seed": 2301,
+  "bootstrap_seed": 2302,
+  "bootstrap_replicates": 2000,
+  "calibration": "global and per-task unweighted q_pruned minus q_full means on other image folds; no truth labels or task/class weights used in fitting",
+  "orientation": "positive q favors H0, the original held class; orientation follows candidate IDs and frozen training groups",
+  "interpretation": "full-CLIP-referenced diagnostic correction; not a deployable speedup or exclusive causal identification of an answer prior",
+  "margin_cancellation": "Average corrected margin effects can cancel partly algebraically; held-image accuracy and held-image shift-prediction MSE are the correction evidence",
+  "uncertainty": "paired image bootstrap conditional on fixed folds, fitted offsets, training seeds, mappings and task panel; offset fitting is not repeated inside bootstrap",
+  "final_test_used": false,
+  "arms": [
+    "real_text",
+    "permuted_2097",
+    "permuted_2098",
+    "image_only_wide"
+  ],
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ]
+}

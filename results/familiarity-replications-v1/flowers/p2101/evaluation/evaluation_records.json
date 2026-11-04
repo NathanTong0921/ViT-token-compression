@@ -1,0 +1,170 @@
+[
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2041_real_text.pt",
+    "evaluation_seconds": 0.8323278110474348
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2041_permuted_2097.pt",
+    "evaluation_seconds": 0.6895371930440888
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2041_permuted_2098.pt",
+    "evaluation_seconds": 0.6996193259255961
+  },
+  {
+    "phase": "original",
+    "seed": 2041,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2041_image_only_wide.pt",
+    "evaluation_seconds": 0.2930378719465807
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2042_real_text.pt",
+    "evaluation_seconds": 0.6939891909714788
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2042_permuted_2097.pt",
+    "evaluation_seconds": 0.6883369860006496
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2042_permuted_2098.pt",
+    "evaluation_seconds": 0.7133244319120422
+  },
+  {
+    "phase": "original",
+    "seed": 2042,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2042_image_only_wide.pt",
+    "evaluation_seconds": 0.33726026699878275
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2043_real_text.pt",
+    "evaluation_seconds": 0.7954607179854065
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2043_permuted_2097.pt",
+    "evaluation_seconds": 0.8018870489904657
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2043_permuted_2098.pt",
+    "evaluation_seconds": 0.7956706449622288
+  },
+  {
+    "phase": "original",
+    "seed": 2043,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2043_image_only_wide.pt",
+    "evaluation_seconds": 0.3345526779303327
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2041_real_text.pt",
+    "evaluation_seconds": 0.6970798620022833
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2041_permuted_2097.pt",
+    "evaluation_seconds": 0.6863922439515591
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2041_permuted_2098.pt",
+    "evaluation_seconds": 0.6895255710696802
+  },
+  {
+    "phase": "switched",
+    "seed": 2041,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2041_image_only_wide.pt",
+    "evaluation_seconds": 0.2923916639992967
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2042_real_text.pt",
+    "evaluation_seconds": 0.6807991449022666
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2042_permuted_2097.pt",
+    "evaluation_seconds": 0.6846154059749097
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2042_permuted_2098.pt",
+    "evaluation_seconds": 0.682454037014395
+  },
+  {
+    "phase": "switched",
+    "seed": 2042,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2042_image_only_wide.pt",
+    "evaluation_seconds": 0.2921533309854567
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "real_text",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2043_real_text.pt",
+    "evaluation_seconds": 0.6842613270273432
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "permuted_2097",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2043_permuted_2097.pt",
+    "evaluation_seconds": 0.6877622340107337
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "permuted_2098",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2043_permuted_2098.pt",
+    "evaluation_seconds": 0.6849878140492365
+  },
+  {
+    "phase": "switched",
+    "seed": 2043,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-familiarity-switch-partition-2101-training-v1/switched/class_holdout/seed_2043_image_only_wide.pt",
+    "evaluation_seconds": 0.2921143980929628
+  }
+]

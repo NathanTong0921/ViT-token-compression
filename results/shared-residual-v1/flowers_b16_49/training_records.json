@@ -1,0 +1,86 @@
+[
+  {
+    "seed": 2041,
+    "arm": "task_residual",
+    "initial_val_teacher_kl": 0.5723056941270352,
+    "final_train_teacher_kl": 0.1948124510024462,
+    "final_val_teacher_kl": 0.6849780175618041,
+    "training_seconds": 16.32133670093026,
+    "parameters": {
+      "frozen_shared": 347399,
+      "trainable_correction": 9801,
+      "total": 357200
+    },
+    "shared_checkpoint": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt"
+  },
+  {
+    "seed": 2041,
+    "arm": "image_residual",
+    "initial_val_teacher_kl": 0.5723056941270352,
+    "final_train_teacher_kl": 0.28208922598940117,
+    "final_val_teacher_kl": 0.5790560258436018,
+    "training_seconds": 9.716614186065271,
+    "parameters": {
+      "frozen_shared": 347399,
+      "trainable_correction": 9850,
+      "total": 357249
+    },
+    "shared_checkpoint": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt"
+  },
+  {
+    "seed": 2042,
+    "arm": "task_residual",
+    "initial_val_teacher_kl": 0.5746111460214974,
+    "final_train_teacher_kl": 0.20945985722358398,
+    "final_val_teacher_kl": 0.6118996657821462,
+    "training_seconds": 16.498645764077082,
+    "parameters": {
+      "frozen_shared": 347399,
+      "trainable_correction": 9801,
+      "total": 357200
+    },
+    "shared_checkpoint": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt"
+  },
+  {
+    "seed": 2042,
+    "arm": "image_residual",
+    "initial_val_teacher_kl": 0.5746111460214974,
+    "final_train_teacher_kl": 0.2810314587212215,
+    "final_val_teacher_kl": 0.5792641003273756,
+    "training_seconds": 10.26896802696865,
+    "parameters": {
+      "frozen_shared": 347399,
+      "trainable_correction": 9850,
+      "total": 357249
+    },
+    "shared_checkpoint": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt"
+  },
+  {
+    "seed": 2043,
+    "arm": "task_residual",
+    "initial_val_teacher_kl": 0.5781813879116147,
+    "final_train_teacher_kl": 0.1940822748789751,
+    "final_val_teacher_kl": 0.6633580525517556,
+    "training_seconds": 15.37581091094762,
+    "parameters": {
+      "frozen_shared": 347399,
+      "trainable_correction": 9801,
+      "total": 357200
+    },
+    "shared_checkpoint": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt"
+  },
+  {
+    "seed": 2043,
+    "arm": "image_residual",
+    "initial_val_teacher_kl": 0.5781813879116147,
+    "final_train_teacher_kl": 0.2826686296679173,
+    "final_val_teacher_kl": 0.5879721836758749,
+    "training_seconds": 10.549521354027092,
+    "parameters": {
+      "frozen_shared": 347399,
+      "trainable_correction": 9850,
+      "total": 357249
+    },
+    "shared_checkpoint": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt"
+  }
+]

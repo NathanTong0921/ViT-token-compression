@@ -1,0 +1,71 @@
+[
+  {
+    "seed": 2041,
+    "shared_feature_cache_seconds": 0.13002460508141667,
+    "identical_initial_val_loss": true,
+    "online_selector_seconds": {
+      "shared": 0.01786824595183134,
+      "task_residual": 0.07090272300411016,
+      "image_residual": 0.021469858940690756
+    },
+    "unique_suffix_seconds": 0.564120328053832,
+    "unique_image_masks": 3766,
+    "raw_image_masks": 7872,
+    "timing_scope": "Batched selector replay and deduplicated cached-prefix suffix evaluation; not end-to-end latency.",
+    "historical_shared_endpoint": {
+      "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/pets_b16_49",
+      "retained_masks_exact": true,
+      "full_model_scores_exact": true,
+      "cosine_score_max_absolute_error": 0.0,
+      "accuracy_flip_rows": 0,
+      "balanced_accuracy_change": 0.0,
+      "balanced_margin_change": 0.0
+    }
+  },
+  {
+    "seed": 2042,
+    "shared_feature_cache_seconds": 0.07287183403968811,
+    "identical_initial_val_loss": true,
+    "online_selector_seconds": {
+      "shared": 0.016913841012865305,
+      "task_residual": 0.0673301030183211,
+      "image_residual": 0.020397637970745564
+    },
+    "unique_suffix_seconds": 0.3950570250162855,
+    "unique_image_masks": 3732,
+    "raw_image_masks": 7872,
+    "timing_scope": "Batched selector replay and deduplicated cached-prefix suffix evaluation; not end-to-end latency.",
+    "historical_shared_endpoint": {
+      "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/pets_b16_49",
+      "retained_masks_exact": true,
+      "full_model_scores_exact": true,
+      "cosine_score_max_absolute_error": 0.0,
+      "accuracy_flip_rows": 0,
+      "balanced_accuracy_change": 0.0,
+      "balanced_margin_change": 0.0
+    }
+  },
+  {
+    "seed": 2043,
+    "shared_feature_cache_seconds": 0.07832391303963959,
+    "identical_initial_val_loss": true,
+    "online_selector_seconds": {
+      "shared": 0.017796016996726394,
+      "task_residual": 0.06998496502637863,
+      "image_residual": 0.02100936498027295
+    },
+    "unique_suffix_seconds": 0.3955825379816815,
+    "unique_image_masks": 3827,
+    "raw_image_masks": 7872,
+    "timing_scope": "Batched selector replay and deduplicated cached-prefix suffix evaluation; not end-to-end latency.",
+    "historical_shared_endpoint": {
+      "source": "/data2/zhao.tong/experiments/runs/core-protection-v1/pets_b16_49",
+      "retained_masks_exact": true,
+      "full_model_scores_exact": true,
+      "cosine_score_max_absolute_error": 0.0,
+      "accuracy_flip_rows": 0,
+      "balanced_accuracy_change": 0.0,
+      "balanced_margin_change": 0.0
+    }
+  }
+]

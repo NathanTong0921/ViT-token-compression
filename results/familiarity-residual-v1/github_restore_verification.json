@@ -1,0 +1,94 @@
+{
+  "source": "GitHub Release asset range downloads, not local ZIPs",
+  "status": "passed",
+  "scope": "All three remote ZIP central directories and selected member CRCs; four familiarity checkpoints deserialized; six residual branches plus three bases restored for seed2041, three saved inputs reproduced on CPU. Full classification claims are audited separately from original prediction files.",
+  "records": [
+    {
+      "archive": "pets-familiarity-replications-v1",
+      "github_asset_id": 707885390,
+      "github_size": 510223810,
+      "archive_members": 184,
+      "members_read_with_crc": [
+        "runs/pets-familiarity-switch-partition-2100-training-v1/frozen_plan.json",
+        "runs/pets-familiarity-switch-partition-2100-training-v1/original/class_holdout/seed_2041_image_only_wide.pt",
+        "runs/pets-familiarity-switch-partition-2101-training-v1/frozen_plan.json",
+        "runs/pets-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2041_image_only_wide.pt"
+      ],
+      "forward_checks": [],
+      "range_requests": 15,
+      "downloaded_bytes": 2821472
+    },
+    {
+      "archive": "flowers-familiarity-replications-v1",
+      "github_asset_id": 707885407,
+      "github_size": 537273207,
+      "archive_members": 184,
+      "members_read_with_crc": [
+        "runs/flowers-familiarity-switch-partition-2100-training-v1/frozen_plan.json",
+        "runs/flowers-familiarity-switch-partition-2100-training-v1/original/class_holdout/seed_2041_image_only_wide.pt",
+        "runs/flowers-familiarity-switch-partition-2101-training-v1/frozen_plan.json",
+        "runs/flowers-familiarity-switch-partition-2101-training-v1/original/class_holdout/seed_2041_image_only_wide.pt"
+      ],
+      "forward_checks": [],
+      "range_requests": 15,
+      "downloaded_bytes": 2826516
+    },
+    {
+      "archive": "shared-residual-and-prior-v1",
+      "github_asset_id": 707892687,
+      "github_size": 181884713,
+      "archive_members": 137,
+      "members_read_with_crc": [
+        "runs/shared-residual-v1/base_checkpoints/pets_b16_49/verification_input.npz",
+        "runs/shared-residual-v1/base_checkpoints/pets_b16_49/seed_2041.pt",
+        "runs/shared-residual-v1/pets_b16_49/seed_2041/task_residual.pt",
+        "runs/shared-residual-v1/pets_b16_49/seed_2041/image_residual.pt",
+        "runs/shared-residual-v1/base_checkpoints/flowers_b16_49/verification_input.npz",
+        "runs/shared-residual-v1/base_checkpoints/flowers_b16_49/seed_2041.pt",
+        "runs/shared-residual-v1/flowers_b16_49/seed_2041/task_residual.pt",
+        "runs/shared-residual-v1/flowers_b16_49/seed_2041/image_residual.pt",
+        "runs/shared-residual-v1/base_checkpoints/flowers_b16_98/verification_input.npz",
+        "runs/shared-residual-v1/base_checkpoints/flowers_b16_98/seed_2041.pt",
+        "runs/shared-residual-v1/flowers_b16_98/seed_2041/task_residual.pt",
+        "runs/shared-residual-v1/flowers_b16_98/seed_2041/image_residual.pt"
+      ],
+      "forward_checks": [
+        {
+          "setting": "pets_b16_49",
+          "seed": 2041,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "max_logit_error": 1.9073486328125e-06,
+          "selected_positions_identical": true
+        },
+        {
+          "setting": "flowers_b16_49",
+          "seed": 2041,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "max_logit_error": 3.337860107421875e-06,
+          "selected_positions_identical": true
+        },
+        {
+          "setting": "flowers_b16_98",
+          "seed": 2041,
+          "methods": [
+            "shared",
+            "task_residual",
+            "image_residual"
+          ],
+          "max_logit_error": 3.039836883544922e-06,
+          "selected_positions_identical": true
+        }
+      ],
+      "range_requests": 39,
+      "downloaded_bytes": 5323758
+    }
+  ]
+}

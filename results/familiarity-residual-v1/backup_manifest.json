@@ -1,0 +1,62 @@
+{
+  "release_id": 433412690,
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-0a1f0d69cd5791859fec",
+  "release_status": "draft",
+  "archives": [
+    {
+      "file": "pets-familiarity-replications-v1.zip",
+      "bytes": 510223810,
+      "sha256": "330ef1adf38e5f62f1e22ecbc04391d4bdca41f4b908d08b620846df7e1d71fc",
+      "files": 184,
+      "sources": [
+        "runs/pets-familiarity-switch-partition-2100-training-v1",
+        "runs/pets-familiarity-switch-partition-2100-evaluation-v1",
+        "runs/pets-familiarity-switch-partition-2101-training-v1",
+        "runs/pets-familiarity-switch-partition-2101-evaluation-v1"
+      ],
+      "github_asset_id": 707885390,
+      "github_asset_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/707885390",
+      "github_asset_digest": "sha256:330ef1adf38e5f62f1e22ecbc04391d4bdca41f4b908d08b620846df7e1d71fc",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/familiarity-residual-v1/pets-familiarity-replications-v1.zip",
+      "server_path": "/data2/zhao.tong/artifacts/familiarity-residual-v1/pets-familiarity-replications-v1.zip",
+      "local_and_github_verified": true
+    },
+    {
+      "file": "flowers-familiarity-replications-v1.zip",
+      "bytes": 537273207,
+      "sha256": "5adadad5394047ec3fb2965867ea11b0bfc73be9eda7dc04d5563d196acdd7d8",
+      "files": 184,
+      "sources": [
+        "runs/flowers-familiarity-switch-partition-2100-training-v1",
+        "runs/flowers-familiarity-switch-partition-2100-evaluation-v1",
+        "runs/flowers-familiarity-switch-partition-2101-training-v1",
+        "runs/flowers-familiarity-switch-partition-2101-evaluation-v1"
+      ],
+      "github_asset_id": 707885407,
+      "github_asset_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/707885407",
+      "github_asset_digest": "sha256:5adadad5394047ec3fb2965867ea11b0bfc73be9eda7dc04d5563d196acdd7d8",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/familiarity-residual-v1/flowers-familiarity-replications-v1.zip",
+      "server_path": "/data2/zhao.tong/artifacts/familiarity-residual-v1/flowers-familiarity-replications-v1.zip",
+      "local_and_github_verified": true
+    },
+    {
+      "file": "shared-residual-and-prior-v1.zip",
+      "bytes": 181884713,
+      "sha256": "fa1a46f9f1aa662147d50a5431b15ea0283a4d6762360a5fbffa46fa224ed830",
+      "files": 137,
+      "sources": [
+        "runs/shared-residual-v1",
+        "runs/familiarity-prior-v1"
+      ],
+      "github_asset_id": 707892687,
+      "github_asset_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/707892687",
+      "github_asset_digest": "sha256:fa1a46f9f1aa662147d50a5431b15ea0283a4d6762360a5fbffa46fa224ed830",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/familiarity-residual-v1/shared-residual-and-prior-v1.zip",
+      "server_path": "/data2/zhao.tong/artifacts/familiarity-residual-v1/shared-residual-and-prior-v1.zip",
+      "local_and_github_verified": true
+    }
+  ],
+  "total_bytes": 1229381730,
+  "restore_verification": "github_restore_verification.json",
+  "note": "Internal archive/recovery metadata; not report material. Compact scientific data, figures, protocols, and summaries are versioned in Git."
+}

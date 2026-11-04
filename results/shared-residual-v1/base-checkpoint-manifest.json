@@ -1,0 +1,177 @@
+{
+  "created_utc": "2026-11-04T02:07:27.047988+00:00",
+  "root": "/data2/zhao.tong/experiments/runs/shared-residual-v1",
+  "checkpoint_records": [
+    {
+      "setting": "pets_b16_49",
+      "seed": 2041,
+      "original_source": "/data2/zhao.tong/experiments/runs/pets-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt",
+      "bundled_base": "base_checkpoints/pets_b16_49/seed_2041.pt",
+      "branch_checkpoints": {
+        "task_residual": "pets_b16_49/seed_2041/task_residual.pt",
+        "image_residual": "pets_b16_49/seed_2041/image_residual.pt"
+      },
+      "size_bytes": 1394208,
+      "exact_bytes_verified": true
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2042,
+      "original_source": "/data2/zhao.tong/experiments/runs/pets-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt",
+      "bundled_base": "base_checkpoints/pets_b16_49/seed_2042.pt",
+      "branch_checkpoints": {
+        "task_residual": "pets_b16_49/seed_2042/task_residual.pt",
+        "image_residual": "pets_b16_49/seed_2042/image_residual.pt"
+      },
+      "size_bytes": 1394208,
+      "exact_bytes_verified": true
+    },
+    {
+      "setting": "pets_b16_49",
+      "seed": 2043,
+      "original_source": "/data2/zhao.tong/experiments/runs/pets-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt",
+      "bundled_base": "base_checkpoints/pets_b16_49/seed_2043.pt",
+      "branch_checkpoints": {
+        "task_residual": "pets_b16_49/seed_2043/task_residual.pt",
+        "image_residual": "pets_b16_49/seed_2043/image_residual.pt"
+      },
+      "size_bytes": 1394208,
+      "exact_bytes_verified": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2041,
+      "original_source": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt",
+      "bundled_base": "base_checkpoints/flowers_b16_49/seed_2041.pt",
+      "branch_checkpoints": {
+        "task_residual": "flowers_b16_49/seed_2041/task_residual.pt",
+        "image_residual": "flowers_b16_49/seed_2041/image_residual.pt"
+      },
+      "size_bytes": 1394272,
+      "exact_bytes_verified": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2042,
+      "original_source": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt",
+      "bundled_base": "base_checkpoints/flowers_b16_49/seed_2042.pt",
+      "branch_checkpoints": {
+        "task_residual": "flowers_b16_49/seed_2042/task_residual.pt",
+        "image_residual": "flowers_b16_49/seed_2042/image_residual.pt"
+      },
+      "size_bytes": 1394272,
+      "exact_bytes_verified": true
+    },
+    {
+      "setting": "flowers_b16_49",
+      "seed": 2043,
+      "original_source": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt",
+      "bundled_base": "base_checkpoints/flowers_b16_49/seed_2043.pt",
+      "branch_checkpoints": {
+        "task_residual": "flowers_b16_49/seed_2043/task_residual.pt",
+        "image_residual": "flowers_b16_49/seed_2043/image_residual.pt"
+      },
+      "size_bytes": 1394272,
+      "exact_bytes_verified": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2041,
+      "original_source": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-98-training-v1/full/seed_2041/image_only_wide.pt",
+      "bundled_base": "base_checkpoints/flowers_b16_98/seed_2041.pt",
+      "branch_checkpoints": {
+        "task_residual": "flowers_b16_98/seed_2041/task_residual.pt",
+        "image_residual": "flowers_b16_98/seed_2041/image_residual.pt"
+      },
+      "size_bytes": 1394272,
+      "exact_bytes_verified": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2042,
+      "original_source": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-98-training-v1/full/seed_2042/image_only_wide.pt",
+      "bundled_base": "base_checkpoints/flowers_b16_98/seed_2042.pt",
+      "branch_checkpoints": {
+        "task_residual": "flowers_b16_98/seed_2042/task_residual.pt",
+        "image_residual": "flowers_b16_98/seed_2042/image_residual.pt"
+      },
+      "size_bytes": 1394272,
+      "exact_bytes_verified": true
+    },
+    {
+      "setting": "flowers_b16_98",
+      "seed": 2043,
+      "original_source": "/data2/zhao.tong/experiments/runs/flowers-selector-ablations-98-training-v1/full/seed_2043/image_only_wide.pt",
+      "bundled_base": "base_checkpoints/flowers_b16_98/seed_2043.pt",
+      "branch_checkpoints": {
+        "task_residual": "flowers_b16_98/seed_2043/task_residual.pt",
+        "image_residual": "flowers_b16_98/seed_2043/image_residual.pt"
+      },
+      "size_bytes": 1394272,
+      "exact_bytes_verified": true
+    }
+  ],
+  "verification_examples": [
+    {
+      "setting": "pets_b16_49",
+      "path": "base_checkpoints/pets_b16_49/verification_input.npz",
+      "image_id": "Abyssinian_100",
+      "task_id": "00_06",
+      "source_example_row": 0,
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "expected_logit_shape": [
+        3,
+        3,
+        1,
+        196
+      ],
+      "size_bytes": 289263
+    },
+    {
+      "setting": "flowers_b16_49",
+      "path": "base_checkpoints/flowers_b16_49/verification_input.npz",
+      "image_id": "image_00017",
+      "task_id": "038_076",
+      "source_example_row": 0,
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "expected_logit_shape": [
+        3,
+        3,
+        1,
+        196
+      ],
+      "size_bytes": 289134
+    },
+    {
+      "setting": "flowers_b16_98",
+      "path": "base_checkpoints/flowers_b16_98/verification_input.npz",
+      "image_id": "image_00017",
+      "task_id": "038_076",
+      "source_example_row": 0,
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "expected_logit_shape": [
+        3,
+        3,
+        1,
+        196
+      ],
+      "size_bytes": 289282
+    }
+  ],
+  "restore_scope": "Frozen base plus learned branch; one cached validation CLIP-prefix/text input and expected selector outputs per setting. Full classification evidence remains in the setting outputs.",
+  "restore_tolerance": "An approximately 1e-5 float32 CPU/GPU forward tolerance is a reconstruction check, separate from reported accuracy evaluation.",
+  "total_checkpoint_bytes": 12548256,
+  "total_verification_bytes": 867679
+}

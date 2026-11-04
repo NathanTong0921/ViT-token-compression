@@ -1,0 +1,152 @@
+{
+  "flowers-p2099": {
+    "partition_seed": 2099,
+    "rows": 2280,
+    "images": 520,
+    "image_folds_reconstructed": true,
+    "all_same_image_rows_share_fold": true,
+    "offset_max_reconstruction_error": {
+      "global": 0.0,
+      "task": 0.0
+    },
+    "directional_midpoint_shift": 0.0017658504279560268,
+    "half_separation_change": 0.0005611023143464139,
+    "role_accuracy_effect_pp": {
+      "raw": 0.5336257309941522,
+      "global": 0.27046783625731,
+      "task": 0.10964912280701751
+    },
+    "H0_choice_frequency_change_pp": {
+      "raw": 0.5336257309941522,
+      "global": 0.27046783625731,
+      "task": 0.10964912280701751
+    },
+    "source_feature_reconstruction_checks": 24,
+    "all_source_predictions_match": true
+  },
+  "flowers-p2100": {
+    "partition_seed": 2100,
+    "rows": 2420,
+    "images": 520,
+    "image_folds_reconstructed": true,
+    "all_same_image_rows_share_fold": true,
+    "offset_max_reconstruction_error": {
+      "global": 0.0,
+      "task": 0.0
+    },
+    "directional_midpoint_shift": 0.0030866309056123585,
+    "half_separation_change": 0.00024483579332112797,
+    "role_accuracy_effect_pp": {
+      "raw": 1.0399449035812671,
+      "global": 0.7713498622589531,
+      "task": 0.8677685950413221
+    },
+    "H0_choice_frequency_change_pp": {
+      "raw": 1.0399449035812671,
+      "global": 0.7713498622589531,
+      "task": 0.8677685950413221
+    },
+    "source_feature_reconstruction_checks": 24,
+    "all_source_predictions_match": true
+  },
+  "flowers-p2101": {
+    "partition_seed": 2101,
+    "rows": 2180,
+    "images": 520,
+    "image_folds_reconstructed": true,
+    "all_same_image_rows_share_fold": true,
+    "offset_max_reconstruction_error": {
+      "global": 0.0,
+      "task": 0.0
+    },
+    "directional_midpoint_shift": 0.002461044936353,
+    "half_separation_change": 0.0009767102249633951,
+    "role_accuracy_effect_pp": {
+      "raw": 0.2522935779816513,
+      "global": 0.07645259938837921,
+      "task": -0.1834862385321101
+    },
+    "H0_choice_frequency_change_pp": {
+      "raw": 0.2522935779816513,
+      "global": 0.07645259938837921,
+      "task": -0.1834862385321101
+    },
+    "source_feature_reconstruction_checks": 24,
+    "all_source_predictions_match": true
+  },
+  "pets-p2099": {
+    "partition_seed": 2099,
+    "rows": 3525,
+    "images": 396,
+    "image_folds_reconstructed": true,
+    "all_same_image_rows_share_fold": true,
+    "offset_max_reconstruction_error": {
+      "global": 0.0,
+      "task": 0.0
+    },
+    "directional_midpoint_shift": 0.00043913034886752306,
+    "half_separation_change": 0.00081832816354651,
+    "role_accuracy_effect_pp": {
+      "raw": -0.06849990143899075,
+      "global": -0.07047112162428544,
+      "task": -0.1525231618371772
+    },
+    "H0_choice_frequency_change_pp": {
+      "raw": -0.06849990143899075,
+      "global": -0.07047112162428544,
+      "task": -0.1525231618371772
+    },
+    "source_feature_reconstruction_checks": 24,
+    "all_source_predictions_match": true
+  },
+  "pets-p2100": {
+    "partition_seed": 2100,
+    "rows": 3612,
+    "images": 397,
+    "image_folds_reconstructed": true,
+    "all_same_image_rows_share_fold": true,
+    "offset_max_reconstruction_error": {
+      "global": 0.0,
+      "task": 0.0
+    },
+    "directional_midpoint_shift": 0.0010279044576206077,
+    "half_separation_change": 0.0012210789743017489,
+    "role_accuracy_effect_pp": {
+      "raw": 0.25062656641604014,
+      "global": 0.21375554270291114,
+      "task": 0.021447850395218803
+    },
+    "H0_choice_frequency_change_pp": {
+      "raw": 0.25062656641604014,
+      "global": 0.21375554270291114,
+      "task": 0.021447850395218803
+    },
+    "source_feature_reconstruction_checks": 24,
+    "all_source_predictions_match": true
+  },
+  "pets-p2101": {
+    "partition_seed": 2101,
+    "rows": 3550,
+    "images": 399,
+    "image_folds_reconstructed": true,
+    "all_same_image_rows_share_fold": true,
+    "offset_max_reconstruction_error": {
+      "global": 0.0,
+      "task": 0.0
+    },
+    "directional_midpoint_shift": 0.0008237212256551812,
+    "half_separation_change": 0.00038392969124685736,
+    "role_accuracy_effect_pp": {
+      "raw": -0.07490636704119849,
+      "global": -0.15868322491622314,
+      "task": 0.0012320126158091803
+    },
+    "H0_choice_frequency_change_pp": {
+      "raw": -0.07490636704119849,
+      "global": -0.15868322491622314,
+      "task": 0.0012320126158091803
+    },
+    "source_feature_reconstruction_checks": 24,
+    "all_source_predictions_match": true
+  }
+}
