@@ -1,0 +1,1008 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-04T10:08:54.065055+00:00",
+  "archive_checks": [
+    {
+      "archive": "depth-intervention-evaluation-v1.zip",
+      "bytes": 176503319,
+      "members_verified": 91,
+      "local_matching_members": 79,
+      "archive_and_all_member_digests_match": true,
+      "zip_crc_checks_passed": true
+    },
+    {
+      "archive": "depth-intervention-training-v1.zip",
+      "bytes": 1106594390,
+      "members_verified": 161,
+      "local_matching_members": 100,
+      "archive_and_all_member_digests_match": true,
+      "zip_crc_checks_passed": true
+    }
+  ],
+  "scope": "Read-only local archive/training/replay audit; no optimizer updates, teacher generation or CLIP suffix inference.",
+  "sampling_checks": [
+    {
+      "dataset": "pets",
+      "seed": 2041,
+      "draws": 510720,
+      "task_class_draws": 480,
+      "all_new_depth_sampling_records_equal": true,
+      "historical_C_and_U_full_coverage_records_equal": true,
+      "independent_first_batch_and_all_image_counts_exact": true
+    },
+    {
+      "dataset": "pets",
+      "seed": 2042,
+      "draws": 510720,
+      "task_class_draws": 480,
+      "all_new_depth_sampling_records_equal": true,
+      "historical_C_and_U_full_coverage_records_equal": true,
+      "independent_first_batch_and_all_image_counts_exact": true
+    },
+    {
+      "dataset": "pets",
+      "seed": 2043,
+      "draws": 510720,
+      "task_class_draws": 480,
+      "all_new_depth_sampling_records_equal": true,
+      "historical_C_and_U_full_coverage_records_equal": true,
+      "independent_first_batch_and_all_image_counts_exact": true
+    },
+    {
+      "dataset": "flowers",
+      "seed": 2041,
+      "draws": 509184,
+      "task_class_draws": 416,
+      "all_new_depth_sampling_records_equal": true,
+      "historical_C_and_U_full_coverage_records_equal": true,
+      "independent_first_batch_and_all_image_counts_exact": true
+    },
+    {
+      "dataset": "flowers",
+      "seed": 2042,
+      "draws": 509184,
+      "task_class_draws": 416,
+      "all_new_depth_sampling_records_equal": true,
+      "historical_C_and_U_full_coverage_records_equal": true,
+      "independent_first_batch_and_all_image_counts_exact": true
+    },
+    {
+      "dataset": "flowers",
+      "seed": 2043,
+      "draws": 509184,
+      "task_class_draws": 416,
+      "all_new_depth_sampling_records_equal": true,
+      "historical_C_and_U_full_coverage_records_equal": true,
+      "independent_first_batch_and_all_image_counts_exact": true
+    }
+  ],
+  "configuration_checks": [
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "new_runs": 6,
+      "checkpoint_steps": 3990,
+      "history_steps_complete": true,
+      "feature_and_teacher_depth_configs_match": true,
+      "native_full_reference_checks_passed": true,
+      "final_diagnostics_match_training_summary": true
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "new_runs": 6,
+      "checkpoint_steps": 3990,
+      "history_steps_complete": true,
+      "feature_and_teacher_depth_configs_match": true,
+      "native_full_reference_checks_passed": true,
+      "final_diagnostics_match_training_summary": true
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "new_runs": 6,
+      "checkpoint_steps": 3978,
+      "history_steps_complete": true,
+      "feature_and_teacher_depth_configs_match": true,
+      "native_full_reference_checks_passed": true,
+      "final_diagnostics_match_training_summary": true
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "new_runs": 6,
+      "checkpoint_steps": 3978,
+      "history_steps_complete": true,
+      "feature_and_teacher_depth_configs_match": true,
+      "native_full_reference_checks_passed": true,
+      "final_diagnostics_match_training_summary": true
+    }
+  ],
+  "final_diagnostic_kl_max_error": 0.0,
+  "mask_bank_checks": [
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "split": "train",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "split": "val",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "split": "train",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49,
+      "teacher_shapes_and_finiteness_verified": true
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "split": "val",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49,
+      "teacher_shapes_and_finiteness_verified": true
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "split": "train",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49,
+      "teacher_shapes_and_finiteness_verified": true
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "split": "val",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49,
+      "teacher_shapes_and_finiteness_verified": true
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "split": "train",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "split": "val",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "split": "train",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49,
+      "teacher_shapes_and_finiteness_verified": true
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "split": "val",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49,
+      "teacher_shapes_and_finiteness_verified": true
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "split": "train",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49,
+      "teacher_shapes_and_finiteness_verified": true
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "split": "val",
+      "bank_matches_fixed_design": true,
+      "masks": 512,
+      "retained_patches": 49,
+      "teacher_shapes_and_finiteness_verified": true
+    }
+  ],
+  "checkpoint_checks": [
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2041,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3990,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3990,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2042,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3990,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3990,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2043,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3990,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3990,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2041,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3990,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3990,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2042,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3990,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3990,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2043,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3990,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3990,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2041,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3978,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3978,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2042,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3978,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3978,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2043,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3978,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3978,
+      "depth": 3,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2041,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3978,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3978,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2042,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3978,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3978,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2043,
+      "arm": "conditioned",
+      "parameters": 348033,
+      "final_step": 3978,
+      "depth": 9,
+      "config_and_state_verified": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "parameters": 347399,
+      "final_step": 3978,
+      "depth": 9,
+      "config_and_state_verified": true
+    }
+  ],
+  "prefix_sample_checks": [
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "split": "train",
+      "source_row": 0,
+      "image_id": "Abyssinian_1",
+      "dtype": "float16",
+      "shape": [
+        1,
+        197,
+        768
+      ],
+      "image_and_text_identity_verified": true
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "split": "val",
+      "source_row": 0,
+      "image_id": "Abyssinian_100",
+      "dtype": "float16",
+      "shape": [
+        1,
+        197,
+        768
+      ],
+      "image_and_text_identity_verified": true
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "split": "train",
+      "source_row": 0,
+      "image_id": "Abyssinian_1",
+      "dtype": "float16",
+      "shape": [
+        1,
+        197,
+        768
+      ],
+      "image_and_text_identity_verified": true
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "split": "val",
+      "source_row": 0,
+      "image_id": "Abyssinian_100",
+      "dtype": "float16",
+      "shape": [
+        1,
+        197,
+        768
+      ],
+      "image_and_text_identity_verified": true
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "split": "train",
+      "source_row": 0,
+      "image_id": "image_00028",
+      "dtype": "float16",
+      "shape": [
+        1,
+        197,
+        768
+      ],
+      "image_and_text_identity_verified": true
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "split": "val",
+      "source_row": 0,
+      "image_id": "image_00017",
+      "dtype": "float16",
+      "shape": [
+        1,
+        197,
+        768
+      ],
+      "image_and_text_identity_verified": true
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "split": "train",
+      "source_row": 0,
+      "image_id": "image_00028",
+      "dtype": "float16",
+      "shape": [
+        1,
+        197,
+        768
+      ],
+      "image_and_text_identity_verified": true
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "split": "val",
+      "source_row": 0,
+      "image_id": "image_00017",
+      "dtype": "float16",
+      "shape": [
+        1,
+        197,
+        768
+      ],
+      "image_and_text_identity_verified": true
+    }
+  ],
+  "cpu_selector_replay_checks": [
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2041,
+      "arm": "conditioned",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 6.198883056640625e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 4.0531158447265625e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2042,
+      "arm": "conditioned",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 7.152557373046875e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 2.1457672119140625e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2043,
+      "arm": "conditioned",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 1.0013580322265625e-05,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 2.1457672119140625e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2041,
+      "arm": "conditioned",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 5.602836608886719e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 1.7881393432617188e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2042,
+      "arm": "conditioned",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 7.152557373046875e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 2.384185791015625e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2043,
+      "arm": "conditioned",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 5.7220458984375e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "image_id": "Abyssinian_100",
+      "unseen_task_rows": 6,
+      "max_abs_logit_error": 1.4901161193847656e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2041,
+      "arm": "conditioned",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 6.67572021484375e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 2.86102294921875e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2042,
+      "arm": "conditioned",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 5.7220458984375e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 3.337860107421875e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2043,
+      "arm": "conditioned",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 8.106231689453125e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 2.86102294921875e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2041,
+      "arm": "conditioned",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 4.649162292480469e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 3.0994415283203125e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2042,
+      "arm": "conditioned",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 8.821487426757812e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 1.6689300537109375e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2043,
+      "arm": "conditioned",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 5.9604644775390625e-06,
+      "top49_indices_exact": true
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "image_id": "image_00017",
+      "unseen_task_rows": 4,
+      "max_abs_logit_error": 2.1457672119140625e-06,
+      "top49_indices_exact": true
+    }
+  ],
+  "shared_descriptor_cpu_gpu_max_error": 1.1920928955078125e-07,
+  "new_depth_prefix_and_teacher_samples_distinct": true,
+  "full_model_arrays_identical_across_new_depths": true,
+  "block6_reference_diagnostic_checks": [
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2041,
+      "arm": "conditioned",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2042,
+      "arm": "conditioned",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2043,
+      "arm": "conditioned",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2041,
+      "arm": "conditioned",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2042,
+      "arm": "conditioned",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2043,
+      "arm": "conditioned",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "historical_final_kl_abs_error": {
+        "train": 0.0,
+        "val": 0.0
+      }
+    }
+  ],
+  "block6_import_checks": [
+    {
+      "dataset": "pets",
+      "recipient_seed": 2041,
+      "donor_seed": 2042,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "pets",
+      "recipient_seed": 2041,
+      "donor_seed": 2043,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "pets",
+      "recipient_seed": 2042,
+      "donor_seed": 2041,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "pets",
+      "recipient_seed": 2042,
+      "donor_seed": 2043,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "pets",
+      "recipient_seed": 2043,
+      "donor_seed": 2041,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "pets",
+      "recipient_seed": 2043,
+      "donor_seed": 2042,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "flowers",
+      "recipient_seed": 2041,
+      "donor_seed": 2042,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "flowers",
+      "recipient_seed": 2041,
+      "donor_seed": 2043,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "flowers",
+      "recipient_seed": 2042,
+      "donor_seed": 2041,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "flowers",
+      "recipient_seed": 2042,
+      "donor_seed": 2043,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "flowers",
+      "recipient_seed": 2043,
+      "donor_seed": 2041,
+      "scores_and_masks_exactly_reused": true
+    },
+    {
+      "dataset": "flowers",
+      "recipient_seed": 2043,
+      "donor_seed": 2042,
+      "scores_and_masks_exactly_reused": true
+    }
+  ],
+  "checked_counts": {
+    "archive_files": 2,
+    "archive_members": 252,
+    "new_final_checkpoints": 24,
+    "training_stream_seeds": 6,
+    "teacher_mask_banks": 12,
+    "prefix_samples": 8,
+    "cpu_selector_replays": 24,
+    "unchanged_block6_pair_files": 12,
+    "block6_diagnostic_runs": 12
+  },
+  "scope_exclusions": [
+    "No full CLIP suffix was rerun locally; archived first-image prefixes support selector replay only.",
+    "Initial weight equality is established by the training source and seed/config match; initial states were not stored separately.",
+    "Prediction-to-summary arithmetic and bootstrap estimates are checked separately by the independent design audit."
+  ],
+  "replay_tolerance": {
+    "logit_atol": 2e-05,
+    "logit_rtol": 2e-05,
+    "maximum_observed_logit_error": 1.0013580322265625e-05,
+    "all_retained_top49_indices_exact": true
+  },
+  "historical_sampling_sources": {
+    "pets_conditioned": "results/pets-selector-scale-v1/training/sampling_audit.json",
+    "pets_shared": "results/pets-selector-ablations-v1/execution/budget_49/sampling_audit.json",
+    "flowers_shared": "results/flowers-selector-ablations-v1/execution/budget_49/sampling_audit.json",
+    "flowers_conditioned": {
+      "archive": "../artifacts/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.zip",
+      "member": "runs/flowers-selector-budget-49-training-v1/sampling_audit.json"
+    }
+  }
+}

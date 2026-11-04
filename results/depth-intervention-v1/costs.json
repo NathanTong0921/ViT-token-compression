@@ -1,0 +1,124 @@
+{
+  "settings": [
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "feature_stage_seconds": 117.91401661001146,
+      "teacher_stage_seconds": 316.5609667929821,
+      "teacher_compute_loop_seconds": 310.87359119788744,
+      "optimizer_update_seconds": 164.95725111174397,
+      "training_process_seconds": 197.77973246900365,
+      "selector_evaluation_seconds": 19.57970139896497,
+      "model_count": 6
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "feature_stage_seconds": 18.538464722922072,
+      "teacher_stage_seconds": 129.10841677803546,
+      "teacher_compute_loop_seconds": 124.63055931509007,
+      "optimizer_update_seconds": 163.128295855131,
+      "training_process_seconds": 195.18087362207007,
+      "selector_evaluation_seconds": 13.831993111060001,
+      "model_count": 6
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "feature_stage_seconds": 59.39024599199183,
+      "teacher_stage_seconds": 199.2236058509443,
+      "teacher_compute_loop_seconds": 194.1723960909294,
+      "optimizer_update_seconds": 162.3496863662731,
+      "training_process_seconds": 180.4490296120057,
+      "selector_evaluation_seconds": 27.595808329060674,
+      "model_count": 6
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "feature_stage_seconds": 13.82770443893969,
+      "teacher_stage_seconds": 103.14288920303807,
+      "teacher_compute_loop_seconds": 97.91848983999807,
+      "optimizer_update_seconds": 163.1396329072304,
+      "training_process_seconds": 181.60806767304894,
+      "selector_evaluation_seconds": 22.34498470404651,
+      "model_count": 6
+    }
+  ],
+  "worker_stages": [
+    {
+      "setting": "pets:3",
+      "stage": "prepare_train",
+      "exit_code": 0,
+      "wall_seconds": 653.9617362139979,
+      "physical_gpu": 1
+    },
+    {
+      "setting": "pets:3",
+      "stage": "evaluate",
+      "exit_code": 0,
+      "wall_seconds": 23.97085465991404,
+      "physical_gpu": 1
+    },
+    {
+      "setting": "flowers:9",
+      "stage": "prepare_train",
+      "exit_code": 0,
+      "wall_seconds": 312.0038144419668,
+      "physical_gpu": 1
+    },
+    {
+      "setting": "flowers:9",
+      "stage": "evaluate",
+      "exit_code": 0,
+      "wall_seconds": 25.760066551039927,
+      "physical_gpu": 1
+    },
+    {
+      "setting": "flowers:3",
+      "stage": "prepare_train",
+      "exit_code": 0,
+      "wall_seconds": 452.87616481701843,
+      "physical_gpu": 2
+    },
+    {
+      "setting": "flowers:3",
+      "stage": "evaluate",
+      "exit_code": 0,
+      "wall_seconds": 30.975976037909277,
+      "physical_gpu": 2
+    },
+    {
+      "setting": "pets:9",
+      "stage": "prepare_train",
+      "exit_code": 0,
+      "wall_seconds": 364.7320664189756,
+      "physical_gpu": 2
+    },
+    {
+      "setting": "pets:9",
+      "stage": "evaluate",
+      "exit_code": 0,
+      "wall_seconds": 17.303745132987387,
+      "physical_gpu": 2
+    }
+  ],
+  "reference_diagnostics": [
+    {
+      "dataset": "pets",
+      "wall_seconds": 15.93059192202054,
+      "models": 6,
+      "new_training": false
+    },
+    {
+      "dataset": "flowers",
+      "wall_seconds": 4.719387931050733,
+      "models": 6,
+      "new_training": false
+    }
+  ],
+  "new_selector_count": 24,
+  "gpu_stage_wall_hours": 0.5283984455908002,
+  "optimizer_update_hours": 0.18154857395566068,
+  "scope": "Sum of GPU-assigned process wall time, including loading/IO/diagnostics; not device-kernel utilization. Source block6 models and original predictions are reused; reference diagnostics are newly measured."
+}

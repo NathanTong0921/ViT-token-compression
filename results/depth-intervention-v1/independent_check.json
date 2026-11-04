@@ -1,0 +1,454 @@
+{
+  "status": "passed",
+  "sources": "/Users/nathan_tong0921/Desktop/2012 Project/ViT-token-compression/runs/depth-intervention-v1",
+  "analysis": "/Users/nathan_tong0921/Desktop/2012 Project/ViT-token-compression/results/depth-intervention-v1",
+  "scope": "Independent raw-score/mask/metadata reconstruction; no analysis-code imports, model execution, training, or new inferential comparison.",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2361,
+    "method": "Average fixed runs per row, aggregate task/class-weighted contributions by image, then resample image multiplicities jointly for all endpoints and depths.",
+    "intervals": "Ordinary 95%; four-comparison 98.75% intervals for each predeclared interaction family."
+  },
+  "configured_selector_parameters": {
+    "conditioned": 348033,
+    "image_only_wide": 347399,
+    "verification_scope": "Widths and fixed configuration checked; checkpoint weights are audited separately."
+  },
+  "datasets": {
+    "pets": {
+      "images": 716,
+      "rows": 2624,
+      "tasks": 66,
+      "masks_checked": 236160,
+      "checked_estimates": [
+        {
+          "name": "d3/conditioned",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9711722488038244,
+            "geom_margin": 0.09442604178969412,
+            "raw_gap": 0.08780356523254569
+          }
+        },
+        {
+          "name": "d3/shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9733585858585823,
+            "geom_margin": 0.09588769580488885,
+            "raw_gap": 0.08917473691764667
+          }
+        },
+        {
+          "name": "d3/cu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9729864433811761,
+            "geom_margin": 0.09594032182780603,
+            "raw_gap": 0.08923203213522098
+          }
+        },
+        {
+          "name": "d3/uu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9749534821903204,
+            "geom_margin": 0.0960535007168621,
+            "raw_gap": 0.08928511474417222
+          }
+        },
+        {
+          "name": "d3/conditioned_minus_shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": -0.002186337054758107,
+            "geom_margin": -0.0014616540151946983,
+            "raw_gap": -0.0013711716851010577
+          }
+        },
+        {
+          "name": "d3/cu_minus_uu",
+          "family_size": 1,
+          "mean": {
+            "accuracy": -0.0019670388091440716,
+            "geom_margin": -0.00011317888905610416,
+            "raw_gap": -5.308260895105898e-05
+          }
+        },
+        {
+          "name": "d6/conditioned",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.989918926103133,
+            "geom_margin": 0.11469279305033406,
+            "raw_gap": 0.10667297947752759
+          }
+        },
+        {
+          "name": "d6/shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9901714513556581,
+            "geom_margin": 0.11721680385821516,
+            "raw_gap": 0.10897835283567418
+          }
+        },
+        {
+          "name": "d6/cu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9897993088782526,
+            "geom_margin": 0.11641582781705864,
+            "raw_gap": 0.10826084686414494
+          }
+        },
+        {
+          "name": "d6/uu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9893341307814955,
+            "geom_margin": 0.1169233688380418,
+            "raw_gap": 0.10872944167009102
+          }
+        },
+        {
+          "name": "d6/conditioned_minus_shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": -0.0002525252525252525,
+            "geom_margin": -0.0025240108078809793,
+            "raw_gap": -0.002305373358146619
+          }
+        },
+        {
+          "name": "d6/cu_minus_uu",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.00046517809675704423,
+            "geom_margin": -0.0005075410209831322,
+            "raw_gap": -0.0004685948059459923
+          }
+        },
+        {
+          "name": "d9/conditioned",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9909423179159985,
+            "geom_margin": 0.12625897536306757,
+            "raw_gap": 0.11748042246222822
+          }
+        },
+        {
+          "name": "d9/shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9908160552897358,
+            "geom_margin": 0.12492768961592952,
+            "raw_gap": 0.11623329327148135
+          }
+        },
+        {
+          "name": "d9/cu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.990546916533755,
+            "geom_margin": 0.1256946594757783,
+            "raw_gap": 0.11696141277868659
+          }
+        },
+        {
+          "name": "d9/uu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9907396331738401,
+            "geom_margin": 0.12492565413336873,
+            "raw_gap": 0.11623457687974252
+          }
+        },
+        {
+          "name": "d9/conditioned_minus_shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.00012626262626262626,
+            "geom_margin": 0.001331285747138031,
+            "raw_gap": 0.0012471291907468357
+          }
+        },
+        {
+          "name": "d9/cu_minus_uu",
+          "family_size": 1,
+          "mean": {
+            "accuracy": -0.00019271664008506113,
+            "geom_margin": 0.0007690053424093585,
+            "raw_gap": 0.0007268358989440958
+          }
+        },
+        {
+          "name": "conditioned_minus_shared/depth_3_minus_6",
+          "family_size": 4,
+          "mean": {
+            "accuracy": -0.001933811802232854,
+            "geom_margin": 0.0010623567926862846,
+            "raw_gap": 0.0009342016730455562
+          }
+        },
+        {
+          "name": "conditioned_minus_shared/depth_9_minus_6",
+          "family_size": 4,
+          "mean": {
+            "accuracy": 0.0003787878787878788,
+            "geom_margin": 0.0038552965550190093,
+            "raw_gap": 0.003552502548893451
+          }
+        },
+        {
+          "name": "cu_minus_uu/depth_3_minus_6",
+          "family_size": 4,
+          "mean": {
+            "accuracy": -0.0024322169059011168,
+            "geom_margin": 0.000394362131927029,
+            "raw_gap": 0.0004155121969949341
+          }
+        },
+        {
+          "name": "cu_minus_uu/depth_9_minus_6",
+          "family_size": 4,
+          "mean": {
+            "accuracy": -0.0006578947368421054,
+            "geom_margin": 0.0012765463633924905,
+            "raw_gap": 0.0011954307048900898
+          }
+        },
+        {
+          "name": "full_reference",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9926435406698528,
+            "geom_margin": 0.1260422050056424,
+            "raw_gap": 0.11722782425882441
+          }
+        }
+      ],
+      "all_raw_and_saved_arrays_match": true
+    },
+    "flowers": {
+      "images": 1020,
+      "rows": 4080,
+      "tasks": 204,
+      "masks_checked": 367200,
+      "checked_estimates": [
+        {
+          "name": "d3/conditioned",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9245098039215655,
+            "geom_margin": 0.06915131925164943,
+            "raw_gap": 0.06223238464140521
+          }
+        },
+        {
+          "name": "d3/shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.928267973856206,
+            "geom_margin": 0.06905219581266184,
+            "raw_gap": 0.06222171872501176
+          }
+        },
+        {
+          "name": "d3/cu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9328839869281014,
+            "geom_margin": 0.07087714836598107,
+            "raw_gap": 0.06385760344108377
+          }
+        },
+        {
+          "name": "d3/uu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.930596405228755,
+            "geom_margin": 0.06980982010477278,
+            "raw_gap": 0.0629460701551532
+          }
+        },
+        {
+          "name": "d3/conditioned_minus_shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": -0.0037581699346405225,
+            "geom_margin": 9.91234389875959e-05,
+            "raw_gap": 1.0665916393395556e-05
+          }
+        },
+        {
+          "name": "d3/cu_minus_uu",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.002287581699346405,
+            "geom_margin": 0.001067328261208278,
+            "raw_gap": 0.0009115332859306563
+          }
+        },
+        {
+          "name": "d6/conditioned",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9682189542483627,
+            "geom_margin": 0.0902148648533228,
+            "raw_gap": 0.08113875097041232
+          }
+        },
+        {
+          "name": "d6/shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9673202614379052,
+            "geom_margin": 0.09020925276925294,
+            "raw_gap": 0.08103491773500156
+          }
+        },
+        {
+          "name": "d6/cu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9686274509803888,
+            "geom_margin": 0.09198019745263998,
+            "raw_gap": 0.08266759249412142
+          }
+        },
+        {
+          "name": "d6/uu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.966380718954245,
+            "geom_margin": 0.09097657608380838,
+            "raw_gap": 0.08173357360643269
+          }
+        },
+        {
+          "name": "d6/conditioned_minus_shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.0008986928104575163,
+            "geom_margin": 5.612084069922388e-06,
+            "raw_gap": 0.00010383323541069347
+          }
+        },
+        {
+          "name": "d6/cu_minus_uu",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.002246732026143789,
+            "geom_margin": 0.001003621368831638,
+            "raw_gap": 0.0009340188876890072
+          }
+        },
+        {
+          "name": "d9/conditioned",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9716503267973823,
+            "geom_margin": 0.09799470953311998,
+            "raw_gap": 0.08814954992103716
+          }
+        },
+        {
+          "name": "d9/shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9682189542483627,
+            "geom_margin": 0.09788638913709873,
+            "raw_gap": 0.08800104484875132
+          }
+        },
+        {
+          "name": "d9/cu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9703839869281012,
+            "geom_margin": 0.09961240572963484,
+            "raw_gap": 0.08957956035049287
+          }
+        },
+        {
+          "name": "d9/uu_half",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9686683006535914,
+            "geom_margin": 0.09897103182782943,
+            "raw_gap": 0.08897943646141808
+          }
+        },
+        {
+          "name": "d9/conditioned_minus_shared",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.0034313725490196113,
+            "geom_margin": 0.00010832039602146521,
+            "raw_gap": 0.00014850507228592605
+          }
+        },
+        {
+          "name": "d9/cu_minus_uu",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.001715686274509804,
+            "geom_margin": 0.0006413739018052452,
+            "raw_gap": 0.0006001238890747048
+          }
+        },
+        {
+          "name": "conditioned_minus_shared/depth_3_minus_6",
+          "family_size": 4,
+          "mean": {
+            "accuracy": -0.004656862745098041,
+            "geom_margin": 9.351135491767317e-05,
+            "raw_gap": -9.316731901729867e-05
+          }
+        },
+        {
+          "name": "conditioned_minus_shared/depth_9_minus_6",
+          "family_size": 4,
+          "mean": {
+            "accuracy": 0.002532679738562091,
+            "geom_margin": 0.00010270831195154209,
+            "raw_gap": 4.467183687523288e-05
+          }
+        },
+        {
+          "name": "cu_minus_uu/depth_3_minus_6",
+          "family_size": 4,
+          "mean": {
+            "accuracy": 4.0849673202614884e-05,
+            "geom_margin": 6.37068923766414e-05,
+            "raw_gap": -2.2485601758353192e-05
+          }
+        },
+        {
+          "name": "cu_minus_uu/depth_9_minus_6",
+          "family_size": 4,
+          "mean": {
+            "accuracy": -0.0005310457516339875,
+            "geom_margin": -0.0003622474670263921,
+            "raw_gap": -0.0003338949986143047
+          }
+        },
+        {
+          "name": "full_reference",
+          "family_size": 1,
+          "mean": {
+            "accuracy": 0.9674019607843104,
+            "geom_margin": 0.10996972390460732,
+            "raw_gap": 0.0988930877371161
+          }
+        }
+      ],
+      "all_raw_and_saved_arrays_match": true
+    }
+  },
+  "numeric_values_compared": 50045102,
+  "max_absolute_numeric_difference": 4.3298697960381105e-15,
+  "exported_comparison_rows_checked": 24
+}

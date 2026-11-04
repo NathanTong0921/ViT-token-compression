@@ -1,0 +1,36 @@
+{
+  "release_id": 433767484,
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-c8d3f0ecba66233141d1",
+  "release_status": "draft",
+  "archives": [
+    {
+      "file": "depth-intervention-evaluation-v1.zip",
+      "bytes": 176503319,
+      "files": 91,
+      "sha256": "53979b1b3987067329ff494b7992ebce8567abad98e68f49cf32ac4da3798fd8",
+      "github_asset_id": 709058790,
+      "github_asset_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/709058790",
+      "github_asset_digest": "sha256:53979b1b3987067329ff494b7992ebce8567abad98e68f49cf32ac4da3798fd8",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/depth-intervention-v1/depth-intervention-evaluation-v1.zip",
+      "server_path": "/data2/zhao.tong/artifacts/depth-intervention-v1/depth-intervention-evaluation-v1.zip",
+      "local_and_github_verified": true
+    }
+  ],
+  "dependencies": {
+    "block6_evaluation_and_checkpoint_bundles": {
+      "backup_manifest": "results/hybrid-followup-v1/backup_manifest.json",
+      "archives": [
+        "hybrid-specificity-v1.zip",
+        "hybrid-distillation-v1.zip"
+      ]
+    },
+    "block6_original_core_replay": {
+      "backup_manifest": "results/parallel-research-pilots-v1/backup_manifest.json",
+      "archive": "core-protection-v1.zip"
+    },
+    "scope": "Block-6 evaluation rows are included for the paired depth analysis. Old block-6 checkpoints and teacher caches are not duplicated; use their existing backup manifests."
+  },
+  "server_raw_runs_retained": true,
+  "full_prefix_caches_included": false,
+  "raw_teacher_responses_included": false
+}

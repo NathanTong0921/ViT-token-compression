@@ -1,0 +1,1027 @@
+{
+  "final_fit": [
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "seed": 2041,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2041/conditioned.pt",
+      "train": {
+        "kl": 0.4270360227191605,
+        "topk_overlap": 0.42663020266628154,
+        "topk_tie_aware_overlap": 0.42663020266628154,
+        "teacher_boundary_tie_fraction": 3.570207987501221e-05
+      },
+      "val": {
+        "kl": 1.1269405464598674,
+        "topk_overlap": 0.3958809297808121,
+        "topk_tie_aware_overlap": 0.3958809297808121,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2041/image_only_wide.pt",
+      "train": {
+        "kl": 0.45562429632575796,
+        "topk_overlap": 0.4396372627241354,
+        "topk_tie_aware_overlap": 0.4396372627241354,
+        "teacher_boundary_tie_fraction": 3.570207987501221e-05
+      },
+      "val": {
+        "kl": 1.0807152896667969,
+        "topk_overlap": 0.3914115583178019,
+        "topk_tie_aware_overlap": 0.3914115583178019,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "seed": 2042,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2042/conditioned.pt",
+      "train": {
+        "kl": 0.43157766712171425,
+        "topk_overlap": 0.42616218997245714,
+        "topk_tie_aware_overlap": 0.42616218997245714,
+        "teacher_boundary_tie_fraction": 3.570207987501221e-05
+      },
+      "val": {
+        "kl": 1.1245099120202997,
+        "topk_overlap": 0.3947819972430108,
+        "topk_tie_aware_overlap": 0.3947819972430108,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2042/image_only_wide.pt",
+      "train": {
+        "kl": 0.4512612960252078,
+        "topk_overlap": 0.4401926975805195,
+        "topk_tie_aware_overlap": 0.4401929373379623,
+        "teacher_boundary_tie_fraction": 3.570207987501221e-05
+      },
+      "val": {
+        "kl": 1.0727625734910988,
+        "topk_overlap": 0.3917728514863591,
+        "topk_tie_aware_overlap": 0.3917728514863591,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "seed": 2043,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2043/conditioned.pt",
+      "train": {
+        "kl": 0.42975074282893816,
+        "topk_overlap": 0.42535289193551884,
+        "topk_tie_aware_overlap": 0.42535289193551884,
+        "teacher_boundary_tie_fraction": 3.570207987501221e-05
+      },
+      "val": {
+        "kl": 1.113810083572196,
+        "topk_overlap": 0.3943767634064459,
+        "topk_tie_aware_overlap": 0.3943767634064459,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2043/image_only_wide.pt",
+      "train": {
+        "kl": 0.45310338539694495,
+        "topk_overlap": 0.44072367081294195,
+        "topk_tie_aware_overlap": 0.44072367081294195,
+        "teacher_boundary_tie_fraction": 3.570207987501221e-05
+      },
+      "val": {
+        "kl": 1.1066573789610603,
+        "topk_overlap": 0.3940952156713467,
+        "topk_tie_aware_overlap": 0.3940952156713467,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2041,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d6_49/training/full/seed_2041/conditioned.pt",
+      "train": {
+        "kl": 0.27182240227887294,
+        "topk_overlap": 0.4570799186131423,
+        "topk_tie_aware_overlap": 0.4570799186131423,
+        "teacher_boundary_tie_fraction": 2.3953959574260328e-05
+      },
+      "val": {
+        "kl": 0.49623500629201184,
+        "topk_overlap": 0.4421235645653315,
+        "topk_tie_aware_overlap": 0.4421235645653315,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d6_49/training/full/seed_2041/image_only_wide.pt",
+      "train": {
+        "kl": 0.3886070850951428,
+        "topk_overlap": 0.4689680619401826,
+        "topk_tie_aware_overlap": 0.4689680619401826,
+        "teacher_boundary_tie_fraction": 2.3953959574260328e-05
+      },
+      "val": {
+        "kl": 0.5767472668935617,
+        "topk_overlap": 0.4502164428094121,
+        "topk_tie_aware_overlap": 0.4502164428094121,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2042,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d6_49/training/full/seed_2042/conditioned.pt",
+      "train": {
+        "kl": 0.2695884144301458,
+        "topk_overlap": 0.4618208313255768,
+        "topk_tie_aware_overlap": 0.4618210804242187,
+        "teacher_boundary_tie_fraction": 2.3953959574260328e-05
+      },
+      "val": {
+        "kl": 0.5001179702822088,
+        "topk_overlap": 0.4472003797517772,
+        "topk_tie_aware_overlap": 0.4472003797517772,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d6_49/training/full/seed_2042/image_only_wide.pt",
+      "train": {
+        "kl": 0.37113140800480127,
+        "topk_overlap": 0.46765230765593707,
+        "topk_tie_aware_overlap": 0.46765230765593707,
+        "teacher_boundary_tie_fraction": 2.3953959574260328e-05
+      },
+      "val": {
+        "kl": 0.5651470801323106,
+        "topk_overlap": 0.4540083903638108,
+        "topk_tie_aware_overlap": 0.4540083903638108,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2043,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d6_49/training/full/seed_2043/conditioned.pt",
+      "train": {
+        "kl": 0.26728669663135657,
+        "topk_overlap": 0.4538183295402835,
+        "topk_tie_aware_overlap": 0.4538183295402835,
+        "teacher_boundary_tie_fraction": 2.3953959574260328e-05
+      },
+      "val": {
+        "kl": 0.502110621651092,
+        "topk_overlap": 0.43368770229010783,
+        "topk_tie_aware_overlap": 0.43368770229010783,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 6,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d6_49/training/full/seed_2043/image_only_wide.pt",
+      "train": {
+        "kl": 0.37722511456247254,
+        "topk_overlap": 0.4678017565244393,
+        "topk_tie_aware_overlap": 0.4678017565244393,
+        "teacher_boundary_tie_fraction": 2.3953959574260328e-05
+      },
+      "val": {
+        "kl": 0.5551670424180459,
+        "topk_overlap": 0.4523215435552255,
+        "topk_tie_aware_overlap": 0.4523215435552255,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "seed": 2041,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2041/conditioned.pt",
+      "train": {
+        "kl": 0.3001661812112494,
+        "topk_overlap": 0.568458603315829,
+        "topk_tie_aware_overlap": 0.568458603315829,
+        "teacher_boundary_tie_fraction": 3.524436090225564e-05
+      },
+      "val": {
+        "kl": 0.5908297420106533,
+        "topk_overlap": 0.5460908663047678,
+        "topk_tie_aware_overlap": 0.5460908663047678,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2041/image_only_wide.pt",
+      "train": {
+        "kl": 0.4173016822471011,
+        "topk_overlap": 0.5630366685186474,
+        "topk_tie_aware_overlap": 0.5630369082760902,
+        "teacher_boundary_tie_fraction": 3.524436090225564e-05
+      },
+      "val": {
+        "kl": 0.6463500974990987,
+        "topk_overlap": 0.5384809325548688,
+        "topk_tie_aware_overlap": 0.5384809325548688,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "seed": 2042,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2042/conditioned.pt",
+      "train": {
+        "kl": 0.31336803439110744,
+        "topk_overlap": 0.5681098283538745,
+        "topk_tie_aware_overlap": 0.5681100681116674,
+        "teacher_boundary_tie_fraction": 3.524436090225564e-05
+      },
+      "val": {
+        "kl": 0.580996181392163,
+        "topk_overlap": 0.5475791654179685,
+        "topk_tie_aware_overlap": 0.5475791654179685,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2042/image_only_wide.pt",
+      "train": {
+        "kl": 0.4158602221905412,
+        "topk_overlap": 0.5631112609692939,
+        "topk_tie_aware_overlap": 0.5631117404845297,
+        "teacher_boundary_tie_fraction": 3.524436090225564e-05
+      },
+      "val": {
+        "kl": 0.6456624294870328,
+        "topk_overlap": 0.5409636006819789,
+        "topk_tie_aware_overlap": 0.5409636006819789,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "seed": 2043,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2043/conditioned.pt",
+      "train": {
+        "kl": 0.3016504198292577,
+        "topk_overlap": 0.568337010403826,
+        "topk_tie_aware_overlap": 0.5683374899187116,
+        "teacher_boundary_tie_fraction": 3.524436090225564e-05
+      },
+      "val": {
+        "kl": 0.5866089770268126,
+        "topk_overlap": 0.5437017778570407,
+        "topk_tie_aware_overlap": 0.5437017778570407,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2043/image_only_wide.pt",
+      "train": {
+        "kl": 0.41365871715686114,
+        "topk_overlap": 0.5643461943069464,
+        "topk_tie_aware_overlap": 0.5643461943069464,
+        "teacher_boundary_tie_fraction": 3.524436090225564e-05
+      },
+      "val": {
+        "kl": 0.6377123231384636,
+        "topk_overlap": 0.5401266873108619,
+        "topk_tie_aware_overlap": 0.5401266873108619,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "seed": 2041,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2041/conditioned.pt",
+      "train": {
+        "kl": 0.2636848374252379,
+        "topk_overlap": 0.45880518109701995,
+        "topk_tie_aware_overlap": 0.45880518109701995,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 1.1705753176381775,
+        "topk_overlap": 0.3389255642543967,
+        "topk_tie_aware_overlap": 0.3389255642543967,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2041/image_only_wide.pt",
+      "train": {
+        "kl": 0.3345635985041965,
+        "topk_overlap": 0.4904911880904894,
+        "topk_tie_aware_overlap": 0.4904911880904894,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 1.1678117164173254,
+        "topk_overlap": 0.32759603247612573,
+        "topk_tie_aware_overlap": 0.32759603247612573,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "seed": 2042,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2042/conditioned.pt",
+      "train": {
+        "kl": 0.2576670521623966,
+        "topk_overlap": 0.4578347929576838,
+        "topk_tie_aware_overlap": 0.4578347929576838,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 1.2030120218300493,
+        "topk_overlap": 0.3328481333823327,
+        "topk_tie_aware_overlap": 0.3328481333823327,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2042/image_only_wide.pt",
+      "train": {
+        "kl": 0.33435559920990215,
+        "topk_overlap": 0.49251533100150174,
+        "topk_tie_aware_overlap": 0.49251533100150174,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 1.1848004209224645,
+        "topk_overlap": 0.32829131064023453,
+        "topk_tie_aware_overlap": 0.32829131064023453,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "seed": 2043,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2043/conditioned.pt",
+      "train": {
+        "kl": 0.25214519109008415,
+        "topk_overlap": 0.4622865737044537,
+        "topk_tie_aware_overlap": 0.4622865737044537,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 1.2016783535028532,
+        "topk_overlap": 0.33258302741519674,
+        "topk_tie_aware_overlap": 0.33258302741519674,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2043/image_only_wide.pt",
+      "train": {
+        "kl": 0.33536063278036105,
+        "topk_overlap": 0.49158996112547293,
+        "topk_tie_aware_overlap": 0.49158996112547293,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 1.1786571606445837,
+        "topk_overlap": 0.3254001542743221,
+        "topk_tie_aware_overlap": 0.3254001542743221,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2041,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d6_49/training/full/seed_2041/conditioned.pt",
+      "train": {
+        "kl": 0.12249860288142536,
+        "topk_overlap": 0.4229124914599106,
+        "topk_tie_aware_overlap": 0.4229141587951505,
+        "teacher_boundary_tie_fraction": 0.0001633986928104575
+      },
+      "val": {
+        "kl": 0.6223228288462324,
+        "topk_overlap": 0.3547819066500546,
+        "topk_tie_aware_overlap": 0.3547819066500546,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d6_49/training/full/seed_2041/image_only_wide.pt",
+      "train": {
+        "kl": 0.29052497496654583,
+        "topk_overlap": 0.4340669528867295,
+        "topk_tie_aware_overlap": 0.4340686202195345,
+        "teacher_boundary_tie_fraction": 0.0001633986928104575
+      },
+      "val": {
+        "kl": 0.5723056872326231,
+        "topk_overlap": 0.3522759041274149,
+        "topk_tie_aware_overlap": 0.3522759041274149,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2042,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d6_49/training/full/seed_2042/conditioned.pt",
+      "train": {
+        "kl": 0.12942395488158237,
+        "topk_overlap": 0.42329597815116443,
+        "topk_tie_aware_overlap": 0.4232976454839695,
+        "teacher_boundary_tie_fraction": 0.0001633986928104575
+      },
+      "val": {
+        "kl": 0.6245797374615031,
+        "topk_overlap": 0.36559123036396857,
+        "topk_tie_aware_overlap": 0.36559123036396857,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d6_49/training/full/seed_2042/image_only_wide.pt",
+      "train": {
+        "kl": 0.2872108214539765,
+        "topk_overlap": 0.43607442274908803,
+        "topk_tie_aware_overlap": 0.43607442274908803,
+        "teacher_boundary_tie_fraction": 0.0001633986928104575
+      },
+      "val": {
+        "kl": 0.574611153595113,
+        "topk_overlap": 0.3589185613627527,
+        "topk_tie_aware_overlap": 0.3589185613627527,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2043,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d6_49/training/full/seed_2043/conditioned.pt",
+      "train": {
+        "kl": 0.11768068800587318,
+        "topk_overlap": 0.4196095035015758,
+        "topk_tie_aware_overlap": 0.4196095035015758,
+        "teacher_boundary_tie_fraction": 0.0001633986928104575
+      },
+      "val": {
+        "kl": 0.638477950119619,
+        "topk_overlap": 0.3546218427208562,
+        "topk_tie_aware_overlap": 0.3546218427208562,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 6,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d6_49/training/full/seed_2043/image_only_wide.pt",
+      "train": {
+        "kl": 0.29336089876581606,
+        "topk_overlap": 0.4352507599854683,
+        "topk_tie_aware_overlap": 0.43525242731827335,
+        "teacher_boundary_tie_fraction": 0.0001633986928104575
+      },
+      "val": {
+        "kl": 0.5781813744670147,
+        "topk_overlap": 0.3582032754505966,
+        "topk_tie_aware_overlap": 0.3582032754505966,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "seed": 2041,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2041/conditioned.pt",
+      "train": {
+        "kl": 0.1354322862390237,
+        "topk_overlap": 0.5019374329146314,
+        "topk_tie_aware_overlap": 0.5019374329146314,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 0.5113543579395969,
+        "topk_overlap": 0.4548219212970019,
+        "topk_tie_aware_overlap": 0.4548219212970019,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2041/image_only_wide.pt",
+      "train": {
+        "kl": 0.29964579163591704,
+        "topk_overlap": 0.4939409013533223,
+        "topk_tie_aware_overlap": 0.4939409013533223,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 0.49056599093076103,
+        "topk_overlap": 0.4445177995745896,
+        "topk_tie_aware_overlap": 0.4445177995745896,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "seed": 2042,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2042/conditioned.pt",
+      "train": {
+        "kl": 0.1307160158802943,
+        "topk_overlap": 0.5000766887652137,
+        "topk_tie_aware_overlap": 0.5000766887652137,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 0.5147708672495998,
+        "topk_overlap": 0.4520208008843017,
+        "topk_tie_aware_overlap": 0.4520208008843017,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2042/image_only_wide.pt",
+      "train": {
+        "kl": 0.30086662741575776,
+        "topk_overlap": 0.4958249882399256,
+        "topk_tie_aware_overlap": 0.4958249882399256,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 0.4885065984478514,
+        "topk_overlap": 0.4453531338997622,
+        "topk_tie_aware_overlap": 0.4453531338997622,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "seed": 2043,
+      "arm": "conditioned",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2043/conditioned.pt",
+      "train": {
+        "kl": 0.13580694505629082,
+        "topk_overlap": 0.4903544667718653,
+        "topk_tie_aware_overlap": 0.4903544667718653,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 0.513035533291758,
+        "topk_overlap": 0.4343287243653893,
+        "topk_tie_aware_overlap": 0.4343287243653893,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "checkpoint": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2043/image_only_wide.pt",
+      "train": {
+        "kl": 0.3076270004753039,
+        "topk_overlap": 0.49080798182685204,
+        "topk_tie_aware_overlap": 0.49080798182685204,
+        "teacher_boundary_tie_fraction": 0.0
+      },
+      "val": {
+        "kl": 0.495564465595674,
+        "topk_overlap": 0.4455982317088865,
+        "topk_tie_aware_overlap": 0.4455982317088865,
+        "teacher_boundary_tie_fraction": 0.0
+      }
+    }
+  ],
+  "utility_scales": [
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "role": "current",
+      "cache": "runs/depth-intervention-v1/pets_b16_d3_49/supervision",
+      "split": "train",
+      "examples": 84653,
+      "balanced_mean_std": 0.004065243509087999,
+      "unweighted_std_quantiles": [
+        0.0006675501354038715,
+        0.0022947649005800484,
+        0.0029276609420776367,
+        0.0038124951533973217,
+        0.004936674609780312,
+        0.006164230033755303,
+        0.013987905345857143
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "role": "current",
+      "cache": "runs/depth-intervention-v1/pets_b16_d3_49/supervision",
+      "split": "val",
+      "examples": 2624,
+      "balanced_mean_std": 0.004075141164133113,
+      "unweighted_std_quantiles": [
+        0.0008190321386791766,
+        0.0023441888159140946,
+        0.002939801779575646,
+        0.003780254046432674,
+        0.00490794179495424,
+        0.006228116853162647,
+        0.010588301345705986
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "role": "block6_reference",
+      "cache": "runs/pets-selector-scale-supervision-v1",
+      "split": "train",
+      "examples": 84653,
+      "balanced_mean_std": 0.005189017982620598,
+      "unweighted_std_quantiles": [
+        0.0007553165196441114,
+        0.0024507137946784495,
+        0.0033727670088410378,
+        0.004821597132831812,
+        0.006632270757108927,
+        0.008403413742780686,
+        0.017246834933757782
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "pets",
+      "depth": 3,
+      "role": "block6_reference",
+      "cache": "runs/pets-selector-scale-supervision-v1",
+      "split": "val",
+      "examples": 2624,
+      "balanced_mean_std": 0.0051654654728601306,
+      "unweighted_std_quantiles": [
+        0.0013131237355992198,
+        0.0026242820546030997,
+        0.0035431348369456828,
+        0.004753422224894166,
+        0.006422327249310911,
+        0.008393312338739634,
+        0.012824193574488163
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "role": "current",
+      "cache": "runs/depth-intervention-v1/pets_b16_d9_49/supervision",
+      "split": "train",
+      "examples": 84653,
+      "balanced_mean_std": 0.002890853556442565,
+      "unweighted_std_quantiles": [
+        0.0005335723399184644,
+        0.0016268766485154629,
+        0.0021001470740884542,
+        0.002756263827905059,
+        0.003535290015861392,
+        0.00434111338108778,
+        0.008762409910559654
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "role": "current",
+      "cache": "runs/depth-intervention-v1/pets_b16_d9_49/supervision",
+      "split": "val",
+      "examples": 2624,
+      "balanced_mean_std": 0.0028573400145602687,
+      "unweighted_std_quantiles": [
+        0.0007815101998858154,
+        0.0016533002140931784,
+        0.0020640113507397473,
+        0.002706636441871524,
+        0.003484005224891007,
+        0.004277823492884637,
+        0.007518384605646133
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "role": "block6_reference",
+      "cache": "runs/pets-selector-scale-supervision-v1",
+      "split": "train",
+      "examples": 84653,
+      "balanced_mean_std": 0.005189017982620598,
+      "unweighted_std_quantiles": [
+        0.0007553165196441114,
+        0.0024507137946784495,
+        0.0033727670088410378,
+        0.004821597132831812,
+        0.006632270757108927,
+        0.008403413742780686,
+        0.017246834933757782
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "pets",
+      "depth": 9,
+      "role": "block6_reference",
+      "cache": "runs/pets-selector-scale-supervision-v1",
+      "split": "val",
+      "examples": 2624,
+      "balanced_mean_std": 0.0051654654728601306,
+      "unweighted_std_quantiles": [
+        0.0013131237355992198,
+        0.0026242820546030997,
+        0.0035431348369456828,
+        0.004753422224894166,
+        0.006422327249310911,
+        0.008393312338739634,
+        0.012824193574488163
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "role": "current",
+      "cache": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision",
+      "split": "train",
+      "examples": 12240,
+      "balanced_mean_std": 0.003268753219258155,
+      "unweighted_std_quantiles": [
+        0.0005695796571671963,
+        0.0014837758499197662,
+        0.002089097979478538,
+        0.002936155768111348,
+        0.004097649944014847,
+        0.005544078489765525,
+        0.012975978665053844
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "role": "current",
+      "cache": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision",
+      "split": "val",
+      "examples": 4080,
+      "balanced_mean_std": 0.0032824446994317103,
+      "unweighted_std_quantiles": [
+        0.0005926157464273274,
+        0.001563003775663674,
+        0.00216579413972795,
+        0.0029467782005667686,
+        0.004059853497892618,
+        0.005530515871942043,
+        0.011017262004315853
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "role": "block6_reference",
+      "cache": "runs/flowers-selector-budget-49-supervision-v1",
+      "split": "train",
+      "examples": 12240,
+      "balanced_mean_std": 0.005123315154624459,
+      "unweighted_std_quantiles": [
+        0.0008505897130817175,
+        0.0020942163886502386,
+        0.002942228806205094,
+        0.0047818077728152275,
+        0.00685102678835392,
+        0.008705544844269752,
+        0.01564052142202854
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "flowers",
+      "depth": 3,
+      "role": "block6_reference",
+      "cache": "runs/flowers-selector-budget-49-supervision-v1",
+      "split": "val",
+      "examples": 4080,
+      "balanced_mean_std": 0.005170566152139822,
+      "unweighted_std_quantiles": [
+        0.0009901289595291018,
+        0.002139745303429663,
+        0.0030042550642974675,
+        0.004802630748599768,
+        0.006779102724976838,
+        0.008828096091747284,
+        0.014697067439556122
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "role": "current",
+      "cache": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision",
+      "split": "train",
+      "examples": 12240,
+      "balanced_mean_std": 0.0031320036330630885,
+      "unweighted_std_quantiles": [
+        0.0005655077984556556,
+        0.0014195911353453996,
+        0.0020062015973962843,
+        0.0029267753707244992,
+        0.0040327555034309626,
+        0.005107769882306457,
+        0.010375727899372578
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "role": "current",
+      "cache": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision",
+      "split": "val",
+      "examples": 4080,
+      "balanced_mean_std": 0.0032192373395767337,
+      "unweighted_std_quantiles": [
+        0.000523601658642292,
+        0.0014907096861861647,
+        0.0020835474715568125,
+        0.003044548095203936,
+        0.004082481493242085,
+        0.00511098257265985,
+        0.010259709320962429
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "role": "block6_reference",
+      "cache": "runs/flowers-selector-budget-49-supervision-v1",
+      "split": "train",
+      "examples": 12240,
+      "balanced_mean_std": 0.005123315154624459,
+      "unweighted_std_quantiles": [
+        0.0008505897130817175,
+        0.0020942163886502386,
+        0.002942228806205094,
+        0.0047818077728152275,
+        0.00685102678835392,
+        0.008705544844269752,
+        0.01564052142202854
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    },
+    {
+      "dataset": "flowers",
+      "depth": 9,
+      "role": "block6_reference",
+      "cache": "runs/flowers-selector-budget-49-supervision-v1",
+      "split": "val",
+      "examples": 4080,
+      "balanced_mean_std": 0.005170566152139822,
+      "unweighted_std_quantiles": [
+        0.0009901289595291018,
+        0.002139745303429663,
+        0.0030042550642974675,
+        0.004802630748599768,
+        0.006779102724976838,
+        0.008828096091747284,
+        0.014697067439556122
+      ],
+      "near_zero_threshold": 1e-06,
+      "balanced_near_zero_fraction": 0.0,
+      "near_zero_examples": 0
+    }
+  ],
+  "scope": "Diagnostics of fixed final models and corresponding depth teachers; no target rescaling, model selection or additional optimizer steps."
+}
