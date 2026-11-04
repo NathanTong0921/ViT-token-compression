@@ -88,6 +88,9 @@ def summarize(q, offsets, panel, arms, seeds, full_q, h0_class, h1_class, replic
     interval = lambda x: image_interval(x, ids, weights, replicates)
     result = {"decomposition": {}, "correction": {}, "offset_prediction": {}, "raw_task_auc": {}}
     raw_correct = correct_from_q(q, truth, h0_class, h1_class)
+    result["full_reference"] = {"accuracy_pp": float(np.average(correct_from_q(full_q, truth, h0_class, h1_class), weights=weights) * 100),
+                                "mean_true_margin": float(np.average(sign * full_q, weights=weights)),
+                                "mean_task_auc": float(task_auc(full_q, truth, panel["task_ids"]).mean())}
     task_rows = []
     for name, (real, controls) in contrasts.items():
         effects = q[:, :, real] - q[:, :, controls].mean(axis=2)
@@ -158,6 +161,12 @@ def summarize(q, offsets, panel, arms, seeds, full_q, h0_class, h1_class, replic
                     "phase_advantages": {phase: float(np.average(effects[p].mean(0), weights=weights))
                                          for p, phase in enumerate(("original", "switched"))}}
         if kind != "raw":
+            result["correction"][kind]["role_accuracy_change_from_raw"] = {}
+            for name, (real, controls) in contrasts.items():
+                raw_effects = raw_correct[:, :, real] - raw_correct[:, :, controls].mean(axis=2)
+                adjusted_effects = correct[:, :, real] - correct[:, :, controls].mean(axis=2)
+                adjusted_change = sign * ((adjusted_effects[1] - adjusted_effects[0]) - (raw_effects[1] - raw_effects[0])) * 100
+                result["correction"][kind]["role_accuracy_change_from_raw"][name] = interval(adjusted_change.mean(0))
             improvement = (correct - raw_correct) * 100
             result["correction"][kind]["accuracy_change_from_raw"] = {
                 phase: {arm: interval(improvement[p, :, a].mean(0)) for a, arm in enumerate(arms)}
