@@ -1,0 +1,56 @@
+{
+  "config": {
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/flowers102",
+    "manifest_dir": "data/splits/flowers-v1",
+    "prompt_template": "a photo of a {class_name}, a type of flower.",
+    "feature_cache_dir": "runs/flowers-features-v1",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "identity_atol": 1e-06,
+    "dataset": "flowers",
+    "device": "cuda:0",
+    "preservation_dir": "runs/patch-ranking-v1/flowers/preservation",
+    "baseline_eval_dir": "runs/flowers-selector-budget-98-eval-v1",
+    "ablation_eval_dir": "runs/flowers-selector-ablations-98-eval-v1",
+    "window_size": 2,
+    "teacher_batch_size": 64,
+    "evaluation_batch_size": 64,
+    "batch_size": 64,
+    "seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "epochs": 50,
+    "learning_rate": 0.001,
+    "min_learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "drop_last": false,
+    "bootstrap_seed": 2411,
+    "bootstrap_replicates": 2000,
+    "upstream_commit": "2094b17188c4643d5f9e05720d618179efb3cba6",
+    "ranking_target": "official_bottom50_kl",
+    "teacher_windows": "paper_stride_one"
+  },
+  "code_commit": "ded31d5d57557e7047f31dced624c4dcd7876dbf",
+  "teacher": "Mean cosine drop over stride-one deletion windows covering each patch",
+  "window_count": 169,
+  "splits": {
+    "train": {
+      "images": 1020,
+      "logical_suffix_examples": 172380,
+      "seconds": 170.42126087099314,
+      "mean_window_cosine_drop": 0.0003369554760865867
+    },
+    "val": {
+      "images": 1020,
+      "logical_suffix_examples": 172380,
+      "seconds": 244.38078107207548,
+      "mean_window_cosine_drop": 0.00033205130603164434
+    }
+  },
+  "total_seconds": 417.6986700700363,
+  "gpu": "NVIDIA RTX A6000"
+}

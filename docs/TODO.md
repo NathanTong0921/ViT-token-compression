@@ -10,7 +10,8 @@
 
 - [x] 整理[研究概述与主表](paper-story.md)，生成[框架与结果图](../results/paper-evidence-v1/README.md)初稿；最终报告结构另定。
 - [x] 完成[Patch Ranking 外部对照评估](external-baseline-review.md)，确定 preservation predictor 为优先适配对象。
-- [ ] 接入并在开发集上评价选定的外部预测器；先完成 B/16、block6、98-token 的 Pets／Flowers 对照。
+- [x] 完成 B/16、block6、98-token 的 Pets／Flowers Patch Ranking–Preservation 适配：六个预测器、分类与实际延迟，[完整结果](../results/patch-ranking-v1/README.md)。
+- [ ] 判断是否追加候选类别preservation目标干预，复用本轮保存的删除响应；尚未启动。
 - [ ] 结合外部比较，选定最终方法与核心比较，完成预留图片／类别组合的独立确认。
 
 2026-11-04沟通澄清：用户未否定剪枝深度干预；要求每次扩展说明研究理由，不能把澄清问题当成否决而反复更改优先级。下述深度干预和直接集合监督现均已完成。后面的未勾选项目包含候选方向，不代表全部排队执行。

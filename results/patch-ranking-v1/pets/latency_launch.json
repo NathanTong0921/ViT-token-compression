@@ -1,0 +1,13 @@
+{
+  "pid": 470416,
+  "command": [
+    ".venv/bin/python",
+    "scripts/benchmark_patch_ranking.py",
+    "--config",
+    "configs/patch_ranking_pets98.json",
+    "--output",
+    "runs/patch-ranking-v1/pets/latency",
+    "--physical-gpu",
+    "4"
+  ]
+}

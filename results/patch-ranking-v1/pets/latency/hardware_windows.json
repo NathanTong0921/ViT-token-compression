@@ -1,0 +1,254 @@
+[
+  {
+    "batch_size": 1,
+    "round": 0,
+    "before": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "31",
+      "clocks.current.sm": "1800",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "36",
+      "memory.used": "787",
+      "power.draw": "89.43",
+      "utc": "2026-11-05T08:47:40.787208+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "770"
+        }
+      ],
+      "foreign_compute_pids": []
+    },
+    "after": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "32",
+      "clocks.current.sm": "1800",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "37",
+      "memory.used": "787",
+      "power.draw": "106.40",
+      "utc": "2026-11-05T08:47:42.044873+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "770"
+        }
+      ],
+      "foreign_compute_pids": []
+    }
+  },
+  {
+    "batch_size": 1,
+    "round": 1,
+    "before": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "31",
+      "clocks.current.sm": "1800",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "11",
+      "memory.used": "787",
+      "power.draw": "103.85",
+      "utc": "2026-11-05T08:47:42.183368+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "770"
+        }
+      ],
+      "foreign_compute_pids": []
+    },
+    "after": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "32",
+      "clocks.current.sm": "1800",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "37",
+      "memory.used": "787",
+      "power.draw": "107.20",
+      "utc": "2026-11-05T08:47:43.419505+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "770"
+        }
+      ],
+      "foreign_compute_pids": []
+    }
+  },
+  {
+    "batch_size": 1,
+    "round": 2,
+    "before": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "31",
+      "clocks.current.sm": "1800",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "8",
+      "memory.used": "787",
+      "power.draw": "103.81",
+      "utc": "2026-11-05T08:47:43.559986+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "770"
+        }
+      ],
+      "foreign_compute_pids": []
+    },
+    "after": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "32",
+      "clocks.current.sm": "1800",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "25",
+      "memory.used": "787",
+      "power.draw": "96.11",
+      "utc": "2026-11-05T08:47:45.274940+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "770"
+        }
+      ],
+      "foreign_compute_pids": []
+    }
+  },
+  {
+    "batch_size": 32,
+    "round": 0,
+    "before": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "38",
+      "clocks.current.sm": "1905",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "100",
+      "memory.used": "1091",
+      "power.draw": "298.75",
+      "utc": "2026-11-05T08:47:47.619217+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "1074"
+        }
+      ],
+      "foreign_compute_pids": []
+    },
+    "after": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "41",
+      "clocks.current.sm": "1875",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "99",
+      "memory.used": "1091",
+      "power.draw": "296.93",
+      "utc": "2026-11-05T08:47:52.126832+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "1074"
+        }
+      ],
+      "foreign_compute_pids": []
+    }
+  },
+  {
+    "batch_size": 32,
+    "round": 1,
+    "before": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "38",
+      "clocks.current.sm": "1920",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "77",
+      "memory.used": "1091",
+      "power.draw": "268.49",
+      "utc": "2026-11-05T08:47:52.276510+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "1074"
+        }
+      ],
+      "foreign_compute_pids": []
+    },
+    "after": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "44",
+      "clocks.current.sm": "1845",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "99",
+      "memory.used": "1091",
+      "power.draw": "296.42",
+      "utc": "2026-11-05T08:47:56.806253+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "1074"
+        }
+      ],
+      "foreign_compute_pids": []
+    }
+  },
+  {
+    "batch_size": 32,
+    "round": 2,
+    "before": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "41",
+      "clocks.current.sm": "1905",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "12",
+      "memory.used": "1091",
+      "power.draw": "262.39",
+      "utc": "2026-11-05T08:47:56.955683+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "1074"
+        }
+      ],
+      "foreign_compute_pids": []
+    },
+    "after": {
+      "uuid": "GPU-c41704da-ec46-0622-390f-bb7764c7b2a3",
+      "name": "NVIDIA RTX A6000",
+      "pstate": "P2",
+      "temperature.gpu": "47",
+      "clocks.current.sm": "1845",
+      "clocks.current.memory": "7600",
+      "utilization.gpu": "99",
+      "memory.used": "1091",
+      "power.draw": "298.25",
+      "utc": "2026-11-05T08:48:01.487879+00:00",
+      "processes": [
+        {
+          "pid": 470416,
+          "used_memory_mib": "1074"
+        }
+      ],
+      "foreign_compute_pids": []
+    }
+  }
+]

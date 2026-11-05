@@ -1,0 +1,11 @@
+{
+  "dataset": "pets",
+  "gpu": "1",
+  "pid": 449945,
+  "command": [
+    "/data2/zhao.tong/experiments/.venv/bin/python",
+    "scripts/run_patch_ranking_pipeline.py",
+    "--config",
+    "configs/patch_ranking_pets98.json"
+  ]
+}

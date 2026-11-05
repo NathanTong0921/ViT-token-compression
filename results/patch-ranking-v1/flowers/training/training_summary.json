@@ -1,0 +1,157 @@
+{
+  "started_utc": "2026-11-05T08:39:41.511147+00:00",
+  "config": {
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/flowers102",
+    "manifest_dir": "data/splits/flowers-v1",
+    "prompt_template": "a photo of a {class_name}, a type of flower.",
+    "feature_cache_dir": "runs/flowers-features-v1",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "identity_atol": 1e-06,
+    "dataset": "flowers",
+    "device": "cuda:0",
+    "preservation_dir": "runs/patch-ranking-v1/flowers/preservation",
+    "baseline_eval_dir": "runs/flowers-selector-budget-98-eval-v1",
+    "ablation_eval_dir": "runs/flowers-selector-ablations-98-eval-v1",
+    "window_size": 2,
+    "teacher_batch_size": 64,
+    "evaluation_batch_size": 64,
+    "batch_size": 64,
+    "seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "epochs": 50,
+    "learning_rate": 0.001,
+    "min_learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "drop_last": false,
+    "bootstrap_seed": 2411,
+    "bootstrap_replicates": 2000,
+    "upstream_commit": "2094b17188c4643d5f9e05720d618179efb3cba6",
+    "ranking_target": "official_bottom50_kl",
+    "teacher_windows": "paper_stride_one"
+  },
+  "code_commit": "ded31d5d57557e7047f31dced624c4dcd7876dbf",
+  "source": "https://github.com/CEWu/PatchRanking/blob/main/train_predictor.py",
+  "target": "Public KL target: equal logits for first 146 ranks; -5-0.1*rank for bottom 50.",
+  "architecture": "AdaptiveAvgPool1d(64), timm MixerBlock(64,197), Linear(64,1), CLS omitted from output.",
+  "input": "Frozen prefix channels pooled once in float32; all 197 token positions retained.",
+  "counts": {
+    "train": 1020,
+    "val": 1020
+  },
+  "environment": {
+    "torch": "2.6.0+cu124",
+    "timm": "1.0.20"
+  },
+  "setup_seconds": 0.616861329996027,
+  "seeds": {
+    "2041": {
+      "parameter_count": 46246,
+      "updates": 800,
+      "initial": {
+        "train": {
+          "kl": 0.3070865846147724,
+          "overlap_at_98": 0.4999399746165556,
+          "overlap_at_100": 0.5100588144040575,
+          "deleted_50_overlap": 0.2556274460811241
+        },
+        "val": {
+          "kl": 0.3066034713212182,
+          "overlap_at_98": 0.5018907565696566,
+          "overlap_at_100": 0.5121176196079628,
+          "deleted_50_overlap": 0.25699999192181755
+        }
+      },
+      "final_train": {
+        "kl": 0.20401262751981325,
+        "overlap_at_98": 0.7222488926906212,
+        "overlap_at_100": 0.7295588100657744,
+        "deleted_50_overlap": 0.6538627287920784
+      },
+      "final_val": {
+        "kl": 0.323028574737848,
+        "overlap_at_98": 0.6708783542408663,
+        "overlap_at_100": 0.6778725268794041,
+        "deleted_50_overlap": 0.47494116203457704
+      },
+      "training_seconds": 4.9170538283651695,
+      "diagnostic_seconds": 21.75342680106405,
+      "total_seconds": 27.77730445296038
+    },
+    "2042": {
+      "parameter_count": 46246,
+      "updates": 800,
+      "initial": {
+        "train": {
+          "kl": 0.3058463631891737,
+          "overlap_at_98": 0.5034413730396944,
+          "overlap_at_100": 0.5137745053160424,
+          "deleted_50_overlap": 0.26209803001553406
+        },
+        "val": {
+          "kl": 0.30581063195770863,
+          "overlap_at_98": 0.5033213260127049,
+          "overlap_at_100": 0.5133137123257506,
+          "deleted_50_overlap": 0.26211764017740885
+        }
+      },
+      "final_train": {
+        "kl": 0.2085107363322202,
+        "overlap_at_98": 0.7241396511302275,
+        "overlap_at_100": 0.7314019408880496,
+        "deleted_50_overlap": 0.6489411559759402
+      },
+      "final_val": {
+        "kl": 0.30753689338179196,
+        "overlap_at_98": 0.6738295237223307,
+        "overlap_at_100": 0.6812842986162971,
+        "deleted_50_overlap": 0.4803333226372214
+      },
+      "training_seconds": 4.977604584069923,
+      "diagnostic_seconds": 21.765422079362907,
+      "total_seconds": 27.68175143399276
+    },
+    "2043": {
+      "parameter_count": 46246,
+      "updates": 800,
+      "initial": {
+        "train": {
+          "kl": 0.3110343751954097,
+          "overlap_at_98": 0.49748900357414694,
+          "overlap_at_100": 0.5076274404338762,
+          "deleted_50_overlap": 0.2538235168831021
+        },
+        "val": {
+          "kl": 0.31098478927331813,
+          "overlap_at_98": 0.49740896224975584,
+          "overlap_at_100": 0.5072548847572477,
+          "deleted_50_overlap": 0.25341175584232106
+        }
+      },
+      "final_train": {
+        "kl": 0.20540639454243229,
+        "overlap_at_98": 0.7252000621720857,
+        "overlap_at_100": 0.7323725345087987,
+        "deleted_50_overlap": 0.652431349660836
+      },
+      "final_val": {
+        "kl": 0.3137416456259933,
+        "overlap_at_98": 0.6734093609978171,
+        "overlap_at_100": 0.6804411682428099,
+        "deleted_50_overlap": 0.48066665425020105
+      },
+      "training_seconds": 4.682996588060632,
+      "diagnostic_seconds": 22.415972998249345,
+      "total_seconds": 28.097706679953262
+    }
+  },
+  "total_wall_seconds": 84.18464583193418,
+  "parameter_count": 46246,
+  "gpu": "NVIDIA RTX A6000",
+  "peak_allocated_gpu_bytes": 198719488
+}

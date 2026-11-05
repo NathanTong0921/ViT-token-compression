@@ -1,0 +1,59 @@
+{
+  "dataset": "flowers",
+  "config": "configs/patch_ranking_flowers98.json",
+  "steps": {
+    "prepare": {
+      "returncode": 0,
+      "seconds": 420.5022321040742,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/prepare_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_flowers98.json"
+      ]
+    },
+    "train": {
+      "returncode": 0,
+      "seconds": 88.02243619400542,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/train_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_flowers98.json",
+        "--output",
+        "runs/patch-ranking-v1/flowers/training"
+      ]
+    },
+    "evaluate": {
+      "returncode": 0,
+      "seconds": 16.089726025005803,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/evaluate_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_flowers98.json",
+        "--models-dir",
+        "runs/patch-ranking-v1/flowers/training",
+        "--output",
+        "runs/patch-ranking-v1/flowers/evaluation"
+      ]
+    },
+    "analyze": {
+      "returncode": 0,
+      "seconds": 7.318493478000164,
+      "command": [
+        ".venv/bin/python",
+        "scripts/analyze_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_flowers98.json",
+        "--source",
+        "runs/patch-ranking-v1/flowers/evaluation",
+        "--output",
+        "runs/patch-ranking-v1/flowers/analysis",
+        "--skip-plot"
+      ]
+    }
+  },
+  "active_stage": "complete",
+  "analysis_retry_reason": "Statistics completed; server lacks plotting package. Plot is generated locally."
+}

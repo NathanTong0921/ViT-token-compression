@@ -1,0 +1,59 @@
+{
+  "dataset": "pets",
+  "config": "configs/patch_ranking_pets98.json",
+  "steps": {
+    "prepare": {
+      "returncode": 0,
+      "seconds": 684.2556149280863,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/prepare_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_pets98.json"
+      ]
+    },
+    "train": {
+      "returncode": 0,
+      "seconds": 117.84423785400577,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/train_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_pets98.json",
+        "--output",
+        "runs/patch-ranking-v1/pets/training"
+      ]
+    },
+    "evaluate": {
+      "returncode": 0,
+      "seconds": 12.946063771029003,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/evaluate_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_pets98.json",
+        "--models-dir",
+        "runs/patch-ranking-v1/pets/training",
+        "--output",
+        "runs/patch-ranking-v1/pets/evaluation"
+      ]
+    },
+    "analyze": {
+      "returncode": 0,
+      "seconds": 5.999276791000739,
+      "command": [
+        ".venv/bin/python",
+        "scripts/analyze_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_pets98.json",
+        "--source",
+        "runs/patch-ranking-v1/pets/evaluation",
+        "--output",
+        "runs/patch-ranking-v1/pets/analysis",
+        "--skip-plot"
+      ]
+    }
+  },
+  "active_stage": "complete",
+  "analysis_retry_reason": "Statistics completed; server lacks plotting package. Plot is generated locally."
+}
