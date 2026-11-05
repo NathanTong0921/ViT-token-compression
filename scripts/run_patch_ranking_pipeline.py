@@ -19,7 +19,7 @@ def main(config_path):
         ("evaluate", "evaluate_patch_ranking.py", ["--models-dir", str(output / "training"),
                                                   "--output", str(output / "evaluation")]),
         ("analyze", "analyze_patch_ranking.py", ["--source", str(output / "evaluation"),
-                                                "--output", str(output / "analysis")]),
+                                                "--output", str(output / "analysis"), "--skip-plot"]),
     ]
     status = {"dataset": config["dataset"], "config": str(config_path), "steps": {}}
     for name, script, args in steps:

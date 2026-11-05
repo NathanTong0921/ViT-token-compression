@@ -1,10 +1,8 @@
 # 论文主线：任务信息何时值得用于 token 选择？
 
-更新：2026-11-05。本文整理已有研究结果，作为四页报告、展示和后续实验的共同提纲。当前数字来自开发图片及未见开发类别组合；最终预留数据确认完成后更新主表。
+更新：2026-11-05。本文整理研究论证与证据，供后续写作和实验使用。报告结构等待课程具体要求，不按这里的暂拟分页执行。当前数字来自开发图片及未见开发类别组合；最终预留数据确认完成后更新主表。
 
-建议题目：**When Does Task Conditioning Pay Off? A Controlled Study of CLIP Token Selection**
-
-中文工作题目：**任务信息何时值得引入？CLIP Token 选择的受控研究**
+题目待定，保留 proposal 题目及 **Same Image, Different Evidence: When Does Visual Token Compression Benefit from Task Conditioning?** 作为候选。
 
 [研究框架图与核心结果图](../results/paper-evidence-v1/README.md)已从当前实现和保存的数据生成，提供 PDF／SVG／PNG 与源数据表。[外部方法评估](external-baseline-review.md)说明 Patch Ranking 的适配方案及可延伸的问题。
 
@@ -53,7 +51,7 @@ C−U 区间按每数据集的两预算调整；CU−UU 区间按四设置调整
 
 深度结果另用双面板图：Pets49 的 C−U margin 从 block6 的 −2.524 × 10⁻³ 变为 block9 的 +1.331 × 10⁻³，变化量为 +3.855 × 10⁻³，调整区间 [+2.913, +4.776] × 10⁻³。Flowers 的对应变化量为 +0.103 × 10⁻³，区间 [−0.900, +1.159] × 10⁻³。同期准确率的相对变化未确定；两列一起呈现。[深度结果](../results/depth-intervention-v1/README.md)
 
-## 四页正文骨架
+## 早期分页草案（暂存，待课程要求后重新安排）
 
 | 位置 | 要回答的问题 | 内容与主要图表 |
 |---|---|---|
