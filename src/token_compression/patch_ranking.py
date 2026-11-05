@@ -1,6 +1,7 @@
 """Preservation predictor adapted from CEWu/PatchRanking's public training entry.
 
 Source: https://github.com/CEWu/PatchRanking/blob/main/train_predictor.py
+Upstream permission notice: third_party/PatchRanking.LICENSE.
 The predictor uses timm's MixerBlock directly. The released KL target suppresses
 the bottom 50 patches and assigns equal probability to the remaining patches.
 """
