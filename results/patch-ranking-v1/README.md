@@ -30,6 +30,8 @@ Intervals use image-paired bootstrap, with adjustment for the four primary compa
 
 Our strong shared selector exceeds this independent method adaptation on both datasets. It also has more selector parameters: U is 7.5 times the size of the PR predictor. The existing C-versus-U comparison isolates the value of task information at similar parameter counts; the PR comparison places that controlled system alongside a published method's architecture and objective.
 
+C and U retain their classification-based training targets; PR learns label-free image-representation preservation. This comparison therefore evaluates the methods' respective architectures and targets, while their image data, frozen backbone, pruning position and token budget are held fixed.
+
 The offline preservation ranking is already weaker than U and C, even with no predictor approximation. Predictor capacity alone therefore does not explain the entire problem: the ranking target's classification utility also matters. The predictor improves over its teacher by 0.869 pp on Pets; Flowers has a +0.196 pp mean difference with an interval spanning zero. Top-98 teacher overlap averages 75.24% and 67.27%, respectively.
 
 The public KL target gives equal target probability to the first 146 ranked patches, while our evaluated budget retains 98. This is a concrete distinction between the training target and the final selection. The present run has not isolated its contribution from local-window ranking, pruning depth or representation preservation. A candidate-class preservation objective is a possible next intervention using the saved deletion responses; it has not been run.

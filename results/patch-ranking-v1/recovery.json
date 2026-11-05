@@ -1,0 +1,15 @@
+{
+  "release": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/patch-ranking-v1",
+  "remote_size_matches": true,
+  "remote_digest_matches": true,
+  "archive_members": 80,
+  "downloaded_members": [
+    "pets seed 2041 model.pt",
+    "pets analysis.json",
+    "flowers analysis.json"
+  ],
+  "checkpoint_parameters": 46246,
+  "classification_tables_match": true,
+  "downloaded_bytes": 208985,
+  "download_method": "HTTP byte ranges from the published release asset"
+}

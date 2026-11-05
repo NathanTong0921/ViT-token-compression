@@ -1,0 +1,17 @@
+{
+  "source": "/data2/zhao.tong/experiments/runs/patch-ranking-v1",
+  "archive": "/data2/zhao.tong/artifacts/patch-ranking-v1/patch-ranking-v1-artifacts.zip",
+  "file_count": 80,
+  "source_bytes": 298132645,
+  "archive_bytes": 248018584,
+  "datasets": {
+    "pets": {
+      "files": 40,
+      "source_bytes": 119904054
+    },
+    "flowers": {
+      "files": 40,
+      "source_bytes": 178228591
+    }
+  }
+}
