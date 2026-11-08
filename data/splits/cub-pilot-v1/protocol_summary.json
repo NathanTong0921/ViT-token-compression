@@ -1,0 +1,1229 @@
+{
+  "dataset": "CUB-200-2011",
+  "class_count": 200,
+  "image_count": 11788,
+  "image_seed": 2615,
+  "train_per_class": 20,
+  "val_per_class": 5,
+  "image_counts": {
+    "train": 4000,
+    "val": 1000,
+    "test": 5794,
+    "unused": 994
+  },
+  "per_class_image_counts": {
+    "0": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "1": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "2": {
+      "train": 20,
+      "val": 5,
+      "test": 28,
+      "unused": 5
+    },
+    "3": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "4": {
+      "train": 20,
+      "val": 5,
+      "test": 14,
+      "unused": 5
+    },
+    "5": {
+      "train": 20,
+      "val": 5,
+      "test": 11,
+      "unused": 5
+    },
+    "6": {
+      "train": 20,
+      "val": 5,
+      "test": 23,
+      "unused": 5
+    },
+    "7": {
+      "train": 20,
+      "val": 5,
+      "test": 18,
+      "unused": 5
+    },
+    "8": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "9": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "10": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "11": {
+      "train": 20,
+      "val": 5,
+      "test": 26,
+      "unused": 5
+    },
+    "12": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "13": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "14": {
+      "train": 20,
+      "val": 5,
+      "test": 28,
+      "unused": 5
+    },
+    "15": {
+      "train": 20,
+      "val": 5,
+      "test": 28,
+      "unused": 5
+    },
+    "16": {
+      "train": 20,
+      "val": 5,
+      "test": 27,
+      "unused": 5
+    },
+    "17": {
+      "train": 20,
+      "val": 5,
+      "test": 15,
+      "unused": 5
+    },
+    "18": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "19": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "20": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "21": {
+      "train": 20,
+      "val": 5,
+      "test": 26,
+      "unused": 5
+    },
+    "22": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "23": {
+      "train": 20,
+      "val": 5,
+      "test": 22,
+      "unused": 5
+    },
+    "24": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "25": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "26": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "27": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "28": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "29": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "30": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "31": {
+      "train": 20,
+      "val": 5,
+      "test": 23,
+      "unused": 5
+    },
+    "32": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "33": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "34": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "35": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "36": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "37": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "38": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "39": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "40": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "41": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "42": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "43": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "44": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "45": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "46": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "47": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "48": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "49": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "50": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "51": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "52": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "53": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "54": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "55": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "56": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "57": {
+      "train": 20,
+      "val": 5,
+      "test": 28,
+      "unused": 5
+    },
+    "58": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "59": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "60": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "61": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "62": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "63": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "64": {
+      "train": 20,
+      "val": 5,
+      "test": 20,
+      "unused": 5
+    },
+    "65": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "66": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "67": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "68": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "69": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "70": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "71": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "72": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "73": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "74": {
+      "train": 20,
+      "val": 5,
+      "test": 27,
+      "unused": 5
+    },
+    "75": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "76": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "77": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "78": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "79": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "80": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "81": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "82": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "83": {
+      "train": 20,
+      "val": 5,
+      "test": 23,
+      "unused": 5
+    },
+    "84": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "85": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "86": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "87": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "88": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "89": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "90": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "91": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "92": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "93": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "94": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "95": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "96": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "97": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "98": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "99": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "100": {
+      "train": 20,
+      "val": 5,
+      "test": 20,
+      "unused": 5
+    },
+    "101": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "102": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "103": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "104": {
+      "train": 20,
+      "val": 5,
+      "test": 19,
+      "unused": 5
+    },
+    "105": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "106": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 4
+    },
+    "107": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "108": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "109": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "110": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "111": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "112": {
+      "train": 20,
+      "val": 5,
+      "test": 20,
+      "unused": 5
+    },
+    "113": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "114": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "115": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "116": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "117": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "118": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "119": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "120": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "121": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "122": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "123": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "124": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "125": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 4
+    },
+    "126": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "127": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "128": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "129": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "130": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "131": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "132": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "133": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "134": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 4
+    },
+    "135": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "136": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "137": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "138": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "139": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "140": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 4
+    },
+    "141": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "142": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "143": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "144": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "145": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "146": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "147": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "148": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "149": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "150": {
+      "train": 20,
+      "val": 5,
+      "test": 21,
+      "unused": 5
+    },
+    "151": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "152": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "153": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "154": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "155": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "156": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "157": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "158": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "159": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "160": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "161": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "162": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "163": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "164": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "165": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "166": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "167": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "168": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "169": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "170": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "171": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "172": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "173": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "174": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "175": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "176": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "177": {
+      "train": 20,
+      "val": 5,
+      "test": 26,
+      "unused": 5
+    },
+    "178": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "179": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "180": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 5
+    },
+    "181": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "182": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "183": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "184": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "185": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "186": {
+      "train": 20,
+      "val": 5,
+      "test": 20,
+      "unused": 5
+    },
+    "187": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "188": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "189": {
+      "train": 20,
+      "val": 5,
+      "test": 29,
+      "unused": 4
+    },
+    "190": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "191": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "192": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "193": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "194": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "195": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 4
+    },
+    "196": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "197": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "198": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    },
+    "199": {
+      "train": 20,
+      "val": 5,
+      "test": 30,
+      "unused": 5
+    }
+  },
+  "image_split_protocol": "Within each official training class, shuffle numeric image IDs using Python random.Random(image_seed), take validation first and training next; mark the rest unused. Official test images are not sampled or evaluated.",
+  "prompt_template": "a photo of a {class_name}, a type of bird.",
+  "class_name_protocol": "Remove numeric prefix, replace underscores with spaces, lowercase.",
+  "candidate_task_protocol": "Generated separately by token_compression.nway.task_manifest.",
+  "annotation_files": {
+    "bounding_boxes": "bounding_boxes.txt",
+    "part_locations": "parts/part_locs.txt",
+    "part_names": "parts/parts.txt",
+    "image_attributes": "attributes/image_attribute_labels.txt",
+    "class_attributes": "attributes/class_attribute_labels_continuous.txt"
+  },
+  "annotation_path_base": "dataset root",
+  "source": "https://www.vision.caltech.edu/datasets/cub_200_2011/"
+}
