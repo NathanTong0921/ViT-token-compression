@@ -35,6 +35,10 @@ The preceding content-benefit prediction experiment remains archived as a resear
 
 ## Implementation and initial run
 
-`run_direct_classification.py` trains and resumes the four continuations per seed, saving the Adam state at each checkpoint. Eleven local tests cover the gate, classifier loss, paired analysis, and identical interrupted/uninterrupted updates. On real CLIP, hard-policy and native-gather normalized features agree within 4.1e-7 across C/U, random masks, and all-token selection; gradients reach selector scores while the backbone remains frozen.
+`run_direct_classification.py` trains and resumes the four continuations per seed, saving the Adam state at each checkpoint. Twelve local tests cover the gate, classifier loss, paired analysis, and identical interrupted/uninterrupted updates. On real CLIP, hard-policy and native-gather normalized features agree within 4.1e-7 across C/U, random masks, and all-token selection; gradients reach selector scores while the backbone remains frozen.
 
-The 20-step A6000 smoke run measured 0.144 seconds per update for C and 0.137 for U, with about 4.1 GB of peak allocated GPU memory. This projects roughly 17 minutes for six 1,200-step direct continuations, before evaluation and KL controls. The measured full-run cost will be recorded with the results.
+The 20-step A6000 smoke run measured 0.144 seconds per update for C and 0.137 for U, with about 4.1 GB of peak allocated GPU memory. All twelve continuations completed. Recorded optimizer-loop time was 1,105.73 seconds (0.307 GPU hours), including 1,054.44 seconds for direct training and 51.29 seconds for KL. Development evaluation, monitor evaluation and the timed smoke add 65.27 seconds. Reused checkpoint and teacher preparation are excluded from this round's added cost.
+
+## Result
+
+The three-seed development accuracy is 97.124% for direct C and 96.830% for direct U, versus 96.846% and 96.806% after KL continuation. Direct C improves over KL C by 0.278 percentage points (ordinary image-bootstrap 95% interval [0.025, 0.531]); the gain is positive in all three seeds. Direct C−U is +0.294pp with adjusted interval [−0.074, +0.662], and the change in that gap relative to KL is +0.253pp [−0.188, +0.719]. Both main raw-margin comparisons are positive. The actual classification objective improves C in this setting; its accuracy advantage over strong U remains unresolved. [Tables, learning curves and per-example reconstruction](../../results/direct-classification-v1/README.md).

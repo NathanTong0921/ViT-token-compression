@@ -1,0 +1,100 @@
+{
+  "unit": "Task/class-weighted fraction of image-task decisions; means over fixed trained seeds.",
+  "transitions": {
+    "direct_C_vs_direct_U": {
+      "source": "direct_U",
+      "target": "direct_C",
+      "per_seed": [
+        {
+          "seed": 2041,
+          "corrected_error_rate": 0.008333333333333333,
+          "introduced_error_rate": 0.008088235294117646,
+          "net_accuracy_change": 0.00024509803921568714,
+          "corrected_example_count": 34,
+          "introduced_example_count": 33
+        }
+      ],
+      "seed_mean": {
+        "corrected_error_rate": 0.008333333333333333,
+        "introduced_error_rate": 0.008088235294117646,
+        "net_accuracy_change": 0.00024509803921568714
+      }
+    },
+    "direct_C_vs_initial_C": {
+      "source": "initial_C",
+      "target": "direct_C",
+      "per_seed": [
+        {
+          "seed": 2041,
+          "corrected_error_rate": 0.007352941176470588,
+          "introduced_error_rate": 0.004901960784313725,
+          "net_accuracy_change": 0.0024509803921568627,
+          "corrected_example_count": 30,
+          "introduced_example_count": 20
+        }
+      ],
+      "seed_mean": {
+        "corrected_error_rate": 0.007352941176470588,
+        "introduced_error_rate": 0.004901960784313725,
+        "net_accuracy_change": 0.0024509803921568627
+      }
+    },
+    "direct_U_vs_initial_U": {
+      "source": "initial_U",
+      "target": "direct_U",
+      "per_seed": [
+        {
+          "seed": 2041,
+          "corrected_error_rate": 0.00784313725490196,
+          "introduced_error_rate": 0.004166666666666667,
+          "net_accuracy_change": 0.003676470588235294,
+          "corrected_example_count": 32,
+          "introduced_example_count": 17
+        }
+      ],
+      "seed_mean": {
+        "corrected_error_rate": 0.00784313725490196,
+        "introduced_error_rate": 0.004166666666666667,
+        "net_accuracy_change": 0.003676470588235294
+      }
+    },
+    "direct_C_vs_kl_C": {
+      "source": "kl_C",
+      "target": "direct_C",
+      "per_seed": [
+        {
+          "seed": 2041,
+          "corrected_error_rate": 0.005147058823529412,
+          "introduced_error_rate": 0.005392156862745098,
+          "net_accuracy_change": -0.00024509803921568627,
+          "corrected_example_count": 21,
+          "introduced_example_count": 22
+        }
+      ],
+      "seed_mean": {
+        "corrected_error_rate": 0.005147058823529412,
+        "introduced_error_rate": 0.005392156862745098,
+        "net_accuracy_change": -0.00024509803921568627
+      }
+    },
+    "direct_U_vs_kl_U": {
+      "source": "kl_U",
+      "target": "direct_U",
+      "per_seed": [
+        {
+          "seed": 2041,
+          "corrected_error_rate": 0.006862745098039216,
+          "introduced_error_rate": 0.004901960784313725,
+          "net_accuracy_change": 0.00196078431372549,
+          "corrected_example_count": 28,
+          "introduced_example_count": 20
+        }
+      ],
+      "seed_mean": {
+        "corrected_error_rate": 0.006862745098039216,
+        "introduced_error_rate": 0.004901960784313725,
+        "net_accuracy_change": 0.00196078431372549
+      }
+    }
+  }
+}

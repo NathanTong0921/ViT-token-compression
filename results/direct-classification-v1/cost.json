@@ -1,0 +1,944 @@
+{
+  "continuations": [
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "direct",
+      "steps": 1200,
+      "training_seconds": 236.20151465083472
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "kl",
+      "steps": 1200,
+      "training_seconds": 11.336790843401104
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "steps": 1200,
+      "training_seconds": 164.12919189594686
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "steps": 1200,
+      "training_seconds": 8.671801323071122
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "direct",
+      "steps": 1200,
+      "training_seconds": 149.78155785403214
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "kl",
+      "steps": 1200,
+      "training_seconds": 7.2941747098229825
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "steps": 1200,
+      "training_seconds": 167.33674910920672
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "steps": 1200,
+      "training_seconds": 7.504662556340918
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "direct",
+      "steps": 1200,
+      "training_seconds": 168.7213156928774
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "kl",
+      "steps": 1200,
+      "training_seconds": 7.974319541826844
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "steps": 1200,
+      "training_seconds": 168.26997598679736
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "steps": 1200,
+      "training_seconds": 8.507177739869803
+    }
+  ],
+  "training_seconds": 1105.729231904028,
+  "training_seconds_by_objective": {
+    "direct": 1054.4403051896952,
+    "kl": 51.288926714332774
+  },
+  "training_hours": 0.30714700886223,
+  "native_development_evaluations": [
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "stage": "direct_step_0200",
+      "rows": 4080,
+      "seconds": 2.768274855799973
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "stage": "direct_step_1200",
+      "rows": 4080,
+      "seconds": 2.9263403490185738
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "stage": "initial",
+      "rows": 4080,
+      "seconds": 1.6459295039530843
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "stage": "kl_step_0200",
+      "rows": 4080,
+      "seconds": 2.8712982209399343
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "stage": "kl_step_1200",
+      "rows": 4080,
+      "seconds": 2.908113715937361
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "stage": "direct_step_0200",
+      "rows": 4080,
+      "seconds": 2.7628989710938185
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "stage": "direct_step_1200",
+      "rows": 4080,
+      "seconds": 1.741053408011794
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "stage": "initial",
+      "rows": 4080,
+      "seconds": 2.786398387979716
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "stage": "kl_step_0200",
+      "rows": 4080,
+      "seconds": 2.8064071720000356
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "stage": "kl_step_1200",
+      "rows": 4080,
+      "seconds": 1.6203574230894446
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "stage": "direct_step_1200",
+      "rows": 4080,
+      "seconds": 1.8823410959448665
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "stage": "initial",
+      "rows": 4080,
+      "seconds": 1.685069045983255
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "stage": "kl_step_1200",
+      "rows": 4080,
+      "seconds": 1.8794267140328884
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "stage": "direct_step_1200",
+      "rows": 4080,
+      "seconds": 1.8529670969583094
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "stage": "initial",
+      "rows": 4080,
+      "seconds": 1.9275653949007392
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "stage": "kl_step_1200",
+      "rows": 4080,
+      "seconds": 1.9132191550452262
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "stage": "direct_step_1200",
+      "rows": 4080,
+      "seconds": 2.2709220468532294
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "stage": "initial",
+      "rows": 4080,
+      "seconds": 2.239596749888733
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "stage": "kl_step_1200",
+      "rows": 4080,
+      "seconds": 2.3205310199409723
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "stage": "direct_step_1200",
+      "rows": 4080,
+      "seconds": 2.140811800956726
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "stage": "initial",
+      "rows": 4080,
+      "seconds": 2.117095173103735
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "stage": "kl_step_1200",
+      "rows": 4080,
+      "seconds": 2.106814204948023
+    }
+  ],
+  "native_development_evaluation_seconds": 49.17343150638044,
+  "train_monitor_evaluations": [
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.08867027517408133
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.12719385488890111
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.18815570301376283
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.11974361492320895
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.14744412899017334
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.19281773595139384
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.16966141597367823
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.1685935058631003
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.18046781793236732
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.18420231016352773
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.1399466679431498
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.1732102120295167
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.18339928588829935
+    },
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.18772643897682428
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.11537709692493081
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.1814840140286833
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.09053459484130144
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.08983494900166988
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.09263508208096027
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.0948350818362087
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.1046282451134175
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.18601439706981182
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.138489336008206
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.10535515798255801
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.09128171089105308
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.09017913090065122
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.09253498585894704
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.09269342385232449
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.09478494501672685
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.09137023217044771
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.10687831789255142
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.09436114504933357
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.09194286493584514
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.11626991908997297
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.14090475509874523
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.16738829109817743
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.116939228028059
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.10271930112503469
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.12633814895525575
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.11126784491352737
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.12406928697600961
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.1580458900425583
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.11348492302931845
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.15367736504413188
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.10179428779520094
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.09554072702303529
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.10155416000634432
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.09571111109107733
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.09487152006477118
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.11464006314054132
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.10085420100949705
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.16535064298659563
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.09581157914362848
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.1013159949798137
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.17849749000743032
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.11827242514118552
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.11434746021404862
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.10131916590034962
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.1190479809883982
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.09570337599143386
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.0978480908088386
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.1457590579520911
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "direct",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.10434878012165427
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.1194907610770315
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.14093871810473502
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.17542940704151988
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.10358964302577078
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.16078936797566712
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.17912448896095157
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "objective": "kl",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.09787858300842345
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.16260070097632706
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.11426563211716712
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.11839115503244102
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.09057180397212505
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.11453487002290785
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.1033256899099797
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "direct",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.10028898296877742
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "initial_train_monitor",
+      "rows": 256,
+      "seconds": 0.13757148990407586
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0200",
+      "rows": 256,
+      "seconds": 0.09860473219305277
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0400",
+      "rows": 256,
+      "seconds": 0.09816359914839268
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0600",
+      "rows": 256,
+      "seconds": 0.09901367803104222
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_0800",
+      "rows": 256,
+      "seconds": 0.13001392385922372
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_1000",
+      "rows": 256,
+      "seconds": 0.17609996302053332
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "objective": "kl",
+      "stage": "monitor_1200",
+      "rows": 256,
+      "seconds": 0.09901501587592065
+    }
+  ],
+  "train_monitor_evaluation_seconds": 10.489842953160405,
+  "smoke_benchmarks": [
+    {
+      "arm": "conditioned",
+      "steps": 20,
+      "seconds": 2.8726831960957497,
+      "max_gpu_allocated_bytes": 4079051776
+    },
+    {
+      "arm": "image_only_wide",
+      "steps": 20,
+      "seconds": 2.73258455703035,
+      "max_gpu_allocated_bytes": 4060020224
+    }
+  ],
+  "smoke_timed_seconds": 5.6052677531261,
+  "reused_warm_start_and_teacher_new_seconds": 0,
+  "measurement": "Single GPU6 elapsed training time; each final checkpoint includes all 1200 updates, including the resumed first 200 once. Evaluation and timed smoke segments are listed separately. Loading, warmup, and independent audit are outside these timers.",
+  "total_recorded_seconds": 1170.997774116695
+}

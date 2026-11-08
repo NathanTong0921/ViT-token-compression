@@ -2,7 +2,7 @@
 
 更新：2026-11-08。七设置核心预留测试已完成，本文区分最终测试与开发扩展证据，供后续写作使用。报告结构等待课程具体要求，不按这里的早期分页草案执行。
 
-**2026-11-08报告取舍：** 按用户最新偏好，上一轮[内容收益预测](../results/conditioning-content-v1/README.md)先不列入正文或辅助分析计划，完整记录继续保留。当前新增研究转向[实际分类目标直接训练选择器](experiments/2026-11-08-direct-classification.md)，用于检验此前离线教师模仿路线是否限制了条件化收益；结果产生后再决定如何纳入主线。
+**2026-11-08报告取舍：** 按用户最新偏好，上一轮[内容收益预测](../results/conditioning-content-v1/README.md)先不列入正文或辅助分析计划，完整记录继续保留。[实际分类目标直接训练](../results/direct-classification-v1/README.md)现已完成：Flowers49的C相对同额外步数KL续训提高0.278pp，三个种子均正；direct C−U平均为+0.294pp，调整区间仍跨零。该实验可作为H3训练目标的补充：直接优化分类能改善C，尚未建立超过强U的准确率优势。它使用开发图片与未见类别组合。
 
 题目待定，保留 proposal 题目及 **Same Image, Different Evidence: When Does Visual Token Compression Benefit from Task Conditioning?** 作为候选。
 
