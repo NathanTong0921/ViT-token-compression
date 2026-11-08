@@ -1,0 +1,25 @@
+{
+  "dataset": "pets",
+  "started_utc": "2026-11-08T09:22:58.651359+00:00",
+  "code_commit": "2c26bdb5d526fa27ac02dc380aa0bba487155eab",
+  "steps": [
+    {
+      "stage": "prepare",
+      "seconds": 12.366766080027446,
+      "returncode": 0
+    },
+    {
+      "stage": "train",
+      "seconds": 534.9580204549711,
+      "returncode": 0
+    },
+    {
+      "stage": "evaluate",
+      "seconds": 40.651717953849584,
+      "returncode": 0
+    }
+  ],
+  "stage": "complete",
+  "updated_utc": "2026-11-08T09:32:46.634468+00:00",
+  "wall_seconds": 587.978197281016
+}

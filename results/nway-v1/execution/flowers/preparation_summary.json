@@ -1,0 +1,76 @@
+{
+  "config": {
+    "experiment": "nway-v1",
+    "dataset": "flowers",
+    "cache_dir": "runs/flowers-selector-budget-98-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "ways": [
+      2,
+      5
+    ],
+    "task_seed": 2611,
+    "train_task_rounds": 4,
+    "val_task_rounds": 2,
+    "hidden_dim": 128,
+    "wide_hidden_dim": 199,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "training_steps": 3978,
+    "checkpoint_interval": 153,
+    "batch_size": 128,
+    "image_batch_size": 64,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "ridge": 0.01,
+    "temperature": 1.0,
+    "identity_atol": 1e-06,
+    "bootstrap_seed": 2613,
+    "bootstrap_replicates": 2000
+  },
+  "code_commit": "2c26bdb5d526fa27ac02dc380aa0bba487155eab",
+  "wall_seconds": 9.306237793061882,
+  "panels": [
+    {
+      "split": "train",
+      "way": 2,
+      "images": 1020,
+      "tasks": 408,
+      "examples": 8160,
+      "seconds": 1.3490546639077365
+    },
+    {
+      "split": "train",
+      "way": 5,
+      "images": 1020,
+      "tasks": 408,
+      "examples": 20400,
+      "seconds": 2.6864150520414114
+    },
+    {
+      "split": "val",
+      "way": 2,
+      "images": 1020,
+      "tasks": 204,
+      "examples": 4080,
+      "seconds": 0.47263365611433983
+    },
+    {
+      "split": "val",
+      "way": 5,
+      "images": 1020,
+      "tasks": 204,
+      "examples": 10200,
+      "seconds": 1.2374110859818757
+    }
+  ],
+  "teacher": "Ridge fit of the minimum normalized true-class versus competitor margin over cached fixed-budget masks.",
+  "descriptor": "Concatenate candidate-text mean and twice its population standard deviation.",
+  "evaluation_split": "development validation images and unseen candidate sets"
+}

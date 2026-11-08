@@ -1,0 +1,32 @@
+{
+  "code_commit": "2c26bdb5d526fa27ac02dc380aa0bba487155eab",
+  "evaluation_split": "development",
+  "costs": [
+    {
+      "way": 2,
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/nway-v1/pets/training/2way/seed_2041/conditioned.pt",
+      "wall_seconds": 1.8863120370078832,
+      "selector_seconds": 0.19254126073792577,
+      "suffix_seconds": 1.2189460087101907,
+      "logical_task_examples": 2944,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 2944,
+      "physical_suffix_examples": 2944
+    },
+    {
+      "way": 2,
+      "method": "image_only_wide",
+      "seed": 2041,
+      "checkpoint": "runs/nway-v1/pets/training/2way/seed_2041/image_only_wide.pt",
+      "wall_seconds": 0.5225738910958171,
+      "selector_seconds": 0.04031477216631174,
+      "suffix_seconds": 0.33089567185379565,
+      "logical_task_examples": 2944,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 736,
+      "physical_suffix_examples": 768
+    }
+  ]
+}

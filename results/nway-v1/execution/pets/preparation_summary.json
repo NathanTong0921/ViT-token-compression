@@ -1,0 +1,76 @@
+{
+  "config": {
+    "experiment": "nway-v1",
+    "dataset": "pets",
+    "cache_dir": "runs/pets-selector-budget-98-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "ways": [
+      2,
+      5
+    ],
+    "task_seed": 2611,
+    "train_task_rounds": 4,
+    "val_task_rounds": 2,
+    "hidden_dim": 128,
+    "wide_hidden_dim": 199,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "training_steps": 3990,
+    "checkpoint_interval": 133,
+    "batch_size": 128,
+    "image_batch_size": 64,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "ridge": 0.01,
+    "temperature": 1.0,
+    "identity_atol": 1e-06,
+    "bootstrap_seed": 2613,
+    "bootstrap_replicates": 2000
+  },
+  "code_commit": "2c26bdb5d526fa27ac02dc380aa0bba487155eab",
+  "wall_seconds": 10.195227675139904,
+  "panels": [
+    {
+      "split": "train",
+      "way": 2,
+      "images": 2944,
+      "tasks": 148,
+      "examples": 23552,
+      "seconds": 2.5692331690806895
+    },
+    {
+      "split": "train",
+      "way": 5,
+      "images": 2944,
+      "tasks": 148,
+      "examples": 58880,
+      "seconds": 4.190450111869723
+    },
+    {
+      "split": "val",
+      "way": 2,
+      "images": 736,
+      "tasks": 74,
+      "examples": 2944,
+      "seconds": 0.209918956970796
+    },
+    {
+      "split": "val",
+      "way": 5,
+      "images": 736,
+      "tasks": 74,
+      "examples": 7360,
+      "seconds": 0.5349136870354414
+    }
+  ],
+  "teacher": "Ridge fit of the minimum normalized true-class versus competitor margin over cached fixed-budget masks.",
+  "descriptor": "Concatenate candidate-text mean and twice its population standard deviation.",
+  "evaluation_split": "development validation images and unseen candidate sets"
+}

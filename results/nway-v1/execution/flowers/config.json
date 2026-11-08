@@ -1,0 +1,35 @@
+{
+  "experiment": "nway-v1",
+  "dataset": "flowers",
+  "cache_dir": "runs/flowers-selector-budget-98-supervision-v1",
+  "model": "ViT-B/16",
+  "model_cache": "cache/clip",
+  "device": "cuda:0",
+  "prune_after": 6,
+  "keep_patch_tokens": 98,
+  "ways": [
+    2,
+    5
+  ],
+  "task_seed": 2611,
+  "train_task_rounds": 4,
+  "val_task_rounds": 2,
+  "hidden_dim": 128,
+  "wide_hidden_dim": 199,
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "training_steps": 3978,
+  "checkpoint_interval": 153,
+  "batch_size": 128,
+  "image_batch_size": 64,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "ridge": 0.01,
+  "temperature": 1.0,
+  "identity_atol": 1e-06,
+  "bootstrap_seed": 2613,
+  "bootstrap_replicates": 2000
+}

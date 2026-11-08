@@ -1,0 +1,32 @@
+{
+  "code_commit": "2c26bdb5d526fa27ac02dc380aa0bba487155eab",
+  "evaluation_split": "development",
+  "costs": [
+    {
+      "way": 5,
+      "method": "full_model",
+      "seed": -1,
+      "checkpoint": null,
+      "wall_seconds": 0.1252949731424451,
+      "selector_seconds": 0.0,
+      "suffix_seconds": 0.0,
+      "logical_task_examples": 7360,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 0,
+      "physical_suffix_examples": 0
+    },
+    {
+      "way": 5,
+      "method": "attention",
+      "seed": -1,
+      "checkpoint": null,
+      "wall_seconds": 0.4917199451010674,
+      "selector_seconds": 0.0,
+      "suffix_seconds": 0.3106811947654933,
+      "logical_task_examples": 7360,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 736,
+      "physical_suffix_examples": 768
+    }
+  ]
+}

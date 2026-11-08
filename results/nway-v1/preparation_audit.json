@@ -1,0 +1,133 @@
+{
+  "audit": "independent_actual_preparation_checks",
+  "device": "cpu",
+  "datasets": {
+    "pets": {
+      "image_overlap": 0,
+      "candidate_set_overlap": {
+        "2": 0,
+        "5": 0
+      },
+      "panels": [
+        {
+          "split": "train",
+          "way": 2,
+          "images": 2944,
+          "examples": 23552,
+          "tasks": 148,
+          "class_task_degree": 8,
+          "max_weight_error": 0.0,
+          "target_probability_sum_max_abs_error": 3.3623109629843384e-07,
+          "all_candidate_classes_used_as_truth": true,
+          "source_ids_and_labels_match": true,
+          "binary_target_samples": 128,
+          "binary_target_max_abs_error": 2.682209014892578e-07,
+          "binary_target_mean_abs_error": 7.047702976770154e-10
+        },
+        {
+          "split": "train",
+          "way": 5,
+          "images": 2944,
+          "examples": 58880,
+          "tasks": 148,
+          "class_task_degree": 20,
+          "max_weight_error": 0.0,
+          "target_probability_sum_max_abs_error": 3.5169318834959995e-07,
+          "all_candidate_classes_used_as_truth": true,
+          "source_ids_and_labels_match": true
+        },
+        {
+          "split": "val",
+          "way": 2,
+          "images": 736,
+          "examples": 2944,
+          "tasks": 74,
+          "class_task_degree": 4,
+          "max_weight_error": 0.0,
+          "target_probability_sum_max_abs_error": 2.614688128232956e-07,
+          "all_candidate_classes_used_as_truth": true,
+          "source_ids_and_labels_match": true,
+          "binary_target_samples": 128,
+          "binary_target_max_abs_error": 3.2782554626464844e-07,
+          "binary_target_mean_abs_error": 7.864743856167422e-10
+        },
+        {
+          "split": "val",
+          "way": 5,
+          "images": 736,
+          "examples": 7360,
+          "tasks": 74,
+          "class_task_degree": 10,
+          "max_weight_error": 0.0,
+          "target_probability_sum_max_abs_error": 3.1303898140322417e-07,
+          "all_candidate_classes_used_as_truth": true,
+          "source_ids_and_labels_match": true
+        }
+      ]
+    },
+    "flowers": {
+      "image_overlap": 0,
+      "candidate_set_overlap": {
+        "2": 0,
+        "5": 0
+      },
+      "panels": [
+        {
+          "split": "train",
+          "way": 2,
+          "images": 1020,
+          "examples": 8160,
+          "tasks": 408,
+          "class_task_degree": 8,
+          "max_weight_error": 0.0,
+          "target_probability_sum_max_abs_error": 2.2951780920266174e-07,
+          "all_candidate_classes_used_as_truth": true,
+          "source_ids_and_labels_match": true,
+          "binary_target_samples": 128,
+          "binary_target_max_abs_error": 2.980232238769531e-07,
+          "binary_target_mean_abs_error": 7.28441029718141e-10
+        },
+        {
+          "split": "train",
+          "way": 5,
+          "images": 1020,
+          "examples": 20400,
+          "tasks": 408,
+          "class_task_degree": 20,
+          "max_weight_error": 0.0,
+          "target_probability_sum_max_abs_error": 2.518427208997309e-07,
+          "all_candidate_classes_used_as_truth": true,
+          "source_ids_and_labels_match": true
+        },
+        {
+          "split": "val",
+          "way": 2,
+          "images": 1020,
+          "examples": 4080,
+          "tasks": 204,
+          "class_task_degree": 4,
+          "max_weight_error": 0.0,
+          "target_probability_sum_max_abs_error": 2.6595807867124677e-07,
+          "all_candidate_classes_used_as_truth": true,
+          "source_ids_and_labels_match": true,
+          "binary_target_samples": 128,
+          "binary_target_max_abs_error": 2.980232238769531e-07,
+          "binary_target_mean_abs_error": 7.879224495077608e-10
+        },
+        {
+          "split": "val",
+          "way": 5,
+          "images": 1020,
+          "examples": 10200,
+          "tasks": 204,
+          "class_task_degree": 10,
+          "max_weight_error": 0.0,
+          "target_probability_sum_max_abs_error": 2.7082342057838105e-07,
+          "all_candidate_classes_used_as_truth": true,
+          "source_ids_and_labels_match": true
+        }
+      ]
+    }
+  },
+  "status": "passed"
+}

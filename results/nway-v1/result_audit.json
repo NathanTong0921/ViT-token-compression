@@ -1,0 +1,605 @@
+{
+  "audit": "independent_raw_score_point_estimates",
+  "confidence_intervals_recomputed": false,
+  "datasets": {
+    "flowers": {
+      "settings": {
+        "2": {
+          "means": {
+            "attention": {
+              "accuracy_percent": 96.15196078431347,
+              "margin": 0.0854937597451841,
+              "geometric_margin": 0.095449752783026
+            },
+            "full_model": {
+              "accuracy_percent": 96.64215686274484,
+              "margin": 0.09742852222430064,
+              "geometric_margin": 0.10886479588716091
+            },
+            "conditioned": {
+              "accuracy_percent": 96.6993464052285,
+              "margin": 0.0946058392110798,
+              "geometric_margin": 0.10574317452760602
+            },
+            "image_only_wide": {
+              "accuracy_percent": 96.81372549019584,
+              "margin": 0.09374590303103615,
+              "geometric_margin": 0.10477387039753987
+            }
+          },
+          "C_minus_U": {
+            "accuracy_percent": -0.1143790849673394,
+            "margin": 0.0008599361800436522,
+            "geometric_margin": 0.0009693041300661565
+          },
+          "per_seed": {
+            "attention": [
+              {
+                "seed": -1,
+                "accuracy_percent": 96.15196078431347,
+                "margin": 0.0854937597451841,
+                "geometric_margin": 0.095449752783026,
+                "examples": 4080
+              }
+            ],
+            "full_model": [
+              {
+                "seed": -1,
+                "accuracy_percent": 96.64215686274484,
+                "margin": 0.09742852222430064,
+                "geometric_margin": 0.10886479588716091,
+                "examples": 4080
+              }
+            ],
+            "conditioned": [
+              {
+                "seed": 2041,
+                "accuracy_percent": 96.61764705882328,
+                "margin": 0.0947446219970052,
+                "geometric_margin": 0.10589781965228803,
+                "examples": 4080
+              },
+              {
+                "seed": 2042,
+                "accuracy_percent": 96.69117647058798,
+                "margin": 0.09471730193050176,
+                "geometric_margin": 0.10589257906423574,
+                "examples": 4080
+              },
+              {
+                "seed": 2043,
+                "accuracy_percent": 96.78921568627426,
+                "margin": 0.09435559370573246,
+                "geometric_margin": 0.10543912486629428,
+                "examples": 4080
+              }
+            ],
+            "image_only_wide": [
+              {
+                "seed": 2041,
+                "accuracy_percent": 96.81372549019582,
+                "margin": 0.09392204438244886,
+                "geometric_margin": 0.10497708279398082,
+                "examples": 4080
+              },
+              {
+                "seed": 2042,
+                "accuracy_percent": 96.81372549019582,
+                "margin": 0.09328091372827105,
+                "geometric_margin": 0.10425571705404482,
+                "examples": 4080
+              },
+              {
+                "seed": 2043,
+                "accuracy_percent": 96.81372549019582,
+                "margin": 0.09403475098238856,
+                "geometric_margin": 0.10508881134459395,
+                "examples": 4080
+              }
+            ]
+          },
+          "saved_outcome_check": {
+            "correct_mismatches": 0,
+            "margin_max_abs_error": 0.0,
+            "geometric_margin_max_abs_error": 0.0
+          }
+        },
+        "5": {
+          "means": {
+            "attention": {
+              "accuracy_percent": 90.38235294117644,
+              "margin": 0.05008640077768587,
+              "geometric_margin": 0.059177891702945455
+            },
+            "full_model": {
+              "accuracy_percent": 91.15686274509801,
+              "margin": 0.058065880617382486,
+              "geometric_margin": 0.06872205776081829
+            },
+            "conditioned": {
+              "accuracy_percent": 91.49999999999996,
+              "margin": 0.056124189945510015,
+              "geometric_margin": 0.06637817521421185
+            },
+            "image_only_wide": {
+              "accuracy_percent": 91.67320261437904,
+              "margin": 0.05606924701311621,
+              "geometric_margin": 0.06632242301769899
+            }
+          },
+          "C_minus_U": {
+            "accuracy_percent": -0.17320261437907902,
+            "margin": 5.494293239380332e-05,
+            "geometric_margin": 5.575219651286767e-05
+          },
+          "per_seed": {
+            "attention": [
+              {
+                "seed": -1,
+                "accuracy_percent": 90.38235294117644,
+                "margin": 0.05008640077768587,
+                "geometric_margin": 0.059177891702945455,
+                "examples": 10200
+              }
+            ],
+            "full_model": [
+              {
+                "seed": -1,
+                "accuracy_percent": 91.15686274509801,
+                "margin": 0.058065880617382486,
+                "geometric_margin": 0.06872205776081829,
+                "examples": 10200
+              }
+            ],
+            "conditioned": [
+              {
+                "seed": 2041,
+                "accuracy_percent": 91.39215686274505,
+                "margin": 0.05624148700313242,
+                "geometric_margin": 0.06652910541419255,
+                "examples": 10200
+              },
+              {
+                "seed": 2042,
+                "accuracy_percent": 91.61764705882351,
+                "margin": 0.056306833788460374,
+                "geometric_margin": 0.06657988779896233,
+                "examples": 10200
+              },
+              {
+                "seed": 2043,
+                "accuracy_percent": 91.49019607843132,
+                "margin": 0.05582424904493724,
+                "geometric_margin": 0.06602553242948069,
+                "examples": 10200
+              }
+            ],
+            "image_only_wide": [
+              {
+                "seed": 2041,
+                "accuracy_percent": 91.60784313725485,
+                "margin": 0.05645137040346277,
+                "geometric_margin": 0.06680065631301535,
+                "examples": 10200
+              },
+              {
+                "seed": 2042,
+                "accuracy_percent": 91.63725490196077,
+                "margin": 0.055548915838201866,
+                "geometric_margin": 0.06570551505539905,
+                "examples": 10200
+              },
+              {
+                "seed": 2043,
+                "accuracy_percent": 91.77450980392152,
+                "margin": 0.056207454797683985,
+                "geometric_margin": 0.06646109768468256,
+                "examples": 10200
+              }
+            ]
+          },
+          "saved_outcome_check": {
+            "correct_mismatches": 0,
+            "margin_max_abs_error": 0.0,
+            "geometric_margin_max_abs_error": 0.0
+          }
+        }
+      },
+      "five_minus_two_C_minus_U": {
+        "accuracy_percent": -0.05882352941173963,
+        "margin": -0.0008049932476498489,
+        "geometric_margin": -0.0009135519335532888
+      },
+      "checkpoints": [
+        {
+          "way": 2,
+          "seed": 2041,
+          "arm": "conditioned",
+          "steps": 3978,
+          "parameters": 348033
+        },
+        {
+          "way": 2,
+          "seed": 2041,
+          "arm": "image_only_wide",
+          "steps": 3978,
+          "parameters": 347399
+        },
+        {
+          "way": 2,
+          "seed": 2042,
+          "arm": "conditioned",
+          "steps": 3978,
+          "parameters": 348033
+        },
+        {
+          "way": 2,
+          "seed": 2042,
+          "arm": "image_only_wide",
+          "steps": 3978,
+          "parameters": 347399
+        },
+        {
+          "way": 2,
+          "seed": 2043,
+          "arm": "conditioned",
+          "steps": 3978,
+          "parameters": 348033
+        },
+        {
+          "way": 2,
+          "seed": 2043,
+          "arm": "image_only_wide",
+          "steps": 3978,
+          "parameters": 347399
+        },
+        {
+          "way": 5,
+          "seed": 2041,
+          "arm": "conditioned",
+          "steps": 3978,
+          "parameters": 348033
+        },
+        {
+          "way": 5,
+          "seed": 2041,
+          "arm": "image_only_wide",
+          "steps": 3978,
+          "parameters": 347399
+        },
+        {
+          "way": 5,
+          "seed": 2042,
+          "arm": "conditioned",
+          "steps": 3978,
+          "parameters": 348033
+        },
+        {
+          "way": 5,
+          "seed": 2042,
+          "arm": "image_only_wide",
+          "steps": 3978,
+          "parameters": 347399
+        },
+        {
+          "way": 5,
+          "seed": 2043,
+          "arm": "conditioned",
+          "steps": 3978,
+          "parameters": 348033
+        },
+        {
+          "way": 5,
+          "seed": 2043,
+          "arm": "image_only_wide",
+          "steps": 3978,
+          "parameters": 347399
+        }
+      ],
+      "checkpoint_count": 12
+    },
+    "pets": {
+      "settings": {
+        "2": {
+          "means": {
+            "attention": {
+              "accuracy_percent": 99.1109530583215,
+              "margin": 0.10379612325276029,
+              "geometric_margin": 0.11091091545277187
+            },
+            "full_model": {
+              "accuracy_percent": 99.32076813655763,
+              "margin": 0.11619790930507617,
+              "geometric_margin": 0.12409840616827718
+            },
+            "conditioned": {
+              "accuracy_percent": 99.37825983878616,
+              "margin": 0.11608457172235616,
+              "geometric_margin": 0.12394678056046637
+            },
+            "image_only_wide": {
+              "accuracy_percent": 99.28698435277386,
+              "margin": 0.11618881877963272,
+              "geometric_margin": 0.12408790396733244
+            }
+          },
+          "C_minus_U": {
+            "accuracy_percent": 0.09127548601230728,
+            "margin": -0.00010424705727656025,
+            "geometric_margin": -0.00014112340686606162
+          },
+          "per_seed": {
+            "attention": [
+              {
+                "seed": -1,
+                "accuracy_percent": 99.1109530583215,
+                "margin": 0.10379612325276029,
+                "geometric_margin": 0.11091091545277187,
+                "examples": 2944
+              }
+            ],
+            "full_model": [
+              {
+                "seed": -1,
+                "accuracy_percent": 99.32076813655763,
+                "margin": 0.11619790930507617,
+                "geometric_margin": 0.12409840616827718,
+                "examples": 2944
+              }
+            ],
+            "conditioned": [
+              {
+                "seed": 2041,
+                "accuracy_percent": 99.32076813655763,
+                "margin": 0.11632371486176551,
+                "geometric_margin": 0.12422155781449012,
+                "examples": 2944
+              },
+              {
+                "seed": 2042,
+                "accuracy_percent": 99.42389758179233,
+                "margin": 0.11587830335074031,
+                "geometric_margin": 0.12370913204928449,
+                "examples": 2944
+              },
+              {
+                "seed": 2043,
+                "accuracy_percent": 99.39011379800856,
+                "margin": 0.11605169695456266,
+                "geometric_margin": 0.12390965181762448,
+                "examples": 2944
+              }
+            ],
+            "image_only_wide": [
+              {
+                "seed": 2041,
+                "accuracy_percent": 99.25320056899008,
+                "margin": 0.11599860807528369,
+                "geometric_margin": 0.12390846682185724,
+                "examples": 2944
+              },
+              {
+                "seed": 2042,
+                "accuracy_percent": 99.25320056899007,
+                "margin": 0.11653064064470228,
+                "geometric_margin": 0.12442624196048988,
+                "examples": 2944
+              },
+              {
+                "seed": 2043,
+                "accuracy_percent": 99.35455192034142,
+                "margin": 0.11603720761891217,
+                "geometric_margin": 0.1239290031196502,
+                "examples": 2944
+              }
+            ]
+          },
+          "saved_outcome_check": {
+            "correct_mismatches": 0,
+            "margin_max_abs_error": 0.0,
+            "geometric_margin_max_abs_error": 0.0
+          }
+        },
+        "5": {
+          "means": {
+            "attention": {
+              "accuracy_percent": 96.86770981507793,
+              "margin": 0.06381648795925621,
+              "geometric_margin": 0.07462705930338095
+            },
+            "full_model": {
+              "accuracy_percent": 97.81152204836386,
+              "margin": 0.0723631607932946,
+              "geometric_margin": 0.08471628601555645
+            },
+            "conditioned": {
+              "accuracy_percent": 97.59317211948759,
+              "margin": 0.07178515276686594,
+              "geometric_margin": 0.08401093960497641
+            },
+            "image_only_wide": {
+              "accuracy_percent": 97.6733048838309,
+              "margin": 0.0721671618384496,
+              "geometric_margin": 0.08448119456641295
+            }
+          },
+          "C_minus_U": {
+            "accuracy_percent": -0.08013276434330407,
+            "margin": -0.00038200907158365827,
+            "geometric_margin": -0.00047025496143654477
+          },
+          "per_seed": {
+            "attention": [
+              {
+                "seed": -1,
+                "accuracy_percent": 96.86770981507793,
+                "margin": 0.06381648795925621,
+                "geometric_margin": 0.07462705930338095,
+                "examples": 7360
+              }
+            ],
+            "full_model": [
+              {
+                "seed": -1,
+                "accuracy_percent": 97.81152204836386,
+                "margin": 0.0723631607932946,
+                "geometric_margin": 0.08471628601555645,
+                "examples": 7360
+              }
+            ],
+            "conditioned": [
+              {
+                "seed": 2041,
+                "accuracy_percent": 97.67994310099543,
+                "margin": 0.07177812575424888,
+                "geometric_margin": 0.08402583032554344,
+                "examples": 7360
+              },
+              {
+                "seed": 2042,
+                "accuracy_percent": 97.57041251778062,
+                "margin": 0.07183732620788841,
+                "geometric_margin": 0.08409357397587183,
+                "examples": 7360
+              },
+              {
+                "seed": 2043,
+                "accuracy_percent": 97.52916073968676,
+                "margin": 0.07174000633846053,
+                "geometric_margin": 0.08391341451351397,
+                "examples": 7360
+              }
+            ],
+            "image_only_wide": [
+              {
+                "seed": 2041,
+                "accuracy_percent": 97.58321479374081,
+                "margin": 0.07206186613065335,
+                "geometric_margin": 0.08436804746589549,
+                "examples": 7360
+              },
+              {
+                "seed": 2042,
+                "accuracy_percent": 97.77240398292999,
+                "margin": 0.07225441321815401,
+                "geometric_margin": 0.0845772663203101,
+                "examples": 7360
+              },
+              {
+                "seed": 2043,
+                "accuracy_percent": 97.66429587482189,
+                "margin": 0.07218520616654142,
+                "geometric_margin": 0.08449826991303329,
+                "examples": 7360
+              }
+            ]
+          },
+          "saved_outcome_check": {
+            "correct_mismatches": 0,
+            "margin_max_abs_error": 0.0,
+            "geometric_margin_max_abs_error": 0.0
+          }
+        }
+      },
+      "five_minus_two_C_minus_U": {
+        "accuracy_percent": -0.17140825035561136,
+        "margin": -0.000277762014307098,
+        "geometric_margin": -0.00032913155457048315
+      },
+      "checkpoints": [
+        {
+          "way": 2,
+          "seed": 2041,
+          "arm": "conditioned",
+          "steps": 3990,
+          "parameters": 348033
+        },
+        {
+          "way": 2,
+          "seed": 2041,
+          "arm": "image_only_wide",
+          "steps": 3990,
+          "parameters": 347399
+        },
+        {
+          "way": 2,
+          "seed": 2042,
+          "arm": "conditioned",
+          "steps": 3990,
+          "parameters": 348033
+        },
+        {
+          "way": 2,
+          "seed": 2042,
+          "arm": "image_only_wide",
+          "steps": 3990,
+          "parameters": 347399
+        },
+        {
+          "way": 2,
+          "seed": 2043,
+          "arm": "conditioned",
+          "steps": 3990,
+          "parameters": 348033
+        },
+        {
+          "way": 2,
+          "seed": 2043,
+          "arm": "image_only_wide",
+          "steps": 3990,
+          "parameters": 347399
+        },
+        {
+          "way": 5,
+          "seed": 2041,
+          "arm": "conditioned",
+          "steps": 3990,
+          "parameters": 348033
+        },
+        {
+          "way": 5,
+          "seed": 2041,
+          "arm": "image_only_wide",
+          "steps": 3990,
+          "parameters": 347399
+        },
+        {
+          "way": 5,
+          "seed": 2042,
+          "arm": "conditioned",
+          "steps": 3990,
+          "parameters": 348033
+        },
+        {
+          "way": 5,
+          "seed": 2042,
+          "arm": "image_only_wide",
+          "steps": 3990,
+          "parameters": 347399
+        },
+        {
+          "way": 5,
+          "seed": 2043,
+          "arm": "conditioned",
+          "steps": 3990,
+          "parameters": 348033
+        },
+        {
+          "way": 5,
+          "seed": 2043,
+          "arm": "image_only_wide",
+          "steps": 3990,
+          "parameters": 347399
+        }
+      ],
+      "checkpoint_count": 12
+    }
+  },
+  "status": "passed",
+  "comparison_with_analysis": {
+    "checked": "all method classification, C/U contrasts, and five-minus-two interactions; point estimates only",
+    "max_abs_error": 8.952838470577262e-13,
+    "status": "passed"
+  },
+  "checkpoint_count": 24
+}

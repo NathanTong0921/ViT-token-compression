@@ -1,0 +1,32 @@
+{
+  "code_commit": "2c26bdb5d526fa27ac02dc380aa0bba487155eab",
+  "evaluation_split": "development",
+  "costs": [
+    {
+      "way": 5,
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/nway-v1/flowers/training/5way/seed_2041/conditioned.pt",
+      "wall_seconds": 2.3726459508761764,
+      "selector_seconds": 0.18528355099260807,
+      "suffix_seconds": 1.8940409268252552,
+      "logical_task_examples": 10200,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 10200,
+      "physical_suffix_examples": 10240
+    },
+    {
+      "way": 5,
+      "method": "image_only_wide",
+      "seed": 2041,
+      "checkpoint": "runs/nway-v1/flowers/training/5way/seed_2041/image_only_wide.pt",
+      "wall_seconds": 0.4063408419024199,
+      "selector_seconds": 0.018542062724009156,
+      "suffix_seconds": 0.18917667446658015,
+      "logical_task_examples": 10200,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 1020,
+      "physical_suffix_examples": 1024
+    }
+  ]
+}

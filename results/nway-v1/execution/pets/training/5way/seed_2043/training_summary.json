@@ -1,0 +1,87 @@
+{
+  "config": {
+    "experiment": "nway-v1",
+    "dataset": "pets",
+    "cache_dir": "runs/pets-selector-budget-98-supervision-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "device": "cuda:0",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "ways": [
+      2,
+      5
+    ],
+    "task_seed": 2611,
+    "train_task_rounds": 4,
+    "val_task_rounds": 2,
+    "hidden_dim": 128,
+    "wide_hidden_dim": 199,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "training_steps": 3990,
+    "checkpoint_interval": 133,
+    "batch_size": 128,
+    "image_batch_size": 64,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "ridge": 0.01,
+    "temperature": 1.0,
+    "identity_atol": 1e-06,
+    "bootstrap_seed": 2613,
+    "bootstrap_replicates": 2000
+  },
+  "code_commit": "2c26bdb5d526fa27ac02dc380aa0bba487155eab",
+  "runs": [
+    {
+      "way": 5,
+      "seed": 2043,
+      "arm": "conditioned",
+      "parameter_count": 348033,
+      "training_steps": 3990,
+      "training_draws": 510720,
+      "initial_train_kl": 1.672481458090836,
+      "initial_val_kl": 1.7237885625553377,
+      "final_train_kl": 0.4855728573517868,
+      "final_val_kl": 1.0740082447158483,
+      "training_seconds": 59.55357157252729,
+      "validation_seconds": 9.371664552483708,
+      "initial_evaluation_seconds": 2.782494958024472,
+      "final_train_evaluation_seconds": 2.493940502172336
+    },
+    {
+      "way": 5,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "parameter_count": 347399,
+      "training_steps": 3990,
+      "training_draws": 510720,
+      "initial_train_kl": 1.6727083454097131,
+      "initial_val_kl": 1.7247531111739782,
+      "final_train_kl": 0.4913267885590907,
+      "final_val_kl": 1.0390228660229812,
+      "training_seconds": 60.14284646231681,
+      "validation_seconds": 9.93921161442995,
+      "initial_evaluation_seconds": 2.9700512611307204,
+      "final_train_evaluation_seconds": 2.6520745309535414
+    }
+  ],
+  "train_images": 2944,
+  "val_images": 736,
+  "train_examples": 58880,
+  "val_examples": 7360,
+  "sampling": {
+    "seed": 2043,
+    "task_class_draw_min": 690,
+    "task_class_draw_max": 691,
+    "unique_training_images_drawn": 2944,
+    "same_draws_between_arms": true
+  },
+  "checkpoint_policy": "Fixed final update; validation KL is logged.",
+  "wall_seconds_since_process_start": 532.7294070860371,
+  "peak_cuda_memory_allocated_bytes": 1829889536,
+  "evaluation_split": "development validation images and unseen candidate sets"
+}
