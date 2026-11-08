@@ -1,0 +1,94 @@
+{
+  "dataset": "cub",
+  "split": "train",
+  "config": {
+    "experiment": "cub-nway-v1",
+    "dataset": "cub",
+    "data_root": "data/raw/CUB_200_2011",
+    "manifest_dir": "data/splits/cub-pilot-v1",
+    "cache_dir": "runs/cub-nway-v1/cache",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "prompt_template": "a photo of a {class_name}, a type of bird.",
+    "device": "cuda:1",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "ways": [
+      2,
+      5
+    ],
+    "image_split_seed": 2615,
+    "train_per_class": 20,
+    "val_per_class": 5,
+    "task_seed": 2611,
+    "train_task_rounds": 4,
+    "val_task_rounds": 2,
+    "hidden_dim": 128,
+    "wide_hidden_dim": 199,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "training_steps": 3990,
+    "checkpoint_interval": 133,
+    "batch_size": 128,
+    "image_batch_size": 64,
+    "teacher_batch_size": 64,
+    "num_workers": 4,
+    "seed": 2026,
+    "probe_count": 512,
+    "mask_seed": 2031,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "ridge": 0.01,
+    "temperature": 1.0,
+    "identity_atol": 1e-06,
+    "bootstrap_seed": 2613,
+    "bootstrap_replicates": 2000
+  },
+  "classification": [
+    {
+      "way": 2,
+      "method": "full_model",
+      "images": 4000,
+      "tasks": 800,
+      "task_examples": 32000,
+      "accuracy": 0.9869687500000008,
+      "margin": 0.12180862694352981,
+      "geometric_margin": 0.13255755562209656
+    },
+    {
+      "way": 2,
+      "method": "attention",
+      "images": 4000,
+      "tasks": 800,
+      "task_examples": 32000,
+      "accuracy": 0.9861562500000007,
+      "margin": 0.1184585766493983,
+      "geometric_margin": 0.12891793036155655
+    },
+    {
+      "way": 5,
+      "method": "full_model",
+      "images": 4000,
+      "tasks": 800,
+      "task_examples": 80000,
+      "accuracy": 0.9557374999999599,
+      "margin": 0.0728184865185991,
+      "geometric_margin": 0.08443785291244171
+    },
+    {
+      "way": 5,
+      "method": "attention",
+      "images": 4000,
+      "tasks": 800,
+      "task_examples": 80000,
+      "accuracy": 0.9515749999999605,
+      "margin": 0.07029043654613203,
+      "geometric_margin": 0.08146010229829176
+    }
+  ],
+  "full_class_accuracy": 0.5575,
+  "attention_full_class_accuracy": 0.539
+}

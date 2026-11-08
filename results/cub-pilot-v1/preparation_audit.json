@@ -1,0 +1,50 @@
+{
+  "status": "pass",
+  "source": "Saved CUB image/class manifests, nway_cub config and cached feature summaries.",
+  "image_counts": {
+    "total": 11788,
+    "official_train": 5994,
+    "official_test": 5794,
+    "selected_train": 4000,
+    "selected_val": 1000,
+    "unused_official_train": 994
+  },
+  "image_checks": {
+    "unique_ids": true,
+    "splits_disjoint": true,
+    "train_val_use_only_official_training": true,
+    "official_test_membership_unchanged": true,
+    "selection_matches_seed_2615": true
+  },
+  "class_checks": {
+    "class_count": 200,
+    "zero_based_contiguous_labels": true,
+    "train_images_each": 20,
+    "val_images_each": 5,
+    "all_classes_in_both_splits": true
+  },
+  "task_source": "Candidate sets reconstructed from the fixed config; the execution tasks file is not yet copied locally.",
+  "task_checks": {
+    "2way": {
+      "train": 800,
+      "val": 400,
+      "unique_and_disjoint": true,
+      "all_classes_covered": true,
+      "equal_class_participation": true
+    },
+    "5way": {
+      "train": 800,
+      "val": 400,
+      "unique_and_disjoint": true,
+      "all_classes_covered": true,
+      "equal_class_participation": true
+    }
+  },
+  "feature_cache_checks": {
+    "train_images": 4000,
+    "val_images": 1000,
+    "configs_match": true,
+    "maximum_full_token_feature_error": 0.0,
+    "full_token_prediction_disagreements": 0
+  }
+}

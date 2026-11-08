@@ -1,0 +1,607 @@
+{
+  "completed_utc": "2026-11-08T11:00:31.448379+00:00",
+  "passed": true,
+  "scope": "CPU reconstruction from saved all-class scores, metadata and all twelve final checkpoints. No inference rerun.",
+  "checkpoints": [
+    {
+      "way": 2,
+      "seed": 2041,
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033
+    },
+    {
+      "way": 2,
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "step": 3990,
+      "parameters": 347399
+    },
+    {
+      "way": 2,
+      "seed": 2042,
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033
+    },
+    {
+      "way": 2,
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "step": 3990,
+      "parameters": 347399
+    },
+    {
+      "way": 2,
+      "seed": 2043,
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033
+    },
+    {
+      "way": 2,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "step": 3990,
+      "parameters": 347399
+    },
+    {
+      "way": 5,
+      "seed": 2041,
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033
+    },
+    {
+      "way": 5,
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "step": 3990,
+      "parameters": 347399
+    },
+    {
+      "way": 5,
+      "seed": 2042,
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033
+    },
+    {
+      "way": 5,
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "step": 3990,
+      "parameters": 347399
+    },
+    {
+      "way": 5,
+      "seed": 2043,
+      "arm": "conditioned",
+      "step": 3990,
+      "parameters": 348033
+    },
+    {
+      "way": 5,
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "step": 3990,
+      "parameters": 347399
+    }
+  ],
+  "settings": {
+    "2": {
+      "images": 1000,
+      "task_examples": 4000,
+      "method_means": {
+        "full_model": {
+          "accuracy": 0.9867499999999993,
+          "margin": 0.12188119303341956,
+          "geometric_margin": 0.1321807649131562
+        },
+        "attention": {
+          "accuracy": 0.9834999999999994,
+          "margin": 0.11869091855920855,
+          "geometric_margin": 0.12874797828058365
+        },
+        "conditioned": {
+          "accuracy": 0.9837499999999995,
+          "margin": 0.12052864039130512,
+          "geometric_margin": 0.13073369256188383
+        },
+        "image_only_wide": {
+          "accuracy": 0.9851666666666661,
+          "margin": 0.1216233100220561,
+          "geometric_margin": 0.13193771001112958
+        }
+      },
+      "C_minus_U": {
+        "accuracy": -0.0014166666666666217,
+        "margin": -0.0010946696307509857,
+        "geometric_margin": -0.0012040174492457534
+      },
+      "exchange_point": {
+        "accuracy": 0.0001388888888888886,
+        "margin": 0.000571995320729912,
+        "geometric_margin": 0.0006016612980565056
+      },
+      "shared_exchange_max_difference": 0.0
+    },
+    "5": {
+      "images": 1000,
+      "task_examples": 10000,
+      "method_means": {
+        "full_model": {
+          "accuracy": 0.958000000000001,
+          "margin": 0.07232927209883928,
+          "geometric_margin": 0.0840248223731977
+        },
+        "attention": {
+          "accuracy": 0.9517000000000008,
+          "margin": 0.07011223565936088,
+          "geometric_margin": 0.08144698774077146
+        },
+        "conditioned": {
+          "accuracy": 0.9533000000000009,
+          "margin": 0.07135405660321316,
+          "geometric_margin": 0.08290003834088722
+        },
+        "image_only_wide": {
+          "accuracy": 0.9559000000000007,
+          "margin": 0.07208269951393208,
+          "geometric_margin": 0.0837571239014395
+        }
+      },
+      "C_minus_U": {
+        "accuracy": -0.0025999999999998247,
+        "margin": -0.0007286429107189185,
+        "geometric_margin": -0.0008570855605522787
+      },
+      "exchange_point": {
+        "accuracy": 0.0005037037037037036,
+        "margin": 0.00010104807151688485,
+        "geometric_margin": 0.00010835774374483471
+      },
+      "shared_exchange_max_difference": 0.0
+    }
+  },
+  "checks": [
+    {
+      "check": "2/attention/-1/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/attention/-1/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/full_model/-1/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/full_model/-1/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/conditioned/2041/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/conditioned/2041/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/image_only_wide/2041/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/image_only_wide/2041/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/conditioned/2042/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/conditioned/2042/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/image_only_wide/2042/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/image_only_wide/2042/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/conditioned/2043/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/conditioned/2043/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/image_only_wide/2043/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/image_only_wide/2043/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "2/task_class_weights",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-12
+    },
+    {
+      "check": "2/full_model/accuracy_analysis",
+      "maximum_absolute_difference": 1.4432899320127035e-15,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/full_model/accuracy_baseline",
+      "maximum_absolute_difference": 1.3322676295501878e-15,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/full_model/margin_analysis",
+      "maximum_absolute_difference": 6.938893903907228e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/full_model/margin_baseline",
+      "maximum_absolute_difference": 1.3877787807814457e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/full_model/geometric_margin_analysis",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/full_model/geometric_margin_baseline",
+      "maximum_absolute_difference": 2.7755575615628914e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/attention/accuracy_analysis",
+      "maximum_absolute_difference": 1.3322676295501878e-15,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/attention/accuracy_baseline",
+      "maximum_absolute_difference": 1.3322676295501878e-15,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/attention/margin_analysis",
+      "maximum_absolute_difference": 2.7755575615628914e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/attention/margin_baseline",
+      "maximum_absolute_difference": 4.163336342344337e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/attention/geometric_margin_analysis",
+      "maximum_absolute_difference": 5.551115123125783e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/attention/geometric_margin_baseline",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/conditioned/accuracy_analysis",
+      "maximum_absolute_difference": 1.5543122344752192e-15,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/conditioned/margin_analysis",
+      "maximum_absolute_difference": 2.636779683484747e-16,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/conditioned/geometric_margin_analysis",
+      "maximum_absolute_difference": 8.326672684688674e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/image_only_wide/accuracy_analysis",
+      "maximum_absolute_difference": 1.5543122344752192e-15,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/image_only_wide/margin_analysis",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/image_only_wide/geometric_margin_analysis",
+      "maximum_absolute_difference": 2.7755575615628914e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/C_minus_U/accuracy",
+      "maximum_absolute_difference": 4.445228907190568e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/C_minus_U/margin",
+      "maximum_absolute_difference": 3.0140820395097023e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/C_minus_U/geometric_margin",
+      "maximum_absolute_difference": 5.551115123125783e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/exchange/accuracy",
+      "maximum_absolute_difference": 2.981555974335137e-19,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/exchange/margin",
+      "maximum_absolute_difference": 9.75781955236954e-19,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/exchange/geometric_margin",
+      "maximum_absolute_difference": 2.168404344971009e-19,
+      "atol": 1e-10
+    },
+    {
+      "check": "2/saved_per_image_exchange",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/attention/-1/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/attention/-1/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/full_model/-1/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/full_model/-1/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/conditioned/2041/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/conditioned/2041/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/image_only_wide/2041/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/image_only_wide/2041/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/conditioned/2042/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/conditioned/2042/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/image_only_wide/2042/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/image_only_wide/2042/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/conditioned/2043/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/conditioned/2043/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/image_only_wide/2043/margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/image_only_wide/2043/geometric_margin_raw_score_reconstruction",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-07
+    },
+    {
+      "check": "5/task_class_weights",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-12
+    },
+    {
+      "check": "5/full_model/accuracy_analysis",
+      "maximum_absolute_difference": 3.3306690738754696e-16,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/full_model/accuracy_baseline",
+      "maximum_absolute_difference": 4.884981308350689e-15,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/full_model/margin_analysis",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/full_model/margin_baseline",
+      "maximum_absolute_difference": 1.3877787807814457e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/full_model/geometric_margin_analysis",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/full_model/geometric_margin_baseline",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/attention/accuracy_analysis",
+      "maximum_absolute_difference": 7.771561172376096e-16,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/attention/accuracy_baseline",
+      "maximum_absolute_difference": 4.6629367034256575e-15,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/attention/margin_analysis",
+      "maximum_absolute_difference": 1.5265566588595902e-16,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/attention/margin_baseline",
+      "maximum_absolute_difference": 1.3877787807814457e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/attention/geometric_margin_analysis",
+      "maximum_absolute_difference": 1.5265566588595902e-16,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/attention/geometric_margin_baseline",
+      "maximum_absolute_difference": 2.7755575615628914e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/conditioned/accuracy_analysis",
+      "maximum_absolute_difference": 1.2212453270876722e-15,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/conditioned/margin_analysis",
+      "maximum_absolute_difference": 1.3877787807814457e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/conditioned/geometric_margin_analysis",
+      "maximum_absolute_difference": 8.326672684688674e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/image_only_wide/accuracy_analysis",
+      "maximum_absolute_difference": 9.992007221626409e-16,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/image_only_wide/margin_analysis",
+      "maximum_absolute_difference": 4.163336342344337e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/image_only_wide/geometric_margin_analysis",
+      "maximum_absolute_difference": 6.938893903907228e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/C_minus_U/accuracy",
+      "maximum_absolute_difference": 1.7564075194265172e-16,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/C_minus_U/margin",
+      "maximum_absolute_difference": 4.336808689942018e-19,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/C_minus_U/geometric_margin",
+      "maximum_absolute_difference": 2.0599841277224584e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/exchange/accuracy",
+      "maximum_absolute_difference": 2.168404344971009e-19,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/exchange/margin",
+      "maximum_absolute_difference": 3.3881317890172014e-19,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/exchange/geometric_margin",
+      "maximum_absolute_difference": 1.3552527156068805e-20,
+      "atol": 1e-10
+    },
+    {
+      "check": "5/saved_per_image_exchange",
+      "maximum_absolute_difference": 0.0,
+      "atol": 1e-10
+    },
+    {
+      "check": "5_minus_2/accuracy",
+      "maximum_absolute_difference": 1.3118846287074604e-16,
+      "atol": 1e-10
+    },
+    {
+      "check": "5_minus_2/margin",
+      "maximum_absolute_difference": 3.0574501264091225e-17,
+      "atol": 1e-10
+    },
+    {
+      "check": "5_minus_2/geometric_margin",
+      "maximum_absolute_difference": 3.491130995403324e-17,
+      "atol": 1e-10
+    }
+  ],
+  "maximum_absolute_difference": 4.884981308350689e-15,
+  "bootstrap_intervals_recomputed": false,
+  "note": "Bootstrap intervals use the existing validated analysis; this audit independently checks point estimates and per-image exchange data."
+}

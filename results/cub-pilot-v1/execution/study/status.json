@@ -1,0 +1,25 @@
+{
+  "dataset": "cub",
+  "started_utc": "2026-11-08T10:46:03.764773+00:00",
+  "code_commit": "17206328b27c9b0555b309587fc88675168c0cb6",
+  "steps": [
+    {
+      "stage": "prepare",
+      "seconds": 111.12037378014065,
+      "returncode": 0
+    },
+    {
+      "stage": "train",
+      "seconds": 455.8976654349826,
+      "returncode": 0
+    },
+    {
+      "stage": "evaluate",
+      "seconds": 44.70685034291819,
+      "returncode": 0
+    }
+  ],
+  "stage": "complete",
+  "updated_utc": "2026-11-08T10:56:15.495210+00:00",
+  "wall_seconds": 611.7262578869704
+}

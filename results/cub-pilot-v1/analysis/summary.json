@@ -1,0 +1,445 @@
+{
+  "scope": "Development images and unseen candidate combinations; two/five-way, B/16, block 6, 98 tokens.",
+  "final_test_used": false,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2613,
+  "classification_weighting": "Equal tasks and classes within tasks, then equal class images; average seeds before image-cluster bootstrap.",
+  "exchange_weighting": "Average task pairs and fixed seeds within each image, then equal images.",
+  "intervals": "Image-cluster percentile bootstrap; conditions on task collection and trained seeds. Adjusted intervals cover the dataset/way settings per metric and named contrast.",
+  "settings": {
+    "cub_2way": {
+      "dataset": "cub",
+      "way": 2,
+      "image_count": 1000,
+      "task_count": 400,
+      "image_task_count": 4000,
+      "seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "table": [
+        {
+          "method": "attention",
+          "accuracy": {
+            "mean": 0.9835000000000007,
+            "ci95": [
+              0.9792500000000003,
+              0.9877500000000006
+            ]
+          },
+          "margin": {
+            "mean": 0.11869091855920852,
+            "ci95": [
+              0.11635824803793801,
+              0.12100599519764071
+            ]
+          },
+          "geometric_margin": {
+            "mean": 0.1287479782805836,
+            "ci95": [
+              0.12635255384548977,
+              0.13111430208260919
+            ]
+          },
+          "repairs_vs_full": 0.00175,
+          "new_errors_vs_full": 0.005
+        },
+        {
+          "method": "conditioned",
+          "accuracy": {
+            "mean": 0.983750000000001,
+            "ci95": [
+              0.9796666666666682,
+              0.9874166666666675
+            ]
+          },
+          "margin": {
+            "mean": 0.12052864039130486,
+            "ci95": [
+              0.11819935957710226,
+              0.12277600972360603
+            ]
+          },
+          "geometric_margin": {
+            "mean": 0.13073369256188375,
+            "ci95": [
+              0.1283290349805837,
+              0.13314911510725674
+            ]
+          },
+          "repairs_vs_full": 0.00175,
+          "new_errors_vs_full": 0.00475
+        },
+        {
+          "method": "full_model",
+          "accuracy": {
+            "mean": 0.9867500000000008,
+            "ci95": [
+              0.9827500000000007,
+              0.9905000000000005
+            ]
+          },
+          "margin": {
+            "mean": 0.12188119303341949,
+            "ci95": [
+              0.11955902567522131,
+              0.12411491066128937
+            ]
+          },
+          "geometric_margin": {
+            "mean": 0.1321807649131562,
+            "ci95": [
+              0.12978357053023873,
+              0.1345005180499049
+            ]
+          },
+          "repairs_vs_full": 0.0,
+          "new_errors_vs_full": 0.0
+        },
+        {
+          "method": "image_only_wide",
+          "accuracy": {
+            "mean": 0.9851666666666676,
+            "ci95": [
+              0.9815000000000009,
+              0.988833333333334
+            ]
+          },
+          "margin": {
+            "mean": 0.1216233100220561,
+            "ci95": [
+              0.1193690989661494,
+              0.1238746885565109
+            ]
+          },
+          "geometric_margin": {
+            "mean": 0.13193771001112956,
+            "ci95": [
+              0.1295513170648396,
+              0.1342705223138864
+            ]
+          },
+          "repairs_vs_full": 0.0016666666666666666,
+          "new_errors_vs_full": 0.00325
+        }
+      ],
+      "conditioned_minus_image_only_wide": {
+        "accuracy": {
+          "mean": -0.0014166666666666661,
+          "ci95": [
+            -0.002916666666666665,
+            0.0
+          ],
+          "bonferroni_family_ci95": [
+            -0.0030833333333333325,
+            0.00016666666666666658
+          ],
+          "individual_interval_level": 0.975
+        },
+        "margin": {
+          "mean": -0.0010946696307510158,
+          "ci95": [
+            -0.0014611002309403067,
+            -0.00075507334677192
+          ],
+          "bonferroni_family_ci95": [
+            -0.0014979306445612258,
+            -0.0007142769158817816
+          ],
+          "individual_interval_level": 0.975
+        },
+        "geometric_margin": {
+          "mean": -0.0012040174492456979,
+          "ci95": [
+            -0.0016071045030637916,
+            -0.0008308459847310183
+          ],
+          "bonferroni_family_ci95": [
+            -0.0016426231476923325,
+            -0.000798349334882948
+          ],
+          "individual_interval_level": 0.975
+        }
+      },
+      "exchange_own_minus_swapped": {
+        "accuracy": {
+          "mean": 0.0001388888888888889,
+          "ci95": [
+            -0.0009444444444444443,
+            0.0012777777777777774
+          ],
+          "bonferroni_family_ci95": [
+            -0.0011111111111111105,
+            0.0013614583333333347
+          ],
+          "individual_interval_level": 0.975
+        },
+        "margin": {
+          "mean": 0.000571995320729911,
+          "ci95": [
+            0.00047195881303503217,
+            0.0006769046970539629
+          ],
+          "bonferroni_family_ci95": [
+            0.000458821743839265,
+            0.0006923665670587471
+          ],
+          "individual_interval_level": 0.975
+        },
+        "geometric_margin": {
+          "mean": 0.0006016612980565053,
+          "ci95": [
+            0.0004941365668321883,
+            0.0007146436324859763
+          ],
+          "bonferroni_family_ci95": [
+            0.0004781264168053129,
+            0.0007289806423391512
+          ],
+          "individual_interval_level": 0.975
+        }
+      },
+      "exchange_image_count": 1000,
+      "exchange_pair_count": 6000,
+      "shared_score_exchange_max_difference": 0.0
+    },
+    "cub_5way": {
+      "dataset": "cub",
+      "way": 5,
+      "image_count": 1000,
+      "task_count": 400,
+      "image_task_count": 10000,
+      "seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "table": [
+        {
+          "method": "attention",
+          "accuracy": {
+            "mean": 0.9517000000000015,
+            "ci95": [
+              0.9424000000000013,
+              0.961000000000001
+            ]
+          },
+          "margin": {
+            "mean": 0.07011223565936073,
+            "ci95": [
+              0.06808612964518365,
+              0.07212769115045668
+            ]
+          },
+          "geometric_margin": {
+            "mean": 0.0814469877407713,
+            "ci95": [
+              0.07909930697665588,
+              0.08375304720502377
+            ]
+          },
+          "repairs_vs_full": 0.005,
+          "new_errors_vs_full": 0.011300000000000001
+        },
+        {
+          "method": "conditioned",
+          "accuracy": {
+            "mean": 0.9533000000000021,
+            "ci95": [
+              0.9448300000000023,
+              0.9617008333333349
+            ]
+          },
+          "margin": {
+            "mean": 0.07135405660321315,
+            "ci95": [
+              0.06937622637555005,
+              0.07335208896831906
+            ]
+          },
+          "geometric_margin": {
+            "mean": 0.08290003834088713,
+            "ci95": [
+              0.08064073469720495,
+              0.08518410861389515
+            ]
+          },
+          "repairs_vs_full": 0.004366666666666666,
+          "new_errors_vs_full": 0.009066666666666667
+        },
+        {
+          "method": "full_model",
+          "accuracy": {
+            "mean": 0.9580000000000013,
+            "ci95": [
+              0.9496000000000017,
+              0.9658000000000009
+            ]
+          },
+          "margin": {
+            "mean": 0.07232927209883928,
+            "ci95": [
+              0.07032797546781605,
+              0.07436618158001454
+            ]
+          },
+          "geometric_margin": {
+            "mean": 0.0840248223731977,
+            "ci95": [
+              0.08176973182201328,
+              0.08634185505715426
+            ]
+          },
+          "repairs_vs_full": 0.0,
+          "new_errors_vs_full": 0.0
+        },
+        {
+          "method": "image_only_wide",
+          "accuracy": {
+            "mean": 0.9559000000000017,
+            "ci95": [
+              0.9474333333333347,
+              0.9641675000000013
+            ]
+          },
+          "margin": {
+            "mean": 0.07208269951393204,
+            "ci95": [
+              0.07004293647967273,
+              0.07408246824445815
+            ]
+          },
+          "geometric_margin": {
+            "mean": 0.08375712390143956,
+            "ci95": [
+              0.0815137084369357,
+              0.0860178299447187
+            ]
+          },
+          "repairs_vs_full": 0.0048000000000000004,
+          "new_errors_vs_full": 0.0069
+        }
+      ],
+      "conditioned_minus_image_only_wide": {
+        "accuracy": {
+          "mean": -0.0026000000000000003,
+          "ci95": [
+            -0.004666666666666663,
+            -0.0006658333333333374
+          ],
+          "bonferroni_family_ci95": [
+            -0.005067083333333331,
+            -0.00039958333333333154
+          ],
+          "individual_interval_level": 0.975
+        },
+        "margin": {
+          "mean": -0.0007286429107189181,
+          "ci95": [
+            -0.0010078369857122501,
+            -0.0004415754407520091
+          ],
+          "bonferroni_family_ci95": [
+            -0.001058948573879897,
+            -0.0004068039260990917
+          ],
+          "individual_interval_level": 0.975
+        },
+        "geometric_margin": {
+          "mean": -0.0008570855605522581,
+          "ci95": [
+            -0.0011759417884665668,
+            -0.0005300450835739247
+          ],
+          "bonferroni_family_ci95": [
+            -0.001232029690062375,
+            -0.00048480973639445946
+          ],
+          "individual_interval_level": 0.975
+        }
+      },
+      "exchange_own_minus_swapped": {
+        "accuracy": {
+          "mean": 0.0005037037037037038,
+          "ci95": [
+            -0.00017046296296296297,
+            0.0012037037037037031
+          ],
+          "bonferroni_family_ci95": [
+            -0.0002481944444444445,
+            0.0012965277777777782
+          ],
+          "individual_interval_level": 0.975
+        },
+        "margin": {
+          "mean": 0.00010104807151688451,
+          "ci95": [
+            6.404722506939254e-05,
+            0.00013998713169798818
+          ],
+          "bonferroni_family_ci95": [
+            5.843062297199603e-05,
+            0.00014792768547311431
+          ],
+          "individual_interval_level": 0.975
+        },
+        "geometric_margin": {
+          "mean": 0.0001083577437448347,
+          "ci95": [
+            6.572484263721839e-05,
+            0.00015349121000272513
+          ],
+          "bonferroni_family_ci95": [
+            6.0326881008962545e-05,
+            0.00016003569933262867
+          ],
+          "individual_interval_level": 0.975
+        }
+      },
+      "exchange_image_count": 1000,
+      "exchange_pair_count": 45000,
+      "shared_score_exchange_max_difference": 0.0
+    }
+  },
+  "way_interactions": {
+    "cub": {
+      "accuracy": {
+        "mean": -0.0011833333333333342,
+        "ci95": [
+          -0.0032666666666666634,
+          0.0009166666666666657
+        ],
+        "bonferroni_family_ci95": [
+          -0.0032666666666666634,
+          0.0009166666666666657
+        ],
+        "individual_interval_level": 0.95
+      },
+      "margin": {
+        "mean": 0.00036602672003209773,
+        "ci95": [
+          3.0016871988772474e-05,
+          0.0007138591414814186
+        ],
+        "bonferroni_family_ci95": [
+          3.0016871988772474e-05,
+          0.0007138591414814186
+        ],
+        "individual_interval_level": 0.95
+      },
+      "geometric_margin": {
+        "mean": 0.0003469318886934398,
+        "ci95": [
+          -1.9316018031420808e-05,
+          0.0007243846294600824
+        ],
+        "bonferroni_family_ci95": [
+          -1.9316018031420808e-05,
+          0.0007243846294600824
+        ],
+        "individual_interval_level": 0.95
+      }
+    }
+  }
+}

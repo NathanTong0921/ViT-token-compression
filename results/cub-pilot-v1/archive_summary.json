@@ -1,0 +1,21 @@
+{
+  "archives": [
+    {
+      "name": "cub-pilot-v1-cub.zip",
+      "bytes": 400979662,
+      "members": 49,
+      "uncompressed_bytes": 403074493
+    },
+    {
+      "name": "cub-pilot-v1-analysis.zip",
+      "bytes": 1559918,
+      "members": 63,
+      "uncompressed_bytes": 2325534
+    }
+  ],
+  "scope": "Task panels and targets, all selectors, predictions, retained positions, features, costs, summaries and figures.",
+  "reused_dependencies": [
+    "runs/cub-nway-v1/cache"
+  ],
+  "source_code": "Included nway files supplement the versioned repository and its shared modules."
+}
