@@ -1,0 +1,75 @@
+{
+  "setting": "flowers_b16_49",
+  "rows": 4080,
+  "images": 1020,
+  "tasks": 204,
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "correctness_percent": {
+    "both_correct": 95.5637254901958,
+    "both_wrong": 2.0098039215686274,
+    "conditioned_only": 1.2581699346405228,
+    "shared_only": 1.1683006535947713
+  },
+  "stability_percent": {
+    "conditioned_only_any": 2.6715686274509807,
+    "shared_only_any": 2.843137254901961,
+    "conditioned_only_majority": 0.9068627450980391,
+    "shared_only_majority": 0.5882352941176471,
+    "conditioned_only_all": 0.19607843137254902,
+    "shared_only_all": 0.07352941176470588,
+    "direction_reverses": 0.5392156862745098,
+    "any_disagreement": 4.9754901960784315
+  },
+  "stability_row_counts": {
+    "conditioned_only_any": 109,
+    "shared_only_any": 116,
+    "conditioned_only_majority": 37,
+    "shared_only_majority": 24,
+    "conditioned_only_all": 8,
+    "shared_only_all": 3,
+    "direction_reverses": 22,
+    "any_disagreement": 203
+  },
+  "metrics": {
+    "accuracy": {
+      "unit": "percent_or_percentage_points",
+      "conditioned": 96.82189542483627,
+      "shared": 96.73202614379052,
+      "oracle": 97.99019607843104,
+      "mean_per_seed_oracle_gain": 1.168300653594767,
+      "mean_per_seed_oracle_gain_ci95": [
+        0.8741830065359446,
+        1.3398692810457469
+      ],
+      "oracle_gain_over_better_seed_average": 1.168300653594767
+    },
+    "geometric_margin": {
+      "unit": "score",
+      "conditioned": 0.09021486485332268,
+      "shared": 0.09020925276925292,
+      "oracle": 0.09898198279935179,
+      "mean_per_seed_oracle_gain": 0.008699397034285539,
+      "mean_per_seed_oracle_gain_ci95": [
+        0.008259915222721435,
+        0.008806394334532033
+      ],
+      "oracle_gain_over_better_seed_average": 0.008767117946029107
+    },
+    "raw_gap": {
+      "unit": "score",
+      "conditioned": 0.08113875097041222,
+      "shared": 0.08103491773500152,
+      "oracle": 0.08886045534468058,
+      "mean_per_seed_oracle_gain": 0.00768467911878253,
+      "mean_per_seed_oracle_gain_ci95": [
+        0.007309770727685296,
+        0.007799966974637421
+      ],
+      "oracle_gain_over_better_seed_average": 0.007721704374268362
+    }
+  }
+}

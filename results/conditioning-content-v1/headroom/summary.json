@@ -1,0 +1,309 @@
+{
+  "source": "results/conditioning-benefit-v1",
+  "settings": [
+    {
+      "setting": "pets_b16_49",
+      "rows": 2624,
+      "images": 716,
+      "tasks": 66,
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "correctness_percent": {
+        "both_correct": 98.70680489101557,
+        "both_wrong": 0.6977671451355664,
+        "conditioned_only": 0.28508771929824567,
+        "shared_only": 0.310340244550771
+      },
+      "stability_percent": {
+        "conditioned_only_any": 0.6240031897926636,
+        "shared_only_any": 0.7775119617224883,
+        "conditioned_only_majority": 0.19338118022328554,
+        "shared_only_majority": 0.1535087719298246,
+        "conditioned_only_all": 0.03787878787878789,
+        "shared_only_all": 0.0,
+        "direction_reverses": 0.1574960127591707,
+        "any_disagreement": 1.2440191387559814
+      },
+      "stability_row_counts": {
+        "conditioned_only_any": 16,
+        "shared_only_any": 20,
+        "conditioned_only_majority": 5,
+        "shared_only_majority": 4,
+        "conditioned_only_all": 1,
+        "shared_only_all": 0,
+        "direction_reverses": 4,
+        "any_disagreement": 32
+      },
+      "metrics": {
+        "accuracy": {
+          "unit": "percent_or_percentage_points",
+          "conditioned": 98.99189261031172,
+          "shared": 99.01714513556426,
+          "oracle": 99.30223285486251,
+          "mean_per_seed_oracle_gain": 0.2704678362573043,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.11880823151177823,
+            0.34724995031171424
+          ],
+          "oracle_gain_over_better_seed_average": 0.2850877192982382
+        },
+        "geometric_margin": {
+          "unit": "score",
+          "conditioned": 0.11469279305033403,
+          "shared": 0.11721680385821535,
+          "oracle": 0.12155775096588943,
+          "mean_per_seed_oracle_gain": 0.004340947107674071,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.004039354479667484,
+            0.004648670607906872
+          ],
+          "oracle_gain_over_better_seed_average": 0.004340947107674076
+        },
+        "raw_gap": {
+          "unit": "score",
+          "conditioned": 0.10667297947752753,
+          "shared": 0.10897835283567416,
+          "oracle": 0.11300283634826219,
+          "mean_per_seed_oracle_gain": 0.0040244835125880325,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.003738047835189074,
+            0.004310087266208788
+          ],
+          "oracle_gain_over_better_seed_average": 0.004024483512588037
+        }
+      }
+    },
+    {
+      "setting": "pets_b16_98",
+      "rows": 2624,
+      "images": 716,
+      "tasks": 66,
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "correctness_percent": {
+        "both_correct": 99.04505582137175,
+        "both_wrong": 0.7748538011695907,
+        "conditioned_only": 0.1030037214247741,
+        "shared_only": 0.07708665603402448
+      },
+      "stability_percent": {
+        "conditioned_only_any": 0.23325358851674646,
+        "shared_only_any": 0.19338118022328554,
+        "conditioned_only_majority": 0.07575757575757577,
+        "shared_only_majority": 0.03787878787878789,
+        "conditioned_only_all": 0.0,
+        "shared_only_all": 0.0,
+        "direction_reverses": 0.039872408293460934,
+        "any_disagreement": 0.3867623604465711
+      },
+      "stability_row_counts": {
+        "conditioned_only_any": 6,
+        "shared_only_any": 5,
+        "conditioned_only_majority": 2,
+        "shared_only_majority": 1,
+        "conditioned_only_all": 0,
+        "shared_only_all": 0,
+        "direction_reverses": 1,
+        "any_disagreement": 10
+      },
+      "metrics": {
+        "accuracy": {
+          "unit": "percent_or_percentage_points",
+          "conditioned": 99.14805954279446,
+          "shared": 99.12214247740371,
+          "oracle": 99.22514619882848,
+          "mean_per_seed_oracle_gain": 0.06446039340776144,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.0,
+            0.10401588784705361
+          ],
+          "oracle_gain_over_better_seed_average": 0.07708665603403109
+        },
+        "geometric_margin": {
+          "unit": "score",
+          "conditioned": 0.12590067799565244,
+          "shared": 0.12607400753202014,
+          "oracle": 0.12946264681102812,
+          "mean_per_seed_oracle_gain": 0.0033395300287279717,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.003061715700321632,
+            0.0035171153536234724
+          ],
+          "oracle_gain_over_better_seed_average": 0.0033886392790079822
+        },
+        "raw_gap": {
+          "unit": "score",
+          "conditioned": 0.11712643749581658,
+          "shared": 0.11730606178131697,
+          "oracle": 0.12044403511525326,
+          "mean_per_seed_oracle_gain": 0.00311354005700377,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.0028406332657785814,
+            0.0032778848162803654
+          ],
+          "oracle_gain_over_better_seed_average": 0.0031379733339362836
+        }
+      }
+    },
+    {
+      "setting": "flowers_b16_49",
+      "rows": 4080,
+      "images": 1020,
+      "tasks": 204,
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "correctness_percent": {
+        "both_correct": 95.5637254901958,
+        "both_wrong": 2.0098039215686274,
+        "conditioned_only": 1.2581699346405228,
+        "shared_only": 1.1683006535947713
+      },
+      "stability_percent": {
+        "conditioned_only_any": 2.6715686274509807,
+        "shared_only_any": 2.843137254901961,
+        "conditioned_only_majority": 0.9068627450980391,
+        "shared_only_majority": 0.5882352941176471,
+        "conditioned_only_all": 0.19607843137254902,
+        "shared_only_all": 0.07352941176470588,
+        "direction_reverses": 0.5392156862745098,
+        "any_disagreement": 4.9754901960784315
+      },
+      "stability_row_counts": {
+        "conditioned_only_any": 109,
+        "shared_only_any": 116,
+        "conditioned_only_majority": 37,
+        "shared_only_majority": 24,
+        "conditioned_only_all": 8,
+        "shared_only_all": 3,
+        "direction_reverses": 22,
+        "any_disagreement": 203
+      },
+      "metrics": {
+        "accuracy": {
+          "unit": "percent_or_percentage_points",
+          "conditioned": 96.82189542483627,
+          "shared": 96.73202614379052,
+          "oracle": 97.99019607843104,
+          "mean_per_seed_oracle_gain": 1.168300653594767,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.8741830065359446,
+            1.3398692810457469
+          ],
+          "oracle_gain_over_better_seed_average": 1.168300653594767
+        },
+        "geometric_margin": {
+          "unit": "score",
+          "conditioned": 0.09021486485332268,
+          "shared": 0.09020925276925292,
+          "oracle": 0.09898198279935179,
+          "mean_per_seed_oracle_gain": 0.008699397034285539,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.008259915222721435,
+            0.008806394334532033
+          ],
+          "oracle_gain_over_better_seed_average": 0.008767117946029107
+        },
+        "raw_gap": {
+          "unit": "score",
+          "conditioned": 0.08113875097041222,
+          "shared": 0.08103491773500152,
+          "oracle": 0.08886045534468058,
+          "mean_per_seed_oracle_gain": 0.00768467911878253,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.007309770727685296,
+            0.007799966974637421
+          ],
+          "oracle_gain_over_better_seed_average": 0.007721704374268362
+        }
+      }
+    },
+    {
+      "setting": "flowers_b16_98",
+      "rows": 4080,
+      "images": 1020,
+      "tasks": 204,
+      "training_seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "correctness_percent": {
+        "both_correct": 96.41339869281018,
+        "both_wrong": 2.3856209150326797,
+        "conditioned_only": 0.7026143790849674,
+        "shared_only": 0.4983660130718954
+      },
+      "stability_percent": {
+        "conditioned_only_any": 1.519607843137255,
+        "shared_only_any": 1.3480392156862746,
+        "conditioned_only_majority": 0.49019607843137253,
+        "shared_only_majority": 0.14705882352941177,
+        "conditioned_only_all": 0.09803921568627451,
+        "shared_only_all": 0.0,
+        "direction_reverses": 0.24509803921568626,
+        "any_disagreement": 2.622549019607843
+      },
+      "stability_row_counts": {
+        "conditioned_only_any": 62,
+        "shared_only_any": 55,
+        "conditioned_only_majority": 20,
+        "shared_only_majority": 6,
+        "conditioned_only_all": 4,
+        "shared_only_all": 0,
+        "direction_reverses": 10,
+        "any_disagreement": 107
+      },
+      "metrics": {
+        "accuracy": {
+          "unit": "percent_or_percentage_points",
+          "conditioned": 97.1160130718951,
+          "shared": 96.91176470588202,
+          "oracle": 97.61437908496698,
+          "mean_per_seed_oracle_gain": 0.49836601307189365,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.3349673202614367,
+            0.6209150326797364
+          ],
+          "oracle_gain_over_better_seed_average": 0.49836601307189365
+        },
+        "geometric_margin": {
+          "unit": "score",
+          "conditioned": 0.10739918692315857,
+          "shared": 0.10613582767431425,
+          "oracle": 0.1120273433821461,
+          "mean_per_seed_oracle_gain": 0.0046281564589875325,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.004370337528842875,
+            0.004882603950242209
+          ],
+          "oracle_gain_over_better_seed_average": 0.004628156458987523
+        },
+        "raw_gap": {
+          "unit": "score",
+          "conditioned": 0.09652882566054667,
+          "shared": 0.09542684483347942,
+          "oracle": 0.10063111932972583,
+          "mean_per_seed_oracle_gain": 0.004102293669179154,
+          "mean_per_seed_oracle_gain_ci95": [
+            0.003867906833834475,
+            0.004332864742278617
+          ],
+          "oracle_gain_over_better_seed_average": 0.004102293669179163
+        }
+      }
+    }
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2711,
+  "interpretation": "Label-informed per-example oracle for these fixed C/U models. Accuracy and margin oracles are computed separately; no deployable gate or new predictor is evaluated.",
+  "intervals": "Ordinary 95% image-cluster percentile intervals, conditional on the three trained seeds. Original task/class weights are retained and normalized in each resample."
+}
