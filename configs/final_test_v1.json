@@ -1,0 +1,167 @@
+{
+  "experiment": "final-test-v1",
+  "image_split": "test",
+  "task_split": "test",
+  "device": "cuda:0",
+  "model_cache": "cache/clip",
+  "image_batch_size": 64,
+  "num_workers": 4,
+  "seed": 2026,
+  "identity_atol": 1e-06,
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "random_seeds": [
+    2055,
+    2056,
+    2057
+  ],
+  "bootstrap_seed": 2511,
+  "bootstrap_replicates": 2000,
+  "feature_caches": [
+    {
+      "id": "pets_b16",
+      "model": "ViT-B/16",
+      "data_root": "data/raw/oxford-iiit-pet",
+      "manifest_dir": "data/splits/pets-v1",
+      "prompt_template": "a photo of a {class_name}, a type of pet.",
+      "prune_after": 6,
+      "output": "runs/final-test-v1/cache/pets_b16"
+    },
+    {
+      "id": "pets_l14",
+      "model": "ViT-L/14",
+      "data_root": "data/raw/oxford-iiit-pet",
+      "manifest_dir": "data/splits/pets-v1",
+      "prompt_template": "a photo of a {class_name}, a type of pet.",
+      "prune_after": 12,
+      "output": "runs/final-test-v1/cache/pets_l14"
+    },
+    {
+      "id": "flowers_b16",
+      "model": "ViT-B/16",
+      "data_root": "data/raw/flowers102",
+      "manifest_dir": "data/splits/flowers-v1",
+      "prompt_template": "a photo of a {class_name}, a type of flower.",
+      "prune_after": 6,
+      "output": "runs/final-test-v1/cache/flowers_b16"
+    },
+    {
+      "id": "flowers_l14",
+      "model": "ViT-L/14",
+      "data_root": "data/raw/flowers102",
+      "manifest_dir": "data/splits/flowers-v1",
+      "prompt_template": "a photo of a {class_name}, a type of flower.",
+      "prune_after": 12,
+      "output": "runs/final-test-v1/cache/flowers_l14"
+    }
+  ],
+  "settings": [
+    {
+      "id": "pets_b16_49",
+      "dataset": "pets",
+      "group": "pets_b16",
+      "model": "ViT-B/16",
+      "prune_after": 6,
+      "keep_patch_tokens": 49,
+      "cache_dir": "runs/final-test-v1/cache/pets_b16",
+      "eval_dir": "runs/final-test-v1/pets_b16_49",
+      "checkpoints": {
+        "conditioned": "runs/pets-selector-scale-training-v1/full/seed_{seed}/conditioned.pt",
+        "image_only": "runs/pets-selector-scale-training-v1/full/seed_{seed}/image_only.pt",
+        "image_only_wide": "runs/pets-selector-ablations-49-training-v1/full/seed_{seed}/image_only_wide.pt"
+      }
+    },
+    {
+      "id": "pets_b16_98",
+      "dataset": "pets",
+      "group": "pets_b16",
+      "model": "ViT-B/16",
+      "prune_after": 6,
+      "keep_patch_tokens": 98,
+      "cache_dir": "runs/final-test-v1/cache/pets_b16",
+      "eval_dir": "runs/final-test-v1/pets_b16_98",
+      "checkpoints": {
+        "conditioned": "runs/pets-selector-budget-98-training-v1/full/seed_{seed}/conditioned.pt",
+        "image_only": "runs/pets-selector-budget-98-training-v1/full/seed_{seed}/image_only.pt",
+        "image_only_wide": "runs/pets-selector-ablations-98-training-v1/full/seed_{seed}/image_only_wide.pt",
+        "patch_ranking": "runs/patch-ranking-checkpoints-v1/pets/training/best_val_kl/seed_{seed}/model.pt"
+      }
+    },
+    {
+      "id": "pets_b16_147",
+      "dataset": "pets",
+      "group": "pets_b16",
+      "model": "ViT-B/16",
+      "prune_after": 6,
+      "keep_patch_tokens": 147,
+      "cache_dir": "runs/final-test-v1/cache/pets_b16",
+      "eval_dir": "runs/final-test-v1/pets_b16_147",
+      "checkpoints": {
+        "conditioned": "runs/pets-selector-budget-147-training-v1/full/seed_{seed}/conditioned.pt",
+        "image_only": "runs/pets-selector-budget-147-training-v1/full/seed_{seed}/image_only.pt"
+      }
+    },
+    {
+      "id": "pets_l14_128",
+      "dataset": "pets",
+      "group": "pets_l14",
+      "model": "ViT-L/14",
+      "prune_after": 12,
+      "keep_patch_tokens": 128,
+      "cache_dir": "runs/final-test-v1/cache/pets_l14",
+      "eval_dir": "runs/final-test-v1/pets_l14_128",
+      "checkpoints": {
+        "conditioned": "runs/pets-vitl128-training-v1/full/seed_{seed}/conditioned.pt",
+        "image_only": "runs/pets-vitl128-training-v1/full/seed_{seed}/image_only.pt"
+      }
+    },
+    {
+      "id": "flowers_b16_49",
+      "dataset": "flowers",
+      "group": "flowers_b16",
+      "model": "ViT-B/16",
+      "prune_after": 6,
+      "keep_patch_tokens": 49,
+      "cache_dir": "runs/final-test-v1/cache/flowers_b16",
+      "eval_dir": "runs/final-test-v1/flowers_b16_49",
+      "checkpoints": {
+        "conditioned": "runs/flowers-selector-budget-49-training-v1/full/seed_{seed}/conditioned.pt",
+        "image_only": "runs/flowers-selector-budget-49-training-v1/full/seed_{seed}/image_only.pt",
+        "image_only_wide": "runs/flowers-selector-ablations-49-training-v1/full/seed_{seed}/image_only_wide.pt"
+      }
+    },
+    {
+      "id": "flowers_b16_98",
+      "dataset": "flowers",
+      "group": "flowers_b16",
+      "model": "ViT-B/16",
+      "prune_after": 6,
+      "keep_patch_tokens": 98,
+      "cache_dir": "runs/final-test-v1/cache/flowers_b16",
+      "eval_dir": "runs/final-test-v1/flowers_b16_98",
+      "checkpoints": {
+        "conditioned": "runs/flowers-selector-budget-98-training-v1/full/seed_{seed}/conditioned.pt",
+        "image_only": "runs/flowers-selector-budget-98-training-v1/full/seed_{seed}/image_only.pt",
+        "image_only_wide": "runs/flowers-selector-ablations-98-training-v1/full/seed_{seed}/image_only_wide.pt",
+        "patch_ranking": "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl/seed_{seed}/model.pt"
+      }
+    },
+    {
+      "id": "flowers_l14_128",
+      "dataset": "flowers",
+      "group": "flowers_l14",
+      "model": "ViT-L/14",
+      "prune_after": 12,
+      "keep_patch_tokens": 128,
+      "cache_dir": "runs/final-test-v1/cache/flowers_l14",
+      "eval_dir": "runs/final-test-v1/flowers_l14_128",
+      "checkpoints": {
+        "conditioned": "runs/flowers-vitl128-training-v1/full/seed_{seed}/conditioned.pt",
+        "image_only": "runs/flowers-vitl128-training-v1/full/seed_{seed}/image_only.pt"
+      }
+    }
+  ]
+}
