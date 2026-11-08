@@ -1,0 +1,1775 @@
+{
+  "source": "/data2/zhao.tong/experiments/runs/final-test-v1",
+  "repository": "/data2/zhao.tong/experiments",
+  "config": "configs/final_test_v1.json",
+  "part_source_byte_limit": 1900000000,
+  "archives": [
+    {
+      "archive": "final-test-v1-pets_b16-artifacts.zip",
+      "archive_bytes": 1558709534,
+      "file_count": 83,
+      "source_bytes": 1578935354,
+      "members": [
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_147/analysis.json",
+          "source_bytes": 7175,
+          "compressed_bytes": 2038
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_147/classification_table.csv",
+          "source_bytes": 1025,
+          "compressed_bytes": 520
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_147/contrasts.csv",
+          "source_bytes": 425,
+          "compressed_bytes": 241
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_147/exchange_per_seed.npz",
+          "source_bytes": 5641311,
+          "compressed_bytes": 5641311
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_147/exchange_seed_mean.csv",
+          "source_bytes": 7677030,
+          "compressed_bytes": 1807174
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_147/exchange_seed_mean.npz",
+          "source_bytes": 1205282,
+          "compressed_bytes": 1205282
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_147/paired_outcomes.npz",
+          "source_bytes": 679049,
+          "compressed_bytes": 679049
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_147/per_seed.csv",
+          "source_bytes": 766,
+          "compressed_bytes": 329
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_49/analysis.json",
+          "source_bytes": 8390,
+          "compressed_bytes": 2297
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_49/classification_table.csv",
+          "source_bytes": 1202,
+          "compressed_bytes": 605
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_49/contrasts.csv",
+          "source_bytes": 764,
+          "compressed_bytes": 353
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_49/exchange_per_seed.npz",
+          "source_bytes": 5660697,
+          "compressed_bytes": 5660697
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_49/exchange_seed_mean.csv",
+          "source_bytes": 7595631,
+          "compressed_bytes": 1793494
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_49/exchange_seed_mean.npz",
+          "source_bytes": 1207481,
+          "compressed_bytes": 1207481
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_49/paired_outcomes.npz",
+          "source_bytes": 864372,
+          "compressed_bytes": 864372
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_49/per_seed.csv",
+          "source_bytes": 971,
+          "compressed_bytes": 410
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_98/analysis.json",
+          "source_bytes": 10305,
+          "compressed_bytes": 2709
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_98/classification_table.csv",
+          "source_bytes": 1385,
+          "compressed_bytes": 695
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_98/contrasts.csv",
+          "source_bytes": 1405,
+          "compressed_bytes": 593
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_98/exchange_per_seed.npz",
+          "source_bytes": 5650647,
+          "compressed_bytes": 5650647
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_98/exchange_seed_mean.csv",
+          "source_bytes": 7616279,
+          "compressed_bytes": 1803073
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_98/exchange_seed_mean.npz",
+          "source_bytes": 1207024,
+          "compressed_bytes": 1207024
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_98/paired_outcomes.npz",
+          "source_bytes": 1027772,
+          "compressed_bytes": 1027772
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_98/per_seed.csv",
+          "source_bytes": 1176,
+          "compressed_bytes": 478
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_b16/panel_images.csv",
+          "source_bytes": 165506,
+          "compressed_bytes": 9979
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_b16/prep_summary.json",
+          "source_bytes": 10214,
+          "compressed_bytes": 2127
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_b16/test/evidence.npz",
+          "source_bytes": 9787338,
+          "compressed_bytes": 9787338
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_b16/test/panel_images.csv",
+          "source_bytes": 165506,
+          "compressed_bytes": 9979
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_b16/test_tasks.csv",
+          "source_bytes": 1147,
+          "compressed_bytes": 386
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_b16/train_tasks.csv",
+          "source_bytes": 9320,
+          "compressed_bytes": 2569
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16.log",
+          "source_bytes": 14371,
+          "compressed_bytes": 2192
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/attention/seed_-1/predictions.npz",
+          "source_bytes": 36016349,
+          "compressed_bytes": 36016349
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/conditioned/seed_2041/predictions.npz",
+          "source_bytes": 36165438,
+          "compressed_bytes": 36165438
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/conditioned/seed_2042/predictions.npz",
+          "source_bytes": 36157305,
+          "compressed_bytes": 36157305
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/conditioned/seed_2043/predictions.npz",
+          "source_bytes": 36337012,
+          "compressed_bytes": 36337012
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/evaluation_summary.json",
+          "source_bytes": 5038,
+          "compressed_bytes": 1119
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/evidence.npz",
+          "source_bytes": 9787338,
+          "compressed_bytes": 9787338
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/examples.csv",
+          "source_bytes": 861792,
+          "compressed_bytes": 68761
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/full_model/seed_-1/predictions.npz",
+          "source_bytes": 26247686,
+          "compressed_bytes": 26247686
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/image_only/seed_2041/predictions.npz",
+          "source_bytes": 36042086,
+          "compressed_bytes": 36042086
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/image_only/seed_2042/predictions.npz",
+          "source_bytes": 35971505,
+          "compressed_bytes": 35971505
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/image_only/seed_2043/predictions.npz",
+          "source_bytes": 36055645,
+          "compressed_bytes": 36055645
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/random/seed_2055/predictions.npz",
+          "source_bytes": 36376180,
+          "compressed_bytes": 36376180
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/random/seed_2056/predictions.npz",
+          "source_bytes": 36369821,
+          "compressed_bytes": 36369821
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/random/seed_2057/predictions.npz",
+          "source_bytes": 36369336,
+          "compressed_bytes": 36369336
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/attention/seed_-1/predictions.npz",
+          "source_bytes": 36027834,
+          "compressed_bytes": 36027834
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/conditioned/seed_2041/predictions.npz",
+          "source_bytes": 36283764,
+          "compressed_bytes": 36283764
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/conditioned/seed_2042/predictions.npz",
+          "source_bytes": 36119091,
+          "compressed_bytes": 36119091
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/conditioned/seed_2043/predictions.npz",
+          "source_bytes": 36134009,
+          "compressed_bytes": 36134009
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/evaluation_summary.json",
+          "source_bytes": 6346,
+          "compressed_bytes": 1279
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/evidence.npz",
+          "source_bytes": 9787338,
+          "compressed_bytes": 9787338
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/examples.csv",
+          "source_bytes": 861792,
+          "compressed_bytes": 68761
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/full_model/seed_-1/predictions.npz",
+          "source_bytes": 26247686,
+          "compressed_bytes": 26247686
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/image_only/seed_2041/predictions.npz",
+          "source_bytes": 35915309,
+          "compressed_bytes": 35915309
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/image_only/seed_2042/predictions.npz",
+          "source_bytes": 35738815,
+          "compressed_bytes": 35738815
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/image_only/seed_2043/predictions.npz",
+          "source_bytes": 35797367,
+          "compressed_bytes": 35797367
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/image_only_wide/seed_2041/predictions.npz",
+          "source_bytes": 36069048,
+          "compressed_bytes": 36069048
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/image_only_wide/seed_2042/predictions.npz",
+          "source_bytes": 36022427,
+          "compressed_bytes": 36022427
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/image_only_wide/seed_2043/predictions.npz",
+          "source_bytes": 36005544,
+          "compressed_bytes": 36005544
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/random/seed_2055/predictions.npz",
+          "source_bytes": 36342851,
+          "compressed_bytes": 36342851
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/random/seed_2056/predictions.npz",
+          "source_bytes": 36349505,
+          "compressed_bytes": 36349505
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/random/seed_2057/predictions.npz",
+          "source_bytes": 36348965,
+          "compressed_bytes": 36348965
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/attention/seed_-1/predictions.npz",
+          "source_bytes": 36133388,
+          "compressed_bytes": 36133388
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/conditioned/seed_2041/predictions.npz",
+          "source_bytes": 36553512,
+          "compressed_bytes": 36553512
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/conditioned/seed_2042/predictions.npz",
+          "source_bytes": 36329562,
+          "compressed_bytes": 36329562
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/conditioned/seed_2043/predictions.npz",
+          "source_bytes": 36404811,
+          "compressed_bytes": 36404811
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/evaluation_summary.json",
+          "source_bytes": 7718,
+          "compressed_bytes": 1470
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/evidence.npz",
+          "source_bytes": 9787338,
+          "compressed_bytes": 9787338
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/examples.csv",
+          "source_bytes": 861792,
+          "compressed_bytes": 68761
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/full_model/seed_-1/predictions.npz",
+          "source_bytes": 26247686,
+          "compressed_bytes": 26247686
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/image_only/seed_2041/predictions.npz",
+          "source_bytes": 36236159,
+          "compressed_bytes": 36236159
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/image_only/seed_2042/predictions.npz",
+          "source_bytes": 36154839,
+          "compressed_bytes": 36154839
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/image_only/seed_2043/predictions.npz",
+          "source_bytes": 36128842,
+          "compressed_bytes": 36128842
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/image_only_wide/seed_2041/predictions.npz",
+          "source_bytes": 36144204,
+          "compressed_bytes": 36144204
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/image_only_wide/seed_2042/predictions.npz",
+          "source_bytes": 36178819,
+          "compressed_bytes": 36178819
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/image_only_wide/seed_2043/predictions.npz",
+          "source_bytes": 36176053,
+          "compressed_bytes": 36176053
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/patch_ranking/seed_2041/predictions.npz",
+          "source_bytes": 36309200,
+          "compressed_bytes": 36309200
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/patch_ranking/seed_2042/predictions.npz",
+          "source_bytes": 36343183,
+          "compressed_bytes": 36343183
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/patch_ranking/seed_2043/predictions.npz",
+          "source_bytes": 36316497,
+          "compressed_bytes": 36316497
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/random/seed_2055/predictions.npz",
+          "source_bytes": 36524680,
+          "compressed_bytes": 36524680
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/random/seed_2056/predictions.npz",
+          "source_bytes": 36532337,
+          "compressed_bytes": 36532337
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/random/seed_2057/predictions.npz",
+          "source_bytes": 36523242,
+          "compressed_bytes": 36523242
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_status.json",
+          "source_bytes": 304,
+          "compressed_bytes": 183
+        }
+      ],
+      "group": "pets_b16",
+      "part": 1,
+      "parts": 1,
+      "settings": [
+        "pets_b16_49",
+        "pets_b16_98",
+        "pets_b16_147"
+      ]
+    },
+    {
+      "archive": "final-test-v1-pets_l14-artifacts.zip",
+      "archive_bytes": 587228573,
+      "file_count": 30,
+      "source_bytes": 594132249,
+      "members": [
+        {
+          "path": "runs/final-test-v1/analysis/pets_l14_128/analysis.json",
+          "source_bytes": 7152,
+          "compressed_bytes": 2037
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_l14_128/classification_table.csv",
+          "source_bytes": 1025,
+          "compressed_bytes": 521
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_l14_128/contrasts.csv",
+          "source_bytes": 426,
+          "compressed_bytes": 238
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_l14_128/exchange_per_seed.npz",
+          "source_bytes": 5649920,
+          "compressed_bytes": 5649920
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_l14_128/exchange_seed_mean.csv",
+          "source_bytes": 7577382,
+          "compressed_bytes": 1800765
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_l14_128/exchange_seed_mean.npz",
+          "source_bytes": 1209824,
+          "compressed_bytes": 1209824
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_l14_128/paired_outcomes.npz",
+          "source_bytes": 675948,
+          "compressed_bytes": 675948
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_l14_128/per_seed.csv",
+          "source_bytes": 762,
+          "compressed_bytes": 336
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_l14/panel_images.csv",
+          "source_bytes": 165506,
+          "compressed_bytes": 9979
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_l14/prep_summary.json",
+          "source_bytes": 10219,
+          "compressed_bytes": 2123
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_l14/test/evidence.npz",
+          "source_bytes": 13832990,
+          "compressed_bytes": 13832990
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_l14/test/panel_images.csv",
+          "source_bytes": 165506,
+          "compressed_bytes": 9979
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_l14/test_tasks.csv",
+          "source_bytes": 1147,
+          "compressed_bytes": 386
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_l14/train_tasks.csv",
+          "source_bytes": 9320,
+          "compressed_bytes": 2569
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14.log",
+          "source_bytes": 3804,
+          "compressed_bytes": 836
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/attention/seed_-1/predictions.npz",
+          "source_bytes": 51283115,
+          "compressed_bytes": 51283115
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/conditioned/seed_2041/predictions.npz",
+          "source_bytes": 51115611,
+          "compressed_bytes": 51115611
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/conditioned/seed_2042/predictions.npz",
+          "source_bytes": 51319486,
+          "compressed_bytes": 51319486
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/conditioned/seed_2043/predictions.npz",
+          "source_bytes": 51407216,
+          "compressed_bytes": 51407216
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/evaluation_summary.json",
+          "source_bytes": 4936,
+          "compressed_bytes": 1113
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/evidence.npz",
+          "source_bytes": 13832990,
+          "compressed_bytes": 13832990
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/examples.csv",
+          "source_bytes": 861792,
+          "compressed_bytes": 68761
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/full_model/seed_-1/predictions.npz",
+          "source_bytes": 38057443,
+          "compressed_bytes": 38057443
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/image_only/seed_2041/predictions.npz",
+          "source_bytes": 50685227,
+          "compressed_bytes": 50685227
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/image_only/seed_2042/predictions.npz",
+          "source_bytes": 50778143,
+          "compressed_bytes": 50778143
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/image_only/seed_2043/predictions.npz",
+          "source_bytes": 50866540,
+          "compressed_bytes": 50866540
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/random/seed_2055/predictions.npz",
+          "source_bytes": 51541964,
+          "compressed_bytes": 51541964
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/random/seed_2056/predictions.npz",
+          "source_bytes": 51534923,
+          "compressed_bytes": 51534923
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/random/seed_2057/predictions.npz",
+          "source_bytes": 51531666,
+          "compressed_bytes": 51531666
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_status.json",
+          "source_bytes": 266,
+          "compressed_bytes": 172
+        }
+      ],
+      "group": "pets_l14",
+      "part": 1,
+      "parts": 1,
+      "settings": [
+        "pets_l14_128"
+      ]
+    },
+    {
+      "archive": "final-test-v1-flowers_b16-part01-artifacts.zip",
+      "archive_bytes": 1829732665,
+      "file_count": 54,
+      "source_bytes": 1850612752,
+      "members": [
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_49/analysis.json",
+          "source_bytes": 8406,
+          "compressed_bytes": 2316
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_49/classification_table.csv",
+          "source_bytes": 1216,
+          "compressed_bytes": 615
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_49/contrasts.csv",
+          "source_bytes": 757,
+          "compressed_bytes": 351
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_49/exchange_per_seed.npz",
+          "source_bytes": 9021752,
+          "compressed_bytes": 9021752
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_49/exchange_seed_mean.csv",
+          "source_bytes": 11478211,
+          "compressed_bytes": 2737791
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_49/exchange_seed_mean.npz",
+          "source_bytes": 1870687,
+          "compressed_bytes": 1870687
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_49/paired_outcomes.npz",
+          "source_bytes": 1576519,
+          "compressed_bytes": 1576519
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_49/per_seed.csv",
+          "source_bytes": 1014,
+          "compressed_bytes": 424
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_98/analysis.json",
+          "source_bytes": 10303,
+          "compressed_bytes": 2685
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_98/classification_table.csv",
+          "source_bytes": 1402,
+          "compressed_bytes": 698
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_98/contrasts.csv",
+          "source_bytes": 1408,
+          "compressed_bytes": 585
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_98/exchange_per_seed.npz",
+          "source_bytes": 9013263,
+          "compressed_bytes": 9013263
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_98/exchange_seed_mean.csv",
+          "source_bytes": 11469689,
+          "compressed_bytes": 2734705
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_98/exchange_seed_mean.npz",
+          "source_bytes": 1866440,
+          "compressed_bytes": 1866440
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_98/paired_outcomes.npz",
+          "source_bytes": 1875019,
+          "compressed_bytes": 1875019
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_98/per_seed.csv",
+          "source_bytes": 1234,
+          "compressed_bytes": 492
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_b16/panel_images.csv",
+          "source_bytes": 276803,
+          "compressed_bytes": 18042
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_b16/prep_summary.json",
+          "source_bytes": 13704,
+          "compressed_bytes": 2688
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_b16/test/evidence.npz",
+          "source_bytes": 17798979,
+          "compressed_bytes": 17798979
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_b16/test/panel_images.csv",
+          "source_bytes": 276803,
+          "compressed_bytes": 18042
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_b16/test_tasks.csv",
+          "source_bytes": 3874,
+          "compressed_bytes": 1171
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_b16/train_tasks.csv",
+          "source_bytes": 12174,
+          "compressed_bytes": 3261
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16.log",
+          "source_bytes": 10937,
+          "compressed_bytes": 1752
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/attention/seed_-1/predictions.npz",
+          "source_bytes": 70780083,
+          "compressed_bytes": 70780083
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/conditioned/seed_2041/predictions.npz",
+          "source_bytes": 71440089,
+          "compressed_bytes": 71440089
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/conditioned/seed_2042/predictions.npz",
+          "source_bytes": 71204357,
+          "compressed_bytes": 71204357
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/conditioned/seed_2043/predictions.npz",
+          "source_bytes": 71368297,
+          "compressed_bytes": 71368297
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/evaluation_summary.json",
+          "source_bytes": 6415,
+          "compressed_bytes": 1277
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/evidence.npz",
+          "source_bytes": 17798979,
+          "compressed_bytes": 17798979
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/examples.csv",
+          "source_bytes": 1551155,
+          "compressed_bytes": 132528
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/full_model/seed_-1/predictions.npz",
+          "source_bytes": 53487867,
+          "compressed_bytes": 53487867
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/image_only/seed_2041/predictions.npz",
+          "source_bytes": 70761441,
+          "compressed_bytes": 70761441
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/image_only/seed_2042/predictions.npz",
+          "source_bytes": 70481560,
+          "compressed_bytes": 70481560
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/image_only/seed_2043/predictions.npz",
+          "source_bytes": 70855696,
+          "compressed_bytes": 70855696
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/image_only_wide/seed_2041/predictions.npz",
+          "source_bytes": 71077279,
+          "compressed_bytes": 71077279
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/image_only_wide/seed_2042/predictions.npz",
+          "source_bytes": 71130817,
+          "compressed_bytes": 71130817
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/image_only_wide/seed_2043/predictions.npz",
+          "source_bytes": 71057804,
+          "compressed_bytes": 71057804
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/random/seed_2055/predictions.npz",
+          "source_bytes": 71491919,
+          "compressed_bytes": 71491919
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/random/seed_2056/predictions.npz",
+          "source_bytes": 71484155,
+          "compressed_bytes": 71484155
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/random/seed_2057/predictions.npz",
+          "source_bytes": 71487828,
+          "compressed_bytes": 71487828
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/attention/seed_-1/predictions.npz",
+          "source_bytes": 71053679,
+          "compressed_bytes": 71053679
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/conditioned/seed_2041/predictions.npz",
+          "source_bytes": 71561420,
+          "compressed_bytes": 71561420
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/conditioned/seed_2042/predictions.npz",
+          "source_bytes": 71428007,
+          "compressed_bytes": 71428007
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/conditioned/seed_2043/predictions.npz",
+          "source_bytes": 71397706,
+          "compressed_bytes": 71397706
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/evaluation_summary.json",
+          "source_bytes": 7770,
+          "compressed_bytes": 1470
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/evidence.npz",
+          "source_bytes": 17798979,
+          "compressed_bytes": 17798979
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/examples.csv",
+          "source_bytes": 1551155,
+          "compressed_bytes": 132528
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/full_model/seed_-1/predictions.npz",
+          "source_bytes": 53487867,
+          "compressed_bytes": 53487867
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/image_only/seed_2041/predictions.npz",
+          "source_bytes": 71198514,
+          "compressed_bytes": 71198514
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/image_only/seed_2042/predictions.npz",
+          "source_bytes": 71308350,
+          "compressed_bytes": 71308350
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/image_only/seed_2043/predictions.npz",
+          "source_bytes": 71289505,
+          "compressed_bytes": 71289505
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/image_only_wide/seed_2041/predictions.npz",
+          "source_bytes": 71440580,
+          "compressed_bytes": 71440580
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/image_only_wide/seed_2042/predictions.npz",
+          "source_bytes": 71535562,
+          "compressed_bytes": 71535562
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/image_only_wide/seed_2043/predictions.npz",
+          "source_bytes": 71497323,
+          "compressed_bytes": 71497323
+        }
+      ],
+      "group": "flowers_b16",
+      "part": 1,
+      "parts": 2,
+      "settings": [
+        "flowers_b16_49",
+        "flowers_b16_98"
+      ]
+    },
+    {
+      "archive": "final-test-v1-flowers_b16-part02-artifacts.zip",
+      "archive_bytes": 431178952,
+      "file_count": 7,
+      "source_bytes": 431177594,
+      "members": [
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/patch_ranking/seed_2041/predictions.npz",
+          "source_bytes": 71826711,
+          "compressed_bytes": 71826711
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/patch_ranking/seed_2042/predictions.npz",
+          "source_bytes": 71940300,
+          "compressed_bytes": 71940300
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/patch_ranking/seed_2043/predictions.npz",
+          "source_bytes": 72003495,
+          "compressed_bytes": 72003495
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/random/seed_2055/predictions.npz",
+          "source_bytes": 71801023,
+          "compressed_bytes": 71801023
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/random/seed_2056/predictions.npz",
+          "source_bytes": 71804247,
+          "compressed_bytes": 71804247
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/random/seed_2057/predictions.npz",
+          "source_bytes": 71801525,
+          "compressed_bytes": 71801525
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_status.json",
+          "source_bytes": 293,
+          "compressed_bytes": 179
+        }
+      ],
+      "group": "flowers_b16",
+      "part": 2,
+      "parts": 2,
+      "settings": [
+        "flowers_b16_49",
+        "flowers_b16_98"
+      ]
+    },
+    {
+      "archive": "final-test-v1-flowers_l14-artifacts.zip",
+      "archive_bytes": 1128899686,
+      "file_count": 30,
+      "source_bytes": 1139547498,
+      "members": [
+        {
+          "path": "runs/final-test-v1/analysis/flowers_l14_128/analysis.json",
+          "source_bytes": 7159,
+          "compressed_bytes": 2026
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_l14_128/classification_table.csv",
+          "source_bytes": 1036,
+          "compressed_bytes": 524
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_l14_128/contrasts.csv",
+          "source_bytes": 429,
+          "compressed_bytes": 240
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_l14_128/exchange_per_seed.npz",
+          "source_bytes": 9012590,
+          "compressed_bytes": 9012590
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_l14_128/exchange_seed_mean.csv",
+          "source_bytes": 11433626,
+          "compressed_bytes": 2751945
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_l14_128/exchange_seed_mean.npz",
+          "source_bytes": 1873585,
+          "compressed_bytes": 1873585
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_l14_128/paired_outcomes.npz",
+          "source_bytes": 1221237,
+          "compressed_bytes": 1221237
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_l14_128/per_seed.csv",
+          "source_bytes": 800,
+          "compressed_bytes": 343
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_l14/panel_images.csv",
+          "source_bytes": 276803,
+          "compressed_bytes": 18042
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_l14/prep_summary.json",
+          "source_bytes": 13707,
+          "compressed_bytes": 2686
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_l14/test/evidence.npz",
+          "source_bytes": 24660401,
+          "compressed_bytes": 24660401
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_l14/test/panel_images.csv",
+          "source_bytes": 276803,
+          "compressed_bytes": 18042
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_l14/test_tasks.csv",
+          "source_bytes": 3874,
+          "compressed_bytes": 1171
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_l14/train_tasks.csv",
+          "source_bytes": 12174,
+          "compressed_bytes": 3261
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14.log",
+          "source_bytes": 3858,
+          "compressed_bytes": 834
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/attention/seed_-1/predictions.npz",
+          "source_bytes": 98807480,
+          "compressed_bytes": 98807480
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/conditioned/seed_2041/predictions.npz",
+          "source_bytes": 98787154,
+          "compressed_bytes": 98787154
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/conditioned/seed_2042/predictions.npz",
+          "source_bytes": 98846579,
+          "compressed_bytes": 98846579
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/conditioned/seed_2043/predictions.npz",
+          "source_bytes": 99090337,
+          "compressed_bytes": 99090337
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/evaluation_summary.json",
+          "source_bytes": 4979,
+          "compressed_bytes": 1114
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/evidence.npz",
+          "source_bytes": 24660401,
+          "compressed_bytes": 24660401
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/examples.csv",
+          "source_bytes": 1551155,
+          "compressed_bytes": 132528
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/full_model/seed_-1/predictions.npz",
+          "source_bytes": 75084567,
+          "compressed_bytes": 75084567
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/image_only/seed_2041/predictions.npz",
+          "source_bytes": 99119439,
+          "compressed_bytes": 99119439
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/image_only/seed_2042/predictions.npz",
+          "source_bytes": 98274925,
+          "compressed_bytes": 98274925
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/image_only/seed_2043/predictions.npz",
+          "source_bytes": 98827745,
+          "compressed_bytes": 98827745
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/random/seed_2055/predictions.npz",
+          "source_bytes": 99229707,
+          "compressed_bytes": 99229707
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/random/seed_2056/predictions.npz",
+          "source_bytes": 99233135,
+          "compressed_bytes": 99233135
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/random/seed_2057/predictions.npz",
+          "source_bytes": 99231541,
+          "compressed_bytes": 99231541
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_status.json",
+          "source_bytes": 272,
+          "compressed_bytes": 175
+        }
+      ],
+      "group": "flowers_l14",
+      "part": 1,
+      "parts": 1,
+      "settings": [
+        "flowers_l14_128"
+      ]
+    },
+    {
+      "archive": "final-test-v1-common-artifacts.zip",
+      "archive_bytes": 538338,
+      "file_count": 47,
+      "source_bytes": 1547141,
+      "members": [
+        {
+          "path": "configs/final_test_v1.json",
+          "source_bytes": 5902,
+          "compressed_bytes": 848
+        },
+        {
+          "path": "data/splits/flowers-v1/class_mapping_audit.json",
+          "source_bytes": 18125,
+          "compressed_bytes": 2177
+        },
+        {
+          "path": "data/splits/flowers-v1/classes.json",
+          "source_bytes": 8844,
+          "compressed_bytes": 1188
+        },
+        {
+          "path": "data/splits/flowers-v1/dataset_provenance.json",
+          "source_bytes": 1532,
+          "compressed_bytes": 755
+        },
+        {
+          "path": "data/splits/flowers-v1/images.csv",
+          "source_bytes": 369983,
+          "compressed_bytes": 26806
+        },
+        {
+          "path": "data/splits/flowers-v1/protocol_summary.json",
+          "source_bytes": 20074,
+          "compressed_bytes": 2177
+        },
+        {
+          "path": "data/splits/flowers-v1/tasks.csv",
+          "source_bytes": 19658,
+          "compressed_bytes": 5772
+        },
+        {
+          "path": "data/splits/pets-v1/README.md",
+          "source_bytes": 1829,
+          "compressed_bytes": 1013
+        },
+        {
+          "path": "data/splits/pets-v1/classes.json",
+          "source_bytes": 3089,
+          "compressed_bytes": 486
+        },
+        {
+          "path": "data/splits/pets-v1/images.csv",
+          "source_bytes": 351644,
+          "compressed_bytes": 22990
+        },
+        {
+          "path": "data/splits/pets-v1/protocol_summary.json",
+          "source_bytes": 7459,
+          "compressed_bytes": 1048
+        },
+        {
+          "path": "data/splits/pets-v1/tasks.csv",
+          "source_bytes": 11458,
+          "compressed_bytes": 3385
+        },
+        {
+          "path": "docs/experiments/2026-11-08-final-test.md",
+          "source_bytes": 3205,
+          "compressed_bytes": 1546
+        },
+        {
+          "path": "runs/final-test-v1/analysis/analysis.json",
+          "source_bytes": 71385,
+          "compressed_bytes": 11496
+        },
+        {
+          "path": "runs/final-test-v1/analysis/budget_changes.csv",
+          "source_bytes": 1462,
+          "compressed_bytes": 593
+        },
+        {
+          "path": "runs/final-test-v1/analysis/classification_table.csv",
+          "source_bytes": 7331,
+          "compressed_bytes": 3188
+        },
+        {
+          "path": "runs/final-test-v1/analysis/conditioning_contrasts.png",
+          "source_bytes": 180860,
+          "compressed_bytes": 180860
+        },
+        {
+          "path": "runs/final-test-v1/analysis/conditioning_contrasts.svg",
+          "source_bytes": 33183,
+          "compressed_bytes": 4843
+        },
+        {
+          "path": "runs/final-test-v1/analysis/contrasts.csv",
+          "source_bytes": 5056,
+          "compressed_bytes": 1889
+        },
+        {
+          "path": "runs/final-test-v1/analysis/exchange.csv",
+          "source_bytes": 3468,
+          "compressed_bytes": 1308
+        },
+        {
+          "path": "runs/final-test-v1/analysis/exchange_and_geometry.png",
+          "source_bytes": 209606,
+          "compressed_bytes": 209606
+        },
+        {
+          "path": "runs/final-test-v1/analysis/exchange_and_geometry.svg",
+          "source_bytes": 44659,
+          "compressed_bytes": 6032
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_49/analysis.json",
+          "source_bytes": 8406,
+          "compressed_bytes": 2316
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_b16_98/analysis.json",
+          "source_bytes": 10303,
+          "compressed_bytes": 2685
+        },
+        {
+          "path": "runs/final-test-v1/analysis/flowers_l14_128/analysis.json",
+          "source_bytes": 7159,
+          "compressed_bytes": 2026
+        },
+        {
+          "path": "runs/final-test-v1/analysis/h2.csv",
+          "source_bytes": 2330,
+          "compressed_bytes": 946
+        },
+        {
+          "path": "runs/final-test-v1/analysis/per_seed.csv",
+          "source_bytes": 6507,
+          "compressed_bytes": 2162
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_147/analysis.json",
+          "source_bytes": 7175,
+          "compressed_bytes": 2038
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_49/analysis.json",
+          "source_bytes": 8390,
+          "compressed_bytes": 2297
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_b16_98/analysis.json",
+          "source_bytes": 10305,
+          "compressed_bytes": 2709
+        },
+        {
+          "path": "runs/final-test-v1/analysis/pets_l14_128/analysis.json",
+          "source_bytes": 7152,
+          "compressed_bytes": 2037
+        },
+        {
+          "path": "runs/final-test-v1/analysis.log",
+          "source_bytes": 7421,
+          "compressed_bytes": 2049
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_b16/prep_summary.json",
+          "source_bytes": 13704,
+          "compressed_bytes": 2688
+        },
+        {
+          "path": "runs/final-test-v1/cache/flowers_l14/prep_summary.json",
+          "source_bytes": 13707,
+          "compressed_bytes": 2686
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_b16/prep_summary.json",
+          "source_bytes": 10214,
+          "compressed_bytes": 2127
+        },
+        {
+          "path": "runs/final-test-v1/cache/pets_l14/prep_summary.json",
+          "source_bytes": 10219,
+          "compressed_bytes": 2123
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_49/evaluation_summary.json",
+          "source_bytes": 6415,
+          "compressed_bytes": 1277
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_98/evaluation_summary.json",
+          "source_bytes": 7770,
+          "compressed_bytes": 1470
+        },
+        {
+          "path": "runs/final-test-v1/flowers_b16_status.json",
+          "source_bytes": 293,
+          "compressed_bytes": 179
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_128/evaluation_summary.json",
+          "source_bytes": 4979,
+          "compressed_bytes": 1114
+        },
+        {
+          "path": "runs/final-test-v1/flowers_l14_status.json",
+          "source_bytes": 272,
+          "compressed_bytes": 175
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_147/evaluation_summary.json",
+          "source_bytes": 5038,
+          "compressed_bytes": 1119
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_49/evaluation_summary.json",
+          "source_bytes": 6346,
+          "compressed_bytes": 1279
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_98/evaluation_summary.json",
+          "source_bytes": 7718,
+          "compressed_bytes": 1470
+        },
+        {
+          "path": "runs/final-test-v1/pets_b16_status.json",
+          "source_bytes": 304,
+          "compressed_bytes": 183
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_128/evaluation_summary.json",
+          "source_bytes": 4936,
+          "compressed_bytes": 1113
+        },
+        {
+          "path": "runs/final-test-v1/pets_l14_status.json",
+          "source_bytes": 266,
+          "compressed_bytes": 172
+        }
+      ],
+      "group": "common",
+      "part": 1,
+      "parts": 1
+    }
+  ],
+  "archive_count": 6,
+  "total_archive_bytes": 5536287748,
+  "file_count": 251,
+  "checkpoint_dependencies": [
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_49",
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2041/conditioned.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_49",
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2042/conditioned.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_49",
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2043/conditioned.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_49",
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2041/image_only.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_49",
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2042/image_only.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_49",
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-scale-training-v1/full/seed_2043/image_only.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_49",
+      "method": "image_only_wide",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_49",
+      "method": "image_only_wide",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_49",
+      "method": "image_only_wide",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2041/conditioned.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2042/conditioned.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2043/conditioned.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2041/image_only.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2042/image_only.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2043/image_only.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "image_only_wide",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-ablations-98-training-v1/full/seed_2041/image_only_wide.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "image_only_wide",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-ablations-98-training-v1/full/seed_2042/image_only_wide.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "image_only_wide",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-ablations-98-training-v1/full/seed_2043/image_only_wide.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "patch_ranking",
+      "seed": 2041,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/pets/training/best_val_kl/seed_2041/model.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "patch_ranking",
+      "seed": 2042,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/pets/training/best_val_kl/seed_2042/model.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_98",
+      "method": "patch_ranking",
+      "seed": 2043,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/pets/training/best_val_kl/seed_2043/model.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_147",
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2041/conditioned.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_147",
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2042/conditioned.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_147",
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2043/conditioned.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_147",
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2041/image_only.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_147",
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2042/image_only.pt"
+    },
+    {
+      "group": "pets_b16",
+      "setting": "pets_b16_147",
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2043/image_only.pt"
+    },
+    {
+      "group": "pets_l14",
+      "setting": "pets_l14_128",
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2041/conditioned.pt"
+    },
+    {
+      "group": "pets_l14",
+      "setting": "pets_l14_128",
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2042/conditioned.pt"
+    },
+    {
+      "group": "pets_l14",
+      "setting": "pets_l14_128",
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2043/conditioned.pt"
+    },
+    {
+      "group": "pets_l14",
+      "setting": "pets_l14_128",
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2041/image_only.pt"
+    },
+    {
+      "group": "pets_l14",
+      "setting": "pets_l14_128",
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2042/image_only.pt"
+    },
+    {
+      "group": "pets_l14",
+      "setting": "pets_l14_128",
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2043/image_only.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_49",
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/conditioned.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_49",
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/conditioned.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_49",
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/conditioned.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_49",
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/image_only.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_49",
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/image_only.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_49",
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/image_only.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_49",
+      "method": "image_only_wide",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_49",
+      "method": "image_only_wide",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_49",
+      "method": "image_only_wide",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/conditioned.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/conditioned.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/conditioned.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/image_only.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/image_only.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/image_only.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "image_only_wide",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-ablations-98-training-v1/full/seed_2041/image_only_wide.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "image_only_wide",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-ablations-98-training-v1/full/seed_2042/image_only_wide.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "image_only_wide",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-ablations-98-training-v1/full/seed_2043/image_only_wide.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "patch_ranking",
+      "seed": 2041,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl/seed_2041/model.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "patch_ranking",
+      "seed": 2042,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl/seed_2042/model.pt"
+    },
+    {
+      "group": "flowers_b16",
+      "setting": "flowers_b16_98",
+      "method": "patch_ranking",
+      "seed": 2043,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl/seed_2043/model.pt"
+    },
+    {
+      "group": "flowers_l14",
+      "setting": "flowers_l14_128",
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2041/conditioned.pt"
+    },
+    {
+      "group": "flowers_l14",
+      "setting": "flowers_l14_128",
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2042/conditioned.pt"
+    },
+    {
+      "group": "flowers_l14",
+      "setting": "flowers_l14_128",
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2043/conditioned.pt"
+    },
+    {
+      "group": "flowers_l14",
+      "setting": "flowers_l14_128",
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2041/image_only.pt"
+    },
+    {
+      "group": "flowers_l14",
+      "setting": "flowers_l14_128",
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2042/image_only.pt"
+    },
+    {
+      "group": "flowers_l14",
+      "setting": "flowers_l14_128",
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2043/image_only.pt"
+    }
+  ],
+  "omitted": "Regenerable prefix_tokens.npy caches and previously backed-up selector/PR weights.",
+  "restoration": "Archive members retain repository-relative paths. Restore all group and common archives alongside the listed checkpoint dependencies."
+}

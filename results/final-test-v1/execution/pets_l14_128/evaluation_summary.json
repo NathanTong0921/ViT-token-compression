@@ -1,0 +1,156 @@
+{
+  "setting": {
+    "id": "pets_l14_128",
+    "dataset": "pets",
+    "group": "pets_l14",
+    "model": "ViT-L/14",
+    "prune_after": 12,
+    "keep_patch_tokens": 128,
+    "cache_dir": "runs/final-test-v1/cache/pets_l14",
+    "eval_dir": "runs/final-test-v1/pets_l14_128",
+    "checkpoints": {
+      "conditioned": "runs/pets-vitl128-training-v1/full/seed_{seed}/conditioned.pt",
+      "image_only": "runs/pets-vitl128-training-v1/full/seed_{seed}/image_only.pt"
+    }
+  },
+  "image_split": "test",
+  "task_split": "test",
+  "image_count": 3669,
+  "evaluated_image_count": 3569,
+  "task_count": 68,
+  "example_count": 13529,
+  "runs": [
+    {
+      "method": "full_model",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.0,
+      "suffix_seconds": 0.0,
+      "method_wall_seconds": 1.9084446378983557,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 0
+    },
+    {
+      "method": "attention",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.04276057262904942,
+      "suffix_seconds": 2.645748859969899,
+      "method_wall_seconds": 5.884791481075808,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "random",
+      "seed": 2055,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.04102406091988087,
+      "suffix_seconds": 2.6489795583765954,
+      "method_wall_seconds": 5.854579458013177,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "random",
+      "seed": 2056,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.040863575180992484,
+      "suffix_seconds": 2.6524007415864617,
+      "method_wall_seconds": 5.827591922832653,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "random",
+      "seed": 2057,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.04140471527352929,
+      "suffix_seconds": 2.6539845797233284,
+      "method_wall_seconds": 5.857168779009953,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2041/conditioned.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 0.5826978196855634,
+      "suffix_seconds": 9.7044642935507,
+      "method_wall_seconds": 15.050876773893833,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 13529
+    },
+    {
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2042/conditioned.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 0.6048180183861405,
+      "suffix_seconds": 9.694367244839668,
+      "method_wall_seconds": 15.246797604952008,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 13529
+    },
+    {
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2043/conditioned.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 0.583798420149833,
+      "suffix_seconds": 9.680587777169421,
+      "method_wall_seconds": 14.9774902430363,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 13529
+    },
+    {
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2041/image_only.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 0.15881306561641395,
+      "suffix_seconds": 2.6472186443861574,
+      "method_wall_seconds": 6.1914678160101175,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2042/image_only.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 0.15781177603639662,
+      "suffix_seconds": 2.6468824772164226,
+      "method_wall_seconds": 6.024182616034523,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/pets-vitl128-training-v1/full/seed_2043/image_only.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 0.1589288276154548,
+      "suffix_seconds": 2.6496147885918617,
+      "method_wall_seconds": 6.050948223797604,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    }
+  ],
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "batch_size": 64,
+  "aggregation": "Equal candidate tasks and class sides; average trained seeds.",
+  "code_commit": "385a5d09344456b27f2024d0a371af301c718f95",
+  "total_wall_seconds": 96.83764592907391,
+  "cost_scope": "Cached-prefix evaluation and output; not deployment latency.",
+  "peak_gpu_bytes": 1377788928
+}

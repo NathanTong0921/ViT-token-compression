@@ -1,0 +1,343 @@
+{
+  "run_type": "reserved_test_frozen_clip_cache",
+  "started_utc": "2026-11-08T07:51:16.105474+00:00",
+  "code_commit": "385a5d09344456b27f2024d0a371af301c718f95",
+  "config": {
+    "experiment": "final-test-v1",
+    "image_split": "test",
+    "task_split": "test",
+    "device": "cuda:0",
+    "model_cache": "cache/clip",
+    "image_batch_size": 64,
+    "num_workers": 4,
+    "seed": 2026,
+    "identity_atol": 1e-06,
+    "seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "random_seeds": [
+      2055,
+      2056,
+      2057
+    ],
+    "bootstrap_seed": 2511,
+    "bootstrap_replicates": 2000,
+    "feature_caches": [
+      {
+        "id": "pets_b16",
+        "model": "ViT-B/16",
+        "data_root": "data/raw/oxford-iiit-pet",
+        "manifest_dir": "data/splits/pets-v1",
+        "prompt_template": "a photo of a {class_name}, a type of pet.",
+        "prune_after": 6,
+        "output": "runs/final-test-v1/cache/pets_b16"
+      },
+      {
+        "id": "pets_l14",
+        "model": "ViT-L/14",
+        "data_root": "data/raw/oxford-iiit-pet",
+        "manifest_dir": "data/splits/pets-v1",
+        "prompt_template": "a photo of a {class_name}, a type of pet.",
+        "prune_after": 12,
+        "output": "runs/final-test-v1/cache/pets_l14"
+      },
+      {
+        "id": "flowers_b16",
+        "model": "ViT-B/16",
+        "data_root": "data/raw/flowers102",
+        "manifest_dir": "data/splits/flowers-v1",
+        "prompt_template": "a photo of a {class_name}, a type of flower.",
+        "prune_after": 6,
+        "output": "runs/final-test-v1/cache/flowers_b16"
+      },
+      {
+        "id": "flowers_l14",
+        "model": "ViT-L/14",
+        "data_root": "data/raw/flowers102",
+        "manifest_dir": "data/splits/flowers-v1",
+        "prompt_template": "a photo of a {class_name}, a type of flower.",
+        "prune_after": 12,
+        "output": "runs/final-test-v1/cache/flowers_l14"
+      }
+    ],
+    "settings": [
+      {
+        "id": "pets_b16_49",
+        "dataset": "pets",
+        "group": "pets_b16",
+        "model": "ViT-B/16",
+        "prune_after": 6,
+        "keep_patch_tokens": 49,
+        "cache_dir": "runs/final-test-v1/cache/pets_b16",
+        "eval_dir": "runs/final-test-v1/pets_b16_49",
+        "checkpoints": {
+          "conditioned": "runs/pets-selector-scale-training-v1/full/seed_{seed}/conditioned.pt",
+          "image_only": "runs/pets-selector-scale-training-v1/full/seed_{seed}/image_only.pt",
+          "image_only_wide": "runs/pets-selector-ablations-49-training-v1/full/seed_{seed}/image_only_wide.pt"
+        }
+      },
+      {
+        "id": "pets_b16_98",
+        "dataset": "pets",
+        "group": "pets_b16",
+        "model": "ViT-B/16",
+        "prune_after": 6,
+        "keep_patch_tokens": 98,
+        "cache_dir": "runs/final-test-v1/cache/pets_b16",
+        "eval_dir": "runs/final-test-v1/pets_b16_98",
+        "checkpoints": {
+          "conditioned": "runs/pets-selector-budget-98-training-v1/full/seed_{seed}/conditioned.pt",
+          "image_only": "runs/pets-selector-budget-98-training-v1/full/seed_{seed}/image_only.pt",
+          "image_only_wide": "runs/pets-selector-ablations-98-training-v1/full/seed_{seed}/image_only_wide.pt",
+          "patch_ranking": "runs/patch-ranking-checkpoints-v1/pets/training/best_val_kl/seed_{seed}/model.pt"
+        }
+      },
+      {
+        "id": "pets_b16_147",
+        "dataset": "pets",
+        "group": "pets_b16",
+        "model": "ViT-B/16",
+        "prune_after": 6,
+        "keep_patch_tokens": 147,
+        "cache_dir": "runs/final-test-v1/cache/pets_b16",
+        "eval_dir": "runs/final-test-v1/pets_b16_147",
+        "checkpoints": {
+          "conditioned": "runs/pets-selector-budget-147-training-v1/full/seed_{seed}/conditioned.pt",
+          "image_only": "runs/pets-selector-budget-147-training-v1/full/seed_{seed}/image_only.pt"
+        }
+      },
+      {
+        "id": "pets_l14_128",
+        "dataset": "pets",
+        "group": "pets_l14",
+        "model": "ViT-L/14",
+        "prune_after": 12,
+        "keep_patch_tokens": 128,
+        "cache_dir": "runs/final-test-v1/cache/pets_l14",
+        "eval_dir": "runs/final-test-v1/pets_l14_128",
+        "checkpoints": {
+          "conditioned": "runs/pets-vitl128-training-v1/full/seed_{seed}/conditioned.pt",
+          "image_only": "runs/pets-vitl128-training-v1/full/seed_{seed}/image_only.pt"
+        }
+      },
+      {
+        "id": "flowers_b16_49",
+        "dataset": "flowers",
+        "group": "flowers_b16",
+        "model": "ViT-B/16",
+        "prune_after": 6,
+        "keep_patch_tokens": 49,
+        "cache_dir": "runs/final-test-v1/cache/flowers_b16",
+        "eval_dir": "runs/final-test-v1/flowers_b16_49",
+        "checkpoints": {
+          "conditioned": "runs/flowers-selector-budget-49-training-v1/full/seed_{seed}/conditioned.pt",
+          "image_only": "runs/flowers-selector-budget-49-training-v1/full/seed_{seed}/image_only.pt",
+          "image_only_wide": "runs/flowers-selector-ablations-49-training-v1/full/seed_{seed}/image_only_wide.pt"
+        }
+      },
+      {
+        "id": "flowers_b16_98",
+        "dataset": "flowers",
+        "group": "flowers_b16",
+        "model": "ViT-B/16",
+        "prune_after": 6,
+        "keep_patch_tokens": 98,
+        "cache_dir": "runs/final-test-v1/cache/flowers_b16",
+        "eval_dir": "runs/final-test-v1/flowers_b16_98",
+        "checkpoints": {
+          "conditioned": "runs/flowers-selector-budget-98-training-v1/full/seed_{seed}/conditioned.pt",
+          "image_only": "runs/flowers-selector-budget-98-training-v1/full/seed_{seed}/image_only.pt",
+          "image_only_wide": "runs/flowers-selector-ablations-98-training-v1/full/seed_{seed}/image_only_wide.pt",
+          "patch_ranking": "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl/seed_{seed}/model.pt"
+        }
+      },
+      {
+        "id": "flowers_l14_128",
+        "dataset": "flowers",
+        "group": "flowers_l14",
+        "model": "ViT-L/14",
+        "prune_after": 12,
+        "keep_patch_tokens": 128,
+        "cache_dir": "runs/final-test-v1/cache/flowers_l14",
+        "eval_dir": "runs/final-test-v1/flowers_l14_128",
+        "checkpoints": {
+          "conditioned": "runs/flowers-vitl128-training-v1/full/seed_{seed}/conditioned.pt",
+          "image_only": "runs/flowers-vitl128-training-v1/full/seed_{seed}/image_only.pt"
+        }
+      }
+    ],
+    "id": "flowers_l14",
+    "model": "ViT-L/14",
+    "data_root": "data/raw/flowers102",
+    "manifest_dir": "data/splits/flowers-v1",
+    "prompt_template": "a photo of a {class_name}, a type of flower.",
+    "prune_after": 12,
+    "output": "runs/final-test-v1/cache/flowers_l14"
+  },
+  "model_geometry": {
+    "input_resolution": 224,
+    "patch_size": 14,
+    "patch_tokens": 256,
+    "visual_blocks": 24,
+    "token_dim": 1024,
+    "embedding_dim": 768,
+    "prune_after": 12
+  },
+  "counts": {
+    "test": {
+      "images": 6149,
+      "classes": 102,
+      "tasks": 204,
+      "prefix_shape": [
+        6149,
+        257,
+        1024
+      ],
+      "prefix_bytes": 3236440064
+    }
+  },
+  "identity": {
+    "test": {
+      "images_checked": 6149,
+      "max_feature_error_vs_native": 0.0,
+      "multiclass_prediction_disagreements_vs_native": 0
+    }
+  },
+  "baseline": {
+    "test": {
+      "multiclass_accuracy": 0.7923239551146528,
+      "class_count": 102
+    }
+  },
+  "preprocess": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_image_to_rgb at 0x7860de24e4d0>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "prompts": [
+    "a photo of a pink primrose, a type of flower.",
+    "a photo of a hard-leaved pocket orchid, a type of flower.",
+    "a photo of a canterbury bells, a type of flower.",
+    "a photo of a sweet pea, a type of flower.",
+    "a photo of a english marigold, a type of flower.",
+    "a photo of a tiger lily, a type of flower.",
+    "a photo of a moon orchid, a type of flower.",
+    "a photo of a bird of paradise, a type of flower.",
+    "a photo of a monkshood, a type of flower.",
+    "a photo of a globe thistle, a type of flower.",
+    "a photo of a snapdragon, a type of flower.",
+    "a photo of a colt's foot, a type of flower.",
+    "a photo of a king protea, a type of flower.",
+    "a photo of a spear thistle, a type of flower.",
+    "a photo of a yellow iris, a type of flower.",
+    "a photo of a globe-flower, a type of flower.",
+    "a photo of a purple coneflower, a type of flower.",
+    "a photo of a peruvian lily, a type of flower.",
+    "a photo of a balloon flower, a type of flower.",
+    "a photo of a giant white arum lily, a type of flower.",
+    "a photo of a fire lily, a type of flower.",
+    "a photo of a pincushion flower, a type of flower.",
+    "a photo of a fritillary, a type of flower.",
+    "a photo of a red ginger, a type of flower.",
+    "a photo of a grape hyacinth, a type of flower.",
+    "a photo of a corn poppy, a type of flower.",
+    "a photo of a prince of wales feathers, a type of flower.",
+    "a photo of a stemless gentian, a type of flower.",
+    "a photo of a artichoke, a type of flower.",
+    "a photo of a sweet william, a type of flower.",
+    "a photo of a carnation, a type of flower.",
+    "a photo of a garden phlox, a type of flower.",
+    "a photo of a love in the mist, a type of flower.",
+    "a photo of a mexican aster, a type of flower.",
+    "a photo of a alpine sea holly, a type of flower.",
+    "a photo of a ruby-lipped cattleya, a type of flower.",
+    "a photo of a cape flower, a type of flower.",
+    "a photo of a great masterwort, a type of flower.",
+    "a photo of a siam tulip, a type of flower.",
+    "a photo of a lenten rose, a type of flower.",
+    "a photo of a barbeton daisy, a type of flower.",
+    "a photo of a daffodil, a type of flower.",
+    "a photo of a sword lily, a type of flower.",
+    "a photo of a poinsettia, a type of flower.",
+    "a photo of a bolero deep blue, a type of flower.",
+    "a photo of a wallflower, a type of flower.",
+    "a photo of a marigold, a type of flower.",
+    "a photo of a buttercup, a type of flower.",
+    "a photo of a oxeye daisy, a type of flower.",
+    "a photo of a common dandelion, a type of flower.",
+    "a photo of a petunia, a type of flower.",
+    "a photo of a wild pansy, a type of flower.",
+    "a photo of a primula, a type of flower.",
+    "a photo of a sunflower, a type of flower.",
+    "a photo of a pelargonium, a type of flower.",
+    "a photo of a bishop of llandaff, a type of flower.",
+    "a photo of a gaura, a type of flower.",
+    "a photo of a geranium, a type of flower.",
+    "a photo of a orange dahlia, a type of flower.",
+    "a photo of a pink-yellow dahlia?, a type of flower.",
+    "a photo of a cautleya spicata, a type of flower.",
+    "a photo of a japanese anemone, a type of flower.",
+    "a photo of a black-eyed susan, a type of flower.",
+    "a photo of a silverbush, a type of flower.",
+    "a photo of a californian poppy, a type of flower.",
+    "a photo of a osteospermum, a type of flower.",
+    "a photo of a spring crocus, a type of flower.",
+    "a photo of a bearded iris, a type of flower.",
+    "a photo of a windflower, a type of flower.",
+    "a photo of a tree poppy, a type of flower.",
+    "a photo of a gazania, a type of flower.",
+    "a photo of a azalea, a type of flower.",
+    "a photo of a water lily, a type of flower.",
+    "a photo of a rose, a type of flower.",
+    "a photo of a thorn apple, a type of flower.",
+    "a photo of a morning glory, a type of flower.",
+    "a photo of a passion flower, a type of flower.",
+    "a photo of a lotus, a type of flower.",
+    "a photo of a toad lily, a type of flower.",
+    "a photo of a anthurium, a type of flower.",
+    "a photo of a frangipani, a type of flower.",
+    "a photo of a clematis, a type of flower.",
+    "a photo of a hibiscus, a type of flower.",
+    "a photo of a columbine, a type of flower.",
+    "a photo of a desert-rose, a type of flower.",
+    "a photo of a tree mallow, a type of flower.",
+    "a photo of a magnolia, a type of flower.",
+    "a photo of a cyclamen, a type of flower.",
+    "a photo of a watercress, a type of flower.",
+    "a photo of a canna lily, a type of flower.",
+    "a photo of a hippeastrum, a type of flower.",
+    "a photo of a bee balm, a type of flower.",
+    "a photo of a ball moss, a type of flower.",
+    "a photo of a foxglove, a type of flower.",
+    "a photo of a bougainvillea, a type of flower.",
+    "a photo of a camellia, a type of flower.",
+    "a photo of a mallow, a type of flower.",
+    "a photo of a mexican petunia, a type of flower.",
+    "a photo of a bromelia, a type of flower.",
+    "a photo of a blanket flower, a type of flower.",
+    "a photo of a trumpet creeper, a type of flower.",
+    "a photo of a blackberry lily, a type of flower."
+  ],
+  "test_images_used": true,
+  "task_splits_saved": [
+    "train",
+    "test"
+  ],
+  "batching": {
+    "batch_size": 64,
+    "last_batch": "repeat final image; discard padded outputs",
+    "logical_images": 6149,
+    "physical_images_per_forward_path": 6208
+  },
+  "cost": {
+    "model_setup_seconds": 11.774747404037043,
+    "test_extraction_seconds": 45.36233097803779,
+    "total_wall_seconds": 57.13995376508683,
+    "peak_allocated_gpu_bytes": 1582618112
+  },
+  "cost_scope": "Extraction includes image loading, keep-all validation and cache writing; not inference latency.",
+  "gpu": "NVIDIA RTX A6000",
+  "environment": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4"
+  }
+}

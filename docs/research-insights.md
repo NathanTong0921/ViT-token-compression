@@ -2,7 +2,7 @@
 
 本文件集中保存实验过程中形成的认识，供后续设计实验、写 report 和准备讲解时查阅。每次实验的配置、完整结果和复现步骤仍保存在 [experiments/](experiments/)；这里记录“发现了什么、证据在哪里、改变了什么判断”。
 
-更新日期：2026-11-05。最新 I33 完成 Patch Ranking–Preservation 外部适配：U／C在两个数据集的分类优于该参照，完整推理成本接近；离线preservation排序本身也存在分类差距。I31的阶段依赖与I32的集合监督结果保留。两个数据集的最终预留测试图片与测试类别对均未使用。
+更新日期：2026-11-08。七设置的预留图片与类别组合测试已完成：任务交换 margin 与 H2 均确认，Flowers98 对强共享 U 的准确率与 margin 优势成立，其余设置的收益仍有条件性；U／C在两个数据集均超过选定PR参照。以下按日期更新已有认识，不新增一项独立“贡献”。混合、深度和训练目标等扩展仍是开发集证据。[最终测试结果](../results/final-test-v1/README.md)
 
 ## I1：估计 token 重要性时的压缩程度，会影响最终选择的质量
 
@@ -90,6 +90,8 @@
 
 ## I7：任务条件化的 margin 收益取决于预算，不能从一个压缩比例推广
 
+**2026-11-08最终测试更新：**相对强共享 U，98−49 的 margin 增量在 Pets／Flowers 分别为 +0.001829／+0.000976，两数据集调整区间均为正；相应准确率交互未确定。Pets147仍保留在原图像版比较中，C−I margin为+0.000265，七设置调整区间为正。预算作用的判断应注明比较的是原图像版还是更强共享U。[完整预算对照](../results/final-test-v1/analysis/budget_changes.csv)
+
 - **状态：**Oxford Pets 开发集上的受控观察完整保留；Flowers 外部验证对其推广范围作出了限制，见下方日期更新。
 - **从哪里来：**I6 排除了只用少量训练图片这一简单解释；本轮沿用完整 2,944 张训练图、相同 3,990 步与三个 seeds，分别在 49、98、147-token 下生成目标预算监督并配对训练。对应 proposal 的预算比较与 H3。
 - **结果：**条件化减图像版的 margin 为 −0.000919、+0.000573、+0.000173。三预算校正后的区间分别为 [−0.001744, −0.000058]、[+0.000135, +0.001027]、[−0.000188, +0.000483]。98-token 的三个 seed 都为正；49→98 的配对优势变化为 +0.001492，95% 区间 [0.000755, 0.002252]。这并不证明 98 是普遍最优预算。
@@ -102,6 +104,8 @@
 **2026-10-27 Flowers 更新：**49／98-token 的平均 margin 优势都为正，98 相对 49 的直接变化区间跨零，未复现 Pets 的符号模式或预算差异。I7 的原始结果适用于该 Pets 设置；不能据此认为强压缩普遍损害条件化、或 98-token 普遍更合适。147 的 Pets 结果继续保留，Flowers 本轮只做预先确定的 49／98 定向验证。
 
 ## I8：任务方向夹角在难度之外有预测价值，但只能解释小部分交换损失
+
+**2026-11-08最终测试更新：**七设置的任务交换 margin、难度调整角度斜率和同图斜率均为正，七设置调整区间均为正。Pets使用3,171张图片／24,440对任务，Flowers使用6,149张图片／36,894对任务。这确认了原几何关联和任务依赖；交换准确率在Pets49及三个Flowers设置为正，其余Pets准确率效应尚未确定。[交换与H2](../results/final-test-v1/README.md)
 
 - **状态：**proposal H2 已在 Pets 和 Flowers 的 B/16 与 L/14 开发任务集合获得关联与预测支持；最终保留测试尚待完成。
 - **从哪里来：**沿用 proposal H2，对 I5 的已训练模型交叉选择做更严格的连续难度调整，并使用保存的完整 512 维特征。训练 seeds 先平均，图片等权，616 张图片／4,315 对任务。
@@ -125,6 +129,8 @@
 - **证据：**[Flowers 结果](../results/flowers-selector-budgets-v1/README.md)、[主比较与直接预算差异](../results/flowers-selector-budgets-v1/analysis.json)、[H2](../results/flowers-selector-budgets-v1/geometry/analysis.json)、[训练记录](../results/flowers-selector-budgets-v1/execution/)、[预先固定的协议](flowers-targeted-validation.md)。
 
 ## I10：H2 在两个 backbone 上保持，条件化相对共享模型的分类收益仍取决于设置
+
+**2026-11-08最终测试更新：**L/14在两数据集确认交换margin与H2。Flowers C−I准确率为+0.142pp，普通95%区间为正，七设置调整区间[−0.0006,+0.2705]pp包含零；Pets准确率接近，margin仍低于I。此处I是原图像版，未使用B/16的加宽U。[最终跨模型表](../results/final-test-v1/analysis/contrasts.csv)
 
 - **状态与来源：**完成 proposal 的 ViT-L/14 定向验证，延伸 I8–I9。保持原有图片及任务划分，在 block 12／24 后保留 128／256 patch，两个数据集分别重新训练三个配对种子；对应 B/16 在 block 6／12 后保留 98／196 patch 的比例。所有 keep-all 输出与原始模型一致。
 - **H2 的复现：**Pets／Flowers 的难度调整斜率每 10° 为 +0.000228／+0.000579，95% 区间分别为 [0.000137, 0.000323]／[0.000389, 0.000771]，满足两个数据集均为正的预定复核标准。图片固定效应斜率也为正；五折留出图片的增量 R² 为 0.009865／0.009725，区间均为正。正确描述相对交换描述的 margin 效应在两个数据集也均为正。
@@ -163,6 +169,8 @@
 - **证据：**[四设置汇总](../results/conditioning-objective-v1/README.md)、[Pets](../results/pets-selector-objectives-v1/README.md)、[Flowers](../results/flowers-selector-objectives-v1/README.md)、[执行记录](experiments/2026-10-28-conditioning-objective.md)。
 
 ## I14：把参数用于更强图像网络，会改变条件化领先的范围
+
+**2026-11-08最终测试更新：**C−U准确率在Pets49／98、Flowers49／98分别为−0.036／−0.013／+0.148／+0.152pp。Flowers98的四设置调整区间[+0.026,+0.287]pp为正，并保留+0.001081的margin优势；Flowers49与Pets98接近，Pets49的margin低于U。任务交换在所有设置有用，却不普遍转化为超过同等资源共享选择的收益，这一区分得到预留数据支持。[最终主比较](../results/final-test-v1/README.md)
 
 - **状态与来源：**2026-10-29 完成。延伸 proposal 的强共享基线与 H3，并回应 I7、I9 的小幅分类收益。保留原有固定描述的 image-only，新增无文本分支、宽度 199 的图像 MLP：347,399 参数，对比原架构的 348,033 参数。监督、训练图片、更新数及三个种子保持配对，覆盖 Pets／Flowers 的 49／98-token。
 - **主要结果：**条件化减更宽图像版的平均 margin，在 Pets49／98 为 −0.002524／−0.000173，在 Flowers49／98 为 +0.000006／+0.001263。两预算调整区间显示：Pets49 仍落后，Flowers98 仍领先；Pets98 与 Flowers49 原先相对 image-only 的领先不再明确。四设置的准确率差调整区间均跨零。
@@ -309,6 +317,8 @@ Pets 的 C−U geometric margin 在 block3／6／9 分别为 −0.001462／−0.
 
 ## I33：外部 preservation 对照支持共享基线的竞争力，并把问题指向排序目标
 
+**2026-11-08最终测试更新：**使用此前最低开发KL选定的PR权重，U−PR准确率在Pets／Flowers为+0.376／+0.626pp，两数据集调整区间分别为[+0.246,+0.509]／[+0.443,+0.814]pp。C也在两个数据集高于PR。这个独立测试结果补充外部准确率参照；不同预测器容量与训练目标保持原样，C／U仍是任务信息价值的配对比较。[最终PR比较](../results/final-test-v1/README.md)
+
 **2026-11-08更新：**最低验证KL选出的PR在Pets／Flowers分别为98.9693%／96.2745%。U−PR准确率差为+0.153／+0.637pp，Pets的普通95%区间包含零，Flowers为正；两数据集的margin差仍为正。因此，下文11月5日的两数据集准确率领先结论只对应固定末轮版本。六个末轮复跑完全一致，已有C／U主比较未改变。[checkpoint检查](../results/patch-ranking-checkpoints-v1/README.md)。
 
 2026-11-05，补齐 Patch Ranking–Preservation 适配：同一冻结 B/16、block6、98-token，两个数据集各三种子。强共享 U 相对 PR 的准确率分别高0.339pp与0.662pp，条件化 C 分别高0.365pp与0.866pp；四项调整区间均为正。PR预测器46,246参数，U为347,399参数，二者完整图像前向的batch32延迟只相差约1.5–1.7%。这使已有C／U配对研究获得了一个独立方法参照。
@@ -345,3 +355,4 @@ Pets 的 C−U geometric margin 在 block3／6／9 分别为 −0.001462／−0.
 | 2026-11-04 | 新增I31：Pets49 的 6→9 阶段干预使直接／混合条件化 margin 增量由负转正；Flowers 未复现深度交互 | [深度干预](../results/depth-intervention-v1/README.md) |
 | 2026-11-04 | 新增I32：六组直接集合恢复优于旧KL，实际分类未建立任务额外优势或强共享准确率收益 | [直接集合监督](../results/set-distillation-v1/README.md) |
 | 2026-11-05 | 新增I33：完成PR外部适配，U／C两数据集分类领先且实际延迟相近；离线preservation排序亦存在分类差距 | [外部对照](../results/patch-ranking-v1/README.md) |
+| 2026-11-08 | 最终测试更新I7／I8／I10／I14／I33：七设置任务依赖和H2确认；Flowers98保留强共享准确率与margin优势；两数据集98−49 margin交互与PR参照获得独立结果 | [最终测试](../results/final-test-v1/README.md) |

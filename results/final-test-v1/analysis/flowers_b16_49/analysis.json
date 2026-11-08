@@ -1,0 +1,309 @@
+{
+  "setting": {
+    "id": "flowers_b16_49",
+    "dataset": "flowers",
+    "group": "flowers_b16",
+    "model": "ViT-B/16",
+    "prune_after": 6,
+    "keep_patch_tokens": 49,
+    "cache_dir": "runs/final-test-v1/cache/flowers_b16",
+    "eval_dir": "runs/final-test-v1/flowers_b16_49",
+    "checkpoints": {
+      "conditioned": "runs/flowers-selector-budget-49-training-v1/full/seed_{seed}/conditioned.pt",
+      "image_only": "runs/flowers-selector-budget-49-training-v1/full/seed_{seed}/image_only.pt",
+      "image_only_wide": "runs/flowers-selector-ablations-49-training-v1/full/seed_{seed}/image_only_wide.pt"
+    }
+  },
+  "image_count": 6149,
+  "image_task_count": 24596,
+  "task_count": 204,
+  "table": [
+    {
+      "method": "full_model",
+      "accuracy": {
+        "mean": 0.9711814134993935,
+        "ci95": [
+          0.9674654073240359,
+          0.9747569698369825
+        ]
+      },
+      "margin": {
+        "mean": 0.11047215954034345,
+        "ci95": [
+          0.10916498281568901,
+          0.11171581522825608
+        ]
+      },
+      "repairs_vs_full": 0.0,
+      "new_errors_vs_full": 0.0
+    },
+    {
+      "method": "attention",
+      "accuracy": {
+        "mean": 0.9515834755677443,
+        "ci95": [
+          0.9465456685736028,
+          0.9563855847351179
+        ]
+      },
+      "margin": {
+        "mean": 0.07226363696357063,
+        "ci95": [
+          0.07108654097337115,
+          0.07340238491900793
+        ]
+      },
+      "repairs_vs_full": 0.006096920821855105,
+      "new_errors_vs_full": 0.025694858753504395
+    },
+    {
+      "method": "random",
+      "accuracy": {
+        "mean": 0.8713418913410623,
+        "ci95": [
+          0.8655729631645546,
+          0.8768492430317019
+        ]
+      },
+      "margin": {
+        "mean": 0.061124583187137434,
+        "ci95": [
+          0.060089409976242084,
+          0.062140439276551634
+        ]
+      },
+      "repairs_vs_full": 0.008047094676159222,
+      "new_errors_vs_full": 0.10788661683447863
+    },
+    {
+      "method": "conditioned",
+      "accuracy": {
+        "mean": 0.972005757719161,
+        "ci95": [
+          0.9684700795723803,
+          0.9753641856325088
+        ]
+      },
+      "margin": {
+        "mean": 0.0906147830473119,
+        "ci95": [
+          0.08959129921763923,
+          0.09161436648234025
+        ]
+      },
+      "repairs_vs_full": 0.011274639094714248,
+      "new_errors_vs_full": 0.010450294874947785
+    },
+    {
+      "method": "image_only",
+      "accuracy": {
+        "mean": 0.968135767673651,
+        "ci95": [
+          0.9640944608277486,
+          0.9717831357036784
+        ]
+      },
+      "margin": {
+        "mean": 0.08905781248624475,
+        "ci95": [
+          0.08791571069034938,
+          0.0901224915190595
+        ]
+      },
+      "repairs_vs_full": 0.008609351826445632,
+      "new_errors_vs_full": 0.011654997652189846
+    },
+    {
+      "method": "image_only_wide",
+      "accuracy": {
+        "mean": 0.9705240582504532,
+        "ci95": [
+          0.9666464997614737,
+          0.9740888965906299
+        ]
+      },
+      "margin": {
+        "mean": 0.09050987836668169,
+        "ci95": [
+          0.08940609344012582,
+          0.09158617917033081
+        ]
+      },
+      "repairs_vs_full": 0.009489385046719312,
+      "new_errors_vs_full": 0.010146740295661526
+    }
+  ],
+  "contrasts": {
+    "conditioned_minus_image_only": {
+      "accuracy": {
+        "mean": 0.0038699900455106753,
+        "ci95": [
+          0.0019647536871852,
+          0.00606623374056155
+        ],
+        "bonferroni_family_ci95": [
+          0.0011669179911083043,
+          0.006812421316401836
+        ],
+        "individual_interval_level": 0.9928571428571429
+      },
+      "margin": {
+        "mean": 0.0015569705610673362,
+        "ci95": [
+          0.001203037864312106,
+          0.0019264000059362608
+        ],
+        "bonferroni_family_ci95": [
+          0.0011003210045407118,
+          0.0020548261416376123
+        ],
+        "individual_interval_level": 0.9928571428571429
+      }
+    },
+    "conditioned_minus_image_only_wide": {
+      "accuracy": {
+        "mean": 0.0014816994687086764,
+        "ci95": [
+          -0.00034806571626906527,
+          0.003450733184711622
+        ],
+        "bonferroni_family_ci95": [
+          -0.000766804042234737,
+          0.003912444460529355
+        ],
+        "individual_interval_level": 0.9875
+      },
+      "margin": {
+        "mean": 0.00010490468063006131,
+        "ci95": [
+          -0.00023486369222700679,
+          0.00045226609725702535
+        ],
+        "bonferroni_family_ci95": [
+          -0.0003530851748797044,
+          0.0005410381939985249
+        ],
+        "individual_interval_level": 0.9875
+      }
+    }
+  },
+  "exchange_own_minus_swapped": {
+    "accuracy": {
+      "mean": 0.0031622124645380558,
+      "ci95": [
+        0.0022903453136011343,
+        0.004016009829963322
+      ],
+      "bonferroni_family_ci95": [
+        0.0020915776729730265,
+        0.004344524984059868
+      ],
+      "individual_interval_level": 0.9928571428571429
+    },
+    "margin": {
+      "mean": 0.0032400115193459873,
+      "ci95": [
+        0.0031338051127973144,
+        0.003339984540903304
+      ],
+      "bonferroni_family_ci95": [
+        0.0030970822215905577,
+        0.0033874699489758082
+      ],
+      "individual_interval_level": 0.9928571428571429
+    },
+    "selection_overlap": {
+      "mean": 0.6586169459923631,
+      "ci95": [
+        0.6573587495929684,
+        0.6599233407788206
+      ],
+      "bonferroni_family_ci95": [
+        0.6568600485366033,
+        0.660318670018479
+      ],
+      "individual_interval_level": 0.9928571428571429
+    }
+  },
+  "exchange_image_count": 6149,
+  "exchange_pair_count": 36894,
+  "h2": {
+    "difficulty_adjusted": {
+      "outcome": "exchange_loss",
+      "image_fixed_effects": false,
+      "image_count": 6149,
+      "pair_count": 36894,
+      "controls": [
+        "margin_min",
+        "margin_max",
+        "margin_min_squared",
+        "margin_min_times_max",
+        "margin_max_squared"
+      ],
+      "angle_unit": "10 degrees",
+      "angle_slope": 0.0017945346481837562,
+      "ci95": [
+        0.001654639132269185,
+        0.0019369011461648163
+      ],
+      "ci_familywise_budgets": [
+        0.0015998199999291975,
+        0.0019803739711842096
+      ],
+      "family_size": 7,
+      "familywise_interval_level": 0.9928571428571429,
+      "angle_estimable_beyond_controls": true,
+      "positive_after_budget_adjustment": true,
+      "design_rank": 7,
+      "design_columns": 7,
+      "scaled_design_condition_number": 32.807681209143524,
+      "bootstrap_rank_deficient_replicates": 0,
+      "residual_angle_standard_deviation_units10degrees": 0.6451493956619277,
+      "within_image_angle_varying_images": 6149,
+      "weighted_mse": 4.5468313815480416e-05,
+      "difficulty_only_weighted_mse": 4.680868253932996e-05,
+      "in_sample_incremental_r2": 0.02851579226381688
+    },
+    "within_image": {
+      "outcome": "exchange_loss",
+      "image_fixed_effects": true,
+      "image_count": 6149,
+      "pair_count": 36894,
+      "controls": [
+        "margin_min",
+        "margin_max",
+        "margin_min_squared",
+        "margin_min_times_max",
+        "margin_max_squared"
+      ],
+      "angle_unit": "10 degrees",
+      "angle_slope": 0.0017403846084690369,
+      "ci95": [
+        0.0015997102069910964,
+        0.0018833807632733434
+      ],
+      "ci_familywise_budgets": [
+        0.0015417675166092487,
+        0.0019412436302096109
+      ],
+      "family_size": 7,
+      "familywise_interval_level": 0.9928571428571429,
+      "angle_estimable_beyond_controls": true,
+      "positive_after_budget_adjustment": true,
+      "design_rank": 6,
+      "design_columns": 6,
+      "scaled_design_condition_number": 17.506699070732843,
+      "bootstrap_rank_deficient_replicates": 0,
+      "residual_angle_standard_deviation_units10degrees": 0.47855800449564456,
+      "within_image_angle_varying_images": 6149,
+      "weighted_mse": 2.848941091145843e-05,
+      "difficulty_only_weighted_mse": 2.9183091652570043e-05,
+      "in_sample_incremental_r2": 0.023644986444623397
+    }
+  },
+  "audit": {
+    "score_vs_full_feature_exchange_loss_max_abs_error": 2.4957711828124153e-07,
+    "image_only_feature_exchange_max_abs_difference": 0.0,
+    "geometry_identity_max_abs_error": 9.71445146547012e-17
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "setting": {
+    "id": "flowers_b16_49",
+    "dataset": "flowers",
+    "group": "flowers_b16",
+    "model": "ViT-B/16",
+    "prune_after": 6,
+    "keep_patch_tokens": 49,
+    "cache_dir": "runs/final-test-v1/cache/flowers_b16",
+    "eval_dir": "runs/final-test-v1/flowers_b16_49",
+    "checkpoints": {
+      "conditioned": "runs/flowers-selector-budget-49-training-v1/full/seed_{seed}/conditioned.pt",
+      "image_only": "runs/flowers-selector-budget-49-training-v1/full/seed_{seed}/image_only.pt",
+      "image_only_wide": "runs/flowers-selector-ablations-49-training-v1/full/seed_{seed}/image_only_wide.pt"
+    }
+  },
+  "image_split": "test",
+  "task_split": "test",
+  "image_count": 6149,
+  "evaluated_image_count": 6149,
+  "task_count": 204,
+  "example_count": 24596,
+  "runs": [
+    {
+      "method": "full_model",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.0,
+      "suffix_seconds": 0.0,
+      "method_wall_seconds": 2.714046915061772,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 0
+    },
+    {
+      "method": "attention",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.04973773402161896,
+      "suffix_seconds": 0.6019885467831045,
+      "method_wall_seconds": 4.839335882104933,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "random",
+      "seed": 2055,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.04943879786878824,
+      "suffix_seconds": 0.6037096180953085,
+      "method_wall_seconds": 4.742866239044815,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "random",
+      "seed": 2056,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.04929312807507813,
+      "suffix_seconds": 0.6025283655617386,
+      "method_wall_seconds": 4.7055161111056805,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "random",
+      "seed": 2057,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.04866779805161059,
+      "suffix_seconds": 0.6019307663664222,
+      "method_wall_seconds": 4.707228336948901,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.6487041066866368,
+      "suffix_seconds": 2.3708493935409933,
+      "method_wall_seconds": 8.826428225962445,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 24596
+    },
+    {
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.6394404952879995,
+      "suffix_seconds": 2.3733774265274405,
+      "method_wall_seconds": 8.800366641953588,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 24596
+    },
+    {
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.6424063411541283,
+      "suffix_seconds": 2.3726883546914905,
+      "method_wall_seconds": 8.714531008852646,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 24596
+    },
+    {
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.1620766520500183,
+      "suffix_seconds": 0.5993952471762896,
+      "method_wall_seconds": 4.94756414112635,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.16190739767625928,
+      "suffix_seconds": 0.598169180797413,
+      "method_wall_seconds": 4.996171408100054,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.16401091613806784,
+      "suffix_seconds": 0.601722709601745,
+      "method_wall_seconds": 4.9699568909127265,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only_wide",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt",
+      "parameter_count": 347399,
+      "selector_seconds": 0.1749474355019629,
+      "suffix_seconds": 0.600671214517206,
+      "method_wall_seconds": 4.95219081803225,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only_wide",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt",
+      "parameter_count": 347399,
+      "selector_seconds": 0.1694249203428626,
+      "suffix_seconds": 0.6070100374054164,
+      "method_wall_seconds": 5.0086507389787585,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only_wide",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt",
+      "parameter_count": 347399,
+      "selector_seconds": 0.1759088432881981,
+      "suffix_seconds": 0.602442589122802,
+      "method_wall_seconds": 4.935762303881347,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    }
+  ],
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "batch_size": 64,
+  "aggregation": "Equal candidate tasks and class sides; average trained seeds.",
+  "code_commit": "385a5d09344456b27f2024d0a371af301c718f95",
+  "total_wall_seconds": 82.77564665907994,
+  "cost_scope": "Cached-prefix evaluation and output; not deployment latency.",
+  "peak_gpu_bytes": 607015936
+}

@@ -1,0 +1,156 @@
+{
+  "setting": {
+    "id": "pets_b16_147",
+    "dataset": "pets",
+    "group": "pets_b16",
+    "model": "ViT-B/16",
+    "prune_after": 6,
+    "keep_patch_tokens": 147,
+    "cache_dir": "runs/final-test-v1/cache/pets_b16",
+    "eval_dir": "runs/final-test-v1/pets_b16_147",
+    "checkpoints": {
+      "conditioned": "runs/pets-selector-budget-147-training-v1/full/seed_{seed}/conditioned.pt",
+      "image_only": "runs/pets-selector-budget-147-training-v1/full/seed_{seed}/image_only.pt"
+    }
+  },
+  "image_split": "test",
+  "task_split": "test",
+  "image_count": 3669,
+  "evaluated_image_count": 3569,
+  "task_count": 68,
+  "example_count": 13529,
+  "runs": [
+    {
+      "method": "full_model",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.0,
+      "suffix_seconds": 0.0,
+      "method_wall_seconds": 1.300516088027507,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 0
+    },
+    {
+      "method": "attention",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.033417191822081804,
+      "suffix_seconds": 1.0245300908572972,
+      "method_wall_seconds": 3.242216653190553,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "random",
+      "seed": 2055,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.03346185386180878,
+      "suffix_seconds": 1.0287404793780297,
+      "method_wall_seconds": 3.209352757083252,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "random",
+      "seed": 2056,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.033543684519827366,
+      "suffix_seconds": 1.0289127670694143,
+      "method_wall_seconds": 3.2169880860019475,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "random",
+      "seed": 2057,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.03368012490682304,
+      "suffix_seconds": 1.0280675031244755,
+      "method_wall_seconds": 3.2179206921719015,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2041/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.37748902663588524,
+      "suffix_seconds": 3.738664608914405,
+      "method_wall_seconds": 7.233686797088012,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 13529
+    },
+    {
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2042/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.3744827602058649,
+      "suffix_seconds": 3.7294917940162122,
+      "method_wall_seconds": 7.193839285988361,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 13529
+    },
+    {
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2043/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.3763181243557483,
+      "suffix_seconds": 3.7326890928670764,
+      "method_wall_seconds": 7.221543064108118,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 13529
+    },
+    {
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2041/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.10237191710621119,
+      "suffix_seconds": 1.0226178385782987,
+      "method_wall_seconds": 3.335635451832786,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2042/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.10788409691303968,
+      "suffix_seconds": 1.0252497342880815,
+      "method_wall_seconds": 4.087993437889963,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-budget-147-training-v1/full/seed_2043/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.11810488952323794,
+      "suffix_seconds": 1.0248695889022201,
+      "method_wall_seconds": 3.587598801823333,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    }
+  ],
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "batch_size": 64,
+  "aggregation": "Equal candidate tasks and class sides; average trained seeds.",
+  "code_commit": "385a5d09344456b27f2024d0a371af301c718f95",
+  "total_wall_seconds": 49.87957453983836,
+  "cost_scope": "Cached-prefix evaluation and output; not deployment latency.",
+  "peak_gpu_bytes": 609516032
+}

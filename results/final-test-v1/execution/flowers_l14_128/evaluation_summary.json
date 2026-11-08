@@ -1,0 +1,156 @@
+{
+  "setting": {
+    "id": "flowers_l14_128",
+    "dataset": "flowers",
+    "group": "flowers_l14",
+    "model": "ViT-L/14",
+    "prune_after": 12,
+    "keep_patch_tokens": 128,
+    "cache_dir": "runs/final-test-v1/cache/flowers_l14",
+    "eval_dir": "runs/final-test-v1/flowers_l14_128",
+    "checkpoints": {
+      "conditioned": "runs/flowers-vitl128-training-v1/full/seed_{seed}/conditioned.pt",
+      "image_only": "runs/flowers-vitl128-training-v1/full/seed_{seed}/image_only.pt"
+    }
+  },
+  "image_split": "test",
+  "task_split": "test",
+  "image_count": 6149,
+  "evaluated_image_count": 6149,
+  "task_count": 204,
+  "example_count": 24596,
+  "runs": [
+    {
+      "method": "full_model",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.0,
+      "suffix_seconds": 0.0,
+      "method_wall_seconds": 3.8073300688993186,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 0
+    },
+    {
+      "method": "attention",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.06976573658175766,
+      "suffix_seconds": 4.446982581401244,
+      "method_wall_seconds": 10.595804019831121,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "random",
+      "seed": 2055,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.0696109018754214,
+      "suffix_seconds": 4.450446856673807,
+      "method_wall_seconds": 10.560253747971728,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "random",
+      "seed": 2056,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.07501561869867146,
+      "suffix_seconds": 4.455240401439369,
+      "method_wall_seconds": 11.251567954197526,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "random",
+      "seed": 2057,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.0728375546168536,
+      "suffix_seconds": 4.456672542728484,
+      "method_wall_seconds": 10.586129482835531,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2041/conditioned.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 1.0690378041472286,
+      "suffix_seconds": 17.720101005397737,
+      "method_wall_seconds": 27.999858948867768,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 24596
+    },
+    {
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2042/conditioned.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 1.0643697860650718,
+      "suffix_seconds": 17.737200576113537,
+      "method_wall_seconds": 27.790962713072076,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 24596
+    },
+    {
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2043/conditioned.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 1.0609128871001303,
+      "suffix_seconds": 17.747083882568404,
+      "method_wall_seconds": 27.76273843483068,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 24596
+    },
+    {
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2041/image_only.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 0.265831045107916,
+      "suffix_seconds": 4.471921778051183,
+      "method_wall_seconds": 10.723945630947128,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2042/image_only.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 0.26661547692492604,
+      "suffix_seconds": 4.470126977423206,
+      "method_wall_seconds": 10.824670352041721,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-vitl128-training-v1/full/seed_2043/image_only.pt",
+      "parameter_count": 480641,
+      "selector_seconds": 0.27031821198761463,
+      "suffix_seconds": 4.46852115704678,
+      "method_wall_seconds": 10.824103351915255,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    }
+  ],
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "batch_size": 64,
+  "aggregation": "Equal candidate tasks and class sides; average trained seeds.",
+  "code_commit": "385a5d09344456b27f2024d0a371af301c718f95",
+  "total_wall_seconds": 170.99248901405372,
+  "cost_scope": "Cached-prefix evaluation and output; not deployment latency.",
+  "peak_gpu_bytes": 1377722880
+}

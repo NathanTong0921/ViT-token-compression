@@ -1,0 +1,263 @@
+{
+  "setting": {
+    "id": "pets_b16_147",
+    "dataset": "pets",
+    "group": "pets_b16",
+    "model": "ViT-B/16",
+    "prune_after": 6,
+    "keep_patch_tokens": 147,
+    "cache_dir": "runs/final-test-v1/cache/pets_b16",
+    "eval_dir": "runs/final-test-v1/pets_b16_147",
+    "checkpoints": {
+      "conditioned": "runs/pets-selector-budget-147-training-v1/full/seed_{seed}/conditioned.pt",
+      "image_only": "runs/pets-selector-budget-147-training-v1/full/seed_{seed}/image_only.pt"
+    }
+  },
+  "image_count": 3569,
+  "image_task_count": 13529,
+  "task_count": 68,
+  "table": [
+    {
+      "method": "full_model",
+      "accuracy": {
+        "mean": 0.9972673070330573,
+        "ci95": [
+          0.9959793092823294,
+          0.9983026525464146
+        ]
+      },
+      "margin": {
+        "mean": 0.13422051355571377,
+        "ci95": [
+          0.13316849941776926,
+          0.13535924208557412
+        ]
+      },
+      "repairs_vs_full": 0.0,
+      "new_errors_vs_full": 0.0
+    },
+    {
+      "method": "attention",
+      "accuracy": {
+        "mean": 0.9968261305624688,
+        "ci95": [
+          0.9956004405260728,
+          0.9978716995274229
+        ]
+      },
+      "margin": {
+        "mean": 0.12993749829622028,
+        "ci95": [
+          0.12888265456374623,
+          0.1310417939210095
+        ]
+      },
+      "repairs_vs_full": 0.0003032055518836748,
+      "new_errors_vs_full": 0.00074438202247191
+    },
+    {
+      "method": "random",
+      "accuracy": {
+        "mean": 0.9967702442594741,
+        "ci95": [
+          0.995652649113968,
+          0.9977705168366023
+        ]
+      },
+      "margin": {
+        "mean": 0.12901324888100502,
+        "ci95": [
+          0.12798367677690312,
+          0.13011670274327755
+        ]
+      },
+      "repairs_vs_full": 0.0005490616262721931,
+      "new_errors_vs_full": 0.0010461243998551252
+    },
+    {
+      "method": "conditioned",
+      "accuracy": {
+        "mean": 0.9972213167268226,
+        "ci95": [
+          0.9960852874412391,
+          0.9981783721733387
+        ]
+      },
+      "margin": {
+        "mean": 0.13493437980417838,
+        "ci95": [
+          0.13385126664421015,
+          0.136043335682078
+        ]
+      },
+      "repairs_vs_full": 0.00032771535580524347,
+      "new_errors_vs_full": 0.00037370566204009695
+    },
+    {
+      "method": "image_only",
+      "accuracy": {
+        "mean": 0.9970191796922334,
+        "ci95": [
+          0.9958471689276055,
+          0.9979977583328808
+        ]
+      },
+      "margin": {
+        "mean": 0.13466969507483975,
+        "ci95": [
+          0.13358532406164086,
+          0.1358087595414278
+        ]
+      },
+      "repairs_vs_full": 0.0002541859440405375,
+      "new_errors_vs_full": 0.0005023132848645076
+    }
+  ],
+  "contrasts": {
+    "conditioned_minus_image_only": {
+      "accuracy": {
+        "mean": 0.0002021370345891165,
+        "ci95": [
+          -6.113079027712149e-05,
+          0.00048261135731181054
+        ],
+        "bonferroni_family_ci95": [
+          -0.00014423665495671514,
+          0.0005940610304025299
+        ],
+        "individual_interval_level": 0.9928571428571429
+      },
+      "margin": {
+        "mean": 0.00026468472933876815,
+        "ci95": [
+          0.00013169705819920005,
+          0.00040328102599824703
+        ],
+        "bonferroni_family_ci95": [
+          8.306159256050359e-05,
+          0.00045689964261236857
+        ],
+        "individual_interval_level": 0.9928571428571429
+      }
+    }
+  },
+  "exchange_own_minus_swapped": {
+    "accuracy": {
+      "mean": -0.00010787243521396786,
+      "ci95": [
+        -0.000391134562728697,
+        0.00015855495987946317
+      ],
+      "bonferroni_family_ci95": [
+        -0.000481221632982006,
+        0.000245509456804902
+      ],
+      "individual_interval_level": 0.9928571428571429
+    },
+    "margin": {
+      "mean": 0.00026229132712449345,
+      "ci95": [
+        0.0002282508053769525,
+        0.00029754783458018225
+      ],
+      "bonferroni_family_ci95": [
+        0.00021248501922602647,
+        0.0003079054293324362
+      ],
+      "individual_interval_level": 0.9928571428571429
+    },
+    "selection_overlap": {
+      "mean": 0.9156350842560051,
+      "ci95": [
+        0.9151492128514855,
+        0.9161635304710336
+      ],
+      "bonferroni_family_ci95": [
+        0.9149593769309627,
+        0.916358959790599
+      ],
+      "individual_interval_level": 0.9928571428571429
+    }
+  },
+  "exchange_image_count": 3171,
+  "exchange_pair_count": 24440,
+  "h2": {
+    "difficulty_adjusted": {
+      "outcome": "exchange_loss",
+      "image_fixed_effects": false,
+      "image_count": 3171,
+      "pair_count": 24440,
+      "controls": [
+        "margin_min",
+        "margin_max",
+        "margin_min_squared",
+        "margin_min_times_max",
+        "margin_max_squared"
+      ],
+      "angle_unit": "10 degrees",
+      "angle_slope": 7.632251193077668e-05,
+      "ci95": [
+        4.4745353317067944e-05,
+        0.00010900792153263775
+      ],
+      "ci_familywise_budgets": [
+        3.410619459285383e-05,
+        0.00012099365871695575
+      ],
+      "family_size": 7,
+      "familywise_interval_level": 0.9928571428571429,
+      "angle_estimable_beyond_controls": true,
+      "positive_after_budget_adjustment": true,
+      "design_rank": 7,
+      "design_columns": 7,
+      "scaled_design_condition_number": 42.53382168122383,
+      "bootstrap_rank_deficient_replicates": 0,
+      "residual_angle_standard_deviation_units10degrees": 0.771636464241105,
+      "within_image_angle_varying_images": 2695,
+      "weighted_mse": 2.043227378459679e-06,
+      "difficulty_only_weighted_mse": 2.0466957913821134e-06,
+      "in_sample_incremental_r2": 0.0016893302246783635
+    },
+    "within_image": {
+      "outcome": "exchange_loss",
+      "image_fixed_effects": true,
+      "image_count": 3171,
+      "pair_count": 24440,
+      "controls": [
+        "margin_min",
+        "margin_max",
+        "margin_min_squared",
+        "margin_min_times_max",
+        "margin_max_squared"
+      ],
+      "angle_unit": "10 degrees",
+      "angle_slope": 0.00012015407952808753,
+      "ci95": [
+        9.210855254942709e-05,
+        0.0001483133491787201
+      ],
+      "ci_familywise_budgets": [
+        8.107172783231697e-05,
+        0.00015652566427265261
+      ],
+      "family_size": 7,
+      "familywise_interval_level": 0.9928571428571429,
+      "angle_estimable_beyond_controls": true,
+      "positive_after_budget_adjustment": true,
+      "design_rank": 6,
+      "design_columns": 6,
+      "scaled_design_condition_number": 23.235876497456083,
+      "bootstrap_rank_deficient_replicates": 0,
+      "residual_angle_standard_deviation_units10degrees": 0.6322684543569045,
+      "within_image_angle_varying_images": 2695,
+      "weighted_mse": 1.0651734326998514e-06,
+      "difficulty_only_weighted_mse": 1.0709448180124172e-06,
+      "in_sample_incremental_r2": 0.00537808017000473
+    }
+  },
+  "audit": {
+    "score_vs_full_feature_exchange_loss_max_abs_error": 2.7437797352246676e-07,
+    "image_only_feature_exchange_max_abs_difference": 0.0,
+    "geometry_identity_max_abs_error": 8.326672684688674e-17
+  }
+}

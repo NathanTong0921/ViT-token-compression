@@ -26,3 +26,14 @@ The seven settings and current weights are the scope of this test. Previous expl
 ## Execution
 
 First check the new evaluation path against saved development predictions. Then extract test prefixes, check full-token reconstruction against native CLIP, and run the fixed methods. Cache prefixes only on the server; retain predictions, selections, image features, summaries and figures locally and in GitHub. Optional extensions continue on development data after this confirmation.
+
+## Outcome: completed 2026-11-08
+
+All seven settings completed with the fixed weights and seeds. Pets binary tasks cover 3,569 of 3,669 test images (13,529 examples); Flowers covers all 6,149 images (24,596 examples). Development replay and full-token/native checks passed. Independent score reconstruction matched all reported method means, contrasts and budget interactions.
+
+- C−U accuracy is −0.036 / −0.013 / +0.148 / +0.152 pp for Pets49 / Pets98 / Flowers49 / Flowers98. Flowers98 has a positive four-setting-adjusted interval [+0.026, +0.287] pp; the other intervals span zero.
+- C−U margin favors U at Pets49, remains near zero at Pets98 and Flowers49, and favors C at Flowers98. Its direct 98−49 change is positive on both datasets; the corresponding accuracy interactions remain unresolved.
+- Own-task versus exchanged-task margin and both H2 slope analyses are positive in all seven settings. Exchange accuracy is positive in Pets49 and the three Flowers settings, with the other Pets accuracy effects unresolved.
+- U−PR test accuracy is +0.376 pp on Pets and +0.626 pp on Flowers; both two-dataset-adjusted intervals are positive. C also exceeds PR in both settings.
+
+The [result summary](../../results/final-test-v1/README.md) contains tables, figures and links to raw-score verification. Current core confirmation is complete. Hybrid, depth, semantic/identity and training-objective extensions retain their development-study scope. The six evidence archives total 5,536,287,748 bytes; backup verification is being completed separately.

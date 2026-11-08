@@ -1,0 +1,263 @@
+{
+  "setting": {
+    "id": "flowers_l14_128",
+    "dataset": "flowers",
+    "group": "flowers_l14",
+    "model": "ViT-L/14",
+    "prune_after": 12,
+    "keep_patch_tokens": 128,
+    "cache_dir": "runs/final-test-v1/cache/flowers_l14",
+    "eval_dir": "runs/final-test-v1/flowers_l14_128",
+    "checkpoints": {
+      "conditioned": "runs/flowers-vitl128-training-v1/full/seed_{seed}/conditioned.pt",
+      "image_only": "runs/flowers-vitl128-training-v1/full/seed_{seed}/image_only.pt"
+    }
+  },
+  "image_count": 6149,
+  "image_task_count": 24596,
+  "task_count": 204,
+  "table": [
+    {
+      "method": "full_model",
+      "accuracy": {
+        "mean": 0.9821831106733078,
+        "ci95": [
+          0.9792436155680121,
+          0.9848978073362613
+        ]
+      },
+      "margin": {
+        "mean": 0.12413747164514766,
+        "ci95": [
+          0.12291511600959688,
+          0.12532743312822833
+        ]
+      },
+      "repairs_vs_full": 0.0,
+      "new_errors_vs_full": 0.0
+    },
+    {
+      "method": "attention",
+      "accuracy": {
+        "mean": 0.9809753101405433,
+        "ci95": [
+          0.9777867012888166,
+          0.9839898047787599
+        ]
+      },
+      "margin": {
+        "mean": 0.11417764080920548,
+        "ci95": [
+          0.11302574643894951,
+          0.11532340360904253
+        ]
+      },
+      "repairs_vs_full": 0.0029214927532504073,
+      "new_errors_vs_full": 0.004129293286015497
+    },
+    {
+      "method": "random",
+      "accuracy": {
+        "mean": 0.9805799800472932,
+        "ci95": [
+          0.9777336731266469,
+          0.9832921495795318
+        ]
+      },
+      "margin": {
+        "mean": 0.11500167442035562,
+        "ci95": [
+          0.1138625610212735,
+          0.11612262380896372
+        ]
+      },
+      "repairs_vs_full": 0.002503241100552061,
+      "new_errors_vs_full": 0.004106371726566673
+    },
+    {
+      "method": "conditioned",
+      "accuracy": {
+        "mean": 0.9838423153009388,
+        "ci95": [
+          0.981010510106834,
+          0.9864135992631463
+        ]
+      },
+      "margin": {
+        "mean": 0.12428454317721561,
+        "ci95": [
+          0.12306654138186973,
+          0.125436016889307
+        ]
+      },
+      "repairs_vs_full": 0.003937587385868396,
+      "new_errors_vs_full": 0.0022783827582381305
+    },
+    {
+      "method": "image_only",
+      "accuracy": {
+        "mean": 0.9824203103402275,
+        "ci95": [
+          0.9794982372206451,
+          0.9852459800822213
+        ]
+      },
+      "margin": {
+        "mean": 0.12411703471321629,
+        "ci95": [
+          0.12288688586264239,
+          0.12528819891827167
+        ]
+      },
+      "repairs_vs_full": 0.002835109178275279,
+      "new_errors_vs_full": 0.0025979095113561747
+    }
+  ],
+  "contrasts": {
+    "conditioned_minus_image_only": {
+      "accuracy": {
+        "mean": 0.0014220049607111612,
+        "ci95": [
+          0.00040881152766908803,
+          0.0023635008412778613
+        ],
+        "bonferroni_family_ci95": [
+          -5.72522415110094e-06,
+          0.0027053884625145024
+        ],
+        "individual_interval_level": 0.9928571428571429
+      },
+      "margin": {
+        "mean": 0.00016750846399932637,
+        "ci95": [
+          -2.674160392333794e-05,
+          0.00036160264112480156
+        ],
+        "bonferroni_family_ci95": [
+          -9.588810628162501e-05,
+          0.00042328450485543497
+        ],
+        "individual_interval_level": 0.9928571428571429
+      }
+    }
+  },
+  "exchange_own_minus_swapped": {
+    "accuracy": {
+      "mean": 0.0010706347915650238,
+      "ci95": [
+        0.000618777217614427,
+        0.0015179749191377098
+      ],
+      "bonferroni_family_ci95": [
+        0.00042389780761873796,
+        0.0017385876397504312
+      ],
+      "individual_interval_level": 0.9928571428571429
+    },
+    "margin": {
+      "mean": 0.000928232110720184,
+      "ci95": [
+        0.000881009029536362,
+        0.0009771579068002824
+      ],
+      "bonferroni_family_ci95": [
+        0.000867916852047446,
+        0.0009930749926765421
+      ],
+      "individual_interval_level": 0.9928571428571429
+    },
+    "selection_overlap": {
+      "mean": 0.7656631865389143,
+      "ci95": [
+        0.7649801080601413,
+        0.7662940938059052
+      ],
+      "bonferroni_family_ci95": [
+        0.7646694393401315,
+        0.7664585822970669
+      ],
+      "individual_interval_level": 0.9928571428571429
+    }
+  },
+  "exchange_image_count": 6149,
+  "exchange_pair_count": 36894,
+  "h2": {
+    "difficulty_adjusted": {
+      "outcome": "exchange_loss",
+      "image_fixed_effects": false,
+      "image_count": 6149,
+      "pair_count": 36894,
+      "controls": [
+        "margin_min",
+        "margin_max",
+        "margin_min_squared",
+        "margin_min_times_max",
+        "margin_max_squared"
+      ],
+      "angle_unit": "10 degrees",
+      "angle_slope": 0.0002206820942968609,
+      "ci95": [
+        0.00015405679937772573,
+        0.000287111379145074
+      ],
+      "ci_familywise_budgets": [
+        0.00012531695866389834,
+        0.0003111381778544492
+      ],
+      "family_size": 7,
+      "familywise_interval_level": 0.9928571428571429,
+      "angle_estimable_beyond_controls": true,
+      "positive_after_budget_adjustment": true,
+      "design_rank": 7,
+      "design_columns": 7,
+      "scaled_design_condition_number": 37.03915018853304,
+      "bootstrap_rank_deficient_replicates": 0,
+      "residual_angle_standard_deviation_units10degrees": 0.5487902902747869,
+      "within_image_angle_varying_images": 6149,
+      "weighted_mse": 1.0455607069212376e-05,
+      "difficulty_only_weighted_mse": 1.0470274263039782e-05,
+      "in_sample_incremental_r2": 0.0013955405391337524
+    },
+    "within_image": {
+      "outcome": "exchange_loss",
+      "image_fixed_effects": true,
+      "image_count": 6149,
+      "pair_count": 36894,
+      "controls": [
+        "margin_min",
+        "margin_max",
+        "margin_min_squared",
+        "margin_min_times_max",
+        "margin_max_squared"
+      ],
+      "angle_unit": "10 degrees",
+      "angle_slope": 0.00026241689479253793,
+      "ci95": [
+        0.00018240577474898286,
+        0.0003422639342763802
+      ],
+      "ci_familywise_budgets": [
+        0.00014793801391436683,
+        0.0003643822597636896
+      ],
+      "family_size": 7,
+      "familywise_interval_level": 0.9928571428571429,
+      "angle_estimable_beyond_controls": true,
+      "positive_after_budget_adjustment": true,
+      "design_rank": 6,
+      "design_columns": 6,
+      "scaled_design_condition_number": 20.005895334679444,
+      "bootstrap_rank_deficient_replicates": 0,
+      "residual_angle_standard_deviation_units10degrees": 0.38760078208111376,
+      "within_image_angle_varying_images": 6149,
+      "weighted_mse": 6.8486489109118e-06,
+      "difficulty_only_weighted_mse": 6.858994443989632e-06,
+      "in_sample_incremental_r2": 0.001501351922710816
+    }
+  },
+  "audit": {
+    "score_vs_full_feature_exchange_loss_max_abs_error": 2.931424821443068e-07,
+    "image_only_feature_exchange_max_abs_difference": 0.0,
+    "geometry_identity_max_abs_error": 8.803721640582296e-17
+  }
+}

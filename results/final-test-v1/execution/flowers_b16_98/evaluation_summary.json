@@ -1,0 +1,224 @@
+{
+  "setting": {
+    "id": "flowers_b16_98",
+    "dataset": "flowers",
+    "group": "flowers_b16",
+    "model": "ViT-B/16",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "cache_dir": "runs/final-test-v1/cache/flowers_b16",
+    "eval_dir": "runs/final-test-v1/flowers_b16_98",
+    "checkpoints": {
+      "conditioned": "runs/flowers-selector-budget-98-training-v1/full/seed_{seed}/conditioned.pt",
+      "image_only": "runs/flowers-selector-budget-98-training-v1/full/seed_{seed}/image_only.pt",
+      "image_only_wide": "runs/flowers-selector-ablations-98-training-v1/full/seed_{seed}/image_only_wide.pt",
+      "patch_ranking": "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl/seed_{seed}/model.pt"
+    }
+  },
+  "image_split": "test",
+  "task_split": "test",
+  "image_count": 6149,
+  "evaluated_image_count": 6149,
+  "task_count": 204,
+  "example_count": 24596,
+  "runs": [
+    {
+      "method": "full_model",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.0,
+      "suffix_seconds": 0.0,
+      "method_wall_seconds": 2.7355955010280013,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 0
+    },
+    {
+      "method": "attention",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.052061147056519985,
+      "suffix_seconds": 1.1263272275682539,
+      "method_wall_seconds": 5.479465184966102,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "random",
+      "seed": 2055,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.051553933415561914,
+      "suffix_seconds": 1.1238482391927391,
+      "method_wall_seconds": 5.363822675077245,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "random",
+      "seed": 2056,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.0507762145716697,
+      "suffix_seconds": 1.1226363943424076,
+      "method_wall_seconds": 5.316015479853377,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "random",
+      "seed": 2057,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.05122364405542612,
+      "suffix_seconds": 1.124526619212702,
+      "method_wall_seconds": 5.346000907942653,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.6531420194078237,
+      "suffix_seconds": 4.437355005880818,
+      "method_wall_seconds": 11.02321412297897,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 24596
+    },
+    {
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.6553215065505356,
+      "suffix_seconds": 4.432162915123627,
+      "method_wall_seconds": 11.062920798081905,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 24596
+    },
+    {
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.6517854502890259,
+      "suffix_seconds": 4.424950434593484,
+      "method_wall_seconds": 11.042819521855563,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 24596
+    },
+    {
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.16615259903483093,
+      "suffix_seconds": 1.1175901992246509,
+      "method_wall_seconds": 5.597969963913783,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.1648940604645759,
+      "suffix_seconds": 1.1173924547620118,
+      "method_wall_seconds": 5.583336638985202,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.16906874207779765,
+      "suffix_seconds": 1.1169448061846197,
+      "method_wall_seconds": 6.170957577880472,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only_wide",
+      "seed": 2041,
+      "checkpoint": "runs/flowers-selector-ablations-98-training-v1/full/seed_2041/image_only_wide.pt",
+      "parameter_count": 347399,
+      "selector_seconds": 0.1811951131094247,
+      "suffix_seconds": 1.1178662071470171,
+      "method_wall_seconds": 5.66150782792829,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only_wide",
+      "seed": 2042,
+      "checkpoint": "runs/flowers-selector-ablations-98-training-v1/full/seed_2042/image_only_wide.pt",
+      "parameter_count": 347399,
+      "selector_seconds": 0.17316894908435643,
+      "suffix_seconds": 1.118417986901477,
+      "method_wall_seconds": 5.6013541670981795,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "image_only_wide",
+      "seed": 2043,
+      "checkpoint": "runs/flowers-selector-ablations-98-training-v1/full/seed_2043/image_only_wide.pt",
+      "parameter_count": 347399,
+      "selector_seconds": 0.17637629271484911,
+      "suffix_seconds": 1.1183235268108547,
+      "method_wall_seconds": 5.522860343102366,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "patch_ranking",
+      "seed": 2041,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl/seed_2041/model.pt",
+      "parameter_count": 46246,
+      "selector_seconds": 0.117919210344553,
+      "suffix_seconds": 1.1198399905115366,
+      "method_wall_seconds": 5.359996407991275,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "patch_ranking",
+      "seed": 2042,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl/seed_2042/model.pt",
+      "parameter_count": 46246,
+      "selector_seconds": 0.10808732220903039,
+      "suffix_seconds": 1.1208789192605764,
+      "method_wall_seconds": 5.314774455036968,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    },
+    {
+      "method": "patch_ranking",
+      "seed": 2043,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl/seed_2043/model.pt",
+      "parameter_count": 46246,
+      "selector_seconds": 0.11271386779844761,
+      "suffix_seconds": 1.1192884128540754,
+      "method_wall_seconds": 5.284668199950829,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 6149
+    }
+  ],
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "batch_size": 64,
+  "aggregation": "Equal candidate tasks and class sides; average trained seeds.",
+  "code_commit": "385a5d09344456b27f2024d0a371af301c718f95",
+  "total_wall_seconds": 111.28905405802652,
+  "cost_scope": "Cached-prefix evaluation and output; not deployment latency.",
+  "peak_gpu_bytes": 607041024
+}

@@ -1,0 +1,224 @@
+{
+  "setting": {
+    "id": "pets_b16_98",
+    "dataset": "pets",
+    "group": "pets_b16",
+    "model": "ViT-B/16",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "cache_dir": "runs/final-test-v1/cache/pets_b16",
+    "eval_dir": "runs/final-test-v1/pets_b16_98",
+    "checkpoints": {
+      "conditioned": "runs/pets-selector-budget-98-training-v1/full/seed_{seed}/conditioned.pt",
+      "image_only": "runs/pets-selector-budget-98-training-v1/full/seed_{seed}/image_only.pt",
+      "image_only_wide": "runs/pets-selector-ablations-98-training-v1/full/seed_{seed}/image_only_wide.pt",
+      "patch_ranking": "runs/patch-ranking-checkpoints-v1/pets/training/best_val_kl/seed_{seed}/model.pt"
+    }
+  },
+  "image_split": "test",
+  "task_split": "test",
+  "image_count": 3669,
+  "evaluated_image_count": 3569,
+  "task_count": 68,
+  "example_count": 13529,
+  "runs": [
+    {
+      "method": "full_model",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.0,
+      "suffix_seconds": 0.0,
+      "method_wall_seconds": 1.2986565260216594,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 0
+    },
+    {
+      "method": "attention",
+      "seed": -1,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.02945815329439938,
+      "suffix_seconds": 0.6775378349702805,
+      "method_wall_seconds": 2.884050749009475,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "random",
+      "seed": 2055,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.03028357378207147,
+      "suffix_seconds": 0.6807756416965276,
+      "method_wall_seconds": 2.8187103709205985,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "random",
+      "seed": 2056,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.03137202956713736,
+      "suffix_seconds": 0.6800381215289235,
+      "method_wall_seconds": 2.8665635539218783,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "random",
+      "seed": 2057,
+      "checkpoint": null,
+      "parameter_count": 0,
+      "selector_seconds": 0.030554899014532566,
+      "suffix_seconds": 0.6799493171274662,
+      "method_wall_seconds": 2.821636541048065,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "conditioned",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2041/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.3615519725717604,
+      "suffix_seconds": 2.4753454083111137,
+      "method_wall_seconds": 5.831323137972504,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 13529
+    },
+    {
+      "method": "conditioned",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2042/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.36557363835163414,
+      "suffix_seconds": 2.4795709317550063,
+      "method_wall_seconds": 5.918988768011332,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 13529
+    },
+    {
+      "method": "conditioned",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2043/conditioned.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.3655538554303348,
+      "suffix_seconds": 2.4809547690674663,
+      "method_wall_seconds": 6.021467308048159,
+      "unique_image_reuse": false,
+      "logical_suffix_examples": 13529
+    },
+    {
+      "method": "image_only",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2041/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.10048231994733214,
+      "suffix_seconds": 0.6787690748460591,
+      "method_wall_seconds": 2.9169033728539944,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "image_only",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2042/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.10169672849588096,
+      "suffix_seconds": 0.6799113121815026,
+      "method_wall_seconds": 3.109014059184119,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "image_only",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-budget-98-training-v1/full/seed_2043/image_only.pt",
+      "parameter_count": 348033,
+      "selector_seconds": 0.10008758958429098,
+      "suffix_seconds": 0.6792483602184802,
+      "method_wall_seconds": 3.086937899934128,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "image_only_wide",
+      "seed": 2041,
+      "checkpoint": "runs/pets-selector-ablations-98-training-v1/full/seed_2041/image_only_wide.pt",
+      "parameter_count": 347399,
+      "selector_seconds": 0.10410927701741457,
+      "suffix_seconds": 0.6814087952952832,
+      "method_wall_seconds": 2.959696632111445,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "image_only_wide",
+      "seed": 2042,
+      "checkpoint": "runs/pets-selector-ablations-98-training-v1/full/seed_2042/image_only_wide.pt",
+      "parameter_count": 347399,
+      "selector_seconds": 0.10275834891945124,
+      "suffix_seconds": 0.6797296705190092,
+      "method_wall_seconds": 3.877286205999553,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "image_only_wide",
+      "seed": 2043,
+      "checkpoint": "runs/pets-selector-ablations-98-training-v1/full/seed_2043/image_only_wide.pt",
+      "parameter_count": 347399,
+      "selector_seconds": 0.10178912291303277,
+      "suffix_seconds": 0.6797603860031813,
+      "method_wall_seconds": 3.001698257867247,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "patch_ranking",
+      "seed": 2041,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/pets/training/best_val_kl/seed_2041/model.pt",
+      "parameter_count": 46246,
+      "selector_seconds": 0.06947145331650972,
+      "suffix_seconds": 0.6783927665092051,
+      "method_wall_seconds": 2.835468078032136,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "patch_ranking",
+      "seed": 2042,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/pets/training/best_val_kl/seed_2042/model.pt",
+      "parameter_count": 46246,
+      "selector_seconds": 0.06855431594885886,
+      "suffix_seconds": 0.6783839431591332,
+      "method_wall_seconds": 2.827409964054823,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    },
+    {
+      "method": "patch_ranking",
+      "seed": 2043,
+      "checkpoint": "runs/patch-ranking-checkpoints-v1/pets/training/best_val_kl/seed_2043/model.pt",
+      "parameter_count": 46246,
+      "selector_seconds": 0.06448945892043412,
+      "suffix_seconds": 0.6804228038527071,
+      "method_wall_seconds": 2.8315122711937875,
+      "unique_image_reuse": true,
+      "logical_suffix_examples": 3669
+    }
+  ],
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "batch_size": 64,
+  "aggregation": "Equal candidate tasks and class sides; average trained seeds.",
+  "code_commit": "385a5d09344456b27f2024d0a371af301c718f95",
+  "total_wall_seconds": 61.074850213946775,
+  "cost_scope": "Cached-prefix evaluation and output; not deployment latency.",
+  "peak_gpu_bytes": 609490944
+}
