@@ -32,3 +32,9 @@ Retain all three seeds and paired image-bootstrap intervals. Save per-example sc
 ## Report scope
 
 The preceding content-benefit prediction experiment remains archived as a research record. Following the user's preference, it is not included in the current report evidence plan. This direct-training study addresses the original H3 learning question and the supervision limitation shared by the earlier KL/ranking/set-target experiments.
+
+## Implementation and initial run
+
+`run_direct_classification.py` trains and resumes the four continuations per seed, saving the Adam state at each checkpoint. Eleven local tests cover the gate, classifier loss, paired analysis, and identical interrupted/uninterrupted updates. On real CLIP, hard-policy and native-gather normalized features agree within 4.1e-7 across C/U, random masks, and all-token selection; gradients reach selector scores while the backbone remains frozen.
+
+The 20-step A6000 smoke run measured 0.144 seconds per update for C and 0.137 for U, with about 4.1 GB of peak allocated GPU memory. This projects roughly 17 minutes for six 1,200-step direct continuations, before evaluation and KL controls. The measured full-run cost will be recorded with the results.

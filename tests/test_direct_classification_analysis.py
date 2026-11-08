@@ -7,6 +7,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from analyze_direct_classification import (
     METHODS, CONTRASTS, reconstruct_outcomes, contrast_values, image_contributions, summarize,
+    error_transitions,
 )
 
 
@@ -44,6 +45,18 @@ class DirectClassificationAnalysisTests(unittest.TestCase):
         np.testing.assert_allclose(sums.sum(axis=0), np.einsum("n,smnq->mq", w, x)/2)
         result, per_seed, _, _ = summarize(x, w, ids, ["first", "second"], replicates=50)
         np.testing.assert_allclose(result["first"]["raw_gap"]["mean"], per_seed[:, 0, 1].mean())
+
+    def test_error_rescue_minus_new_errors_recovers_accuracy_change(self):
+        x = np.zeros((2, 6, 4, 4))
+        x[:, METHODS.index("direct_U"), :, 0] = [[1, 0, 1, 0], [0, 0, 1, 1]]
+        x[:, METHODS.index("direct_C"), :, 0] = [[0, 1, 1, 1], [1, 0, 0, 1]]
+        weights = np.asarray([.1, .2, .3, .4])
+        result = error_transitions(x, weights, [2041, 2042])["direct_C_vs_direct_U"]
+        np.testing.assert_allclose([r["corrected_error_rate"] for r in result["per_seed"]], [.6, .1])
+        np.testing.assert_allclose([r["introduced_error_rate"] for r in result["per_seed"]], [.1, .3])
+        actual = np.mean((x[:, METHODS.index("direct_C"), :, 0] -
+                          x[:, METHODS.index("direct_U"), :, 0]) @ weights)
+        self.assertAlmostEqual(result["seed_mean"]["net_accuracy_change"], actual)
 
 
 if __name__ == "__main__":

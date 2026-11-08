@@ -25,6 +25,13 @@ CONTRASTS = {
     "kl_C_minus_initial_C": {"kl_C": 1, "initial_C": -1},
     "kl_U_minus_initial_U": {"kl_U": 1, "initial_U": -1},
 }
+TRANSITIONS = {
+    "direct_C_vs_direct_U": ("direct_U", "direct_C"),
+    "direct_C_vs_initial_C": ("initial_C", "direct_C"),
+    "direct_U_vs_initial_U": ("initial_U", "direct_U"),
+    "direct_C_vs_kl_C": ("kl_C", "direct_C"),
+    "direct_U_vs_kl_U": ("kl_U", "direct_U"),
+}
 
 
 def reconstruct_outcomes(scores, labels, pairs, text_features, logit_scale):
@@ -53,6 +60,32 @@ def contrast_values(outcomes, methods=METHODS):
                      for formula in CONTRASTS.values()], axis=1)
 
 
+def error_transitions(outcomes, weights, seeds, methods=METHODS):
+    """Decompose accuracy changes into corrected errors and new errors per seed."""
+    weights = np.asarray(weights, dtype=float)
+    weights = weights / weights.sum()
+    index = {name: i for i, name in enumerate(methods)}
+    result = {}
+    for name, (source, target) in TRANSITIONS.items():
+        before = outcomes[:, index[source], :, 0].astype(bool)
+        after = outcomes[:, index[target], :, 0].astype(bool)
+        corrected, introduced = ~before & after, before & ~after
+        records = []
+        for si, seed in enumerate(seeds):
+            rescued = float(weights @ corrected[si])
+            new_errors = float(weights @ introduced[si])
+            records.append(dict(seed=int(seed), corrected_error_rate=rescued,
+                                introduced_error_rate=new_errors,
+                                net_accuracy_change=rescued-new_errors,
+                                corrected_example_count=int(corrected[si].sum()),
+                                introduced_example_count=int(introduced[si].sum())))
+        result[name] = dict(source=source, target=target, per_seed=records,
+                           seed_mean={key: float(np.mean([r[key] for r in records]))
+                                      for key in ("corrected_error_rate", "introduced_error_rate",
+                                                  "net_accuracy_change")})
+    return result
+
+
 def image_contributions(values, weights, image_ids):
     """Average fixed trained seeds, then aggregate weighted repeated tasks by image."""
     unique, inverse = np.unique(image_ids, return_inverse=True)
@@ -62,7 +95,7 @@ def image_contributions(values, weights, image_ids):
     return unique, per_image, totals
 
 
-def summarize(values, weights, image_ids, names, replicates=2000, bootstrap_seed=2703,
+def summarize(values, weights, image_ids, names, replicates=2000, bootstrap_seed=2717,
               primary=()):
     """Resample image clusters, retaining the original task/class weighting."""
     weights = np.asarray(weights, dtype=float)
@@ -173,6 +206,9 @@ def main(args):
     write_csv(args.output / "per_seed.csv", per_seed)
     (args.output / "outcome_reconstruction.json").write_text(json.dumps(dict(
         passed=True, comparisons=data["checks"]), indent=2)+"\n")
+    (args.output / "error_transitions.json").write_text(json.dumps(dict(
+        unit="Task/class-weighted fraction of image-task decisions; means over fixed trained seeds.",
+        transitions=error_transitions(data["outcomes"], weights, args.seeds)), indent=2)+"\n")
     np.savez_compressed(args.output / "paired_outcomes.npz", outcomes=data["outcomes"],
         methods=METHODS, contrasts=tuple(CONTRASTS), metrics=METRICS, seeds=args.seeds,
         weights=weights, image_ids=data["image_ids"], task_ids=data["task_ids"],
@@ -187,5 +223,5 @@ if __name__ == "__main__":
     parser.add_argument("--step", type=int, default=1200)
     parser.add_argument("--seeds", type=int, nargs="+", default=list(SEEDS))
     parser.add_argument("--replicates", type=int, default=2000)
-    parser.add_argument("--bootstrap-seed", type=int, default=2703)
+    parser.add_argument("--bootstrap-seed", type=int, default=2717)
     main(parser.parse_args())

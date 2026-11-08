@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "arm": "conditioned",
+      "normalized_feature_max_error": 3.203749656677246e-07,
+      "selector_gradient_norm": 0.920590453757949,
+      "backbone_frozen": true,
+      "benchmark_steps": 20,
+      "seconds_per_step": 0.1436341598047875,
+      "max_gpu_allocated_bytes": 4079051776
+    },
+    {
+      "arm": "image_only_wide",
+      "normalized_feature_max_error": 3.5762786865234375e-07,
+      "selector_gradient_norm": 0.27421210487961584,
+      "backbone_frozen": true,
+      "benchmark_steps": 20,
+      "seconds_per_step": 0.1366292278515175,
+      "max_gpu_allocated_bytes": 4060020224
+    }
+  ],
+  "config": {
+    "experiment": "direct-classification-v1",
+    "dataset": "flowers",
+    "base_config": "configs/flowers_selector_ablations_49.json",
+    "cache_dir": "runs/flowers-selector-budget-49-supervision-v1",
+    "conditioned_dir": "runs/flowers-selector-budget-49-training-v1",
+    "shared_dir": "runs/flowers-selector-ablations-49-training-v1",
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "device": "cuda:6",
+    "prune_after": 6,
+    "keep_patch_tokens": 49,
+    "training_seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "training_steps": 1200,
+    "checkpoint_interval": 200,
+    "log_interval": 100,
+    "batch_size": 32,
+    "eval_batch_size": 32,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "gate_temperature": 0.5,
+    "teacher_temperature": 1.0,
+    "dtype": "float32",
+    "bootstrap_seed": 2717,
+    "bootstrap_replicates": 2000
+  },
+  "smoke_weights_saved": false,
+  "estimated_six_direct_training_seconds": 1008.948195562698
+}
