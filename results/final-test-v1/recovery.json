@@ -1,0 +1,51 @@
+{
+  "method": "Remote asset size/digest verification plus HTTP byte-range recovery of selected members; archives were not downloaded again in full.",
+  "archives": [
+    {
+      "archive": "final-test-v1-common-artifacts.zip",
+      "members": 47,
+      "sample_member": "runs/final-test-v1/pets_l14_status.json",
+      "downloaded_bytes": 4594,
+      "sample_matches_local": true
+    },
+    {
+      "archive": "final-test-v1-flowers_b16-part02-artifacts.zip",
+      "members": 7,
+      "sample_member": "runs/final-test-v1/flowers_b16_status.json",
+      "downloaded_bytes": 1074,
+      "sample_matches_local": true
+    },
+    {
+      "archive": "final-test-v1-pets_l14-artifacts.zip",
+      "members": 30,
+      "sample_member": "runs/final-test-v1/analysis/pets_l14_128/paired_outcomes.npz",
+      "downloaded_bytes": 679185,
+      "sample_matches_local": true,
+      "classification_table_reconstructed": true
+    },
+    {
+      "archive": "final-test-v1-flowers_l14-artifacts.zip",
+      "members": 30,
+      "sample_member": "runs/final-test-v1/analysis/flowers_l14_128/paired_outcomes.npz",
+      "downloaded_bytes": 1224567,
+      "sample_matches_local": true,
+      "classification_table_reconstructed": true
+    },
+    {
+      "archive": "final-test-v1-pets_b16-artifacts.zip",
+      "members": 83,
+      "sample_member": "runs/final-test-v1/analysis/pets_b16_147/paired_outcomes.npz",
+      "downloaded_bytes": 688024,
+      "sample_matches_local": true,
+      "classification_table_reconstructed": true
+    },
+    {
+      "archive": "final-test-v1-flowers_b16-part01-artifacts.zip",
+      "members": 54,
+      "sample_member": "runs/final-test-v1/analysis/flowers_b16_49/paired_outcomes.npz",
+      "downloaded_bytes": 1582535,
+      "sample_matches_local": true,
+      "classification_table_reconstructed": true
+    }
+  ]
+}
