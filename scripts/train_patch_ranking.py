@@ -90,6 +90,7 @@ def train(config, output):
     batch_size = config["batch_size"]
     keep_count = config.get("keep_patch_tokens", 98)
     epochs = config["epochs"]
+    select_best = config.get("select_best_val", False)
     data = {split: load_split(Path(config["feature_cache_dir"]), Path(config["preservation_dir"]),
                              split, device, batch_size) for split in ("train", "val")}
     assert set(data["train"]["image_ids"]).isdisjoint(data["val"]["image_ids"])
@@ -106,6 +107,8 @@ def train(config, output):
         "environment": {"torch": torch.__version__, "timm": timm.__version__},
         "setup_seconds": setup_seconds, "seeds": {},
     }
+    if select_best:
+        summary["checkpoint_selection"] = f"Minimum validation KL over epochs 1..{epochs}; earliest epoch breaks ties. Final checkpoint also retained."
     all_history = []
     for seed in config["seeds"]:
         seed_start = time.perf_counter()
@@ -124,6 +127,8 @@ def train(config, output):
         diagnostic_seconds = 0.
         updates = 0
         history = []
+        best = None
+        best_state = None
         for epoch in range(1, epochs + 1):
             model.train()
             order = torch.randperm(len(data["train"]["tokens"]), generator=generator).to(device)
@@ -149,6 +154,10 @@ def train(config, output):
             training_seconds += epoch_seconds
             diagnostic_start = time.perf_counter()
             metrics = {split: evaluate(model, v, batch_size, keep_count) for split, v in data.items()}
+            if select_best and (best is None or metrics["val"]["kl"] < best["validation"]["kl"]):
+                best = {"epoch": epoch, "validation": metrics["val"]}
+                best_state = {name: value.detach().cpu().clone()
+                              for name, value in model.state_dict().items()}
             synchronize(device)
             diagnostic_seconds += time.perf_counter() - diagnostic_start
             row = {"seed": seed, "epoch": epoch, "updates": updates, "learning_rate": lr,
@@ -162,6 +171,19 @@ def train(config, output):
         np.savez_compressed(seed_dir / "predictions_val.npz", **predictions)
         torch.save({"model_state": model.cpu().state_dict(), "config": config, "seed": seed,
                     "epoch": epochs, "parameter_count": parameter_count}, seed_dir / "model.pt")
+        if select_best:
+            best_dir = output / "best_val_kl" / f"seed_{seed}"
+            best_dir.mkdir(parents=True, exist_ok=True)
+            torch.save({"model_state": best_state, "config": config, "seed": seed,
+                        "epoch": best["epoch"], "parameter_count": parameter_count,
+                        "selection_metric": "validation_kl"}, best_dir / "model.pt")
+            model.to(device).load_state_dict(best_state)
+            diagnostic_start = time.perf_counter()
+            restored_val, best_predictions = evaluate(
+                model, data["val"], batch_size, keep_count, save_scores=True)
+            np.testing.assert_allclose(restored_val["kl"], best["validation"]["kl"], atol=1e-7, rtol=0)
+            np.savez_compressed(best_dir / "predictions_val.npz", **best_predictions)
+            diagnostic_seconds += time.perf_counter() - diagnostic_start
         write_history(seed_dir / "training_history.csv", history)
         all_history.extend(history)
         summary["seeds"][str(seed)] = {"parameter_count": parameter_count, "updates": updates,
@@ -169,6 +191,8 @@ def train(config, output):
                                      "final_val": final_val, "training_seconds": training_seconds,
                                      "diagnostic_seconds": diagnostic_seconds,
                                      "total_seconds": time.perf_counter() - seed_start}
+        if select_best:
+            summary["seeds"][str(seed)]["best_val_kl"] = best
         (output / "training_summary.json").write_text(json.dumps(summary, indent=2) + "\n")
         write_history(output / "training_history.csv", all_history)
         print(json.dumps({"completed_seed": seed, **summary["seeds"][str(seed)]}), flush=True)
@@ -187,10 +211,13 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--epochs", type=int)
     parser.add_argument("--seeds", type=int, nargs="+")
+    parser.add_argument("--select-best-val", action="store_true")
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
     if args.epochs is not None:
         config["epochs"] = args.epochs
     if args.seeds is not None:
         config["seeds"] = args.seeds
+    if args.select_best_val:
+        config["select_best_val"] = True
     train(config, args.output)
