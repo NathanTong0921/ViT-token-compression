@@ -1,0 +1,62 @@
+{
+  "dataset": "pets",
+  "config": "configs/patch_ranking_pets98.json",
+  "steps": {
+    "train": {
+      "returncode": 0,
+      "seconds": 69.11083333496936,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/train_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_pets98.json",
+        "--output",
+        "runs/patch-ranking-checkpoints-v1/pets/training",
+        "--select-best-val"
+      ]
+    },
+    "eval_final": {
+      "returncode": 0,
+      "seconds": 10.133665102999657,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/evaluate_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_pets98.json",
+        "--models-dir",
+        "runs/patch-ranking-checkpoints-v1/pets/training",
+        "--output",
+        "runs/patch-ranking-checkpoints-v1/pets/eval_final"
+      ]
+    },
+    "eval_best": {
+      "returncode": 0,
+      "seconds": 10.315737864002585,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/evaluate_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_pets98.json",
+        "--models-dir",
+        "runs/patch-ranking-checkpoints-v1/pets/training/best_val_kl",
+        "--output",
+        "runs/patch-ranking-checkpoints-v1/pets/eval_best"
+      ]
+    },
+    "analyze": {
+      "returncode": 0,
+      "seconds": 5.993092043092474,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/analyze_patch_ranking_checkpoints.py",
+        "--config",
+        "configs/patch_ranking_pets98.json",
+        "--run-dir",
+        "runs/patch-ranking-checkpoints-v1/pets",
+        "--output",
+        "runs/patch-ranking-checkpoints-v1/pets/analysis"
+      ]
+    }
+  },
+  "active_stage": "complete"
+}

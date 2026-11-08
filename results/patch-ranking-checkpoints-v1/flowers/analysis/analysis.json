@@ -1,0 +1,697 @@
+{
+  "dataset": "flowers",
+  "budget": 98,
+  "prune_after": 6,
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "sources": {
+    "pr_best_val_kl": "runs/patch-ranking-checkpoints-v1/flowers/eval_best",
+    "pr_final": "runs/patch-ranking-checkpoints-v1/flowers/eval_final",
+    "pr_previous_final": "runs/patch-ranking-v1/flowers/evaluation"
+  },
+  "image_count": 1020,
+  "task_count": 204,
+  "image_task_count": 4080,
+  "table": [
+    {
+      "method": "pr_best_val_kl",
+      "accuracy": {
+        "mean": 0.9627450980392124,
+        "ci95": [
+          0.9547365196078399,
+          0.969771241830062
+        ]
+      },
+      "margin": {
+        "mean": 0.10126533928463793,
+        "ci95": [
+          0.09861827400992704,
+          0.10378848014352016
+        ]
+      },
+      "per_seed": [
+        {
+          "method": "pr_best_val_kl",
+          "seed": 2041,
+          "accuracy": 0.9629901960784281,
+          "margin": 0.10153151948056158,
+          "multiclass_accuracy": 0.6901960784313725,
+          "teacher_overlap_at_98": 0.6805622248899561
+        },
+        {
+          "method": "pr_best_val_kl",
+          "seed": 2042,
+          "accuracy": 0.9629901960784281,
+          "margin": 0.10143104817607125,
+          "multiclass_accuracy": 0.6852941176470588,
+          "teacher_overlap_at_98": 0.6733293317326932
+        },
+        {
+          "method": "pr_best_val_kl",
+          "seed": 2043,
+          "accuracy": 0.962254901960781,
+          "margin": 0.1008334501972808,
+          "multiclass_accuracy": 0.6813725490196079,
+          "teacher_overlap_at_98": 0.6798419367747099
+        }
+      ]
+    },
+    {
+      "method": "pr_final",
+      "accuracy": {
+        "mean": 0.9624999999999967,
+        "ci95": [
+          0.9544117647058791,
+          0.9696895424836568
+        ]
+      },
+      "margin": {
+        "mean": 0.10080252770609878,
+        "ci95": [
+          0.09819854084688766,
+          0.1032731116127633
+        ]
+      },
+      "per_seed": [
+        {
+          "method": "pr_final",
+          "seed": 2041,
+          "accuracy": 0.9600490196078398,
+          "margin": 0.10033374755508409,
+          "multiclass_accuracy": 0.6745098039215687,
+          "teacher_overlap_at_98": 0.6708783513405363
+        },
+        {
+          "method": "pr_final",
+          "seed": 2042,
+          "accuracy": 0.9642156862745065,
+          "margin": 0.10118183056227124,
+          "multiclass_accuracy": 0.6803921568627451,
+          "teacher_overlap_at_98": 0.6738295318127251
+        },
+        {
+          "method": "pr_final",
+          "seed": 2043,
+          "accuracy": 0.9632352941176437,
+          "margin": 0.10089200500094085,
+          "multiclass_accuracy": 0.6803921568627451,
+          "teacher_overlap_at_98": 0.6734093637454982
+        }
+      ]
+    },
+    {
+      "method": "pr_previous_final",
+      "accuracy": {
+        "mean": 0.9624999999999967,
+        "ci95": [
+          0.9544117647058791,
+          0.9696895424836568
+        ]
+      },
+      "margin": {
+        "mean": 0.10080252770609878,
+        "ci95": [
+          0.09819854084688766,
+          0.1032731116127633
+        ]
+      },
+      "per_seed": [
+        {
+          "method": "pr_previous_final",
+          "seed": 2041,
+          "accuracy": 0.9600490196078398,
+          "margin": 0.10033374755508409,
+          "multiclass_accuracy": 0.6745098039215687,
+          "teacher_overlap_at_98": 0.6708783513405363
+        },
+        {
+          "method": "pr_previous_final",
+          "seed": 2042,
+          "accuracy": 0.9642156862745065,
+          "margin": 0.10118183056227124,
+          "multiclass_accuracy": 0.6803921568627451,
+          "teacher_overlap_at_98": 0.6738295318127251
+        },
+        {
+          "method": "pr_previous_final",
+          "seed": 2043,
+          "accuracy": 0.9632352941176437,
+          "margin": 0.10089200500094085,
+          "multiclass_accuracy": 0.6803921568627451,
+          "teacher_overlap_at_98": 0.6734093637454982
+        }
+      ]
+    },
+    {
+      "method": "full_model",
+      "accuracy": {
+        "mean": 0.9674019607843104,
+        "ci95": [
+          0.9600490196078398,
+          0.9742647058823496
+        ]
+      },
+      "margin": {
+        "mean": 0.10996972411911271,
+        "ci95": [
+          0.10736998031349536,
+          0.11258081715772071
+        ]
+      },
+      "per_seed": [
+        {
+          "method": "full_model",
+          "seed": -1,
+          "accuracy": 0.9674019607843104,
+          "margin": 0.10996972411911278,
+          "multiclass_accuracy": 0.703921568627451,
+          "teacher_overlap_at_98": null
+        }
+      ]
+    },
+    {
+      "method": "image_only_wide",
+      "accuracy": {
+        "mean": 0.9691176470588202,
+        "ci95": [
+          0.9619281045751601,
+          0.9756535947712385
+        ]
+      },
+      "margin": {
+        "mean": 0.1061358279678672,
+        "ci95": [
+          0.10360401433134755,
+          0.10863444743254086
+        ]
+      },
+      "per_seed": [
+        {
+          "method": "image_only_wide",
+          "seed": 2041,
+          "accuracy": 0.97083333333333,
+          "margin": 0.10549490991503317,
+          "multiclass_accuracy": null,
+          "teacher_overlap_at_98": null
+        },
+        {
+          "method": "image_only_wide",
+          "seed": 2042,
+          "accuracy": 0.9688725490196045,
+          "margin": 0.10636402545736845,
+          "multiclass_accuracy": null,
+          "teacher_overlap_at_98": null
+        },
+        {
+          "method": "image_only_wide",
+          "seed": 2043,
+          "accuracy": 0.9676470588235261,
+          "margin": 0.10654854853119922,
+          "multiclass_accuracy": null,
+          "teacher_overlap_at_98": null
+        }
+      ]
+    },
+    {
+      "method": "conditioned",
+      "accuracy": {
+        "mean": 0.9711601307189509,
+        "ci95": [
+          0.9642953431372516,
+          0.9772896241830031
+        ]
+      },
+      "margin": {
+        "mean": 0.10739918718392705,
+        "ci95": [
+          0.10492853346982604,
+          0.1098865079234158
+        ]
+      },
+      "per_seed": [
+        {
+          "method": "conditioned",
+          "seed": 2041,
+          "accuracy": 0.971568627450977,
+          "margin": 0.10707892480595893,
+          "multiclass_accuracy": null,
+          "teacher_overlap_at_98": null
+        },
+        {
+          "method": "conditioned",
+          "seed": 2042,
+          "accuracy": 0.9698529411764673,
+          "margin": 0.10750647965929833,
+          "multiclass_accuracy": null,
+          "teacher_overlap_at_98": null
+        },
+        {
+          "method": "conditioned",
+          "seed": 2043,
+          "accuracy": 0.9720588235294084,
+          "margin": 0.10761215708652377,
+          "multiclass_accuracy": null,
+          "teacher_overlap_at_98": null
+        }
+      ]
+    }
+  ],
+  "primary_contrast": {
+    "accuracy": {
+      "mean": 0.00024509803921568627,
+      "ci95": [
+        -0.001552287581699346,
+        0.0019628267973856106
+      ],
+      "bonferroni_family_ci95": [
+        -0.0019607843137254897,
+        0.002205882352941177
+      ],
+      "individual_interval_level": 0.975
+    },
+    "margin": {
+      "mean": 0.00046281157853923354,
+      "ci95": [
+        0.00013029274497194113,
+        0.0008384000898224276
+      ],
+      "bonferroni_family_ci95": [
+        9.973250205866886e-05,
+        0.0008884914454163534
+      ],
+      "individual_interval_level": 0.975
+    }
+  },
+  "contrasts": {
+    "pr_best_val_kl_minus_pr_final": {
+      "accuracy": {
+        "mean": 0.00024509803921568627,
+        "ci95": [
+          -0.001552287581699346,
+          0.0019628267973856106
+        ],
+        "bonferroni_family_ci95": [
+          -0.0019607843137254897,
+          0.002205882352941177
+        ],
+        "individual_interval_level": 0.975
+      },
+      "margin": {
+        "mean": 0.00046281157853923354,
+        "ci95": [
+          0.00013029274497194113,
+          0.0008384000898224276
+        ],
+        "bonferroni_family_ci95": [
+          9.973250205866886e-05,
+          0.0008884914454163534
+        ],
+        "individual_interval_level": 0.975
+      }
+    },
+    "pr_best_val_kl_minus_pr_previous_final": {
+      "accuracy": {
+        "mean": 0.00024509803921568627,
+        "ci95": [
+          -0.001552287581699346,
+          0.0019628267973856106
+        ]
+      },
+      "margin": {
+        "mean": 0.00046281157853923354,
+        "ci95": [
+          0.00013029274497194113,
+          0.0008384000898224276
+        ]
+      }
+    },
+    "pr_best_val_kl_minus_image_only_wide": {
+      "accuracy": {
+        "mean": -0.006372549019607841,
+        "ci95": [
+          -0.009558823529411762,
+          -0.0032659313725490304
+        ]
+      },
+      "margin": {
+        "mean": -0.004870488683229157,
+        "ci95": [
+          -0.0054981222903043156,
+          -0.004235977710121417
+        ]
+      }
+    },
+    "pr_best_val_kl_minus_conditioned": {
+      "accuracy": {
+        "mean": -0.00841503267973856,
+        "ci95": [
+          -0.012011846405228753,
+          -0.004983660130718956
+        ]
+      },
+      "margin": {
+        "mean": -0.006133847899289081,
+        "ci95": [
+          -0.0067809570723448755,
+          -0.005489855098272953
+        ]
+      }
+    }
+  },
+  "checkpoint_selection": [
+    {
+      "dataset": "flowers",
+      "seed": 2041,
+      "selected_epoch": 12,
+      "final_epoch": 50,
+      "selected_val_kl": 0.27111874024073285,
+      "final_val_kl": 0.323028574737848,
+      "selected_overlap_at_98": 0.6805622175628063,
+      "final_overlap_at_98": 0.6708783542408663
+    },
+    {
+      "dataset": "flowers",
+      "seed": 2042,
+      "selected_epoch": 11,
+      "final_epoch": 50,
+      "selected_val_kl": 0.2719622022965375,
+      "final_val_kl": 0.30753689338179196,
+      "selected_overlap_at_98": 0.6733293308931239,
+      "final_overlap_at_98": 0.6738295237223307
+    },
+    {
+      "dataset": "flowers",
+      "seed": 2043,
+      "selected_epoch": 13,
+      "final_epoch": 50,
+      "selected_val_kl": 0.27203835587875513,
+      "final_val_kl": 0.3137416456259933,
+      "selected_overlap_at_98": 0.6798419466205672,
+      "final_overlap_at_98": 0.6734093609978171
+    }
+  ],
+  "replay_comparison": [
+    {
+      "seed": 2041,
+      "max_abs_predictor_score_difference": 0.0,
+      "max_abs_class_score_difference": 0.0,
+      "changed_selected_sets": 0,
+      "changed_binary_predictions": 0,
+      "max_abs_binary_margin_difference": 0.0,
+      "accuracy_difference": 0.0,
+      "margin_difference": 0.0
+    },
+    {
+      "seed": 2042,
+      "max_abs_predictor_score_difference": 0.0,
+      "max_abs_class_score_difference": 0.0,
+      "changed_selected_sets": 0,
+      "changed_binary_predictions": 0,
+      "max_abs_binary_margin_difference": 0.0,
+      "accuracy_difference": 0.0,
+      "margin_difference": 0.0
+    },
+    {
+      "seed": 2043,
+      "max_abs_predictor_score_difference": 0.0,
+      "max_abs_class_score_difference": 0.0,
+      "changed_selected_sets": 0,
+      "changed_binary_predictions": 0,
+      "max_abs_binary_margin_difference": 0.0,
+      "accuracy_difference": 0.0,
+      "margin_difference": 0.0
+    }
+  ],
+  "auxiliary": {
+    "image_count": 1020,
+    "aggregation": "Equal validation images.",
+    "methods": {
+      "pr_best_val_kl": {
+        "multiclass_accuracy": {
+          "mean": 0.6856209150326797,
+          "ci95": [
+            0.6581699346405229,
+            0.7140522875816993
+          ]
+        },
+        "teacher_overlap_at_98": {
+          "mean": 0.6779111644657864,
+          "ci95": [
+            0.6741359043617448,
+            0.6816062258236628
+          ]
+        }
+      },
+      "pr_final": {
+        "multiclass_accuracy": {
+          "mean": 0.6784313725490196,
+          "ci95": [
+            0.6509803921568627,
+            0.7058905228758169
+          ]
+        },
+        "teacher_overlap_at_98": {
+          "mean": 0.6727057489662531,
+          "ci95": [
+            0.6688807189542483,
+            0.6764177337601707
+          ]
+        }
+      },
+      "pr_previous_final": {
+        "multiclass_accuracy": {
+          "mean": 0.6784313725490196,
+          "ci95": [
+            0.6509803921568627,
+            0.7058905228758169
+          ]
+        },
+        "teacher_overlap_at_98": {
+          "mean": 0.6727057489662531,
+          "ci95": [
+            0.6688807189542483,
+            0.6764177337601707
+          ]
+        }
+      },
+      "full_model": {
+        "multiclass_accuracy": {
+          "mean": 0.7039215686274509,
+          "ci95": [
+            0.6754901960784314,
+            0.7313725490196079
+          ]
+        }
+      }
+    },
+    "best_minus_final": {
+      "multiclass_accuracy": {
+        "mean": 0.007189542483660131,
+        "ci95": [
+          -0.001633986928104574,
+          0.016021241830065324
+        ]
+      },
+      "teacher_overlap_at_98": {
+        "mean": 0.005205415499533144,
+        "ci95": [
+          0.0034011104441776688,
+          0.00697620714952648
+        ]
+      }
+    }
+  },
+  "training": {
+    "started_utc": "2026-11-08T07:20:09.268350+00:00",
+    "config": {
+      "model": "ViT-B/16",
+      "model_cache": "cache/clip",
+      "data_root": "data/raw/flowers102",
+      "manifest_dir": "data/splits/flowers-v1",
+      "prompt_template": "a photo of a {class_name}, a type of flower.",
+      "feature_cache_dir": "runs/flowers-features-v1",
+      "prune_after": 6,
+      "keep_patch_tokens": 98,
+      "identity_atol": 1e-06,
+      "dataset": "flowers",
+      "device": "cuda:0",
+      "preservation_dir": "runs/patch-ranking-v1/flowers/preservation",
+      "baseline_eval_dir": "runs/flowers-selector-budget-98-eval-v1",
+      "ablation_eval_dir": "runs/flowers-selector-ablations-98-eval-v1",
+      "window_size": 2,
+      "teacher_batch_size": 64,
+      "evaluation_batch_size": 64,
+      "batch_size": 64,
+      "seeds": [
+        2041,
+        2042,
+        2043
+      ],
+      "epochs": 50,
+      "learning_rate": 0.001,
+      "min_learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "drop_last": false,
+      "bootstrap_seed": 2411,
+      "bootstrap_replicates": 2000,
+      "upstream_commit": "2094b17188c4643d5f9e05720d618179efb3cba6",
+      "ranking_target": "official_bottom50_kl",
+      "teacher_windows": "paper_stride_one",
+      "select_best_val": true
+    },
+    "code_commit": "72f6c1e30a3b1c8aca21126f321ed7563dde6cdf",
+    "source": "https://github.com/CEWu/PatchRanking/blob/main/train_predictor.py",
+    "target": "Public KL target: equal logits for first 146 ranks; -5-0.1*rank for bottom 50.",
+    "architecture": "AdaptiveAvgPool1d(64), timm MixerBlock(64,197), Linear(64,1), CLS omitted from output.",
+    "input": "Frozen prefix channels pooled once in float32; all 197 token positions retained.",
+    "counts": {
+      "train": 1020,
+      "val": 1020
+    },
+    "environment": {
+      "torch": "2.6.0+cu124",
+      "timm": "1.0.20"
+    },
+    "setup_seconds": 0.5537230940535665,
+    "seeds": {
+      "2041": {
+        "parameter_count": 46246,
+        "updates": 800,
+        "initial": {
+          "train": {
+            "kl": 0.3070865846147724,
+            "overlap_at_98": 0.4999399746165556,
+            "overlap_at_100": 0.5100588144040575,
+            "deleted_50_overlap": 0.2556274460811241
+          },
+          "val": {
+            "kl": 0.3066034713212182,
+            "overlap_at_98": 0.5018907565696566,
+            "overlap_at_100": 0.5121176196079628,
+            "deleted_50_overlap": 0.25699999192181755
+          }
+        },
+        "final_train": {
+          "kl": 0.20401262751981325,
+          "overlap_at_98": 0.7222488926906212,
+          "overlap_at_100": 0.7295588100657744,
+          "deleted_50_overlap": 0.6538627287920784
+        },
+        "final_val": {
+          "kl": 0.323028574737848,
+          "overlap_at_98": 0.6708783542408663,
+          "overlap_at_100": 0.6778725268794041,
+          "deleted_50_overlap": 0.47494116203457704
+        },
+        "training_seconds": 3.929807523963973,
+        "diagnostic_seconds": 2.8538220648188144,
+        "total_seconds": 7.297801918815821,
+        "best_val_kl": {
+          "epoch": 12,
+          "validation": {
+            "kl": 0.27111874024073285,
+            "overlap_at_98": 0.6805622175628063,
+            "overlap_at_100": 0.6865196003633387,
+            "deleted_50_overlap": 0.48370586096071727
+          }
+        }
+      },
+      "2042": {
+        "parameter_count": 46246,
+        "updates": 800,
+        "initial": {
+          "train": {
+            "kl": 0.3058463631891737,
+            "overlap_at_98": 0.5034413730396944,
+            "overlap_at_100": 0.5137745053160424,
+            "deleted_50_overlap": 0.26209803001553406
+          },
+          "val": {
+            "kl": 0.30581063195770863,
+            "overlap_at_98": 0.5033213260127049,
+            "overlap_at_100": 0.5133137123257506,
+            "deleted_50_overlap": 0.26211764017740885
+          }
+        },
+        "final_train": {
+          "kl": 0.2085107363322202,
+          "overlap_at_98": 0.7241396511302275,
+          "overlap_at_100": 0.7314019408880496,
+          "deleted_50_overlap": 0.6489411559759402
+        },
+        "final_val": {
+          "kl": 0.30753689338179196,
+          "overlap_at_98": 0.6738295237223307,
+          "overlap_at_100": 0.6812842986162971,
+          "deleted_50_overlap": 0.4803333226372214
+        },
+        "training_seconds": 3.4052501174155623,
+        "diagnostic_seconds": 2.756091416347772,
+        "total_seconds": 6.506809348007664,
+        "best_val_kl": {
+          "epoch": 11,
+          "validation": {
+            "kl": 0.2719622022965375,
+            "overlap_at_98": 0.6733293308931239,
+            "overlap_at_100": 0.6802548875995711,
+            "deleted_50_overlap": 0.4770588089438046
+          }
+        }
+      },
+      "2043": {
+        "parameter_count": 46246,
+        "updates": 800,
+        "initial": {
+          "train": {
+            "kl": 0.3110343751954097,
+            "overlap_at_98": 0.49748900357414694,
+            "overlap_at_100": 0.5076274404338762,
+            "deleted_50_overlap": 0.2538235168831021
+          },
+          "val": {
+            "kl": 0.31098478927331813,
+            "overlap_at_98": 0.49740896224975584,
+            "overlap_at_100": 0.5072548847572477,
+            "deleted_50_overlap": 0.25341175584232106
+          }
+        },
+        "final_train": {
+          "kl": 0.20540639454243229,
+          "overlap_at_98": 0.7252000621720857,
+          "overlap_at_100": 0.7323725345087987,
+          "deleted_50_overlap": 0.652431349660836
+        },
+        "final_val": {
+          "kl": 0.3137416456259933,
+          "overlap_at_98": 0.6734093609978171,
+          "overlap_at_100": 0.6804411682428099,
+          "deleted_50_overlap": 0.48066665425020105
+        },
+        "training_seconds": 5.091084325686097,
+        "diagnostic_seconds": 3.109901884337887,
+        "total_seconds": 8.540514384862036,
+        "best_val_kl": {
+          "epoch": 13,
+          "validation": {
+            "kl": 0.27203835587875513,
+            "overlap_at_98": 0.6798419466205672,
+            "overlap_at_100": 0.6862254722445619,
+            "deleted_50_overlap": 0.48431370492075004
+          }
+        }
+      }
+    },
+    "checkpoint_selection": "Minimum validation KL over epochs 1..50; earliest epoch breaks ties. Final checkpoint also retained.",
+    "total_wall_seconds": 22.9111628071405,
+    "parameter_count": 46246,
+    "gpu": "NVIDIA RTX A6000",
+    "peak_allocated_gpu_bytes": 198719488
+  },
+  "aggregation": "Equal tasks and equal class sides; seeds averaged before image bootstrap.",
+  "intervals": "Best minus rerun-final: two-dataset adjustment per binary metric. Reference and auxiliary comparisons: ordinary 95% intervals.",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2411
+}

@@ -1,0 +1,12 @@
+{
+  "pid": 3500690,
+  "gpu": "1",
+  "command": [
+    ".venv/bin/python",
+    "scripts/run_patch_ranking_checkpoints.py",
+    "--config",
+    "configs/patch_ranking_pets98.json",
+    "--output",
+    "runs/patch-ranking-checkpoints-v1/pets"
+  ]
+}

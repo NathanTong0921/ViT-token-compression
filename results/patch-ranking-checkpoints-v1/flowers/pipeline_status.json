@@ -1,0 +1,76 @@
+{
+  "dataset": "flowers",
+  "config": "configs/patch_ranking_flowers98.json",
+  "steps": {
+    "train": {
+      "returncode": 0,
+      "seconds": 27.059443403035402,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/train_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_flowers98.json",
+        "--output",
+        "runs/patch-ranking-checkpoints-v1/flowers/training",
+        "--select-best-val"
+      ]
+    },
+    "eval_final": {
+      "returncode": 0,
+      "seconds": 12.219138921005651,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/evaluate_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_flowers98.json",
+        "--models-dir",
+        "runs/patch-ranking-checkpoints-v1/flowers/training",
+        "--output",
+        "runs/patch-ranking-checkpoints-v1/flowers/eval_final"
+      ]
+    },
+    "eval_best": {
+      "returncode": 0,
+      "seconds": 11.176687877858058,
+      "command": [
+        "/data2/zhao.tong/experiments/.venv/bin/python",
+        "scripts/evaluate_patch_ranking.py",
+        "--config",
+        "configs/patch_ranking_flowers98.json",
+        "--models-dir",
+        "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl",
+        "--output",
+        "runs/patch-ranking-checkpoints-v1/flowers/eval_best"
+      ]
+    },
+    "analyze": {
+      "returncode": 0,
+      "seconds": 5.818538018036634,
+      "command": [
+        ".venv/bin/python",
+        "scripts/analyze_patch_ranking_checkpoints.py",
+        "--config",
+        "configs/patch_ranking_flowers98.json",
+        "--run-dir",
+        "runs/patch-ranking-checkpoints-v1/flowers",
+        "--output",
+        "runs/patch-ranking-checkpoints-v1/flowers/analysis"
+      ]
+    }
+  },
+  "active_stage": "complete",
+  "analysis_initial_attempt": {
+    "returncode": 2,
+    "seconds": 0.030810551019385457,
+    "command": [
+      "/data2/zhao.tong/experiments/.venv/bin/python",
+      "scripts/analyze_patch_ranking_checkpoints.py",
+      "--config",
+      "configs/patch_ranking_flowers98.json",
+      "--run-dir",
+      "runs/patch-ranking-checkpoints-v1/flowers",
+      "--output",
+      "runs/patch-ranking-checkpoints-v1/flowers/analysis"
+    ]
+  }
+}

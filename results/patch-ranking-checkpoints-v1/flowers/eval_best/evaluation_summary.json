@@ -1,0 +1,127 @@
+{
+  "config": {
+    "model": "ViT-B/16",
+    "model_cache": "cache/clip",
+    "data_root": "data/raw/flowers102",
+    "manifest_dir": "data/splits/flowers-v1",
+    "prompt_template": "a photo of a {class_name}, a type of flower.",
+    "feature_cache_dir": "runs/flowers-features-v1",
+    "prune_after": 6,
+    "keep_patch_tokens": 98,
+    "identity_atol": 1e-06,
+    "dataset": "flowers",
+    "device": "cuda:0",
+    "preservation_dir": "runs/patch-ranking-v1/flowers/preservation",
+    "baseline_eval_dir": "runs/flowers-selector-budget-98-eval-v1",
+    "ablation_eval_dir": "runs/flowers-selector-ablations-98-eval-v1",
+    "window_size": 2,
+    "teacher_batch_size": 64,
+    "evaluation_batch_size": 64,
+    "batch_size": 64,
+    "seeds": [
+      2041,
+      2042,
+      2043
+    ],
+    "epochs": 50,
+    "learning_rate": 0.001,
+    "min_learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "drop_last": false,
+    "bootstrap_seed": 2411,
+    "bootstrap_replicates": 2000,
+    "upstream_commit": "2094b17188c4643d5f9e05720d618179efb3cba6",
+    "ranking_target": "official_bottom50_kl",
+    "teacher_windows": "paper_stride_one"
+  },
+  "source_commit": "72f6c1e30a3b1c8aca21126f321ed7563dde6cdf",
+  "runs": [
+    {
+      "method": "full_model",
+      "seed": -1,
+      "run_index": 0,
+      "suffix_seconds": 0.006683709099888802,
+      "multiclass_accuracy": 0.703921568627451
+    },
+    {
+      "method": "preservation_teacher",
+      "seed": -1,
+      "run_index": 1,
+      "suffix_seconds": 0.41371336416341364,
+      "multiclass_accuracy": 0.6676470588235294,
+      "teacher_overlap_at_k": 1.0,
+      "teacher_overlap_at_100": 1.0,
+      "teacher_overlap_bottom_50": 1.0
+    },
+    {
+      "method": "attention",
+      "seed": -1,
+      "run_index": 2,
+      "suffix_seconds": 0.2802704020868987,
+      "multiclass_accuracy": 0.6598039215686274,
+      "teacher_overlap_at_k": 0.6100940376150461
+    },
+    {
+      "method": "random",
+      "seed": 2055,
+      "run_index": 3,
+      "suffix_seconds": 0.2807956989854574,
+      "multiclass_accuracy": 0.6362745098039215,
+      "teacher_overlap_at_k": 0.5011804721888755
+    },
+    {
+      "method": "random",
+      "seed": 2056,
+      "run_index": 4,
+      "suffix_seconds": 0.28268911107443273,
+      "multiclass_accuracy": 0.6274509803921569,
+      "teacher_overlap_at_k": 0.49924969987995205
+    },
+    {
+      "method": "random",
+      "seed": 2057,
+      "run_index": 5,
+      "suffix_seconds": 0.2826391248963773,
+      "multiclass_accuracy": 0.6627450980392157,
+      "teacher_overlap_at_k": 0.4997699079631852
+    },
+    {
+      "method": "patch_ranking",
+      "seed": 2041,
+      "run_index": 6,
+      "suffix_seconds": 0.2811483161058277,
+      "multiclass_accuracy": 0.6901960784313725,
+      "teacher_overlap_at_k": 0.6805622248899561,
+      "teacher_overlap_at_100": 0.6865196078431373,
+      "teacher_overlap_bottom_50": 0.48370588235294115
+    },
+    {
+      "method": "patch_ranking",
+      "seed": 2042,
+      "run_index": 7,
+      "suffix_seconds": 0.2807283189613372,
+      "multiclass_accuracy": 0.6852941176470588,
+      "teacher_overlap_at_k": 0.6733293317326932,
+      "teacher_overlap_at_100": 0.6802549019607843,
+      "teacher_overlap_bottom_50": 0.4770588235294118
+    },
+    {
+      "method": "patch_ranking",
+      "seed": 2043,
+      "run_index": 8,
+      "suffix_seconds": 0.28056118194945157,
+      "multiclass_accuracy": 0.6813725490196079,
+      "teacher_overlap_at_k": 0.6798419367747099,
+      "teacher_overlap_at_100": 0.6862254901960785,
+      "teacher_overlap_bottom_50": 0.4843137254901961
+    }
+  ],
+  "image_count": 1020,
+  "binary_image_count": 1020,
+  "task_count": 204,
+  "image_task_count": 4080,
+  "models_dir": "runs/patch-ranking-checkpoints-v1/flowers/training/best_val_kl",
+  "total_wall_seconds": 7.507970693986863,
+  "cost_scope": "Cached-prefix suffix evaluation and file output; not deployment latency.",
+  "peak_gpu_bytes": 535149056
+}

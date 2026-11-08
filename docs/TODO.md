@@ -1,6 +1,6 @@
 # Project TODO
 
-更新：2026-11-05。当前工作转向[论文主线整理](paper-story.md)与外部方法适配评估，按“任务信息是否被利用 → 是否值得其参数成本 → 哪些设置仍有额外价值”组织已有证据。最近一轮直接集合监督的结果见[完整记录](../results/set-distillation-v1/README.md)和I32。
+更新：2026-11-08。PR checkpoint检查已完成，结果见[本轮记录](../results/patch-ranking-checkpoints-v1/README.md)。研究仍按“任务信息是否被利用 → 是否值得其参数成本 → 哪些设置仍有额外价值”组织。最终测试与交付材料待完成。
 
 目标：回答“任务条件化何时优于强共享选择，以及这种收益能否被学到并泛化”，并完成四页正文报告、PPT 和讲解视频。依据正式 proposal 与当前实验更新；结果可支持或否定假设，完成项目不以获得正结果为前提。
 
@@ -11,6 +11,7 @@
 - [x] 整理[研究概述与主表](paper-story.md)，生成[框架与结果图](../results/paper-evidence-v1/README.md)初稿；最终报告结构另定。
 - [x] 完成[Patch Ranking 外部对照评估](external-baseline-review.md)，确定 preservation predictor 为优先适配对象。
 - [x] 完成 B/16、block6、98-token 的 Pets／Flowers Patch Ranking–Preservation 适配：六个预测器、分类与实际延迟，[完整结果](../results/patch-ranking-v1/README.md)。
+- [x] 重跑原六个PR预测器，比较最低验证KL与第50轮权重；Pets外部准确率差距缩小，Flowers基本保留。该检查结束，不追加PR扩容或调参。
 - [ ] 判断是否追加候选类别preservation目标干预，复用本轮保存的删除响应；尚未启动。
 - [ ] 结合外部比较，选定最终方法与核心比较，完成预留图片／类别组合的独立确认。
 

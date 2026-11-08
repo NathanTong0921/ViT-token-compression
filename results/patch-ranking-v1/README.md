@@ -1,5 +1,7 @@
 # Patch Ranking preservation baseline
 
+**2026-11-08 follow-up:** this page preserves the original fixed-epoch-50 comparison. Selecting checkpoints by validation KL raises PR to 98.9693% on Pets and 96.2745% on Flowers; the U accuracy advantage on Pets is no longer clear. See the [checkpoint results](../patch-ranking-checkpoints-v1/README.md) for the updated comparison.
+
 2026-11-05. Frozen CLIP ViT-B/16, pruning after block 6, retaining 98 of 196 patches. Three predictor seeds: 2041, 2042, 2043. This is **Patch Ranking–Preservation (adapted)**, using the paper's sliding-window preservation ranking and the public predictor/KL implementation in our existing setup. See the [implementation correspondence](../../docs/patch-ranking-implementation.md).
 
 ## Classification on unseen development combinations
