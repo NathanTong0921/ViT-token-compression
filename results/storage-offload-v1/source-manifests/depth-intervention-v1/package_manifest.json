@@ -1,0 +1,1640 @@
+{
+  "created_utc": "2026-11-04T10:02:21.372682+00:00",
+  "source": "/data2/zhao.tong/experiments/runs/depth-intervention-v1",
+  "code_commit": "f6d3c87199be702b3666b859e897ffdeb077f6fe",
+  "archives": [
+    {
+      "file": "depth-intervention-evaluation-v1.zip",
+      "path": "/data2/zhao.tong/artifacts/depth-intervention-v1/depth-intervention-evaluation-v1.zip",
+      "bytes": 176503319,
+      "sha256": "53979b1b3987067329ff494b7992ebce8567abad98e68f49cf32ac4da3798fd8",
+      "member_count": 91,
+      "uncompressed_member_bytes": 177738719,
+      "members": [
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/evidence.npz",
+          "bytes": 165061,
+          "sha256": "8f8849cdeeb076c4d391de803bfee8b31f5a0f39ae7b65f56b97f00636361de7"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/examples.csv",
+          "bytes": 166882,
+          "sha256": "4ca243dec4bde870c980993b3e4f2e1f76e38bc081937cdebdb86058b3735de8"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/execution.json",
+          "bytes": 1174,
+          "sha256": "c29ef636a423648b87315f94db222e79d294e2b7c505a836d48eb5b4f3430694"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/logits_2041.npz",
+          "bytes": 2308774,
+          "sha256": "f89aca82e82acf7b7757207f3b1d2cec2ea4fa68b2712adcf077abe27e4811c7"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/logits_2042.npz",
+          "bytes": 2257112,
+          "sha256": "70ce96683589d7ad1bb56e51e33984a256219251cdac04df2d042946529af5b5"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/logits_2043.npz",
+          "bytes": 2260766,
+          "sha256": "fb329270181d70f82973b90a5995c65bef5bd32c3d23dfc9f214c8a7bebeee7b"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/pair_2041_2042.npz",
+          "bytes": 1525983,
+          "sha256": "ffd35429b03d46f7eac11b590ef45b4b31c09c131ea4d6eee411c2654739f3b3"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/pair_2041_2043.npz",
+          "bytes": 1525848,
+          "sha256": "96513abf2a0fc5d9bd451e600497ef0fdddc49bf3b049635a6ee16a21d9cce39"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/pair_2042_2041.npz",
+          "bytes": 1531292,
+          "sha256": "d71b999f6a70613f08d29a3a36c8c8b8a9be711c9cae7acc2ae5e838d5bf896b"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/pair_2042_2043.npz",
+          "bytes": 1530705,
+          "sha256": "283efc8b58cab579e7debe8d5f2338a64e41b424e90630a6be61c917f12d8606"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/pair_2043_2041.npz",
+          "bytes": 1530018,
+          "sha256": "67c45f6ffbf730bf16b4f3218ae3379b68f3341b22690d13bffe77445f0d1d3f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/pair_2043_2042.npz",
+          "bytes": 1529090,
+          "sha256": "b911b826b8856ef6953d61705b82a7a93b340b54595ca6cfe4c919ee387fc81d"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3/protocol.json",
+          "bytes": 2262,
+          "sha256": "49ca26010a6d508766e3edfaf951801b1e61d75465cebde8d95c38c02992f201"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d6/evidence.npz",
+          "bytes": 165061,
+          "sha256": "8f8849cdeeb076c4d391de803bfee8b31f5a0f39ae7b65f56b97f00636361de7"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d6/examples.csv",
+          "bytes": 166882,
+          "sha256": "4ca243dec4bde870c980993b3e4f2e1f76e38bc081937cdebdb86058b3735de8"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d6/execution.json",
+          "bytes": 134,
+          "sha256": "d7dcb4a160bd3ac7f023edbe7facf4ed40ed2ca0f25d0fb7d260540ead528120"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d6/pair_2041_2042.npz",
+          "bytes": 1513198,
+          "sha256": "691be81d14115a1ac9e678922cfc84870a5670a0c72d54d08031ace3d4ce0d8b"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d6/pair_2041_2043.npz",
+          "bytes": 1516816,
+          "sha256": "706f9d3c2aaaeaeddc71311d25c9ed03860e1ab963a088114612bbc2127e023a"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d6/pair_2042_2041.npz",
+          "bytes": 1506491,
+          "sha256": "14a2313b16fabc736df888feaff488ccf6b8a77cac523bc6d8cac5a2fccd52ce"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d6/pair_2042_2043.npz",
+          "bytes": 1505893,
+          "sha256": "19d64c58cb9a6fee63c1f0dc04a14dccff7e3fcbdba718eaf0bfadc0e970b118"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d6/pair_2043_2041.npz",
+          "bytes": 1520685,
+          "sha256": "671dc3972000d3ae2efaefa8dd5d9726e449524fdf1c321142c27edca7ec8765"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d6/pair_2043_2042.npz",
+          "bytes": 1517697,
+          "sha256": "6aaab3e9735333476035de727b68d766a05348435ac9e75dc340e5a3ccfd143d"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d6/protocol.json",
+          "bytes": 2853,
+          "sha256": "42b8d3ef31649e87040ecf9bbbd2f6c13559a24dfa8fe2930ff452117fe3c18d"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/evidence.npz",
+          "bytes": 165061,
+          "sha256": "8f8849cdeeb076c4d391de803bfee8b31f5a0f39ae7b65f56b97f00636361de7"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/examples.csv",
+          "bytes": 166882,
+          "sha256": "4ca243dec4bde870c980993b3e4f2e1f76e38bc081937cdebdb86058b3735de8"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/execution.json",
+          "bytes": 1176,
+          "sha256": "5edaa2036218d18e0cf9118e5b1cb4f7a734439183816113a5eb658ee92f9b37"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/logits_2041.npz",
+          "bytes": 2314355,
+          "sha256": "915759892272a77dec9ffe6ad36b7525b70a90762b03ce1da223ac02b3d7b839"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/logits_2042.npz",
+          "bytes": 2293384,
+          "sha256": "aa9baa4d0ef1c37911996141de8474a7fd16e75aec1f9d2976f381978c41c53f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/logits_2043.npz",
+          "bytes": 2278332,
+          "sha256": "a0716c504e01842a2e0148f1ef08c15cf9f77417b97c50bd7d3ca8aa5e2c7500"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/pair_2041_2042.npz",
+          "bytes": 1500510,
+          "sha256": "eb29e117bd26d660910c3c6be0f8a11f5c8416c57299b0a73b37a01336ae9246"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/pair_2041_2043.npz",
+          "bytes": 1501831,
+          "sha256": "3add58d5f00ae395746d1329cf903956de4d07df0db86bbab53d179b0d9ec606"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/pair_2042_2041.npz",
+          "bytes": 1500171,
+          "sha256": "6a155f2ff838c6ad9e03fe10278c2af8ad0fe7709226a7e998d52400841f4d73"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/pair_2042_2043.npz",
+          "bytes": 1499260,
+          "sha256": "bd8f5430c4315de19ae316b6ebd984a3c1c99b717da09e0dd35df4267cf27f7e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/pair_2043_2041.npz",
+          "bytes": 1508476,
+          "sha256": "f0455b3d34b1e29697e4f2fc7ca9dacad225e915b665eb4a484f7405f2cae31b"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/pair_2043_2042.npz",
+          "bytes": 1506242,
+          "sha256": "ba2f15e784b2c84bf35a46957e01949da77cecf9bf5791ab674db342d744367c"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9/protocol.json",
+          "bytes": 2262,
+          "sha256": "94cc75172bf3671da1171244dde451b3a55d684029e7cd889ee14c19efb0d683"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/evidence.npz",
+          "bytes": 543740,
+          "sha256": "9854f99427c5798b8198ac4a043548036c279e11340d7c133e2e91e8373c2326"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/examples.csv",
+          "bytes": 255803,
+          "sha256": "694edc879f3a708d961ab81715169419e35b32604d9b93621aac32bb85c6916c"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/execution.json",
+          "bytes": 1179,
+          "sha256": "2ec278d4bb5933d05e10f17cda14994eaf7d997d210ffd5773de7f41b32af73b"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/logits_2041.npz",
+          "bytes": 3371379,
+          "sha256": "312246cd68dbd96e90b0f2639243dd8d7bdc840715a0463f2f0d02bc9380f6d8"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/logits_2042.npz",
+          "bytes": 3344878,
+          "sha256": "e08f77d31a2b2d51252af07fcf0252892aee49ea3efa4fcd09a19382b4878a09"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/logits_2043.npz",
+          "bytes": 3379155,
+          "sha256": "66a5621995ec0e1afa175f73b98e63e01a1d1a356bc831b8c0fcb7ba9866c77c"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/pair_2041_2042.npz",
+          "bytes": 6266980,
+          "sha256": "39051771be9a5ae63a2d29d25063157b0291e7e16e603efa287161005840dd41"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/pair_2041_2043.npz",
+          "bytes": 6269895,
+          "sha256": "ce0f8d723b74593dd678504792d7a588d469a71e89f5fcd8826d09d9f87f6d46"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/pair_2042_2041.npz",
+          "bytes": 6270169,
+          "sha256": "66e2a864f9717a47e10788d4a360e2d9ba2a547012750194ca283bf647aed10d"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/pair_2042_2043.npz",
+          "bytes": 6271204,
+          "sha256": "d2df8a8160fe4009a92cdea54cdc4d58ba048174199e11aeadffeb2d40006e00"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/pair_2043_2041.npz",
+          "bytes": 6272918,
+          "sha256": "39fc13dc0fbb2c661656e58a386e20550feb106e1da9df7636e44cbe6d313db2"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/pair_2043_2042.npz",
+          "bytes": 6272533,
+          "sha256": "7c2d8df4e9a70bd2fceaca1cfdd3c6d8c43c3407dc7b001baccb4e4807899d3b"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3/protocol.json",
+          "bytes": 2282,
+          "sha256": "687423ad5d94ead350c4ed953ec5449b2cbed4345ebe95213ab59c7b67d92476"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d6/evidence.npz",
+          "bytes": 543740,
+          "sha256": "9854f99427c5798b8198ac4a043548036c279e11340d7c133e2e91e8373c2326"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d6/examples.csv",
+          "bytes": 255803,
+          "sha256": "694edc879f3a708d961ab81715169419e35b32604d9b93621aac32bb85c6916c"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d6/execution.json",
+          "bytes": 137,
+          "sha256": "21deb87fbe1d9a80079fd4e7eb157fdee8f9cffeeaec059ec4a01f45cf74413f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d6/pair_2041_2042.npz",
+          "bytes": 6275297,
+          "sha256": "394ee25744fa163153a329ed8a99ee7514b36d56e7f3c288b4c13e6daff87fee"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d6/pair_2041_2043.npz",
+          "bytes": 6273960,
+          "sha256": "c3f1d5fa4d7ee71c3a7d2f0fd6ca17a086b268498c187cd0805b868a6eee82fa"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d6/pair_2042_2041.npz",
+          "bytes": 6270910,
+          "sha256": "c4f0db810e1571b44e0d19d4fd78232962a0f94d736f1aeccd38b9a65026f843"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d6/pair_2042_2043.npz",
+          "bytes": 6269057,
+          "sha256": "10101904902af4c3ebff142a8a03d8ebf0e021173d4db90c55bb659ae7661d36"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d6/pair_2043_2041.npz",
+          "bytes": 6273589,
+          "sha256": "1cba76165285fd7f3eed784eb2bc2919e4bd7edcdcc8c08f5197e998d6f54e74"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d6/pair_2043_2042.npz",
+          "bytes": 6273858,
+          "sha256": "549b4caf3056e188588fe11dac4e21f33ff472dfc1efe633641e114537df39a5"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d6/protocol.json",
+          "bytes": 2914,
+          "sha256": "b3fbaa3693ea218da6cfbfdc68002c1769691ca5b1d1968409d915c3541e0b82"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/evidence.npz",
+          "bytes": 543740,
+          "sha256": "9854f99427c5798b8198ac4a043548036c279e11340d7c133e2e91e8373c2326"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/examples.csv",
+          "bytes": 255803,
+          "sha256": "694edc879f3a708d961ab81715169419e35b32604d9b93621aac32bb85c6916c"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/execution.json",
+          "bytes": 1182,
+          "sha256": "96780b21de1ef75abfa5921636124e1ae5d73581e666d1bbf93a7cadd9108464"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/logits_2041.npz",
+          "bytes": 3457587,
+          "sha256": "63b5b5e1c1a159bb0cb8df4040c98aaf0eea8e11da3468b5c7ab8ab8a8204b35"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/logits_2042.npz",
+          "bytes": 3428684,
+          "sha256": "538b50b9dc4711db1c5e0db385f46ddc47cc67d65d90ab43ef9fc7431e6693d4"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/logits_2043.npz",
+          "bytes": 3413941,
+          "sha256": "c2fbc85c90ea49555846909f2b1f6e77f7e608560a9feef2ed97e3d868e22e82"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/pair_2041_2042.npz",
+          "bytes": 6260586,
+          "sha256": "3fe2da3b4a33503b89063b85b2fb6942761c72aa9e3a132f35d54533677089c6"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/pair_2041_2043.npz",
+          "bytes": 6259036,
+          "sha256": "77fba760d211a80c9e221b8358c4a1ed01f8bae4b876619d24ae0566741d4332"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/pair_2042_2041.npz",
+          "bytes": 6263720,
+          "sha256": "fc8b6468457b0903352e6de70073bf590dfb85679abf15090d8fc5200100e62e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/pair_2042_2043.npz",
+          "bytes": 6260984,
+          "sha256": "3942b929b97ceaa586de7f01a888c2b24fba6e5465c7f38b6741f5d39fef0ba1"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/pair_2043_2041.npz",
+          "bytes": 6272676,
+          "sha256": "4b7b14ecb118d7499ad57390c58397c481e2c812a16a0756c9eedb91d5c55d4a"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/pair_2043_2042.npz",
+          "bytes": 6272186,
+          "sha256": "c812797d6f87ef11be1e2e78a56d58204161bdb014b814538dbfdc986f05ed2e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9/protocol.json",
+          "bytes": 2282,
+          "sha256": "a77c8104e8957c484f30d160efd643f24f0c4764d6e6f123b0c97f51bd7f8716"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3_evaluate.log",
+          "bytes": 747,
+          "sha256": "85ebc82d09609401e8f779b3b3b0077e965b0cff3a2900f30e490934f3ee0885"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d3_prepare_train.log",
+          "bytes": 20276,
+          "sha256": "b41b4e5f257ee84f2f31b465909d7f8c274f97aa50bcb2c9637549324f89b70f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9_evaluate.log",
+          "bytes": 751,
+          "sha256": "c374c795aa299f2e06493082bb7e4b7d6a605e39988016ae6eaee794abafce56"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_d9_prepare_train.log",
+          "bytes": 20261,
+          "sha256": "6ed564df9e570002323734aac1ee567205b76f1d3906e7586762aa42c1a14798"
+        },
+        {
+          "path": "runs/depth-intervention-v1/gpu1_active.json",
+          "bytes": 452,
+          "sha256": "c137b6637a51a1a6289eed3d8d6220aba80f4b96865001f0346a0129a0581dc5"
+        },
+        {
+          "path": "runs/depth-intervention-v1/gpu1_done.json",
+          "bytes": 66,
+          "sha256": "e0c3a17e6ed48216879d96f80070a01c24627e2519ab5dde4961025691d5ba45"
+        },
+        {
+          "path": "runs/depth-intervention-v1/gpu1_execution.json",
+          "bytes": 580,
+          "sha256": "be051ab6672efa2b883898006b7f4b013ccff351f08520c24536acb5649b8dca"
+        },
+        {
+          "path": "runs/depth-intervention-v1/gpu1_worker.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runs/depth-intervention-v1/gpu2_active.json",
+          "bytes": 437,
+          "sha256": "5b4f8e7023bdfb249e7724a2108c80f5ca0a45dc503b401879d279d7720d5f5f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/gpu2_done.json",
+          "bytes": 66,
+          "sha256": "698bc2f3bbeb0b94dfb75358f37e1056ee46a925f59f6c5ecfc2a262faf58253"
+        },
+        {
+          "path": "runs/depth-intervention-v1/gpu2_execution.json",
+          "bytes": 582,
+          "sha256": "628f8a9f7dc9962a6069f1c07552ded4905a9a4b9c119dafbd7f6df660bb3525"
+        },
+        {
+          "path": "runs/depth-intervention-v1/gpu2_worker.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3_evaluate.log",
+          "bytes": 743,
+          "sha256": "5dce9abbdc596de1b6bd8200e906da468e42c1faf5ed3518f066c0bbc2255be2"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d3_prepare_train.log",
+          "bytes": 24152,
+          "sha256": "f11cf7d1c72d26f9d877dff61a204f32e83f108213d1c7779083d50a6dbdb57d"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9_evaluate.log",
+          "bytes": 744,
+          "sha256": "fc5c6bf34a82fee945b876cd346a5a24cc9c956640b8a6544ea32fedc4f405e0"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_d9_prepare_train.log",
+          "bytes": 24123,
+          "sha256": "ddf8f749401eb00e94710fdac64f20ef62b3f0e8223660ba05cc186c50d2fc30"
+        },
+        {
+          "path": "runs/depth-intervention-v1/reference_diagnostics_execution.json",
+          "bytes": 234,
+          "sha256": "185aeb80a662b14834a416d9f9b21f2e16eef23eaf57ff8708551f4f7db2538d"
+        },
+        {
+          "path": "runs/depth-intervention-v1/worker.py",
+          "bytes": 1530,
+          "sha256": "233f25e8a56e91d3ddb0c95a2bdde0b0f8c1a4fdba1645abf69c2542159b6db8"
+        },
+        {
+          "path": "artifact_metadata/dependencies.json",
+          "bytes": 569,
+          "sha256": "36d59d586eed860e865ad61ed17587c9456510678d59296af6de7c3c77be2cab"
+        }
+      ]
+    },
+    {
+      "file": "depth-intervention-training-v1.zip",
+      "path": "/data2/zhao.tong/artifacts/depth-intervention-v1/depth-intervention-training-v1.zip",
+      "bytes": 1106594390,
+      "sha256": "41233ab9e1fbd902bd0059959bfbabaf3d3df0c5ac45383bb3411830555dfaad",
+      "member_count": 161,
+      "uncompressed_member_bytes": 1123041390,
+      "members": [
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d6_49/diagnostic_config.json",
+          "bytes": 1250,
+          "sha256": "a3669955e11c24a2ca2655c277eea7a42b612be5c8f5742a57b495f432f8d6c0"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d6_49/training/final_teacher_diagnostics.json",
+          "bytes": 3768,
+          "sha256": "c9dce003e1623352fea3a646a25f99cb5cde8ef8d49fadefcd027ac2beb3185e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d6_49/diagnostic_config.json",
+          "bytes": 1306,
+          "sha256": "ea99b95d5ed2e00baa0a24b7df094aebb0a72694b505e742c4992023328b236f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d6_49/training/final_teacher_diagnostics.json",
+          "bytes": 3781,
+          "sha256": "d24829b1f9f8fe1addccb8e1b48fb3a7355fade444c0c709d8eea19ad4d12a24"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/configuration.json",
+          "bytes": 1390,
+          "sha256": "5199a4b31df4afb452e2c2c42bae16dad3704b0056f9eeabd278ae4f88e441cc"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/training_summary.json",
+          "bytes": 9662,
+          "sha256": "265847767686d7fc044d9d20122c44c96196cf165226d495e99f281b2e91dfc2"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/training_history.csv",
+          "bytes": 23006,
+          "sha256": "380192d97bbd94bf3eed52f7e8f795adf81798593d9e54b54d1851934ef5c1ed"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/sampling_audit.json",
+          "bytes": 332888,
+          "sha256": "c63b9e682451821edb810773744b0bab407845d30424a704ac465c671b96d37e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/completed_runs.json",
+          "bytes": 5746,
+          "sha256": "0058e06c78b3b8aa93485e891ccb660ff89bcc97da1999a638b1dc00c0338d7f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/final_teacher_diagnostics.json",
+          "bytes": 3766,
+          "sha256": "c75adc5c29e28078b037d51bd15c0c7269bcf3b1e9317213ea0e61fa31b9d9b7"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2041/conditioned.pt",
+          "bytes": 1401905,
+          "sha256": "605e04194ed4a3f0abf5339434e323b38f7fefa7ec7bbc0b8be6254d64b73785"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2041/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "6645d08c778f6ccd0a700dc4c9f8fc96f3be9533fba670849ff1a09097ae558e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2042/conditioned.pt",
+          "bytes": 1401905,
+          "sha256": "6231269c55dce45468661abed51fe12f6f3f417e11e613f0eaaa3678e5b8a601"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2042/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "7ff695595df66d7bc141377b8d7436f866f08501c49093553f295f13ea1249ff"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2043/conditioned.pt",
+          "bytes": 1401905,
+          "sha256": "64953ce6b31e0278dedf1deda1b26fb19db6e01e192b1ad8ea99b01f0b37defa"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/training/full/seed_2043/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "148a8a204826cc37e99a68d29f7331ce5b517645803ebea9e36965a00f54a64f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/depth_reference_check.json",
+          "bytes": 544,
+          "sha256": "dd181dbe15ad32baeb4e262312da423439a519eadc382af2d91a18f5ac97cccb"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/exchange_strata.json",
+          "bytes": 288,
+          "sha256": "67b87168fc0313c31e47871d6b0c9313b1851c0f623eec1d10d1129c373d9364"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/panel_images.csv",
+          "bytes": 186196,
+          "sha256": "e7707f302ab5418328beff1244bf80c17958c5bd3d99e7dd2120945e37a8a4b4"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/prep_summary.json",
+          "bytes": 6112,
+          "sha256": "df7f4a4d6d33003f8855899fa423c06d6e55737e6396d48a09fc6b1ddf928797"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/train/baseline_train_tasks.csv",
+          "bytes": 4935201,
+          "sha256": "c4501e270a7fcdc72db7705214cb65c2d47117ee13ebc325f75329a7ee726d6f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/train/baseline_val_tasks.csv",
+          "bytes": 589388,
+          "sha256": "095c5d134f09766d8a09879952f825b287bc979aba74dc52bcecbe7383944e23"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/train/panel_images.csv",
+          "bytes": 150149,
+          "sha256": "b9b5a9cde1b35ede31f86234872bde1fd13b1e6466243dd071418e7fe395ad6f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/train_tasks.csv",
+          "bytes": 9320,
+          "sha256": "e5cebd76a17f2995f8bfb484c16e73720243f8c23859e70b4131f8e97cf0d7b3"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/val/baseline_train_tasks.csv",
+          "bytes": 1233787,
+          "sha256": "2de644cba483499e85ed36802a639bc03da6646c9ed793a253b7e3c81fc41373"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/val/baseline_val_tasks.csv",
+          "bytes": 147326,
+          "sha256": "0e2a1b4c8032be28cd6bf816d66b4ad161bd8d20e387324723f9b72adec87f27"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/val/panel_images.csv",
+          "bytes": 36105,
+          "sha256": "653e539e92511939a6ee31fef69b484a9073234a01a18a3e9cccc6019a0282d0"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/val_tasks.csv",
+          "bytes": 1051,
+          "sha256": "dfaadb1ae4b33a591985eb0d131b2c52eeb34648fa5bb10f48c4f672c77e0e77"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/supervision/panel_images.csv",
+          "bytes": 186196,
+          "sha256": "e7707f302ab5418328beff1244bf80c17958c5bd3d99e7dd2120945e37a8a4b4"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/supervision/prep_summary.json",
+          "bytes": 4946,
+          "sha256": "ec93441a538e136a01ca0e8f11750cc0a234f8526488fc71d51608b49827a1b5"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/supervision/teacher_scale_diagnostics.json",
+          "bytes": 2644,
+          "sha256": "b33059f182bb6e5886164333801ea4dde96465fbf6329c2b367f6c4d0abbfe1b"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/supervision/train/panel_images.csv",
+          "bytes": 150149,
+          "sha256": "b9b5a9cde1b35ede31f86234872bde1fd13b1e6466243dd071418e7fe395ad6f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/supervision/train_tasks.csv",
+          "bytes": 9320,
+          "sha256": "e5cebd76a17f2995f8bfb484c16e73720243f8c23859e70b4131f8e97cf0d7b3"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/supervision/val/panel_images.csv",
+          "bytes": 36105,
+          "sha256": "653e539e92511939a6ee31fef69b484a9073234a01a18a3e9cccc6019a0282d0"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/supervision/val_tasks.csv",
+          "bytes": 1051,
+          "sha256": "dfaadb1ae4b33a591985eb0d131b2c52eeb34648fa5bb10f48c4f672c77e0e77"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/train/evidence.npz",
+          "bytes": 7878134,
+          "sha256": "e17bdec41602aff7e8408f9f77c22616d5db71fe17e243b05bceb1fd593d0cb0"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/supervision/train/teacher.npz",
+          "bytes": 163792214,
+          "sha256": "6e0c1aec0fda57bc34f45ad9936452cf6cbe78f3da2335e628a62cae211a483c"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/train/prefix_replay_sample.npz",
+          "bytes": 346564,
+          "sha256": "04db88330a08fc54e50d6db2247ce5e5e5b0608eadea0dd585ece491f06324a3"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/train/prefix_replay_sample.json",
+          "bytes": 623,
+          "sha256": "31045538ceaffd1a42a081d5d27ebbf74e800a7df53c7208b2ac632519a66345"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/val/evidence.npz",
+          "bytes": 2022103,
+          "sha256": "aeeec9a789b5de5d9cbb982f847fd6e98fe0b2a5ed902343edffac1f146c759a"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/supervision/val/teacher.npz",
+          "bytes": 40960370,
+          "sha256": "2f8a0448dfb02c2e800cdb8d177667b5c624c12f9d80402f363f63d5eb589158"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/val/prefix_replay_sample.npz",
+          "bytes": 346995,
+          "sha256": "4b606cec0d6f674533378206940338fae105b4011914fc85787809dae4683f27"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d3_49/features/val/prefix_replay_sample.json",
+          "bytes": 617,
+          "sha256": "78f2ca87475857c16a62e517bf38ca136b03227be5c97726dd13613fa719c9d3"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/configuration.json",
+          "bytes": 1390,
+          "sha256": "c6c31422126950f1448c8adc2de904a288caaf503c30780800a184e14fad7cb5"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/training_summary.json",
+          "bytes": 9657,
+          "sha256": "27d355f3c915b1b47adab4932d500385b29cc116ad08425302c3820459da7b9f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/training_history.csv",
+          "bytes": 23052,
+          "sha256": "7b1730ecae9f98144c8468dd478bc9c6e244f48d73c58e3a7d5c446f1372d4af"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/sampling_audit.json",
+          "bytes": 332888,
+          "sha256": "c63b9e682451821edb810773744b0bab407845d30424a704ac465c671b96d37e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/completed_runs.json",
+          "bytes": 5742,
+          "sha256": "192a2be3733c5d39ec74254fd2904a6381c80a9f066d840cb1f148a2305a959a"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/final_teacher_diagnostics.json",
+          "bytes": 3753,
+          "sha256": "7e60ba732524b7e87b89d259f1c71b97d35dda3ab6c2d0b025bb34443ad015c0"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2041/conditioned.pt",
+          "bytes": 1401905,
+          "sha256": "5d8b4861e6cdad446cef006f6a73b2a935b9d6556b17111cd28b6c55864cdfd5"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2041/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "5d75ff2f7aeba6405f1949568aaed27fcf41633271b3b870df967411a5214987"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2042/conditioned.pt",
+          "bytes": 1401905,
+          "sha256": "4292b38a2a2be51028e9560768a470f40a58b82246419ba0ef574915e71229ba"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2042/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "f8c03239c469073bfceff05389ba42322230b35113f69b58396938667e9530dc"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2043/conditioned.pt",
+          "bytes": 1401905,
+          "sha256": "84ba434161daf6370e6d4a025f05ff08b0237b3c71a07f7baf9b05b853f277c9"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/training/full/seed_2043/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "99c5395f01a5f7b202b9d894e11bf5aa7a1f26804500b9a875b3fa5ec5848834"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/depth_reference_check.json",
+          "bytes": 544,
+          "sha256": "21491405fd844323b4f5456178e682ea15a5c0329f4691deafddcb6eada3a20b"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/exchange_strata.json",
+          "bytes": 288,
+          "sha256": "67b87168fc0313c31e47871d6b0c9313b1851c0f623eec1d10d1129c373d9364"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/panel_images.csv",
+          "bytes": 186196,
+          "sha256": "e7707f302ab5418328beff1244bf80c17958c5bd3d99e7dd2120945e37a8a4b4"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/prep_summary.json",
+          "bytes": 6113,
+          "sha256": "2ab5bc85d40b64826e00b7552fb2e79a24f3a050bf70f1e5975d05126d571fea"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/train/baseline_train_tasks.csv",
+          "bytes": 4935201,
+          "sha256": "c4501e270a7fcdc72db7705214cb65c2d47117ee13ebc325f75329a7ee726d6f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/train/baseline_val_tasks.csv",
+          "bytes": 589388,
+          "sha256": "095c5d134f09766d8a09879952f825b287bc979aba74dc52bcecbe7383944e23"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/train/panel_images.csv",
+          "bytes": 150149,
+          "sha256": "b9b5a9cde1b35ede31f86234872bde1fd13b1e6466243dd071418e7fe395ad6f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/train_tasks.csv",
+          "bytes": 9320,
+          "sha256": "e5cebd76a17f2995f8bfb484c16e73720243f8c23859e70b4131f8e97cf0d7b3"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/val/baseline_train_tasks.csv",
+          "bytes": 1233787,
+          "sha256": "2de644cba483499e85ed36802a639bc03da6646c9ed793a253b7e3c81fc41373"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/val/baseline_val_tasks.csv",
+          "bytes": 147326,
+          "sha256": "0e2a1b4c8032be28cd6bf816d66b4ad161bd8d20e387324723f9b72adec87f27"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/val/panel_images.csv",
+          "bytes": 36105,
+          "sha256": "653e539e92511939a6ee31fef69b484a9073234a01a18a3e9cccc6019a0282d0"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/val_tasks.csv",
+          "bytes": 1051,
+          "sha256": "dfaadb1ae4b33a591985eb0d131b2c52eeb34648fa5bb10f48c4f672c77e0e77"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/supervision/panel_images.csv",
+          "bytes": 186196,
+          "sha256": "e7707f302ab5418328beff1244bf80c17958c5bd3d99e7dd2120945e37a8a4b4"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/supervision/prep_summary.json",
+          "bytes": 4947,
+          "sha256": "27c5ce980ad7def2c864659b18543f32d2d6359eecab980b5415521c06ac7dd2"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/supervision/teacher_scale_diagnostics.json",
+          "bytes": 2645,
+          "sha256": "7fc1a1a10991417dd9670e8ffbe455e73e79f61f572df02c30620dfc2d78a4ac"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/supervision/train/panel_images.csv",
+          "bytes": 150149,
+          "sha256": "b9b5a9cde1b35ede31f86234872bde1fd13b1e6466243dd071418e7fe395ad6f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/supervision/train_tasks.csv",
+          "bytes": 9320,
+          "sha256": "e5cebd76a17f2995f8bfb484c16e73720243f8c23859e70b4131f8e97cf0d7b3"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/supervision/val/panel_images.csv",
+          "bytes": 36105,
+          "sha256": "653e539e92511939a6ee31fef69b484a9073234a01a18a3e9cccc6019a0282d0"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/supervision/val_tasks.csv",
+          "bytes": 1051,
+          "sha256": "dfaadb1ae4b33a591985eb0d131b2c52eeb34648fa5bb10f48c4f672c77e0e77"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/train/evidence.npz",
+          "bytes": 7909517,
+          "sha256": "0b682b1ff8747da7b244765c4a95278d55d431779ee7ac05fab6fd227b5a1fc6"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/supervision/train/teacher.npz",
+          "bytes": 163198261,
+          "sha256": "93fb9a225618c531d5d8d4b6ac7dd77e2424f8fc0875b7144bd240c9b3d7e35e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/train/prefix_replay_sample.npz",
+          "bytes": 347517,
+          "sha256": "2bd1a89f70caa0735cc9c061f5aca1145b9fc96557ebb268bf002ef9833a16fd"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/train/prefix_replay_sample.json",
+          "bytes": 623,
+          "sha256": "aaa8d987564806be003b110b2564b8aa8935df34b2679d5d285055dc45febdf2"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/val/evidence.npz",
+          "bytes": 2029871,
+          "sha256": "773187c2caf7a777bf131b9215df59985133fdf3b8fdc8ff601023be343ee057"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/supervision/val/teacher.npz",
+          "bytes": 40812066,
+          "sha256": "1bc439326493018f34fabddae7b596ffe3c64c4b6feb17c2cbd6b83853916e08"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/val/prefix_replay_sample.npz",
+          "bytes": 347183,
+          "sha256": "c0e4dea0e9b23a201b466da299b436956cf3f7c1c603da79c75fe02bafea3dd3"
+        },
+        {
+          "path": "runs/depth-intervention-v1/pets_b16_d9_49/features/val/prefix_replay_sample.json",
+          "bytes": 617,
+          "sha256": "6df51dd17162270bb2deba01696896ca96507db45aadc643c54f2c0f606f5ae4"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/configuration.json",
+          "bytes": 1404,
+          "sha256": "c556494432decf13da849b30b061b1175fe4b2882503226eeacbb171797485d3"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/training_summary.json",
+          "bytes": 9693,
+          "sha256": "19793b3ca6f63794d2fba312bcda18f246a9a7860408672b1a7a1572e79665f4"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/training_history.csv",
+          "bytes": 20004,
+          "sha256": "c661461aa9195cfeaf6ab7c1e12140b9741bcc98617081692d2233ab5b13c7fe"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/sampling_audit.json",
+          "bytes": 118296,
+          "sha256": "a20b2845605dd88c92f10d752a9e74c8821057b5247c7634f2e910b23fb21ff6"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/completed_runs.json",
+          "bytes": 5757,
+          "sha256": "e10dbf933f9fdb19ff77595ddb87901d0f227fa4f9b08aa40473df4bcb7495a9"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/final_teacher_diagnostics.json",
+          "bytes": 3679,
+          "sha256": "0c8167801aa82c97d0aea4e66f860b483521ad51db288d7505eb74454eba69e0"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2041/conditioned.pt",
+          "bytes": 1401969,
+          "sha256": "321a5ae959605939a690c513bcef928b652a92bb957945573cdd402132fdd5c2"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2041/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "f6289615146c81abcaaf608ec61009c694a25bc52b9e61dd0d07bc0f0198860a"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2042/conditioned.pt",
+          "bytes": 1401969,
+          "sha256": "61dd02c70cd9af98a122d879a91b002993b315b815eb98168f0451ae5a2bd5d9"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2042/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "2d0e619047582082c81842162cf6681746c797a8e177b7d6bca1d8526d919eb6"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2043/conditioned.pt",
+          "bytes": 1401969,
+          "sha256": "afb34d33b842dc61d45887eddc33e890e500f77a39e2545ed60f851b32d7d633"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/training/full/seed_2043/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "cd9872c4922627a665bd7aa7f1da3a8c548d28c1f5ab2bde89db631aca337cd5"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/depth_reference_check.json",
+          "bytes": 552,
+          "sha256": "704dfda57c9440e985bfa769be9228a6b25de2ce73a36a0c48e6e3559acce5a4"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/exchange_strata.json",
+          "bytes": 287,
+          "sha256": "4d8ba97fce3d51dd8765aad603993c4c9c587eb8d064580f1f3abbd99d8fa228"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/panel_images.csv",
+          "bytes": 93238,
+          "sha256": "35b49eb530ef8b9ac7e52ea9d08af374d82db763fe3a3d5454d4855afdda6931"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/prep_summary.json",
+          "bytes": 9610,
+          "sha256": "aa890f98b69606fff5c8f5cc0d711d38ec2328c9d04303c63f78241db99104a8"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/train/baseline_train_tasks.csv",
+          "bytes": 693970,
+          "sha256": "817a0a262e9c0deb7e16d3d58cc87385a127376c8f41d59a64fdcc6d8c3b637c"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/train/baseline_val_tasks.csv",
+          "bytes": 223218,
+          "sha256": "e51673a14000e47014cc3c11fc68d745cc88cbd0575dcd3adb5a30fdf1f8121e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/train/panel_images.csv",
+          "bytes": 47668,
+          "sha256": "ac14ed71149a6b708a7bda2833548896ae62888fbd74760da94c8d83f72baa19"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/train_tasks.csv",
+          "bytes": 12174,
+          "sha256": "63f172fa15e16c518b14c121ae335d352e8f7d681064322c85d1979d53b4cc47"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/val/baseline_train_tasks.csv",
+          "bytes": 693855,
+          "sha256": "0b2a83d921b6ceb5724878f5b3da3e510aff4e35d3afbd2c076839716a14e57d"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/val/baseline_val_tasks.csv",
+          "bytes": 223201,
+          "sha256": "0601e5ecbe77d28f7c2a25ec4602f93b38bf6523d2a509edee99fd8e6096f872"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/val/panel_images.csv",
+          "bytes": 45628,
+          "sha256": "61bd217342ce188e6457738b83e1b30894c72e28c5fd5bf13b57ca0b0a3c4f6a"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/val_tasks.csv",
+          "bytes": 3670,
+          "sha256": "2359e81df117ee256dfa1ea777b5866bb48765ae4d17ad2f32123dc58a082017"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision/panel_images.csv",
+          "bytes": 93238,
+          "sha256": "35b49eb530ef8b9ac7e52ea9d08af374d82db763fe3a3d5454d4855afdda6931"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision/prep_summary.json",
+          "bytes": 4980,
+          "sha256": "1a94e99ecf1ee5e338a3f9d123e49bf73fd15d69a426ca4e2dc88f2730837017"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision/teacher_scale_diagnostics.json",
+          "bytes": 2659,
+          "sha256": "3eb1ac8097740e45e156e6e279f2b03d8f3729f414c0ba06e3714da8a4b629db"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision/train/panel_images.csv",
+          "bytes": 47668,
+          "sha256": "ac14ed71149a6b708a7bda2833548896ae62888fbd74760da94c8d83f72baa19"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision/train_tasks.csv",
+          "bytes": 12174,
+          "sha256": "63f172fa15e16c518b14c121ae335d352e8f7d681064322c85d1979d53b4cc47"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision/val/panel_images.csv",
+          "bytes": 45628,
+          "sha256": "61bd217342ce188e6457738b83e1b30894c72e28c5fd5bf13b57ca0b0a3c4f6a"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision/val_tasks.csv",
+          "bytes": 3670,
+          "sha256": "2359e81df117ee256dfa1ea777b5866bb48765ae4d17ad2f32123dc58a082017"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/train/evidence.npz",
+          "bytes": 3116916,
+          "sha256": "bf0709c9a1367021e9c4d169e83dd9e4e7f1fdf7149c4ee898a92196bf12594f"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision/train/teacher.npz",
+          "bytes": 156157618,
+          "sha256": "e1cf5ccfc408c3b733fd0083b218acc391c699bef97a9a07321f6a7e8b6e7f9a"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/train/prefix_replay_sample.npz",
+          "bytes": 465932,
+          "sha256": "580a87e5572f0206f260403b45e85ddf3ace295565d2db9b2941fed873332d08"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/train/prefix_replay_sample.json",
+          "bytes": 629,
+          "sha256": "868073d1a11b6a9958376e248917cf8b5b44097421baf2ef3e0dbc068973a681"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/val/evidence.npz",
+          "bytes": 3117111,
+          "sha256": "7dc7bdc0d3dce96327485e72c52469ba0b923740f0ae7e1a56c91a4d391bed39"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/supervision/val/teacher.npz",
+          "bytes": 156164608,
+          "sha256": "2dd2c496af3c7632328957afb8f5534d17d833a6bec74e0d58f2c7878f9f45eb"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/val/prefix_replay_sample.npz",
+          "bytes": 465808,
+          "sha256": "86352bba49e61fa7dc6451ae6cdcde6dcc4863fea1371f5cd93a702d0ac5d43e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d3_49/features/val/prefix_replay_sample.json",
+          "bytes": 622,
+          "sha256": "2a6e3cf8b5a7e68bac2322ad8ac19842df4f2cbb3158f08655b92507f4e3ae56"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/configuration.json",
+          "bytes": 1404,
+          "sha256": "f60a7fd5dd618cd987dc9acdab87cc75332eb4435172cb6e4b40a6d3c267c0f5"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/training_summary.json",
+          "bytes": 9686,
+          "sha256": "1a954ba8a0235d542ac161e489c9453e32a52bfd51b660c6c2c5f5a81bdf81e3"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/training_history.csv",
+          "bytes": 20061,
+          "sha256": "853dc9424462942cec435b099345fffdf24f0a8132839f506a3b52eca2a100ea"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/sampling_audit.json",
+          "bytes": 118296,
+          "sha256": "a20b2845605dd88c92f10d752a9e74c8821057b5247c7634f2e910b23fb21ff6"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/completed_runs.json",
+          "bytes": 5750,
+          "sha256": "7e8b4f1f525aaca327ab51aa8ea6cb1bda84073f0914a45bfe7dd252a9776118"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/final_teacher_diagnostics.json",
+          "bytes": 3669,
+          "sha256": "48fa4078931c3aba3382436dd16837c4bdd6b5bd6a9f993a83a0487ec20ddfe6"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2041/conditioned.pt",
+          "bytes": 1401969,
+          "sha256": "972c8f528bba8e62343f3ad6d28eb955f93f653263f43839962eb308673a2085"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2041/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "c61eb3543b9136e76afb8333a91c8ae8e4c50499d7484537cc243bea760bfbed"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2042/conditioned.pt",
+          "bytes": 1401969,
+          "sha256": "84ad58b07f6c8b38793c756776f966b3867f5db01d700127ddb7addd08432d12"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2042/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "05bac544f0a1e467be0b83d45a72c687c146e73f05028393321dbad64ec940b4"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2043/conditioned.pt",
+          "bytes": 1401969,
+          "sha256": "7815ea8606be1dd4a0780707893c158d8cd5c7c012d1d3c521dba84058b9e7eb"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/training/full/seed_2043/image_only_wide.pt",
+          "bytes": 1394464,
+          "sha256": "96e3d228d45766cbf2a40068cee3938fe6285013ac9cf138c6bdfcb35f7a5ede"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/depth_reference_check.json",
+          "bytes": 552,
+          "sha256": "60c2d6cbcfc45d5a8e0375c7d343e494365d4ec423bd58ffdf97209a46216000"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/exchange_strata.json",
+          "bytes": 287,
+          "sha256": "4d8ba97fce3d51dd8765aad603993c4c9c587eb8d064580f1f3abbd99d8fa228"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/panel_images.csv",
+          "bytes": 93238,
+          "sha256": "35b49eb530ef8b9ac7e52ea9d08af374d82db763fe3a3d5454d4855afdda6931"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/prep_summary.json",
+          "bytes": 9609,
+          "sha256": "0d114342c269422e849c72919e11358054a2d66a2dfb5bc977396bc5c1dea914"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/train/baseline_train_tasks.csv",
+          "bytes": 693970,
+          "sha256": "817a0a262e9c0deb7e16d3d58cc87385a127376c8f41d59a64fdcc6d8c3b637c"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/train/baseline_val_tasks.csv",
+          "bytes": 223218,
+          "sha256": "e51673a14000e47014cc3c11fc68d745cc88cbd0575dcd3adb5a30fdf1f8121e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/train/panel_images.csv",
+          "bytes": 47668,
+          "sha256": "ac14ed71149a6b708a7bda2833548896ae62888fbd74760da94c8d83f72baa19"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/train_tasks.csv",
+          "bytes": 12174,
+          "sha256": "63f172fa15e16c518b14c121ae335d352e8f7d681064322c85d1979d53b4cc47"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/val/baseline_train_tasks.csv",
+          "bytes": 693855,
+          "sha256": "0b2a83d921b6ceb5724878f5b3da3e510aff4e35d3afbd2c076839716a14e57d"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/val/baseline_val_tasks.csv",
+          "bytes": 223201,
+          "sha256": "0601e5ecbe77d28f7c2a25ec4602f93b38bf6523d2a509edee99fd8e6096f872"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/val/panel_images.csv",
+          "bytes": 45628,
+          "sha256": "61bd217342ce188e6457738b83e1b30894c72e28c5fd5bf13b57ca0b0a3c4f6a"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/val_tasks.csv",
+          "bytes": 3670,
+          "sha256": "2359e81df117ee256dfa1ea777b5866bb48765ae4d17ad2f32123dc58a082017"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision/panel_images.csv",
+          "bytes": 93238,
+          "sha256": "35b49eb530ef8b9ac7e52ea9d08af374d82db763fe3a3d5454d4855afdda6931"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision/prep_summary.json",
+          "bytes": 4981,
+          "sha256": "60bafcec798dc904f89998d116e6cc43f25f69828d15b3a64a90d7bca37129db"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision/teacher_scale_diagnostics.json",
+          "bytes": 2663,
+          "sha256": "6a0b1dc10fb7e92bd27ac75cd79769047e54b60d1b428e753c9ab9ac148251c1"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision/train/panel_images.csv",
+          "bytes": 47668,
+          "sha256": "ac14ed71149a6b708a7bda2833548896ae62888fbd74760da94c8d83f72baa19"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision/train_tasks.csv",
+          "bytes": 12174,
+          "sha256": "63f172fa15e16c518b14c121ae335d352e8f7d681064322c85d1979d53b4cc47"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision/val/panel_images.csv",
+          "bytes": 45628,
+          "sha256": "61bd217342ce188e6457738b83e1b30894c72e28c5fd5bf13b57ca0b0a3c4f6a"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision/val_tasks.csv",
+          "bytes": 3670,
+          "sha256": "2359e81df117ee256dfa1ea777b5866bb48765ae4d17ad2f32123dc58a082017"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/train/evidence.npz",
+          "bytes": 3126016,
+          "sha256": "c80519c0c18dfe43af792f4b6f30ae62890fbeabf538d0f7d1780098fe92af11"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision/train/teacher.npz",
+          "bytes": 155922012,
+          "sha256": "a083643b2c1b0e0b28c8ae4c2d9abae66d941f217ba308f9669390f2a632b10e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/train/prefix_replay_sample.npz",
+          "bytes": 465940,
+          "sha256": "f537bd78c0f3b4ec41934971c8569f589cf2c07f44645a1027e87c83d49d4303"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/train/prefix_replay_sample.json",
+          "bytes": 629,
+          "sha256": "3e7be98fe243b7dbe000b43b336ab2a7662d9dcb10613fb532b13fc7d376fb0e"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/val/evidence.npz",
+          "bytes": 3126436,
+          "sha256": "9102fb1db28770eb8f15eb703fdab02ac8f115fa5472a1701619d7650e6889e4"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/supervision/val/teacher.npz",
+          "bytes": 155927363,
+          "sha256": "84ee6d341018d6202117536e982f06751061eee71cd522981b991dc7185b97b1"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/val/prefix_replay_sample.npz",
+          "bytes": 465789,
+          "sha256": "4a92636e8e07523258154c936a772238a80e08893ea923e18a3d63bdfc683766"
+        },
+        {
+          "path": "runs/depth-intervention-v1/flowers_b16_d9_49/features/val/prefix_replay_sample.json",
+          "bytes": 622,
+          "sha256": "3956db919baea6a9929c0f961ced64201e51456219492181ce2a3d8da6433c5c"
+        },
+        {
+          "path": "artifact_metadata/dependencies.json",
+          "bytes": 569,
+          "sha256": "36d59d586eed860e865ad61ed17587c9456510678d59296af6de7c3c77be2cab"
+        }
+      ]
+    }
+  ],
+  "evaluation_panels": [
+    "pets_d3",
+    "pets_d6",
+    "pets_d9",
+    "flowers_d3",
+    "flowers_d6",
+    "flowers_d9"
+  ],
+  "newly_trained_settings": [
+    "pets_b16_d3_49",
+    "pets_b16_d9_49",
+    "flowers_b16_d3_49",
+    "flowers_b16_d9_49"
+  ],
+  "block6_diagnostic_settings": [
+    "pets_b16_d6_49",
+    "flowers_b16_d6_49"
+  ],
+  "final_checkpoint_count": 24,
+  "teacher_arrays": [
+    {
+      "setting": "pets_b16_d3_49",
+      "split": "train",
+      "fields": [
+        "coefficients",
+        "intercepts",
+        "masks",
+        "image_ids"
+      ],
+      "images": 2944,
+      "coefficient_shape": [
+        2944,
+        196,
+        37
+      ],
+      "response_arrays_included": false
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "split": "val",
+      "fields": [
+        "coefficients",
+        "intercepts",
+        "masks",
+        "image_ids"
+      ],
+      "images": 736,
+      "coefficient_shape": [
+        736,
+        196,
+        37
+      ],
+      "response_arrays_included": false
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "split": "train",
+      "fields": [
+        "coefficients",
+        "intercepts",
+        "masks",
+        "image_ids"
+      ],
+      "images": 2944,
+      "coefficient_shape": [
+        2944,
+        196,
+        37
+      ],
+      "response_arrays_included": false
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "split": "val",
+      "fields": [
+        "coefficients",
+        "intercepts",
+        "masks",
+        "image_ids"
+      ],
+      "images": 736,
+      "coefficient_shape": [
+        736,
+        196,
+        37
+      ],
+      "response_arrays_included": false
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "split": "train",
+      "fields": [
+        "coefficients",
+        "intercepts",
+        "masks",
+        "image_ids"
+      ],
+      "images": 1020,
+      "coefficient_shape": [
+        1020,
+        196,
+        102
+      ],
+      "response_arrays_included": false
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "split": "val",
+      "fields": [
+        "coefficients",
+        "intercepts",
+        "masks",
+        "image_ids"
+      ],
+      "images": 1020,
+      "coefficient_shape": [
+        1020,
+        196,
+        102
+      ],
+      "response_arrays_included": false
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "split": "train",
+      "fields": [
+        "coefficients",
+        "intercepts",
+        "masks",
+        "image_ids"
+      ],
+      "images": 1020,
+      "coefficient_shape": [
+        1020,
+        196,
+        102
+      ],
+      "response_arrays_included": false
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "split": "val",
+      "fields": [
+        "coefficients",
+        "intercepts",
+        "masks",
+        "image_ids"
+      ],
+      "images": 1020,
+      "coefficient_shape": [
+        1020,
+        196,
+        102
+      ],
+      "response_arrays_included": false
+    }
+  ],
+  "prefix_replay_samples": [
+    {
+      "setting": "pets_b16_d3_49",
+      "split": "train",
+      "source_row": 0,
+      "image_id": "Abyssinian_1",
+      "class_id": 0,
+      "source_prefix": "/data2/zhao.tong/experiments/runs/depth-intervention-v1/pets_b16_d3_49/features/train/prefix_tokens.npy",
+      "full_cache_shape": [
+        2944,
+        197,
+        768
+      ],
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "dtype": "float16",
+      "matching_task_count": 29,
+      "archive_sample": "runs/depth-intervention-v1/pets_b16_d3_49/features/train/prefix_replay_sample.npz",
+      "scope": "First cached image only. Use bundled task manifests for the training prior and paired checkpoint configurations for selector replay."
+    },
+    {
+      "setting": "pets_b16_d3_49",
+      "split": "val",
+      "source_row": 0,
+      "image_id": "Abyssinian_100",
+      "class_id": 0,
+      "source_prefix": "/data2/zhao.tong/experiments/runs/depth-intervention-v1/pets_b16_d3_49/features/val/prefix_tokens.npy",
+      "full_cache_shape": [
+        736,
+        197,
+        768
+      ],
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "dtype": "float16",
+      "matching_task_count": 6,
+      "archive_sample": "runs/depth-intervention-v1/pets_b16_d3_49/features/val/prefix_replay_sample.npz",
+      "scope": "First cached image only. Use bundled task manifests for the training prior and paired checkpoint configurations for selector replay."
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "split": "train",
+      "source_row": 0,
+      "image_id": "Abyssinian_1",
+      "class_id": 0,
+      "source_prefix": "/data2/zhao.tong/experiments/runs/depth-intervention-v1/pets_b16_d9_49/features/train/prefix_tokens.npy",
+      "full_cache_shape": [
+        2944,
+        197,
+        768
+      ],
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "dtype": "float16",
+      "matching_task_count": 29,
+      "archive_sample": "runs/depth-intervention-v1/pets_b16_d9_49/features/train/prefix_replay_sample.npz",
+      "scope": "First cached image only. Use bundled task manifests for the training prior and paired checkpoint configurations for selector replay."
+    },
+    {
+      "setting": "pets_b16_d9_49",
+      "split": "val",
+      "source_row": 0,
+      "image_id": "Abyssinian_100",
+      "class_id": 0,
+      "source_prefix": "/data2/zhao.tong/experiments/runs/depth-intervention-v1/pets_b16_d9_49/features/val/prefix_tokens.npy",
+      "full_cache_shape": [
+        736,
+        197,
+        768
+      ],
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "dtype": "float16",
+      "matching_task_count": 6,
+      "archive_sample": "runs/depth-intervention-v1/pets_b16_d9_49/features/val/prefix_replay_sample.npz",
+      "scope": "First cached image only. Use bundled task manifests for the training prior and paired checkpoint configurations for selector replay."
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "split": "train",
+      "source_row": 0,
+      "image_id": "image_00028",
+      "class_id": 76,
+      "source_prefix": "/data2/zhao.tong/experiments/runs/depth-intervention-v1/flowers_b16_d3_49/features/train/prefix_tokens.npy",
+      "full_cache_shape": [
+        1020,
+        197,
+        768
+      ],
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "dtype": "float16",
+      "matching_task_count": 12,
+      "archive_sample": "runs/depth-intervention-v1/flowers_b16_d3_49/features/train/prefix_replay_sample.npz",
+      "scope": "First cached image only. Use bundled task manifests for the training prior and paired checkpoint configurations for selector replay."
+    },
+    {
+      "setting": "flowers_b16_d3_49",
+      "split": "val",
+      "source_row": 0,
+      "image_id": "image_00017",
+      "class_id": 76,
+      "source_prefix": "/data2/zhao.tong/experiments/runs/depth-intervention-v1/flowers_b16_d3_49/features/val/prefix_tokens.npy",
+      "full_cache_shape": [
+        1020,
+        197,
+        768
+      ],
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "dtype": "float16",
+      "matching_task_count": 4,
+      "archive_sample": "runs/depth-intervention-v1/flowers_b16_d3_49/features/val/prefix_replay_sample.npz",
+      "scope": "First cached image only. Use bundled task manifests for the training prior and paired checkpoint configurations for selector replay."
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "split": "train",
+      "source_row": 0,
+      "image_id": "image_00028",
+      "class_id": 76,
+      "source_prefix": "/data2/zhao.tong/experiments/runs/depth-intervention-v1/flowers_b16_d9_49/features/train/prefix_tokens.npy",
+      "full_cache_shape": [
+        1020,
+        197,
+        768
+      ],
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "dtype": "float16",
+      "matching_task_count": 12,
+      "archive_sample": "runs/depth-intervention-v1/flowers_b16_d9_49/features/train/prefix_replay_sample.npz",
+      "scope": "First cached image only. Use bundled task manifests for the training prior and paired checkpoint configurations for selector replay."
+    },
+    {
+      "setting": "flowers_b16_d9_49",
+      "split": "val",
+      "source_row": 0,
+      "image_id": "image_00017",
+      "class_id": 76,
+      "source_prefix": "/data2/zhao.tong/experiments/runs/depth-intervention-v1/flowers_b16_d9_49/features/val/prefix_tokens.npy",
+      "full_cache_shape": [
+        1020,
+        197,
+        768
+      ],
+      "prefix_shape": [
+        1,
+        197,
+        768
+      ],
+      "dtype": "float16",
+      "matching_task_count": 4,
+      "archive_sample": "runs/depth-intervention-v1/flowers_b16_d9_49/features/val/prefix_replay_sample.npz",
+      "scope": "First cached image only. Use bundled task manifests for the training prior and paired checkpoint configurations for selector replay."
+    }
+  ],
+  "dependencies": {
+    "block6_evaluation_and_checkpoint_bundles": {
+      "backup_manifest": "results/hybrid-followup-v1/backup_manifest.json",
+      "archives": [
+        "hybrid-specificity-v1.zip",
+        "hybrid-distillation-v1.zip"
+      ]
+    },
+    "block6_original_core_replay": {
+      "backup_manifest": "results/parallel-research-pilots-v1/backup_manifest.json",
+      "archive": "core-protection-v1.zip"
+    },
+    "scope": "Block-6 evaluation rows are included for the paired depth analysis. Old block-6 checkpoints and teacher caches are not duplicated; use their existing backup manifests."
+  },
+  "full_prefix_caches_included": false,
+  "raw_teacher_responses_included": false,
+  "server_raw_runs_retained": true,
+  "restore_scope": "All six evaluated panels, 24 new final selectors, complete new teacher coefficient/mask arrays, full-model evidence, training records and eight one-image prefix samples. Full prefixes and raw teacher responses remain at the source on the server."
+}

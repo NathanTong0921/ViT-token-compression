@@ -1,0 +1,40 @@
+{
+  "name": "conditioning-flowers-49-eval-v1.zip",
+  "bytes": 517237165,
+  "sha256": "3e03567c3a86b4e292a2206e68c3a63f45313e1aaea9827b2cce548e83ea88fc",
+  "members": [
+    {
+      "path": "runs/flowers-selector-rank-49-eval-v1/eval_summary.json",
+      "bytes": 8582
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-eval-v1/examples.csv",
+      "bytes": 986243
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-eval-v1/full/predictions.csv",
+      "bytes": 15315333
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-eval-v1/full/predictions.npz",
+      "bytes": 259692198
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-eval-v1/random/predictions.csv",
+      "bytes": 7597917
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-eval-v1/random/predictions.npz",
+      "bytes": 116770603
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-eval-v1/references/predictions.csv",
+      "bytes": 7579213
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-eval-v1/references/predictions.npz",
+      "bytes": 133082555
+    }
+  ],
+  "reused": "Frozen CLIP prefix features, budget-specific teacher supervision and original KL checkpoints are unchanged and retained in prior milestone archives."
+}

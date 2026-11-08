@@ -1,6 +1,8 @@
 # Storage and backup plan
 
-Status, 2026-10-27: the Pets three-budget/H2 study and Flowers102 targeted validation are complete. Small statistics, case arrays, figures and audits are versioned in Git. Flowers adds five scientific archives totaling 2.41 GB, retained locally and in its versioned Release; they preserve both budgets' teachers/predictions and all twelve selectors. Earlier Pets evidence, including the 147-token results, remains intact. Frozen prefixes stay on the server and can be regenerated.
+Policy update, 2026-11-08: keep code, configurations, manifests, curated results, figure sources and writing materials locally. Keep complete experiment archives, selector checkpoints and bulk raw arrays remotely, using server working outputs and versioned GitHub Release attachments. Retrieve individual archives when an analysis needs them, then remove the temporary local copies. This policy supersedes the local-retention descriptions in the milestone records below, which document their original backup stage.
+
+Local archive offload is complete. All 55 ZIPs matched their uploaded GitHub assets and their local copies were removed, freeing 26.99 GB. The project folder now occupies approximately 1.32 GB; small archive metadata remains local. The repository, including its approximately 0.79 GB of curated results and 0.51 GB of Git history, stays local. Asset locations and cleanup details are recorded in [the offload manifest](../results/storage-offload-v1/manifest.json).
 
 The single-stage pruning pilot adds approximately 21.6 MB of scores, embeddings, retained positions, metrics and figure exports under `results/pets-pruning-v1/`. These are small enough for ordinary Git. Its approximately 223 MB prefix cache existed only in host RAM and was released after the run; no persistent prefix cache or selection-supervision cache was created.
 
@@ -8,7 +10,7 @@ The single-stage pruning pilot adds approximately 21.6 MB of scores, embeddings,
 
 For frozen CLIP ViT-B/16 on Oxford-IIIT Pets and Flowers102, budget 100 GB of available project storage on the server. Expected working use is approximately 30–60 GB with controlled cache retention. Use 150 GB if retaining additional model/layer caches or several environment copies. These figures exclude the operating-system image and large video-editing source files.
 
-Locally, reserve 20–30 GB for development, dataset/model copies, key experiment artifacts, and report materials. Keeping the full reusable feature caches as well may require 40–50 GB. Ordinary Git history should remain small, preferably below 1 GB; larger essential artifacts go in GitHub Releases.
+The current local working set is approximately 1.32 GB after archive offload, plus space for report/PPT/video materials and any temporary downloads. Full datasets, pretrained CLIP weights, feature caches and selector checkpoints do not need permanent local copies. Ordinary Git history should remain small, preferably below 1 GB; larger essential artifacts go in GitHub Releases.
 
 These are planning allowances, not disk-use measurements or upper bounds. Runtime packages/download caches can occupy 10–25 GB on the server; datasets and pretrained weights approximately 3–8 GB; ranking supervision, experiment outputs, selector checkpoints, and temporary files approximately 5–15 GB. Feature caches are additional.
 
@@ -31,25 +33,25 @@ Cache the unmasked prefix features and the necessary global embeddings/ranking t
 | Material | Server | Local | GitHub |
 | --- | --- | --- | --- |
 | Code, configurations, environment specification, image splits, candidate-set manifests, text prompts | Yes | Yes | Git |
-| Per-example results supporting all reported comparisons, including baselines and negative findings | Yes | Yes | Git for small files; Release attachments for larger bundles |
+| Per-example results supporting all reported comparisons, including baselines and negative findings | Yes | Curated analysis arrays; full arrays on demand | Git for small files; Release attachments for larger bundles |
 | Seed-level metrics, timing samples, statistical summaries, figure source tables and plotting scripts | Yes | Yes | Git or Release attachments according to size |
 | Final figures, token-selection visualizations, report/PPT source and exports | As needed | Yes | Git or Release attachments according to size |
 | Images used for qualitative figures, with original IDs, preprocessing and source attribution | Yes | Yes | Relevant figure assets; source-image redistribution follows dataset permissions |
-| Selected conditional and unconditional selector checkpoints for the reported seeds/configurations | Yes | Yes | Release attachments |
-| Full public datasets and pretrained CLIP weights | Yes | Retain one copy when useful | Download sources/version information, not duplicate bulk files |
-| Recomputable prefix caches, masked embeddings, temporary tensors and intermediate checkpoints | While useful | Optional | Normally omitted |
+| Selected conditional and unconditional selector checkpoints for the reported seeds/configurations | Yes | On demand | Release attachments |
+| Full public datasets and pretrained CLIP weights | Yes | On demand | Download sources/version information, not duplicate bulk files |
+| Recomputable prefix caches, masked embeddings, temporary tensors and intermediate checkpoints | While useful | Temporary only when needed | Normally omitted |
 
 Per-example records must retain enough information to recalculate the reported comparisons: image/task identifiers, labels, candidate classes, model/selector configuration, seed, predictions or required class scores, full-model margins, retained token positions, and relevant cross-task selection outcomes. Store task-level geometry once where possible. Preserve source values at suitable precision rather than only rounded presentation tables.
 
 ## Transfer and verification
 
-After each substantive completed experiment, collect its evidence bundle, copy it to local storage, and push the small results or attach the larger bundle to a versioned GitHub Release. Keep the exact code/configuration association in an artifact manifest. Retain meaningful failed or inconclusive runs as well.
+After each substantive completed experiment, retain the working outputs on the server, copy the curated results and figure sources to the local repository, and push them to GitHub. Attach the complete larger evidence bundle to a versioned GitHub Release. Keep its remote location and code/configuration association in an artifact manifest. Retain meaningful failed or inconclusive runs as well.
 
 Downloads staged locally only to reach the server belong in `cache/transfers/`. After verifying successful transfer and extraction/loading on the server, delete those local archives and temporary extracted copies promptly. Apply the same rule to temporary installation wheels and duplicate download caches created for the transfer. Keep local scientific evidence and selected paper assets according to the table above.
 
-Local large-artifact archives are retained outside the Git checkout under `/Users/nathan_tong0921/Desktop/2012 Project/artifacts/`, in a directory for each experiment. The server checkout is configured in the ignored local `.env.server`. Existing ignored checkpoint/cache paths remain ignored. Release attachments provide the GitHub copy of selected model weights without committing them to ordinary Git history.
+The project-parent `/Users/nathan_tong0921/Desktop/2012 Project/artifacts/` directory is an on-demand staging location, rather than a permanent local replica. Small archive inventories and remote asset references remain local. Download a needed bundle there, extract the required files, and remove the temporary copies when the analysis is complete. Existing figures and summary-based plots use the retained repository results. The server checkout is configured in the ignored local `.env.server`; ignored checkpoint/cache paths remain ignored.
 
-A backup is complete only after its contents have been checked at the destination. Verify at least one bundle by downloading it from GitHub, opening the records, loading a selected checkpoint, and reproducing a summary table or figure. Before deleting unique server results or releasing the instance, confirm that all required local and GitHub copies are complete. Recomputable bulk caches are optional backups.
+Check uploaded assets against the archive inventory before removing local ZIPs, and retain the destination recovery records alongside the results. Full-array reanalysis can run on the server or use the corresponding Release attachment. Before deleting unique server results or releasing the instance, confirm that the required evidence and checkpoints are available in GitHub Releases. Recomputable bulk caches are optional backups.
 
 ## Source references
 

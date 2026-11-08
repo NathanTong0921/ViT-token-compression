@@ -1,0 +1,431 @@
+{
+  "distillation": {
+    "archive": "hybrid-distillation-v1.zip",
+    "passed": true,
+    "device": "cpu",
+    "atol": 1e-05,
+    "base_checkpoints_reconstructed": 9,
+    "branch_checkpoints_reconstructed": 18,
+    "verification_inputs": 3,
+    "forward_checks": [
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "method": "shared",
+        "logit_max_absolute_error": 1.7881393432617188e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "method": "task_residual",
+        "logit_max_absolute_error": 5.245208740234375e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "method": "image_residual",
+        "logit_max_absolute_error": 4.947185516357422e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "method": "shared",
+        "logit_max_absolute_error": 1.9669532775878906e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "method": "task_residual",
+        "logit_max_absolute_error": 5.4836273193359375e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "method": "image_residual",
+        "logit_max_absolute_error": 4.291534423828125e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "method": "shared",
+        "logit_max_absolute_error": 2.5033950805664062e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "method": "task_residual",
+        "logit_max_absolute_error": 4.291534423828125e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "method": "image_residual",
+        "logit_max_absolute_error": 5.9604644775390625e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "method": "shared",
+        "logit_max_absolute_error": 2.384185791015625e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "method": "task_residual",
+        "logit_max_absolute_error": 3.814697265625e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "method": "image_residual",
+        "logit_max_absolute_error": 4.76837158203125e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "method": "shared",
+        "logit_max_absolute_error": 1.9073486328125e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "method": "task_residual",
+        "logit_max_absolute_error": 5.4836273193359375e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "method": "image_residual",
+        "logit_max_absolute_error": 4.649162292480469e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "method": "shared",
+        "logit_max_absolute_error": 2.384185791015625e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "method": "task_residual",
+        "logit_max_absolute_error": 4.291534423828125e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "method": "image_residual",
+        "logit_max_absolute_error": 5.0067901611328125e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "method": "shared",
+        "logit_max_absolute_error": 2.384185791015625e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "method": "task_residual",
+        "logit_max_absolute_error": 3.6954879760742188e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "method": "image_residual",
+        "logit_max_absolute_error": 5.0067901611328125e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "method": "shared",
+        "logit_max_absolute_error": 3.2186508178710938e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "method": "task_residual",
+        "logit_max_absolute_error": 5.245208740234375e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "method": "image_residual",
+        "logit_max_absolute_error": 5.7220458984375e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "method": "shared",
+        "logit_max_absolute_error": 2.1457672119140625e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "method": "task_residual",
+        "logit_max_absolute_error": 4.172325134277344e-06,
+        "topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "method": "image_residual",
+        "logit_max_absolute_error": 4.649162292480469e-06,
+        "topk_exact": true
+      }
+    ],
+    "maximum_logit_absolute_error": 5.9604644775390625e-06,
+    "target_checks": [
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "split": "train",
+        "rows": 84653,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "split": "val",
+        "rows": 2624,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "split": "train",
+        "rows": 84653,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "split": "val",
+        "rows": 2624,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "split": "train",
+        "rows": 84653,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "split": "val",
+        "rows": 2624,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "split": "train",
+        "rows": 12240,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "split": "val",
+        "rows": 4080,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "split": "train",
+        "rows": 12240,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "split": "val",
+        "rows": 4080,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "split": "train",
+        "rows": 12240,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "split": "val",
+        "rows": 4080,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "split": "train",
+        "rows": 12240,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "split": "val",
+        "rows": 4080,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "split": "train",
+        "rows": 12240,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "split": "val",
+        "rows": 4080,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "split": "train",
+        "rows": 12240,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "split": "val",
+        "rows": 4080,
+        "arrays_read": 8,
+        "fixed_k_and_probability_verified": true
+      }
+    ],
+    "raw_checks": [
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "validation_rows": 2624,
+        "arrays_read": 11,
+        "saved_topk_matches_logits": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "validation_rows": 2624,
+        "arrays_read": 11,
+        "saved_topk_matches_logits": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "validation_rows": 2624,
+        "arrays_read": 11,
+        "saved_topk_matches_logits": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "validation_rows": 4080,
+        "arrays_read": 11,
+        "saved_topk_matches_logits": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "validation_rows": 4080,
+        "arrays_read": 11,
+        "saved_topk_matches_logits": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "validation_rows": 4080,
+        "arrays_read": 11,
+        "saved_topk_matches_logits": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "validation_rows": 4080,
+        "arrays_read": 11,
+        "saved_topk_matches_logits": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "validation_rows": 4080,
+        "arrays_read": 11,
+        "saved_topk_matches_logits": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "validation_rows": 4080,
+        "arrays_read": 11,
+        "saved_topk_matches_logits": true
+      }
+    ],
+    "scope": "CPU selector reconstruction for one saved input per setting, all seeds/arms; all target/raw NPZ arrays readable and structurally checked. Does not rerun CLIP or training."
+  },
+  "specificity": {
+    "archive": "hybrid-specificity-v1.zip",
+    "passed": true,
+    "setting": "flowers_b16_49",
+    "seed_pair": [
+      2041,
+      2042
+    ],
+    "validation_rows": 4080,
+    "cu_minus_uu": {
+      "accuracy": 0.0031862745098039215,
+      "margin": 0.0008838044678713609
+    },
+    "maximum_mean_error": 0.0,
+    "scope": "One pair's raw archived classification scores reproduce its reported weighted means; no model replay or bootstrap rerun."
+  }
+}

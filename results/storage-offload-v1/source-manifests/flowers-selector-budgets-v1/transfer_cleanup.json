@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-27T11:05:48.865680+00:00",
+  "server_transfer_zip_copies_removed": [
+    {
+      "name": "flowers-selector-49-supervision-v1.zip",
+      "bytes": 678179424
+    },
+    {
+      "name": "flowers-selector-49-eval-v1.zip",
+      "bytes": 515734236
+    },
+    {
+      "name": "flowers-selector-98-supervision-v1.zip",
+      "bytes": 677318981
+    },
+    {
+      "name": "flowers-selector-98-eval-v1.zip",
+      "bytes": 517396959
+    },
+    {
+      "name": "flowers-selector-models-and-records-v1.zip",
+      "bytes": 23628778
+    }
+  ],
+  "server_transfer_directory_removed": "cache/transfers/flowers-selector-budgets-v1",
+  "server_original_experiment_directories_retained": true,
+  "local_dataset_transfer_staging_removed": "cache/transfers/flowers102-data",
+  "local_recovery_transfer_staging_removed": "cache/transfers/flowers-github-recovery",
+  "local_scientific_archives_retained": [
+    "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.zip",
+    "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.zip",
+    "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.zip",
+    "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.zip",
+    "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.zip"
+  ],
+  "local_manifests_asset_responses_and_verification_records_retained": true,
+  "scientific_data_deleted": false
+}

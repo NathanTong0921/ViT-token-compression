@@ -1,0 +1,40 @@
+{
+  "name": "conditioning-pets-98-eval-v1.zip",
+  "bytes": 739624261,
+  "sha256": "37cb0ffe4281e58e96da25b73a015ae51e26c548849cad508e4d82f73b94054e",
+  "members": [
+    {
+      "path": "runs/pets-selector-rank-98-eval-v1/eval_summary.json",
+      "bytes": 8550
+    },
+    {
+      "path": "runs/pets-selector-rank-98-eval-v1/examples.csv",
+      "bytes": 1473259
+    },
+    {
+      "path": "runs/pets-selector-rank-98-eval-v1/full/predictions.csv",
+      "bytes": 22568250
+    },
+    {
+      "path": "runs/pets-selector-rank-98-eval-v1/full/predictions.npz",
+      "bytes": 364407169
+    },
+    {
+      "path": "runs/pets-selector-rank-98-eval-v1/random/predictions.csv",
+      "bytes": 11151637
+    },
+    {
+      "path": "runs/pets-selector-rank-98-eval-v1/random/predictions.npz",
+      "bytes": 170358680
+    },
+    {
+      "path": "runs/pets-selector-rank-98-eval-v1/references/predictions.csv",
+      "bytes": 11148615
+    },
+    {
+      "path": "runs/pets-selector-rank-98-eval-v1/references/predictions.npz",
+      "bytes": 193446130
+    }
+  ],
+  "reused": "Frozen CLIP prefix features, budget-specific teacher supervision and original KL checkpoints are unchanged and retained in prior milestone archives."
+}

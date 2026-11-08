@@ -1,0 +1,48 @@
+{
+  "name": "vitl128-pets-supervision-v1.zip",
+  "bytes": 521463574,
+  "sha256": "d2e58ea5b0cacad5c07c3103bc2183fe4caa8c4ffc9d59930445e303d7cfd212",
+  "members": [
+    {
+      "path": "runs/pets-vitl128-supervision-v1/panel_images.csv",
+      "bytes": 186196
+    },
+    {
+      "path": "runs/pets-vitl128-supervision-v1/prep_summary.json",
+      "bytes": 4581
+    },
+    {
+      "path": "runs/pets-vitl128-supervision-v1/train/evidence.npz",
+      "bytes": 11117864
+    },
+    {
+      "path": "runs/pets-vitl128-supervision-v1/train/panel_images.csv",
+      "bytes": 150149
+    },
+    {
+      "path": "runs/pets-vitl128-supervision-v1/train/teacher.npz",
+      "bytes": 405970794
+    },
+    {
+      "path": "runs/pets-vitl128-supervision-v1/train_tasks.csv",
+      "bytes": 9320
+    },
+    {
+      "path": "runs/pets-vitl128-supervision-v1/val/evidence.npz",
+      "bytes": 2855964
+    },
+    {
+      "path": "runs/pets-vitl128-supervision-v1/val/panel_images.csv",
+      "bytes": 36105
+    },
+    {
+      "path": "runs/pets-vitl128-supervision-v1/val/teacher.npz",
+      "bytes": 101488709
+    },
+    {
+      "path": "runs/pets-vitl128-supervision-v1/val_tasks.csv",
+      "bytes": 1051
+    }
+  ],
+  "omitted": "Regenerable prefix_tokens.npy; public raw images and frozen CLIP weights."
+}

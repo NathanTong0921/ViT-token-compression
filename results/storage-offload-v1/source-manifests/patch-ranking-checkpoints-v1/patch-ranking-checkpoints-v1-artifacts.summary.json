@@ -1,0 +1,17 @@
+{
+  "source": "/data2/zhao.tong/experiments/runs/patch-ranking-checkpoints-v1",
+  "archive": "/data2/zhao.tong/artifacts/patch-ranking-checkpoints-v1/patch-ranking-checkpoints-v1-artifacts.zip",
+  "file_count": 78,
+  "source_bytes": 102310004,
+  "archive_bytes": 85655688,
+  "datasets": {
+    "pets": {
+      "files": 39,
+      "source_bytes": 40710782
+    },
+    "flowers": {
+      "files": 39,
+      "source_bytes": 61599222
+    }
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "name": "ablations-models-and-records-v1.zip",
+  "bytes": 50621905,
+  "sha256": "9eb18b32a7f477909a932ec819676036192e226b613584e956aa28394ee98e66",
+  "members": [
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/completed_runs.json",
+      "bytes": 8632
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/full/seed_2041/difference_only.pt",
+      "bytes": 1401837
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt",
+      "bytes": 1394272
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/full/seed_2041/mean_only.pt",
+      "bytes": 1401747
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/full/seed_2042/difference_only.pt",
+      "bytes": 1401837
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt",
+      "bytes": 1394272
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/full/seed_2042/mean_only.pt",
+      "bytes": 1401747
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/full/seed_2043/difference_only.pt",
+      "bytes": 1401837
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt",
+      "bytes": 1394272
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/full/seed_2043/mean_only.pt",
+      "bytes": 1401747
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/sampling_audit.json",
+      "bytes": 118296
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/training_history.csv",
+      "bytes": 29974
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-training-v1/training_summary.json",
+      "bytes": 12556
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/completed_runs.json",
+      "bytes": 8642
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/full/seed_2041/difference_only.pt",
+      "bytes": 1401837
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/full/seed_2041/image_only_wide.pt",
+      "bytes": 1394272
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/full/seed_2041/mean_only.pt",
+      "bytes": 1401747
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/full/seed_2042/difference_only.pt",
+      "bytes": 1401837
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/full/seed_2042/image_only_wide.pt",
+      "bytes": 1394272
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/full/seed_2042/mean_only.pt",
+      "bytes": 1401747
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/full/seed_2043/difference_only.pt",
+      "bytes": 1401837
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/full/seed_2043/image_only_wide.pt",
+      "bytes": 1394272
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/full/seed_2043/mean_only.pt",
+      "bytes": 1401747
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/sampling_audit.json",
+      "bytes": 118296
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/training_history.csv",
+      "bytes": 29966
+    },
+    {
+      "path": "runs/flowers-selector-ablations-98-training-v1/training_summary.json",
+      "bytes": 12566
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/completed_runs.json",
+      "bytes": 8623
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/full/seed_2041/difference_only.pt",
+      "bytes": 1401773
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt",
+      "bytes": 1394208
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/full/seed_2041/mean_only.pt",
+      "bytes": 1401683
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/full/seed_2042/difference_only.pt",
+      "bytes": 1401773
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt",
+      "bytes": 1394208
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/full/seed_2042/mean_only.pt",
+      "bytes": 1401683
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/full/seed_2043/difference_only.pt",
+      "bytes": 1401773
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt",
+      "bytes": 1394208
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/full/seed_2043/mean_only.pt",
+      "bytes": 1401683
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/sampling_audit.json",
+      "bytes": 332888
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/training_history.csv",
+      "bytes": 34510
+    },
+    {
+      "path": "runs/pets-selector-ablations-49-training-v1/training_summary.json",
+      "bytes": 12481
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/completed_runs.json",
+      "bytes": 8616
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/full/seed_2041/difference_only.pt",
+      "bytes": 1401837
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/full/seed_2041/image_only_wide.pt",
+      "bytes": 1394336
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/full/seed_2041/mean_only.pt",
+      "bytes": 1401747
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/full/seed_2042/difference_only.pt",
+      "bytes": 1401837
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/full/seed_2042/image_only_wide.pt",
+      "bytes": 1394336
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/full/seed_2042/mean_only.pt",
+      "bytes": 1401747
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/full/seed_2043/difference_only.pt",
+      "bytes": 1401837
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/full/seed_2043/image_only_wide.pt",
+      "bytes": 1394336
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/full/seed_2043/mean_only.pt",
+      "bytes": 1401747
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/sampling_audit.json",
+      "bytes": 332888
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/training_history.csv",
+      "bytes": 34307
+    },
+    {
+      "path": "runs/pets-selector-ablations-98-training-v1/training_summary.json",
+      "bytes": 12551
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/analysis_flowers_status.json",
+      "bytes": 1776
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/analysis_pets_status.json",
+      "bytes": 1737
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/archive_evidence.py",
+      "bytes": 1857
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/driver_analysis_flowers.log",
+      "bytes": 0
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/driver_analysis_pets.log",
+      "bytes": 0
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/driver_k49.log",
+      "bytes": 0
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/driver_k98.log",
+      "bytes": 0
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/flowers_analysis.log",
+      "bytes": 2884
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/flowers_audit.log",
+      "bytes": 68
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/flowers_evaluate_49.log",
+      "bytes": 835
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/flowers_evaluate_98.log",
+      "bytes": 834
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/flowers_train_49.log",
+      "bytes": 25767
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/flowers_train_98.log",
+      "bytes": 25767
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/k49_status.json",
+      "bytes": 2624
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/k98_status.json",
+      "bytes": 2625
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/launch.json",
+      "bytes": 141
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/pets_analysis.log",
+      "bytes": 2884
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/pets_audit.log",
+      "bytes": 65
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/pets_evaluate_49.log",
+      "bytes": 831
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/pets_evaluate_98.log",
+      "bytes": 830
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/pets_train_49.log",
+      "bytes": 29717
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/pets_train_98.log",
+      "bytes": 29718
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/pipeline.py",
+      "bytes": 1563
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/plan_analysis.json",
+      "bytes": 1199
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/plan_analysis_flowers.json",
+      "bytes": 943
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/plan_analysis_pets.json",
+      "bytes": 906
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/plan_k49.json",
+      "bytes": 1342
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/plan_k98.json",
+      "bytes": 1342
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/release_evidence.py",
+      "bytes": 4577
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/server_tests_final.txt",
+      "bytes": 1053
+    },
+    {
+      "path": "runs/selector-ablations-pipeline-v1/server_tests_training.txt",
+      "bytes": 1052
+    }
+  ],
+  "reused": "Existing KL checkpoints, frozen CLIP prefix caches and budget-specific teacher supervision are unchanged and retained in earlier milestones."
+}

@@ -1,0 +1,1273 @@
+{
+  "verified_at_utc": "2026-11-08T09:57:15.686929+00:00",
+  "status": "local_zip_copies_removed",
+  "local_archive_root": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts",
+  "archive_count": 55,
+  "archive_bytes": 26989189536,
+  "verification": "GitHub uploaded state, byte count and server-reported content digest match every local ZIP.",
+  "filename_alias": "depth-intervention-training-v1.zip is stored as depth-intervention-training-v1-server.zip on GitHub.",
+  "source_manifests_preserved": [
+    "source-manifests/conditioning-objective-v1/conditioning-flowers-49-eval-v1.github.json",
+    "source-manifests/conditioning-objective-v1/conditioning-flowers-49-eval-v1.json",
+    "source-manifests/conditioning-objective-v1/conditioning-flowers-98-eval-v1.github.json",
+    "source-manifests/conditioning-objective-v1/conditioning-flowers-98-eval-v1.json",
+    "source-manifests/conditioning-objective-v1/conditioning-models-and-records-v1.github.json",
+    "source-manifests/conditioning-objective-v1/conditioning-models-and-records-v1.json",
+    "source-manifests/conditioning-objective-v1/conditioning-pets-49-eval-v1.github.json",
+    "source-manifests/conditioning-objective-v1/conditioning-pets-49-eval-v1.json",
+    "source-manifests/conditioning-objective-v1/conditioning-pets-98-eval-v1.github.json",
+    "source-manifests/conditioning-objective-v1/conditioning-pets-98-eval-v1.json",
+    "source-manifests/conditioning-objective-v1/github_recovery.json",
+    "source-manifests/depth-intervention-v1/package_manifest.json",
+    "source-manifests/familiarity-residual-v1/flowers-familiarity-replications-v1.github.json",
+    "source-manifests/familiarity-residual-v1/flowers-familiarity-replications-v1.json",
+    "source-manifests/familiarity-residual-v1/github_restore_verification.json",
+    "source-manifests/familiarity-residual-v1/pets-familiarity-replications-v1.github.json",
+    "source-manifests/familiarity-residual-v1/pets-familiarity-replications-v1.json",
+    "source-manifests/familiarity-residual-v1/release.json",
+    "source-manifests/familiarity-residual-v1/shared-residual-and-prior-v1.github.json",
+    "source-manifests/familiarity-residual-v1/shared-residual-and-prior-v1.json",
+    "source-manifests/final-test-v1/archive_summary.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.github.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.verification.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.github.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.verification.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.github.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.verification.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.github.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.verification.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.github.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.json",
+    "source-manifests/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.verification.json",
+    "source-manifests/flowers-selector-budgets-v1/github_recovery_check.json",
+    "source-manifests/flowers-selector-budgets-v1/github_recovery_verification.json",
+    "source-manifests/flowers-selector-budgets-v1/local_archive_verification.json",
+    "source-manifests/flowers-selector-budgets-v1/release_assets.json",
+    "source-manifests/flowers-selector-budgets-v1/transfer_cleanup.json",
+    "source-manifests/geometry-permutation-v1/geometry-permutation-evidence-v1.github.json",
+    "source-manifests/geometry-permutation-v1/geometry-permutation-evidence-v1.json",
+    "source-manifests/hybrid-followup-v1/backup_manifest.json",
+    "source-manifests/hybrid-followup-v1/cost_summary.json",
+    "source-manifests/hybrid-followup-v1/github_restore_verification.json",
+    "source-manifests/hybrid-followup-v1/hybrid-distillation-v1.github.json",
+    "source-manifests/hybrid-followup-v1/hybrid-distillation-v1.json",
+    "source-manifests/hybrid-followup-v1/hybrid-specificity-v1.github.json",
+    "source-manifests/hybrid-followup-v1/hybrid-specificity-v1.json",
+    "source-manifests/hybrid-followup-v1/local_restore_verification.json",
+    "source-manifests/hybrid-followup-v1/release.json",
+    "source-manifests/nway-v1/archive_summary.json",
+    "source-manifests/parallel-mechanism-tests-v1/flowers-familiarity-switch-v1.github.json",
+    "source-manifests/parallel-mechanism-tests-v1/flowers-familiarity-switch-v1.json",
+    "source-manifests/parallel-mechanism-tests-v1/github_restore_verification.json",
+    "source-manifests/parallel-mechanism-tests-v1/matched-replacement-v1.github.json",
+    "source-manifests/parallel-mechanism-tests-v1/matched-replacement-v1.json",
+    "source-manifests/parallel-mechanism-tests-v1/pets-familiarity-switch-v1.github.json",
+    "source-manifests/parallel-mechanism-tests-v1/pets-familiarity-switch-v1.json",
+    "source-manifests/parallel-mechanism-tests-v1/release.json",
+    "source-manifests/parallel-research-pilots-v1/core-protection-v1.github.json",
+    "source-manifests/parallel-research-pilots-v1/core-protection-v1.json",
+    "source-manifests/parallel-research-pilots-v1/evidence-conflict-v1.github.json",
+    "source-manifests/parallel-research-pilots-v1/evidence-conflict-v1.json",
+    "source-manifests/parallel-research-pilots-v1/github_restore_verification.json",
+    "source-manifests/parallel-research-pilots-v1/release.json",
+    "source-manifests/parallel-research-pilots-v1/semantic-identity-v1.github.json",
+    "source-manifests/parallel-research-pilots-v1/semantic-identity-v1.json",
+    "source-manifests/patch-ranking-checkpoints-v1/patch-ranking-checkpoints-v1-artifacts.summary.json",
+    "source-manifests/patch-ranking-v1/patch-ranking-v1-artifacts.summary.json",
+    "source-manifests/selector-ablations-v1/ablations-flowers-49-eval-v1.github.json",
+    "source-manifests/selector-ablations-v1/ablations-flowers-49-eval-v1.json",
+    "source-manifests/selector-ablations-v1/ablations-flowers-98-eval-v1.github.json",
+    "source-manifests/selector-ablations-v1/ablations-flowers-98-eval-v1.json",
+    "source-manifests/selector-ablations-v1/ablations-models-and-records-v1.github.json",
+    "source-manifests/selector-ablations-v1/ablations-models-and-records-v1.json",
+    "source-manifests/selector-ablations-v1/ablations-pets-49-eval-v1.github.json",
+    "source-manifests/selector-ablations-v1/ablations-pets-49-eval-v1.json",
+    "source-manifests/selector-ablations-v1/ablations-pets-98-eval-v1.github.json",
+    "source-manifests/selector-ablations-v1/ablations-pets-98-eval-v1.json",
+    "source-manifests/selector-ablations-v1/github_recovery.json",
+    "source-manifests/set-distillation-v1/package_manifest.json",
+    "source-manifests/set-distillation-v1/release.json",
+    "source-manifests/vitl-and-latency-v1/final_sync.json",
+    "source-manifests/vitl-and-latency-v1/local_archive_verification.json",
+    "source-manifests/vitl-and-latency-v1/recovery_verification.json",
+    "source-manifests/vitl-and-latency-v1/release_assets.json",
+    "source-manifests/vitl-and-latency-v1/transfer_cleanup.json",
+    "source-manifests/vitl-and-latency-v1/vitl128-flowers-eval-v1.github.json",
+    "source-manifests/vitl-and-latency-v1/vitl128-flowers-eval-v1.json",
+    "source-manifests/vitl-and-latency-v1/vitl128-flowers-supervision-v1.github.json",
+    "source-manifests/vitl-and-latency-v1/vitl128-flowers-supervision-v1.json",
+    "source-manifests/vitl-and-latency-v1/vitl128-models-and-records-v1.github.json",
+    "source-manifests/vitl-and-latency-v1/vitl128-models-and-records-v1.json",
+    "source-manifests/vitl-and-latency-v1/vitl128-pets-eval-v1.github.json",
+    "source-manifests/vitl-and-latency-v1/vitl128-pets-eval-v1.json",
+    "source-manifests/vitl-and-latency-v1/vitl128-pets-supervision-v1.github.json",
+    "source-manifests/vitl-and-latency-v1/vitl128-pets-supervision-v1.json"
+  ],
+  "archives": [
+    {
+      "local_relative_path": "conditioning-benefit-v1/conditioning-benefit-v1-arrays.zip",
+      "bytes": 115185448,
+      "sha256": "fef46632c843f5e9910e2997e990d1c5c1c797796ac2e904f029ed5e733a6583",
+      "github": {
+        "id": 708917193,
+        "name": "conditioning-benefit-v1-arrays.zip",
+        "size": 115185448,
+        "state": "uploaded",
+        "digest": "sha256:fef46632c843f5e9910e2997e990d1c5c1c797796ac2e904f029ed5e733a6583",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/708917193",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-095175e20c9c7947b57b/conditioning-benefit-v1-arrays.zip"
+      },
+      "release": {
+        "id": 433721286,
+        "tag_name": "conditioning-benefit-v1",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-095175e20c9c7947b57b"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "conditioning-objective-v1/conditioning-flowers-49-eval-v1.zip",
+      "bytes": 517237165,
+      "sha256": "3e03567c3a86b4e292a2206e68c3a63f45313e1aaea9827b2cce548e83ea88fc",
+      "github": {
+        "id": 684490748,
+        "name": "conditioning-flowers-49-eval-v1.zip",
+        "size": 517237165,
+        "state": "uploaded",
+        "digest": "sha256:3e03567c3a86b4e292a2206e68c3a63f45313e1aaea9827b2cce548e83ea88fc",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/684490748",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/conditioning-objective-v1/conditioning-flowers-49-eval-v1.zip"
+      },
+      "release": {
+        "id": 426415762,
+        "tag_name": "conditioning-objective-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/conditioning-objective-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "conditioning-objective-v1/conditioning-flowers-98-eval-v1.zip",
+      "bytes": 519362063,
+      "sha256": "2ab2dcb8047fd6f32d276299dfc3d1b179f75973e3392f4ff27bd20c7639e408",
+      "github": {
+        "id": 684498932,
+        "name": "conditioning-flowers-98-eval-v1.zip",
+        "size": 519362063,
+        "state": "uploaded",
+        "digest": "sha256:2ab2dcb8047fd6f32d276299dfc3d1b179f75973e3392f4ff27bd20c7639e408",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/684498932",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/conditioning-objective-v1/conditioning-flowers-98-eval-v1.zip"
+      },
+      "release": {
+        "id": 426415762,
+        "tag_name": "conditioning-objective-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/conditioning-objective-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "conditioning-objective-v1/conditioning-models-and-records-v1.zip",
+      "bytes": 33901504,
+      "sha256": "d85067b8578b51dc52e3f62e7cb75db5505accb73fe93affb74d04293d0f9251",
+      "github": {
+        "id": 684528138,
+        "name": "conditioning-models-and-records-v1.zip",
+        "size": 33901504,
+        "state": "uploaded",
+        "digest": "sha256:d85067b8578b51dc52e3f62e7cb75db5505accb73fe93affb74d04293d0f9251",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/684528138",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/conditioning-objective-v1/conditioning-models-and-records-v1.zip"
+      },
+      "release": {
+        "id": 426415762,
+        "tag_name": "conditioning-objective-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/conditioning-objective-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "conditioning-objective-v1/conditioning-pets-49-eval-v1.zip",
+      "bytes": 564823940,
+      "sha256": "8edef49272a52097dfa480b1394a624080e1813012d780516f5f10abdef971e0",
+      "github": {
+        "id": 684465898,
+        "name": "conditioning-pets-49-eval-v1.zip",
+        "size": 564823940,
+        "state": "uploaded",
+        "digest": "sha256:8edef49272a52097dfa480b1394a624080e1813012d780516f5f10abdef971e0",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/684465898",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/conditioning-objective-v1/conditioning-pets-49-eval-v1.zip"
+      },
+      "release": {
+        "id": 426415762,
+        "tag_name": "conditioning-objective-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/conditioning-objective-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "conditioning-objective-v1/conditioning-pets-98-eval-v1.zip",
+      "bytes": 739624261,
+      "sha256": "37cb0ffe4281e58e96da25b73a015ae51e26c548849cad508e4d82f73b94054e",
+      "github": {
+        "id": 684480167,
+        "name": "conditioning-pets-98-eval-v1.zip",
+        "size": 739624261,
+        "state": "uploaded",
+        "digest": "sha256:37cb0ffe4281e58e96da25b73a015ae51e26c548849cad508e4d82f73b94054e",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/684480167",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/conditioning-objective-v1/conditioning-pets-98-eval-v1.zip"
+      },
+      "release": {
+        "id": 426415762,
+        "tag_name": "conditioning-objective-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/conditioning-objective-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "depth-intervention-v1/depth-intervention-evaluation-v1.zip",
+      "bytes": 176503319,
+      "sha256": "53979b1b3987067329ff494b7992ebce8567abad98e68f49cf32ac4da3798fd8",
+      "github": {
+        "id": 709058790,
+        "name": "depth-intervention-evaluation-v1.zip",
+        "size": 176503319,
+        "state": "uploaded",
+        "digest": "sha256:53979b1b3987067329ff494b7992ebce8567abad98e68f49cf32ac4da3798fd8",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/709058790",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-c8d3f0ecba66233141d1/depth-intervention-evaluation-v1.zip"
+      },
+      "release": {
+        "id": 433767484,
+        "tag_name": "depth-intervention-v1",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-c8d3f0ecba66233141d1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "depth-intervention-v1/depth-intervention-training-v1.zip",
+      "bytes": 1106594390,
+      "sha256": "41233ab9e1fbd902bd0059959bfbabaf3d3df0c5ac45383bb3411830555dfaad",
+      "github": {
+        "id": 709099123,
+        "name": "depth-intervention-training-v1-server.zip",
+        "size": 1106594390,
+        "state": "uploaded",
+        "digest": "sha256:41233ab9e1fbd902bd0059959bfbabaf3d3df0c5ac45383bb3411830555dfaad",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/709099123",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-c8d3f0ecba66233141d1/depth-intervention-training-v1-server.zip"
+      },
+      "release": {
+        "id": 433767484,
+        "tag_name": "depth-intervention-v1",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-c8d3f0ecba66233141d1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "familiarity-residual-v1/flowers-familiarity-replications-v1.zip",
+      "bytes": 537273207,
+      "sha256": "5adadad5394047ec3fb2965867ea11b0bfc73be9eda7dc04d5563d196acdd7d8",
+      "github": {
+        "id": 707885407,
+        "name": "flowers-familiarity-replications-v1.zip",
+        "size": 537273207,
+        "state": "uploaded",
+        "digest": "sha256:5adadad5394047ec3fb2965867ea11b0bfc73be9eda7dc04d5563d196acdd7d8",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/707885407",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a1f0d69cd5791859fec/flowers-familiarity-replications-v1.zip"
+      },
+      "release": {
+        "id": 433412690,
+        "tag_name": "untagged-0a1f0d69cd5791859fec",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-0a1f0d69cd5791859fec"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "familiarity-residual-v1/pets-familiarity-replications-v1.zip",
+      "bytes": 510223810,
+      "sha256": "330ef1adf38e5f62f1e22ecbc04391d4bdca41f4b908d08b620846df7e1d71fc",
+      "github": {
+        "id": 707885390,
+        "name": "pets-familiarity-replications-v1.zip",
+        "size": 510223810,
+        "state": "uploaded",
+        "digest": "sha256:330ef1adf38e5f62f1e22ecbc04391d4bdca41f4b908d08b620846df7e1d71fc",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/707885390",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a1f0d69cd5791859fec/pets-familiarity-replications-v1.zip"
+      },
+      "release": {
+        "id": 433412690,
+        "tag_name": "untagged-0a1f0d69cd5791859fec",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-0a1f0d69cd5791859fec"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "familiarity-residual-v1/shared-residual-and-prior-v1.zip",
+      "bytes": 181884713,
+      "sha256": "fa1a46f9f1aa662147d50a5431b15ea0283a4d6762360a5fbffa46fa224ed830",
+      "github": {
+        "id": 707892687,
+        "name": "shared-residual-and-prior-v1.zip",
+        "size": 181884713,
+        "state": "uploaded",
+        "digest": "sha256:fa1a46f9f1aa662147d50a5431b15ea0283a4d6762360a5fbffa46fa224ed830",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/707892687",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-0a1f0d69cd5791859fec/shared-residual-and-prior-v1.zip"
+      },
+      "release": {
+        "id": 433412690,
+        "tag_name": "untagged-0a1f0d69cd5791859fec",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-0a1f0d69cd5791859fec"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "final-test-v1/final-test-v1-common-artifacts.zip",
+      "bytes": 538338,
+      "sha256": "94fd0882894027570cb5922485f9c7811e912c9b7be84e79e4b8bfceb85965fe",
+      "github": {
+        "id": 723322187,
+        "name": "final-test-v1-common-artifacts.zip",
+        "size": 538338,
+        "state": "uploaded",
+        "digest": "sha256:94fd0882894027570cb5922485f9c7811e912c9b7be84e79e4b8bfceb85965fe",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/723322187",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/final-test-v1/final-test-v1-common-artifacts.zip"
+      },
+      "release": {
+        "id": 438112426,
+        "tag_name": "final-test-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/final-test-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "final-test-v1/final-test-v1-flowers_b16-part01-artifacts.zip",
+      "bytes": 1829732665,
+      "sha256": "9fc2c8a9e0bbf3e83d1cb6d05cdbff733e4cee0f05a480c31c3f0dab75a9af54",
+      "github": {
+        "id": 723339372,
+        "name": "final-test-v1-flowers_b16-part01-artifacts.zip",
+        "size": 1829732665,
+        "state": "uploaded",
+        "digest": "sha256:9fc2c8a9e0bbf3e83d1cb6d05cdbff733e4cee0f05a480c31c3f0dab75a9af54",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/723339372",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/final-test-v1/final-test-v1-flowers_b16-part01-artifacts.zip"
+      },
+      "release": {
+        "id": 438112426,
+        "tag_name": "final-test-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/final-test-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "final-test-v1/final-test-v1-flowers_b16-part02-artifacts.zip",
+      "bytes": 431178952,
+      "sha256": "a816f20b0474d2e3ffec4b86ae7260c37bb2e7d595d19039788e01ec452cca85",
+      "github": {
+        "id": 723325834,
+        "name": "final-test-v1-flowers_b16-part02-artifacts.zip",
+        "size": 431178952,
+        "state": "uploaded",
+        "digest": "sha256:a816f20b0474d2e3ffec4b86ae7260c37bb2e7d595d19039788e01ec452cca85",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/723325834",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/final-test-v1/final-test-v1-flowers_b16-part02-artifacts.zip"
+      },
+      "release": {
+        "id": 438112426,
+        "tag_name": "final-test-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/final-test-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "final-test-v1/final-test-v1-flowers_l14-artifacts.zip",
+      "bytes": 1128899686,
+      "sha256": "a5023fe65a7bf7e1115190329a5d68a7752cf213bd9fdea29d85062dc40966b9",
+      "github": {
+        "id": 723325801,
+        "name": "final-test-v1-flowers_l14-artifacts.zip",
+        "size": 1128899686,
+        "state": "uploaded",
+        "digest": "sha256:a5023fe65a7bf7e1115190329a5d68a7752cf213bd9fdea29d85062dc40966b9",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/723325801",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/final-test-v1/final-test-v1-flowers_l14-artifacts.zip"
+      },
+      "release": {
+        "id": 438112426,
+        "tag_name": "final-test-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/final-test-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "final-test-v1/final-test-v1-pets_b16-artifacts.zip",
+      "bytes": 1558709534,
+      "sha256": "cac34990e043d463a2e56e8eccba313cfad142f86f6f36450e8d36bffd825c86",
+      "github": {
+        "id": 723357748,
+        "name": "final-test-v1-pets_b16-artifacts.zip",
+        "size": 1558709534,
+        "state": "uploaded",
+        "digest": "sha256:cac34990e043d463a2e56e8eccba313cfad142f86f6f36450e8d36bffd825c86",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/723357748",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/final-test-v1/final-test-v1-pets_b16-artifacts.zip"
+      },
+      "release": {
+        "id": 438112426,
+        "tag_name": "final-test-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/final-test-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "final-test-v1/final-test-v1-pets_l14-artifacts.zip",
+      "bytes": 587228573,
+      "sha256": "7bf53b323499ba57545be744657fc292b10e4d119e784cc995672e4feb4889a4",
+      "github": {
+        "id": 723344799,
+        "name": "final-test-v1-pets_l14-artifacts.zip",
+        "size": 587228573,
+        "state": "uploaded",
+        "digest": "sha256:7bf53b323499ba57545be744657fc292b10e4d119e784cc995672e4feb4889a4",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/723344799",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/final-test-v1/final-test-v1-pets_l14-artifacts.zip"
+      },
+      "release": {
+        "id": 438112426,
+        "tag_name": "final-test-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/final-test-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "flowers-selector-budgets-v1/flowers-selector-49-eval-v1.zip",
+      "bytes": 515734236,
+      "sha256": "4505d6a530794a74086dcf319cb6ee8df86b86b4c07b0d0a4140561c6154b805",
+      "github": {
+        "id": 681302313,
+        "name": "flowers-selector-49-eval-v1.zip",
+        "size": 515734236,
+        "state": "uploaded",
+        "digest": "sha256:4505d6a530794a74086dcf319cb6ee8df86b86b4c07b0d0a4140561c6154b805",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681302313",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/flowers-selector-budgets-v1/flowers-selector-49-eval-v1.zip"
+      },
+      "release": {
+        "id": 425312137,
+        "tag_name": "flowers-selector-budgets-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/flowers-selector-budgets-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.zip",
+      "bytes": 678179424,
+      "sha256": "cf231d3ac5e685de99616f404f48090415274bcbd108b37f9762bd7b8cedf5e9",
+      "github": {
+        "id": 681290881,
+        "name": "flowers-selector-49-supervision-v1.zip",
+        "size": 678179424,
+        "state": "uploaded",
+        "digest": "sha256:cf231d3ac5e685de99616f404f48090415274bcbd108b37f9762bd7b8cedf5e9",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681290881",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/flowers-selector-budgets-v1/flowers-selector-49-supervision-v1.zip"
+      },
+      "release": {
+        "id": 425312137,
+        "tag_name": "flowers-selector-budgets-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/flowers-selector-budgets-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "flowers-selector-budgets-v1/flowers-selector-98-eval-v1.zip",
+      "bytes": 517396959,
+      "sha256": "4e8ec32c64e10f9b95b4b031ee3d201f7a0d287abc554ee49bbb5a2a99f0eddc",
+      "github": {
+        "id": 681326001,
+        "name": "flowers-selector-98-eval-v1.zip",
+        "size": 517396959,
+        "state": "uploaded",
+        "digest": "sha256:4e8ec32c64e10f9b95b4b031ee3d201f7a0d287abc554ee49bbb5a2a99f0eddc",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681326001",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/flowers-selector-budgets-v1/flowers-selector-98-eval-v1.zip"
+      },
+      "release": {
+        "id": 425312137,
+        "tag_name": "flowers-selector-budgets-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/flowers-selector-budgets-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.zip",
+      "bytes": 677318981,
+      "sha256": "0c93bf029da0afa477dbf851bda9e4333815d4c0dcb2c77f8992374da22975c4",
+      "github": {
+        "id": 681312712,
+        "name": "flowers-selector-98-supervision-v1.zip",
+        "size": 677318981,
+        "state": "uploaded",
+        "digest": "sha256:0c93bf029da0afa477dbf851bda9e4333815d4c0dcb2c77f8992374da22975c4",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681312712",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/flowers-selector-budgets-v1/flowers-selector-98-supervision-v1.zip"
+      },
+      "release": {
+        "id": 425312137,
+        "tag_name": "flowers-selector-budgets-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/flowers-selector-budgets-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.zip",
+      "bytes": 23628778,
+      "sha256": "a62933b03cfd03665e08ad5d1cfb8db679d7d86a6f46c4d4c25bb957483dcd9a",
+      "github": {
+        "id": 681321317,
+        "name": "flowers-selector-models-and-records-v1.zip",
+        "size": 23628778,
+        "state": "uploaded",
+        "digest": "sha256:a62933b03cfd03665e08ad5d1cfb8db679d7d86a6f46c4d4c25bb957483dcd9a",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681321317",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/flowers-selector-budgets-v1/flowers-selector-models-and-records-v1.zip"
+      },
+      "release": {
+        "id": 425312137,
+        "tag_name": "flowers-selector-budgets-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/flowers-selector-budgets-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "geometry-permutation-v1/geometry-permutation-evidence-v1.zip",
+      "bytes": 164387286,
+      "sha256": "6b76b09b04b28908db212f8db5c2f66b411f45f7162d7e61ef24ce6e7c412e0d",
+      "github": {
+        "id": 705004771,
+        "name": "geometry-permutation-evidence-v1.zip",
+        "size": 164387286,
+        "state": "uploaded",
+        "digest": "sha256:6b76b09b04b28908db212f8db5c2f66b411f45f7162d7e61ef24ce6e7c412e0d",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/705004771",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/geometry-permutation-v1/geometry-permutation-evidence-v1.zip"
+      },
+      "release": {
+        "id": 432469648,
+        "tag_name": "geometry-permutation-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/geometry-permutation-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "hybrid-followup-v1/hybrid-distillation-v1.zip",
+      "bytes": 229636027,
+      "sha256": "eefc44be7b19e6147f03f92f2c6c18d4b354958a68556d1767d32092a4d9df69",
+      "github": {
+        "id": 708368934,
+        "name": "hybrid-distillation-v1.zip",
+        "size": 229636027,
+        "state": "uploaded",
+        "digest": "sha256:eefc44be7b19e6147f03f92f2c6c18d4b354958a68556d1767d32092a4d9df69",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/708368934",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-6af635231b260708e5c8/hybrid-distillation-v1.zip"
+      },
+      "release": {
+        "id": 433548733,
+        "tag_name": "untagged-6af635231b260708e5c8",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-6af635231b260708e5c8"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "hybrid-followup-v1/hybrid-specificity-v1.zip",
+      "bytes": 283594298,
+      "sha256": "ac6902676fba44e0cb8d20d939dc1b8e321903623144f043d5d60045b0e7ffa1",
+      "github": {
+        "id": 708368955,
+        "name": "hybrid-specificity-v1.zip",
+        "size": 283594298,
+        "state": "uploaded",
+        "digest": "sha256:ac6902676fba44e0cb8d20d939dc1b8e321903623144f043d5d60045b0e7ffa1",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/708368955",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-6af635231b260708e5c8/hybrid-specificity-v1.zip"
+      },
+      "release": {
+        "id": 433548733,
+        "tag_name": "untagged-6af635231b260708e5c8",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-6af635231b260708e5c8"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "nway-v1/nway-v1-analysis.zip",
+      "bytes": 2367562,
+      "sha256": "68b6fa8d64f45cf755ce389777d61667928ed93fb79daa6977683e8c78934e7a",
+      "github": {
+        "id": 723508549,
+        "name": "nway-v1-analysis.zip",
+        "size": 2367562,
+        "state": "uploaded",
+        "digest": "sha256:68b6fa8d64f45cf755ce389777d61667928ed93fb79daa6977683e8c78934e7a",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/723508549",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/nway-v1/nway-v1-analysis.zip"
+      },
+      "release": {
+        "id": 438151539,
+        "tag_name": "nway-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/nway-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "nway-v1/nway-v1-flowers.zip",
+      "bytes": 304003354,
+      "sha256": "06561d5a4e6ab5f1f8008752310e3c29cc92aac27a868983d59bb6d96ad02a88",
+      "github": {
+        "id": 723508595,
+        "name": "nway-v1-flowers.zip",
+        "size": 304003354,
+        "state": "uploaded",
+        "digest": "sha256:06561d5a4e6ab5f1f8008752310e3c29cc92aac27a868983d59bb6d96ad02a88",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/723508595",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/nway-v1/nway-v1-flowers.zip"
+      },
+      "release": {
+        "id": 438151539,
+        "tag_name": "nway-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/nway-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "nway-v1/nway-v1-pets.zip",
+      "bytes": 248637300,
+      "sha256": "f50ac10adb4247eef60d86f3f181038cfefefc470d5f478cea6af8117374f31b",
+      "github": {
+        "id": 723509849,
+        "name": "nway-v1-pets.zip",
+        "size": 248637300,
+        "state": "uploaded",
+        "digest": "sha256:f50ac10adb4247eef60d86f3f181038cfefefc470d5f478cea6af8117374f31b",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/723509849",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/nway-v1/nway-v1-pets.zip"
+      },
+      "release": {
+        "id": 438151539,
+        "tag_name": "nway-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/nway-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "parallel-mechanism-tests-v1/flowers-familiarity-switch-v1.zip",
+      "bytes": 267943909,
+      "sha256": "ded8d389b8dd99bce88e40b234d2040259fecfba79b8326df472abe755b3d61d",
+      "github": {
+        "id": 705933600,
+        "name": "flowers-familiarity-switch-v1.zip",
+        "size": 267943909,
+        "state": "uploaded",
+        "digest": "sha256:ded8d389b8dd99bce88e40b234d2040259fecfba79b8326df472abe755b3d61d",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/705933600",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-e8b0f40a559ff7bdd673/flowers-familiarity-switch-v1.zip"
+      },
+      "release": {
+        "id": 432810919,
+        "tag_name": "parallel-mechanism-tests-v1",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-e8b0f40a559ff7bdd673"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "parallel-mechanism-tests-v1/matched-replacement-v1.zip",
+      "bytes": 887600257,
+      "sha256": "d41b5c1bd3f9ed7ad4045def9ae1208eb31fec6be5f46274fcc0dbafcb85a5db",
+      "github": {
+        "id": 705914343,
+        "name": "matched-replacement-v1.zip",
+        "size": 887600257,
+        "state": "uploaded",
+        "digest": "sha256:d41b5c1bd3f9ed7ad4045def9ae1208eb31fec6be5f46274fcc0dbafcb85a5db",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/705914343",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-e8b0f40a559ff7bdd673/matched-replacement-v1.zip"
+      },
+      "release": {
+        "id": 432810919,
+        "tag_name": "parallel-mechanism-tests-v1",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-e8b0f40a559ff7bdd673"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "parallel-mechanism-tests-v1/pets-familiarity-switch-v1.zip",
+      "bytes": 253166800,
+      "sha256": "ec451c0e5aa1668ecddc1d4c1cda71683e2f456b1ce747f7667ff2263a5212dd",
+      "github": {
+        "id": 705934835,
+        "name": "pets-familiarity-switch-v1.zip",
+        "size": 253166800,
+        "state": "uploaded",
+        "digest": "sha256:ec451c0e5aa1668ecddc1d4c1cda71683e2f456b1ce747f7667ff2263a5212dd",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/705934835",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-e8b0f40a559ff7bdd673/pets-familiarity-switch-v1.zip"
+      },
+      "release": {
+        "id": 432810919,
+        "tag_name": "parallel-mechanism-tests-v1",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-e8b0f40a559ff7bdd673"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "parallel-research-pilots-v1/core-protection-v1.zip",
+      "bytes": 908703121,
+      "sha256": "f6e4d0910a6d953af3a2a1f9f4d23347197f06a2eecf691ca816af344686c159",
+      "github": {
+        "id": 705781229,
+        "name": "core-protection-v1.zip",
+        "size": 908703121,
+        "state": "uploaded",
+        "digest": "sha256:f6e4d0910a6d953af3a2a1f9f4d23347197f06a2eecf691ca816af344686c159",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/705781229",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-3d7c976781ea8233c3e1/core-protection-v1.zip"
+      },
+      "release": {
+        "id": 432759535,
+        "tag_name": "parallel-research-pilots-v1",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-3d7c976781ea8233c3e1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "parallel-research-pilots-v1/evidence-conflict-v1.zip",
+      "bytes": 18108279,
+      "sha256": "452f361287361e4fe23b3c8696acb024aed6fee4ca67753bdb346b14fd852dce",
+      "github": {
+        "id": 705781262,
+        "name": "evidence-conflict-v1.zip",
+        "size": 18108279,
+        "state": "uploaded",
+        "digest": "sha256:452f361287361e4fe23b3c8696acb024aed6fee4ca67753bdb346b14fd852dce",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/705781262",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-3d7c976781ea8233c3e1/evidence-conflict-v1.zip"
+      },
+      "release": {
+        "id": 432759535,
+        "tag_name": "parallel-research-pilots-v1",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-3d7c976781ea8233c3e1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "parallel-research-pilots-v1/semantic-identity-v1.zip",
+      "bytes": 699473213,
+      "sha256": "51745f49215b40b9985d65ef44c1d48b85e319c53a37972d466131597ee00d0f",
+      "github": {
+        "id": 705781261,
+        "name": "semantic-identity-v1.zip",
+        "size": 699473213,
+        "state": "uploaded",
+        "digest": "sha256:51745f49215b40b9985d65ef44c1d48b85e319c53a37972d466131597ee00d0f",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/705781261",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-3d7c976781ea8233c3e1/semantic-identity-v1.zip"
+      },
+      "release": {
+        "id": 432759535,
+        "tag_name": "parallel-research-pilots-v1",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-3d7c976781ea8233c3e1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "patch-ranking-checkpoints-v1/patch-ranking-checkpoints-v1-artifacts.zip",
+      "bytes": 85655688,
+      "sha256": "99bc53eb4a5dd63378de929a4f004a043b901a6f397f9d58c8d3d282b4ca8d92",
+      "github": {
+        "id": 723242412,
+        "name": "patch-ranking-checkpoints-v1-artifacts.zip",
+        "size": 85655688,
+        "state": "uploaded",
+        "digest": "sha256:99bc53eb4a5dd63378de929a4f004a043b901a6f397f9d58c8d3d282b4ca8d92",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/723242412",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/patch-ranking-checkpoints-v1/patch-ranking-checkpoints-v1-artifacts.zip"
+      },
+      "release": {
+        "id": 438098161,
+        "tag_name": "patch-ranking-checkpoints-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/patch-ranking-checkpoints-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "patch-ranking-v1/patch-ranking-v1-artifacts.zip",
+      "bytes": 248018584,
+      "sha256": "8f05dbcb4fa84438a9c6f0ca7d404a716988f685716d3b34a1c084f8e8b29ca0",
+      "github": {
+        "id": 712761299,
+        "name": "patch-ranking-v1-artifacts.zip",
+        "size": 248018584,
+        "state": "uploaded",
+        "digest": "sha256:8f05dbcb4fa84438a9c6f0ca7d404a716988f685716d3b34a1c084f8e8b29ca0",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/712761299",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/patch-ranking-v1/patch-ranking-v1-artifacts.zip"
+      },
+      "release": {
+        "id": 434970344,
+        "tag_name": "patch-ranking-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/patch-ranking-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "pets-selector-budgets-v1/pets-selector-budget-147-models-and-evaluation-v1.zip",
+      "bytes": 741525110,
+      "sha256": "08827dde829be978b478a65e4032271d6a56c33dbb6cc87e1fbad3bfc41800d8",
+      "github": {
+        "id": 681008437,
+        "name": "pets-selector-budget-147-models-and-evaluation-v1.zip",
+        "size": 741525110,
+        "state": "uploaded",
+        "digest": "sha256:08827dde829be978b478a65e4032271d6a56c33dbb6cc87e1fbad3bfc41800d8",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681008437",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/pets-selector-budgets-v1/pets-selector-budget-147-models-and-evaluation-v1.zip"
+      },
+      "release": {
+        "id": 425198891,
+        "tag_name": "pets-selector-budgets-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-budgets-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "pets-selector-budgets-v1/pets-selector-budget-147-supervision-v1.zip",
+      "bytes": 449129447,
+      "sha256": "1c23123320d7d0a7a14b9f23309f27714cec5616cf646c04902bed122bf02229",
+      "github": {
+        "id": 680993524,
+        "name": "pets-selector-budget-147-supervision-v1.zip",
+        "size": 449129447,
+        "state": "uploaded",
+        "digest": "sha256:1c23123320d7d0a7a14b9f23309f27714cec5616cf646c04902bed122bf02229",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/680993524",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/pets-selector-budgets-v1/pets-selector-budget-147-supervision-v1.zip"
+      },
+      "release": {
+        "id": 425198891,
+        "tag_name": "pets-selector-budgets-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-budgets-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "pets-selector-budgets-v1/pets-selector-budget-49-and-shared-supplement-v1.zip",
+      "bytes": 184338114,
+      "sha256": "e10be6a19b52a2b0352ce311136c34c409c88d651069560abf9052c31cb8b0e6",
+      "github": {
+        "id": 681010822,
+        "name": "pets-selector-budget-49-and-shared-supplement-v1.zip",
+        "size": 184338114,
+        "state": "uploaded",
+        "digest": "sha256:e10be6a19b52a2b0352ce311136c34c409c88d651069560abf9052c31cb8b0e6",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681010822",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/pets-selector-budgets-v1/pets-selector-budget-49-and-shared-supplement-v1.zip"
+      },
+      "release": {
+        "id": 425198891,
+        "tag_name": "pets-selector-budgets-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-budgets-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "pets-selector-budgets-v1/pets-selector-budget-98-models-and-evaluation-v1.zip",
+      "bytes": 743571122,
+      "sha256": "dfb2d0ad54177422ff702969709bd71c400b5f4073ca9d0c9ac83f591fab6b3d",
+      "github": {
+        "id": 680993996,
+        "name": "pets-selector-budget-98-models-and-evaluation-v1.zip",
+        "size": 743571122,
+        "state": "uploaded",
+        "digest": "sha256:dfb2d0ad54177422ff702969709bd71c400b5f4073ca9d0c9ac83f591fab6b3d",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/680993996",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/pets-selector-budgets-v1/pets-selector-budget-98-models-and-evaluation-v1.zip"
+      },
+      "release": {
+        "id": 425198891,
+        "tag_name": "pets-selector-budgets-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-budgets-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "pets-selector-budgets-v1/pets-selector-budget-98-supervision-v1.zip",
+      "bytes": 450625048,
+      "sha256": "ce45f80a48cdc821788bd55d1b086af7d0ff6a533aac1fe0bd075ff1152b3a22",
+      "github": {
+        "id": 680985937,
+        "name": "pets-selector-budget-98-supervision-v1.zip",
+        "size": 450625048,
+        "state": "uploaded",
+        "digest": "sha256:ce45f80a48cdc821788bd55d1b086af7d0ff6a533aac1fe0bd075ff1152b3a22",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/680985937",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/pets-selector-budgets-v1/pets-selector-budget-98-supervision-v1.zip"
+      },
+      "release": {
+        "id": 425198891,
+        "tag_name": "pets-selector-budgets-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-budgets-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "pets-selector-pilot-v1/pets-selector-pilot-v1-artifacts.zip",
+      "bytes": 78768182,
+      "sha256": "6bdbda06b1b7b752f4c0a1eb0a51c9938e6c65c6a2cff7a4dfe2ae66512497b1",
+      "github": {
+        "id": 653179130,
+        "name": "pets-selector-pilot-v1-artifacts.zip",
+        "size": 78768182,
+        "state": "uploaded",
+        "digest": "sha256:6bdbda06b1b7b752f4c0a1eb0a51c9938e6c65c6a2cff7a4dfe2ae66512497b1",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/653179130",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/pets-selector-pilot-v1/pets-selector-pilot-v1-artifacts.zip"
+      },
+      "release": {
+        "id": 416378788,
+        "tag_name": "pets-selector-pilot-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-pilot-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "pets-selector-scale-v1/pets-selector-scale-models-and-evaluation-v1.zip",
+      "bytes": 941515594,
+      "sha256": "fe4c264e5fe9d05ea4d21657d1ce67a51c07298e8468c73bcfccc79ad9a680a4",
+      "github": {
+        "id": 653349953,
+        "name": "pets-selector-scale-models-and-evaluation-v1.zip",
+        "size": 941515594,
+        "state": "uploaded",
+        "digest": "sha256:fe4c264e5fe9d05ea4d21657d1ce67a51c07298e8468c73bcfccc79ad9a680a4",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/653349953",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/pets-selector-scale-v1/pets-selector-scale-models-and-evaluation-v1.zip"
+      },
+      "release": {
+        "id": 416410270,
+        "tag_name": "pets-selector-scale-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-scale-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "pets-selector-scale-v1/pets-selector-scale-supervision-v1.zip",
+      "bytes": 441895622,
+      "sha256": "321dabb24228d1aae902a1a6a6ce04713bcd0d8fcf36d1700e595eaeaec1deb7",
+      "github": {
+        "id": 653329745,
+        "name": "pets-selector-scale-supervision-v1.zip",
+        "size": 441895622,
+        "state": "uploaded",
+        "digest": "sha256:321dabb24228d1aae902a1a6a6ce04713bcd0d8fcf36d1700e595eaeaec1deb7",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/653329745",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/pets-selector-scale-v1/pets-selector-scale-supervision-v1.zip"
+      },
+      "release": {
+        "id": 416410270,
+        "tag_name": "pets-selector-scale-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/pets-selector-scale-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "selector-ablations-v1/ablations-flowers-49-eval-v1.zip",
+      "bytes": 407359247,
+      "sha256": "ca84e178c139476503200f36e72c4489607820a023d0ac274f6bc592f5d3f368",
+      "github": {
+        "id": 688322832,
+        "name": "ablations-flowers-49-eval-v1.zip",
+        "size": 407359247,
+        "state": "uploaded",
+        "digest": "sha256:ca84e178c139476503200f36e72c4489607820a023d0ac274f6bc592f5d3f368",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/688322832",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/selector-ablations-v1/ablations-flowers-49-eval-v1.zip"
+      },
+      "release": {
+        "id": 427747235,
+        "tag_name": "selector-ablations-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/selector-ablations-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "selector-ablations-v1/ablations-flowers-98-eval-v1.zip",
+      "bytes": 408236568,
+      "sha256": "77a252505bbf14ada62bf0e37380ab4c752702e902e66f9fc1b7c6c56e55d3eb",
+      "github": {
+        "id": 688328971,
+        "name": "ablations-flowers-98-eval-v1.zip",
+        "size": 408236568,
+        "state": "uploaded",
+        "digest": "sha256:77a252505bbf14ada62bf0e37380ab4c752702e902e66f9fc1b7c6c56e55d3eb",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/688328971",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/selector-ablations-v1/ablations-flowers-98-eval-v1.zip"
+      },
+      "release": {
+        "id": 427747235,
+        "tag_name": "selector-ablations-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/selector-ablations-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "selector-ablations-v1/ablations-models-and-records-v1.zip",
+      "bytes": 50621905,
+      "sha256": "9eb18b32a7f477909a932ec819676036192e226b613584e956aa28394ee98e66",
+      "github": {
+        "id": 688297391,
+        "name": "ablations-models-and-records-v1.zip",
+        "size": 50621905,
+        "state": "uploaded",
+        "digest": "sha256:9eb18b32a7f477909a932ec819676036192e226b613584e956aa28394ee98e66",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/688297391",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/selector-ablations-v1/ablations-models-and-records-v1.zip"
+      },
+      "release": {
+        "id": 427747235,
+        "tag_name": "selector-ablations-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/selector-ablations-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "selector-ablations-v1/ablations-pets-49-eval-v1.zip",
+      "bytes": 561138999,
+      "sha256": "516d804bbbc1b5fba9bce4871f5afa28b68244c3f82b2ee1c02e5eb1d70316cb",
+      "github": {
+        "id": 688267735,
+        "name": "ablations-pets-49-eval-v1.zip",
+        "size": 561138999,
+        "state": "uploaded",
+        "digest": "sha256:516d804bbbc1b5fba9bce4871f5afa28b68244c3f82b2ee1c02e5eb1d70316cb",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/688267735",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/selector-ablations-v1/ablations-pets-49-eval-v1.zip"
+      },
+      "release": {
+        "id": 427747235,
+        "tag_name": "selector-ablations-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/selector-ablations-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "selector-ablations-v1/ablations-pets-98-eval-v1.zip",
+      "bytes": 562936959,
+      "sha256": "4dd77995561b00eec655443efab84b146234d1823bad7e57bb16484a797da152",
+      "github": {
+        "id": 688274371,
+        "name": "ablations-pets-98-eval-v1.zip",
+        "size": 562936959,
+        "state": "uploaded",
+        "digest": "sha256:4dd77995561b00eec655443efab84b146234d1823bad7e57bb16484a797da152",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/688274371",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/selector-ablations-v1/ablations-pets-98-eval-v1.zip"
+      },
+      "release": {
+        "id": 427747235,
+        "tag_name": "selector-ablations-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/selector-ablations-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "set-distillation-v1/set-distillation-v1.zip",
+      "bytes": 210999734,
+      "sha256": "a7d54c938bcbedd6c8de7fcb1f8e0d517e499ebf74f463ba05e269660d3fa720",
+      "github": {
+        "id": 709274638,
+        "name": "set-distillation-v1.zip",
+        "size": 210999734,
+        "state": "uploaded",
+        "digest": "sha256:a7d54c938bcbedd6c8de7fcb1f8e0d517e499ebf74f463ba05e269660d3fa720",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/709274638",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/untagged-de32b41a14740a8529c7/set-distillation-v1.zip"
+      },
+      "release": {
+        "id": 433837358,
+        "tag_name": "set-distillation-v1",
+        "draft": true,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-de32b41a14740a8529c7"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "vitl-and-latency-v1/vitl128-flowers-eval-v1.zip",
+      "bytes": 724070625,
+      "sha256": "e8820599ad81c4767004b8fcd340f7c8f1633c2292c286c5404f1904efe1d64c",
+      "github": {
+        "id": 681636804,
+        "name": "vitl128-flowers-eval-v1.zip",
+        "size": 724070625,
+        "state": "uploaded",
+        "digest": "sha256:e8820599ad81c4767004b8fcd340f7c8f1633c2292c286c5404f1904efe1d64c",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681636804",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/vitl-and-latency-v1/vitl128-flowers-eval-v1.zip"
+      },
+      "release": {
+        "id": 425401556,
+        "tag_name": "vitl-and-latency-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/vitl-and-latency-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "vitl-and-latency-v1/vitl128-flowers-supervision-v1.zip",
+      "bytes": 781034850,
+      "sha256": "cdbfe51191b28477a3d343b1b0ed4c9f2a0444feed51e18c6470fff4958d61b9",
+      "github": {
+        "id": 681615654,
+        "name": "vitl128-flowers-supervision-v1.zip",
+        "size": 781034850,
+        "state": "uploaded",
+        "digest": "sha256:cdbfe51191b28477a3d343b1b0ed4c9f2a0444feed51e18c6470fff4958d61b9",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681615654",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/vitl-and-latency-v1/vitl128-flowers-supervision-v1.zip"
+      },
+      "release": {
+        "id": 425401556,
+        "tag_name": "vitl-and-latency-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/vitl-and-latency-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "vitl-and-latency-v1/vitl128-models-and-records-v1.zip",
+      "bytes": 97002156,
+      "sha256": "5807d414680f7dd834d8e56cc81ad1cd9c1e2f1df86dfcde2b98d64ebdebd38e",
+      "github": {
+        "id": 681687038,
+        "name": "vitl128-models-and-records-v1.zip",
+        "size": 97002156,
+        "state": "uploaded",
+        "digest": "sha256:5807d414680f7dd834d8e56cc81ad1cd9c1e2f1df86dfcde2b98d64ebdebd38e",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681687038",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/vitl-and-latency-v1/vitl128-models-and-records-v1.zip"
+      },
+      "release": {
+        "id": 425401556,
+        "tag_name": "vitl-and-latency-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/vitl-and-latency-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "vitl-and-latency-v1/vitl128-pets-eval-v1.zip",
+      "bytes": 1080501056,
+      "sha256": "d922e32ee012f2fc6196df76642d67eb6eed5f58837886a5516aa9244e6be589",
+      "github": {
+        "id": 681586471,
+        "name": "vitl128-pets-eval-v1.zip",
+        "size": 1080501056,
+        "state": "uploaded",
+        "digest": "sha256:d922e32ee012f2fc6196df76642d67eb6eed5f58837886a5516aa9244e6be589",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681586471",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/vitl-and-latency-v1/vitl128-pets-eval-v1.zip"
+      },
+      "release": {
+        "id": 425401556,
+        "tag_name": "vitl-and-latency-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/vitl-and-latency-v1"
+      },
+      "remote_size_and_digest_match": true
+    },
+    {
+      "local_relative_path": "vitl-and-latency-v1/vitl128-pets-supervision-v1.zip",
+      "bytes": 521463574,
+      "sha256": "d2e58ea5b0cacad5c07c3103bc2183fe4caa8c4ffc9d59930445e303d7cfd212",
+      "github": {
+        "id": 681553409,
+        "name": "vitl128-pets-supervision-v1.zip",
+        "size": 521463574,
+        "state": "uploaded",
+        "digest": "sha256:d2e58ea5b0cacad5c07c3103bc2183fe4caa8c4ffc9d59930445e303d7cfd212",
+        "url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/681553409",
+        "browser_download_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/download/vitl-and-latency-v1/vitl128-pets-supervision-v1.zip"
+      },
+      "release": {
+        "id": 425401556,
+        "tag_name": "vitl-and-latency-v1",
+        "draft": false,
+        "html_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/vitl-and-latency-v1"
+      },
+      "remote_size_and_digest_match": true
+    }
+  ],
+  "cleanup_at_utc": "2026-11-08T09:58:00.712151+00:00",
+  "removed_archive_count": 55,
+  "removed_archive_bytes": 26989189536,
+  "remaining_local_zip_count": 0,
+  "remaining_local_artifact_metadata_bytes": 440601,
+  "preserved": "Repository, curated results and figures, experiment metadata, code, configurations, proposal, reference papers and server working data."
+}

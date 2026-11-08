@@ -1,0 +1,40 @@
+{
+  "name": "vitl128-pets-eval-v1.zip",
+  "bytes": 1080501056,
+  "sha256": "d922e32ee012f2fc6196df76642d67eb6eed5f58837886a5516aa9244e6be589",
+  "members": [
+    {
+      "path": "runs/pets-vitl128-eval-v1/eval_summary.json",
+      "bytes": 8427
+    },
+    {
+      "path": "runs/pets-vitl128-eval-v1/examples.csv",
+      "bytes": 1473259
+    },
+    {
+      "path": "runs/pets-vitl128-eval-v1/full/predictions.csv",
+      "bytes": 22657458
+    },
+    {
+      "path": "runs/pets-vitl128-eval-v1/full/predictions.npz",
+      "bytes": 531169654
+    },
+    {
+      "path": "runs/pets-vitl128-eval-v1/random/predictions.csv",
+      "bytes": 11220905
+    },
+    {
+      "path": "runs/pets-vitl128-eval-v1/random/predictions.npz",
+      "bytes": 263414026
+    },
+    {
+      "path": "runs/pets-vitl128-eval-v1/references/predictions.csv",
+      "bytes": 11184314
+    },
+    {
+      "path": "runs/pets-vitl128-eval-v1/references/predictions.npz",
+      "bytes": 274694144
+    }
+  ],
+  "omitted": "Regenerable prefix_tokens.npy; public raw images and frozen CLIP weights."
+}

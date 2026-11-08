@@ -74,7 +74,7 @@ The 2026-10-28 focused follow-up is complete: Pets finite-library diagnostics an
 
 Use [the experiment record template](docs/experiment-log.md) for each substantive experiment. Negative and inconclusive results should retain the same provenance as positive results.
 
-Paper evidence will be retained on the server, locally, and on GitHub: per-example results, figure source data, figures, configurations, and selected selector checkpoints. Small files belong in Git; larger essential artifacts belong in versioned GitHub Release attachments. See the [storage and backup plan](docs/storage-and-backup.md). Runtime records, the original baseline, pruning pilot and offline-selection diagnostics include locally retained scores, selection positions, statistical tables and plots. Transfer-only archives are removed after verification.
+Storage policy, updated 2026-11-08: keep code, configurations, manifests, curated analysis arrays, figure sources and writing materials locally and in Git. Complete experiment archives and selector checkpoints stay remotely in server working outputs and versioned GitHub Release attachments; retrieve them locally when needed, then remove the temporary copies. The completed local archive offload freed 26.99 GB; see the [storage and backup plan](docs/storage-and-backup.md) and [archive inventory and cleanup record](results/storage-offload-v1/manifest.json). Existing results, statistical tables and plots remain in the repository.
 
 ## File organization
 

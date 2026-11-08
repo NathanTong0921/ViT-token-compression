@@ -1,0 +1,47 @@
+{
+  "release_id": 433548733,
+  "release_url": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/untagged-6af635231b260708e5c8",
+  "release_status": "draft",
+  "archives": [
+    {
+      "file": "hybrid-specificity-v1.zip",
+      "bytes": 283594298,
+      "sha256": "ac6902676fba44e0cb8d20d939dc1b8e321903623144f043d5d60045b0e7ffa1",
+      "files": 79,
+      "sources": [
+        "runs/hybrid-specificity-v1"
+      ],
+      "github_asset_id": 708368955,
+      "github_asset_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/708368955",
+      "github_asset_digest": "sha256:ac6902676fba44e0cb8d20d939dc1b8e321903623144f043d5d60045b0e7ffa1",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/hybrid-followup-v1/hybrid-specificity-v1.zip",
+      "server_path": "/data2/zhao.tong/artifacts/hybrid-followup-v1/hybrid-specificity-v1.zip",
+      "local_and_github_verified": true
+    },
+    {
+      "file": "hybrid-distillation-v1.zip",
+      "bytes": 229636027,
+      "sha256": "eefc44be7b19e6147f03f92f2c6c18d4b354958a68556d1767d32092a4d9df69",
+      "files": 173,
+      "sources": [
+        "runs/hybrid-distillation-v1",
+        "runs/hybrid-followup-v1"
+      ],
+      "github_asset_id": 708368934,
+      "github_asset_url": "https://api.github.com/repos/NathanTong0921/ViT-token-compression/releases/assets/708368934",
+      "github_asset_digest": "sha256:eefc44be7b19e6147f03f92f2c6c18d4b354958a68556d1767d32092a4d9df69",
+      "local_path": "/Users/nathan_tong0921/Desktop/2012 Project/artifacts/hybrid-followup-v1/hybrid-distillation-v1.zip",
+      "server_path": "/data2/zhao.tong/artifacts/hybrid-followup-v1/hybrid-distillation-v1.zip",
+      "local_and_github_verified": true
+    }
+  ],
+  "total_bytes": 513230325,
+  "local_restore_verification": "local_restore_verification.json",
+  "github_restore_verification": "github_restore_verification.json",
+  "dependencies": {
+    "prior_core_protection_raw": "results/parallel-research-pilots-v1/backup_manifest.json",
+    "prior_original_target_student_predictions": "results/familiarity-residual-v1/backup_manifest.json",
+    "note": "A uses historical C/U raw endpoints and logits from core-protection-v1. B bundles all nine U bases, nine conditioned teachers, eighteen new residual weights, targets and replay inputs. Original-target comparison fits remain in the prior archive."
+  },
+  "server_raw_runs_retained": true
+}

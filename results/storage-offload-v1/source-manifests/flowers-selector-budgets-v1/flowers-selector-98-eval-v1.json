@@ -1,0 +1,40 @@
+{
+  "name": "flowers-selector-98-eval-v1.zip",
+  "bytes": 517396959,
+  "sha256": "4e8ec32c64e10f9b95b4b031ee3d201f7a0d287abc554ee49bbb5a2a99f0eddc",
+  "members": [
+    {
+      "path": "runs/flowers-selector-budget-98-eval-v1/eval_summary.json",
+      "bytes": 8562
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-eval-v1/examples.csv",
+      "bytes": 986243
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-eval-v1/full/predictions.csv",
+      "bytes": 15299057
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-eval-v1/full/predictions.npz",
+      "bytes": 259054111
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-eval-v1/random/predictions.csv",
+      "bytes": 7583512
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-eval-v1/random/predictions.npz",
+      "bytes": 117219303
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-eval-v1/references/predictions.csv",
+      "bytes": 7581211
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-eval-v1/references/predictions.npz",
+      "bytes": 133442129
+    }
+  ],
+  "omitted": "Regenerable prefix_tokens.npy; public raw images and frozen CLIP weights."
+}

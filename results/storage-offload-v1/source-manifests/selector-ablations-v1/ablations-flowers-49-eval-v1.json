@@ -1,0 +1,24 @@
+{
+  "name": "ablations-flowers-49-eval-v1.zip",
+  "bytes": 407359247,
+  "sha256": "ca84e178c139476503200f36e72c4489607820a023d0ac274f6bc592f5d3f368",
+  "members": [
+    {
+      "path": "runs/flowers-selector-ablations-49-eval-v1/eval_summary.json",
+      "bytes": 8030
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-eval-v1/examples.csv",
+      "bytes": 986243
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-eval-v1/full/predictions.csv",
+      "bytes": 23310859
+    },
+    {
+      "path": "runs/flowers-selector-ablations-49-eval-v1/full/predictions.npz",
+      "bytes": 401270414
+    }
+  ],
+  "reused": "Existing KL checkpoints, frozen CLIP prefix caches and budget-specific teacher supervision are unchanged and retained in earlier milestones."
+}

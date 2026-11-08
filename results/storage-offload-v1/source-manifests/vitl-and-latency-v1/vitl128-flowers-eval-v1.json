@@ -1,0 +1,40 @@
+{
+  "name": "vitl128-flowers-eval-v1.zip",
+  "bytes": 724070625,
+  "sha256": "e8820599ad81c4767004b8fcd340f7c8f1633c2292c286c5404f1904efe1d64c",
+  "members": [
+    {
+      "path": "runs/flowers-vitl128-eval-v1/eval_summary.json",
+      "bytes": 8484
+    },
+    {
+      "path": "runs/flowers-vitl128-eval-v1/examples.csv",
+      "bytes": 986243
+    },
+    {
+      "path": "runs/flowers-vitl128-eval-v1/full/predictions.csv",
+      "bytes": 15372568
+    },
+    {
+      "path": "runs/flowers-vitl128-eval-v1/full/predictions.npz",
+      "bytes": 361424177
+    },
+    {
+      "path": "runs/flowers-vitl128-eval-v1/random/predictions.csv",
+      "bytes": 7624818
+    },
+    {
+      "path": "runs/flowers-vitl128-eval-v1/random/predictions.npz",
+      "bytes": 164951746
+    },
+    {
+      "path": "runs/flowers-vitl128-eval-v1/references/predictions.csv",
+      "bytes": 7596356
+    },
+    {
+      "path": "runs/flowers-vitl128-eval-v1/references/predictions.npz",
+      "bytes": 190037881
+    }
+  ],
+  "omitted": "Regenerable prefix_tokens.npy; public raw images and frozen CLIP weights."
+}

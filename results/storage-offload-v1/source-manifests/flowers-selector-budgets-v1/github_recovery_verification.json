@@ -1,0 +1,221 @@
+{
+  "restored_archive": "flowers-selector-models-and-records-v1.zip",
+  "all_zip_crc_checks_passed": true,
+  "checkpoint_count": 12,
+  "checkpoints": [
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/conditioned.pt",
+      "seed": 2041,
+      "conditioned": true,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/image_only.pt",
+      "seed": 2041,
+      "conditioned": false,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/conditioned.pt",
+      "seed": 2042,
+      "conditioned": true,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/image_only.pt",
+      "seed": 2042,
+      "conditioned": false,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/conditioned.pt",
+      "seed": 2043,
+      "conditioned": true,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/image_only.pt",
+      "seed": 2043,
+      "conditioned": false,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/conditioned.pt",
+      "seed": 2041,
+      "conditioned": true,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/image_only.pt",
+      "seed": 2041,
+      "conditioned": false,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/conditioned.pt",
+      "seed": 2042,
+      "conditioned": true,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/image_only.pt",
+      "seed": 2042,
+      "conditioned": false,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/conditioned.pt",
+      "seed": 2043,
+      "conditioned": true,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/image_only.pt",
+      "seed": 2043,
+      "conditioned": false,
+      "step": 3978,
+      "parameter_count": 348033,
+      "strict_state_load_and_forward_passed": true
+    }
+  ],
+  "source_summary_reconstruction": [
+    {
+      "budget": 49,
+      "seed": 2041,
+      "arm": "conditioned",
+      "final_val_kl_reconstructed": 0.6223228288462324,
+      "training_seconds_reconstructed": 35.207758626987925,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 49,
+      "seed": 2041,
+      "arm": "image_only",
+      "final_val_kl_reconstructed": 0.572433977662905,
+      "training_seconds_reconstructed": 36.18360690899499,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 49,
+      "seed": 2042,
+      "arm": "conditioned",
+      "final_val_kl_reconstructed": 0.6245797374615031,
+      "training_seconds_reconstructed": 26.400319968004624,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 49,
+      "seed": 2042,
+      "arm": "image_only",
+      "final_val_kl_reconstructed": 0.5968686406706076,
+      "training_seconds_reconstructed": 26.29499100299654,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 49,
+      "seed": 2043,
+      "arm": "conditioned",
+      "final_val_kl_reconstructed": 0.638477950119619,
+      "training_seconds_reconstructed": 34.115260133996344,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 49,
+      "seed": 2043,
+      "arm": "image_only",
+      "final_val_kl_reconstructed": 0.5717935209956897,
+      "training_seconds_reconstructed": 35.87144454900408,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 98,
+      "seed": 2041,
+      "arm": "conditioned",
+      "final_val_kl_reconstructed": 0.889732819490646,
+      "training_seconds_reconstructed": 26.361666862001584,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 98,
+      "seed": 2041,
+      "arm": "image_only",
+      "final_val_kl_reconstructed": 0.8178063992474812,
+      "training_seconds_reconstructed": 30.303102118989045,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 98,
+      "seed": 2042,
+      "arm": "conditioned",
+      "final_val_kl_reconstructed": 0.8942879399823426,
+      "training_seconds_reconstructed": 35.91372597600275,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 98,
+      "seed": 2042,
+      "arm": "image_only",
+      "final_val_kl_reconstructed": 0.8066357016910376,
+      "training_seconds_reconstructed": 35.376724210003886,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 98,
+      "seed": 2043,
+      "arm": "conditioned",
+      "final_val_kl_reconstructed": 0.8865631229737226,
+      "training_seconds_reconstructed": 26.366149592016882,
+      "matches_original_summary": true
+    },
+    {
+      "budget": 98,
+      "seed": 2043,
+      "arm": "image_only",
+      "final_val_kl_reconstructed": 0.8091243798597989,
+      "training_seconds_reconstructed": 26.498002757991344,
+      "matches_original_summary": true
+    }
+  ],
+  "native_unseen_binary_baseline_reconstruction": {
+    "image_task_count": 4080,
+    "correct": 3947,
+    "accuracy": 0.9674019607843137,
+    "matches_original_summary": true,
+    "source": "Restored full_scores, labels, text_features and unseen validation tasks."
+  },
+  "github_asset_id": 681321317,
+  "downloaded_from_github": true,
+  "remote_content_matches_local_archive": true,
+  "recovery_transfer_staging_removed": true,
+  "release_id": 425312137,
+  "release_tag": "flowers-selector-budgets-v1",
+  "status": "passed",
+  "verified_utc": "2026-10-27T11:05:48.865680+00:00",
+  "actual_github_downloads": [
+    "flowers-selector-models-and-records-v1.zip"
+  ],
+  "other_assets_verification": "GitHub uploaded-content digest matched retained archive; all local ZIP members passed CRC and exact member inventory checks. Other four archives were not redownloaded.",
+  "prefix_cache_dependency": "Selector retraining requires regenerating omitted frozen prefix tensors from the fixed public data/model/preprocessing, or using the retained server cache."
+}

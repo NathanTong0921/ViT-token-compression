@@ -1,0 +1,121 @@
+{
+  "name": "geometry-permutation-evidence-v1.zip",
+  "bytes": 164387286,
+  "sha256": "6b76b09b04b28908db212f8db5c2f66b411f45f7162d7e61ef24ce6e7c412e0d",
+  "source_commit": "4493f0b4f0b13903a3b4f1804eb34ebc3862ba2c",
+  "members": [
+    {
+      "path": "runs/geometry-permutation-v1/analysis.log",
+      "bytes": 4034
+    },
+    {
+      "path": "runs/geometry-permutation-v1/analysis_status.json",
+      "bytes": 710
+    },
+    {
+      "path": "runs/geometry-permutation-v1/audit.log",
+      "bytes": 334
+    },
+    {
+      "path": "runs/geometry-permutation-v1/audit_status.json",
+      "bytes": 678
+    },
+    {
+      "path": "runs/geometry-permutation-v1/execute.py",
+      "bytes": 1155
+    },
+    {
+      "path": "runs/geometry-permutation-v1/input_attempt/analysis.log",
+      "bytes": 854
+    },
+    {
+      "path": "runs/geometry-permutation-v1/input_attempt/analysis_status.json",
+      "bytes": 708
+    },
+    {
+      "path": "runs/geometry-permutation-v1/input_attempt/launcher.log",
+      "bytes": 628
+    },
+    {
+      "path": "runs/geometry-permutation-v1/launcher.log",
+      "bytes": 1236
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/flowers_b16_49.json",
+      "bytes": 1473
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/flowers_b16_49.npz",
+      "bytes": 26509309
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/flowers_b16_98.json",
+      "bytes": 1473
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/flowers_b16_98.npz",
+      "bytes": 26517015
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/flowers_l14_128.json",
+      "bytes": 1433
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/flowers_l14_128.npz",
+      "bytes": 39070535
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/pets_b16_147.json",
+      "bytes": 1455
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/pets_b16_147.npz",
+      "bytes": 15712597
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/pets_b16_49.json",
+      "bytes": 1438
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/pets_b16_49.npz",
+      "bytes": 15705878
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/pets_b16_98.json",
+      "bytes": 1450
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/pets_b16_98.npz",
+      "bytes": 15712765
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/pets_l14_128.json",
+      "bytes": 1410
+    },
+    {
+      "path": "runs/geometry-permutation-v1/panels/pets_l14_128.npz",
+      "bytes": 25908692
+    },
+    {
+      "path": "runs/geometry-permutation-v1/run_all.py",
+      "bytes": 591
+    },
+    {
+      "path": "runs/geometry-permutation-v1/server_tests.txt",
+      "bytes": 1273
+    },
+    {
+      "path": "runs/geometry-permutation-v1/server_tests_final.txt",
+      "bytes": 2407
+    },
+    {
+      "path": "configs/geometry_permutation.json",
+      "bytes": 2277
+    },
+    {
+      "path": "docs/geometry-permutation.md",
+      "bytes": 7212
+    }
+  ],
+  "scope": "Exact compact development feature panels and execution records; original raw model predictions remain in earlier milestone releases."
+}

@@ -1,0 +1,296 @@
+{
+  "name": "conditioning-models-and-records-v1.zip",
+  "bytes": 33901504,
+  "sha256": "d85067b8578b51dc52e3f62e7cb75db5505accb73fe93affb74d04293d0f9251",
+  "members": [
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/analysis_interrupted_status.json",
+      "bytes": 1219
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/analysis_launcher.log",
+      "bytes": 0
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/analysis_status.json",
+      "bytes": 2300
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/archive_evidence.py",
+      "bytes": 2004
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/flowers_audit.log",
+      "bytes": 68
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/flowers_evaluate_49.log",
+      "bytes": 1104
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/flowers_evaluate_98.log",
+      "bytes": 1101
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/flowers_objective_analysis.log",
+      "bytes": 0
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/flowers_train_49.log",
+      "bytes": 20559
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/flowers_train_98.log",
+      "bytes": 20559
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/gap_launcher.log",
+      "bytes": 0
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/gap_status.json",
+      "bytes": 1275
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/pets_audit.log",
+      "bytes": 65
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/pets_evaluate_49.log",
+      "bytes": 836
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/pets_evaluate_98.log",
+      "bytes": 1100
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/pets_gap.log",
+      "bytes": 74
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/pets_objective_analysis.log",
+      "bytes": 0
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/pets_objective_analysis_interrupted.log",
+      "bytes": 0
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/pets_train_49.log",
+      "bytes": 23709
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/pets_train_98.log",
+      "bytes": 23709
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/pipeline.py",
+      "bytes": 1563
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/plan_analysis.json",
+      "bytes": 1469
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/plan_gap.json",
+      "bytes": 671
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/plan_rank.json",
+      "bytes": 2546
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/rank_launcher.log",
+      "bytes": 0
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/rank_status.json",
+      "bytes": 4735
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/server_tests.txt",
+      "bytes": 770
+    },
+    {
+      "path": "runs/conditioning-objective-pipeline-v1/server_tests_final.txt",
+      "bytes": 770
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/completed_runs.json",
+      "bytes": 26519
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2041/conditioned.pt",
+      "bytes": 1401649
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2041/image_only.pt",
+      "bytes": 1401634
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2042/conditioned.pt",
+      "bytes": 1401649
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2042/image_only.pt",
+      "bytes": 1401634
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2043/conditioned.pt",
+      "bytes": 1401649
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2043/image_only.pt",
+      "bytes": 1401634
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/initial_gradient_diagnostics.json",
+      "bytes": 13808
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/sampling_audit.json",
+      "bytes": 118296
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/training_history.csv",
+      "bytes": 24285
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/training_summary.json",
+      "bytes": 32061
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/completed_runs.json",
+      "bytes": 26542
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2041/conditioned.pt",
+      "bytes": 1401649
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2041/image_only.pt",
+      "bytes": 1401634
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2042/conditioned.pt",
+      "bytes": 1401649
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2042/image_only.pt",
+      "bytes": 1401634
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2043/conditioned.pt",
+      "bytes": 1401649
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2043/image_only.pt",
+      "bytes": 1401634
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/initial_gradient_diagnostics.json",
+      "bytes": 13838
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/sampling_audit.json",
+      "bytes": 118296
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/training_history.csv",
+      "bytes": 24277
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/training_summary.json",
+      "bytes": 32084
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/completed_runs.json",
+      "bytes": 26526
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2041/conditioned.pt",
+      "bytes": 1401521
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2041/image_only.pt",
+      "bytes": 1401506
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2042/conditioned.pt",
+      "bytes": 1401521
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2042/image_only.pt",
+      "bytes": 1401506
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2043/conditioned.pt",
+      "bytes": 1401521
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2043/image_only.pt",
+      "bytes": 1401506
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/initial_gradient_diagnostics.json",
+      "bytes": 13795
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/sampling_audit.json",
+      "bytes": 332888
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/training_history.csv",
+      "bytes": 27743
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/training_summary.json",
+      "bytes": 31938
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/completed_runs.json",
+      "bytes": 26535
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2041/conditioned.pt",
+      "bytes": 1401649
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2041/image_only.pt",
+      "bytes": 1401634
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2042/conditioned.pt",
+      "bytes": 1401649
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2042/image_only.pt",
+      "bytes": 1401634
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2043/conditioned.pt",
+      "bytes": 1401649
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2043/image_only.pt",
+      "bytes": 1401634
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/initial_gradient_diagnostics.json",
+      "bytes": 13841
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/sampling_audit.json",
+      "bytes": 332888
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/training_history.csv",
+      "bytes": 27640
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/training_summary.json",
+      "bytes": 32086
+    }
+  ],
+  "reused": "Frozen CLIP prefix features, budget-specific teacher supervision and original KL checkpoints are unchanged and retained in prior milestone archives."
+}

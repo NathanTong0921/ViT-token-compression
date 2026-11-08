@@ -1,0 +1,21 @@
+{
+  "checked_utc": "2026-11-03T14:47:12.219415+00:00",
+  "asset_id": 705933600,
+  "asset": "flowers-familiarity-switch-v1.zip",
+  "remote_zip_crc_checks": true,
+  "restored_files": [
+    "runs/flowers-familiarity-switch-evaluation-v1/evaluation_panel.npz",
+    "runs/flowers-familiarity-switch-evaluation-v1/summary.json",
+    "runs/flowers-familiarity-switch-evaluation-v1/switched/seed_2041_real_text.npz",
+    "runs/flowers-familiarity-switch-evaluation-v1/switched/seed_2042_real_text.npz",
+    "runs/flowers-familiarity-switch-evaluation-v1/switched/seed_2043_real_text.npz",
+    "runs/flowers-familiarity-switch-training-v1/switched/class_holdout/seed_2041_real_text.pt"
+  ],
+  "downloaded_bytes": 14338421,
+  "summary_max_abs_error": 0.0,
+  "new_checkpoint_loaded": true,
+  "selector_forward_shape": [
+    1,
+    196
+  ]
+}

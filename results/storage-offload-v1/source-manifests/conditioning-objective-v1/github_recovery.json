@@ -1,0 +1,202 @@
+{
+  "status": "passed",
+  "source": "Fresh GitHub Release download",
+  "asset_id": 684528138,
+  "archive_bytes": 33901504,
+  "verified_against_retained_archive": true,
+  "checkpoints": [
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2041/conditioned.pt",
+      "seed": 2041,
+      "budget": 49,
+      "conditioned": true,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2041/image_only.pt",
+      "seed": 2041,
+      "budget": 49,
+      "conditioned": false,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2042/conditioned.pt",
+      "seed": 2042,
+      "budget": 49,
+      "conditioned": true,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2042/image_only.pt",
+      "seed": 2042,
+      "budget": 49,
+      "conditioned": false,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2043/conditioned.pt",
+      "seed": 2043,
+      "budget": 49,
+      "conditioned": true,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-49-training-v1/full/seed_2043/image_only.pt",
+      "seed": 2043,
+      "budget": 49,
+      "conditioned": false,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2041/conditioned.pt",
+      "seed": 2041,
+      "budget": 98,
+      "conditioned": true,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2041/image_only.pt",
+      "seed": 2041,
+      "budget": 98,
+      "conditioned": false,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2042/conditioned.pt",
+      "seed": 2042,
+      "budget": 98,
+      "conditioned": true,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2042/image_only.pt",
+      "seed": 2042,
+      "budget": 98,
+      "conditioned": false,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2043/conditioned.pt",
+      "seed": 2043,
+      "budget": 98,
+      "conditioned": true,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/flowers-selector-rank-98-training-v1/full/seed_2043/image_only.pt",
+      "seed": 2043,
+      "budget": 98,
+      "conditioned": false,
+      "step": 3978,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2041/conditioned.pt",
+      "seed": 2041,
+      "budget": 49,
+      "conditioned": true,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2041/image_only.pt",
+      "seed": 2041,
+      "budget": 49,
+      "conditioned": false,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2042/conditioned.pt",
+      "seed": 2042,
+      "budget": 49,
+      "conditioned": true,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2042/image_only.pt",
+      "seed": 2042,
+      "budget": 49,
+      "conditioned": false,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2043/conditioned.pt",
+      "seed": 2043,
+      "budget": 49,
+      "conditioned": true,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-49-training-v1/full/seed_2043/image_only.pt",
+      "seed": 2043,
+      "budget": 49,
+      "conditioned": false,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2041/conditioned.pt",
+      "seed": 2041,
+      "budget": 98,
+      "conditioned": true,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2041/image_only.pt",
+      "seed": 2041,
+      "budget": 98,
+      "conditioned": false,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2042/conditioned.pt",
+      "seed": 2042,
+      "budget": 98,
+      "conditioned": true,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2042/image_only.pt",
+      "seed": 2042,
+      "budget": 98,
+      "conditioned": false,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2043/conditioned.pt",
+      "seed": 2043,
+      "budget": 98,
+      "conditioned": true,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    },
+    {
+      "path": "runs/pets-selector-rank-98-training-v1/full/seed_2043/image_only.pt",
+      "seed": 2043,
+      "budget": 98,
+      "conditioned": false,
+      "step": 3990,
+      "strict_load_and_forward": "passed"
+    }
+  ],
+  "scope": "All 24 new selector weights strictly loaded and executed on two synthetic inputs; not a new CLIP accuracy reproduction."
+}

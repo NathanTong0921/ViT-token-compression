@@ -1,0 +1,48 @@
+{
+  "name": "flowers-selector-49-supervision-v1.zip",
+  "bytes": 678179424,
+  "sha256": "cf231d3ac5e685de99616f404f48090415274bcbd108b37f9762bd7b8cedf5e9",
+  "members": [
+    {
+      "path": "runs/flowers-selector-budget-49-supervision-v1/panel_images.csv",
+      "bytes": 93238
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-supervision-v1/prep_summary.json",
+      "bytes": 4597
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-supervision-v1/train/evidence.npz",
+      "bytes": 3111239
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-supervision-v1/train/panel_images.csv",
+      "bytes": 47668
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-supervision-v1/train/teacher.npz",
+      "bytes": 335961754
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-supervision-v1/train_tasks.csv",
+      "bytes": 12174
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-supervision-v1/val/evidence.npz",
+      "bytes": 3111378
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-supervision-v1/val/panel_images.csv",
+      "bytes": 45628
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-supervision-v1/val/teacher.npz",
+      "bytes": 335969501
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-supervision-v1/val_tasks.csv",
+      "bytes": 3670
+    }
+  ],
+  "omitted": "Regenerable prefix_tokens.npy; public raw images and frozen CLIP weights."
+}

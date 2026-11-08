@@ -1,0 +1,16 @@
+{
+  "asset_id": 705781261,
+  "restore_method": "Authenticated GitHub asset, HTTP range reads of ZIP directory and selected members; member CRCs verified by zipfile",
+  "checkpoint": "runs/flowers-semantic-identity-v1/known_classes/seed_2041_real_text.pt",
+  "model_parameters": 348033,
+  "restored_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "accuracy_percent": 97.11601307189544,
+  "geometric_margin": 0.10739918728100462,
+  "summary_reproduced": true,
+  "bytes_downloaded": 24522204,
+  "requests": 21
+}

@@ -1,0 +1,92 @@
+{
+  "hybrid-distillation-v1": {
+    "passed": true,
+    "device": "cpu",
+    "base_checkpoints_reconstructed": 9,
+    "branch_checkpoints_reconstructed": 18,
+    "verification_inputs": 3,
+    "forward_checks": [
+      {
+        "setting": "pets_b16_49",
+        "seed": 2041,
+        "logit_max_absolute_error": 5.245208740234375e-06,
+        "all_three_methods_topk_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2042,
+        "logit_max_absolute_error": 5.4836273193359375e-06,
+        "all_three_methods_topk_exact": true
+      },
+      {
+        "setting": "pets_b16_49",
+        "seed": 2043,
+        "logit_max_absolute_error": 5.9604644775390625e-06,
+        "all_three_methods_topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2041,
+        "logit_max_absolute_error": 4.76837158203125e-06,
+        "all_three_methods_topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2042,
+        "logit_max_absolute_error": 5.4836273193359375e-06,
+        "all_three_methods_topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_49",
+        "seed": 2043,
+        "logit_max_absolute_error": 5.0067901611328125e-06,
+        "all_three_methods_topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2041,
+        "logit_max_absolute_error": 5.0067901611328125e-06,
+        "all_three_methods_topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2042,
+        "logit_max_absolute_error": 5.7220458984375e-06,
+        "all_three_methods_topk_exact": true
+      },
+      {
+        "setting": "flowers_b16_98",
+        "seed": 2043,
+        "logit_max_absolute_error": 4.649162292480469e-06,
+        "all_three_methods_topk_exact": true
+      }
+    ],
+    "maximum_logit_absolute_error": 5.9604644775390625e-06,
+    "scope": "All 9 shared bases and 18 branch weights recovered from actual GitHub bytes and replayed on 3 saved inputs; raw target/results arrays were validated from the complete locally verified archive, not downloaded again here.",
+    "asset_id": 708368934,
+    "asset_name": "hybrid-distillation-v1.zip",
+    "asset_size": 229636027,
+    "http_range_requests": 96,
+    "restored_bytes": 14221800
+  },
+  "hybrid-specificity-v1": {
+    "passed": true,
+    "setting": "flowers_b16_49",
+    "seed_pair": [
+      2041,
+      2042
+    ],
+    "validation_rows": 4080,
+    "cu_minus_uu": {
+      "accuracy": 0.0031862745098039215,
+      "margin": 0.0008838044678713609
+    },
+    "maximum_mean_error": 0.0,
+    "scope": "One pair's raw archived classification scores reproduce its reported weighted means; no model replay or bootstrap rerun.",
+    "asset_id": 708368955,
+    "asset_name": "hybrid-specificity-v1.zip",
+    "asset_size": 283594298,
+    "http_range_requests": 18,
+    "restored_bytes": 12344366
+  }
+}

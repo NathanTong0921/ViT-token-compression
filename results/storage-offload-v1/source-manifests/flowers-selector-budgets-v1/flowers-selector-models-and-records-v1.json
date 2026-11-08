@@ -1,0 +1,200 @@
+{
+  "name": "flowers-selector-models-and-records-v1.zip",
+  "bytes": 23628778,
+  "sha256": "a62933b03cfd03665e08ad5d1cfb8db679d7d86a6f46c4d4c25bb957483dcd9a",
+  "members": [
+    {
+      "path": "runs/flowers-features-v1/exchange_strata.json",
+      "bytes": 287
+    },
+    {
+      "path": "runs/flowers-features-v1/panel_images.csv",
+      "bytes": 93238
+    },
+    {
+      "path": "runs/flowers-features-v1/prep_summary.json",
+      "bytes": 9114
+    },
+    {
+      "path": "runs/flowers-features-v1/train/baseline_train_tasks.csv",
+      "bytes": 693970
+    },
+    {
+      "path": "runs/flowers-features-v1/train/baseline_val_tasks.csv",
+      "bytes": 223218
+    },
+    {
+      "path": "runs/flowers-features-v1/train/evidence.npz",
+      "bytes": 3111239
+    },
+    {
+      "path": "runs/flowers-features-v1/train/panel_images.csv",
+      "bytes": 47668
+    },
+    {
+      "path": "runs/flowers-features-v1/train_tasks.csv",
+      "bytes": 12174
+    },
+    {
+      "path": "runs/flowers-features-v1/val/baseline_train_tasks.csv",
+      "bytes": 693855
+    },
+    {
+      "path": "runs/flowers-features-v1/val/baseline_val_tasks.csv",
+      "bytes": 223201
+    },
+    {
+      "path": "runs/flowers-features-v1/val/evidence.npz",
+      "bytes": 3111378
+    },
+    {
+      "path": "runs/flowers-features-v1/val/panel_images.csv",
+      "bytes": 45628
+    },
+    {
+      "path": "runs/flowers-features-v1/val_tasks.csv",
+      "bytes": 3670
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/completed_runs.json",
+      "bytes": 5026
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/conditioned.pt",
+      "bytes": 1401521
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/image_only.pt",
+      "bytes": 1401506
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/conditioned.pt",
+      "bytes": 1401521
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/image_only.pt",
+      "bytes": 1401506
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/conditioned.pt",
+      "bytes": 1401521
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/image_only.pt",
+      "bytes": 1401506
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/sampling_audit.json",
+      "bytes": 118296
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/training_history.csv",
+      "bytes": 19618
+    },
+    {
+      "path": "runs/flowers-selector-budget-49-training-v1/training_summary.json",
+      "bytes": 8428
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/completed_runs.json",
+      "bytes": 5035
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/conditioned.pt",
+      "bytes": 1401521
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/image_only.pt",
+      "bytes": 1401506
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/conditioned.pt",
+      "bytes": 1401521
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2042/image_only.pt",
+      "bytes": 1401506
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/conditioned.pt",
+      "bytes": 1401521
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/full/seed_2043/image_only.pt",
+      "bytes": 1401506
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/sampling_audit.json",
+      "bytes": 118296
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/training_history.csv",
+      "bytes": 19577
+    },
+    {
+      "path": "runs/flowers-selector-budget-98-training-v1/training_summary.json",
+      "bytes": 8437
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/archive_evidence.py",
+      "bytes": 2056
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/budget_analysis.log",
+      "bytes": 1197
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/cpu_validation.json",
+      "bytes": 868
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/evaluate_49.log",
+      "bytes": 1102
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/evaluate_98.log",
+      "bytes": 1102
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/features.log",
+      "bytes": 903
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/geometry_analysis.log",
+      "bytes": 453
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/pipeline.log",
+      "bytes": 4561
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/pipeline.py",
+      "bytes": 3590
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/pipeline_status.json",
+      "bytes": 6006
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/prepare_49.log",
+      "bytes": 2166
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/prepare_98.log",
+      "bytes": 2177
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/resource_context.json",
+      "bytes": 387
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/train_49.log",
+      "bytes": 16815
+    },
+    {
+      "path": "runs/flowers-selector-pipeline-v1/train_98.log",
+      "bytes": 16815
+    }
+  ],
+  "omitted": "Regenerable prefix_tokens.npy; public raw images and frozen CLIP weights."
+}
