@@ -12,12 +12,13 @@ import numpy as np
 
 
 COLORS = {"full_model": "#56616B", "conditioned": "#246B99", "image_only_wide": "#C17022"}
+DATASET_LABELS = {"pets": "Pets", "flowers": "Flowers102", "cub": "CUB-200-2011"}
 
 
 def run(summary, output):
     output.mkdir(parents=True, exist_ok=True)
     rows = sorted(summary["settings"].values(), key=lambda x: (x["dataset"] != "pets", x["dataset"], x["way"]))
-    labels = [f"{ {'pets': 'Pets', 'flowers': 'Flowers102'}.get(r['dataset'], r['dataset'])} · {r['way']} classes" for r in rows]
+    labels = [f"{DATASET_LABELS.get(r['dataset'], r['dataset'])} · {r['way']} classes" for r in rows]
     fig, axes = plt.subplots(1, 3, figsize=(12.5, max(4.7, len(rows) * .6 + 2.1)), sharey=True)
     for i, row in enumerate(rows):
         table = {m["method"]: m for m in row["table"]}

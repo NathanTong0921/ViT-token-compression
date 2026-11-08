@@ -2,16 +2,20 @@
 
 import contextlib
 import io
+import json
+import os
 from pathlib import Path
 import sys
 import tempfile
 import unittest
+import zipfile
 
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from analyze_nway import exchange_losses, load_setting, outcomes, run, way_interaction
 from analyze_selector_budgets import weighted_estimates
+from package_nway import run as package_run
 
 
 def fixture(root, way, shuffle=False):
@@ -128,6 +132,37 @@ class NWayAnalysisTests(unittest.TestCase):
             np.savez_compressed(path, **saved)
             with self.assertRaises(AssertionError):
                 load_setting(path.parent)
+
+    def test_single_dataset_package_uses_selected_run_and_cache(self):
+        previous = Path.cwd()
+        with tempfile.TemporaryDirectory() as temporary:
+            os.chdir(temporary)
+            try:
+                study = Path("runs/cub-nway-v1/study")
+                study.mkdir(parents=True)
+                (study / "status.json").write_text('{"stage": "complete"}')
+                (study / "config.json").write_text('{"cache_dir": "runs/cub-nway-v1/cache"}')
+                (study / "selector.pt").write_bytes(b"checkpoint fixture")
+                files = [Path("results/cub-nway-v1/summary.json"), Path("configs/nway_cub.json"),
+                         Path("docs/experiments/cub.md"), Path("src/token_compression/nway.py"),
+                         Path("src/token_compression/cub.py")]
+                for path in files:
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_text("{}")
+                with contextlib.redirect_stdout(io.StringIO()):
+                    package_run(Path("unused"), Path("archives"), Path("results/cub-nway-v1"),
+                                {"cub": study}, "cub-nway-v1", Path("docs/experiments/cub.md"))
+                result = json.loads(Path("archives/archive_summary.json").read_text())
+                self.assertEqual(result["reused_dependencies"], ["runs/cub-nway-v1/cache"])
+                self.assertEqual([a["name"] for a in result["archives"]],
+                                 ["cub-nway-v1-cub.zip", "cub-nway-v1-analysis.zip"])
+                with zipfile.ZipFile("archives/cub-nway-v1-cub.zip") as archive:
+                    self.assertIn("runs/cub-nway-v1/study/selector.pt", archive.namelist())
+                with zipfile.ZipFile("archives/cub-nway-v1-analysis.zip") as archive:
+                    self.assertIn("configs/nway_cub.json", archive.namelist())
+                    self.assertIn("src/token_compression/cub.py", archive.namelist())
+            finally:
+                os.chdir(previous)
 
 
 if __name__ == "__main__":
