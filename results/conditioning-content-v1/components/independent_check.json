@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "setting": "flowers_b16_49",
+      "comparisons": 20,
+      "maximum_absolute_error": 2.7970247645781043e-15
+    },
+    {
+      "setting": "flowers_b16_98",
+      "comparisons": 20,
+      "maximum_absolute_error": 4.626995401407763e-15
+    },
+    {
+      "setting": "pets_b16_49",
+      "comparisons": 20,
+      "maximum_absolute_error": 1.8735013540549517e-15
+    },
+    {
+      "setting": "pets_b16_98",
+      "comparisons": 20,
+      "maximum_absolute_error": 1.5783815227043974e-15
+    }
+  ],
+  "method": "Direct weighted prediction errors and explicit within-image centering from saved arrays; no component production functions imported."
+}

@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "setting": "flowers_b16_49",
+      "checked_values": 14,
+      "maximum_absolute_difference": 4.263256414560601e-14,
+      "oracle_gain_pp": 1.168300653594767
+    },
+    {
+      "setting": "flowers_b16_98",
+      "checked_values": 14,
+      "maximum_absolute_difference": 5.684341886080802e-14,
+      "oracle_gain_pp": 0.49836601307189365
+    },
+    {
+      "setting": "pets_b16_49",
+      "checked_values": 14,
+      "maximum_absolute_difference": 2.0605739337042905e-12,
+      "oracle_gain_pp": 0.2704678362573043
+    },
+    {
+      "setting": "pets_b16_98",
+      "checked_values": 14,
+      "maximum_absolute_difference": 2.0463630789890885e-12,
+      "oracle_gain_pp": 0.06446039340776144
+    }
+  ],
+  "method": "Independent row-by-row weighted counts from the original benefit inputs; no production headroom functions imported. Reconstructed quadrant shares, cross-seed stability and oracle gains. Intervals not repeated."
+}

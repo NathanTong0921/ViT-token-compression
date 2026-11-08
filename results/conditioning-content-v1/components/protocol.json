@@ -1,0 +1,58 @@
+{
+  "purpose": "Interpretive follow-up to positive content-prediction results; fixed feature groups, no retuning.",
+  "models": [
+    "context",
+    "energy",
+    "gap",
+    "full"
+  ],
+  "energy_features": [
+    "u_omitted_contrast_energy",
+    "c_minus_u_retained_energy"
+  ],
+  "gap_features": [
+    "u_surrogate_gap_loss",
+    "c_minus_u_surrogate_gap",
+    "cu_surrogate_prediction_disagreement"
+  ],
+  "baseline": "old seven statistics plus full_surrogate_abs_gap",
+  "contrasts": [
+    [
+      "energy_added",
+      "context",
+      "energy"
+    ],
+    [
+      "gap_added",
+      "context",
+      "gap"
+    ],
+    [
+      "gap_added_after_energy",
+      "energy",
+      "full"
+    ],
+    [
+      "energy_added_after_gap",
+      "gap",
+      "full"
+    ],
+    [
+      "all_content_added",
+      "context",
+      "full"
+    ]
+  ],
+  "outcomes": [
+    "raw",
+    "geom"
+  ],
+  "ridge": 0.001,
+  "fold_seeds": [
+    2351,
+    2352
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2721,
+  "interval_family": "Four settings separately for each named contrast and outcome"
+}

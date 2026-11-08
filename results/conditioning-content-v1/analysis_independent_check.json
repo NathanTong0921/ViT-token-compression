@@ -1,0 +1,53 @@
+{
+  "panels": [
+    {
+      "panel": "flowers_b16_49",
+      "point_estimates_checked": 105,
+      "maximum_absolute_error": 1.2212453270876722e-14,
+      "tree_fits_full_iterations": 50
+    },
+    {
+      "panel": "flowers_b16_98",
+      "point_estimates_checked": 105,
+      "maximum_absolute_error": 6.661338147750939e-15,
+      "tree_fits_full_iterations": 50
+    },
+    {
+      "panel": "pets_b16_49",
+      "point_estimates_checked": 105,
+      "maximum_absolute_error": 6.217248937900877e-15,
+      "tree_fits_full_iterations": 50
+    },
+    {
+      "panel": "pets_b16_98",
+      "point_estimates_checked": 105,
+      "maximum_absolute_error": 6.8833827526759706e-15,
+      "tree_fits_full_iterations": 50
+    },
+    {
+      "panel": "transfer/flowers_b16_49_to_pets_b16_49",
+      "point_estimates_checked": 105,
+      "maximum_absolute_error": 6.328271240363392e-14,
+      "tree_fits_full_iterations": 2
+    },
+    {
+      "panel": "transfer/flowers_b16_98_to_pets_b16_98",
+      "point_estimates_checked": 105,
+      "maximum_absolute_error": 1.0502709812953981e-13,
+      "tree_fits_full_iterations": 2
+    },
+    {
+      "panel": "transfer/pets_b16_49_to_flowers_b16_49",
+      "point_estimates_checked": 105,
+      "maximum_absolute_error": 4.929390229335695e-14,
+      "tree_fits_full_iterations": 2
+    },
+    {
+      "panel": "transfer/pets_b16_98_to_flowers_b16_98",
+      "point_estimates_checked": 105,
+      "maximum_absolute_error": 5.639932965095795e-14,
+      "tree_fits_full_iterations": 2
+    }
+  ],
+  "method": "Direct weighted errors, independent within-image centering, and high/low group ratios from saved predictions. No analysis production functions imported. Bootstrap intervals not recomputed."
+}

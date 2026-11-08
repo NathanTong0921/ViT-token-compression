@@ -1,0 +1,1509 @@
+{
+  "estimates": {
+    "statistics_r2_raw": {
+      "mean": 0.0017850658234787042,
+      "ci95": [
+        -0.0021652370674685615,
+        0.005826245520837363
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.003417742983580242,
+        0.006760708809017933
+      ]
+    },
+    "context_r2_raw": {
+      "mean": 0.0018118577029077043,
+      "ci95": [
+        -0.0021874801397330167,
+        0.0058720593513610754
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0033742746014264495,
+        0.006782418738639619
+      ]
+    },
+    "content_r2_raw": {
+      "mean": 0.015557111267257784,
+      "ci95": [
+        0.011307722980206172,
+        0.019799477761964786
+      ],
+      "four_setting_adjusted_ci95": [
+        0.009949612664843118,
+        0.020891289987504048
+      ]
+    },
+    "difficulty_context_r2_raw": {
+      "mean": 0.0018736029751509342,
+      "ci95": [
+        -0.0019133996097440375,
+        0.005675085959197259
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.002785086428739106,
+        0.006561580618089823
+      ]
+    },
+    "difficulty_content_r2_raw": {
+      "mean": 0.0158455518148356,
+      "ci95": [
+        0.011754558812426699,
+        0.01993767315325189
+      ],
+      "four_setting_adjusted_ci95": [
+        0.010591186115278975,
+        0.021088769280852165
+      ]
+    },
+    "tree_context_r2_raw": {
+      "mean": -0.023982879842142424,
+      "ci95": [
+        -0.03371890556761101,
+        -0.01460261529584165
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.03601211811406393,
+        -0.012468121363624613
+      ]
+    },
+    "tree_content_r2_raw": {
+      "mean": -0.012627922890721788,
+      "ci95": [
+        -0.020990594360660763,
+        -0.004252772510208453
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0229703632297485,
+        -0.0022516967759191875
+      ]
+    },
+    "content_increment_r2_raw": {
+      "mean": 0.013745253564350085,
+      "ci95": [
+        0.011560979339558285,
+        0.016160334663936966
+      ],
+      "four_setting_adjusted_ci95": [
+        0.010872046642294715,
+        0.016835659445334567
+      ]
+    },
+    "content_increment_within_r2_raw": {
+      "mean": 0.0114243670921632,
+      "ci95": [
+        0.009247828934259733,
+        0.013738303105242001
+      ],
+      "four_setting_adjusted_ci95": [
+        0.008589014608253301,
+        0.014358295194343564
+      ]
+    },
+    "difficulty_content_increment_r2_raw": {
+      "mean": 0.013971948839684611,
+      "ci95": [
+        0.011812103274210057,
+        0.016383867286447733
+      ],
+      "four_setting_adjusted_ci95": [
+        0.011079975965787832,
+        0.016984763977886102
+      ]
+    },
+    "difficulty_content_increment_within_r2_raw": {
+      "mean": 0.011457791923259438,
+      "ci95": [
+        0.009211958324609776,
+        0.01382339072010599
+      ],
+      "four_setting_adjusted_ci95": [
+        0.008559192546183366,
+        0.014472258476164018
+      ]
+    },
+    "tree_content_increment_r2_raw": {
+      "mean": 0.011354956951420667,
+      "ci95": [
+        0.007430145444959111,
+        0.01551887383246491
+      ],
+      "four_setting_adjusted_ci95": [
+        0.006643678568746453,
+        0.016786021705365452
+      ]
+    },
+    "tree_content_increment_within_r2_raw": {
+      "mean": 0.00879911675432728,
+      "ci95": [
+        0.00402751753502347,
+        0.013577533918338797
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0027382044278618533,
+        0.014825311276766902
+      ]
+    },
+    "over_statistics_content_increment_r2_raw": {
+      "mean": 0.013772045443779034,
+      "ci95": [
+        0.011552866454780354,
+        0.01618736058359496
+      ],
+      "four_setting_adjusted_ci95": [
+        0.010899990991320448,
+        0.01689169287732514
+      ]
+    },
+    "over_statistics_content_increment_within_r2_raw": {
+      "mean": 0.011559734215716478,
+      "ci95": [
+        0.009361418644894409,
+        0.013902499460023065
+      ],
+      "four_setting_adjusted_ci95": [
+        0.008742010659784541,
+        0.014498989118976636
+      ]
+    },
+    "statistics_r2_geom": {
+      "mean": 0.003342140603305621,
+      "ci95": [
+        -0.0006683937287213226,
+        0.007420111952326994
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0019144223092022587,
+        0.008371021890748821
+      ]
+    },
+    "context_r2_geom": {
+      "mean": 0.0033890811962364875,
+      "ci95": [
+        -0.0005420983167187753,
+        0.0074420941598187015
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0019259832187789108,
+        0.008436187204565076
+      ]
+    },
+    "content_r2_geom": {
+      "mean": 0.01621876276496559,
+      "ci95": [
+        0.012017536825205215,
+        0.020545622297452014
+      ],
+      "four_setting_adjusted_ci95": [
+        0.010569242608882853,
+        0.021441796711496094
+      ]
+    },
+    "difficulty_context_r2_geom": {
+      "mean": 0.0034922000225454664,
+      "ci95": [
+        -0.00027591796534215396,
+        0.007265422225998105
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0012838842376230702,
+        0.008167484189948507
+      ]
+    },
+    "difficulty_content_r2_geom": {
+      "mean": 0.016550186948130263,
+      "ci95": [
+        0.012563570564411592,
+        0.020657652599637925
+      ],
+      "four_setting_adjusted_ci95": [
+        0.01140859761183513,
+        0.021593321290308654
+      ]
+    },
+    "tree_context_r2_geom": {
+      "mean": -0.01868603340067221,
+      "ci95": [
+        -0.028214470005535185,
+        -0.009214551269426368
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.030432053110054837,
+        -0.006747661340830355
+      ]
+    },
+    "tree_content_r2_geom": {
+      "mean": -0.005390003690810552,
+      "ci95": [
+        -0.013041383180123017,
+        0.00270835641522467
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.014981174840066025,
+        0.005005782631306492
+      ]
+    },
+    "content_increment_r2_geom": {
+      "mean": 0.012829681568729132,
+      "ci95": [
+        0.010863264902590025,
+        0.015032272296319963
+      ],
+      "four_setting_adjusted_ci95": [
+        0.010279831745537026,
+        0.01564720739271535
+      ]
+    },
+    "content_increment_within_r2_geom": {
+      "mean": 0.010775558657999541,
+      "ci95": [
+        0.008755026618872456,
+        0.012906068400446433
+      ],
+      "four_setting_adjusted_ci95": [
+        0.008162805939263315,
+        0.01347606252636316
+      ]
+    },
+    "difficulty_content_increment_r2_geom": {
+      "mean": 0.013057986925584793,
+      "ci95": [
+        0.011088670459312293,
+        0.015254638289228626
+      ],
+      "four_setting_adjusted_ci95": [
+        0.010511986481181693,
+        0.015800538069750954
+      ]
+    },
+    "difficulty_content_increment_within_r2_geom": {
+      "mean": 0.010880123280459356,
+      "ci95": [
+        0.00881285659623653,
+        0.01306115461409225
+      ],
+      "four_setting_adjusted_ci95": [
+        0.008156192622260514,
+        0.013640247871924902
+      ]
+    },
+    "tree_content_increment_r2_geom": {
+      "mean": 0.01329602970986171,
+      "ci95": [
+        0.010073289132229204,
+        0.01677557919120048
+      ],
+      "four_setting_adjusted_ci95": [
+        0.00890952205557303,
+        0.017695120105119953
+      ]
+    },
+    "tree_content_increment_within_r2_geom": {
+      "mean": 0.008020687823732687,
+      "ci95": [
+        0.004567618854382303,
+        0.01146286865796891
+      ],
+      "four_setting_adjusted_ci95": [
+        0.003923175901930698,
+        0.012353941667827566
+      ]
+    },
+    "over_statistics_content_increment_r2_geom": {
+      "mean": 0.012876622161659903,
+      "ci95": [
+        0.010871088836713243,
+        0.015102581871803194
+      ],
+      "four_setting_adjusted_ci95": [
+        0.010290247352542017,
+        0.01574448729222482
+      ]
+    },
+    "over_statistics_content_increment_within_r2_geom": {
+      "mean": 0.010979491898927413,
+      "ci95": [
+        0.008896778928655657,
+        0.013138883515451366
+      ],
+      "four_setting_adjusted_ci95": [
+        0.008381724519807364,
+        0.013674528822485143
+      ]
+    },
+    "statistics_r2_accuracy": {
+      "mean": -0.0002685916062219462,
+      "ci95": [
+        -0.0008308483590212135,
+        0.0002655839893528421
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0009768536476320241,
+        0.0004181573464942769
+      ]
+    },
+    "context_r2_accuracy": {
+      "mean": -7.640587908408492e-05,
+      "ci95": [
+        -0.000613707803964747,
+        0.0004453791624536763
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0007485314849548979,
+        0.0005899837739755741
+      ]
+    },
+    "content_r2_accuracy": {
+      "mean": -0.00013488254857896287,
+      "ci95": [
+        -0.000702935484317313,
+        0.00041723510379535465
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0008364099072986853,
+        0.0005758708262459394
+      ]
+    },
+    "difficulty_context_r2_accuracy": {
+      "mean": 0.0019820027744344992,
+      "ci95": [
+        0.0002575926814138374,
+        0.003618249648551672
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00018768729888696685,
+        0.003949240967028974
+      ]
+    },
+    "difficulty_content_r2_accuracy": {
+      "mean": 0.0020461078066349447,
+      "ci95": [
+        0.00025149957346212726,
+        0.00373764078111064
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00022340942668213623,
+        0.004151813516838821
+      ]
+    },
+    "tree_context_r2_accuracy": {
+      "mean": -0.010650892992604133,
+      "ci95": [
+        -0.01926501435271775,
+        -0.0032316328449413963
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.021629856242020695,
+        -0.0017429347189794621
+      ]
+    },
+    "tree_content_r2_accuracy": {
+      "mean": -0.010794133638868386,
+      "ci95": [
+        -0.019122998164348877,
+        -0.0037845842875336376
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.02132975215338484,
+        -0.0024353333952221294
+      ]
+    },
+    "content_increment_r2_accuracy": {
+      "mean": -5.8476669494898485e-05,
+      "ci95": [
+        -0.00032449072434286,
+        0.00021497896706550347
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0004034223149563125,
+        0.00028883209449989867
+      ]
+    },
+    "content_increment_within_r2_accuracy": {
+      "mean": -3.7169059379037877e-05,
+      "ci95": [
+        -0.0003461917156636018,
+        0.0002742338777860329
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0004207286201380203,
+        0.0003571964355018331
+      ]
+    },
+    "difficulty_content_increment_r2_accuracy": {
+      "mean": 6.41050322005059e-05,
+      "ci95": [
+        -0.00024707894655207887,
+        0.00037455195488072434
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00032074849701335786,
+        0.0004500809731018405
+      ]
+    },
+    "difficulty_content_increment_within_r2_accuracy": {
+      "mean": -2.8564727060869836e-05,
+      "ci95": [
+        -0.00038673351817261587,
+        0.0003301728226521657
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0004569185801240055,
+        0.0004292515243189738
+      ]
+    },
+    "tree_content_increment_r2_accuracy": {
+      "mean": -0.00014324064626431037,
+      "ci95": [
+        -0.0038717681283150333,
+        0.003925917306534488
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.004829912610250549,
+        0.004994417321775455
+      ]
+    },
+    "tree_content_increment_within_r2_accuracy": {
+      "mean": 0.0014340095464434291,
+      "ci95": [
+        -0.0025927663660146533,
+        0.005848727813981513
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0037158021465700758,
+        0.0070816616906784315
+      ]
+    },
+    "over_statistics_content_increment_r2_accuracy": {
+      "mean": 0.00013370905764302333,
+      "ci95": [
+        -0.00015027459996413164,
+        0.00041596661471831584
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00023672734130771042,
+        0.000491095600930083
+      ]
+    },
+    "over_statistics_content_increment_within_r2_accuracy": {
+      "mean": 4.233095790262226e-05,
+      "ci95": [
+        -0.0002509457770546681,
+        0.0003488461616079198
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0003327930800845373,
+        0.0004349313311650527
+      ]
+    },
+    "group_ridge_predicted_raw_gain_low_fraction": {
+      "mean": 0.1548202614379085,
+      "ci95": [
+        0.1450163398692811,
+        0.16528186274509807
+      ],
+      "four_setting_adjusted_ci95": [
+        0.1427690972222223,
+        0.168545751633987
+      ]
+    },
+    "group_ridge_predicted_raw_gain_low_raw": {
+      "mean": -0.0007090499501744195,
+      "ci95": [
+        -0.0015020485800691925,
+        7.705233210863133e-05
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0017625254094022842,
+        0.00025282500972907
+      ]
+    },
+    "group_ridge_predicted_raw_gain_low_centered_raw": {
+      "mean": -0.0005723641885537922,
+      "ci95": [
+        -0.0008836265152561201,
+        -0.00026549543170601016
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00098169379179489,
+        -0.00019838609122816038
+      ]
+    },
+    "group_ridge_predicted_raw_gain_low_geom": {
+      "mean": -0.0007459259525059152,
+      "ci95": [
+        -0.0016395602439461384,
+        0.00012162148066330186
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0019282829176296907,
+        0.0003376380066355964
+      ]
+    },
+    "group_ridge_predicted_raw_gain_low_centered_geom": {
+      "mean": -0.0006457281113720503,
+      "ci95": [
+        -0.0010109579600828887,
+        -0.0003057242798339463
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0011074478473085895,
+        -0.00022433632721456325
+      ]
+    },
+    "group_ridge_predicted_raw_gain_low_accuracy": {
+      "mean": 0.0026385224274406423,
+      "ci95": [
+        -0.0031974075159442515,
+        0.008588454480769978
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.004862647105180218,
+        0.010676227188422729
+      ]
+    },
+    "group_ridge_predicted_raw_gain_low_centered_accuracy": {
+      "mean": 0.0001319261213720321,
+      "ci95": [
+        -0.0026263036807892028,
+        0.0030027233846342816
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0032708669068158215,
+        0.003833088332412048
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_fraction": {
+      "mean": 0.616421568627451,
+      "ci95": [
+        0.6022058823529414,
+        0.6305575980392157
+      ],
+      "four_setting_adjusted_ci95": [
+        0.5976276552287583,
+        0.6349683415032681
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_raw": {
+      "mean": 0.0019881066095363002,
+      "ci95": [
+        0.0015592249941436113,
+        0.002428482331094067
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0013991675026570703,
+        0.0025422730262914172
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_centered_raw": {
+      "mean": 0.00036471540724267523,
+      "ci95": [
+        0.00026150895260245745,
+        0.00047506257969706395
+      ],
+      "four_setting_adjusted_ci95": [
+        0.00022862252756598278,
+        0.0005083803407559173
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_geom": {
+      "mean": 0.0022562119135054177,
+      "ci95": [
+        0.0017669275247656914,
+        0.0027585068338132936
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0015773704054474309,
+        0.002881079716086251
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_centered_geom": {
+      "mean": 0.0004173213134496288,
+      "ci95": [
+        0.0003002134345717831,
+        0.0005417320072801585
+      ],
+      "four_setting_adjusted_ci95": [
+        0.00026559768508364916,
+        0.0005703849224190013
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_accuracy": {
+      "mean": 0.0027833001988071663,
+      "ci95": [
+        -0.00013057475098681855,
+        0.00587800645443842
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0008603027212145059,
+        0.0066094308589867345
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_centered_accuracy": {
+      "mean": 0.0007620941020543432,
+      "ci95": [
+        -0.0002929048882341569,
+        0.0018815663416459336
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0005942359630437942,
+        0.0022023041297029814
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_minus_low_raw": {
+      "mean": 0.0026971565597107196,
+      "ci95": [
+        0.0018399625300385485,
+        0.003547516568256018
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0016903711984008328,
+        0.0038259272761473145
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_minus_low_centered_raw": {
+      "mean": 0.0009370795957964675,
+      "ci95": [
+        0.0005685143972988075,
+        0.001299119260609693
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0004959698057708053,
+        0.001398840644768833
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_minus_low_geom": {
+      "mean": 0.003002137866011333,
+      "ci95": [
+        0.0020482438086046094,
+        0.003955548665886417
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0018746300102965776,
+        0.0042865492437077065
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_minus_low_centered_geom": {
+      "mean": 0.001063049424821679,
+      "ci95": [
+        0.0006510375595983602,
+        0.0014671391800591012
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0005782468068433631,
+        0.0015849341558369639
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_minus_low_accuracy": {
+      "mean": 0.00014477777136652405,
+      "ci95": [
+        -0.006140155128487516,
+        0.006367411448417451
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.007888090361522203,
+        0.007811718330764128
+      ]
+    },
+    "group_ridge_predicted_raw_gain_high_minus_low_centered_accuracy": {
+      "mean": 0.0006301679806823111,
+      "ci95": [
+        -0.0028851654714432567,
+        0.004065760305735713
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0040803487198646585,
+        0.004956397981696001
+      ]
+    },
+    "group_tree_predicted_raw_gain_low_fraction": {
+      "mean": 0.30261437908496736,
+      "ci95": [
+        0.2901143790849674,
+        0.31519607843137265
+      ],
+      "four_setting_adjusted_ci95": [
+        0.2867223243464053,
+        0.31793351715686285
+      ]
+    },
+    "group_tree_predicted_raw_gain_low_raw": {
+      "mean": 0.00088775100399686,
+      "ci95": [
+        0.0003512472845134592,
+        0.0014070099491455556
+      ],
+      "four_setting_adjusted_ci95": [
+        0.00019474783037675753,
+        0.0015346675647872968
+      ]
+    },
+    "group_tree_predicted_raw_gain_low_centered_raw": {
+      "mean": -0.00013338221482465945,
+      "ci95": [
+        -0.00034184361931482955,
+        7.452255310170798e-05
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00039700616409835495,
+        0.00012575785374237565
+      ]
+    },
+    "group_tree_predicted_raw_gain_low_geom": {
+      "mean": 0.0010538773751844696,
+      "ci95": [
+        0.0004736869963624497,
+        0.0016365641801295988
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0002556414920148697,
+        0.001787281719823612
+      ]
+    },
+    "group_tree_predicted_raw_gain_low_centered_geom": {
+      "mean": -0.0001357482509600869,
+      "ci95": [
+        -0.0003706756131425565,
+        9.304152988963805e-05
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0004312801070151194,
+        0.0001529567929830326
+      ]
+    },
+    "group_tree_predicted_raw_gain_low_accuracy": {
+      "mean": 0.0010799136069114506,
+      "ci95": [
+        -0.002938073445572786,
+        0.005243042971309764
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.004095649255293561,
+        0.006596008935716231
+      ]
+    },
+    "group_tree_predicted_raw_gain_low_centered_accuracy": {
+      "mean": -0.0021598272138229012,
+      "ci95": [
+        -0.004569043714260849,
+        1.9824120736183525e-19
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00512280848868577,
+        0.0006241301795092174
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_fraction": {
+      "mean": 0.5304738562091503,
+      "ci95": [
+        0.5174019607843138,
+        0.5447773692810459
+      ],
+      "four_setting_adjusted_ci95": [
+        0.5145011233660132,
+        0.5492667483660132
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_raw": {
+      "mean": 0.0012730285410574103,
+      "ci95": [
+        0.0007588556534793132,
+        0.0017677164138835241
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0006000177468172037,
+        0.0018922799217449984
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_centered_raw": {
+      "mean": 9.251618004810972e-05,
+      "ci95": [
+        -3.619261192383269e-05,
+        0.00022199673779442003
+      ],
+      "four_setting_adjusted_ci95": [
+        -7.048248346011333e-05,
+        0.0002514129529668499
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_geom": {
+      "mean": 0.001448219482632325,
+      "ci95": [
+        0.000878157580535837,
+        0.0020041072685498852
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0007099273740171309,
+        0.002131772284446682
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_centered_geom": {
+      "mean": 0.00010101653607410753,
+      "ci95": [
+        -4.183227912959341e-05,
+        0.00024155978422809273
+      ],
+      "four_setting_adjusted_ci95": [
+        -7.584145821952443e-05,
+        0.0002727611744147473
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_accuracy": {
+      "mean": 0.0026182042199291633,
+      "ci95": [
+        -0.0006204822079881678,
+        0.005994628060492381
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0016981432072258598,
+        0.006909311846005972
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_centered_accuracy": {
+      "mean": 0.0013476051131988342,
+      "ci95": [
+        3.859609565581785e-05,
+        0.002720858309133432
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00023466927621405687,
+        0.0031287178917753285
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_minus_low_raw": {
+      "mean": 0.0003852775370605503,
+      "ci95": [
+        -0.0002651444918669941,
+        0.0010383037298953486
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0004314451442218936,
+        0.001166450056815671
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_minus_low_centered_raw": {
+      "mean": 0.00022589839487276918,
+      "ci95": [
+        -9.141838035464772e-05,
+        0.0005466195354954864
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00016566749263113788,
+        0.0006124205315109713
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_minus_low_geom": {
+      "mean": 0.0003943421074478555,
+      "ci95": [
+        -0.0003322298121613633,
+        0.0011081992689643677
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0005409765959983618,
+        0.00127649124259195
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_minus_low_centered_geom": {
+      "mean": 0.00023676478703419442,
+      "ci95": [
+        -0.00010706095797998864,
+        0.0005816744071067255
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0001930843669323818,
+        0.0006641516044241199
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_minus_low_accuracy": {
+      "mean": 0.0015382906130177126,
+      "ci95": [
+        -0.003560140560909265,
+        0.006826951086535307
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.005031069075320875,
+        0.008296785768288257
+      ]
+    },
+    "group_tree_predicted_raw_gain_high_minus_low_centered_accuracy": {
+      "mean": 0.0035074323270217356,
+      "ci95": [
+        0.0003797444433157443,
+        0.007045985418696688
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0006110236330078761,
+        0.00796246954341115
+      ]
+    },
+    "group_u_omitted_contrast_energy_low_fraction": {
+      "mean": 0.1573529411764706,
+      "ci95": [
+        0.14623774509803927,
+        0.1688725490196079
+      ],
+      "four_setting_adjusted_ci95": [
+        0.143545751633987,
+        0.17177338643790857
+      ]
+    },
+    "group_u_omitted_contrast_energy_low_raw": {
+      "mean": 3.70547624144351e-05,
+      "ci95": [
+        -0.000657891028635025,
+        0.0007579593412384619
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0008589162382224297,
+        0.0008981897926970011
+      ]
+    },
+    "group_u_omitted_contrast_energy_low_centered_raw": {
+      "mean": -0.0005008077620299449,
+      "ci95": [
+        -0.0008809663282827746,
+        -0.00012482835538678137
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.001015967345380511,
+        -1.4780395093748065e-05
+      ]
+    },
+    "group_u_omitted_contrast_energy_low_geom": {
+      "mean": 9.286112839064838e-05,
+      "ci95": [
+        -0.0006622987308815901,
+        0.000897305228618404
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0009056282913928035,
+        0.0010447175712909233
+      ]
+    },
+    "group_u_omitted_contrast_energy_low_centered_geom": {
+      "mean": -0.0005754211963310821,
+      "ci95": [
+        -0.0009988037636174951,
+        -0.00015868047290173935
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0011480252649513165,
+        -2.218155798988586e-05
+      ]
+    },
+    "group_u_omitted_contrast_energy_low_accuracy": {
+      "mean": 0.0020768431983385323,
+      "ci95": [
+        -0.00207146556188504,
+        0.006718433098450434
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0034524969144404845,
+        0.007967152745659463
+      ]
+    },
+    "group_u_omitted_contrast_energy_low_centered_accuracy": {
+      "mean": -0.00025960539979231654,
+      "ci95": [
+        -0.0033218010927943092,
+        0.0027040713711067757
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.004299634247527814,
+        0.003361288905622508
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_fraction": {
+      "mean": 0.5243464052287582,
+      "ci95": [
+        0.5084926470588236,
+        0.5393811274509805
+      ],
+      "four_setting_adjusted_ci95": [
+        0.504778901143791,
+        0.5432603145424838
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_raw": {
+      "mean": 0.0014061543471756038,
+      "ci95": [
+        0.0009109241554599745,
+        0.0018936765907316955
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0007785540700342103,
+        0.0019913297512831243
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_centered_raw": {
+      "mean": 0.00018118436533311148,
+      "ci95": [
+        2.7372648260818965e-05,
+        0.00034522596229120603
+      ],
+      "four_setting_adjusted_ci95": [
+        -9.372654630883063e-06,
+        0.0003858130221872042
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_geom": {
+      "mean": 0.0016021264034269196,
+      "ci95": [
+        0.0010379376835450227,
+        0.0021442272526952153
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0008957819983868666,
+        0.0022639932665199205
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_centered_geom": {
+      "mean": 0.0002096302173204788,
+      "ci95": [
+        3.533423818957941e-05,
+        0.000391200519556447
+      ],
+      "four_setting_adjusted_ci95": [
+        -1.2438086210463258e-05,
+        0.00043724761415015546
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_accuracy": {
+      "mean": 0.0017139295730757302,
+      "ci95": [
+        -0.0012594557607251277,
+        0.00502364653638362
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.001956250911628504,
+        0.00600085356389866
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_centered_accuracy": {
+      "mean": 0.00015581177937052092,
+      "ci95": [
+        -0.0013219799373071174,
+        0.001759008756266976
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0016724639463692448,
+        0.0022691444457435795
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_minus_low_raw": {
+      "mean": 0.0013690995847611687,
+      "ci95": [
+        0.0005321543245740392,
+        0.002156380608614078
+      ],
+      "four_setting_adjusted_ci95": [
+        0.00037705615920508294,
+        0.002346805207613514
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_minus_low_centered_raw": {
+      "mean": 0.0006819921273630564,
+      "ci95": [
+        0.00023020069605586167,
+        0.0011662655462902087
+      ],
+      "four_setting_adjusted_ci95": [
+        0.00010491251511950102,
+        0.001326903972720238
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_minus_low_geom": {
+      "mean": 0.0015092652750362712,
+      "ci95": [
+        0.0005819288623138648,
+        0.002391191391803417
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0003823371719937656,
+        0.002568993519265921
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_minus_low_centered_geom": {
+      "mean": 0.000785051413651561,
+      "ci95": [
+        0.00027576447143512765,
+        0.0013300331643760794
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0001325278887939695,
+        0.0015033881017485005
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_minus_low_accuracy": {
+      "mean": -0.0003629136252628021,
+      "ci95": [
+        -0.0052835883221062805,
+        0.004614204218741577
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.006289873901388217,
+        0.0057884146488369065
+      ]
+    },
+    "group_u_omitted_contrast_energy_high_minus_low_centered_accuracy": {
+      "mean": 0.00041541717916283746,
+      "ci95": [
+        -0.003276257410721153,
+        0.004420411115462391
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.004132700187635862,
+        0.005919991892768457
+      ]
+    }
+  },
+  "per_run": [
+    {
+      "seed": 2041,
+      "statistics_r2_raw": 0.0011166801704484142,
+      "context_r2_raw": 0.0010793312905796881,
+      "content_r2_raw": 0.01471935742730357,
+      "difficulty_context_r2_raw": 0.0016594291040488152,
+      "difficulty_content_r2_raw": 0.01551887771717464,
+      "tree_context_r2_raw": -0.029255614766147797,
+      "tree_content_r2_raw": -0.016067813558980903,
+      "content_increment_r2_raw": 0.013640026136723915,
+      "content_increment_within_r2_raw": 0.012773133243265861,
+      "difficulty_content_increment_r2_raw": 0.013859448613125784,
+      "difficulty_content_increment_within_r2_raw": 0.012802570352241029,
+      "tree_content_increment_r2_raw": 0.01318780120716688,
+      "tree_content_increment_within_r2_raw": 0.01890801688986214,
+      "over_statistics_content_increment_r2_raw": 0.013602677256855124,
+      "over_statistics_content_increment_within_r2_raw": 0.012924585511314658,
+      "statistics_r2_geom": 0.00395579569695137,
+      "context_r2_geom": 0.003906402177166313,
+      "content_r2_geom": 0.016329758656951632,
+      "difficulty_context_r2_geom": 0.004440226101910749,
+      "difficulty_content_r2_geom": 0.01711057218983114,
+      "tree_context_r2_geom": -0.01756007783391178,
+      "tree_content_r2_geom": -0.004669856724539123,
+      "content_increment_r2_geom": 0.012423356479785373,
+      "content_increment_within_r2_geom": 0.01170804895001154,
+      "difficulty_content_increment_r2_geom": 0.012670346087920439,
+      "difficulty_content_increment_within_r2_geom": 0.011837271308605268,
+      "tree_content_increment_r2_geom": 0.012890221109372574,
+      "tree_content_increment_within_r2_geom": 0.01157414010977535,
+      "over_statistics_content_increment_r2_geom": 0.012373962960000309,
+      "over_statistics_content_increment_within_r2_geom": 0.011913826212273054,
+      "statistics_r2_accuracy": -0.00041018083589872134,
+      "context_r2_accuracy": -0.00030296028343057557,
+      "content_r2_accuracy": -0.00013065053610561428,
+      "difficulty_context_r2_accuracy": 0.0006778073812455654,
+      "difficulty_content_r2_accuracy": 0.0009434745664282929,
+      "tree_context_r2_accuracy": -0.013501079591285103,
+      "tree_content_r2_accuracy": -0.013095539884107277,
+      "content_increment_r2_accuracy": 0.00017230974732500209,
+      "content_increment_within_r2_accuracy": 0.00022279387298776963,
+      "difficulty_content_increment_r2_accuracy": 0.0002656671851827045,
+      "difficulty_content_increment_within_r2_accuracy": 0.00018967535744496194,
+      "tree_content_increment_r2_accuracy": 0.00040553970717769434,
+      "tree_content_increment_within_r2_accuracy": 0.0025517329176245516,
+      "over_statistics_content_increment_r2_accuracy": 0.0002795302997931792,
+      "over_statistics_content_increment_within_r2_accuracy": 0.00027461379934341453,
+      "group_ridge_predicted_raw_gain_low_fraction": 0.13088235294117648,
+      "group_ridge_predicted_raw_gain_low_raw": 0.0008851496105113743,
+      "group_ridge_predicted_raw_gain_low_centered_raw": -0.0006263350460971361,
+      "group_ridge_predicted_raw_gain_low_geom": 0.0009962390227326076,
+      "group_ridge_predicted_raw_gain_low_centered_geom": -0.0007241520126174983,
+      "group_ridge_predicted_raw_gain_low_accuracy": 0.0037453183520599377,
+      "group_ridge_predicted_raw_gain_low_centered_accuracy": 0.0018726591760299689,
+      "group_ridge_predicted_raw_gain_high_fraction": 0.6509803921568628,
+      "group_ridge_predicted_raw_gain_high_raw": 0.001963416840993326,
+      "group_ridge_predicted_raw_gain_high_centered_raw": 0.0003458536489507624,
+      "group_ridge_predicted_raw_gain_high_geom": 0.0022180491222059547,
+      "group_ridge_predicted_raw_gain_high_centered_geom": 0.00039780566343591313,
+      "group_ridge_predicted_raw_gain_high_accuracy": 0.001882530120481934,
+      "group_ridge_predicted_raw_gain_high_centered_accuracy": 0.0008471385542168703,
+      "group_ridge_predicted_raw_gain_high_minus_low_raw": 0.0010782672304819518,
+      "group_ridge_predicted_raw_gain_high_minus_low_centered_raw": 0.0009721886950478985,
+      "group_ridge_predicted_raw_gain_high_minus_low_geom": 0.0012218100994733471,
+      "group_ridge_predicted_raw_gain_high_minus_low_centered_geom": 0.0011219576760534114,
+      "group_ridge_predicted_raw_gain_high_minus_low_accuracy": -0.0018627882315780037,
+      "group_ridge_predicted_raw_gain_high_minus_low_centered_accuracy": -0.0010255206218130987,
+      "group_tree_predicted_raw_gain_low_fraction": 0.296078431372549,
+      "group_tree_predicted_raw_gain_low_raw": 0.001531187167378851,
+      "group_tree_predicted_raw_gain_low_centered_raw": -7.010090923467257e-05,
+      "group_tree_predicted_raw_gain_low_geom": 0.0017757316647262376,
+      "group_tree_predicted_raw_gain_low_centered_geom": -5.176222483075153e-05,
+      "group_tree_predicted_raw_gain_low_accuracy": -0.0016556291390728533,
+      "group_tree_predicted_raw_gain_low_centered_accuracy": -0.00248344370860928,
+      "group_tree_predicted_raw_gain_high_fraction": 0.55,
+      "group_tree_predicted_raw_gain_high_raw": 0.0013870217749407411,
+      "group_tree_predicted_raw_gain_high_centered_raw": 9.684733558386448e-05,
+      "group_tree_predicted_raw_gain_high_geom": 0.0015460446899833583,
+      "group_tree_predicted_raw_gain_high_centered_geom": 9.228929988981967e-05,
+      "group_tree_predicted_raw_gain_high_accuracy": 0.0017825311942959061,
+      "group_tree_predicted_raw_gain_high_centered_accuracy": 0.0013368983957219296,
+      "group_tree_predicted_raw_gain_high_minus_low_raw": -0.00014416539243810992,
+      "group_tree_predicted_raw_gain_high_minus_low_centered_raw": 0.00016694824481853707,
+      "group_tree_predicted_raw_gain_high_minus_low_geom": -0.0002296869747428793,
+      "group_tree_predicted_raw_gain_high_minus_low_centered_geom": 0.00014405152472057119,
+      "group_tree_predicted_raw_gain_high_minus_low_accuracy": 0.0034381603333687597,
+      "group_tree_predicted_raw_gain_high_minus_low_centered_accuracy": 0.0038203421043312095,
+      "group_u_omitted_contrast_energy_low_fraction": 0.14730392156862746,
+      "group_u_omitted_contrast_energy_low_raw": 0.001055303880458271,
+      "group_u_omitted_contrast_energy_low_centered_raw": -0.00010349512248983438,
+      "group_u_omitted_contrast_energy_low_geom": 0.0012372590513276042,
+      "group_u_omitted_contrast_energy_low_centered_geom": -6.32331955662646e-05,
+      "group_u_omitted_contrast_energy_low_accuracy": 0.0016638935108153135,
+      "group_u_omitted_contrast_energy_low_centered_accuracy": 0.0,
+      "group_u_omitted_contrast_energy_high_fraction": 0.5475490196078432,
+      "group_u_omitted_contrast_energy_high_raw": 0.0014665179361481792,
+      "group_u_omitted_contrast_energy_high_centered_raw": 0.00010553215386057514,
+      "group_u_omitted_contrast_energy_high_geom": 0.001663158424781427,
+      "group_u_omitted_contrast_energy_high_centered_geom": 9.915018242150269e-05,
+      "group_u_omitted_contrast_energy_high_accuracy": 0.0,
+      "group_u_omitted_contrast_energy_high_centered_accuracy": 0.0003357206803939134,
+      "group_u_omitted_contrast_energy_high_minus_low_raw": 0.0004112140556899082,
+      "group_u_omitted_contrast_energy_high_minus_low_centered_raw": 0.00020902727635040952,
+      "group_u_omitted_contrast_energy_high_minus_low_geom": 0.00042589937345382275,
+      "group_u_omitted_contrast_energy_high_minus_low_centered_geom": 0.00016238337798776727,
+      "group_u_omitted_contrast_energy_high_minus_low_accuracy": -0.0016638935108153135,
+      "group_u_omitted_contrast_energy_high_minus_low_centered_accuracy": 0.0003357206803939134
+    },
+    {
+      "seed": 2042,
+      "statistics_r2_raw": -0.0011341809503888634,
+      "context_r2_raw": -0.001079665828904286,
+      "content_r2_raw": 0.011859277999163864,
+      "difficulty_context_r2_raw": -0.00018212775615400467,
+      "difficulty_content_r2_raw": 0.012927163943627473,
+      "tree_context_r2_raw": -0.02736383301437484,
+      "tree_content_r2_raw": -0.015132472400852803,
+      "content_increment_r2_raw": 0.012938943828068072,
+      "content_increment_within_r2_raw": 0.01013035997830964,
+      "difficulty_content_increment_r2_raw": 0.013109291699781513,
+      "difficulty_content_increment_within_r2_raw": 0.009986995823488052,
+      "tree_content_increment_r2_raw": 0.012231360613521978,
+      "tree_content_increment_within_r2_raw": 0.00896300630187232,
+      "over_statistics_content_increment_r2_raw": 0.012993458949552828,
+      "over_statistics_content_increment_within_r2_raw": 0.010235884376688879,
+      "statistics_r2_geom": 0.0008604946372861022,
+      "context_r2_geom": 0.0009497186747261521,
+      "content_r2_geom": 0.013180864211690846,
+      "difficulty_context_r2_geom": 0.0017020521555226598,
+      "difficulty_content_r2_geom": 0.01412233724871792,
+      "tree_context_r2_geom": -0.022714819421031374,
+      "tree_content_r2_geom": -0.008397861838515874,
+      "content_increment_r2_geom": 0.012231145536964754,
+      "content_increment_within_r2_geom": 0.009622447369610904,
+      "difficulty_content_increment_r2_geom": 0.012420285093195286,
+      "difficulty_content_increment_within_r2_geom": 0.009560579315945915,
+      "tree_content_increment_r2_geom": 0.014316957582515397,
+      "tree_content_increment_within_r2_geom": 0.00825350413063102,
+      "over_statistics_content_increment_r2_geom": 0.012320369574404763,
+      "over_statistics_content_increment_within_r2_geom": 0.009795269193054122,
+      "statistics_r2_accuracy": 4.501866430772772e-05,
+      "context_r2_accuracy": 0.00010396285666702809,
+      "content_r2_accuracy": -0.00010961792905250789,
+      "difficulty_context_r2_accuracy": 0.0014439589136688857,
+      "difficulty_content_r2_accuracy": 0.0012954559542698307,
+      "tree_context_r2_accuracy": -0.008192580719411424,
+      "tree_content_r2_accuracy": -0.01032474663967764,
+      "content_increment_r2_accuracy": -0.00021358078571960583,
+      "content_increment_within_r2_accuracy": -0.00025432305533243393,
+      "difficulty_content_increment_r2_accuracy": -0.0001485029593990535,
+      "difficulty_content_increment_within_r2_accuracy": -0.00027601304676994076,
+      "tree_content_increment_r2_accuracy": -0.002132165920266154,
+      "tree_content_increment_within_r2_accuracy": -0.0016125016879507687,
+      "over_statistics_content_increment_r2_accuracy": -0.0001546365933602846,
+      "over_statistics_content_increment_within_r2_accuracy": -0.00028252555976819593,
+      "group_ridge_predicted_raw_gain_low_fraction": 0.1536764705882353,
+      "group_ridge_predicted_raw_gain_low_raw": -0.0007255685885557175,
+      "group_ridge_predicted_raw_gain_low_centered_raw": -0.00013563499163592727,
+      "group_ridge_predicted_raw_gain_low_geom": -0.0007549486858941648,
+      "group_ridge_predicted_raw_gain_low_centered_geom": -0.00015759191346114936,
+      "group_ridge_predicted_raw_gain_low_accuracy": 0.003189792663476885,
+      "group_ridge_predicted_raw_gain_low_centered_accuracy": 0.001993620414673053,
+      "group_ridge_predicted_raw_gain_high_fraction": 0.6102941176470589,
+      "group_ridge_predicted_raw_gain_high_raw": 0.0016526869352323525,
+      "group_ridge_predicted_raw_gain_high_centered_raw": 0.0002574455434359232,
+      "group_ridge_predicted_raw_gain_high_geom": 0.0019148674935036748,
+      "group_ridge_predicted_raw_gain_high_centered_geom": 0.0002948155519932017,
+      "group_ridge_predicted_raw_gain_high_accuracy": 0.0012048192771084377,
+      "group_ridge_predicted_raw_gain_high_centered_accuracy": 0.00030120481927710944,
+      "group_ridge_predicted_raw_gain_high_minus_low_raw": 0.00237825552378807,
+      "group_ridge_predicted_raw_gain_high_minus_low_centered_raw": 0.00039308053507185046,
+      "group_ridge_predicted_raw_gain_high_minus_low_geom": 0.0026698161793978397,
+      "group_ridge_predicted_raw_gain_high_minus_low_centered_geom": 0.0004524074654543511,
+      "group_ridge_predicted_raw_gain_high_minus_low_accuracy": -0.001984973386368447,
+      "group_ridge_predicted_raw_gain_high_minus_low_centered_accuracy": -0.0016924155953959436,
+      "group_tree_predicted_raw_gain_low_fraction": 0.29705882352941176,
+      "group_tree_predicted_raw_gain_low_raw": 0.0007362071018998005,
+      "group_tree_predicted_raw_gain_low_centered_raw": -0.0001835505395094952,
+      "group_tree_predicted_raw_gain_low_geom": 0.0008900315130328709,
+      "group_tree_predicted_raw_gain_low_centered_geom": -0.00021297121277461437,
+      "group_tree_predicted_raw_gain_low_accuracy": -0.0008250825082508278,
+      "group_tree_predicted_raw_gain_low_centered_accuracy": -0.0035066006600660182,
+      "group_tree_predicted_raw_gain_high_fraction": 0.5274509803921569,
+      "group_tree_predicted_raw_gain_high_raw": 0.001222544522838302,
+      "group_tree_predicted_raw_gain_high_centered_raw": 0.00011099117537995064,
+      "group_tree_predicted_raw_gain_high_geom": 0.0014341690652760922,
+      "group_tree_predicted_raw_gain_high_centered_geom": 0.00013575097590271884,
+      "group_tree_predicted_raw_gain_high_accuracy": 0.0027881040892193403,
+      "group_tree_predicted_raw_gain_high_centered_accuracy": 0.0026719330855018678,
+      "group_tree_predicted_raw_gain_high_minus_low_raw": 0.0004863374209385016,
+      "group_tree_predicted_raw_gain_high_minus_low_centered_raw": 0.00029454171488944587,
+      "group_tree_predicted_raw_gain_high_minus_low_geom": 0.0005441375522432213,
+      "group_tree_predicted_raw_gain_high_minus_low_centered_geom": 0.0003487221886773332,
+      "group_tree_predicted_raw_gain_high_minus_low_accuracy": 0.003613186597470168,
+      "group_tree_predicted_raw_gain_high_minus_low_centered_accuracy": 0.006178533745567886,
+      "group_u_omitted_contrast_energy_low_fraction": 0.16568627450980394,
+      "group_u_omitted_contrast_energy_low_raw": -6.238139680856831e-05,
+      "group_u_omitted_contrast_energy_low_centered_raw": -0.0004533479877433498,
+      "group_u_omitted_contrast_energy_low_geom": -5.7273822214551576e-05,
+      "group_u_omitted_contrast_energy_low_centered_geom": -0.0006236944024235307,
+      "group_u_omitted_contrast_energy_low_accuracy": -0.0014792899408284073,
+      "group_u_omitted_contrast_energy_low_centered_accuracy": -0.00406804733727812,
+      "group_u_omitted_contrast_energy_high_fraction": 0.5075980392156864,
+      "group_u_omitted_contrast_energy_high_raw": 0.0014111233082789284,
+      "group_u_omitted_contrast_energy_high_centered_raw": 0.00023336555738629906,
+      "group_u_omitted_contrast_energy_high_geom": 0.0016712311361517216,
+      "group_u_omitted_contrast_energy_high_centered_geom": 0.00030232680077630947,
+      "group_u_omitted_contrast_energy_high_accuracy": 0.0024142926122646146,
+      "group_u_omitted_contrast_energy_high_centered_accuracy": 0.002172863351038153,
+      "group_u_omitted_contrast_energy_high_minus_low_raw": 0.0014735047050874967,
+      "group_u_omitted_contrast_energy_high_minus_low_centered_raw": 0.0006867135451296488,
+      "group_u_omitted_contrast_energy_high_minus_low_geom": 0.0017285049583662731,
+      "group_u_omitted_contrast_energy_high_minus_low_centered_geom": 0.0009260212031998402,
+      "group_u_omitted_contrast_energy_high_minus_low_accuracy": 0.003893582553093022,
+      "group_u_omitted_contrast_energy_high_minus_low_centered_accuracy": 0.0062409106883162735
+    },
+    {
+      "seed": 2043,
+      "statistics_r2_raw": 0.005452055309613346,
+      "context_r2_raw": 0.00550180217064089,
+      "content_r2_raw": 0.02019482446259746,
+      "difficulty_context_r2_raw": 0.004245637724882512,
+      "difficulty_content_r2_raw": 0.019231522039016236,
+      "tree_context_r2_raw": -0.016048380208167012,
+      "tree_content_r2_raw": -0.007132215391855157,
+      "content_increment_r2_raw": 0.014693022291956627,
+      "content_increment_within_r2_raw": 0.011663716849248771,
+      "difficulty_content_increment_r2_raw": 0.014985884314133734,
+      "difficulty_content_increment_within_r2_raw": 0.011879479175426522,
+      "tree_content_increment_r2_raw": 0.00891616481631187,
+      "tree_content_increment_within_r2_raw": 0.0005979427711700081,
+      "over_statistics_content_increment_r2_raw": 0.014742769152984099,
+      "over_statistics_content_increment_within_r2_raw": 0.01181654295089717,
+      "statistics_r2_geom": 0.005381594625634034,
+      "context_r2_geom": 0.005463452935946633,
+      "content_r2_geom": 0.019234707762468495,
+      "difficulty_context_r2_geom": 0.004553406273961835,
+      "difficulty_content_r2_geom": 0.018577852916143556,
+      "tree_context_r2_geom": -0.01548035498898681,
+      "tree_content_r2_geom": -0.002898932458313741,
+      "content_increment_r2_geom": 0.013771254826521823,
+      "content_increment_within_r2_geom": 0.011149130690714952,
+      "difficulty_content_increment_r2_geom": 0.014024446642181767,
+      "difficulty_content_increment_within_r2_geom": 0.011394602856004814,
+      "tree_content_increment_r2_geom": 0.012581422530673118,
+      "tree_content_increment_within_r2_geom": 0.004984455498039524,
+      "over_statistics_content_increment_r2_geom": 0.013853113136834412,
+      "over_statistics_content_increment_within_r2_geom": 0.01138159205756887,
+      "statistics_r2_accuracy": -0.00044763461986963016,
+      "context_r2_accuracy": -5.377605839584909e-05,
+      "content_r2_accuracy": -0.0001628416612302619,
+      "difficulty_context_r2_accuracy": 0.003628219221960771,
+      "difficulty_content_r2_accuracy": 0.0037223290631840378,
+      "tree_context_r2_accuracy": -0.010548114409567821,
+      "tree_content_r2_accuracy": -0.009253637898793299,
+      "content_increment_r2_accuracy": -0.00010906560283431289,
+      "content_increment_within_r2_accuracy": -6.692037971055062e-05,
+      "difficulty_content_increment_r2_accuracy": 9.410984122326988e-05,
+      "difficulty_content_increment_within_r2_accuracy": 4.747907216189723e-06,
+      "tree_content_increment_r2_accuracy": 0.0012944765107745354,
+      "tree_content_increment_within_r2_accuracy": 0.00319653432442237,
+      "over_statistics_content_increment_r2_accuracy": 0.00028479295863937705,
+      "over_statistics_content_increment_within_r2_accuracy": 0.00013280091957706828,
+      "group_ridge_predicted_raw_gain_low_fraction": 0.17990196078431372,
+      "group_ridge_predicted_raw_gain_low_raw": -0.0018547521015928664,
+      "group_ridge_predicted_raw_gain_low_centered_raw": -0.0009061636007327508,
+      "group_ridge_predicted_raw_gain_low_geom": -0.002005679144526268,
+      "group_ridge_predicted_raw_gain_low_centered_geom": -0.001005650499417099,
+      "group_ridge_predicted_raw_gain_low_accuracy": 0.0013623978201634922,
+      "group_ridge_predicted_raw_gain_low_centered_accuracy": -0.0027247956403269845,
+      "group_ridge_predicted_raw_gain_high_fraction": 0.5879901960784314,
+      "group_ridge_predicted_raw_gain_high_raw": 0.002363584314524617,
+      "group_ridge_predicted_raw_gain_high_centered_raw": 0.0004969366623081746,
+      "group_ridge_predicted_raw_gain_high_geom": 0.0026527554647749934,
+      "group_ridge_predicted_raw_gain_high_centered_geom": 0.0005660803432382625,
+      "group_ridge_predicted_raw_gain_high_accuracy": 0.0054189245518966415,
+      "group_ridge_predicted_raw_gain_high_centered_accuracy": 0.0011463109629012128,
+      "group_ridge_predicted_raw_gain_high_minus_low_raw": 0.004218336416117484,
+      "group_ridge_predicted_raw_gain_high_minus_low_centered_raw": 0.0014031002630409254,
+      "group_ridge_predicted_raw_gain_high_minus_low_geom": 0.004658434609301262,
+      "group_ridge_predicted_raw_gain_high_minus_low_centered_geom": 0.0015717308426553614,
+      "group_ridge_predicted_raw_gain_high_minus_low_accuracy": 0.004056526731733149,
+      "group_ridge_predicted_raw_gain_high_minus_low_centered_accuracy": 0.0038711066032281975,
+      "group_tree_predicted_raw_gain_low_fraction": 0.3147058823529412,
+      "group_tree_predicted_raw_gain_low_raw": 0.00042544596036461025,
+      "group_tree_predicted_raw_gain_low_centered_raw": -0.00014556275036569,
+      "group_tree_predicted_raw_gain_low_geom": 0.0005294079072415423,
+      "group_tree_predicted_raw_gain_low_centered_geom": -0.0001418704393129139,
+      "group_tree_predicted_raw_gain_low_accuracy": 0.005451713395638647,
+      "group_tree_predicted_raw_gain_low_centered_accuracy": -0.0005841121495327123,
+      "group_tree_predicted_raw_gain_high_fraction": 0.5139705882352942,
+      "group_tree_predicted_raw_gain_high_raw": 0.001202852475427142,
+      "group_tree_predicted_raw_gain_high_centered_raw": 6.892185340225598e-05,
+      "group_tree_predicted_raw_gain_high_geom": 0.0013579556451763855,
+      "group_tree_predicted_raw_gain_high_centered_geom": 7.471009996841866e-05,
+      "group_tree_predicted_raw_gain_high_accuracy": 0.0033381020505484135,
+      "group_tree_predicted_raw_gain_high_centered_accuracy": 0.0,
+      "group_tree_predicted_raw_gain_high_minus_low_raw": 0.0007774065150625317,
+      "group_tree_predicted_raw_gain_high_minus_low_centered_raw": 0.000214484603767946,
+      "group_tree_predicted_raw_gain_high_minus_low_geom": 0.0008285477379348432,
+      "group_tree_predicted_raw_gain_high_minus_low_centered_geom": 0.00021658053928133255,
+      "group_tree_predicted_raw_gain_high_minus_low_accuracy": -0.0021136113450902338,
+      "group_tree_predicted_raw_gain_high_minus_low_centered_accuracy": 0.0005841121495327123,
+      "group_u_omitted_contrast_energy_low_fraction": 0.1590686274509804,
+      "group_u_omitted_contrast_energy_low_raw": -0.0008023117650271598,
+      "group_u_omitted_contrast_energy_low_centered_raw": -0.0009181694011383343,
+      "group_u_omitted_contrast_energy_low_geom": -0.000810516260016124,
+      "group_u_omitted_contrast_energy_low_centered_geom": -0.0009994463136518222,
+      "group_u_omitted_contrast_energy_low_accuracy": 0.006163328197226523,
+      "group_u_omitted_contrast_energy_low_centered_accuracy": 0.0034668721109399193,
+      "group_u_omitted_contrast_energy_high_fraction": 0.5178921568627451,
+      "group_u_omitted_contrast_energy_high_raw": 0.0013374638709760206,
+      "group_u_omitted_contrast_energy_high_centered_raw": 0.0002100247778686035,
+      "group_u_omitted_contrast_energy_high_geom": 0.0014698682694093933,
+      "group_u_omitted_contrast_energy_high_centered_geom": 0.00023558278411048698,
+      "group_u_omitted_contrast_energy_high_accuracy": 0.0028395646000946616,
+      "group_u_omitted_contrast_energy_high_centered_accuracy": -0.0020113582584003853,
+      "group_u_omitted_contrast_energy_high_minus_low_raw": 0.0021397756360031803,
+      "group_u_omitted_contrast_energy_high_minus_low_centered_raw": 0.0011281941790069379,
+      "group_u_omitted_contrast_energy_high_minus_low_geom": 0.002280384529425517,
+      "group_u_omitted_contrast_energy_high_minus_low_centered_geom": 0.0012350290977623092,
+      "group_u_omitted_contrast_energy_high_minus_low_accuracy": -0.0033237635971318617,
+      "group_u_omitted_contrast_energy_high_minus_low_centered_accuracy": -0.005478230369340305
+    }
+  ],
+  "mode": "cross_dataset",
+  "setting": "flowers_b16_98",
+  "source": "pets_b16_98",
+  "rows": 4080,
+  "images": 1020,
+  "tasks": 204,
+  "group_names": [
+    "ridge_predicted_raw_gain",
+    "tree_predicted_raw_gain",
+    "u_omitted_contrast_energy"
+  ],
+  "content_features": [
+    "u_omitted_contrast_energy",
+    "c_minus_u_retained_energy",
+    "u_surrogate_gap_loss",
+    "c_minus_u_surrogate_gap",
+    "full_surrogate_abs_gap",
+    "cu_surrogate_prediction_disagreement"
+  ],
+  "outcomes": [
+    "raw",
+    "geom",
+    "accuracy"
+  ]
+}

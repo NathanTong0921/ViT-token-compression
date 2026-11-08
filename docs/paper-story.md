@@ -2,6 +2,8 @@
 
 更新：2026-11-08。七设置核心预留测试已完成，本文区分最终测试与开发扩展证据，供后续写作使用。报告结构等待课程具体要求，不按这里的早期分页草案执行。
 
+**新增可预测性证据：** [内容收益实验](../results/conditioning-content-v1/README.md)在图片／任务双留出下，使Pets49、Flowers49、Flowers98的C−U原始分类间隔达到R²约0.109／0.057／0.031，超过仅用选择统计和投影难度的基线。三个设置的低／高预测收益组分别有利于U／C。新增成分消融把主要信号定位到保留集合的投影候选判别差异；遗漏能量本身没有建立额外预测贡献。该开发扩展为“何时有价值”增加了样本组层面的预测证据，尚未形成整体准确率更高的自动选择方法。
+
 题目待定，保留 proposal 题目及 **Same Image, Different Evidence: When Does Visual Token Compression Benefit from Task Conditioning?** 作为候选。
 
 [研究框架图与核心结果图](../results/paper-evidence-v1/README.md)已从当前实现和保存的数据生成，提供 PDF／SVG／PNG 与源数据表。[外部方法评估](external-baseline-review.md)说明 Patch Ranking 的适配方案及可延伸的问题。

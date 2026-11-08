@@ -42,3 +42,11 @@ If the content scores identify useful groups, use out-of-fold predicted accuracy
 ## Outputs
 
 Save the projection, its evaluation, feature definitions, aligned feature/outcome arrays, fold predictions, tables and figures under `results/conditioning-content-v1/`. Large source prefixes remain on the server. Record findings in the research insight log after the analysis completes.
+
+## Completed execution and follow-up
+
+The main prediction study also retained geometric-margin outputs for the nonlinear models. It completed all four double-holdout and four transfer panels in 30.48 seconds. Feature extraction took 74.47 seconds on four server CPU threads. The accuracy gate then reused the saved predictions; no selector or CLIP model was retrained.
+
+After finding a content signal in three settings, a fixed component follow-up separated energy features from projected-gap/disagreement features. With the same folds, ridge and outcomes, it fit context, context+energy, context+gap and full-content models (400 small fits, 0.57 seconds). The gap group supplied the clear increments; the energy group did not establish additional predictive value. This follow-up is documented separately in `results/conditioning-content-v1/components/protocol.json`.
+
+The results establish score-gap grouping and partial cross-dataset ordering, with no confirmed accuracy benefit from automatic C/U selection. Full numbers, source arrays, audits and figures are in [the result directory](../../results/conditioning-content-v1/README.md). I36 records the resulting update to the research interpretation.

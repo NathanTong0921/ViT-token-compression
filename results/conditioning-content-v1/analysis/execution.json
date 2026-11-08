@@ -1,0 +1,34 @@
+{
+  "elapsed_seconds": 30.477933042,
+  "ridge": 0.001,
+  "tree_params": {
+    "max_iter": 100,
+    "max_leaf_nodes": 7,
+    "learning_rate": 0.05,
+    "l2_regularization": 1.0,
+    "min_samples_leaf": 30,
+    "random_state": 2361,
+    "early_stopping": false
+  },
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2621,
+  "fold_seeds": [
+    2351,
+    2352
+  ],
+  "models": [
+    "mean",
+    "statistics",
+    "context",
+    "content",
+    "difficulty_context",
+    "difficulty_content",
+    "tree_context",
+    "tree_content"
+  ],
+  "risk_features": [
+    "u_omitted_contrast_energy"
+  ],
+  "double_holdout_panels": 4,
+  "transfer_panels": 4
+}

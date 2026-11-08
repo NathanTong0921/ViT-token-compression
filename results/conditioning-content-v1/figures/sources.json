@@ -1,0 +1,7 @@
+{
+  "analysis": "../analysis/summary.json",
+  "headroom": "../headroom/summary.json",
+  "script": "scripts/plot_content_benefit.py",
+  "confidence_intervals": "four_setting_adjusted_ci95; oracle column shows point estimates",
+  "data": "development panels; no reserved final-test data"
+}

@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "setting": "flowers_b16_49",
+      "replayed_model": "context",
+      "maximum_prediction_difference": 4.119968255444917e-17
+    },
+    {
+      "setting": "flowers_b16_49",
+      "replayed_model": "full",
+      "maximum_prediction_difference": 2.168404344971009e-17
+    },
+    {
+      "setting": "flowers_b16_98",
+      "replayed_model": "context",
+      "maximum_prediction_difference": 6.21247844834194e-17
+    },
+    {
+      "setting": "flowers_b16_98",
+      "replayed_model": "full",
+      "maximum_prediction_difference": 5.941427905220564e-17
+    },
+    {
+      "setting": "pets_b16_49",
+      "replayed_model": "context",
+      "maximum_prediction_difference": 4.85722573273506e-17
+    },
+    {
+      "setting": "pets_b16_49",
+      "replayed_model": "full",
+      "maximum_prediction_difference": 4.336808689942018e-17
+    },
+    {
+      "setting": "pets_b16_98",
+      "replayed_model": "context",
+      "maximum_prediction_difference": 1.0625181290357943e-17
+    },
+    {
+      "setting": "pets_b16_98",
+      "replayed_model": "full",
+      "maximum_prediction_difference": 8.185726402265558e-18
+    }
+  ],
+  "method": "Replayed context/full models and compared every held prediction to the earlier content study. Differences are numerical precision."
+}

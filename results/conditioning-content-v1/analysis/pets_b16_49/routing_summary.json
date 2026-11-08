@@ -1,0 +1,299 @@
+{
+  "estimates": {
+    "ridge_route_minus_C_accuracy": {
+      "mean": 0.0007908027644869903,
+      "ci95": [
+        -0.0007377794260946874,
+        0.002289493979392799
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0011313882715600196,
+        0.0027966669173695954
+      ]
+    },
+    "ridge_route_minus_C_geom": {
+      "mean": 0.001922383635104653,
+      "ci95": [
+        0.0014233760219840685,
+        0.0024226163155985987
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0012684247850634817,
+        0.0025593586408537957
+      ]
+    },
+    "ridge_route_minus_C_raw": {
+      "mean": 0.001786588272599738,
+      "ci95": [
+        0.0013082135418548738,
+        0.0022624360471763284
+      ],
+      "four_setting_adjusted_ci95": [
+        0.001164711053061399,
+        0.00240283347234488
+      ]
+    },
+    "ridge_route_minus_U_accuracy": {
+      "mean": 0.0005382775119617326,
+      "ci95": [
+        -0.000634972465219645,
+        0.001763687590044415
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0009975838344325372,
+        0.002106234519317553
+      ]
+    },
+    "ridge_route_minus_U_geom": {
+      "mean": -0.0006016271727763741,
+      "ci95": [
+        -0.0009648034398152338,
+        -0.00025421925596742485
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0010438190285073118,
+        -0.0001539867324978421
+      ]
+    },
+    "ridge_route_minus_U_raw": {
+      "mean": -0.0005187850855469236,
+      "ci95": [
+        -0.0008470837604205713,
+        -0.00019755463074226204
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0009431561986275258,
+        -0.00010391536313175845
+      ]
+    },
+    "ridge_route_minus_training_fixed_accuracy": {
+      "mean": 0.0018407761828814814,
+      "ci95": [
+        0.0005347806953028939,
+        0.0033332913836670672
+      ],
+      "four_setting_adjusted_ci95": [
+        0.00016759091840659384,
+        0.003757249429568263
+      ]
+    },
+    "ridge_route_minus_training_fixed_geom": {
+      "mean": 0.0004718096188419424,
+      "ci95": [
+        0.00012250389752335226,
+        0.0008417108230001499
+      ],
+      "four_setting_adjusted_ci95": [
+        1.0119949203877856e-05,
+        0.0009453361755068287
+      ]
+    },
+    "ridge_route_minus_training_fixed_raw": {
+      "mean": 0.00047893560432583834,
+      "ci95": [
+        0.00014598887335577477,
+        0.0008301527597116044
+      ],
+      "four_setting_adjusted_ci95": [
+        4.733632893010296e-05,
+        0.0009389899123775702
+      ]
+    },
+    "ridge_choose_C_fraction": {
+      "mean": 0.44547448165869363,
+      "ci95": [
+        0.4281076090196423,
+        0.463646687662056
+      ],
+      "four_setting_adjusted_ci95": [
+        0.421756370038757,
+        0.4676111275887274
+      ]
+    },
+    "tree_route_minus_C_accuracy": {
+      "mean": 0.0006578947368421178,
+      "ci95": [
+        -0.0006058712981211674,
+        0.0018355614487500283
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0010082217609040222,
+        0.0022274567396282953
+      ]
+    },
+    "tree_route_minus_C_geom": {
+      "mean": 0.0016549337100787908,
+      "ci95": [
+        0.0011380043019044786,
+        0.00217724880201712
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0009781104204543733,
+        0.002282542324511952
+      ]
+    },
+    "tree_route_minus_C_raw": {
+      "mean": 0.0015000515393635812,
+      "ci95": [
+        0.0010079798808430257,
+        0.001990162040143661
+      ],
+      "four_setting_adjusted_ci95": [
+        0.0008588126779917315,
+        0.0021112595415385565
+      ]
+    },
+    "tree_route_minus_U_accuracy": {
+      "mean": 0.00040536948431686053,
+      "ci95": [
+        -0.0008950271501212527,
+        0.0017141939953276364
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0012079631103936847,
+        0.00209929817508033
+      ]
+    },
+    "tree_route_minus_U_geom": {
+      "mean": -0.0008690770978022378,
+      "ci95": [
+        -0.001190451961578902,
+        -0.0005645520729546876
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0012868760133137292,
+        -0.0004671769661087671
+      ]
+    },
+    "tree_route_minus_U_raw": {
+      "mean": -0.0008053218187830783,
+      "ci95": [
+        -0.001108341316778965,
+        -0.0005153485683719193
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0012132821908610082,
+        -0.00042367728754794776
+      ]
+    },
+    "tree_route_minus_training_fixed_accuracy": {
+      "mean": 0.0017078681552366087,
+      "ci95": [
+        0.0003991171550884237,
+        0.003043677321976177
+      ],
+      "four_setting_adjusted_ci95": [
+        8.585829077596799e-05,
+        0.003520812407435557
+      ]
+    },
+    "tree_route_minus_training_fixed_geom": {
+      "mean": 0.00020435969381607847,
+      "ci95": [
+        -0.00016794515187951327,
+        0.0005880358789837873
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.0002847805426273488,
+        0.0007198824589246699
+      ]
+    },
+    "tree_route_minus_training_fixed_raw": {
+      "mean": 0.00019239887108968257,
+      "ci95": [
+        -0.00016978772734370823,
+        0.0005765444300570848
+      ],
+      "four_setting_adjusted_ci95": [
+        -0.00027623761697336295,
+        0.0006925882748681356
+      ]
+    },
+    "tree_choose_C_fraction": {
+      "mean": 0.3427631578947387,
+      "ci95": [
+        0.32838974935233833,
+        0.3566580811607529
+      ],
+      "four_setting_adjusted_ci95": [
+        0.3243168837111473,
+        0.3604277038301232
+      ]
+    }
+  },
+  "per_run": [
+    {
+      "seed": 2041,
+      "ridge_route_minus_C_accuracy": 1.993620414673096e-05,
+      "ridge_route_minus_C_geom": 0.0024053958520279567,
+      "ridge_route_minus_C_raw": 0.002245326150517711,
+      "ridge_route_minus_U_accuracy": 0.0,
+      "ridge_route_minus_U_geom": -0.0007246376240276719,
+      "ridge_route_minus_U_raw": -0.0006276726257798804,
+      "ridge_route_minus_training_fixed_accuracy": 0.00117623604465712,
+      "ridge_route_minus_training_fixed_geom": 0.000890286325032484,
+      "ridge_route_minus_training_fixed_raw": 0.0008691452685714035,
+      "ridge_choose_C_fraction": 0.4169856459330157,
+      "tree_route_minus_C_accuracy": 0.0008173843700159647,
+      "tree_route_minus_C_geom": 0.002264635079974892,
+      "tree_route_minus_C_raw": 0.002080310190741185,
+      "tree_route_minus_U_accuracy": 0.0007974481658692338,
+      "tree_route_minus_U_geom": -0.0008653983960807357,
+      "tree_route_minus_U_raw": -0.0007926885855564055,
+      "tree_route_minus_training_fixed_accuracy": 0.001973684210526354,
+      "tree_route_minus_training_fixed_geom": 0.0007495255529794198,
+      "tree_route_minus_training_fixed_raw": 0.000704129308794878,
+      "tree_choose_C_fraction": 0.3331738437001611
+    },
+    {
+      "seed": 2042,
+      "ridge_route_minus_C_accuracy": 0.001156299840510389,
+      "ridge_route_minus_C_geom": 0.0015528043295424039,
+      "ridge_route_minus_C_raw": 0.001466786201175873,
+      "ridge_route_minus_U_accuracy": 0.0015948963317384674,
+      "ridge_route_minus_U_geom": -0.0005785747018101572,
+      "ridge_route_minus_U_raw": -0.0005300779632356661,
+      "ridge_route_minus_training_fixed_accuracy": 0.0015749601275917367,
+      "ridge_route_minus_training_fixed_geom": 4.267256906060157e-05,
+      "ridge_route_minus_training_fixed_raw": 7.351147518916694e-05,
+      "ridge_choose_C_fraction": 0.4622807017543875,
+      "tree_route_minus_C_accuracy": 0.0007376395534290413,
+      "tree_route_minus_C_geom": 0.0014239744955924232,
+      "tree_route_minus_C_raw": 0.0013173201719991385,
+      "tree_route_minus_U_accuracy": 0.00117623604465712,
+      "tree_route_minus_U_geom": -0.0007074045357601409,
+      "tree_route_minus_U_raw": -0.0006795439924123974,
+      "tree_route_minus_training_fixed_accuracy": 0.001156299840510389,
+      "tree_route_minus_training_fixed_geom": -8.615726488938236e-05,
+      "tree_route_minus_training_fixed_raw": -7.595455398756505e-05,
+      "tree_choose_C_fraction": 0.3426634768740052
+    },
+    {
+      "seed": 2043,
+      "ridge_route_minus_C_accuracy": 0.0011961722488038511,
+      "ridge_route_minus_C_geom": 0.0018089507237435993,
+      "ridge_route_minus_C_raw": 0.0016476524661056305,
+      "ridge_route_minus_U_accuracy": 1.993620414673085e-05,
+      "ridge_route_minus_U_geom": -0.0005016691924912934,
+      "ridge_route_minus_U_raw": -0.00039860466762522447,
+      "ridge_route_minus_training_fixed_accuracy": 0.0027711323763955874,
+      "ridge_route_minus_training_fixed_geom": 0.00048246996243274176,
+      "ridge_route_minus_training_fixed_raw": 0.0004941500692169446,
+      "ridge_choose_C_fraction": 0.4571570972886779,
+      "tree_route_minus_C_accuracy": 0.0004186602870813478,
+      "tree_route_minus_C_geom": 0.0012761915546690582,
+      "tree_route_minus_C_raw": 0.0011025242553504202,
+      "tree_route_minus_U_accuracy": -0.0007575757575757723,
+      "tree_route_minus_U_geom": -0.0010344283615658374,
+      "tree_route_minus_U_raw": -0.0009437328783804323,
+      "tree_route_minus_training_fixed_accuracy": 0.0019936204146730847,
+      "tree_route_minus_training_fixed_geom": -5.0289206641801874e-05,
+      "tree_route_minus_training_fixed_raw": -5.0978141538265184e-05,
+      "tree_choose_C_fraction": 0.3524521531100498
+    }
+  ],
+  "mode": "double_holdout",
+  "setting": "pets_b16_49",
+  "source": "",
+  "decision": "predicted accuracy gain > 0; use C, otherwise U"
+}
