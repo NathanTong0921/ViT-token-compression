@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "device": "cuda:6",
+  "images": 8,
+  "dtype": "float32",
+  "tf32": false,
+  "examples_source": "original training images/tasks",
+  "checks": [
+    {
+      "name": "conditioned",
+      "patches": 49,
+      "normalized_feature_error": 2.384185791015625e-07,
+      "logit_error": 7.62939453125e-06,
+      "ce_error": 2.0563602447509766e-06,
+      "soft_mass_error": 7.62939453125e-06,
+      "selector_gradient_l2": 1.7628990082398053,
+      "selected_score_gradient_mean": 0.00015341750986408442,
+      "dropped_score_gradient_mean": 0.0002047958696493879,
+      "backbone_gradients_absent": true
+    },
+    {
+      "name": "image_only_wide",
+      "patches": 49,
+      "normalized_feature_error": 2.2724270820617676e-07,
+      "logit_error": 1.1444091796875e-05,
+      "ce_error": 6.332993507385254e-07,
+      "soft_mass_error": 7.62939453125e-06,
+      "selector_gradient_l2": 0.49792209099513374,
+      "selected_score_gradient_mean": 6.838023546151817e-05,
+      "dropped_score_gradient_mean": 9.083002805709839e-05,
+      "backbone_gradients_absent": true
+    },
+    {
+      "name": "random49",
+      "patches": 49,
+      "normalized_feature_error": 4.0978193283081055e-07,
+      "logit_error": 2.09808349609375e-05,
+      "ce_error": 3.814697265625e-06,
+      "soft_mass_error": 7.62939453125e-06
+    },
+    {
+      "name": "random98",
+      "patches": 98,
+      "normalized_feature_error": 2.2165477275848389e-07,
+      "logit_error": 7.62939453125e-06,
+      "ce_error": 3.5762786865234375e-06,
+      "soft_mass_error": 1.52587890625e-05
+    },
+    {
+      "name": "all196",
+      "patches": 196,
+      "normalized_feature_error": 1.862645149230957e-07,
+      "logit_error": 7.62939453125e-06,
+      "ce_error": 0.0,
+      "soft_mass_error": 0.0
+    }
+  ]
+}

@@ -21,7 +21,7 @@ Hard top-k determines the actual 49-token policy in the forward pass. Training e
 
 For the backward pass, use a straight-through gate. Standardize each row of selector scores and form sigmoid gates with temperature 0.5. Solve the threshold so their sum is 49, and differentiate that threshold implicitly. This supplies a smooth, budget-preserving surrogate gradient while the forward mask remains hard. The classification objective is the actual hard-mask loss; its gradient with respect to discrete selection is approximated by this gate.
 
-Attention masking for learnable token pruning follows the approach developed in [DynamicViT (NeurIPS 2021)](https://proceedings.neurips.cc/paper_files/paper/2021/hash/747d3443e319a22747fbb873e8b2f9f2-Abstract.html). Our implementation adapts the frozen OpenAI CLIP suffix and fixed-cardinality gate. It uses zero dropped-key weight without additive softmax smoothing. The published [implementation](https://github.com/raoyongming/DynamicViT/blob/master/models/dyvit.py) supplies the methodological reference; this is not a claim to invent differentiable token pruning.
+Attention masking for learnable token pruning follows [DynamicViT (NeurIPS 2021)](https://proceedings.neurips.cc/paper_files/paper/2021/hash/747d3443e319a22747fbb873e8b2f9f2-Abstract.html) and its [official implementation](https://github.com/raoyongming/DynamicViT/blob/master/models/dyvit.py). We adapt this approach to the frozen OpenAI CLIP suffix and fixed-cardinality gate, using zero dropped-key weight without additive softmax smoothing.
 
 ## Measurements
 
