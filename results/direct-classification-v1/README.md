@@ -74,7 +74,9 @@ The twelve continuations took 1,105.73 seconds in total: 1,054.44 seconds for th
 
 All 18 initial/final endpoints were independently reconstructed from their saved native cosine scores. Accuracy matches exactly; the largest CE reconstruction difference is 0.0000167. The [reconstruction record](outcome_reconstruction.json), [real-model forward check](native_policy_audit.json) and saved [training records](training_records/) accompany the results.
 
-Small analysis arrays, tables, figures, numerical checks and training records are retained here and in Git. The server run directory is `runs/direct-classification-v1`; final selector checkpoints and full evaluation arrays will be backed up with the run archive.
+Small analysis arrays, tables, figures, numerical checks and training records are retained here and in Git. The server run directory is `runs/direct-classification-v1`. Two archives totaling 314.20 MB are backed up in `/data2/zhao.tong/artifacts/direct-classification-v1/` and the [GitHub Release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-v1). They contain all 72 saved continuation checkpoints, six original source checkpoints, full evaluation scores and masks, analyses and figures. Existing CLIP prefixes and teacher coefficients remain reused dependencies.
+
+All twelve final checkpoints loaded successfully from the run archive. The uploaded analysis archive was recovered and its tables, paired outcomes, configuration and protocol matched the working copies. See [archive inventory](archive_summary.json), [published assets](release_assets.json), [checkpoint recovery](checkpoint_recovery.json) and [analysis recovery](recovery.json). No bulk checkpoint archive is retained locally.
 
 ```bash
 PYTHONPATH=src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 python scripts/run_direct_classification.py --config configs/flowers_direct_classification.json --output runs/direct-classification-v1

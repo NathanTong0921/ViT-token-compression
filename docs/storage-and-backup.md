@@ -140,3 +140,9 @@ Both archives passed server CRC checks and match their published content digests
 ## Content-based benefit prediction
 
 `results/conditioning-content-v1/` adds approximately 33 MB of readout coefficients, content features, fold predictions, component analyses, routing decisions, figures and source tables. These small scientific artifacts are retained locally, in ordinary Git and on the server. Existing source prefixes and C/U outputs are reused from earlier runs and backups; no new dataset, CLIP checkpoint or bulk archive was downloaded. The fitted tree settings and seeds are recorded, and fold fits can be regenerated from the saved feature/outcome arrays and code.
+
+## Direct classification training
+
+`results/direct-classification-v1/` retains approximately 3.3 MB of paired outcomes, tables, figures, training records, costs and numerical checks. Two archives totaling 314,202,634 bytes are stored in server `/data2/zhao.tong/artifacts/direct-classification-v1/` and the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-v1). They preserve 72 saved continuation checkpoints, six original C/U checkpoints, native evaluation scores and selected positions, source configuration and analysis. Existing Flowers49 prefix/teacher caches and the CLIP checkpoint are dependencies.
+
+Both archives passed CRC checks and match the uploaded assets. All twelve final checkpoints loaded from the run archive. The small analysis archive was recovered into memory; the summary, seed table, paired outcomes, configuration and protocol matched local files. The working tree retains no ZIP or selector checkpoint copy from this run. Inventory and recovery records are in the result directory.

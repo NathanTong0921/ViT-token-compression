@@ -1,0 +1,66 @@
+{
+  "archive_checkpoint_count": 78,
+  "final_checkpoints_loaded": [
+    {
+      "member": "runs/direct-classification-v1/training/seed_2041/conditioned/direct/step_1200.pt",
+      "step": 1200,
+      "parameters": 11
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2041/conditioned/kl/step_1200.pt",
+      "step": 1200,
+      "parameters": 11
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2041/image_only_wide/direct/step_1200.pt",
+      "step": 1200,
+      "parameters": 8
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2041/image_only_wide/kl/step_1200.pt",
+      "step": 1200,
+      "parameters": 8
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2042/conditioned/direct/step_1200.pt",
+      "step": 1200,
+      "parameters": 11
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2042/conditioned/kl/step_1200.pt",
+      "step": 1200,
+      "parameters": 11
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2042/image_only_wide/direct/step_1200.pt",
+      "step": 1200,
+      "parameters": 8
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2042/image_only_wide/kl/step_1200.pt",
+      "step": 1200,
+      "parameters": 8
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2043/conditioned/direct/step_1200.pt",
+      "step": 1200,
+      "parameters": 11
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2043/conditioned/kl/step_1200.pt",
+      "step": 1200,
+      "parameters": 11
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2043/image_only_wide/direct/step_1200.pt",
+      "step": 1200,
+      "parameters": 8
+    },
+    {
+      "member": "runs/direct-classification-v1/training/seed_2043/image_only_wide/kl/step_1200.pt",
+      "step": 1200,
+      "parameters": 8
+    }
+  ],
+  "archive_crc_passed": true
+}

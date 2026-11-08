@@ -1,0 +1,28 @@
+{
+  "archives": [
+    {
+      "name": "direct-classification-v1-run.zip",
+      "path": "/data2/zhao.tong/artifacts/direct-classification-v1/direct-classification-v1-run.zip",
+      "bytes": 311207188,
+      "members": 249,
+      "uncompressed_bytes": 333399242,
+      "sha256": "039cd3861313c8e85f24ceb46929e99b2eb062fef14d3ee22bf1a5f779e12052"
+    },
+    {
+      "name": "direct-classification-v1-analysis.zip",
+      "path": "/data2/zhao.tong/artifacts/direct-classification-v1/direct-classification-v1-analysis.zip",
+      "bytes": 2995446,
+      "members": 161,
+      "uncompressed_bytes": 3197632,
+      "sha256": "330c3a8675b0afafdb6827168b8a9c8e9c507cac5888f09de0e7b8337e42f4de"
+    }
+  ],
+  "checkpoint_count": 72,
+  "source_checkpoint_count": 6,
+  "source_commit": "f13e28188068e8ec6b3ff10eda396660ad0523e0",
+  "reused_dependencies": [
+    "runs/flowers-selector-budget-49-supervision-v1",
+    "cache/clip/ViT-B-16.pt"
+  ],
+  "scope": "All 12 continuations and checkpoints, six initializers, raw native-gather evaluation, learning curves, analysis, figures, configuration and relevant source."
+}
