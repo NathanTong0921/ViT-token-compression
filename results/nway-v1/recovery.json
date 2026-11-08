@@ -1,0 +1,209 @@
+{
+  "local_archives": [
+    {
+      "name": "nway-v1-analysis.zip",
+      "bytes": 2367562,
+      "members": 81,
+      "crc_passed": true,
+      "loaded_checkpoints": 0
+    },
+    {
+      "name": "nway-v1-flowers.zip",
+      "bytes": 304003354,
+      "members": 49,
+      "crc_passed": true,
+      "loaded_checkpoints": 12
+    },
+    {
+      "name": "nway-v1-pets.zip",
+      "bytes": 248637300,
+      "members": 49,
+      "crc_passed": true,
+      "loaded_checkpoints": 12
+    }
+  ],
+  "loaded_checkpoints": [
+    {
+      "member": "runs/nway-v1/flowers/training/2way/seed_2041/conditioned.pt",
+      "way": 2,
+      "seed": 2041,
+      "variant": "conditioned",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/2way/seed_2041/image_only_wide.pt",
+      "way": 2,
+      "seed": 2041,
+      "variant": "image_only_wide",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/2way/seed_2042/conditioned.pt",
+      "way": 2,
+      "seed": 2042,
+      "variant": "conditioned",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/2way/seed_2042/image_only_wide.pt",
+      "way": 2,
+      "seed": 2042,
+      "variant": "image_only_wide",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/2way/seed_2043/conditioned.pt",
+      "way": 2,
+      "seed": 2043,
+      "variant": "conditioned",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/2way/seed_2043/image_only_wide.pt",
+      "way": 2,
+      "seed": 2043,
+      "variant": "image_only_wide",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/5way/seed_2041/conditioned.pt",
+      "way": 5,
+      "seed": 2041,
+      "variant": "conditioned",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/5way/seed_2041/image_only_wide.pt",
+      "way": 5,
+      "seed": 2041,
+      "variant": "image_only_wide",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/5way/seed_2042/conditioned.pt",
+      "way": 5,
+      "seed": 2042,
+      "variant": "conditioned",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/5way/seed_2042/image_only_wide.pt",
+      "way": 5,
+      "seed": 2042,
+      "variant": "image_only_wide",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/5way/seed_2043/conditioned.pt",
+      "way": 5,
+      "seed": 2043,
+      "variant": "conditioned",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/flowers/training/5way/seed_2043/image_only_wide.pt",
+      "way": 5,
+      "seed": 2043,
+      "variant": "image_only_wide",
+      "step": 3978
+    },
+    {
+      "member": "runs/nway-v1/pets/training/2way/seed_2041/conditioned.pt",
+      "way": 2,
+      "seed": 2041,
+      "variant": "conditioned",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/2way/seed_2041/image_only_wide.pt",
+      "way": 2,
+      "seed": 2041,
+      "variant": "image_only_wide",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/2way/seed_2042/conditioned.pt",
+      "way": 2,
+      "seed": 2042,
+      "variant": "conditioned",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/2way/seed_2042/image_only_wide.pt",
+      "way": 2,
+      "seed": 2042,
+      "variant": "image_only_wide",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/2way/seed_2043/conditioned.pt",
+      "way": 2,
+      "seed": 2043,
+      "variant": "conditioned",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/2way/seed_2043/image_only_wide.pt",
+      "way": 2,
+      "seed": 2043,
+      "variant": "image_only_wide",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/5way/seed_2041/conditioned.pt",
+      "way": 5,
+      "seed": 2041,
+      "variant": "conditioned",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/5way/seed_2041/image_only_wide.pt",
+      "way": 5,
+      "seed": 2041,
+      "variant": "image_only_wide",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/5way/seed_2042/conditioned.pt",
+      "way": 5,
+      "seed": 2042,
+      "variant": "conditioned",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/5way/seed_2042/image_only_wide.pt",
+      "way": 5,
+      "seed": 2042,
+      "variant": "image_only_wide",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/5way/seed_2043/conditioned.pt",
+      "way": 5,
+      "seed": 2043,
+      "variant": "conditioned",
+      "step": 3990
+    },
+    {
+      "member": "runs/nway-v1/pets/training/5way/seed_2043/image_only_wide.pt",
+      "way": 5,
+      "seed": 2043,
+      "variant": "image_only_wide",
+      "step": 3990
+    }
+  ],
+  "remote_recovery": {
+    "archive": "nway-v1-analysis.zip",
+    "downloaded_bytes": 2367562,
+    "crc_passed": true,
+    "matched_files": [
+      "results/nway-v1/analysis/classification.csv",
+      "results/nway-v1/analysis/contrasts.csv",
+      "results/nway-v1/analysis/summary.json",
+      "configs/nway_pets.json",
+      "configs/nway_flowers.json"
+    ],
+    "download_path": "GitHub asset API redirect"
+  },
+  "github_assets_match_local_sizes": true
+}

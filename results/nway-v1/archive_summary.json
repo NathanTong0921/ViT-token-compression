@@ -1,0 +1,28 @@
+{
+  "archives": [
+    {
+      "name": "nway-v1-pets.zip",
+      "bytes": 248637300,
+      "members": 49,
+      "uncompressed_bytes": 250251706
+    },
+    {
+      "name": "nway-v1-flowers.zip",
+      "bytes": 304003354,
+      "members": 49,
+      "uncompressed_bytes": 305652281
+    },
+    {
+      "name": "nway-v1-analysis.zip",
+      "bytes": 2367562,
+      "members": 81,
+      "uncompressed_bytes": 2988652
+    }
+  ],
+  "scope": "Task panels and targets, all selectors, predictions, retained positions, features, costs, summaries and figures.",
+  "reused_dependencies": [
+    "runs/pets-selector-budget-98-supervision-v1",
+    "runs/flowers-selector-budget-98-supervision-v1"
+  ],
+  "source_code": "Included nway files supplement the versioned repository and its shared modules."
+}
