@@ -154,3 +154,12 @@ On 2026-11-10, the user specified data4 for new outputs because data2 was nearly
 Curated outcomes, tables, figures and checks occupy approximately 10 MB locally and in Git. Two archives totaling 123,773,199 bytes are stored at `/data4/zhao.tong/artifacts/direct-classification-panel-v1/` and the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-panel-v1). They preserve all raw evaluations and the analysis/code/configuration; existing checkpoints are dependencies from `direct-classification-v1`.
 
 CRC and uploaded-content checks passed. The analysis archive was recovered from GitHub into memory and its key scientific files matched the working copies. Local transfer ZIPs and temporary helpers were removed. Inventory, asset URLs and recovery details are saved in `results/direct-classification-panel-v1/`.
+
+
+## Direct classification at 98 tokens and paired budget analysis
+
+The 2026-11-10 replication stores training/development outputs and expanded-panel outputs in `/data4/zhao.tong/experiments/direct-classification-98-v1/` and `/data4/zhao.tong/experiments/direct-classification-98-panel-v1/`. Approximately 23 MB of curated outcomes, tables, figures and records stay locally and in Git, including the paired 49/98 comparisons.
+
+Three archives totaling 447,153,579 bytes are in `/data4/zhao.tong/artifacts/direct-classification-98-v1/` and the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-98-v1): training/development (307,559,803 bytes), expanded raw evaluation (116,512,919 bytes), and analysis/code (23,080,857 bytes). They preserve 72 continuation checkpoints, six original weights, native scores and selected positions, and the code/configuration associated with commit 339a938. Existing Flowers98 prefix/teacher caches and frozen CLIP weights remain reused dependencies; the 49-token comparison inputs are also available in the earlier direct-classification-panel-v1 release.
+
+All archives passed CRC and uploaded-content checks. Twelve final checkpoints loaded from the archive, and recovery of the GitHub analysis package matched twelve key files including both summaries and paired-outcome arrays, budget JSON/CSV, configuration and protocol. Metadata is retained in `results/direct-classification-98-v1/`. Temporary local packages were deleted; no selector checkpoints or raw-result archives remain local.

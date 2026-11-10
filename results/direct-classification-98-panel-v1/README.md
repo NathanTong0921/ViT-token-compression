@@ -63,7 +63,7 @@ All 18 raw-score endpoints passed metric reconstruction. Independent calculation
 
 Cached-prefix GPU evaluation took 308.15 seconds; total wall time was 313.96 seconds, with about 2.64 GB peak allocated GPU memory. These are evaluation costs, not deployment latency. [Execution record](evaluation_summary.json).
 
-Small paired outcomes, tables and figures are retained here. Full native scores and selected positions remain at `/data4/zhao.tong/experiments/direct-classification-98-panel-v1/`. The training records are kept separately with the 98-token continuation run. Archive and release verification are recorded separately when the backup is complete.
+Small paired outcomes, tables and figures are retained here. Full native scores and selected positions remain at `/data4/zhao.tong/experiments/direct-classification-98-panel-v1/`. The training records are kept separately with the 98-token continuation run. Complete archives are backed up on data4 and in the [GitHub Release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-98-v1); see the [archive inventory](../direct-classification-98-v1/archive_summary.json), [asset URLs](../direct-classification-98-v1/release_assets.json) and [recovery record](../direct-classification-98-v1/recovery.json).
 
 ```bash
 OPENBLAS_NUM_THREADS=1 python scripts/analyze_direct_classification.py --source /data4/zhao.tong/experiments/direct-classification-98-panel-v1 --output /data4/zhao.tong/experiments/direct-classification-98-panel-v1/analysis --keep-count 98 --step 1200 --bootstrap-seed 2717 --replicates 2000

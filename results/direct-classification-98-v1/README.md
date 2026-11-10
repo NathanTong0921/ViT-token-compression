@@ -33,6 +33,8 @@ All twelve continuations finished at the fixed 1,200-update endpoint. Seeds ran 
 
 Saved cosine scores reconstruct the reported metrics. [Reconstruction checks](outcome_reconstruction.json) and [paired outcomes](paired_outcomes.npz) accompany the tables. Full checkpoints and raw predictions are stored at `/data4/zhao.tong/experiments/direct-classification-98-v1/`; initial checkpoints and existing prefix/teacher caches are reused.
 
+Three complete archives (447.15 MB) are retained on data4 and in the [GitHub Release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-98-v1). All twelve final checkpoints loaded from the archive; the recovered analysis package matched the key summaries, paired outcomes, budget comparison and configuration. Local copies contain curated evidence only. [Archive inventory](archive_summary.json), [published assets](release_assets.json), [recovery record](recovery.json).
+
 ```bash
 PYTHONPATH=src python scripts/run_direct_classification.py --config configs/flowers98_direct_classification.json --output /data4/zhao.tong/experiments/direct-classification-98-v1
 OPENBLAS_NUM_THREADS=1 python scripts/analyze_direct_classification.py --source /data4/zhao.tong/experiments/direct-classification-98-v1 --output /data4/zhao.tong/experiments/direct-classification-98-v1/analysis --keep-count 98 --step 1200 --bootstrap-seed 2717 --replicates 2000

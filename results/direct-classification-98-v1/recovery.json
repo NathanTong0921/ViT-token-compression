@@ -1,0 +1,74 @@
+{
+  "asset_name": "direct-classification-98-v1-analysis.zip",
+  "downloaded_bytes": 23080857,
+  "archive_members": 432,
+  "crc_passed": true,
+  "matched_working_files": [
+    "results/direct-classification-98-v1/summary.json",
+    "results/direct-classification-98-v1/paired_outcomes.npz",
+    "results/direct-classification-98-panel-v1/summary.json",
+    "results/direct-classification-98-panel-v1/paired_outcomes.npz",
+    "results/direct-classification-98-panel-v1/budget-comparison/budget_tradeoff.csv",
+    "results/direct-classification-98-panel-v1/budget-comparison/budget_tradeoff.json",
+    "results/direct-classification-98-panel-v1/budget-comparison/per_seed.csv",
+    "results/direct-classification-98-panel-v1/budget-comparison/summary.csv",
+    "results/direct-classification-98-panel-v1/budget-comparison/summary.json",
+    "configs/flowers98_direct_classification.json",
+    "configs/flowers98_direct_classification_panel.json",
+    "docs/experiments/2026-11-10-direct-classification-98.md"
+  ],
+  "local_archive_retained": false,
+  "checkpoint_archive_recovery": {
+    "archived_checkpoint_count": 78,
+    "loaded_final_checkpoints": [
+      {
+        "member": "direct-classification-98-v1/training/seed_2041/conditioned/direct/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2041/conditioned/kl/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2041/image_only_wide/direct/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2041/image_only_wide/kl/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2042/conditioned/direct/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2042/conditioned/kl/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2042/image_only_wide/direct/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2042/image_only_wide/kl/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2043/conditioned/direct/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2043/conditioned/kl/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2043/image_only_wide/direct/step_1200.pt",
+        "step": 1200
+      },
+      {
+        "member": "direct-classification-98-v1/training/seed_2043/image_only_wide/kl/step_1200.pt",
+        "step": 1200
+      }
+    ]
+  }
+}
