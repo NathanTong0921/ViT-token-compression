@@ -25,4 +25,6 @@ Average the fixed three seeds and bootstrap image clusters 2,000 times using see
 
 Training/development outputs: `/data4/zhao.tong/experiments/direct-classification-98-v1`. Expanded-panel outputs: `/data4/zhao.tong/experiments/direct-classification-98-panel-v1`. Code and reused caches stay in `/data2/zhao.tong/experiments`. Curated results go to the correspondingly named local/Git directories; full checkpoints and raw outputs go to data4 archives and a GitHub Release. No new datasets or pretrained models are downloaded.
 
+The three seeds run concurrently on available A6000 devices (2041 on GPU6, 2042 on GPU1, 2043 on GPU3), with separate shard directories and the same training recipe. Each seed's four continuations stay on the same device. Identical evaluation manifests are checked before the shard outputs are consolidated; per-shard execution records retain actual device placement. Expanded-panel inference runs on GPU6.
+
 After both budgets are analyzed, reassess the route using the accuracy gain, its consistency across panels/seeds, and the paired budget interactions. This round contains no hyperparameter search, extra training steps, or further dataset expansion.

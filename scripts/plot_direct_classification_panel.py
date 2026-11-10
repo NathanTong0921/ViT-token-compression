@@ -29,7 +29,7 @@ def main(args):
     fig.subplots_adjust(left=.24, right=.98, top=.75, bottom=.20, wspace=.23)
     fig.suptitle("Direct classification training across evaluation panels", fontsize=16,
                  fontweight="bold", y=.98)
-    fig.text(.5, .885, "Flowers102 · CLIP B/16 · 49 tokens · fixed 1,200-step weights · three seeds",
+    fig.text(.5, .885, f"Flowers102 · CLIP B/16 · {args.keep_count} tokens · fixed 1,200-step weights · three seeds",
              ha="center", fontsize=10, color="#596573")
     rows = []
     for ai, (metric, multiplier, xlabel) in enumerate((
@@ -84,4 +84,5 @@ if __name__ == "__main__":
     parser.add_argument("--development", type=Path, default=Path("results/direct-classification-v1/summary.json"))
     parser.add_argument("--expanded", type=Path, default=Path("results/direct-classification-panel-v1/summary.json"))
     parser.add_argument("--output", type=Path, default=Path("results/direct-classification-panel-v1/figures"))
+    parser.add_argument("--keep-count", type=int, default=49)
     main(parser.parse_args())

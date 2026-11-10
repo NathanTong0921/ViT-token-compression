@@ -122,7 +122,7 @@ def summarize(values, weights, image_ids, names, replicates=2000, bootstrap_seed
     return result, per_seed, sums, totals
 
 
-def load_evaluation(source, step, seeds):
+def load_evaluation(source, step, seeds, keep_count=49):
     folder = source / "evaluation"
     with (folder / "examples.csv").open() as handle:
         rows = list(csv.DictReader(handle))
@@ -145,7 +145,7 @@ def load_evaluation(source, step, seeds):
                 with np.load(path) as data:
                     outcome = reconstruct_outcomes(data["cosine_scores"], labels, pairs, text, scale)
                     selected = data["patch_indices"].copy()
-                    assert selected.shape == (len(rows), 49)
+                    assert selected.shape == (len(rows), keep_count)
                     assert np.all(np.diff(np.sort(selected, axis=1), axis=1) > 0)
                     error = {}
                     for qi, metric in enumerate(METRICS):
@@ -171,7 +171,7 @@ def write_csv(path, rows):
 
 def main(args):
     args.output.mkdir(parents=True, exist_ok=True)
-    data = load_evaluation(args.source, args.step, args.seeds)
+    data = load_evaluation(args.source, args.step, args.seeds, args.keep_count)
     weights = data["weights"] / data["weights"].sum()
     methods, method_seeds, _, _ = summarize(data["outcomes"], weights, data["image_ids"], METHODS,
         args.replicates, args.bootstrap_seed)
@@ -179,7 +179,8 @@ def main(args):
     contrasts, contrast_seeds, image_sums, image_weights = summarize(
         differences, weights, data["image_ids"], tuple(CONTRASTS), args.replicates,
         args.bootstrap_seed, PRIMARY)
-    summary = dict(step=args.step, training_seeds=args.seeds, rows=len(weights),
+    summary = dict(step=args.step, keep_patch_tokens=args.keep_count,
+                   training_seeds=args.seeds, rows=len(weights),
                    images=len(set(data["image_ids"])), tasks=len(set(data["task_ids"])),
                    logit_scale=data["logit_scale"], methods=methods, contrasts=contrasts,
                    primary_contrasts=list(PRIMARY), metrics=list(METRICS),
@@ -212,6 +213,7 @@ def main(args):
     np.savez_compressed(args.output / "paired_outcomes.npz", outcomes=data["outcomes"],
         methods=METHODS, contrasts=tuple(CONTRASTS), metrics=METRICS, seeds=args.seeds,
         weights=weights, image_ids=data["image_ids"], task_ids=data["task_ids"],
+        labels=data["labels"], pairs=data["pairs"], keep_patch_tokens=args.keep_count,
         image_contributions=image_sums, image_weights=image_weights)
     print(json.dumps({name: contrasts[name]["accuracy"] for name in PRIMARY}), flush=True)
 
@@ -221,6 +223,7 @@ if __name__ == "__main__":
     parser.add_argument("--source", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--step", type=int, default=1200)
+    parser.add_argument("--keep-count", type=int, default=49)
     parser.add_argument("--seeds", type=int, nargs="+", default=list(SEEDS))
     parser.add_argument("--replicates", type=int, default=2000)
     parser.add_argument("--bootstrap-seed", type=int, default=2717)

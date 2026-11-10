@@ -45,7 +45,7 @@ def main(source, output):
     fig.suptitle("Direct classification training vs KL continuation", fontsize=17,
                  fontweight="bold", y=.97)
     fig.text(.5, .905,
-             f"Flowers102 · CLIP B/16 · block 6 · 49 tokens · {len(seeds)} fixed seeds · {summary['step']:,} extra updates",
+             f"Flowers102 · CLIP B/16 · block 6 · {summary.get('keep_patch_tokens', 49)} tokens · {len(seeds)} fixed seeds · {summary['step']:,} extra updates",
              ha="center", color="#66717D", fontsize=11)
 
     x = np.arange(len(STAGES))
