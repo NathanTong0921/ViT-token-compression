@@ -17,7 +17,7 @@ Report accuracy, CE, raw cosine gap and geometric margin, with task/class-balanc
 Compare budgets using paired per-example outcomes from the same 6,149-image panel. The two main accuracy interactions are:
 
 1. (direct C−U at 98) − (direct C−U at 49).
-2. (direct C−U − KL C+KL U at 98) − the corresponding quantity at 49.
+2. [(direct C−direct U) − (KL C−KL U)] at 98, minus the same quantity at 49.
 
 Average the fixed three seeds and bootstrap image clusters 2,000 times using seed 2717. Apply the two-primary adjustment within each analysis and metric. Retain raw-gap, geometric-margin and CE budget interactions as accompanying results. Comparing the actual budget differences determines whether the evidence supports budget dependence.
 
@@ -28,3 +28,16 @@ Training/development outputs: `/data4/zhao.tong/experiments/direct-classificatio
 The three seeds run concurrently on available A6000 devices (2041 on GPU6, 2042 on GPU1, 2043 on GPU3), with separate shard directories and the same training recipe. Each seed's four continuations stay on the same device. Identical evaluation manifests are checked before the shard outputs are consolidated; per-shard execution records retain actual device placement. Expanded-panel inference runs on GPU6.
 
 After both budgets are analyzed, reassess the route using the accuracy gain, its consistency across panels/seeds, and the paired budget interactions. This round contains no hyperparameter search, extra training steps, or further dataset expansion.
+
+
+## Completed results, 2026-11-10
+
+All twelve continuations reached 1,200 updates. All 18 development and 18 expanded-panel endpoints completed. Training used 834.87 GPU seconds (0.232 GPU hours); expanded cached-prefix evaluation used 308.15 GPU seconds (0.086 GPU hours). Native deletion and dense hard-policy smoke outputs agreed within 2.99e-7. These timings describe this continuation experiment, not total project training or deployment latency.
+
+On the expanded panel, direct C/U accuracy was 97.5386%/97.4187%. C−U was +0.1200 pp [−0.0280,+0.2794]; its change relative to KL training was +0.0257 pp [−0.1395,+0.1948]. The corresponding Flowers49 effects remain +0.3056 and +0.2467 pp, with positive adjusted intervals. Directly paired 98−49 changes were −0.1856 pp [−0.4072,+0.0489] and −0.2210 pp [−0.4636,+0.0187]. This round did not establish another accuracy improvement or a reliable accuracy interaction between budgets.
+
+After the primary results were known, a secondary accuracy/retention table was computed from the same outcomes. Direct C has nearly equal observed accuracy at 49 and 98 tokens; the C budget gap changes by −0.3545 pp [−0.5171,−0.1947] relative to KL. This exploratory contrast uses ordinary 95% image intervals. The fixed primary comparisons remain the basis for the budget-dependent conditioning conclusion.
+
+The route contributes an effective training intervention at Flowers49 and a measured limit at Flowers98. Retain both in the research account. A focused possible follow-up is to exchange task descriptions in the final direct/KL C models and test whether the improved accuracy comes with more useful task dependence. No further training or follow-up evaluation was launched in this round.
+
+[Development results](../../results/direct-classification-98-v1/README.md) · [Expanded panel and paired budget comparison](../../results/direct-classification-98-panel-v1/README.md)

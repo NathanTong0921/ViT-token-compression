@@ -13,6 +13,7 @@ from analyze_direct_classification import (
     load_evaluation,
 )
 from compare_direct_classification_budgets import paired_budget_effects
+from analyze_direct_budget_tradeoff import tradeoff_values
 
 
 class DirectClassificationAnalysisTests(unittest.TestCase):
@@ -57,6 +58,11 @@ class DirectClassificationAnalysisTests(unittest.TestCase):
         np.testing.assert_array_equal(lower[:,0],2);np.testing.assert_array_equal(upper[:,0],3)
         np.testing.assert_array_equal(delta[:,0],1)
         np.testing.assert_array_equal(delta[:,1],0)
+        tradeoff,names=tradeoff_values(low,high)
+        np.testing.assert_array_equal(tradeoff[:,names.index("direct_C")],2)
+        np.testing.assert_array_equal(tradeoff[:,names.index("direct_U")],1)
+        np.testing.assert_array_equal(tradeoff[:,names.index("objective_tradeoff_C")],-1)
+        np.testing.assert_array_equal(tradeoff[:,names.index("objective_tradeoff_U")],-1)
         high["task_ids"]=high["task_ids"][::-1]
         high["task_ids"][0]="wrong"
         with self.assertRaises(AssertionError): paired_budget_effects(low,high)

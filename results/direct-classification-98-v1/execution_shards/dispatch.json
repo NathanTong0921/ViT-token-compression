@@ -1,0 +1,62 @@
+[
+  {
+    "seed": 2041,
+    "gpu": 6,
+    "pid": 1104712,
+    "output": "/data4/zhao.tong/experiments/direct-classification-98-shards/seed_2041",
+    "command": [
+      "/data2/zhao.tong/experiments/.venv/bin/python",
+      "scripts/run_direct_classification.py",
+      "--config",
+      "configs/flowers98_direct_classification.json",
+      "--output",
+      "/data4/zhao.tong/experiments/direct-classification-98-shards/seed_2041",
+      "--mode",
+      "all",
+      "--seeds",
+      "2041",
+      "--device",
+      "cuda:6"
+    ]
+  },
+  {
+    "seed": 2042,
+    "gpu": 1,
+    "pid": 1104713,
+    "output": "/data4/zhao.tong/experiments/direct-classification-98-shards/seed_2042",
+    "command": [
+      "/data2/zhao.tong/experiments/.venv/bin/python",
+      "scripts/run_direct_classification.py",
+      "--config",
+      "configs/flowers98_direct_classification.json",
+      "--output",
+      "/data4/zhao.tong/experiments/direct-classification-98-shards/seed_2042",
+      "--mode",
+      "all",
+      "--seeds",
+      "2042",
+      "--device",
+      "cuda:1"
+    ]
+  },
+  {
+    "seed": 2043,
+    "gpu": 3,
+    "pid": 1104714,
+    "output": "/data4/zhao.tong/experiments/direct-classification-98-shards/seed_2043",
+    "command": [
+      "/data2/zhao.tong/experiments/.venv/bin/python",
+      "scripts/run_direct_classification.py",
+      "--config",
+      "configs/flowers98_direct_classification.json",
+      "--output",
+      "/data4/zhao.tong/experiments/direct-classification-98-shards/seed_2043",
+      "--mode",
+      "all",
+      "--seeds",
+      "2043",
+      "--device",
+      "cuda:3"
+    ]
+  }
+]

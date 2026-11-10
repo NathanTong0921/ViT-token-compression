@@ -1,0 +1,9 @@
+{
+  "summary": "../summary.json",
+  "per_seed": "../per_seed.csv",
+  "monitors": "../training_records/",
+  "script": "scripts/plot_direct_classification.py",
+  "accuracy_unit": "percent",
+  "difference_unit": "percentage_points",
+  "loss_scope": "Fixed training monitor, native gather suffix, per-seed sample stream; not development loss."
+}

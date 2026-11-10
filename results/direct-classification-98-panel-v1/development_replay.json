@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "arm": "conditioned",
+      "stage": "initial",
+      "checkpoint": "runs/flowers-selector-budget-98-training-v1/full/seed_2041/conditioned.pt",
+      "rows": 32,
+      "maximum_errors": {
+        "cosine_scores": 0.0,
+        "patch_indices": 0.0,
+        "ce": 0.0,
+        "accuracy": 0.0,
+        "raw_gap": 0.0,
+        "geometric_margin": 0.0
+      }
+    },
+    {
+      "arm": "conditioned",
+      "stage": "kl",
+      "checkpoint": "/data4/zhao.tong/experiments/direct-classification-98-v1/training/seed_2041/conditioned/kl/step_1200.pt",
+      "rows": 32,
+      "maximum_errors": {
+        "cosine_scores": 0.0,
+        "patch_indices": 0.0,
+        "ce": 0.0,
+        "accuracy": 0.0,
+        "raw_gap": 0.0,
+        "geometric_margin": 0.0
+      }
+    },
+    {
+      "arm": "conditioned",
+      "stage": "direct",
+      "checkpoint": "/data4/zhao.tong/experiments/direct-classification-98-v1/training/seed_2041/conditioned/direct/step_1200.pt",
+      "rows": 32,
+      "maximum_errors": {
+        "cosine_scores": 0.0,
+        "patch_indices": 0.0,
+        "ce": 0.0,
+        "accuracy": 0.0,
+        "raw_gap": 0.0,
+        "geometric_margin": 0.0
+      }
+    },
+    {
+      "arm": "image_only_wide",
+      "stage": "initial",
+      "checkpoint": "runs/flowers-selector-ablations-98-training-v1/full/seed_2041/image_only_wide.pt",
+      "rows": 32,
+      "maximum_errors": {
+        "cosine_scores": 0.0,
+        "patch_indices": 0.0,
+        "ce": 0.0,
+        "accuracy": 0.0,
+        "raw_gap": 0.0,
+        "geometric_margin": 0.0
+      }
+    },
+    {
+      "arm": "image_only_wide",
+      "stage": "kl",
+      "checkpoint": "/data4/zhao.tong/experiments/direct-classification-98-v1/training/seed_2041/image_only_wide/kl/step_1200.pt",
+      "rows": 32,
+      "maximum_errors": {
+        "cosine_scores": 0.0,
+        "patch_indices": 0.0,
+        "ce": 0.0,
+        "accuracy": 0.0,
+        "raw_gap": 0.0,
+        "geometric_margin": 0.0
+      }
+    },
+    {
+      "arm": "image_only_wide",
+      "stage": "direct",
+      "checkpoint": "/data4/zhao.tong/experiments/direct-classification-98-v1/training/seed_2041/image_only_wide/direct/step_1200.pt",
+      "rows": 32,
+      "maximum_errors": {
+        "cosine_scores": 0.0,
+        "patch_indices": 0.0,
+        "ce": 0.0,
+        "accuracy": 0.0,
+        "raw_gap": 0.0,
+        "geometric_margin": 0.0
+      }
+    }
+  ],
+  "comparison": "Same FP32 native evaluator; no-teacher panel loader versus original training loader."
+}

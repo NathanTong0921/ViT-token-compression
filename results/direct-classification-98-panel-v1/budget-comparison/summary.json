@@ -1,0 +1,132 @@
+{
+  "low_budget": 49,
+  "high_budget": 98,
+  "direction": "Higher token budget minus lower token budget, paired on the same image/task decisions.",
+  "rows": 24596,
+  "images": 6149,
+  "tasks": 204,
+  "seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "metrics": [
+    "accuracy",
+    "raw_gap",
+    "geometric_margin",
+    "ce"
+  ],
+  "contrasts": {
+    "direct_gap_high_minus_low": {
+      "accuracy": {
+        "mean": -0.001856151623972186,
+        "ci95": [
+          -0.0037694884898632343,
+          0.00017117377456184253
+        ],
+        "two_primary_adjusted_ci95": [
+          -0.004071618307536906,
+          0.0004885621697004353
+        ]
+      },
+      "raw_gap": {
+        "mean": -0.0005078877307057563,
+        "ci95": [
+          -0.0009098377066500588,
+          -9.399484966833915e-05
+        ],
+        "two_primary_adjusted_ci95": [
+          -0.00096625739650525,
+          -5.52807396744635e-05
+        ]
+      },
+      "geometric_margin": {
+        "mean": -0.0005303842233818967,
+        "ci95": [
+          -0.0009846003171553855,
+          -7.842223151972149e-05
+        ],
+        "two_primary_adjusted_ci95": [
+          -0.001028638423475973,
+          -2.5784951149457683e-05
+        ]
+      },
+      "ce": {
+        "mean": 0.0032625032788927005,
+        "ci95": [
+          -0.0015951319117458232,
+          0.007833020235621557
+        ],
+        "two_primary_adjusted_ci95": [
+          -0.0023221270133519374,
+          0.008692260917010761
+        ]
+      }
+    },
+    "objective_interaction_high_minus_low": {
+      "accuracy": {
+        "mean": -0.00220992334640983,
+        "ci95": [
+          -0.004263517720082822,
+          -9.758253426071512e-06
+        ],
+        "two_primary_adjusted_ci95": [
+          -0.004636353652296143,
+          0.00018676280004437955
+        ]
+      },
+      "raw_gap": {
+        "mean": -0.0018845321477324254,
+        "ci95": [
+          -0.002220931548753374,
+          -0.0015219337408941514
+        ],
+        "two_primary_adjusted_ci95": [
+          -0.002282172784732128,
+          -0.0014662895726983381
+        ]
+      },
+      "geometric_margin": {
+        "mean": -0.0021468253175500143,
+        "ci95": [
+          -0.0025313686912566136,
+          -0.0017469548449946587
+        ],
+        "two_primary_adjusted_ci95": [
+          -0.002581780075192323,
+          -0.0016884440362144165
+        ]
+      },
+      "ce": {
+        "mean": 0.0016649512731328417,
+        "ci95": [
+          -0.0027748263306830567,
+          0.005845364559197087
+        ],
+        "two_primary_adjusted_ci95": [
+          -0.003339000341143221,
+          0.006603998309648733
+        ]
+      }
+    }
+  },
+  "primary_metrics": [
+    "accuracy"
+  ],
+  "primary_contrasts": [
+    "direct_gap_high_minus_low",
+    "objective_interaction_high_minus_low"
+  ],
+  "interval_scope": "Adjustment over the two budget comparisons, separately per metric; raw gap, geometric margin and CE are accompanying metrics.",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2717,
+  "sources": {
+    "low": "/data4/zhao.tong/experiments/direct-classification-panel-v1/analysis/paired_outcomes.npz",
+    "high": "/data4/zhao.tong/experiments/direct-classification-98-panel-v1/analysis/paired_outcomes.npz"
+  },
+  "pairing": {
+    "image_task_order_equal": true,
+    "seeds_methods_metrics_equal": true,
+    "maximum_weight_difference": 0.0
+  }
+}

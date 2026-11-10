@@ -1,6 +1,6 @@
 # 论文主线：任务信息何时值得用于 token 选择？
 
-更新：2026-11-08。七设置核心预留测试已完成，本文区分最终测试与开发扩展证据，供后续写作使用。报告结构等待课程具体要求，不按这里的早期分页草案执行。
+更新：2026-11-10。七设置核心预留测试已完成，本文区分最终测试与开发扩展证据，供后续写作使用。报告结构等待课程具体要求，不按这里的早期分页草案执行。
 
 **2026-11-08报告取舍：** 按用户最新偏好，上一轮[内容收益预测](../results/conditioning-content-v1/README.md)先不列入正文或辅助分析计划，完整记录继续保留。[实际分类目标直接训练](../results/direct-classification-v1/README.md)现已完成：Flowers49的C相对同额外步数KL续训提高0.278pp，三个种子均正；direct C−U平均为+0.294pp，调整区间仍跨零。该实验可作为H3训练目标的补充：直接优化分类能改善C，尚未建立超过强U的准确率优势。它使用开发图片与未见类别组合。
 
@@ -8,27 +8,29 @@
 
 **2026-11-10新增证据：** 固定上述全部权重，在Flowers49既有6,149张测试图片、204个候选组合上评估，direct C为97.552%、direct U为97.246%；差+0.306pp，调整区间[+0.114,+0.507]。更换训练目标使C−U相对KL续训增加+0.247pp，[+0.046,+0.450]。这加强了H3的训练目标解释：在同等参数与token预算下，分类目标训练使任务条件化的实际准确率收益更明确。该大面板此前已评估过原模型，本轮新增的是固定direct/KL权重的比较。[完整结果](../results/direct-classification-panel-v1/README.md)
 
+**2026-11-10预算复核：** Flowers98沿用相同直接训练配方，direct C／U准确率97.539%／97.419%，差+0.120pp [−0.028,+0.279]；目标交互为+0.026pp [−0.140,+0.195]。与49配对比较的两项准确率预算交互均未确定。当前可陈述的改进是Flowers49上直接训练提高了条件化的准确率价值，98-token未复现同等额外收益。此结果将“训练目标如何改变任务信息的价值”纳入已有的资源分配主线。[完整比较](../results/direct-classification-98-panel-v1/README.md)
+
 [研究框架图与核心结果图](../results/paper-evidence-v1/README.md)已从当前实现和保存的数据生成，提供 PDF／SVG／PNG 与源数据表。[外部方法评估](external-baseline-review.md)说明 Patch Ranking 的适配方案及可延伸的问题。
 
 ## 一页研究概述
 
 **研究问题。** 对同一张图，候选类别不同，模型需要区分的视觉差异也不同。一个使用了任务信息的选择器，是否值得分配额外的网络容量？本项目研究：在固定 token 预算下，候选类别信息何时能提供超出强共享选择的价值，以及这种价值能否在未见类别组合上实现。
 
-**研究方法。** 冻结 CLIP，在一个位置保留部分 patch token。条件化选择器同时读取图像特征和候选类别，共享选择器只读取图像。我们用三个相连的比较回答问题：首先固定图片和实际分类任务，交换选择器收到的任务描述，检验模型是否有用地利用了候选信息；随后把文本分支的参数预算转给图像网络，检验这种利用是否优于另一种资源分配；最后比较条件化与共享选择的混合、两个独立共享选择的混合，并改变剪枝阶段，寻找仍然存在的额外价值。
+**研究方法。** 冻结 CLIP，在一个位置保留部分 patch token。条件化选择器同时读取图像特征和候选类别，共享选择器只读取图像。我们用三个相连的比较回答问题：首先固定图片和实际分类任务，交换选择器收到的任务描述，检验模型是否有用地利用了候选信息；随后把文本分支的参数预算转给图像网络，检验这种利用是否优于另一种资源分配；最后改变监督目标，让当前选择集合的实际分类损失训练两种选择器，检验训练目标是否改变任务信息的净收益。混合与剪枝阶段实验补充描述作用条件。
 
-**主要发现。** 最终测试中，正确任务描述在两个数据集、两个 CLIP 主干的七个设置上均保留了更大的分类间隔；难度调整与同图 H2 关联也均为正。超过强共享选择的收益更有条件性：Flowers98 的准确率增加 +0.152pp，调整区间为 [+0.026, +0.287]；Flowers49 与 Pets98 接近，Pets49 的 margin 低于 U。C−U 的 margin 收益从49到98在两数据集都增加，准确率交互尚未确定。开发阶段的混合与深度实验进一步提供了互补性和阶段依赖的线索：Flowers49 的 CU margin 高于 UU，Pets49 在较晚剪枝时由负转正；这两项扩展未在本轮预留测试中重跑。
+**主要发现。** 最终测试中，正确任务描述在两个数据集、两个 CLIP 主干的七个设置上均保留了更大的分类间隔；难度调整与同图 H2 关联也均为正。超过强共享选择的收益更有条件性：Flowers98 的准确率增加 +0.152pp，调整区间为 [+0.026, +0.287]；Flowers49 与 Pets98 接近，Pets49 的 margin 低于 U。C−U 的 margin 收益从49到98在两数据集都增加，准确率交互尚未确定。实际分类目标训练在Flowers49使C−U准确率达到+0.306pp，并较等步数KL续训增加+0.247pp；98-token对应额外增量为+0.026pp，未建立同样的准确率收益。开发阶段的混合与深度实验进一步提供了互补性和阶段依赖的线索：Flowers49 的 CU margin 高于 UU，Pets49 在较晚剪枝时由负转正；这两项扩展未在本轮预留测试中重跑。
 
-**研究意义。** 本项目把“任务信息被利用”“这种信息值得其参数成本”和“它提供了共享选择之外的互补”变成三个可以分别测量的问题。现有结果表明，候选信息的作用应结合资源分配、混合方式和剪枝阶段判断。我们得到的是关于条件化价值的具体经验认识，主要体现在分类间隔；准确率列同时展示这些变化实际转化了多少分类收益。
+**研究意义。** 本项目把“任务信息被利用”“这种信息值得其参数成本”和“它提供了共享选择之外的互补”变成三个可以分别测量的问题。现有结果表明，候选信息的作用应结合图像分支容量与训练目标判断。参数重分配会消除部分表面领先；直接分类训练则在Flowers49恢复了可测的准确率增量。这比仅展示“模型使用了候选文本”更具体，混合与剪枝阶段提供补充的条件性认识。
 
 ## 三项贡献的写法
 
 1. **同图跨任务的受控研究设计。** 固定输入图像、分类任务、模型和保留预算，只交换 token 选择所依据的候选类别，测量选择对当前任务的实际作用，并在未见类别组合上评估。
 2. **量化任务信息的参数机会成本。** 保留原始去任务输入的对照，再将其文本分支参数转给图像网络。这个比较改变了两个设置中的条件化领先判断，说明输入消融与资源比较回答了不同问题。
-3. **定位任务选择的额外价值。** 用条件化＋共享对照共享＋共享，识别 Flowers49 的额外互补性；用 block3／6／9 干预，识别 Pets49 的阶段依赖。它们给出任务信息具有额外作用的具体设置。
+3. **用实际分类目标检验可学习的任务增量。** 对C与强U分别施加等步数直接分类／旧目标续训，在Flowers49获得额外准确率增量，并完成Flowers98复核。混合与阶段干预作为补充，说明不同条件下任务信息的作用。
 
 可用于英文 introduction 的精简版本：
 
-> We study task-conditioned token selection by holding the image fixed and exchanging the candidate classes that guide selection. We distinguish useful task dependence from gains over an equally parameterized image-only selector, showing that reallocating capacity changes the apparent benefit of conditioning. Finally, controlled mixing and pruning-stage interventions identify setting-specific complementarity and a depth-dependent reversal in classification margins.
+> We study task-conditioned token selection by holding the image fixed and exchanging the candidate classes that guide selection. We distinguish useful task dependence from gains over an equally parameterized image-only selector, showing that reallocating capacity changes the apparent benefit of conditioning. Finally, paired training-objective interventions show that optimizing actual classification can increase the benefit of conditioning at 49 retained patches on Flowers, with a smaller, unresolved accuracy effect at 98 patches.
 
 ## 最终测试核心结果
 
@@ -103,11 +105,11 @@ C−U 区间按每数据集的两预算调整；CU−UU 区间按四设置调整
 - **H2：任务几何解释交换损失。** 两数据集、两主干已有一致的关联与预测结果，作为主线的解释支撑。
 - **H3：轻量选择器能否学到并泛化。** 未见组合上的任务交换支持学到了有用任务信息；强共享比较和教师到学生的差距具体说明目前实现了多少收益。
 
-## 最终测试已完成，扩展继续使用开发数据
+## 核心最终测试与后续扩展评估
 
 **2026-11-08已完成当前七设置的独立确认。** 模型权重、预算、三个种子和指标在测试前固定，使用原先保留的图片与类别组合。现有开发集承担方法比较与研究方向选择，最终测试结果作为当前核心分类、交换与 H2 结论的独立证据。
 
-本轮已完成 C／原图像版／U、PR98、任务交换、预算直接比较及 H2。混合、深度、身份编码和训练目标仍保留为开发扩展证据，后续是否追加验证取决于要回答的新问题。
+本轮已完成 C／原图像版／U、PR98、任务交换、预算直接比较及 H2。混合、深度和身份编码仍保留为开发扩展证据。直接分类目标现已完成两个预算的既有大面板评估，复用早期测试图片，不称为全新的未访问测试集。
 
 下一步可在开发集继续有针对性的扩展，同时用当前最终测试结果组织主表、图注和结论。课程报告的具体结构另行确定。
 

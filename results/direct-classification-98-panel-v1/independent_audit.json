@@ -1,0 +1,81 @@
+{
+  "images": 6149,
+  "tasks": 204,
+  "rows": 24596,
+  "task_class_groups": 408,
+  "max_weight_formula_error": 0.0,
+  "weighting": "Equal mass to 204 tasks and both candidate class sides; images within each side equally weighted.",
+  "accuracies": [
+    {
+      "method": "initial_C",
+      "accuracy": 0.9748005779682768,
+      "per_seed": [
+        0.9752111614819186,
+        0.9741622842118428,
+        0.9750282882110688
+      ],
+      "error": 2.4424906541753444e-15
+    },
+    {
+      "method": "initial_U",
+      "accuracy": 0.9732546106551481,
+      "per_seed": [
+        0.9731070025858459,
+        0.9733237725841427,
+        0.9733330567954557
+      ],
+      "error": 3.552713678800501e-15
+    },
+    {
+      "method": "kl_C",
+      "accuracy": 0.9747487185148432,
+      "per_seed": [
+        0.9754407581518534,
+        0.974792394843091,
+        0.9740130025495854
+      ],
+      "error": 2.55351295663786e-15
+    },
+    {
+      "method": "kl_U",
+      "accuracy": 0.9738062506327884,
+      "per_seed": [
+        0.9735269684712641,
+        0.9742984472628118,
+        0.9735933361642888
+      ],
+      "error": 3.552713678800501e-15
+    },
+    {
+      "method": "direct_C",
+      "accuracy": 0.9753864893235228,
+      "per_seed": [
+        0.9766356141278172,
+        0.9748715496847562,
+        0.974652304157995
+      ],
+      "error": 5.10702591327572e-15
+    },
+    {
+      "method": "direct_U",
+      "accuracy": 0.9741866523730103,
+      "per_seed": [
+        0.973867017063,
+        0.9743439258207925,
+        0.9743490142352385
+      ],
+      "error": 5.662137425588298e-15
+    }
+  ],
+  "primary_accuracy_contrasts": {
+    "direct_C_minus_direct_U": 0.0011998369505125117,
+    "direct_gap_minus_kl_gap": 0.00025736906845763574
+  },
+  "raw_accuracy_reconstruction_passed": true,
+  "budget_row_alignment_passed": true,
+  "budget_accuracy_differences_98_minus_49": [
+    -0.0018561516239721865,
+    -0.0022099233464098287
+  ],
+  "budget_primary_mean_reconstruction_passed": true
+}

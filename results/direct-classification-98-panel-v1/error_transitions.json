@@ -1,0 +1,180 @@
+{
+  "unit": "Task/class-weighted fraction of image-task decisions; means over fixed trained seeds.",
+  "transitions": {
+    "direct_C_vs_direct_U": {
+      "source": "direct_U",
+      "target": "direct_C",
+      "per_seed": [
+        {
+          "seed": 2041,
+          "corrected_error_rate": 0.00911103075898253,
+          "introduced_error_rate": 0.006342433694165385,
+          "net_accuracy_change": 0.002768597064817146,
+          "corrected_example_count": 209,
+          "introduced_example_count": 149
+        },
+        {
+          "seed": 2042,
+          "corrected_error_rate": 0.007904303037225861,
+          "introduced_error_rate": 0.0073766791732623035,
+          "net_accuracy_change": 0.0005276238639635574,
+          "corrected_example_count": 163,
+          "introduced_example_count": 174
+        },
+        {
+          "seed": 2043,
+          "corrected_error_rate": 0.007784478275996417,
+          "introduced_error_rate": 0.007481188353239933,
+          "net_accuracy_change": 0.00030328992275648406,
+          "corrected_example_count": 188,
+          "introduced_example_count": 164
+        }
+      ],
+      "seed_mean": {
+        "corrected_error_rate": 0.00826660402406827,
+        "introduced_error_rate": 0.007066767073555874,
+        "net_accuracy_change": 0.0011998369505123957
+      }
+    },
+    "direct_C_vs_initial_C": {
+      "source": "initial_C",
+      "target": "direct_C",
+      "per_seed": [
+        {
+          "seed": 2041,
+          "corrected_error_rate": 0.007020366614989901,
+          "introduced_error_rate": 0.00559591396909128,
+          "net_accuracy_change": 0.0014244526458986207,
+          "corrected_example_count": 132,
+          "introduced_example_count": 151
+        },
+        {
+          "seed": 2042,
+          "corrected_error_rate": 0.007727206922798551,
+          "introduced_error_rate": 0.007017941449885169,
+          "net_accuracy_change": 0.0007092654729133818,
+          "corrected_example_count": 132,
+          "introduced_example_count": 160
+        },
+        {
+          "seed": 2043,
+          "corrected_error_rate": 0.005586783483814159,
+          "introduced_error_rate": 0.005962767536887901,
+          "net_accuracy_change": -0.0003759840530737418,
+          "corrected_example_count": 106,
+          "introduced_example_count": 142
+        }
+      ],
+      "seed_mean": {
+        "corrected_error_rate": 0.006778119007200871,
+        "introduced_error_rate": 0.0061922076519547835,
+        "net_accuracy_change": 0.0005859113552460869
+      }
+    },
+    "direct_U_vs_initial_U": {
+      "source": "initial_U",
+      "target": "direct_U",
+      "per_seed": [
+        {
+          "seed": 2041,
+          "corrected_error_rate": 0.00693647643179556,
+          "introduced_error_rate": 0.006176461954641412,
+          "net_accuracy_change": 0.0007600144771541476,
+          "corrected_example_count": 131,
+          "introduced_example_count": 149
+        },
+        {
+          "seed": 2042,
+          "corrected_error_rate": 0.006566487138516903,
+          "introduced_error_rate": 0.005546333901867001,
+          "net_accuracy_change": 0.0010201532366499021,
+          "corrected_example_count": 123,
+          "introduced_example_count": 131
+        },
+        {
+          "seed": 2043,
+          "corrected_error_rate": 0.007563439059690605,
+          "introduced_error_rate": 0.006547481619907807,
+          "net_accuracy_change": 0.0010159574397827975,
+          "corrected_example_count": 144,
+          "introduced_example_count": 158
+        }
+      ],
+      "seed_mean": {
+        "corrected_error_rate": 0.007022134210001023,
+        "introduced_error_rate": 0.00609009249213874,
+        "net_accuracy_change": 0.0009320417178622824
+      }
+    },
+    "direct_C_vs_kl_C": {
+      "source": "kl_C",
+      "target": "direct_C",
+      "per_seed": [
+        {
+          "seed": 2041,
+          "corrected_error_rate": 0.00693036888959081,
+          "introduced_error_rate": 0.0057355129136269205,
+          "net_accuracy_change": 0.0011948559759638894,
+          "corrected_example_count": 131,
+          "introduced_example_count": 149
+        },
+        {
+          "seed": 2042,
+          "corrected_error_rate": 0.007163464892579978,
+          "introduced_error_rate": 0.007084310050914898,
+          "net_accuracy_change": 7.91548416650802e-05,
+          "corrected_example_count": 119,
+          "introduced_example_count": 166
+        },
+        {
+          "seed": 2043,
+          "corrected_error_rate": 0.00609718898090824,
+          "introduced_error_rate": 0.005457887372498674,
+          "net_accuracy_change": 0.0006393016084095659,
+          "corrected_example_count": 119,
+          "introduced_example_count": 132
+        }
+      ],
+      "seed_mean": {
+        "corrected_error_rate": 0.0067303409210263425,
+        "introduced_error_rate": 0.006092570112346832,
+        "net_accuracy_change": 0.0006377708086795119
+      }
+    },
+    "direct_U_vs_kl_U": {
+      "source": "kl_U",
+      "target": "direct_U",
+      "per_seed": [
+        {
+          "seed": 2041,
+          "corrected_error_rate": 0.0068840153311200015,
+          "introduced_error_rate": 0.006543966739384008,
+          "net_accuracy_change": 0.00034004859173599345,
+          "corrected_example_count": 132,
+          "introduced_example_count": 155
+        },
+        {
+          "seed": 2042,
+          "corrected_error_rate": 0.006153161412390055,
+          "introduced_error_rate": 0.0061076828544092635,
+          "net_accuracy_change": 4.547855798079162e-05,
+          "corrected_example_count": 120,
+          "introduced_example_count": 140
+        },
+        {
+          "seed": 2043,
+          "corrected_error_rate": 0.006777970674092295,
+          "introduced_error_rate": 0.006022292603142614,
+          "net_accuracy_change": 0.0007556780709496811,
+          "corrected_example_count": 126,
+          "introduced_example_count": 148
+        }
+      ],
+      "seed_mean": {
+        "corrected_error_rate": 0.006605049139200785,
+        "introduced_error_rate": 0.006224647398978629,
+        "net_accuracy_change": 0.0003804017402221554
+      }
+    }
+  }
+}
