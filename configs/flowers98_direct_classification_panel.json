@@ -1,0 +1,15 @@
+{
+  "experiment": "direct-classification-98-panel-v1",
+  "source_config": "configs/flowers98_direct_classification.json",
+  "source_run": "/data4/zhao.tong/experiments/direct-classification-98-v1",
+  "cache_dir": "runs/final-test-v1/cache/flowers_b16",
+  "image_split": "test",
+  "task_split": "test",
+  "output": "/data4/zhao.tong/experiments/direct-classification-98-panel-v1",
+  "device": "cuda:6",
+  "eval_batch_size": 32,
+  "step": 1200,
+  "training_seeds": [2041, 2042, 2043],
+  "bootstrap_seed": 2717,
+  "bootstrap_replicates": 2000
+}
