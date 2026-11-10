@@ -32,3 +32,16 @@ All changes compare direct training with KL continuation. The second term is cal
 Write new results to `/data4/zhao.tong/experiments/direct-task-exchange-v1/`; retain curated outcomes, tables, figure sources and an interpretation in `results/direct-task-exchange-v1/`. Reuse full source predictions from the earlier 49/98 evaluation releases, and archive this analysis/code as a small separate release. Code and reused caches remain under `/data2/zhao.tong/experiments`.
 
 This is a focused extension of H1 and H3: it connects useful task dependence to the accuracy improvement found by changing the training objective. A larger exchange effect alone is not the research finding; the result must be read with the own-task gain and the strong shared comparison.
+
+
+## Completed results
+
+The two manifests align exactly. All 6,149 images have four tasks, yielding three donors per target and 73,788 directed target/donor evaluations per endpoint. U's scores and masks are identical across tasks of the same image. Own outcomes reproduce the existing tables; independent direct calculations agree with the analysis.
+
+At 49 tokens, C's direct−KL accuracy change is +0.4183 pp with the correct description and +0.3675 pp after exchange. The change in the own-minus-swapped effect is +0.0508 pp, adjusted interval [−0.0777,+0.1811]. At 98 tokens, the corresponding changes are +0.0638, +0.0449 and +0.0188 pp [−0.1000,+0.1441]. Neither primary comparison establishes an increased accuracy benefit from the correct task correspondence.
+
+The 49-token C−U objective increment remains +0.2467 pp. Its exact arithmetic decomposition is +0.0508 pp in correspondence-effect change and +0.1959 pp in remaining change after exchange. Both correct and exchanged descriptions improve under direct training. The exchanges retain the class common to the original and donor tasks, so this result concerns competitor specificity within these candidate tasks.
+
+Correct descriptions remain useful: direct C own-minus-swapped accuracy is +0.4885 pp at 49 and +0.4221 pp at 98. The change in geometric-margin exchange effect is negative at 49 (−0.000272) and positive at 98 (+0.000615), with adjusted intervals excluding zero. Selection overlap increases from 65.57% to 68.36% at 49 and from 78.56% to 81.37% at 98, with increases for each seed. Thus, the demonstrated Flowers49 accuracy improvement accompanies more similar selections across the candidate tasks, rather than stronger selection divergence.
+
+This analysis uses saved outputs only: zero additional GPU time and no new training. CPU time was not separately recorded. [Tables, figure and checks](../../results/direct-task-exchange-v1/README.md).

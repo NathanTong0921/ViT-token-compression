@@ -1,0 +1,24 @@
+{
+  "completed_utc": "2026-11-10T13:02:50.347661+00:00",
+  "source": "/data2/zhao.tong/artifacts/direct-classification-v1",
+  "destination": "/data4/zhao.tong/artifacts/direct-classification-v1",
+  "source_path_is_compatibility_symlink": true,
+  "files": [
+    {
+      "name": "direct-classification-v1-analysis.zip",
+      "bytes": 2995446,
+      "sha256": "330c3a8675b0afafdb6827168b8a9c8e9c507cac5888f09de0e7b8337e42f4de"
+    },
+    {
+      "name": "direct-classification-v1-run.zip",
+      "bytes": 311207188,
+      "sha256": "039cd3861313c8e85f24ceb46929e99b2eb062fef14d3ee22bf1a5f779e12052"
+    }
+  ],
+  "total_file_bytes": 314202634,
+  "source_file_allocated_bytes": 314212352,
+  "data2_available_before_bytes": 91201536,
+  "data2_available_after_bytes": 405417984,
+  "verification": "Both copied file sizes and full content digests match; both archive paths resolve through the original directory symlink.",
+  "release": "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-v1"
+}

@@ -1,0 +1,17 @@
+{
+  "code_commit": "d1e146796f039b872cdc5784425ecc759524c8ae",
+  "sources": [
+    "/data4/zhao.tong/experiments/direct-classification-panel-v1",
+    "/data4/zhao.tong/experiments/direct-classification-98-panel-v1"
+  ],
+  "output": "/data4/zhao.tong/experiments/direct-task-exchange-v1",
+  "cpu_only": true,
+  "new_gpu_seconds": 0,
+  "new_training_steps": 0,
+  "own_row_reconstruction": true,
+  "donors_per_target": 3,
+  "original_target_weights": true,
+  "shared_raw_score_same_image_max_error": 0.0,
+  "independent_scalar_targets_per_endpoint": 4,
+  "independent_total_statistics_match": true
+}

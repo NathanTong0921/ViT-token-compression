@@ -16,7 +16,7 @@ def main(args):
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 10, "pdf.fonttype": 42,
                          "axes.spines.top": False, "axes.spines.right": False})
     fig, axes = plt.subplots(1, 3, figsize=(12.8, 4.8), gridspec_kw={"width_ratios": [1, 1, 1.15]})
-    fig.subplots_adjust(left=.065, right=.98, top=.72, bottom=.24, wspace=.40)
+    fig.subplots_adjust(left=.065, right=.98, top=.72, bottom=.30, wspace=.40)
     fig.suptitle("Does direct training increase the value of the correct task?",
                  fontsize=15, fontweight="bold", y=.97)
     fig.text(.5, .875, "Flowers102 · same images and target classes · average over three alternative tasks per image",
@@ -59,7 +59,7 @@ def main(args):
     lo, hi = min(0, intervals.min()), max(0, intervals.max())
     width = max(hi - lo, .05)
     axes[2].set_xlim(lo - .15 * width, hi + .15 * width)
-    fig.text(.065, .06, "Curves show means of three fixed seeds. Right: paired image-bootstrap intervals adjusted over both budgets.\n"
+    fig.text(.065, .06, "KL and Direct separately continue from Initial; curves show three-seed means. Intervals adjust over both budgets.\n"
              "Task exchange changes the selector's candidate description; classification still uses the original target classes.",
              color="#596573", fontsize=9)
     for extension in ("png", "pdf"):

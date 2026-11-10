@@ -1,0 +1,319 @@
+{
+  "donor_count": 3,
+  "all_images_have_four_distinct_tasks": true,
+  "budget_row_alignment": true,
+  "own_outcomes_match_existing_analysis": true,
+  "decomposition_identity_passed": true,
+  "checks": {
+    "49": [
+      {
+        "seed": 2041,
+        "method": "initial_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2041,
+        "method": "initial_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2041,
+        "method": "kl_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2041,
+        "method": "kl_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2041,
+        "method": "direct_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2041,
+        "method": "direct_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2042,
+        "method": "initial_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2042,
+        "method": "initial_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2042,
+        "method": "kl_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2042,
+        "method": "kl_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2042,
+        "method": "direct_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2042,
+        "method": "direct_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2043,
+        "method": "initial_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2043,
+        "method": "initial_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2043,
+        "method": "kl_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2043,
+        "method": "kl_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2043,
+        "method": "direct_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2043,
+        "method": "direct_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      }
+    ],
+    "98": [
+      {
+        "seed": 2041,
+        "method": "initial_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2041,
+        "method": "initial_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2041,
+        "method": "kl_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2041,
+        "method": "kl_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2041,
+        "method": "direct_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2041,
+        "method": "direct_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2042,
+        "method": "initial_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2042,
+        "method": "initial_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2042,
+        "method": "kl_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2042,
+        "method": "kl_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2042,
+        "method": "direct_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2042,
+        "method": "direct_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2043,
+        "method": "initial_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2043,
+        "method": "initial_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2043,
+        "method": "kl_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2043,
+        "method": "kl_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      },
+      {
+        "seed": 2043,
+        "method": "direct_C",
+        "own_max_error": 0.0
+      },
+      {
+        "seed": 2043,
+        "method": "direct_U",
+        "own_max_error": 0.0,
+        "U_max_same_image_score_difference": 0.0,
+        "U_max_exchange_difference_by_metric": {
+          "accuracy": 0.0,
+          "raw_gap": 0.0,
+          "geometric_margin": 2.7755575615628914e-17,
+          "ce": 8.881784197001252e-16
+        }
+      }
+    ]
+  }
+}
