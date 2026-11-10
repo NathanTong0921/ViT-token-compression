@@ -5,7 +5,7 @@
   "cache_dir": "runs/final-test-v1/cache/flowers_b16",
   "image_split": "test",
   "task_split": "test",
-  "output": "/tmp/zhao-tong-direct-panel-v1",
+  "output": "/data4/zhao.tong/experiments/direct-classification-panel-v1",
   "device": "cuda:6",
   "eval_batch_size": 32,
   "step": 1200,
