@@ -64,6 +64,8 @@ The no-teacher evaluation loader reproduced the old loader exactly on the six de
 
 Small paired outcomes, tables, figures and checks are retained in this directory. Full native scores and selected positions are stored at `/data4/zhao.tong/experiments/direct-classification-panel-v1/`. The model weights are reused from the preceding direct-training archive.
 
+Two archives totaling 123.77 MB are retained in `/data4/zhao.tong/artifacts/direct-classification-panel-v1/` and the [GitHub Release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-panel-v1). They preserve all eighteen endpoint evaluations and the analysis, figures, code and configuration. Both archives passed CRC and upload checks. The analysis archive was recovered from GitHub into memory; its summary, per-seed table, paired outcomes, configuration and protocol matched the working files. [Inventory](archive_summary.json), [release assets](release_assets.json), [recovery record](recovery.json). No bulk archive or model copy remains locally.
+
 ```bash
 PYTHONPATH=src python scripts/evaluate_direct_classification_panel.py --config configs/flowers_direct_classification_panel.json
 OPENBLAS_NUM_THREADS=1 python scripts/analyze_direct_classification.py --source /data4/zhao.tong/experiments/direct-classification-panel-v1 --output /data4/zhao.tong/experiments/direct-classification-panel-v1/analysis --step 1200 --bootstrap-seed 2717 --replicates 2000

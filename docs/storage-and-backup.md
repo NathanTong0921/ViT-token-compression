@@ -146,3 +146,11 @@ Both archives passed server CRC checks and match their published content digests
 `results/direct-classification-v1/` retains approximately 3.3 MB of paired outcomes, tables, figures, training records, costs and numerical checks. Two archives totaling 314,202,634 bytes are stored in server `/data2/zhao.tong/artifacts/direct-classification-v1/` and the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-v1). They preserve 72 saved continuation checkpoints, six original C/U checkpoints, native evaluation scores and selected positions, source configuration and analysis. Existing Flowers49 prefix/teacher caches and the CLIP checkpoint are dependencies.
 
 Both archives passed CRC checks and match the uploaded assets. All twelve final checkpoints loaded from the run archive. The small analysis archive was recovered into memory; the summary, seed table, paired outcomes, configuration and protocol matched local files. The working tree retains no ZIP or selector checkpoint copy from this run. Inventory and recovery records are in the result directory.
+
+## Expanded direct-classification evaluation
+
+On 2026-11-10, the user specified data4 for new outputs because data2 was nearly full. Code and reused data caches remain in `/data2/zhao.tong/experiments`; the new eighteen-endpoint evaluation is in `/data4/zhao.tong/experiments/direct-classification-panel-v1/`.
+
+Curated outcomes, tables, figures and checks occupy approximately 10 MB locally and in Git. Two archives totaling 123,773,199 bytes are stored at `/data4/zhao.tong/artifacts/direct-classification-panel-v1/` and the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-panel-v1). They preserve all raw evaluations and the analysis/code/configuration; existing checkpoints are dependencies from `direct-classification-v1`.
+
+CRC and uploaded-content checks passed. The analysis archive was recovered from GitHub into memory and its key scientific files matched the working copies. Local transfer ZIPs and temporary helpers were removed. Inventory, asset URLs and recovery details are saved in `results/direct-classification-panel-v1/`.

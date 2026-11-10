@@ -1,0 +1,30 @@
+{
+  "archives": [
+    {
+      "name": "direct-classification-panel-v1-evaluation.zip",
+      "path": "/data4/zhao.tong/artifacts/direct-classification-panel-v1/direct-classification-panel-v1-evaluation.zip",
+      "bytes": 112374094,
+      "members": 41,
+      "uncompressed_bytes": 113927799,
+      "sha256": "106319cdcd8d49dd9680bf4d5316a64abdb8bc0539e56afc7b4a45b329f02921",
+      "fixed_endpoints": 18
+    },
+    {
+      "name": "direct-classification-panel-v1-analysis.zip",
+      "path": "/data4/zhao.tong/artifacts/direct-classification-panel-v1/direct-classification-panel-v1-analysis.zip",
+      "bytes": 11399105,
+      "members": 255,
+      "uncompressed_bytes": 12737124,
+      "sha256": "1c04cd14365e8100a7a123de987f14b724dba0529972f35e1f7331eee5bcb3c7"
+    }
+  ],
+  "new_checkpoint_count": 0,
+  "evaluated_endpoints": 18,
+  "source_commit": "aa8ae557be1caa126a27924d817a68d6bdd4b765",
+  "reused_dependencies": [
+    "/data2/zhao.tong/experiments/runs/final-test-v1/cache/flowers_b16",
+    "/data2/zhao.tong/experiments/runs/direct-classification-v1",
+    "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-v1"
+  ],
+  "scope": "All 18 fixed FP32 endpoint evaluations, scores, masks, panel manifests, analysis, figures and code; pretrained weights, prefix caches and existing selector checkpoints are reused."
+}
