@@ -1,0 +1,23 @@
+{
+  "asset_name": "direct-task-exchange-v1-analysis.zip",
+  "downloaded_bytes": 40431244,
+  "archive_members": 302,
+  "crc_passed": true,
+  "matched_working_files": [
+    "results/direct-task-exchange-v1/summary.json",
+    "results/direct-task-exchange-v1/methods.csv",
+    "results/direct-task-exchange-v1/audit.json",
+    "results/direct-task-exchange-v1/paired_exchange_outcomes.npz",
+    "results/direct-task-exchange-v1/per_seed.csv",
+    "results/direct-task-exchange-v1/selection_overlap.csv",
+    "results/direct-task-exchange-v1/contrasts.csv",
+    "results/direct-task-exchange-v1/independent_raw_audit.json",
+    "results/direct-task-exchange-v1/execution.json",
+    "docs/experiments/2026-11-10-direct-task-exchange.md",
+    "scripts/analyze_direct_task_exchange.py",
+    "scripts/plot_direct_task_exchange.py",
+    "results/direct-task-exchange-v1/figures/task_exchange.pdf",
+    "results/direct-task-exchange-v1/figures/task_exchange.png"
+  ],
+  "local_archive_retained": false
+}

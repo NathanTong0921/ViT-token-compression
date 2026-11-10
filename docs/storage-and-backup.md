@@ -168,3 +168,12 @@ All archives passed CRC and uploaded-content checks. Twelve final checkpoints lo
 ## Moving the earlier direct-training archive to data4
 
 On 2026-11-10, the two existing direct-classification-v1 ZIPs (314,202,634 bytes) were moved from `/data2/zhao.tong/artifacts/direct-classification-v1/` to `/data4/zhao.tong/artifacts/direct-classification-v1/`. The old directory path is a symbolic link to the new location. Both files were verified after copying, then the old copies were removed; published GitHub assets remain unchanged. This freed about 314 MB on data2 for the code checkout and small result synchronization. See [migration record](../results/storage-offload-v1/direct-classification-data4-migration.json).
+
+
+## Task-description exchange after direct training
+
+`results/direct-task-exchange-v1/` retains approximately 39 MB of paired own/exchanged outcomes and donor mapping, tables, figure sources, independent checks and execution records. The same analysis is saved in `/data4/zhao.tong/experiments/direct-task-exchange-v1/`. No new model weights or image inference outputs were generated.
+
+One 40,431,244-byte analysis/code archive is retained in `/data4/zhao.tong/artifacts/direct-task-exchange-v1/` and the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-task-exchange-v1). It includes one copy of the curated evidence and code/protocol from commit df5c39a. Full native score dependencies remain in the earlier direct-classification-panel-v1 and direct-classification-98-v1 releases; they are not duplicated.
+
+CRC and uploaded-content verification passed. Recovery from GitHub matched the summary, paired outcomes including donor rows, analysis and plotting code, protocol and figures. Local transfer packages were removed. The archive inventory, asset URL and recovery record are retained with the result directory.

@@ -1,0 +1,21 @@
+{
+  "archives": [
+    {
+      "name": "direct-task-exchange-v1-analysis.zip",
+      "path": "/data4/zhao.tong/artifacts/direct-task-exchange-v1/direct-task-exchange-v1-analysis.zip",
+      "bytes": 40431244,
+      "members": 302,
+      "uncompressed_bytes": 41903323,
+      "sha256": "a8817de38829d7cb81f2e9d8221cf9319d047ac76b1b1c0062d7859368a4ae71",
+      "crc_passed": true
+    }
+  ],
+  "new_training": false,
+  "new_inference": false,
+  "source_commit": "df5c39acdcb6576c11df71a157b2829465a5af14",
+  "reused_dependencies": [
+    "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-panel-v1",
+    "https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-classification-98-v1"
+  ],
+  "scope": "Offline own-versus-swapped task correspondence analysis for fixed direct/KL selectors at 49/98 tokens, target-task weights, per-example outcomes, paired estimates, figures and code. Existing full-class prediction scores and models are not duplicated."
+}
