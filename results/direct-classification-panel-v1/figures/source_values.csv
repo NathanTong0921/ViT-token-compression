@@ -1,0 +1,17 @@
+panel,contrast,metric,mean,low,high,scale,interval
+"Development: 1,020 images",direct_C_minus_direct_U,accuracy,0.29411764705882354,-0.07363153594771264,0.6617647058823531,100.0,two-primary adjusted
+"Development: 1,020 images",direct_gap_minus_kl_gap,accuracy,0.25326797385620914,-0.18790849673202611,0.7189542483660123,100.0,two-primary adjusted
+"Development: 1,020 images",direct_C_minus_kl_C,accuracy,0.2777777777777778,0.024509803921568638,0.5310457516339868,100.0,ordinary 95%
+"Development: 1,020 images",direct_U_minus_kl_U,accuracy,0.024509803921568627,-0.3104575163398693,0.3839869281045751,100.0,ordinary 95%
+"Existing test panel: 6,149 images",direct_C_minus_direct_U,accuracy,0.3055988574484584,0.11388242692719178,0.5069416153401854,100.0,two-primary adjusted
+"Existing test panel: 6,149 images",direct_gap_minus_kl_gap,accuracy,0.24672924148671843,0.04600753961129637,0.4498571466054373,100.0,two-primary adjusted
+"Existing test panel: 6,149 images",direct_C_minus_kl_C,accuracy,0.4182697267101655,0.2930425034143826,0.5423312833419847,100.0,ordinary 95%
+"Existing test panel: 6,149 images",direct_U_minus_kl_U,accuracy,0.171540485223447,0.006959462155666985,0.34709259653402486,100.0,ordinary 95%
+"Development: 1,020 images",direct_C_minus_direct_U,raw_gap,2.7254805571454415,2.009721975461611,3.4897032008488127,1000.0,two-primary adjusted
+"Development: 1,020 images",direct_gap_minus_kl_gap,raw_gap,3.4911555664163436,2.821112844249953,4.180142989639327,1000.0,two-primary adjusted
+"Development: 1,020 images",direct_C_minus_kl_C,raw_gap,2.270835292909074,1.946250799102891,2.6143774982797416,1000.0,ordinary 95%
+"Development: 1,020 images",direct_U_minus_kl_U,raw_gap,-1.2203202735072647,-1.796771857714027,-0.6540502222510532,1000.0,ordinary 95%
+"Existing test panel: 6,149 images",direct_C_minus_direct_U,raw_gap,2.7531330223604344,2.381572931652617,3.1060407299616304,1000.0,two-primary adjusted
+"Existing test panel: 6,149 images",direct_gap_minus_kl_gap,raw_gap,3.374257808502081,3.0389914234130613,3.682050202065471,1000.0,two-primary adjusted
+"Existing test panel: 6,149 images",direct_C_minus_kl_C,raw_gap,2.1029441201401333,1.925382896075708,2.265338552382921,1000.0,ordinary 95%
+"Existing test panel: 6,149 images",direct_U_minus_kl_U,raw_gap,-1.2713136883619571,-1.5428538765162594,-0.9773714566887318,1000.0,ordinary 95%

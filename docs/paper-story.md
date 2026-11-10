@@ -6,6 +6,8 @@
 
 题目待定，保留 proposal 题目及 **Same Image, Different Evidence: When Does Visual Token Compression Benefit from Task Conditioning?** 作为候选。
 
+**2026-11-10新增证据：** 固定上述全部权重，在Flowers49既有6,149张测试图片、204个候选组合上评估，direct C为97.552%、direct U为97.246%；差+0.306pp，调整区间[+0.114,+0.507]。更换训练目标使C−U相对KL续训增加+0.247pp，[+0.046,+0.450]。这加强了H3的训练目标解释：在同等参数与token预算下，分类目标训练使任务条件化的实际准确率收益更明确。该大面板此前已评估过原模型，本轮新增的是固定direct/KL权重的比较。[完整结果](../results/direct-classification-panel-v1/README.md)
+
 [研究框架图与核心结果图](../results/paper-evidence-v1/README.md)已从当前实现和保存的数据生成，提供 PDF／SVG／PNG 与源数据表。[外部方法评估](external-baseline-review.md)说明 Patch Ranking 的适配方案及可延伸的问题。
 
 ## 一页研究概述

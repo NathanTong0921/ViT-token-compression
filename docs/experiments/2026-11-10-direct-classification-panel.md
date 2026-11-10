@@ -21,3 +21,11 @@ The preceding development experiment trained three paired seeds of C/U with eith
 This round performs inference and analysis only. Flowers98 training will be considered after these results. The numerical pipeline will be compared to the prior evaluator on a small development batch before the larger panel is run.
 
 Code and existing caches remain in `/data2/zhao.tong/experiments`. Because that filesystem has approximately 150 MB free at launch, the user specified data4 for new outputs. This run writes to `/data4/zhao.tong/experiments/direct-classification-panel-v1`; archives go to `/data4/zhao.tong/artifacts/direct-classification-panel-v1` and a GitHub Release. Curated analysis, figures and records stay in `results/direct-classification-panel-v1/` locally, on GitHub and on the server. Transfer intermediates will be removed after recovery verification.
+
+## Completed result
+
+All eighteen endpoints completed. Six endpoints on a 32-example development batch matched the previous evaluator exactly in scores, masks and metrics. The larger panel contained the planned 6,149 images, 204 pairs and 24,596 decisions. Cached-prefix inference took 164.58 seconds, total wall time 170.48 seconds, with 2.61 GB peak allocated GPU memory; no new training was performed.
+
+Direct C reaches 97.5519% accuracy and direct U 97.2463%. Their difference is +0.3056 percentage points, with the two-primary-adjusted interval [+0.1139, +0.5069]. The C−U difference increases by +0.2467pp over KL continuation, interval [+0.0460, +0.4499]. C improves over its KL continuation by +0.4183pp and U by +0.1715pp. Both main comparisons also favor direct conditioning in raw gap, geometric margin and CE. The direct C−U accuracy difference is positive in all three seeds; the target interaction is positive in two of three.
+
+The development C−U and objective-interaction estimates were +0.2941pp and +0.2533pp. Their similar magnitudes on this larger panel support continuing with a targeted Flowers98 replication. Flowers98 has not been run in this round. See [results and panel comparison](../../results/direct-classification-panel-v1/README.md).

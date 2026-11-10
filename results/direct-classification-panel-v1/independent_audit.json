@@ -1,0 +1,75 @@
+{
+  "images": 6149,
+  "tasks": 204,
+  "rows": 24596,
+  "task_class_groups": 408,
+  "max_weight_formula_error": 0.0,
+  "weighting": "Equal mass to 204 tasks and both candidate class sides; images within each side equally weighted.",
+  "accuracies": [
+    {
+      "method": "initial_C",
+      "accuracy": 0.9720339372689913,
+      "per_seed": [
+        0.9720840864178307,
+        0.9722002598684489,
+        0.9718174655206939
+      ],
+      "error": 5.88418203051333e-15
+    },
+    {
+      "method": "initial_U",
+      "accuracy": 0.970513060261499,
+      "per_seed": [
+        0.9698034691370798,
+        0.9705850667445173,
+        0.9711506449028999
+      ],
+      "error": 4.440892098500626e-15
+    },
+    {
+      "method": "kl_C",
+      "accuracy": 0.9713362037157539,
+      "per_seed": [
+        0.9696754874479105,
+        0.972282415196658,
+        0.9720507085026928
+      ],
+      "error": 6.217248937900877e-15
+    },
+    {
+      "method": "kl_U",
+      "accuracy": 0.9707475075561365,
+      "per_seed": [
+        0.9709970315522136,
+        0.9705354269164651,
+        0.9707100641997308
+      ],
+      "error": 4.3298697960381105e-15
+    },
+    {
+      "method": "direct_C",
+      "accuracy": 0.9755189009828555,
+      "per_seed": [
+        0.9755235445264491,
+        0.9747088709999613,
+        0.976324287422156
+      ],
+      "error": 4.9960036108132044e-15
+    },
+    {
+      "method": "direct_U",
+      "accuracy": 0.9724629124083709,
+      "per_seed": [
+        0.9713889193813199,
+        0.9735501281878701,
+        0.9724496896559228
+      ],
+      "error": 5.329070518200751e-15
+    }
+  ],
+  "primary_accuracy_contrasts": {
+    "direct_C_minus_direct_U": 0.003055988574484636,
+    "direct_gap_minus_kl_gap": 0.002467292414867206
+  },
+  "raw_accuracy_reconstruction_passed": true
+}

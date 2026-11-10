@@ -26,10 +26,10 @@ def main(args):
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 10, "pdf.fonttype": 42,
                          "axes.spines.top": False, "axes.spines.right": False})
     fig, axes = plt.subplots(1, 2, figsize=(12, 5.1), sharey=True)
-    fig.subplots_adjust(left=.24, right=.98, top=.78, bottom=.20, wspace=.23)
+    fig.subplots_adjust(left=.24, right=.98, top=.75, bottom=.20, wspace=.23)
     fig.suptitle("Direct classification training across evaluation panels", fontsize=16,
-                 fontweight="bold", y=.97)
-    fig.text(.5, .915, "Flowers102 · CLIP B/16 · 49 tokens · fixed 1,200-step weights · three seeds",
+                 fontweight="bold", y=.98)
+    fig.text(.5, .885, "Flowers102 · CLIP B/16 · 49 tokens · fixed 1,200-step weights · three seeds",
              ha="center", fontsize=10, color="#596573")
     rows = []
     for ai, (metric, multiplier, xlabel) in enumerate((
@@ -65,7 +65,7 @@ def main(args):
         ax.set_ylim(len(COMPARISONS)-.5, -.5)
     axes[0].set_yticks(np.arange(len(COMPARISONS)), [label for _, label in COMPARISONS])
     handles, labels = axes[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="upper center", bbox_to_anchor=(.5,.88), ncol=2,
+    fig.legend(handles, labels, loc="upper center", bbox_to_anchor=(.5,.85), ncol=2,
                frameon=False, fontsize=10)
     fig.text(.24, .075,
              "Image-cluster bootstrap intervals, averaging the same three trained seeds.\n"

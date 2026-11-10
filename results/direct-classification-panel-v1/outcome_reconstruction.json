@@ -1,0 +1,203 @@
+{
+  "passed": true,
+  "comparisons": [
+    {
+      "seed": 2041,
+      "stage": "initial",
+      "arm": "conditioned",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 2.086162567138672e-07,
+        "geometric_margin": 3.1735727384907264e-07,
+        "ce": 1.0620544347528238e-05
+      }
+    },
+    {
+      "seed": 2041,
+      "stage": "initial",
+      "arm": "image_only_wide",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.4209479258796573e-07,
+        "ce": 1.2166926900647468e-05
+      }
+    },
+    {
+      "seed": 2041,
+      "stage": "kl_step_1200",
+      "arm": "conditioned",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.6391277313232422e-07,
+        "geometric_margin": 2.3323696603239075e-07,
+        "ce": 1.2957229214016763e-05
+      }
+    },
+    {
+      "seed": 2041,
+      "stage": "kl_step_1200",
+      "arm": "image_only_wide",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.9371509552001953e-07,
+        "geometric_margin": 2.3202974290537082e-07,
+        "ce": 1.1062384230431377e-05
+      }
+    },
+    {
+      "seed": 2041,
+      "stage": "direct_step_1200",
+      "arm": "conditioned",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 2.086162567138672e-07,
+        "geometric_margin": 2.7922053880136133e-07,
+        "ce": 1.3114459813223789e-05
+      }
+    },
+    {
+      "seed": 2041,
+      "stage": "direct_step_1200",
+      "arm": "image_only_wide",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.7348193834542123e-07,
+        "ce": 1.5643590352887315e-05
+      }
+    },
+    {
+      "seed": 2042,
+      "stage": "initial",
+      "arm": "conditioned",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.4399433570798656e-07,
+        "ce": 1.0890349519065978e-05
+      }
+    },
+    {
+      "seed": 2042,
+      "stage": "initial",
+      "arm": "image_only_wide",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 2.086162567138672e-07,
+        "geometric_margin": 3.1617642390346923e-07,
+        "ce": 1.3084623164516529e-05
+      }
+    },
+    {
+      "seed": 2042,
+      "stage": "kl_step_1200",
+      "arm": "conditioned",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.4901161193847656e-07,
+        "geometric_margin": 2.3271856340600916e-07,
+        "ce": 1.2321103771917308e-05
+      }
+    },
+    {
+      "seed": 2042,
+      "stage": "kl_step_1200",
+      "arm": "image_only_wide",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 2.086162567138672e-07,
+        "geometric_margin": 2.826654121670935e-07,
+        "ce": 1.4398551982264252e-05
+      }
+    },
+    {
+      "seed": 2042,
+      "stage": "direct_step_1200",
+      "arm": "conditioned",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.596760742077514e-07,
+        "ce": 1.2557604402552158e-05
+      }
+    },
+    {
+      "seed": 2042,
+      "stage": "direct_step_1200",
+      "arm": "image_only_wide",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.7410431244212496e-07,
+        "ce": 1.1188428957531471e-05
+      }
+    },
+    {
+      "seed": 2043,
+      "stage": "initial",
+      "arm": "conditioned",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.3496099395281522e-07,
+        "ce": 1.2743777728196903e-05
+      }
+    },
+    {
+      "seed": 2043,
+      "stage": "initial",
+      "arm": "image_only_wide",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.3646696141466084e-07,
+        "ce": 1.185133739989297e-05
+      }
+    },
+    {
+      "seed": 2043,
+      "stage": "kl_step_1200",
+      "arm": "conditioned",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.264125514434001e-07,
+        "ce": 1.3905895788646205e-05
+      }
+    },
+    {
+      "seed": 2043,
+      "stage": "kl_step_1200",
+      "arm": "image_only_wide",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.3193290264039712e-07,
+        "ce": 1.2782028532054568e-05
+      }
+    },
+    {
+      "seed": 2043,
+      "stage": "direct_step_1200",
+      "arm": "conditioned",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.494576302330964e-07,
+        "ce": 1.0180425796146864e-05
+      }
+    },
+    {
+      "seed": 2043,
+      "stage": "direct_step_1200",
+      "arm": "image_only_wide",
+      "maximum_error": {
+        "accuracy": 0.0,
+        "raw_gap": 1.7881393432617188e-07,
+        "geometric_margin": 2.484917629580474e-07,
+        "ce": 1.300588278274617e-05
+      }
+    }
+  ]
+}
