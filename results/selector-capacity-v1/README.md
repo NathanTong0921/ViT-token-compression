@@ -66,3 +66,5 @@ New training took 751.5 seconds; evaluation took 321.0 seconds. Including prepar
 - `execution/`, `execution_check.json`: source configuration, checkpoint reuse, execution checks, and costs.
 
 Raw predictions, cached evaluation evidence, and new checkpoints remain at `/data4/zhao.tong/experiments/selector-capacity-v1`. The analysis and figure entry points are `scripts/analyze_selector_capacity.py` and `scripts/plot_selector_capacity.py`.
+
+The [versioned backup](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/selector-capacity-v1) contains three archives totaling 244.54 MB: both complete dataset runs, all 36 checkpoints including the reused middle capacity, and the analysis/code/protocol snapshot. The data4 archives passed recovery checks; the published analysis archive was also downloaded and all 343 members matched. Local storage retains this curated directory, without checkpoint or ZIP copies. Inventory and verification records are in `archive_summary.json`, `release_assets.json` and `recovery.json`.

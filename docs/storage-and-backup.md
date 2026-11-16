@@ -179,3 +179,11 @@ On 2026-11-10, the two existing direct-classification-v1 ZIPs (314,202,634 bytes
 One 40,431,244-byte analysis/code archive is retained in `/data4/zhao.tong/artifacts/direct-task-exchange-v1/` and the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/direct-task-exchange-v1). It includes one copy of the curated evidence and code/protocol from commit df5c39a. Full native score dependencies remain in the earlier direct-classification-panel-v1 and direct-classification-98-v1 releases; they are not duplicated.
 
 CRC and uploaded-content verification passed. Recovery from GitHub matched the summary, paired outcomes including donor rows, analysis and plotting code, protocol and figures. Local transfer packages were removed. The archive inventory, asset URL and recovery record are retained with the result directory.
+
+## Matched selector capacity study
+
+`results/selector-capacity-v1/` retains approximately 20 MB of paired outcomes, development/test tables, three figures, training histories and execution records. Its server copy is `/data4/zhao.tong/experiments/selector-capacity-v1/curated/`; raw runs remain under the same parent directory.
+
+Three archives totaling 244,543,034 bytes are retained in `/data4/zhao.tong/artifacts/selector-capacity-v1/` and the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/selector-capacity-v1). The Pets and Flowers packages include all 24 new and 12 reused medium checkpoints, 72 development/test prediction endpoints, manifests and training records. The analysis package preserves the curated evidence and source code/configuration/protocol from commit 9493d58, including the I36 evidence review. Existing prefix caches, teacher caches and the frozen CLIP checkpoint remain reproducible dependencies.
+
+All three server packages passed content and CRC checks. All 36 selectors loaded from the packages, and all 72 raw outputs passed shape/retained-position checks. GitHub reports matching sizes and content for all three assets; the 20.34 MB analysis archive was downloaded into memory and all 343 members matched. Local ZIP/checkpoint copies and transfer intermediates were not retained. Inventory, release URLs and recovery details are saved with the result directory.

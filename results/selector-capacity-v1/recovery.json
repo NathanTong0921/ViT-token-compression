@@ -1,0 +1,1101 @@
+{
+  "github_analysis_archive": "selector-capacity-v1-analysis.zip",
+  "github_analysis_downloaded_bytes": 20343743,
+  "github_analysis_crc_passed": true,
+  "github_analysis_restored_members": [
+    "README.md",
+    "configs/final_test_v1.json",
+    "configs/flowers98_direct_classification.json",
+    "configs/flowers98_direct_classification_panel.json",
+    "configs/flowers_direct_classification.json",
+    "configs/flowers_direct_classification_panel.json",
+    "configs/flowers_selector_ablations_49.json",
+    "configs/flowers_selector_ablations_98.json",
+    "configs/flowers_selector_budget_49.json",
+    "configs/flowers_selector_budget_98.json",
+    "configs/flowers_selector_depth3_49.json",
+    "configs/flowers_selector_depth9_49.json",
+    "configs/flowers_selector_rank_49.json",
+    "configs/flowers_selector_rank_98.json",
+    "configs/flowers_vitl128.json",
+    "configs/geometry_permutation.json",
+    "configs/nway_cub.json",
+    "configs/nway_flowers.json",
+    "configs/nway_pets.json",
+    "configs/patch_ranking_flowers98.json",
+    "configs/patch_ranking_pets98.json",
+    "configs/pets_baseline.json",
+    "configs/pets_budget_ranking_pilot.json",
+    "configs/pets_budget_ranking_replication.json",
+    "configs/pets_budget_ranking_smoke.json",
+    "configs/pets_pruning_pilot.json",
+    "configs/pets_selection_pilot.json",
+    "configs/pets_selection_single_patch.json",
+    "configs/pets_selection_smoke.json",
+    "configs/pets_selector_ablations_49.json",
+    "configs/pets_selector_ablations_98.json",
+    "configs/pets_selector_budget_147.json",
+    "configs/pets_selector_budget_98.json",
+    "configs/pets_selector_depth3_49.json",
+    "configs/pets_selector_depth9_49.json",
+    "configs/pets_selector_exchange.json",
+    "configs/pets_selector_pilot.json",
+    "configs/pets_selector_rank_49.json",
+    "configs/pets_selector_rank_98.json",
+    "configs/pets_selector_scale.json",
+    "configs/pets_vitl128.json",
+    "configs/selector_capacity.json",
+    "docs/TODO.md",
+    "docs/budget-ranking-pilot.md",
+    "docs/conditioning-benefit-prediction.md",
+    "docs/conditioning-objective-followup.md",
+    "docs/core-protection-pilot.md",
+    "docs/direct-set-supervision.md",
+    "docs/evidence-conflict-pilot.md",
+    "docs/experiment-log.md",
+    "docs/experiments/2026-10-16-pets-baseline.md",
+    "docs/experiments/2026-10-16-pruning-pilot.md",
+    "docs/experiments/2026-10-18-budget-ranking-audit.md",
+    "docs/experiments/2026-10-18-budget-ranking.md",
+    "docs/experiments/2026-10-18-selection-pilot.md",
+    "docs/experiments/2026-10-18-selector-data-coverage.md",
+    "docs/experiments/2026-10-18-selector-exchange.md",
+    "docs/experiments/2026-10-18-selector-pilot.md",
+    "docs/experiments/2026-10-27-flowers-replication.md",
+    "docs/experiments/2026-10-27-selector-budgets-h2.md",
+    "docs/experiments/2026-10-27-vitl-and-latency.md",
+    "docs/experiments/2026-10-28-conditioning-objective.md",
+    "docs/experiments/2026-10-29-selector-ablations.md",
+    "docs/experiments/2026-11-03-geometry-permutation.md",
+    "docs/experiments/2026-11-03-mechanism-diagnostics.md",
+    "docs/experiments/2026-11-03-parallel-mechanism-tests.md",
+    "docs/experiments/2026-11-03-parallel-research-pilots.md",
+    "docs/experiments/2026-11-04-conditioning-benefit.md",
+    "docs/experiments/2026-11-04-direct-set.md",
+    "docs/experiments/2026-11-04-familiarity-residual.md",
+    "docs/experiments/2026-11-04-hybrid-followup.md",
+    "docs/experiments/2026-11-04-logit-scale.md",
+    "docs/experiments/2026-11-04-pruning-depth.md",
+    "docs/experiments/2026-11-05-patch-ranking.md",
+    "docs/experiments/2026-11-08-conditioning-content.md",
+    "docs/experiments/2026-11-08-cub-pilot.md",
+    "docs/experiments/2026-11-08-direct-classification.md",
+    "docs/experiments/2026-11-08-final-test.md",
+    "docs/experiments/2026-11-08-nway.md",
+    "docs/experiments/2026-11-08-pr-checkpoints.md",
+    "docs/experiments/2026-11-10-direct-classification-98.md",
+    "docs/experiments/2026-11-10-direct-classification-panel.md",
+    "docs/experiments/2026-11-10-direct-task-exchange.md",
+    "docs/experiments/2026-11-16-selector-capacity.md",
+    "docs/external-baseline-review.md",
+    "docs/familiarity-prior-diagnostic.md",
+    "docs/familiarity-replications.md",
+    "docs/familiarity-residual-round.md",
+    "docs/familiarity-switch.md",
+    "docs/flowers-targeted-validation.md",
+    "docs/geometry-matched-conflict.md",
+    "docs/geometry-permutation.md",
+    "docs/hybrid-distillation.md",
+    "docs/hybrid-followup-round.md",
+    "docs/hybrid-logit-scale.md",
+    "docs/hybrid-specificity.md",
+    "docs/i36-evidence-review.md",
+    "docs/matched-replacement.md",
+    "docs/paper-story.md",
+    "docs/parallel-mechanism-tests.md",
+    "docs/parallel-research-pilots.md",
+    "docs/patch-ranking-implementation.md",
+    "docs/pets-protocol.md",
+    "docs/pruning-depth-intervention.md",
+    "docs/pruning-pilot.md",
+    "docs/research-expansion.md",
+    "docs/research-insights.md",
+    "docs/selection-pilot.md",
+    "docs/selector-budgets-h2.md",
+    "docs/selector-component-ablations.md",
+    "docs/selector-data-coverage.md",
+    "docs/selector-exchange-pilot.md",
+    "docs/selector-pilot.md",
+    "docs/semantic-identity-holdout-supplement.md",
+    "docs/semantic-identity-pilot.md",
+    "docs/server-setup.md",
+    "docs/shared-residual-method.md",
+    "docs/storage-and-backup.md",
+    "docs/vitl-and-latency-validation.md",
+    "pyproject.toml",
+    "requirements.txt",
+    "results/selector-capacity-v1/README.md",
+    "results/selector-capacity-v1/dev/flowers/audit.json",
+    "results/selector-capacity-v1/dev/flowers/contrasts.csv",
+    "results/selector-capacity-v1/dev/flowers/methods.csv",
+    "results/selector-capacity-v1/dev/flowers/paired_outcomes.npz",
+    "results/selector-capacity-v1/dev/flowers/per_seed.csv",
+    "results/selector-capacity-v1/dev/flowers/summary.json",
+    "results/selector-capacity-v1/dev/pets/audit.json",
+    "results/selector-capacity-v1/dev/pets/contrasts.csv",
+    "results/selector-capacity-v1/dev/pets/methods.csv",
+    "results/selector-capacity-v1/dev/pets/paired_outcomes.npz",
+    "results/selector-capacity-v1/dev/pets/per_seed.csv",
+    "results/selector-capacity-v1/dev/pets/summary.json",
+    "results/selector-capacity-v1/execution/cost_summary.json",
+    "results/selector-capacity-v1/execution/flowers/reused_medium.json",
+    "results/selector-capacity-v1/execution/flowers/run_summary.json",
+    "results/selector-capacity-v1/execution/flowers/study_config.json",
+    "results/selector-capacity-v1/execution/pets/reused_medium.json",
+    "results/selector-capacity-v1/execution/pets/run_summary.json",
+    "results/selector-capacity-v1/execution/pets/study_config.json",
+    "results/selector-capacity-v1/execution_check.json",
+    "results/selector-capacity-v1/figures/capacity_accuracy.pdf",
+    "results/selector-capacity-v1/figures/capacity_accuracy.png",
+    "results/selector-capacity-v1/figures/capacity_geometric_margin.pdf",
+    "results/selector-capacity-v1/figures/capacity_geometric_margin.png",
+    "results/selector-capacity-v1/figures/capacity_teacher_fit.pdf",
+    "results/selector-capacity-v1/figures/capacity_teacher_fit.png",
+    "results/selector-capacity-v1/summary.json",
+    "results/selector-capacity-v1/test/flowers/audit.json",
+    "results/selector-capacity-v1/test/flowers/contrasts.csv",
+    "results/selector-capacity-v1/test/flowers/methods.csv",
+    "results/selector-capacity-v1/test/flowers/paired_outcomes.npz",
+    "results/selector-capacity-v1/test/flowers/per_seed.csv",
+    "results/selector-capacity-v1/test/flowers/summary.json",
+    "results/selector-capacity-v1/test/pets/audit.json",
+    "results/selector-capacity-v1/test/pets/contrasts.csv",
+    "results/selector-capacity-v1/test/pets/methods.csv",
+    "results/selector-capacity-v1/test/pets/paired_outcomes.npz",
+    "results/selector-capacity-v1/test/pets/per_seed.csv",
+    "results/selector-capacity-v1/test/pets/summary.json",
+    "results/selector-capacity-v1/training_fit.csv",
+    "results/selector-capacity-v1/training_fit_summary.csv",
+    "results/selector-capacity-v1/training_history.csv",
+    "scripts/analyze_component_budget_interactions.py",
+    "scripts/analyze_conditioning_benefit.py",
+    "scripts/analyze_conditioning_gap.py",
+    "scripts/analyze_content_benefit.py",
+    "scripts/analyze_content_components.py",
+    "scripts/analyze_core_protection.py",
+    "scripts/analyze_depth_intervention.py",
+    "scripts/analyze_direct_budget_tradeoff.py",
+    "scripts/analyze_direct_classification.py",
+    "scripts/analyze_direct_task_exchange.py",
+    "scripts/analyze_familiarity_prior.py",
+    "scripts/analyze_familiarity_replications.py",
+    "scripts/analyze_familiarity_replications_from_prior.py",
+    "scripts/analyze_familiarity_switch.py",
+    "scripts/analyze_final_test.py",
+    "scripts/analyze_geometry_matched_conflict.py",
+    "scripts/analyze_geometry_permutation.py",
+    "scripts/analyze_hybrid_distillation.py",
+    "scripts/analyze_hybrid_specificity.py",
+    "scripts/analyze_matched_replacement.py",
+    "scripts/analyze_nway.py",
+    "scripts/analyze_patch_ranking.py",
+    "scripts/analyze_patch_ranking_checkpoints.py",
+    "scripts/analyze_routing_headroom.py",
+    "scripts/analyze_selection_pilot.py",
+    "scripts/analyze_selector_ablations.py",
+    "scripts/analyze_selector_budgets.py",
+    "scripts/analyze_selector_capacity.py",
+    "scripts/analyze_selector_errors.py",
+    "scripts/analyze_selector_exchange.py",
+    "scripts/analyze_selector_geometry.py",
+    "scripts/analyze_selector_objectives.py",
+    "scripts/analyze_selector_pilot.py",
+    "scripts/analyze_selector_scale.py",
+    "scripts/analyze_semantic_identity_difficulty.py",
+    "scripts/analyze_semantic_identity_holdout.py",
+    "scripts/analyze_set_distillation.py",
+    "scripts/analyze_shared_residual.py",
+    "scripts/audit_depth_intervention.py",
+    "scripts/audit_direct_classification.py",
+    "scripts/audit_familiarity_prior.py",
+    "scripts/audit_familiarity_replication_exports.py",
+    "scripts/audit_familiarity_switch.py",
+    "scripts/audit_geometry_permutation.py",
+    "scripts/audit_hybrid_followup.py",
+    "scripts/audit_inference_numerics.py",
+    "scripts/audit_selector_ablations.py",
+    "scripts/audit_selector_objectives.py",
+    "scripts/audit_set_distillation.py",
+    "scripts/audit_shared_residual.py",
+    "scripts/audit_vitl_validation.py",
+    "scripts/benchmark_patch_ranking.py",
+    "scripts/benchmark_selector_latency.py",
+    "scripts/check_runtime.py",
+    "scripts/compare_budget_ranking.py",
+    "scripts/compare_direct_classification_budgets.py",
+    "scripts/compare_external_replication.py",
+    "scripts/diagnose_capacity_folding.py",
+    "scripts/diagnose_depth_reference.py",
+    "scripts/diagnose_descriptor_identity.py",
+    "scripts/diagnose_hybrid_logit_scale.py",
+    "scripts/diagnose_shared_budget.py",
+    "scripts/diagnose_teacher_transfer.py",
+    "scripts/evaluate_core_protection.py",
+    "scripts/evaluate_depth_intervention.py",
+    "scripts/evaluate_direct_classification_panel.py",
+    "scripts/evaluate_familiarity_switch.py",
+    "scripts/evaluate_final_test.py",
+    "scripts/evaluate_hybrid_specificity.py",
+    "scripts/evaluate_matched_replacement.py",
+    "scripts/evaluate_nway_selectors.py",
+    "scripts/evaluate_patch_ranking.py",
+    "scripts/evaluate_selector_scale.py",
+    "scripts/evaluate_selectors.py",
+    "scripts/evaluate_semantic_identity_holdout.py",
+    "scripts/extract_benefit_features.py",
+    "scripts/extract_content_benefit_features.py",
+    "scripts/package_depth_intervention.py",
+    "scripts/package_final_test.py",
+    "scripts/package_nway.py",
+    "scripts/package_patch_ranking.py",
+    "scripts/package_shared_residual.py",
+    "scripts/plot_benefit_prediction.py",
+    "scripts/plot_content_benefit.py",
+    "scripts/plot_core_protection.py",
+    "scripts/plot_depth_intervention.py",
+    "scripts/plot_direct_budget_comparison.py",
+    "scripts/plot_direct_classification.py",
+    "scripts/plot_direct_classification_panel.py",
+    "scripts/plot_direct_task_exchange.py",
+    "scripts/plot_evidence_conflict.py",
+    "scripts/plot_familiarity_prior.py",
+    "scripts/plot_familiarity_replications.py",
+    "scripts/plot_familiarity_switch.py",
+    "scripts/plot_final_test.py",
+    "scripts/plot_geometry_matched_conflict.py",
+    "scripts/plot_geometry_permutation.py",
+    "scripts/plot_hybrid_distillation.py",
+    "scripts/plot_hybrid_specificity.py",
+    "scripts/plot_logit_scale.py",
+    "scripts/plot_matched_replacement.py",
+    "scripts/plot_nway.py",
+    "scripts/plot_paper_evidence.py",
+    "scripts/plot_patch_ranking_checkpoints.py",
+    "scripts/plot_pruning_pilot.py",
+    "scripts/plot_selector_capacity.py",
+    "scripts/plot_semantic_identity.py",
+    "scripts/plot_set_distillation.py",
+    "scripts/plot_shared_residual.py",
+    "scripts/plot_vitl_validation.py",
+    "scripts/prepare_cub.py",
+    "scripts/prepare_cub_cache.py",
+    "scripts/prepare_final_test_cache.py",
+    "scripts/prepare_flowers.py",
+    "scripts/prepare_frozen_features.py",
+    "scripts/prepare_nway.py",
+    "scripts/prepare_patch_ranking.py",
+    "scripts/prepare_pets.py",
+    "scripts/prepare_selector_budget.py",
+    "scripts/prepare_selector_pilot.py",
+    "scripts/prepare_selector_scale.py",
+    "scripts/replay_selector_exchange.py",
+    "scripts/run_baseline.py",
+    "scripts/run_budget_ranking_pilot.py",
+    "scripts/run_depth_training.py",
+    "scripts/run_direct_classification.py",
+    "scripts/run_evidence_conflict_pilot.py",
+    "scripts/run_final_test.py",
+    "scripts/run_hybrid_distillation.py",
+    "scripts/run_nway_pipeline.py",
+    "scripts/run_patch_ranking_checkpoints.py",
+    "scripts/run_patch_ranking_pipeline.py",
+    "scripts/run_pruning_pilot.py",
+    "scripts/run_selection_pilot.py",
+    "scripts/run_selector_capacity.py",
+    "scripts/run_semantic_identity_pilot.py",
+    "scripts/run_set_distillation.py",
+    "scripts/run_shared_residual.py",
+    "scripts/semantic_identity_protocol.py",
+    "scripts/summarize_experiment_costs.py",
+    "scripts/summarize_inference_numerics.py",
+    "scripts/summarize_selector_latency.py",
+    "scripts/train_familiarity_switch.py",
+    "scripts/train_nway_selectors.py",
+    "scripts/train_patch_ranking.py",
+    "scripts/train_selector_scale.py",
+    "scripts/train_selectors.py",
+    "scripts/verify_hybrid_archive.py",
+    "src/token_compression/__init__.py",
+    "src/token_compression/baseline.py",
+    "src/token_compression/benefit_prediction.py",
+    "src/token_compression/budget_ranking.py",
+    "src/token_compression/conditioning_gap.py",
+    "src/token_compression/content_benefit.py",
+    "src/token_compression/cub.py",
+    "src/token_compression/direct_classification.py",
+    "src/token_compression/flowers.py",
+    "src/token_compression/geometry_permutation.py",
+    "src/token_compression/logit_scale.py",
+    "src/token_compression/metrics.py",
+    "src/token_compression/nway.py",
+    "src/token_compression/patch_ranking.py",
+    "src/token_compression/pets.py",
+    "src/token_compression/pruning.py",
+    "src/token_compression/pruning_eval.py",
+    "src/token_compression/selection.py",
+    "src/token_compression/selection_analysis.py",
+    "src/token_compression/selector.py",
+    "src/token_compression/selector_exchange.py",
+    "src/token_compression/selector_geometry.py",
+    "src/token_compression/selector_objectives.py",
+    "src/token_compression/selector_scale.py",
+    "src/token_compression/set_objective.py",
+    "src/token_compression/shared_budget.py",
+    "src/token_compression/shared_residual.py",
+    "artifact_metadata/package_runs.py",
+    "artifact_metadata/package_analysis.py",
+    "artifact_metadata/source.json",
+    "artifact_metadata/member_manifest.json"
+  ],
+  "all_three_uploaded_content_digests_and_sizes_match": true,
+  "server_run_archive_recovery": {
+    "scope": "Server archive bytes restored in memory; no new training or inference.",
+    "archives": [
+      {
+        "dataset": "pets",
+        "archive": "selector-capacity-v1-pets.zip",
+        "crc_passed": true,
+        "all_member_bytes_and_digests_match": true,
+        "loaded_checkpoints": [
+          {
+            "member": "runs/selector-capacity-v1/pets/training/large/full/seed_2041/conditioned.pt",
+            "seed": 2041,
+            "arm": "conditioned",
+            "hidden_dim": 256,
+            "step": 3990,
+            "parameter_count": 725249
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/large/full/seed_2041/image_only_wide.pt",
+            "seed": 2041,
+            "arm": "image_only_wide",
+            "hidden_dim": 378,
+            "step": 3990,
+            "parameter_count": 726163
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/large/full/seed_2042/conditioned.pt",
+            "seed": 2042,
+            "arm": "conditioned",
+            "hidden_dim": 256,
+            "step": 3990,
+            "parameter_count": 725249
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/large/full/seed_2042/image_only_wide.pt",
+            "seed": 2042,
+            "arm": "image_only_wide",
+            "hidden_dim": 378,
+            "step": 3990,
+            "parameter_count": 726163
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/large/full/seed_2043/conditioned.pt",
+            "seed": 2043,
+            "arm": "conditioned",
+            "hidden_dim": 256,
+            "step": 3990,
+            "parameter_count": 725249
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/large/full/seed_2043/image_only_wide.pt",
+            "seed": 2043,
+            "arm": "image_only_wide",
+            "hidden_dim": 378,
+            "step": 3990,
+            "parameter_count": 726163
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/small/full/seed_2041/conditioned.pt",
+            "seed": 2041,
+            "arm": "conditioned",
+            "hidden_dim": 64,
+            "step": 3990,
+            "parameter_count": 171713
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/small/full/seed_2041/image_only_wide.pt",
+            "seed": 2041,
+            "arm": "image_only_wide",
+            "hidden_dim": 104,
+            "step": 3990,
+            "parameter_count": 172409
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/small/full/seed_2042/conditioned.pt",
+            "seed": 2042,
+            "arm": "conditioned",
+            "hidden_dim": 64,
+            "step": 3990,
+            "parameter_count": 171713
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/small/full/seed_2042/image_only_wide.pt",
+            "seed": 2042,
+            "arm": "image_only_wide",
+            "hidden_dim": 104,
+            "step": 3990,
+            "parameter_count": 172409
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/small/full/seed_2043/conditioned.pt",
+            "seed": 2043,
+            "arm": "conditioned",
+            "hidden_dim": 64,
+            "step": 3990,
+            "parameter_count": 171713
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/training/small/full/seed_2043/image_only_wide.pt",
+            "seed": 2043,
+            "arm": "image_only_wide",
+            "hidden_dim": 104,
+            "step": 3990,
+            "parameter_count": 172409
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/reused_medium_weights/seed_2041/conditioned.pt",
+            "seed": 2041,
+            "arm": "conditioned",
+            "hidden_dim": 128,
+            "step": 3990,
+            "parameter_count": 348033
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/reused_medium_weights/seed_2041/image_only_wide.pt",
+            "seed": 2041,
+            "arm": "image_only_wide",
+            "hidden_dim": 199,
+            "step": 3990,
+            "parameter_count": 347399
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/reused_medium_weights/seed_2042/conditioned.pt",
+            "seed": 2042,
+            "arm": "conditioned",
+            "hidden_dim": 128,
+            "step": 3990,
+            "parameter_count": 348033
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/reused_medium_weights/seed_2042/image_only_wide.pt",
+            "seed": 2042,
+            "arm": "image_only_wide",
+            "hidden_dim": 199,
+            "step": 3990,
+            "parameter_count": 347399
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/reused_medium_weights/seed_2043/conditioned.pt",
+            "seed": 2043,
+            "arm": "conditioned",
+            "hidden_dim": 128,
+            "step": 3990,
+            "parameter_count": 348033
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/reused_medium_weights/seed_2043/image_only_wide.pt",
+            "seed": 2043,
+            "arm": "image_only_wide",
+            "hidden_dim": 199,
+            "step": 3990,
+            "parameter_count": 347399
+          }
+        ],
+        "checked_raw_endpoints": [
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2041/large/conditioned.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2041/large/image_only_wide.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2041/medium/conditioned.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2041/medium/image_only_wide.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2041/small/conditioned.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2041/small/image_only_wide.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2042/large/conditioned.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2042/large/image_only_wide.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2042/medium/conditioned.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2042/medium/image_only_wide.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2042/small/conditioned.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2042/small/image_only_wide.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2043/large/conditioned.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2043/large/image_only_wide.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2043/medium/conditioned.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2043/medium/image_only_wide.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2043/small/conditioned.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/dev/seed_2043/small/image_only_wide.npz",
+            "rows": 2624,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2041/large/conditioned.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2041/large/image_only_wide.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2041/medium/conditioned.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2041/medium/image_only_wide.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2041/small/conditioned.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2041/small/image_only_wide.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2042/large/conditioned.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2042/large/image_only_wide.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2042/medium/conditioned.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2042/medium/image_only_wide.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2042/small/conditioned.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2042/small/image_only_wide.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2043/large/conditioned.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2043/large/image_only_wide.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2043/medium/conditioned.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2043/medium/image_only_wide.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2043/small/conditioned.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/pets/evaluation/test/seed_2043/small/image_only_wide.npz",
+            "rows": 13529,
+            "classes": 37,
+            "tokens": 49
+          }
+        ]
+      },
+      {
+        "dataset": "flowers",
+        "archive": "selector-capacity-v1-flowers.zip",
+        "crc_passed": true,
+        "all_member_bytes_and_digests_match": true,
+        "loaded_checkpoints": [
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/large/full/seed_2041/conditioned.pt",
+            "seed": 2041,
+            "arm": "conditioned",
+            "hidden_dim": 256,
+            "step": 3978,
+            "parameter_count": 725249
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/large/full/seed_2041/image_only_wide.pt",
+            "seed": 2041,
+            "arm": "image_only_wide",
+            "hidden_dim": 378,
+            "step": 3978,
+            "parameter_count": 726163
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/large/full/seed_2042/conditioned.pt",
+            "seed": 2042,
+            "arm": "conditioned",
+            "hidden_dim": 256,
+            "step": 3978,
+            "parameter_count": 725249
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/large/full/seed_2042/image_only_wide.pt",
+            "seed": 2042,
+            "arm": "image_only_wide",
+            "hidden_dim": 378,
+            "step": 3978,
+            "parameter_count": 726163
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/large/full/seed_2043/conditioned.pt",
+            "seed": 2043,
+            "arm": "conditioned",
+            "hidden_dim": 256,
+            "step": 3978,
+            "parameter_count": 725249
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/large/full/seed_2043/image_only_wide.pt",
+            "seed": 2043,
+            "arm": "image_only_wide",
+            "hidden_dim": 378,
+            "step": 3978,
+            "parameter_count": 726163
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/small/full/seed_2041/conditioned.pt",
+            "seed": 2041,
+            "arm": "conditioned",
+            "hidden_dim": 64,
+            "step": 3978,
+            "parameter_count": 171713
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/small/full/seed_2041/image_only_wide.pt",
+            "seed": 2041,
+            "arm": "image_only_wide",
+            "hidden_dim": 104,
+            "step": 3978,
+            "parameter_count": 172409
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/small/full/seed_2042/conditioned.pt",
+            "seed": 2042,
+            "arm": "conditioned",
+            "hidden_dim": 64,
+            "step": 3978,
+            "parameter_count": 171713
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/small/full/seed_2042/image_only_wide.pt",
+            "seed": 2042,
+            "arm": "image_only_wide",
+            "hidden_dim": 104,
+            "step": 3978,
+            "parameter_count": 172409
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/small/full/seed_2043/conditioned.pt",
+            "seed": 2043,
+            "arm": "conditioned",
+            "hidden_dim": 64,
+            "step": 3978,
+            "parameter_count": 171713
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/training/small/full/seed_2043/image_only_wide.pt",
+            "seed": 2043,
+            "arm": "image_only_wide",
+            "hidden_dim": 104,
+            "step": 3978,
+            "parameter_count": 172409
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/reused_medium_weights/seed_2041/conditioned.pt",
+            "seed": 2041,
+            "arm": "conditioned",
+            "hidden_dim": 128,
+            "step": 3978,
+            "parameter_count": 348033
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/reused_medium_weights/seed_2041/image_only_wide.pt",
+            "seed": 2041,
+            "arm": "image_only_wide",
+            "hidden_dim": 199,
+            "step": 3978,
+            "parameter_count": 347399
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/reused_medium_weights/seed_2042/conditioned.pt",
+            "seed": 2042,
+            "arm": "conditioned",
+            "hidden_dim": 128,
+            "step": 3978,
+            "parameter_count": 348033
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/reused_medium_weights/seed_2042/image_only_wide.pt",
+            "seed": 2042,
+            "arm": "image_only_wide",
+            "hidden_dim": 199,
+            "step": 3978,
+            "parameter_count": 347399
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/reused_medium_weights/seed_2043/conditioned.pt",
+            "seed": 2043,
+            "arm": "conditioned",
+            "hidden_dim": 128,
+            "step": 3978,
+            "parameter_count": 348033
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/reused_medium_weights/seed_2043/image_only_wide.pt",
+            "seed": 2043,
+            "arm": "image_only_wide",
+            "hidden_dim": 199,
+            "step": 3978,
+            "parameter_count": 347399
+          }
+        ],
+        "checked_raw_endpoints": [
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2041/large/conditioned.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2041/large/image_only_wide.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2041/medium/conditioned.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2041/medium/image_only_wide.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2041/small/conditioned.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2041/small/image_only_wide.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2042/large/conditioned.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2042/large/image_only_wide.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2042/medium/conditioned.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2042/medium/image_only_wide.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2042/small/conditioned.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2042/small/image_only_wide.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2043/large/conditioned.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2043/large/image_only_wide.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2043/medium/conditioned.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2043/medium/image_only_wide.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2043/small/conditioned.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/dev/seed_2043/small/image_only_wide.npz",
+            "rows": 4080,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2041/large/conditioned.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2041/large/image_only_wide.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2041/medium/conditioned.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2041/medium/image_only_wide.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2041/small/conditioned.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2041/small/image_only_wide.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2042/large/conditioned.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2042/large/image_only_wide.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2042/medium/conditioned.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2042/medium/image_only_wide.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2042/small/conditioned.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2042/small/image_only_wide.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2043/large/conditioned.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2043/large/image_only_wide.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2043/medium/conditioned.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2043/medium/image_only_wide.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2043/small/conditioned.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          },
+          {
+            "member": "runs/selector-capacity-v1/flowers/evaluation/test/seed_2043/small/image_only_wide.npz",
+            "rows": 24596,
+            "classes": 102,
+            "tokens": 49
+          }
+        ]
+      }
+    ],
+    "checkpoint_count": 36,
+    "endpoint_count": 72,
+    "local_models_or_archive_retained": false
+  },
+  "scope": "Both server run archives passed complete member restoration and checkpoint loading. GitHub digests match all three archives; the analysis archive was additionally downloaded into memory and all members restored. Raw run archives were not downloaded again.",
+  "local_models_or_archive_retained": false
+}
