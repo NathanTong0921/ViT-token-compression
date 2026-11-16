@@ -1,5 +1,7 @@
 # Project TODO
 
+2026-11-16当前任务：三个参数容量（约17／35／73万）的C／U资源比较，固定B/16、block6、49-token与KL训练，在Pets／Flowers复核。新增24模型，中档权重复用但同FP32重评；以test面板的“大容量减小容量的C−U变化”为主比较。同时审视已有I36是否值得采用，不启动新预测路线。见[方案](experiments/2026-11-16-selector-capacity.md)。
+
 2026-11-10已完成：最终direct／KL模型的同图任务描述交换。49-token正确描述和交换描述下的direct−KL准确率改进分别为+0.418／+0.367pp，正确对应效应变化+0.051pp的区间跨零；98-token同样未建立增强。两预算选择重叠均增加约2.8个百分点。I40将方法收益与竞争类别针对性的变化区分开，见[结果](../results/direct-task-exchange-v1/README.md)。
 
 2026-11-10已完成：Flowers98的12条配对续训、开发与6,149图大面板评估，以及49／98逐例配对比较。98-token的direct C−U为+0.120pp，目标交互+0.026pp，两项调整区间均跨零；49-token的+0.306／+0.247pp收益保持。预算间准确率差异尚未确定。形成I39，见[本轮结果](../results/direct-classification-98-panel-v1/README.md)。
