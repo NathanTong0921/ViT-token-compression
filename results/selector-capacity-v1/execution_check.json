@@ -1,0 +1,143 @@
+{
+  "training": [
+    {
+      "dataset": "pets",
+      "capacity": "small",
+      "runs": 6,
+      "training_seconds": 127.37988486955874,
+      "validation_seconds": 24.77882311679423,
+      "wall_seconds": 176.4833735700231,
+      "peak_cuda_memory_bytes": 1817211392,
+      "sampling_matches_original_middle": true
+    },
+    {
+      "dataset": "pets",
+      "capacity": "large",
+      "runs": 6,
+      "training_seconds": 227.86191989993677,
+      "validation_seconds": 41.742400656454265,
+      "wall_seconds": 277.10165610490367,
+      "peak_cuda_memory_bytes": 1898313216,
+      "sampling_matches_original_middle": true
+    },
+    {
+      "dataset": "flowers",
+      "capacity": "small",
+      "runs": 6,
+      "training_seconds": 144.0298372451216,
+      "validation_seconds": 14.884132636711001,
+      "wall_seconds": 183.2944803449791,
+      "peak_cuda_memory_bytes": 1261290496,
+      "sampling_matches_original_middle": true
+    },
+    {
+      "dataset": "flowers",
+      "capacity": "large",
+      "runs": 6,
+      "training_seconds": 252.2129174808506,
+      "validation_seconds": 24.914034077199176,
+      "wall_seconds": 281.7909311139956,
+      "peak_cuda_memory_bytes": 1341416448,
+      "sampling_matches_original_middle": true
+    }
+  ],
+  "evaluation": [
+    {
+      "dataset": "pets",
+      "panel": "dev",
+      "endpoints": 18,
+      "rows": 2624,
+      "all_metrics_finite": true,
+      "retained_tokens": 49,
+      "valid_unique_positions": true,
+      "max_recorded_weighted_metric_error": 0.0
+    },
+    {
+      "dataset": "pets",
+      "panel": "test",
+      "endpoints": 18,
+      "rows": 13529,
+      "all_metrics_finite": true,
+      "retained_tokens": 49,
+      "valid_unique_positions": true,
+      "max_recorded_weighted_metric_error": 2.9976021664879227e-15
+    },
+    {
+      "dataset": "flowers",
+      "panel": "dev",
+      "endpoints": 18,
+      "rows": 4080,
+      "all_metrics_finite": true,
+      "retained_tokens": 49,
+      "valid_unique_positions": true,
+      "max_recorded_weighted_metric_error": 0.0
+    },
+    {
+      "dataset": "flowers",
+      "panel": "test",
+      "endpoints": 18,
+      "rows": 24596,
+      "all_metrics_finite": true,
+      "retained_tokens": 49,
+      "valid_unique_positions": true,
+      "max_recorded_weighted_metric_error": 1.9984014443252818e-15
+    }
+  ],
+  "flowers_fp32_middle_replication": [
+    {
+      "seed": 2041,
+      "arm": "conditioned",
+      "masks_equal": true,
+      "maximum_cosine_difference": 0.0
+    },
+    {
+      "seed": 2041,
+      "arm": "image_only_wide",
+      "masks_equal": true,
+      "maximum_cosine_difference": 0.0
+    },
+    {
+      "seed": 2042,
+      "arm": "conditioned",
+      "masks_equal": true,
+      "maximum_cosine_difference": 0.0
+    },
+    {
+      "seed": 2042,
+      "arm": "image_only_wide",
+      "masks_equal": true,
+      "maximum_cosine_difference": 0.0
+    },
+    {
+      "seed": 2043,
+      "arm": "conditioned",
+      "masks_equal": true,
+      "maximum_cosine_difference": 0.0
+    },
+    {
+      "seed": 2043,
+      "arm": "image_only_wide",
+      "masks_equal": true,
+      "maximum_cosine_difference": 0.0
+    }
+  ],
+  "cost": [
+    {
+      "dataset": "pets",
+      "wall_seconds": 574.2780633929651,
+      "evaluation_seconds": 108.36929515120573,
+      "new_training_runs": 12,
+      "reused_middle_models": 6,
+      "evaluation_endpoints": 36
+    },
+    {
+      "dataset": "flowers",
+      "wall_seconds": 694.4448215670418,
+      "evaluation_seconds": 212.64010942634195,
+      "new_training_runs": 12,
+      "reused_middle_models": 6,
+      "evaluation_endpoints": 36
+    }
+  ],
+  "total_gpu_process_hours": 0.35242302360000194
+}

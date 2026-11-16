@@ -133,6 +133,8 @@ All local archives passed CRC checks and all 24 checkpoint payloads loaded. GitH
 
 ## CUB candidate-set pilot
 
+On 2026-11-16, the existing CUB archive directory was moved to `/data4/zhao.tong/artifacts/cub-pilot-v1/` to release approximately 384 MiB on data2. Every copied file was checked before removing the old copy; the original data2 path is now a symlink. The existing GitHub Release is unchanged. The small migration record is retained in `results/storage-offload-v1/cub-data4-migration.json`.
+
 `results/cub-pilot-v1/` retains the two- and five-class tables, paired analysis arrays, figures, task manifests, training histories, costs and independent result checks. Two archives totaling 402,539,580 bytes preserve all twelve selectors, task panels and supervision targets, raw predictions, selected patches, image features and analysis files in server `/data2/zhao.tong/artifacts/cub-pilot-v1/` and the [versioned release](https://github.com/NathanTong0921/ViT-token-compression/releases/tag/cub-pilot-v1). Prefix tensors and 512-mask response caches remain on the server and can be regenerated from the fixed manifests and code.
 
 Both archives passed server CRC checks and match their published content digests. Recovery downloaded the small analysis archive, checked all 63 members and matched its summary, classification table, configuration and protocol to the working copies. The raw-result audit independently reconstructed the metrics and loaded all twelve checkpoints. Details are in `results/cub-pilot-v1/release_assets.json`, `recovery.json` and `result_audit.json`. Local dataset-transfer files were removed after extraction; no CUB checkpoint archive or recovery ZIP is retained locally.

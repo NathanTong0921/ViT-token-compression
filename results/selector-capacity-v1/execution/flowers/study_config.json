@@ -1,0 +1,44 @@
+{
+  "experiment": "selector-capacity-v1",
+  "output": "/data4/zhao.tong/experiments/selector-capacity-v1",
+  "training_seeds": [
+    2041,
+    2042,
+    2043
+  ],
+  "capacities": {
+    "small": {
+      "conditioned": 64,
+      "image_only_wide": 104
+    },
+    "medium": {
+      "conditioned": 128,
+      "image_only_wide": 199
+    },
+    "large": {
+      "conditioned": 256,
+      "image_only_wide": 378
+    }
+  },
+  "eval_batch_size": 32,
+  "datasets": {
+    "pets": {
+      "base_config": "configs/pets_selector_ablations_49.json",
+      "device": "cuda:2",
+      "medium_models": {
+        "conditioned": "runs/pets-selector-scale-training-v1",
+        "image_only_wide": "runs/pets-selector-ablations-49-training-v1"
+      },
+      "test_cache": "runs/final-test-v1/cache/pets_b16"
+    },
+    "flowers": {
+      "base_config": "configs/flowers_selector_ablations_49.json",
+      "device": "cuda:7",
+      "medium_models": {
+        "conditioned": "runs/flowers-selector-budget-49-training-v1",
+        "image_only_wide": "runs/flowers-selector-ablations-49-training-v1"
+      },
+      "test_cache": "runs/final-test-v1/cache/flowers_b16"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "seed": 2041,
+    "arm": "conditioned",
+    "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2041/conditioned.pt",
+    "step": 3978,
+    "hidden_dim": 128,
+    "parameter_count": 348033,
+    "source_code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878"
+  },
+  {
+    "seed": 2041,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-selector-ablations-49-training-v1/full/seed_2041/image_only_wide.pt",
+    "step": 3978,
+    "hidden_dim": 199,
+    "parameter_count": 347399,
+    "source_code_commit": "6d9ef29a8f93cd5647d9154e40a27eb06bc607ea"
+  },
+  {
+    "seed": 2042,
+    "arm": "conditioned",
+    "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2042/conditioned.pt",
+    "step": 3978,
+    "hidden_dim": 128,
+    "parameter_count": 348033,
+    "source_code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878"
+  },
+  {
+    "seed": 2042,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-selector-ablations-49-training-v1/full/seed_2042/image_only_wide.pt",
+    "step": 3978,
+    "hidden_dim": 199,
+    "parameter_count": 347399,
+    "source_code_commit": "6d9ef29a8f93cd5647d9154e40a27eb06bc607ea"
+  },
+  {
+    "seed": 2043,
+    "arm": "conditioned",
+    "checkpoint": "runs/flowers-selector-budget-49-training-v1/full/seed_2043/conditioned.pt",
+    "step": 3978,
+    "hidden_dim": 128,
+    "parameter_count": 348033,
+    "source_code_commit": "949e453fadb57e2233b3b599a5d1c2d8f28ca878"
+  },
+  {
+    "seed": 2043,
+    "arm": "image_only_wide",
+    "checkpoint": "runs/flowers-selector-ablations-49-training-v1/full/seed_2043/image_only_wide.pt",
+    "step": 3978,
+    "hidden_dim": 199,
+    "parameter_count": 347399,
+    "source_code_commit": "6d9ef29a8f93cd5647d9154e40a27eb06bc607ea"
+  }
+]

@@ -1,6 +1,7 @@
 """Plot absolute performance and paired conditioning gains across capacity."""
 
 import argparse
+import csv
 import json
 from pathlib import Path
 
@@ -69,11 +70,39 @@ def plot_metric(summaries, metric, output):
     axes[1,0].set_ylabel(gap_label)
     handles, labels = axes[0,0].get_legend_handles_labels()
     fig.legend(handles, labels, loc="lower center", bbox_to_anchor=(.5,.07), ncol=2, frameon=False, fontsize=10)
-    fig.text(.10,.025,"Bars: paired image-bootstrap intervals. Large−small intervals adjust across the two datasets.\n"
+    fig.text(.10,.025,"Top: image-bootstrap intervals. Bottom: paired differences; large−small intervals adjust over both datasets.\n"
              "Capacity pairs use closely matched parameter counts; exact counts and all seeds accompany the figure.",
              fontsize=8.5,color="#596573")
     for extension in ("png", "pdf"):
         fig.savefig(output / f"capacity_{metric}.{extension}", dpi=240, facecolor="white")
+    plt.close(fig)
+
+
+def plot_training(rows, output):
+    fig, axes = plt.subplots(2, 2, figsize=(10.5, 7), sharex="col")
+    fig.subplots_adjust(left=.09, right=.97, top=.85, bottom=.15, hspace=.22, wspace=.27)
+    fig.suptitle("Teacher fit across selector capacities", fontsize=15, fontweight="bold", y=.97)
+    fig.text(.5,.91,"Same KL objective and fixed training updates · three-seed means",ha="center",fontsize=10,color="#596573")
+    for column,dataset in enumerate(("pets","flowers")):
+        for arm,name,color,marker in (("conditioned","Task-conditioned C","#2166A5","o"),
+                                       ("image_only_wide","Image-only U","#768292","s")):
+            group = sorted([row for row in rows if row["dataset"] == dataset and row["arm"] == arm],
+                           key=lambda row:int(row["parameter_count"]))
+            x=np.asarray([float(row["parameter_count"])/1000 for row in group])
+            for row_index,metric in enumerate(("final_train_kl","final_val_kl")):
+                axes[row_index,column].plot(x,[float(row[metric]) for row in group],
+                    marker=marker,color=color,label=name,linewidth=1.6)
+        axes[0,column].set_title("Oxford-IIIT Pets" if dataset == "pets" else "Flowers102",fontsize=12)
+        axes[1,column].set_xlabel("Selector parameters (thousands)")
+        axes[1,column].set_xticks(x,[f"{v:.0f}" for v in x])
+        for ax in axes[:,column]:
+            ax.grid(axis="y",color="#E7EBF0"); ax.set_axisbelow(True)
+    axes[0,0].set_ylabel("Final training KL")
+    axes[1,0].set_ylabel("Final development KL")
+    handles,labels=axes[0,0].get_legend_handles_labels()
+    fig.legend(handles,labels,loc="lower center",bbox_to_anchor=(.5,.025),ncol=2,frameon=False)
+    for suffix in ("png","pdf"):
+        fig.savefig(output/f"capacity_teacher_fit.{suffix}",dpi=240,facecolor="white")
     plt.close(fig)
 
 
@@ -84,6 +113,8 @@ def main(args):
     summary = json.loads(args.source.read_text())[args.panel]
     for metric in ("accuracy", "geometric_margin"):
         plot_metric(summary, metric, args.output)
+    with (args.source.parent / "training_fit_summary.csv").open() as handle:
+        plot_training(list(csv.DictReader(handle)), args.output)
 
 
 if __name__ == "__main__":

@@ -135,7 +135,45 @@ def analyze_panel(data, dataset, panel, output, seeds, replicates=2000, bootstra
     return summary
 
 
+def summarize_training(source, output, seeds):
+    """Retain final teacher-fit values and existing curves for all capacities."""
+    rows, curves = [], []
+    for dataset in DATASETS:
+        for capacity in CAPACITIES:
+            folder = source / dataset / "training" / capacity
+            summary = json.loads((folder / "training_summary.json").read_text())
+            for run in summary["runs"]:
+                if run["seed"] not in seeds or run["arm"] not in ARMS or run["coverage"] != "full":
+                    continue
+                rows.append(dict(dataset=dataset, capacity=capacity, seed=run["seed"], arm=run["arm"],
+                    reused=capacity == "medium", parameter_count=run["parameter_count"],
+                    training_steps=run["training_steps"], final_train_kl=run["final_train_kl"],
+                    final_val_kl=run["final_val_kl"],
+                    val_minus_train_kl=run["final_val_kl"]-run["final_train_kl"]))
+            with (folder / "training_history.csv").open() as handle:
+                for row in csv.DictReader(handle):
+                    if int(row["seed"]) in seeds and row["arm"] in ARMS and row["coverage"] == "full":
+                        curves.append(dict(dataset=dataset, capacity=capacity, **row))
+    assert len(rows) == len(DATASETS) * len(CAPACITIES) * len(ARMS) * len(seeds)
+    means = []
+    for dataset in DATASETS:
+        for capacity in CAPACITIES:
+            for arm in ARMS:
+                group = [row for row in rows if (row["dataset"],row["capacity"],row["arm"]) == (dataset,capacity,arm)]
+                assert sorted(row["seed"] for row in group) == sorted(seeds)
+                assert len({row["parameter_count"] for row in group}) == 1
+                means.append(dict(dataset=dataset, capacity=capacity, arm=arm,
+                    parameter_count=group[0]["parameter_count"], training_steps=group[0]["training_steps"],
+                    **{key:float(np.mean([row[key] for row in group]))
+                       for key in ("final_train_kl","final_val_kl","val_minus_train_kl")}))
+    output.mkdir(parents=True, exist_ok=True)
+    write_csv(output / "training_fit.csv", rows)
+    write_csv(output / "training_fit_summary.csv", means)
+    write_csv(output / "training_history.csv", curves)
+
+
 def main(args):
+    summarize_training(args.source, args.output, args.seeds)
     summaries = {}
     for panel in args.panels:
         summaries[panel] = {}
