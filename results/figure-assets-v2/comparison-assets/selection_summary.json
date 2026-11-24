@@ -1,0 +1,680 @@
+{
+  "setting": {
+    "backbone": "ViT-B/16",
+    "pruning_block": 6,
+    "keep_patches": 98,
+    "total_patches": 196,
+    "map_seed": 2041,
+    "outcome_check_seeds": [
+      2041,
+      2042,
+      2043
+    ]
+  },
+  "pool_statistics": [
+    {
+      "dataset": "pets",
+      "evaluated_images": 3569,
+      "images_with_two_or_more_tasks": 3171,
+      "image_task_rows": 13529,
+      "unordered_image_task_pairs": 24440,
+      "pair_weighted_replacement_count": {
+        "min": 2.0,
+        "q25": 11.0,
+        "median": 14.0,
+        "q75": 17.0,
+        "max": 38.0
+      },
+      "pair_replacement_histogram": {
+        "2": 5,
+        "3": 23,
+        "4": 67,
+        "5": 150,
+        "6": 328,
+        "7": 567,
+        "8": 943,
+        "9": 1266,
+        "10": 1664,
+        "11": 1916,
+        "12": 2169,
+        "13": 2195,
+        "14": 2092,
+        "15": 2038,
+        "16": 1800,
+        "17": 1605,
+        "18": 1324,
+        "19": 1114,
+        "20": 847,
+        "21": 640,
+        "22": 526,
+        "23": 334,
+        "24": 268,
+        "25": 172,
+        "26": 126,
+        "27": 87,
+        "28": 61,
+        "29": 36,
+        "30": 24,
+        "31": 19,
+        "32": 13,
+        "33": 9,
+        "34": 4,
+        "35": 2,
+        "36": 4,
+        "37": 1,
+        "38": 1
+      },
+      "image_median_replacement_count": {
+        "min": 4.0,
+        "q25": 12.0,
+        "median": 14.0,
+        "q75": 17.0,
+        "max": 29.0
+      },
+      "primary_repair_task_rows": 20,
+      "primary_harm_task_rows": 4,
+      "helpful_pair_candidates_margin_gain_at_least_0_005": 58,
+      "helpful_distinct_images": 18,
+      "upper_quartile_no_accuracy_gain_nonpositive_mean_margin_pairs": 3133
+    },
+    {
+      "dataset": "flowers",
+      "evaluated_images": 6149,
+      "images_with_two_or_more_tasks": 6149,
+      "image_task_rows": 24596,
+      "unordered_image_task_pairs": 36894,
+      "pair_weighted_replacement_count": {
+        "min": 3.0,
+        "q25": 17.0,
+        "median": 21.0,
+        "q75": 24.0,
+        "max": 47.0
+      },
+      "pair_replacement_histogram": {
+        "3": 1,
+        "4": 4,
+        "5": 7,
+        "6": 11,
+        "7": 32,
+        "8": 88,
+        "9": 117,
+        "10": 221,
+        "11": 414,
+        "12": 614,
+        "13": 904,
+        "14": 1316,
+        "15": 1733,
+        "16": 2091,
+        "17": 2386,
+        "18": 2659,
+        "19": 2953,
+        "20": 2887,
+        "21": 2922,
+        "22": 2704,
+        "23": 2471,
+        "24": 2204,
+        "25": 1935,
+        "26": 1548,
+        "27": 1233,
+        "28": 972,
+        "29": 773,
+        "30": 524,
+        "31": 388,
+        "32": 270,
+        "33": 170,
+        "34": 127,
+        "35": 94,
+        "36": 46,
+        "37": 31,
+        "38": 22,
+        "39": 7,
+        "40": 5,
+        "41": 2,
+        "42": 4,
+        "44": 1,
+        "46": 2,
+        "47": 1
+      },
+      "image_median_replacement_count": {
+        "min": 7.0,
+        "q25": 18.5,
+        "median": 20.5,
+        "q75": 23.0,
+        "max": 36.0
+      },
+      "primary_repair_task_rows": 146,
+      "primary_harm_task_rows": 84,
+      "helpful_pair_candidates_margin_gain_at_least_0_005": 384,
+      "helpful_distinct_images": 120,
+      "upper_quartile_no_accuracy_gain_nonpositive_mean_margin_pairs": 4200
+    }
+  ],
+  "selection_protocol": {
+    "typical": "Near median of image-level median replacement counts; no outcome-based ranking.",
+    "helpful": "C correct, U wrong on the same task at seed 2041; geometric-margin improvement >=0.005. Rank by repair and positive-margin consistency across three existing seeds.",
+    "boundary": "Replacement count at least pair-level Q75; no primary accuracy improvement on either task and nonpositive C-U margin gain averaged across tasks/seeds. Prioritize repeatable harm, then change count near Q75.",
+    "role": "Purposefully selected qualitative examples, not aggregate performance estimates."
+  },
+  "selected": [
+    {
+      "dataset": "pets",
+      "image_id": "Bengal_198",
+      "true_class_name": "bengal",
+      "selection_category": "typical",
+      "figure_category": "Typical selection change",
+      "changed_tokens": 14,
+      "replacement_pair_percentile_interval": [
+        46.207037643207855,
+        54.766775777414075
+      ],
+      "image_median_replacements": 14.0,
+      "dataset_pair_median": 14.0,
+      "dataset_pair_q75": 17.0,
+      "dataset_image_median": 14.0,
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 3384,
+          "task_id": "05_17",
+          "candidate_ids": [
+            5,
+            17
+          ],
+          "candidate_names": [
+            "bengal",
+            "japanese chin"
+          ],
+          "true_id": 5
+        },
+        {
+          "name": "B",
+          "row_id": 3584,
+          "task_id": "05_19",
+          "candidate_ids": [
+            5,
+            19
+          ],
+          "candidate_names": [
+            "bengal",
+            "leonberger"
+          ],
+          "true_id": 5
+        }
+      ],
+      "seed_outcomes": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.14977671205997467,
+            0.1583285629749298
+          ],
+          "U_margin": [
+            0.1466556191444397,
+            0.1577109545469284
+          ],
+          "margin_gain": [
+            0.003121092915534973,
+            0.0006176084280014038
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.14366300404071808,
+            0.14624705910682678
+          ],
+          "U_margin": [
+            0.1549655646085739,
+            0.15896818041801453
+          ],
+          "margin_gain": [
+            -0.011302560567855835,
+            -0.012721121311187744
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.15461866557598114,
+            0.14865697920322418
+          ],
+          "U_margin": [
+            0.14532068371772766,
+            0.15073588490486145
+          ],
+          "margin_gain": [
+            0.009297981858253479,
+            -0.002078905701637268
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        }
+      ],
+      "selection_reason": "Representative Pets case: both image-level and selected-pair replacement counts are at the dataset median (14). Image chosen for visibility among median-ranked candidates, without outcome-based ranking."
+    },
+    {
+      "dataset": "flowers",
+      "image_id": "image_00009",
+      "true_class_name": "passion flower",
+      "selection_category": "typical",
+      "figure_category": "Typical selection change",
+      "changed_tokens": 21,
+      "replacement_pair_percentile_interval": [
+        49.97560578955928,
+        57.89559277931371
+      ],
+      "image_median_replacements": 20.5,
+      "dataset_pair_median": 21.0,
+      "dataset_pair_q75": 24.0,
+      "dataset_image_median": 20.5,
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 3291,
+          "task_id": "008_076",
+          "candidate_ids": [
+            8,
+            76
+          ],
+          "candidate_names": [
+            "monkshood",
+            "passion flower"
+          ],
+          "true_id": 76
+        },
+        {
+          "name": "B",
+          "row_id": 4101,
+          "task_id": "010_076",
+          "candidate_ids": [
+            10,
+            76
+          ],
+          "candidate_names": [
+            "snapdragon",
+            "passion flower"
+          ],
+          "true_id": 76
+        }
+      ],
+      "seed_outcomes": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.12035220861434937,
+            0.14795546233654022
+          ],
+          "U_margin": [
+            0.12981493771076202,
+            0.1653205156326294
+          ],
+          "margin_gain": [
+            -0.009462729096412659,
+            -0.017365053296089172
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.12498942017555237,
+            0.15426993370056152
+          ],
+          "U_margin": [
+            0.11878031492233276,
+            0.15177088975906372
+          ],
+          "margin_gain": [
+            0.0062091052532196045,
+            0.0024990439414978027
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.11768577247858047,
+            0.1719762086868286
+          ],
+          "U_margin": [
+            0.13062311708927155,
+            0.1618901640176773
+          ],
+          "margin_gain": [
+            -0.01293734461069107,
+            0.010086044669151306
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        }
+      ],
+      "selection_reason": "Representative Flowers case: image-level median replacement count 20.5 equals the dataset image-median center; selected pair replaces 21 tokens, the pair-level median."
+    },
+    {
+      "dataset": "flowers",
+      "image_id": "image_06475",
+      "true_class_name": "love in the mist",
+      "selection_category": "helpful",
+      "figure_category": "Helpful task conditioning",
+      "changed_tokens": 17,
+      "replacement_pair_percentile_interval": [
+        20.47216349541931,
+        26.939339730037403
+      ],
+      "image_median_replacements": 15.5,
+      "dataset_pair_median": 21.0,
+      "dataset_pair_q75": 24.0,
+      "dataset_image_median": 20.5,
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 8233,
+          "task_id": "022_032",
+          "candidate_ids": [
+            22,
+            32
+          ],
+          "candidate_names": [
+            "fritillary",
+            "love in the mist"
+          ],
+          "true_id": 32
+        },
+        {
+          "name": "B",
+          "row_id": 11341,
+          "task_id": "032_050",
+          "candidate_ids": [
+            32,
+            50
+          ],
+          "candidate_names": [
+            "love in the mist",
+            "petunia"
+          ],
+          "true_id": 32
+        }
+      ],
+      "seed_outcomes": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            0
+          ],
+          "C_margin": [
+            0.023945817723870277,
+            0.0034170830622315407
+          ],
+          "U_margin": [
+            0.014167021960020065,
+            -0.01828281581401825
+          ],
+          "margin_gain": [
+            0.009778795763850212,
+            0.021699897944927216
+          ],
+          "accuracy_gain": [
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            0
+          ],
+          "C_margin": [
+            0.03589067980647087,
+            0.05543246865272522
+          ],
+          "U_margin": [
+            0.038073211908340454,
+            -0.005767045076936483
+          ],
+          "margin_gain": [
+            -0.002182532101869583,
+            0.06119951233267784
+          ],
+          "accuracy_gain": [
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            0
+          ],
+          "C_margin": [
+            0.06282170861959457,
+            0.05981472134590149
+          ],
+          "U_margin": [
+            0.013589250855147839,
+            -0.019700108096003532
+          ],
+          "margin_gain": [
+            0.04923245683312416,
+            0.07951483130455017
+          ],
+          "accuracy_gain": [
+            0,
+            1
+          ]
+        }
+      ],
+      "selection_reason": "Illustrative helpful case: on fixed task B (love in the mist vs petunia), C repairs U errors in all three seeds. For seed 2041, swapping in C_A also changes task B from correct to wrong."
+    },
+    {
+      "dataset": "flowers",
+      "image_id": "image_03800",
+      "true_class_name": "cape flower",
+      "selection_category": "boundary",
+      "figure_category": "Large-change boundary",
+      "changed_tokens": 24,
+      "replacement_pair_percentile_interval": [
+        71.9222637827289,
+        77.89613487287906
+      ],
+      "image_median_replacements": 18.0,
+      "dataset_pair_median": 21.0,
+      "dataset_pair_q75": 24.0,
+      "dataset_image_median": 20.5,
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 13015,
+          "task_id": "036_054",
+          "candidate_ids": [
+            36,
+            54
+          ],
+          "candidate_names": [
+            "cape flower",
+            "pelargonium"
+          ],
+          "true_id": 36
+        },
+        {
+          "name": "B",
+          "row_id": 13236,
+          "task_id": "036_064",
+          "candidate_ids": [
+            36,
+            64
+          ],
+          "candidate_names": [
+            "cape flower",
+            "californian poppy"
+          ],
+          "true_id": 36
+        }
+      ],
+      "seed_outcomes": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            0,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            -0.0009586571250110865,
+            0.12258888781070709
+          ],
+          "U_margin": [
+            0.007891667075455189,
+            0.10485959053039551
+          ],
+          "margin_gain": [
+            -0.008850323967635632,
+            0.017729297280311584
+          ],
+          "accuracy_gain": [
+            -1,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            0,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            -0.0010450264671817422,
+            0.10539861768484116
+          ],
+          "U_margin": [
+            0.007424648385494947,
+            0.10755642503499985
+          ],
+          "margin_gain": [
+            -0.008469674736261368,
+            -0.0021578073501586914
+          ],
+          "accuracy_gain": [
+            -1,
+            0
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.005441304761916399,
+            0.10519060492515564
+          ],
+          "U_margin": [
+            0.006066960282623768,
+            0.10847391188144684
+          ],
+          "margin_gain": [
+            -0.0006256555207073689,
+            -0.0032833069562911987
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        }
+      ],
+      "selection_reason": "Illustrative boundary: selected sets differ by 24 patches (Flowers pair Q75). On fixed task A (cape flower vs pelargonium), C is wrong and U correct for seeds 2041 and 2042; C-U margin is negative across all three seeds. Task B margin improves at seed 2041, so this is not a claim of universally absent margin benefit."
+    }
+  ]
+}

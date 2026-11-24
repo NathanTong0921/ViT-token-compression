@@ -1,0 +1,7127 @@
+{
+  "setting": {
+    "backbone": "ViT-B/16",
+    "pruning_block": 6,
+    "keep_patches": 98,
+    "total_patches": 196,
+    "map_seed": 2041,
+    "outcome_check_seeds": [
+      2041,
+      2042,
+      2043
+    ]
+  },
+  "selection": {
+    "typical": "Near median of image-level median replacement counts; no outcome-based ranking.",
+    "helpful": "C correct, U wrong on the same task at seed 2041; geometric-margin improvement >=0.005. Rank by repair and positive-margin consistency across three existing seeds.",
+    "boundary": "Replacement count at least pair-level Q75; no primary accuracy improvement on either task and nonpositive C-U margin gain averaged across tasks/seeds. Prioritize repeatable harm, then change count near Q75.",
+    "role": "Purposefully selected qualitative examples, not aggregate performance estimates."
+  },
+  "pool_statistics": [
+    {
+      "dataset": "pets",
+      "evaluated_images": 3569,
+      "images_with_two_or_more_tasks": 3171,
+      "image_task_rows": 13529,
+      "unordered_image_task_pairs": 24440,
+      "pair_weighted_replacement_count": {
+        "min": 2.0,
+        "q25": 11.0,
+        "median": 14.0,
+        "q75": 17.0,
+        "max": 38.0
+      },
+      "pair_replacement_histogram": {
+        "2": 5,
+        "3": 23,
+        "4": 67,
+        "5": 150,
+        "6": 328,
+        "7": 567,
+        "8": 943,
+        "9": 1266,
+        "10": 1664,
+        "11": 1916,
+        "12": 2169,
+        "13": 2195,
+        "14": 2092,
+        "15": 2038,
+        "16": 1800,
+        "17": 1605,
+        "18": 1324,
+        "19": 1114,
+        "20": 847,
+        "21": 640,
+        "22": 526,
+        "23": 334,
+        "24": 268,
+        "25": 172,
+        "26": 126,
+        "27": 87,
+        "28": 61,
+        "29": 36,
+        "30": 24,
+        "31": 19,
+        "32": 13,
+        "33": 9,
+        "34": 4,
+        "35": 2,
+        "36": 4,
+        "37": 1,
+        "38": 1
+      },
+      "image_median_replacement_count": {
+        "min": 4.0,
+        "q25": 12.0,
+        "median": 14.0,
+        "q75": 17.0,
+        "max": 29.0
+      },
+      "primary_repair_task_rows": 20,
+      "primary_harm_task_rows": 4,
+      "helpful_pair_candidates_margin_gain_at_least_0_005": 58,
+      "helpful_distinct_images": 18,
+      "upper_quartile_no_accuracy_gain_nonpositive_mean_margin_pairs": 3133
+    },
+    {
+      "dataset": "flowers",
+      "evaluated_images": 6149,
+      "images_with_two_or_more_tasks": 6149,
+      "image_task_rows": 24596,
+      "unordered_image_task_pairs": 36894,
+      "pair_weighted_replacement_count": {
+        "min": 3.0,
+        "q25": 17.0,
+        "median": 21.0,
+        "q75": 24.0,
+        "max": 47.0
+      },
+      "pair_replacement_histogram": {
+        "3": 1,
+        "4": 4,
+        "5": 7,
+        "6": 11,
+        "7": 32,
+        "8": 88,
+        "9": 117,
+        "10": 221,
+        "11": 414,
+        "12": 614,
+        "13": 904,
+        "14": 1316,
+        "15": 1733,
+        "16": 2091,
+        "17": 2386,
+        "18": 2659,
+        "19": 2953,
+        "20": 2887,
+        "21": 2922,
+        "22": 2704,
+        "23": 2471,
+        "24": 2204,
+        "25": 1935,
+        "26": 1548,
+        "27": 1233,
+        "28": 972,
+        "29": 773,
+        "30": 524,
+        "31": 388,
+        "32": 270,
+        "33": 170,
+        "34": 127,
+        "35": 94,
+        "36": 46,
+        "37": 31,
+        "38": 22,
+        "39": 7,
+        "40": 5,
+        "41": 2,
+        "42": 4,
+        "44": 1,
+        "46": 2,
+        "47": 1
+      },
+      "image_median_replacement_count": {
+        "min": 7.0,
+        "q25": 18.5,
+        "median": 20.5,
+        "q75": 23.0,
+        "max": 36.0
+      },
+      "primary_repair_task_rows": 146,
+      "primary_harm_task_rows": 84,
+      "helpful_pair_candidates_margin_gain_at_least_0_005": 384,
+      "helpful_distinct_images": 120,
+      "upper_quartile_no_accuracy_gain_nonpositive_mean_margin_pairs": 4200
+    }
+  ],
+  "candidate_lists": {
+    "pets": {
+      "typical": [
+        {
+          "dataset": "pets",
+          "image_id": "Bengal_198",
+          "rows": [
+            3384,
+            3584
+          ],
+          "replaced_tokens": 14,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.14977671205997467,
+                0.1583285629749298
+              ],
+              "U_margin": [
+                0.1466556191444397,
+                0.1577109545469284
+              ],
+              "margin_gain": [
+                0.003121092915534973,
+                0.0006176084280014038
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.14366300404071808,
+                0.14624705910682678
+              ],
+              "U_margin": [
+                0.1549655646085739,
+                0.15896818041801453
+              ],
+              "margin_gain": [
+                -0.011302560567855835,
+                -0.012721121311187744
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.15461866557598114,
+                0.14865697920322418
+              ],
+              "U_margin": [
+                0.14532068371772766,
+                0.15073588490486145
+              ],
+              "margin_gain": [
+                0.009297981858253479,
+                -0.002078905701637268
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.0021776508074253798,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            1
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 5,
+          "true_class_name": "bengal",
+          "category": "typical",
+          "image_median_replacements": 14.0,
+          "replacement_pair_percentile_interval": [
+            46.207037643207855,
+            54.766775777414075
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 3384,
+              "task_id": "05_17",
+              "candidate_ids": [
+                5,
+                17
+              ],
+              "candidate_names": [
+                "bengal",
+                "japanese chin"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3584,
+              "task_id": "05_19",
+              "candidate_ids": [
+                5,
+                19
+              ],
+              "candidate_names": [
+                "bengal",
+                "leonberger"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.1522332727909088,
+            0.16208821535110474
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "Bengal_43",
+          "rows": [
+            3614,
+            3814
+          ],
+          "replaced_tokens": 14,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.20656299591064453,
+                0.046624135226011276
+              ],
+              "U_margin": [
+                0.2018788903951645,
+                0.10367009788751602
+              ],
+              "margin_gain": [
+                0.0046841055154800415,
+                -0.057045962661504745
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.20626579225063324,
+                0.10204239934682846
+              ],
+              "U_margin": [
+                0.20397542417049408,
+                0.10302162170410156
+              ],
+              "margin_gain": [
+                0.00229036808013916,
+                -0.0009792223572731018
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.1980617195367813,
+                0.10044360905885696
+              ],
+              "U_margin": [
+                0.2039034515619278,
+                0.10140778124332428
+              ],
+              "margin_gain": [
+                -0.005841732025146484,
+                -0.0009641721844673157
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.0096427695825696,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            0
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 5,
+          "true_class_name": "bengal",
+          "category": "typical",
+          "image_median_replacements": 14.0,
+          "replacement_pair_percentile_interval": [
+            46.207037643207855,
+            54.766775777414075
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 3614,
+              "task_id": "05_19",
+              "candidate_ids": [
+                5,
+                19
+              ],
+              "candidate_names": [
+                "bengal",
+                "leonberger"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3814,
+              "task_id": "05_20",
+              "candidate_ids": [
+                5,
+                20
+              ],
+              "candidate_names": [
+                "bengal",
+                "maine coon"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.11368495225906372,
+            0.11780247092247009
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "Bengal_47",
+          "rows": [
+            3418,
+            3618
+          ],
+          "replaced_tokens": 14,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.16890136897563934,
+                0.19850492477416992
+              ],
+              "U_margin": [
+                0.1828186810016632,
+                0.19869564473628998
+              ],
+              "margin_gain": [
+                -0.013917312026023865,
+                -0.00019071996212005615
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.17905369400978088,
+                0.19757241010665894
+              ],
+              "U_margin": [
+                0.17824499309062958,
+                0.19612948596477509
+              ],
+              "margin_gain": [
+                0.0008087009191513062,
+                0.00144292414188385
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.18041953444480896,
+                0.2015504240989685
+              ],
+              "U_margin": [
+                0.17675334215164185,
+                0.1956617832183838
+              ],
+              "margin_gain": [
+                0.0036661922931671143,
+                0.005888640880584717
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.0003835956158582121,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            2
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 5,
+          "true_class_name": "bengal",
+          "category": "typical",
+          "image_median_replacements": 14.0,
+          "replacement_pair_percentile_interval": [
+            46.207037643207855,
+            54.766775777414075
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 3418,
+              "task_id": "05_17",
+              "candidate_ids": [
+                5,
+                17
+              ],
+              "candidate_names": [
+                "bengal",
+                "japanese chin"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3618,
+              "task_id": "05_19",
+              "candidate_ids": [
+                5,
+                19
+              ],
+              "candidate_names": [
+                "bengal",
+                "leonberger"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.18068309128284454,
+            0.19294573366641998
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "Bengal_50",
+          "rows": [
+            3622,
+            4022
+          ],
+          "replaced_tokens": 14,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.12681125104427338,
+                0.09935355931520462
+              ],
+              "U_margin": [
+                0.14597736299037933,
+                0.0924694612622261
+              ],
+              "margin_gain": [
+                -0.019166111946105957,
+                0.006884098052978516
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.13336536288261414,
+                0.10056215524673462
+              ],
+              "U_margin": [
+                0.14787708222866058,
+                0.08960960060358047
+              ],
+              "margin_gain": [
+                -0.014511719346046448,
+                0.010952554643154144
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.1490522027015686,
+                0.09081971645355225
+              ],
+              "U_margin": [
+                0.1472366750240326,
+                0.09525096416473389
+              ],
+              "margin_gain": [
+                0.0018155276775360107,
+                -0.004431247711181641
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.0030761498492211103,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            2
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 5,
+          "true_class_name": "bengal",
+          "category": "typical",
+          "image_median_replacements": 14.0,
+          "replacement_pair_percentile_interval": [
+            46.207037643207855,
+            54.766775777414075
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 3622,
+              "task_id": "05_19",
+              "candidate_ids": [
+                5,
+                19
+              ],
+              "candidate_names": [
+                "bengal",
+                "leonberger"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 4022,
+              "task_id": "05_23",
+              "candidate_ids": [
+                5,
+                23
+              ],
+              "candidate_names": [
+                "bengal",
+                "persian"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.13860158622264862,
+            0.07426750659942627
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "Bengal_51",
+          "rows": [
+            3423,
+            3823
+          ],
+          "replaced_tokens": 14,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.11606575548648834,
+                0.04703381657600403
+              ],
+              "U_margin": [
+                0.10914839059114456,
+                0.03834832087159157
+              ],
+              "margin_gain": [
+                0.0069173648953437805,
+                0.00868549570441246
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.11381679028272629,
+                0.049087997525930405
+              ],
+              "U_margin": [
+                0.1109708696603775,
+                0.048408392816782
+              ],
+              "margin_gain": [
+                0.0028459206223487854,
+                0.000679604709148407
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.10535171627998352,
+                0.0380304753780365
+              ],
+              "U_margin": [
+                0.10747073590755463,
+                0.041649311780929565
+              ],
+              "margin_gain": [
+                -0.002119019627571106,
+                -0.0036188364028930664
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.0022317550610750914,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            2
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 5,
+          "true_class_name": "bengal",
+          "category": "typical",
+          "image_median_replacements": 14.0,
+          "replacement_pair_percentile_interval": [
+            46.207037643207855,
+            54.766775777414075
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 3423,
+              "task_id": "05_17",
+              "candidate_ids": [
+                5,
+                17
+              ],
+              "candidate_names": [
+                "bengal",
+                "japanese chin"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3823,
+              "task_id": "05_20",
+              "candidate_ids": [
+                5,
+                20
+              ],
+              "candidate_names": [
+                "bengal",
+                "maine coon"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.11488375067710876,
+            0.04790988564491272
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "Bengal_58",
+          "rows": [
+            3430,
+            3630
+          ],
+          "replaced_tokens": 14,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.1882605403661728,
+                0.17382313311100006
+              ],
+              "U_margin": [
+                0.19232067465782166,
+                0.17667363584041595
+              ],
+              "margin_gain": [
+                -0.004060134291648865,
+                -0.0028505027294158936
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.19901011884212494,
+                0.18888187408447266
+              ],
+              "U_margin": [
+                0.1898827850818634,
+                0.17378142476081848
+              ],
+              "margin_gain": [
+                0.009127333760261536,
+                0.015100449323654175
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.216510608792305,
+                0.17380082607269287
+              ],
+              "U_margin": [
+                0.1887422502040863,
+                0.17435526847839355
+              ],
+              "margin_gain": [
+                0.02776835858821869,
+                -0.0005544424057006836
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.007421843707561493,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            1
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 5,
+          "true_class_name": "bengal",
+          "category": "typical",
+          "image_median_replacements": 14.0,
+          "replacement_pair_percentile_interval": [
+            46.207037643207855,
+            54.766775777414075
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 3430,
+              "task_id": "05_17",
+              "candidate_ids": [
+                5,
+                17
+              ],
+              "candidate_names": [
+                "bengal",
+                "japanese chin"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3630,
+              "task_id": "05_19",
+              "candidate_ids": [
+                5,
+                19
+              ],
+              "candidate_names": [
+                "bengal",
+                "leonberger"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.19016166031360626,
+            0.1729637235403061
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        }
+      ],
+      "helpful": [
+        {
+          "dataset": "pets",
+          "image_id": "american_bulldog_2",
+          "rows": [
+            598,
+            787
+          ],
+          "replaced_tokens": 13,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.014001740142703056,
+                0.09073533117771149
+              ],
+              "U_margin": [
+                -0.004663967527449131,
+                0.08993920683860779
+              ],
+              "margin_gain": [
+                0.018665708601474762,
+                0.0007961243391036987
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.015393448062241077,
+                0.08992630243301392
+              ],
+              "U_margin": [
+                0.003223610809072852,
+                0.0942327156662941
+              ],
+              "margin_gain": [
+                0.012169837020337582,
+                -0.004306413233280182
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.010142507031559944,
+                0.08792736381292343
+              ],
+              "U_margin": [
+                -0.002653065836057067,
+                0.09104375541210175
+              ],
+              "margin_gain": [
+                0.012795573100447655,
+                -0.003116391599178314
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.006167406681925058,
+          "repair_seed_counts": [
+            2,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            3,
+            1
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 1,
+          "true_class_name": "american bulldog",
+          "category": "helpful",
+          "image_median_replacements": 12.0,
+          "replacement_pair_percentile_interval": [
+            37.225859247135844,
+            46.207037643207855
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 598,
+              "task_id": "01_34",
+              "candidate_ids": [
+                1,
+                34
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "staffordshire bull terrier"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 787,
+              "task_id": "01_35",
+              "candidate_ids": [
+                1,
+                35
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "wheaten terrier"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            -0.0011591422371566296,
+            0.06851742416620255
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "staffordshire_bull_terrier_31",
+          "rows": [
+            712,
+            3301
+          ],
+          "replaced_tokens": 11,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.003107229247689247,
+                0.14439232647418976
+              ],
+              "U_margin": [
+                -0.012906789779663086,
+                0.13435840606689453
+              ],
+              "margin_gain": [
+                0.016014019027352333,
+                0.010033920407295227
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                -0.004987976048141718,
+                0.1384861171245575
+              ],
+              "U_margin": [
+                -0.015094968490302563,
+                0.13109424710273743
+              ],
+              "margin_gain": [
+                0.010106991976499557,
+                0.007391870021820068
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.0016988947754725814,
+                0.13141684234142303
+              ],
+              "U_margin": [
+                -0.013568530790507793,
+                0.13633576035499573
+              ],
+              "margin_gain": [
+                0.01526742521673441,
+                -0.004918918013572693
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.008982551284134388,
+          "repair_seed_counts": [
+            2,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            3,
+            2
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 34,
+          "true_class_name": "staffordshire bull terrier",
+          "category": "helpful",
+          "image_median_replacements": 11.0,
+          "replacement_pair_percentile_interval": [
+            20.511456628477905,
+            28.351063829787233
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 712,
+              "task_id": "01_34",
+              "candidate_ids": [
+                1,
+                34
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "staffordshire bull terrier"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3301,
+              "task_id": "04_34",
+              "candidate_ids": [
+                4,
+                34
+              ],
+              "candidate_names": [
+                "beagle",
+                "staffordshire bull terrier"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.0004628206661436707,
+            0.1436995267868042
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "staffordshire_bull_terrier_82",
+          "rows": [
+            768,
+            3357
+          ],
+          "replaced_tokens": 11,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.0027222749777138233,
+                0.12474939972162247
+              ],
+              "U_margin": [
+                -0.013281561434268951,
+                0.11050674319267273
+              ],
+              "margin_gain": [
+                0.016003835946321487,
+                0.014242656528949738
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.002535405335947871,
+                0.121055968105793
+              ],
+              "U_margin": [
+                -6.0896163631696254e-05,
+                0.12057562917470932
+              ],
+              "margin_gain": [
+                0.00259630149230361,
+                0.0004803389310836792
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.017179211601614952,
+                0.12187410145998001
+              ],
+              "U_margin": [
+                0.013220026157796383,
+                0.11956219375133514
+              ],
+              "margin_gain": [
+                0.003959185443818569,
+                0.002311907708644867
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.006599037442356348,
+          "repair_seed_counts": [
+            2,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            3,
+            3
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 34,
+          "true_class_name": "staffordshire bull terrier",
+          "category": "helpful",
+          "image_median_replacements": 11.0,
+          "replacement_pair_percentile_interval": [
+            20.511456628477905,
+            28.351063829787233
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 768,
+              "task_id": "01_34",
+              "candidate_ids": [
+                1,
+                34
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "staffordshire bull terrier"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3357,
+              "task_id": "04_34",
+              "candidate_ids": [
+                4,
+                34
+              ],
+              "candidate_names": [
+                "beagle",
+                "staffordshire bull terrier"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.0009192467550747097,
+            0.12498566508293152
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "Maine_Coon_238",
+          "rows": [
+            3882,
+            7844
+          ],
+          "replaced_tokens": 17,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.03713628649711609,
+                0.013437800109386444
+              ],
+              "U_margin": [
+                0.029440397396683693,
+                -0.0039625647477805614
+              ],
+              "margin_gain": [
+                0.007695889100432396,
+                0.017400365322828293
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.03679447993636131,
+                0.002689680550247431
+              ],
+              "U_margin": [
+                0.03360079973936081,
+                0.003279690630733967
+              ],
+              "margin_gain": [
+                0.0031936801970005035,
+                -0.000590010080486536
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.03925737366080284,
+                0.0074023534543812275
+              ],
+              "U_margin": [
+                0.022362936288118362,
+                -0.008018660359084606
+              ],
+              "margin_gain": [
+                0.01689443737268448,
+                0.015421014279127121
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.010002562776207924,
+          "repair_seed_counts": [
+            0,
+            2
+          ],
+          "positive_margin_seed_counts": [
+            3,
+            2
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 20,
+          "true_class_name": "maine coon",
+          "category": "helpful",
+          "image_median_replacements": 26.0,
+          "replacement_pair_percentile_interval": [
+            70.47054009819968,
+            77.03764320785598
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 3882,
+              "task_id": "05_20",
+              "candidate_ids": [
+                5,
+                20
+              ],
+              "candidate_names": [
+                "bengal",
+                "maine coon"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 7844,
+              "task_id": "11_20",
+              "candidate_ids": [
+                11,
+                20
+              ],
+              "candidate_names": [
+                "egyptian mau",
+                "maine coon"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.04278695583343506,
+            0.009339994750916958
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "saint_bernard_20",
+          "rows": [
+            5859,
+            11842
+          ],
+          "replaced_tokens": 18,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.003970670979470015,
+                0.12410325556993484
+              ],
+              "U_margin": [
+                -0.00891164317727089,
+                0.11136206984519958
+              ],
+              "margin_gain": [
+                0.012882314622402191,
+                0.01274118572473526
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.003842391073703766,
+                0.12503400444984436
+              ],
+              "U_margin": [
+                -0.007356569170951843,
+                0.11889848113059998
+              ],
+              "margin_gain": [
+                0.011198960244655609,
+                0.006135523319244385
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                -0.004279622342437506,
+                0.12184366583824158
+              ],
+              "U_margin": [
+                -0.001184716704301536,
+                0.12160611152648926
+              ],
+              "margin_gain": [
+                -0.003094905521720648,
+                0.00023755431175231934
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.006683439016342163,
+          "repair_seed_counts": [
+            2,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            3
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 28,
+          "true_class_name": "saint bernard",
+          "category": "helpful",
+          "image_median_replacements": 13.5,
+          "replacement_pair_percentile_interval": [
+            77.03764320785598,
+            82.45499181669395
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 5859,
+              "task_id": "08_28",
+              "candidate_ids": [
+                8,
+                28
+              ],
+              "candidate_names": [
+                "boxer",
+                "saint bernard"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 11842,
+              "task_id": "20_28",
+              "candidate_ids": [
+                20,
+                28
+              ],
+              "candidate_names": [
+                "maine coon",
+                "saint bernard"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.013455139473080635,
+            0.11607273668050766
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "saint_bernard_43",
+          "rows": [
+            5885,
+            11868
+          ],
+          "replaced_tokens": 14,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.003278907621279359,
+                0.150245800614357
+              ],
+              "U_margin": [
+                -0.019136790186166763,
+                0.14247426390647888
+              ],
+              "margin_gain": [
+                0.02241569757461548,
+                0.007771536707878113
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.023289255797863007,
+                0.1471729427576065
+              ],
+              "U_margin": [
+                -0.0008506745216436684,
+                0.1459197998046875
+              ],
+              "margin_gain": [
+                0.024139929562807083,
+                0.0012531429529190063
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.006359185557812452,
+                0.1462876945734024
+              ],
+              "U_margin": [
+                0.022447017952799797,
+                0.14679591357707977
+              ],
+              "margin_gain": [
+                -0.028806203976273537,
+                -0.0005082190036773682
+              ],
+              "accuracy_gain": [
+                -1,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.004377647303044796,
+          "repair_seed_counts": [
+            2,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            2
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 28,
+          "true_class_name": "saint bernard",
+          "category": "helpful",
+          "image_median_replacements": 12.5,
+          "replacement_pair_percentile_interval": [
+            46.207037643207855,
+            54.766775777414075
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 5885,
+              "task_id": "08_28",
+              "candidate_ids": [
+                8,
+                28
+              ],
+              "candidate_names": [
+                "boxer",
+                "saint bernard"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 11868,
+              "task_id": "20_28",
+              "candidate_ids": [
+                20,
+                28
+              ],
+              "candidate_names": [
+                "maine coon",
+                "saint bernard"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            -0.0022191035095602274,
+            0.14518119394779205
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        }
+      ],
+      "boundary": [
+        {
+          "dataset": "pets",
+          "image_id": "Egyptian_Mau_81",
+          "rows": [
+            7818,
+            8212
+          ],
+          "replaced_tokens": 17,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.045726921409368515,
+                0.03662721440196037
+              ],
+              "U_margin": [
+                0.052762243896722794,
+                0.01973586343228817
+              ],
+              "margin_gain": [
+                -0.0070353224873542786,
+                0.016891350969672203
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.04443522170186043,
+                -0.005134496372193098
+              ],
+              "U_margin": [
+                0.047263722866773605,
+                0.021571112796664238
+              ],
+              "margin_gain": [
+                -0.0028285011649131775,
+                -0.026705609634518623
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.053314197808504105,
+                -0.0006215643952600658
+              ],
+              "U_margin": [
+                0.050888221710920334,
+                0.022303808480501175
+              ],
+              "margin_gain": [
+                0.0024259760975837708,
+                -0.022925373166799545
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.006696246564388275,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            1
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 11,
+          "true_class_name": "egyptian mau",
+          "category": "boundary",
+          "image_median_replacements": 20.0,
+          "replacement_pair_percentile_interval": [
+            70.47054009819968,
+            77.03764320785598
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 7818,
+              "task_id": "11_20",
+              "candidate_ids": [
+                11,
+                20
+              ],
+              "candidate_names": [
+                "egyptian mau",
+                "maine coon"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 8212,
+              "task_id": "11_27",
+              "candidate_ids": [
+                11,
+                27
+              ],
+              "candidate_names": [
+                "egyptian mau",
+                "russian blue"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.059840116649866104,
+            0.026537826284766197
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "havanese_60",
+          "rows": [
+            10088,
+            10388
+          ],
+          "replaced_tokens": 17,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.11745408922433853,
+                0.051830753684043884
+              ],
+              "U_margin": [
+                0.09670278429985046,
+                0.05440554767847061
+              ],
+              "margin_gain": [
+                0.020751304924488068,
+                -0.0025747939944267273
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.10453895479440689,
+                -0.019529784098267555
+              ],
+              "U_margin": [
+                0.10713730752468109,
+                0.05530887097120285
+              ],
+              "margin_gain": [
+                -0.0025983527302742004,
+                -0.07483865320682526
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                0,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.008119185455143452,
+                -0.022199254482984543
+              ],
+              "U_margin": [
+                0.11489725857973099,
+                0.054428186267614365
+              ],
+              "margin_gain": [
+                -0.12301644682884216,
+                -0.07662744075059891
+              ],
+              "accuracy_gain": [
+                -1,
+                -1
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.043150726705789566,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            0
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 16,
+          "true_class_name": "havanese",
+          "category": "boundary",
+          "image_median_replacements": 18.0,
+          "replacement_pair_percentile_interval": [
+            70.47054009819968,
+            77.03764320785598
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 10088,
+              "task_id": "15_16",
+              "candidate_ids": [
+                15,
+                16
+              ],
+              "candidate_names": [
+                "great pyrenees",
+                "havanese"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 10388,
+              "task_id": "16_36",
+              "candidate_ids": [
+                16,
+                36
+              ],
+              "candidate_names": [
+                "havanese",
+                "yorkshire terrier"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.11277250945568085,
+            0.046971119940280914
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "american_bulldog_205",
+          "rows": [
+            401,
+            601
+          ],
+          "replaced_tokens": 18,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.10965453833341599,
+                -0.0035057596396654844
+              ],
+              "U_margin": [
+                0.10684673488140106,
+                0.0062758466228842735
+              ],
+              "margin_gain": [
+                0.002807803452014923,
+                -0.009781606495380402
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.10430720448493958,
+                0.0030338880605995655
+              ],
+              "U_margin": [
+                0.1060778945684433,
+                0.002405300037935376
+              ],
+              "margin_gain": [
+                -0.0017706900835037231,
+                0.0006285880226641893
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.10762260854244232,
+                -0.00014496041694656014
+              ],
+              "U_margin": [
+                0.10785286128520966,
+                0.005671508610248566
+              ],
+              "margin_gain": [
+                -0.00023025274276733398,
+                -0.005816468968987465
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.0023604377638548613,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            1
+          ],
+          "primary_accuracy_gain": -1,
+          "true_class_id": 1,
+          "true_class_name": "american bulldog",
+          "category": "boundary",
+          "image_median_replacements": 17.0,
+          "replacement_pair_percentile_interval": [
+            77.03764320785598,
+            82.45499181669395
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 401,
+              "task_id": "01_29",
+              "candidate_ids": [
+                1,
+                29
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "samoyed"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 601,
+              "task_id": "01_34",
+              "candidate_ids": [
+                1,
+                34
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "staffordshire bull terrier"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.11267600208520889,
+            0.0017993389628827572
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "american_bulldog_60",
+          "rows": [
+            456,
+            656
+          ],
+          "replaced_tokens": 22,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.14003151655197144,
+                0.004876710474491119
+              ],
+              "U_margin": [
+                0.1417996883392334,
+                0.006098667159676552
+              ],
+              "margin_gain": [
+                -0.0017681717872619629,
+                -0.0012219566851854324
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.13939398527145386,
+                -0.003039102302864194
+              ],
+              "U_margin": [
+                0.1401001662015915,
+                0.00999277550727129
+              ],
+              "margin_gain": [
+                -0.0007061809301376343,
+                -0.01303187757730484
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.13916830718517303,
+                -0.002171651693060994
+              ],
+              "U_margin": [
+                0.1408092975616455,
+                0.008947259746491909
+              ],
+              "margin_gain": [
+                -0.0016409903764724731,
+                -0.01111891120672226
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.004914681427180767,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            0,
+            0
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 1,
+          "true_class_name": "american bulldog",
+          "category": "boundary",
+          "image_median_replacements": 16.0,
+          "replacement_pair_percentile_interval": [
+            93.09738134206219,
+            95.24959083469722
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 456,
+              "task_id": "01_29",
+              "candidate_ids": [
+                1,
+                29
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "samoyed"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 656,
+              "task_id": "01_34",
+              "candidate_ids": [
+                1,
+                34
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "staffordshire bull terrier"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.13546374440193176,
+            0.014062881469726562
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "american_bulldog_96",
+          "rows": [
+            294,
+            883
+          ],
+          "replaced_tokens": 17,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.004671960603445768,
+                0.07013654708862305
+              ],
+              "U_margin": [
+                0.008276006206870079,
+                0.07605085521936417
+              ],
+              "margin_gain": [
+                -0.0036040456034243107,
+                -0.005914308130741119
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.018998883664608,
+                0.07042345404624939
+              ],
+              "U_margin": [
+                -2.8281827326281928e-05,
+                0.08113867044448853
+              ],
+              "margin_gain": [
+                0.019027166068553925,
+                -0.010715216398239136
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.00846915878355503,
+                0.07411022484302521
+              ],
+              "U_margin": [
+                0.010647323913872242,
+                0.07931848615407944
+              ],
+              "margin_gain": [
+                -0.019116483628749847,
+                -0.00520826131105423
+              ],
+              "accuracy_gain": [
+                -1,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.004255191422998905,
+          "repair_seed_counts": [
+            1,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            0
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 1,
+          "true_class_name": "american bulldog",
+          "category": "boundary",
+          "image_median_replacements": 17.0,
+          "replacement_pair_percentile_interval": [
+            70.47054009819968,
+            77.03764320785598
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 294,
+              "task_id": "01_02",
+              "candidate_ids": [
+                1,
+                2
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "american pit bull terrier"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 883,
+              "task_id": "01_35",
+              "candidate_ids": [
+                1,
+                35
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "wheaten terrier"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.010554696433246136,
+            0.06370128691196442
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        },
+        {
+          "dataset": "pets",
+          "image_id": "american_bulldog_224",
+          "rows": [
+            615,
+            804
+          ],
+          "replaced_tokens": 17,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                -0.006677525117993355,
+                0.10096493363380432
+              ],
+              "U_margin": [
+                -0.011097218841314316,
+                0.09995470941066742
+              ],
+              "margin_gain": [
+                0.004419693723320961,
+                0.0010102242231369019
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                -0.0086973300203681,
+                0.10092335194349289
+              ],
+              "U_margin": [
+                -0.0016221596160903573,
+                0.10487641394138336
+              ],
+              "margin_gain": [
+                -0.007075170520693064,
+                -0.003953061997890472
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.028498223051428795,
+                0.09675990790128708
+              ],
+              "U_margin": [
+                0.011043800041079521,
+                0.10252655297517776
+              ],
+              "margin_gain": [
+                -0.039542023092508316,
+                -0.005766645073890686
+              ],
+              "accuracy_gain": [
+                -1,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.008484496735036373,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            1
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 1,
+          "true_class_name": "american bulldog",
+          "category": "boundary",
+          "image_median_replacements": 17.0,
+          "replacement_pair_percentile_interval": [
+            70.47054009819968,
+            77.03764320785598
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 615,
+              "task_id": "01_34",
+              "candidate_ids": [
+                1,
+                34
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "staffordshire bull terrier"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 804,
+              "task_id": "01_35",
+              "candidate_ids": [
+                1,
+                35
+              ],
+              "candidate_names": [
+                "american bulldog",
+                "wheaten terrier"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.005920651834458113,
+            0.09829618781805038
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98"
+        }
+      ]
+    },
+    "flowers": {
+      "typical": [
+        {
+          "dataset": "flowers",
+          "image_id": "image_00009",
+          "rows": [
+            3291,
+            4101
+          ],
+          "replaced_tokens": 21,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.12035220861434937,
+                0.14795546233654022
+              ],
+              "U_margin": [
+                0.12981493771076202,
+                0.1653205156326294
+              ],
+              "margin_gain": [
+                -0.009462729096412659,
+                -0.017365053296089172
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.12498942017555237,
+                0.15426993370056152
+              ],
+              "U_margin": [
+                0.11878031492233276,
+                0.15177088975906372
+              ],
+              "margin_gain": [
+                0.0062091052532196045,
+                0.0024990439414978027
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.11768577247858047,
+                0.1719762086868286
+              ],
+              "U_margin": [
+                0.13062311708927155,
+                0.1618901640176773
+              ],
+              "margin_gain": [
+                -0.01293734461069107,
+                0.010086044669151306
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.0034951556008309126,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            2
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 76,
+          "true_class_name": "passion flower",
+          "category": "typical",
+          "image_median_replacements": 20.5,
+          "replacement_pair_percentile_interval": [
+            49.97560578955928,
+            57.89559277931371
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 3291,
+              "task_id": "008_076",
+              "candidate_ids": [
+                8,
+                76
+              ],
+              "candidate_names": [
+                "monkshood",
+                "passion flower"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 4101,
+              "task_id": "010_076",
+              "candidate_ids": [
+                10,
+                76
+              ],
+              "candidate_names": [
+                "snapdragon",
+                "passion flower"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.10842017829418182,
+            0.14400328695774078
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_00010",
+          "rows": [
+            705,
+            3292
+          ],
+          "replaced_tokens": 20,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.14200666546821594,
+                0.1294037252664566
+              ],
+              "U_margin": [
+                0.14345799386501312,
+                0.1513117402791977
+              ],
+              "margin_gain": [
+                -0.0014513283967971802,
+                -0.02190801501274109
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.1404533088207245,
+                0.13994324207305908
+              ],
+              "U_margin": [
+                0.1300542950630188,
+                0.13979651033878326
+              ],
+              "margin_gain": [
+                0.010399013757705688,
+                0.00014673173427581787
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.12916596233844757,
+                0.137613445520401
+              ],
+              "U_margin": [
+                0.1467708796262741,
+                0.15306347608566284
+              ],
+              "margin_gain": [
+                -0.017604917287826538,
+                -0.01545003056526184
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.007644757628440857,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            1
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 76,
+          "true_class_name": "passion flower",
+          "category": "typical",
+          "image_median_replacements": 20.5,
+          "replacement_pair_percentile_interval": [
+            42.15048517374099,
+            49.97560578955928
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 705,
+              "task_id": "001_076",
+              "candidate_ids": [
+                1,
+                76
+              ],
+              "candidate_names": [
+                "hard-leaved pocket orchid",
+                "passion flower"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3292,
+              "task_id": "008_076",
+              "candidate_ids": [
+                8,
+                76
+              ],
+              "candidate_names": [
+                "monkshood",
+                "passion flower"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.12849381566047668,
+            0.1378992348909378
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_00014",
+          "rows": [
+            709,
+            3296
+          ],
+          "replaced_tokens": 21,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.11115764081478119,
+                0.05911179631948471
+              ],
+              "U_margin": [
+                0.07038199156522751,
+                0.08491525799036026
+              ],
+              "margin_gain": [
+                0.04077564924955368,
+                -0.02580346167087555
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.08585944771766663,
+                0.05794927105307579
+              ],
+              "U_margin": [
+                0.06775480508804321,
+                0.07195209711790085
+              ],
+              "margin_gain": [
+                0.018104642629623413,
+                -0.014002826064825058
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.10602539777755737,
+                0.07554817944765091
+              ],
+              "U_margin": [
+                0.09791123121976852,
+                0.0851508229970932
+              ],
+              "margin_gain": [
+                0.008114166557788849,
+                -0.009602643549442291
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.002930921269580722,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            3,
+            0
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 76,
+          "true_class_name": "passion flower",
+          "category": "typical",
+          "image_median_replacements": 20.5,
+          "replacement_pair_percentile_interval": [
+            49.97560578955928,
+            57.89559277931371
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 709,
+              "task_id": "001_076",
+              "candidate_ids": [
+                1,
+                76
+              ],
+              "candidate_names": [
+                "hard-leaved pocket orchid",
+                "passion flower"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3296,
+              "task_id": "008_076",
+              "candidate_ids": [
+                8,
+                76
+              ],
+              "candidate_names": [
+                "monkshood",
+                "passion flower"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.10051368176937103,
+            0.07086995244026184
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_00020",
+          "rows": [
+            714,
+            3301
+          ],
+          "replaced_tokens": 20,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.11448244750499725,
+                0.10978567600250244
+              ],
+              "U_margin": [
+                0.1180286630988121,
+                0.09979410469532013
+              ],
+              "margin_gain": [
+                -0.00354621559381485,
+                0.009991571307182312
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.13395659625530243,
+                0.08630859851837158
+              ],
+              "U_margin": [
+                0.10862118005752563,
+                0.08603743463754654
+              ],
+              "margin_gain": [
+                0.025335416197776794,
+                0.0002711638808250427
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.1433698534965515,
+                0.09709406644105911
+              ],
+              "U_margin": [
+                0.1288982778787613,
+                0.09106557071208954
+              ],
+              "margin_gain": [
+                0.014471575617790222,
+                0.006028495728969574
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.00875866785645485,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            3
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 76,
+          "true_class_name": "passion flower",
+          "category": "typical",
+          "image_median_replacements": 20.5,
+          "replacement_pair_percentile_interval": [
+            42.15048517374099,
+            49.97560578955928
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 714,
+              "task_id": "001_076",
+              "candidate_ids": [
+                1,
+                76
+              ],
+              "candidate_names": [
+                "hard-leaved pocket orchid",
+                "passion flower"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3301,
+              "task_id": "008_076",
+              "candidate_ids": [
+                8,
+                76
+              ],
+              "candidate_names": [
+                "monkshood",
+                "passion flower"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.10872107744216919,
+            0.10299106687307358
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_00030",
+          "rows": [
+            722,
+            3309
+          ],
+          "replaced_tokens": 21,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.15868417918682098,
+                0.13476136326789856
+              ],
+              "U_margin": [
+                0.1308550089597702,
+                0.10191115736961365
+              ],
+              "margin_gain": [
+                0.02782917022705078,
+                0.03285020589828491
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.14743168652057648,
+                0.10306638479232788
+              ],
+              "U_margin": [
+                0.14284652471542358,
+                0.12094341218471527
+              ],
+              "margin_gain": [
+                0.004585161805152893,
+                -0.01787702739238739
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.15289755165576935,
+                0.13175784051418304
+              ],
+              "U_margin": [
+                0.14115571975708008,
+                0.09204328805208206
+              ],
+              "margin_gain": [
+                0.01174183189868927,
+                0.03971455246210098
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.016473982483148575,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            3,
+            2
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 76,
+          "true_class_name": "passion flower",
+          "category": "typical",
+          "image_median_replacements": 20.5,
+          "replacement_pair_percentile_interval": [
+            49.97560578955928,
+            57.89559277931371
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 722,
+              "task_id": "001_076",
+              "candidate_ids": [
+                1,
+                76
+              ],
+              "candidate_names": [
+                "hard-leaved pocket orchid",
+                "passion flower"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3309,
+              "task_id": "008_076",
+              "candidate_ids": [
+                8,
+                76
+              ],
+              "candidate_names": [
+                "monkshood",
+                "passion flower"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.13198618590831757,
+            0.1329929232597351
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_00031",
+          "rows": [
+            723,
+            3310
+          ],
+          "replaced_tokens": 20,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.11924813687801361,
+                0.10271972417831421
+              ],
+              "U_margin": [
+                0.09033974260091782,
+                0.11675538867712021
+              ],
+              "margin_gain": [
+                0.028908394277095795,
+                -0.014035664498806
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.13598521053791046,
+                0.1212887093424797
+              ],
+              "U_margin": [
+                0.12661468982696533,
+                0.11385541409254074
+              ],
+              "margin_gain": [
+                0.00937052071094513,
+                0.007433295249938965
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.13204209506511688,
+                0.10547245293855667
+              ],
+              "U_margin": [
+                0.14137230813503265,
+                0.1082656979560852
+              ],
+              "margin_gain": [
+                -0.009330213069915771,
+                -0.002793245017528534
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.003258847864344716,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            1
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 76,
+          "true_class_name": "passion flower",
+          "category": "typical",
+          "image_median_replacements": 20.5,
+          "replacement_pair_percentile_interval": [
+            42.15048517374099,
+            49.97560578955928
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 723,
+              "task_id": "001_076",
+              "candidate_ids": [
+                1,
+                76
+              ],
+              "candidate_names": [
+                "hard-leaved pocket orchid",
+                "passion flower"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 3310,
+              "task_id": "008_076",
+              "candidate_ids": [
+                8,
+                76
+              ],
+              "candidate_names": [
+                "monkshood",
+                "passion flower"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.10325402766466141,
+            0.11302036792039871
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        }
+      ],
+      "helpful": [
+        {
+          "dataset": "flowers",
+          "image_id": "image_06475",
+          "rows": [
+            8233,
+            11341
+          ],
+          "replaced_tokens": 17,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.023945817723870277,
+                0.0034170830622315407
+              ],
+              "U_margin": [
+                0.014167021960020065,
+                -0.01828281581401825
+              ],
+              "margin_gain": [
+                0.009778795763850212,
+                0.021699897944927216
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.03589067980647087,
+                0.05543246865272522
+              ],
+              "U_margin": [
+                0.038073211908340454,
+                -0.005767045076936483
+              ],
+              "margin_gain": [
+                -0.002182532101869583,
+                0.06119951233267784
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.06282170861959457,
+                0.05981472134590149
+              ],
+              "U_margin": [
+                0.013589250855147839,
+                -0.019700108096003532
+              ],
+              "margin_gain": [
+                0.04923245683312416,
+                0.07951483130455017
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.03654049336910248,
+          "repair_seed_counts": [
+            0,
+            3
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            3
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 32,
+          "true_class_name": "love in the mist",
+          "category": "helpful",
+          "image_median_replacements": 15.5,
+          "replacement_pair_percentile_interval": [
+            20.47216349541931,
+            26.939339730037403
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 8233,
+              "task_id": "022_032",
+              "candidate_ids": [
+                22,
+                32
+              ],
+              "candidate_names": [
+                "fritillary",
+                "love in the mist"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 11341,
+              "task_id": "032_050",
+              "candidate_ids": [
+                32,
+                50
+              ],
+              "candidate_names": [
+                "love in the mist",
+                "petunia"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.024454785510897636,
+            -0.021708067506551743
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_03598",
+          "rows": [
+            22122,
+            22199
+          ],
+          "replaced_tokens": 23,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.11483383178710938,
+                0.013873974792659283
+              ],
+              "U_margin": [
+                0.06775122880935669,
+                -0.01812742091715336
+              ],
+              "margin_gain": [
+                0.047082602977752686,
+                0.032001394778490067
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.0855015441775322,
+                0.007046893704682589
+              ],
+              "U_margin": [
+                0.07120704650878906,
+                -0.020801642909646034
+              ],
+              "margin_gain": [
+                0.014294497668743134,
+                0.027848536148667336
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.10143768042325974,
+                0.01364881545305252
+              ],
+              "U_margin": [
+                0.08740957826375961,
+                -0.0224831011146307
+              ],
+              "margin_gain": [
+                0.014028102159500122,
+                0.03613191843032837
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.028564507141709328,
+          "repair_seed_counts": [
+            0,
+            3
+          ],
+          "positive_margin_seed_counts": [
+            3,
+            3
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 71,
+          "true_class_name": "azalea",
+          "category": "helpful",
+          "image_median_replacements": 24.5,
+          "replacement_pair_percentile_interval": [
+            65.22469778283731,
+            71.9222637827289
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 22122,
+              "task_id": "071_088",
+              "candidate_ids": [
+                71,
+                88
+              ],
+              "candidate_names": [
+                "azalea",
+                "watercress"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 22199,
+              "task_id": "071_089",
+              "candidate_ids": [
+                71,
+                89
+              ],
+              "candidate_names": [
+                "azalea",
+                "canna lily"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.11738847196102142,
+            0.024641573429107666
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_03772",
+          "rows": [
+            12713,
+            12993
+          ],
+          "replaced_tokens": 23,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.10204217582941055,
+                0.021278126165270805
+              ],
+              "U_margin": [
+                0.09926837682723999,
+                -0.0035786391235888004
+              ],
+              "margin_gain": [
+                0.0027737990021705627,
+                0.02485676482319832
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.11003187298774719,
+                0.011450265534222126
+              ],
+              "U_margin": [
+                0.10668549686670303,
+                -0.000822151661850512
+              ],
+              "margin_gain": [
+                0.003346376121044159,
+                0.012272417545318604
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.09778275340795517,
+                0.023383641615509987
+              ],
+              "U_margin": [
+                0.10237377136945724,
+                -0.0015657313633710146
+              ],
+              "margin_gain": [
+                -0.004591017961502075,
+                0.024949373677372932
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.010601285845041275,
+          "repair_seed_counts": [
+            0,
+            3
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            3
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 36,
+          "true_class_name": "cape flower",
+          "category": "helpful",
+          "image_median_replacements": 21.5,
+          "replacement_pair_percentile_interval": [
+            65.22469778283731,
+            71.9222637827289
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 12713,
+              "task_id": "036_041",
+              "candidate_ids": [
+                36,
+                41
+              ],
+              "candidate_names": [
+                "cape flower",
+                "daffodil"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 12993,
+              "task_id": "036_054",
+              "candidate_ids": [
+                36,
+                54
+              ],
+              "candidate_names": [
+                "cape flower",
+                "pelargonium"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.10174885392189026,
+            -0.004619153216481209
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_05251",
+          "rows": [
+            3988,
+            9882
+          ],
+          "replaced_tokens": 22,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.0019321076106280088,
+                0.07457864284515381
+              ],
+              "U_margin": [
+                -0.016688106581568718,
+                0.05243277549743652
+              ],
+              "margin_gain": [
+                0.018620213493704796,
+                0.022145867347717285
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.0033541438169777393,
+                0.08305978029966354
+              ],
+              "U_margin": [
+                -0.008727946318686008,
+                0.06225823238492012
+              ],
+              "margin_gain": [
+                0.012082090601325035,
+                0.020801547914743423
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                0.01468865480273962,
+                0.059391770511865616
+              ],
+              "U_margin": [
+                -0.012446616776287556,
+                0.06542755663394928
+              ],
+              "margin_gain": [
+                0.027135271579027176,
+                -0.006035786122083664
+              ],
+              "accuracy_gain": [
+                1,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.015791533514857292,
+          "repair_seed_counts": [
+            3,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            3,
+            2
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 27,
+          "true_class_name": "stemless gentian",
+          "category": "helpful",
+          "image_median_replacements": 21.5,
+          "replacement_pair_percentile_interval": [
+            57.89559277931371,
+            65.22469778283731
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 3988,
+              "task_id": "010_027",
+              "candidate_ids": [
+                10,
+                27
+              ],
+              "candidate_names": [
+                "snapdragon",
+                "stemless gentian"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 9882,
+              "task_id": "027_052",
+              "candidate_ids": [
+                27,
+                52
+              ],
+              "candidate_names": [
+                "stemless gentian",
+                "primula"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.006357488688081503,
+            0.05666658654808998
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_04727",
+          "rows": [
+            12391,
+            18093
+          ],
+          "replaced_tokens": 24,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.16190266609191895,
+                0.012072872370481491
+              ],
+              "U_margin": [
+                0.16664066910743713,
+                -0.0025662488769739866
+              ],
+              "margin_gain": [
+                -0.0047380030155181885,
+                0.014639121480286121
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.17177772521972656,
+                0.01745157688856125
+              ],
+              "U_margin": [
+                0.15259848535060883,
+                -0.001661154325120151
+              ],
+              "margin_gain": [
+                0.019179239869117737,
+                0.019112730398774147
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.17236419022083282,
+                0.005172638688236475
+              ],
+              "U_margin": [
+                0.15621572732925415,
+                -0.006669279653578997
+              ],
+              "margin_gain": [
+                0.016148462891578674,
+                0.011841918341815472
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.012697244994342327,
+          "repair_seed_counts": [
+            0,
+            3
+          ],
+          "positive_margin_seed_counts": [
+            2,
+            3
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 54,
+          "true_class_name": "pelargonium",
+          "category": "helpful",
+          "image_median_replacements": 20.0,
+          "replacement_pair_percentile_interval": [
+            71.9222637827289,
+            77.89613487287906
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 12391,
+              "task_id": "035_054",
+              "candidate_ids": [
+                35,
+                54
+              ],
+              "candidate_names": [
+                "ruby-lipped cattleya",
+                "pelargonium"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 18093,
+              "task_id": "054_074",
+              "candidate_ids": [
+                54,
+                74
+              ],
+              "candidate_names": [
+                "pelargonium",
+                "thorn apple"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.14235234260559082,
+            -0.008173338137567043
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_00689",
+          "rows": [
+            21361,
+            21998
+          ],
+          "replaced_tokens": 20,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.031965892761945724,
+                0.006096340715885162
+              ],
+              "U_margin": [
+                0.02978437766432762,
+                -0.004176238086074591
+              ],
+              "margin_gain": [
+                0.002181515097618103,
+                0.01027257926762104
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.0227410476654768,
+                0.0059453342109918594
+              ],
+              "U_margin": [
+                0.025516163557767868,
+                -0.012637232430279255
+              ],
+              "margin_gain": [
+                -0.002775115892291069,
+                0.01858256757259369
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.0412558875977993,
+                0.010372309014201164
+              ],
+              "U_margin": [
+                0.04292377829551697,
+                -0.0036744121462106705
+              ],
+              "margin_gain": [
+                -0.0016678906977176666,
+                0.014046721160411835
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            }
+          ],
+          "mean_margin_gain": 0.0067733959294855595,
+          "repair_seed_counts": [
+            0,
+            3
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            3
+          ],
+          "primary_accuracy_gain": 1,
+          "true_class_id": 88,
+          "true_class_name": "watercress",
+          "category": "helpful",
+          "image_median_replacements": 19.5,
+          "replacement_pair_percentile_interval": [
+            42.15048517374099,
+            49.97560578955928
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 21361,
+              "task_id": "066_088",
+              "candidate_ids": [
+                66,
+                88
+              ],
+              "candidate_names": [
+                "spring crocus",
+                "watercress"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 21998,
+              "task_id": "071_088",
+              "candidate_ids": [
+                71,
+                88
+              ],
+              "candidate_names": [
+                "azalea",
+                "watercress"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.03402586653828621,
+            0.0014450971502810717
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        }
+      ],
+      "boundary": [
+        {
+          "dataset": "flowers",
+          "image_id": "image_03800",
+          "rows": [
+            13015,
+            13236
+          ],
+          "replaced_tokens": 24,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.0009586571250110865,
+                0.12258888781070709
+              ],
+              "U_margin": [
+                0.007891667075455189,
+                0.10485959053039551
+              ],
+              "margin_gain": [
+                -0.008850323967635632,
+                0.017729297280311584
+              ],
+              "accuracy_gain": [
+                -1,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.0010450264671817422,
+                0.10539861768484116
+              ],
+              "U_margin": [
+                0.007424648385494947,
+                0.10755642503499985
+              ],
+              "margin_gain": [
+                -0.008469674736261368,
+                -0.0021578073501586914
+              ],
+              "accuracy_gain": [
+                -1,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.005441304761916399,
+                0.10519060492515564
+              ],
+              "U_margin": [
+                0.006066960282623768,
+                0.10847391188144684
+              ],
+              "margin_gain": [
+                -0.0006256555207073689,
+                -0.0032833069562911987
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.0009429118945263326,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            0,
+            1
+          ],
+          "primary_accuracy_gain": -1,
+          "true_class_id": 36,
+          "true_class_name": "cape flower",
+          "category": "boundary",
+          "image_median_replacements": 18.0,
+          "replacement_pair_percentile_interval": [
+            71.9222637827289,
+            77.89613487287906
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 13015,
+              "task_id": "036_054",
+              "candidate_ids": [
+                36,
+                54
+              ],
+              "candidate_names": [
+                "cape flower",
+                "pelargonium"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 13236,
+              "task_id": "036_064",
+              "candidate_ids": [
+                36,
+                64
+              ],
+              "candidate_names": [
+                "cape flower",
+                "californian poppy"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.010213520377874374,
+            0.099831223487854
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_06837",
+          "rows": [
+            3597,
+            8705
+          ],
+          "replaced_tokens": 24,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.12987101078033447,
+                -0.011103259399533272
+              ],
+              "U_margin": [
+                0.1377411186695099,
+                0.002319276798516512
+              ],
+              "margin_gain": [
+                -0.007870107889175415,
+                -0.013422535732388496
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.1387885957956314,
+                0.007398592308163643
+              ],
+              "U_margin": [
+                0.11644908785820007,
+                -0.01408282108604908
+              ],
+              "margin_gain": [
+                0.022339507937431335,
+                0.021481413394212723
+              ],
+              "accuracy_gain": [
+                0,
+                1
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.13621799647808075,
+                -0.004944528453052044
+              ],
+              "U_margin": [
+                0.16308601200580597,
+                0.00560925155878067
+              ],
+              "margin_gain": [
+                -0.02686801552772522,
+                -0.010553780011832714
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.0024822528939694166,
+          "repair_seed_counts": [
+            0,
+            1
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            1
+          ],
+          "primary_accuracy_gain": -1,
+          "true_class_id": 23,
+          "true_class_name": "red ginger",
+          "category": "boundary",
+          "image_median_replacements": 20.5,
+          "replacement_pair_percentile_interval": [
+            71.9222637827289,
+            77.89613487287906
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 3597,
+              "task_id": "009_023",
+              "candidate_ids": [
+                9,
+                23
+              ],
+              "candidate_names": [
+                "globe thistle",
+                "red ginger"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 8705,
+              "task_id": "023_098",
+              "candidate_ids": [
+                23,
+                98
+              ],
+              "candidate_names": [
+                "red ginger",
+                "bromelia"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.1459810733795166,
+            -0.008446156047284603
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_06967",
+          "rows": [
+            11904,
+            12042
+          ],
+          "replaced_tokens": 24,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                0
+              ],
+              "C_margin": [
+                0.00859451200813055,
+                -0.01009807363152504
+              ],
+              "U_margin": [
+                0.006365452893078327,
+                -0.011380291543900967
+              ],
+              "margin_gain": [
+                0.002229059115052223,
+                0.001282217912375927
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.001833108952268958,
+                0.006732048932462931
+              ],
+              "U_margin": [
+                0.004645186010748148,
+                0.015592558309435844
+              ],
+              "margin_gain": [
+                -0.006478294730186462,
+                -0.008860509842634201
+              ],
+              "accuracy_gain": [
+                -1,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.0035255118273198605,
+                -0.0023707090876996517
+              ],
+              "U_margin": [
+                0.004227268975228071,
+                0.012124942615628242
+              ],
+              "margin_gain": [
+                -0.0007017571479082108,
+                -0.014495652168989182
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.004504155833274126,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            1
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 33,
+          "true_class_name": "mexican aster",
+          "category": "boundary",
+          "image_median_replacements": 22.0,
+          "replacement_pair_percentile_interval": [
+            71.9222637827289,
+            77.89613487287906
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 11904,
+              "task_id": "033_070",
+              "candidate_ids": [
+                33,
+                70
+              ],
+              "candidate_names": [
+                "mexican aster",
+                "gazania"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 12042,
+              "task_id": "033_077",
+              "candidate_ids": [
+                33,
+                77
+              ],
+              "candidate_names": [
+                "mexican aster",
+                "lotus"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            -0.0023788216058164835,
+            0.00500250281766057
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_06141",
+          "rows": [
+            20488,
+            20542
+          ],
+          "replaced_tokens": 24,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.012352459132671356,
+                0.08330769091844559
+              ],
+              "U_margin": [
+                0.00553523562848568,
+                0.06699787825345993
+              ],
+              "margin_gain": [
+                -0.017887694761157036,
+                0.016309812664985657
+              ],
+              "accuracy_gain": [
+                -1,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.009219263680279255,
+                0.05941681191325188
+              ],
+              "U_margin": [
+                0.005279514938592911,
+                0.0732932910323143
+              ],
+              "margin_gain": [
+                -0.014498778618872166,
+                -0.013876479119062424
+              ],
+              "accuracy_gain": [
+                -1,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                0,
+                1
+              ],
+              "C_margin": [
+                -0.007450364995747805,
+                0.07748362421989441
+              ],
+              "U_margin": [
+                -0.002818372333422303,
+                0.07496335357427597
+              ],
+              "margin_gain": [
+                -0.004631992429494858,
+                0.0025202706456184387
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.005344143602997065,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            0,
+            2
+          ],
+          "primary_accuracy_gain": -1,
+          "true_class_id": 63,
+          "true_class_name": "silverbush",
+          "category": "boundary",
+          "image_median_replacements": 23.0,
+          "replacement_pair_percentile_interval": [
+            71.9222637827289,
+            77.89613487287906
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 20488,
+              "task_id": "063_075",
+              "candidate_ids": [
+                63,
+                75
+              ],
+              "candidate_names": [
+                "silverbush",
+                "morning glory"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 20542,
+              "task_id": "063_092",
+              "candidate_ids": [
+                63,
+                92
+              ],
+              "candidate_names": [
+                "silverbush",
+                "ball moss"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            -0.0020319747272878885,
+            0.08606047928333282
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_07881",
+          "rows": [
+            8743,
+            24278
+          ],
+          "replaced_tokens": 24,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.006373144220560789,
+                0.019138166680932045
+              ],
+              "U_margin": [
+                0.02288481779396534,
+                0.0398125946521759
+              ],
+              "margin_gain": [
+                -0.029257962480187416,
+                -0.02067442797124386
+              ],
+              "accuracy_gain": [
+                -1,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.007142295595258474,
+                0.035921141505241394
+              ],
+              "U_margin": [
+                0.01600303314626217,
+                0.023503988981246948
+              ],
+              "margin_gain": [
+                -0.008860737085342407,
+                0.012417152523994446
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                0,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                -0.001526778331026435,
+                0.024465546011924744
+              ],
+              "U_margin": [
+                0.0027740246150642633,
+                0.028709668666124344
+              ],
+              "margin_gain": [
+                -0.004300802946090698,
+                -0.0042441226541996
+              ],
+              "accuracy_gain": [
+                -1,
+                0
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.009153483435511589,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            0,
+            1
+          ],
+          "primary_accuracy_gain": -1,
+          "true_class_id": 98,
+          "true_class_name": "bromelia",
+          "category": "boundary",
+          "image_median_replacements": 21.5,
+          "replacement_pair_percentile_interval": [
+            71.9222637827289,
+            77.89613487287906
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 8743,
+              "task_id": "023_098",
+              "candidate_ids": [
+                23,
+                98
+              ],
+              "candidate_names": [
+                "red ginger",
+                "bromelia"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 24278,
+              "task_id": "089_098",
+              "candidate_ids": [
+                89,
+                98
+              ],
+              "candidate_names": [
+                "canna lily",
+                "bromelia"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.009262748062610626,
+            0.02862962707877159
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        },
+        {
+          "dataset": "flowers",
+          "image_id": "image_07892",
+          "rows": [
+            23351,
+            24287
+          ],
+          "replaced_tokens": 24,
+          "seeds": [
+            {
+              "seed": 2041,
+              "C_correct": [
+                1,
+                1
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.06497017294168472,
+                0.014464202336966991
+              ],
+              "U_margin": [
+                0.08587873727083206,
+                0.014552821405231953
+              ],
+              "margin_gain": [
+                -0.02090856432914734,
+                -8.861906826496124e-05
+              ],
+              "accuracy_gain": [
+                0,
+                0
+              ]
+            },
+            {
+              "seed": 2042,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.07116631418466568,
+                -0.010660381987690926
+              ],
+              "U_margin": [
+                0.07549730688333511,
+                0.0037857270799577236
+              ],
+              "margin_gain": [
+                -0.004330992698669434,
+                -0.014446109533309937
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            },
+            {
+              "seed": 2043,
+              "C_correct": [
+                1,
+                0
+              ],
+              "U_correct": [
+                1,
+                1
+              ],
+              "C_margin": [
+                0.08668378740549088,
+                -5.388739282352617e-06
+              ],
+              "U_margin": [
+                0.07544859498739243,
+                0.032188985496759415
+              ],
+              "margin_gain": [
+                0.01123519241809845,
+                -0.03219437599182129
+              ],
+              "accuracy_gain": [
+                0,
+                -1
+              ]
+            }
+          ],
+          "mean_margin_gain": -0.010122244246304035,
+          "repair_seed_counts": [
+            0,
+            0
+          ],
+          "positive_margin_seed_counts": [
+            1,
+            0
+          ],
+          "primary_accuracy_gain": 0,
+          "true_class_id": 98,
+          "true_class_name": "bromelia",
+          "category": "boundary",
+          "image_median_replacements": 23.5,
+          "replacement_pair_percentile_interval": [
+            71.9222637827289,
+            77.89613487287906
+          ],
+          "tasks": [
+            {
+              "name": "A",
+              "row_id": 23351,
+              "task_id": "080_098",
+              "candidate_ids": [
+                80,
+                98
+              ],
+              "candidate_names": [
+                "frangipani",
+                "bromelia"
+              ]
+            },
+            {
+              "name": "B",
+              "row_id": 24287,
+              "task_id": "089_098",
+              "candidate_ids": [
+                89,
+                98
+              ],
+              "candidate_names": [
+                "canna lily",
+                "bromelia"
+              ]
+            }
+          ],
+          "C_exchanged_margin_seed2041": [
+            0.07043643295764923,
+            -0.0028664555866271257
+          ],
+          "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98"
+        }
+      ]
+    }
+  },
+  "gallery": [
+    {
+      "dataset": "pets",
+      "image_id": "Bengal_198",
+      "rows": [
+        3384,
+        3584
+      ],
+      "replaced_tokens": 14,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.14977671205997467,
+            0.1583285629749298
+          ],
+          "U_margin": [
+            0.1466556191444397,
+            0.1577109545469284
+          ],
+          "margin_gain": [
+            0.003121092915534973,
+            0.0006176084280014038
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.14366300404071808,
+            0.14624705910682678
+          ],
+          "U_margin": [
+            0.1549655646085739,
+            0.15896818041801453
+          ],
+          "margin_gain": [
+            -0.011302560567855835,
+            -0.012721121311187744
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.15461866557598114,
+            0.14865697920322418
+          ],
+          "U_margin": [
+            0.14532068371772766,
+            0.15073588490486145
+          ],
+          "margin_gain": [
+            0.009297981858253479,
+            -0.002078905701637268
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        }
+      ],
+      "mean_margin_gain": -0.0021776508074253798,
+      "repair_seed_counts": [
+        0,
+        0
+      ],
+      "positive_margin_seed_counts": [
+        2,
+        1
+      ],
+      "primary_accuracy_gain": 0,
+      "true_class_id": 5,
+      "true_class_name": "bengal",
+      "category": "typical",
+      "image_median_replacements": 14.0,
+      "replacement_pair_percentile_interval": [
+        46.207037643207855,
+        54.766775777414075
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 3384,
+          "task_id": "05_17",
+          "candidate_ids": [
+            5,
+            17
+          ],
+          "candidate_names": [
+            "bengal",
+            "japanese chin"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 3584,
+          "task_id": "05_19",
+          "candidate_ids": [
+            5,
+            19
+          ],
+          "candidate_names": [
+            "bengal",
+            "leonberger"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.1522332727909088,
+        0.16208821535110474
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98",
+      "gallery_id": "typical_pets_1",
+      "crop_filename": "typical_pets_1_clip224.png",
+      "original_size": [
+        366,
+        370
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/oxford-iiit-pet/images/Bengal_198.jpg"
+    },
+    {
+      "dataset": "pets",
+      "image_id": "Bengal_43",
+      "rows": [
+        3614,
+        3814
+      ],
+      "replaced_tokens": 14,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.20656299591064453,
+            0.046624135226011276
+          ],
+          "U_margin": [
+            0.2018788903951645,
+            0.10367009788751602
+          ],
+          "margin_gain": [
+            0.0046841055154800415,
+            -0.057045962661504745
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.20626579225063324,
+            0.10204239934682846
+          ],
+          "U_margin": [
+            0.20397542417049408,
+            0.10302162170410156
+          ],
+          "margin_gain": [
+            0.00229036808013916,
+            -0.0009792223572731018
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.1980617195367813,
+            0.10044360905885696
+          ],
+          "U_margin": [
+            0.2039034515619278,
+            0.10140778124332428
+          ],
+          "margin_gain": [
+            -0.005841732025146484,
+            -0.0009641721844673157
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        }
+      ],
+      "mean_margin_gain": -0.0096427695825696,
+      "repair_seed_counts": [
+        0,
+        0
+      ],
+      "positive_margin_seed_counts": [
+        2,
+        0
+      ],
+      "primary_accuracy_gain": 0,
+      "true_class_id": 5,
+      "true_class_name": "bengal",
+      "category": "typical",
+      "image_median_replacements": 14.0,
+      "replacement_pair_percentile_interval": [
+        46.207037643207855,
+        54.766775777414075
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 3614,
+          "task_id": "05_19",
+          "candidate_ids": [
+            5,
+            19
+          ],
+          "candidate_names": [
+            "bengal",
+            "leonberger"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 3814,
+          "task_id": "05_20",
+          "candidate_ids": [
+            5,
+            20
+          ],
+          "candidate_names": [
+            "bengal",
+            "maine coon"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.11368495225906372,
+        0.11780247092247009
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98",
+      "gallery_id": "typical_pets_2",
+      "crop_filename": "typical_pets_2_clip224.png",
+      "original_size": [
+        500,
+        357
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/oxford-iiit-pet/images/Bengal_43.jpg"
+    },
+    {
+      "dataset": "flowers",
+      "image_id": "image_00009",
+      "rows": [
+        3291,
+        4101
+      ],
+      "replaced_tokens": 21,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.12035220861434937,
+            0.14795546233654022
+          ],
+          "U_margin": [
+            0.12981493771076202,
+            0.1653205156326294
+          ],
+          "margin_gain": [
+            -0.009462729096412659,
+            -0.017365053296089172
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.12498942017555237,
+            0.15426993370056152
+          ],
+          "U_margin": [
+            0.11878031492233276,
+            0.15177088975906372
+          ],
+          "margin_gain": [
+            0.0062091052532196045,
+            0.0024990439414978027
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.11768577247858047,
+            0.1719762086868286
+          ],
+          "U_margin": [
+            0.13062311708927155,
+            0.1618901640176773
+          ],
+          "margin_gain": [
+            -0.01293734461069107,
+            0.010086044669151306
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        }
+      ],
+      "mean_margin_gain": -0.0034951556008309126,
+      "repair_seed_counts": [
+        0,
+        0
+      ],
+      "positive_margin_seed_counts": [
+        1,
+        2
+      ],
+      "primary_accuracy_gain": 0,
+      "true_class_id": 76,
+      "true_class_name": "passion flower",
+      "category": "typical",
+      "image_median_replacements": 20.5,
+      "replacement_pair_percentile_interval": [
+        49.97560578955928,
+        57.89559277931371
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 3291,
+          "task_id": "008_076",
+          "candidate_ids": [
+            8,
+            76
+          ],
+          "candidate_names": [
+            "monkshood",
+            "passion flower"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 4101,
+          "task_id": "010_076",
+          "candidate_ids": [
+            10,
+            76
+          ],
+          "candidate_names": [
+            "snapdragon",
+            "passion flower"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.10842017829418182,
+        0.14400328695774078
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98",
+      "gallery_id": "typical_flowers_1",
+      "crop_filename": "typical_flowers_1_clip224.png",
+      "original_size": [
+        500,
+        510
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/flowers102/images/image_00009.jpg"
+    },
+    {
+      "dataset": "flowers",
+      "image_id": "image_00010",
+      "rows": [
+        705,
+        3292
+      ],
+      "replaced_tokens": 20,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.14200666546821594,
+            0.1294037252664566
+          ],
+          "U_margin": [
+            0.14345799386501312,
+            0.1513117402791977
+          ],
+          "margin_gain": [
+            -0.0014513283967971802,
+            -0.02190801501274109
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.1404533088207245,
+            0.13994324207305908
+          ],
+          "U_margin": [
+            0.1300542950630188,
+            0.13979651033878326
+          ],
+          "margin_gain": [
+            0.010399013757705688,
+            0.00014673173427581787
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.12916596233844757,
+            0.137613445520401
+          ],
+          "U_margin": [
+            0.1467708796262741,
+            0.15306347608566284
+          ],
+          "margin_gain": [
+            -0.017604917287826538,
+            -0.01545003056526184
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        }
+      ],
+      "mean_margin_gain": -0.007644757628440857,
+      "repair_seed_counts": [
+        0,
+        0
+      ],
+      "positive_margin_seed_counts": [
+        1,
+        1
+      ],
+      "primary_accuracy_gain": 0,
+      "true_class_id": 76,
+      "true_class_name": "passion flower",
+      "category": "typical",
+      "image_median_replacements": 20.5,
+      "replacement_pair_percentile_interval": [
+        42.15048517374099,
+        49.97560578955928
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 705,
+          "task_id": "001_076",
+          "candidate_ids": [
+            1,
+            76
+          ],
+          "candidate_names": [
+            "hard-leaved pocket orchid",
+            "passion flower"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 3292,
+          "task_id": "008_076",
+          "candidate_ids": [
+            8,
+            76
+          ],
+          "candidate_names": [
+            "monkshood",
+            "passion flower"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.12849381566047668,
+        0.1378992348909378
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98",
+      "gallery_id": "typical_flowers_2",
+      "crop_filename": "typical_flowers_2_clip224.png",
+      "original_size": [
+        667,
+        500
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/flowers102/images/image_00010.jpg"
+    },
+    {
+      "dataset": "pets",
+      "image_id": "american_bulldog_2",
+      "rows": [
+        598,
+        787
+      ],
+      "replaced_tokens": 13,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            0,
+            1
+          ],
+          "C_margin": [
+            0.014001740142703056,
+            0.09073533117771149
+          ],
+          "U_margin": [
+            -0.004663967527449131,
+            0.08993920683860779
+          ],
+          "margin_gain": [
+            0.018665708601474762,
+            0.0007961243391036987
+          ],
+          "accuracy_gain": [
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.015393448062241077,
+            0.08992630243301392
+          ],
+          "U_margin": [
+            0.003223610809072852,
+            0.0942327156662941
+          ],
+          "margin_gain": [
+            0.012169837020337582,
+            -0.004306413233280182
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            0,
+            1
+          ],
+          "C_margin": [
+            0.010142507031559944,
+            0.08792736381292343
+          ],
+          "U_margin": [
+            -0.002653065836057067,
+            0.09104375541210175
+          ],
+          "margin_gain": [
+            0.012795573100447655,
+            -0.003116391599178314
+          ],
+          "accuracy_gain": [
+            1,
+            0
+          ]
+        }
+      ],
+      "mean_margin_gain": 0.006167406681925058,
+      "repair_seed_counts": [
+        2,
+        0
+      ],
+      "positive_margin_seed_counts": [
+        3,
+        1
+      ],
+      "primary_accuracy_gain": 1,
+      "true_class_id": 1,
+      "true_class_name": "american bulldog",
+      "category": "helpful",
+      "image_median_replacements": 12.0,
+      "replacement_pair_percentile_interval": [
+        37.225859247135844,
+        46.207037643207855
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 598,
+          "task_id": "01_34",
+          "candidate_ids": [
+            1,
+            34
+          ],
+          "candidate_names": [
+            "american bulldog",
+            "staffordshire bull terrier"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 787,
+          "task_id": "01_35",
+          "candidate_ids": [
+            1,
+            35
+          ],
+          "candidate_names": [
+            "american bulldog",
+            "wheaten terrier"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        -0.0011591422371566296,
+        0.06851742416620255
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98",
+      "gallery_id": "helpful_pets_1",
+      "crop_filename": "helpful_pets_1_clip224.png",
+      "original_size": [
+        500,
+        333
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/oxford-iiit-pet/images/american_bulldog_2.jpg"
+    },
+    {
+      "dataset": "pets",
+      "image_id": "staffordshire_bull_terrier_31",
+      "rows": [
+        712,
+        3301
+      ],
+      "replaced_tokens": 11,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            0,
+            1
+          ],
+          "C_margin": [
+            0.003107229247689247,
+            0.14439232647418976
+          ],
+          "U_margin": [
+            -0.012906789779663086,
+            0.13435840606689453
+          ],
+          "margin_gain": [
+            0.016014019027352333,
+            0.010033920407295227
+          ],
+          "accuracy_gain": [
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            0,
+            1
+          ],
+          "U_correct": [
+            0,
+            1
+          ],
+          "C_margin": [
+            -0.004987976048141718,
+            0.1384861171245575
+          ],
+          "U_margin": [
+            -0.015094968490302563,
+            0.13109424710273743
+          ],
+          "margin_gain": [
+            0.010106991976499557,
+            0.007391870021820068
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            0,
+            1
+          ],
+          "C_margin": [
+            0.0016988947754725814,
+            0.13141684234142303
+          ],
+          "U_margin": [
+            -0.013568530790507793,
+            0.13633576035499573
+          ],
+          "margin_gain": [
+            0.01526742521673441,
+            -0.004918918013572693
+          ],
+          "accuracy_gain": [
+            1,
+            0
+          ]
+        }
+      ],
+      "mean_margin_gain": 0.008982551284134388,
+      "repair_seed_counts": [
+        2,
+        0
+      ],
+      "positive_margin_seed_counts": [
+        3,
+        2
+      ],
+      "primary_accuracy_gain": 1,
+      "true_class_id": 34,
+      "true_class_name": "staffordshire bull terrier",
+      "category": "helpful",
+      "image_median_replacements": 11.0,
+      "replacement_pair_percentile_interval": [
+        20.511456628477905,
+        28.351063829787233
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 712,
+          "task_id": "01_34",
+          "candidate_ids": [
+            1,
+            34
+          ],
+          "candidate_names": [
+            "american bulldog",
+            "staffordshire bull terrier"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 3301,
+          "task_id": "04_34",
+          "candidate_ids": [
+            4,
+            34
+          ],
+          "candidate_names": [
+            "beagle",
+            "staffordshire bull terrier"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.0004628206661436707,
+        0.1436995267868042
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98",
+      "gallery_id": "helpful_pets_2",
+      "crop_filename": "helpful_pets_2_clip224.png",
+      "original_size": [
+        333,
+        500
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/oxford-iiit-pet/images/staffordshire_bull_terrier_31.jpg"
+    },
+    {
+      "dataset": "flowers",
+      "image_id": "image_06475",
+      "rows": [
+        8233,
+        11341
+      ],
+      "replaced_tokens": 17,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            0
+          ],
+          "C_margin": [
+            0.023945817723870277,
+            0.0034170830622315407
+          ],
+          "U_margin": [
+            0.014167021960020065,
+            -0.01828281581401825
+          ],
+          "margin_gain": [
+            0.009778795763850212,
+            0.021699897944927216
+          ],
+          "accuracy_gain": [
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            0
+          ],
+          "C_margin": [
+            0.03589067980647087,
+            0.05543246865272522
+          ],
+          "U_margin": [
+            0.038073211908340454,
+            -0.005767045076936483
+          ],
+          "margin_gain": [
+            -0.002182532101869583,
+            0.06119951233267784
+          ],
+          "accuracy_gain": [
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            0
+          ],
+          "C_margin": [
+            0.06282170861959457,
+            0.05981472134590149
+          ],
+          "U_margin": [
+            0.013589250855147839,
+            -0.019700108096003532
+          ],
+          "margin_gain": [
+            0.04923245683312416,
+            0.07951483130455017
+          ],
+          "accuracy_gain": [
+            0,
+            1
+          ]
+        }
+      ],
+      "mean_margin_gain": 0.03654049336910248,
+      "repair_seed_counts": [
+        0,
+        3
+      ],
+      "positive_margin_seed_counts": [
+        2,
+        3
+      ],
+      "primary_accuracy_gain": 1,
+      "true_class_id": 32,
+      "true_class_name": "love in the mist",
+      "category": "helpful",
+      "image_median_replacements": 15.5,
+      "replacement_pair_percentile_interval": [
+        20.47216349541931,
+        26.939339730037403
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 8233,
+          "task_id": "022_032",
+          "candidate_ids": [
+            22,
+            32
+          ],
+          "candidate_names": [
+            "fritillary",
+            "love in the mist"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 11341,
+          "task_id": "032_050",
+          "candidate_ids": [
+            32,
+            50
+          ],
+          "candidate_names": [
+            "love in the mist",
+            "petunia"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.024454785510897636,
+        -0.021708067506551743
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98",
+      "gallery_id": "helpful_flowers_1",
+      "crop_filename": "helpful_flowers_1_clip224.png",
+      "original_size": [
+        667,
+        500
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/flowers102/images/image_06475.jpg"
+    },
+    {
+      "dataset": "flowers",
+      "image_id": "image_03598",
+      "rows": [
+        22122,
+        22199
+      ],
+      "replaced_tokens": 23,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            0
+          ],
+          "C_margin": [
+            0.11483383178710938,
+            0.013873974792659283
+          ],
+          "U_margin": [
+            0.06775122880935669,
+            -0.01812742091715336
+          ],
+          "margin_gain": [
+            0.047082602977752686,
+            0.032001394778490067
+          ],
+          "accuracy_gain": [
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            0
+          ],
+          "C_margin": [
+            0.0855015441775322,
+            0.007046893704682589
+          ],
+          "U_margin": [
+            0.07120704650878906,
+            -0.020801642909646034
+          ],
+          "margin_gain": [
+            0.014294497668743134,
+            0.027848536148667336
+          ],
+          "accuracy_gain": [
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            0
+          ],
+          "C_margin": [
+            0.10143768042325974,
+            0.01364881545305252
+          ],
+          "U_margin": [
+            0.08740957826375961,
+            -0.0224831011146307
+          ],
+          "margin_gain": [
+            0.014028102159500122,
+            0.03613191843032837
+          ],
+          "accuracy_gain": [
+            0,
+            1
+          ]
+        }
+      ],
+      "mean_margin_gain": 0.028564507141709328,
+      "repair_seed_counts": [
+        0,
+        3
+      ],
+      "positive_margin_seed_counts": [
+        3,
+        3
+      ],
+      "primary_accuracy_gain": 1,
+      "true_class_id": 71,
+      "true_class_name": "azalea",
+      "category": "helpful",
+      "image_median_replacements": 24.5,
+      "replacement_pair_percentile_interval": [
+        65.22469778283731,
+        71.9222637827289
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 22122,
+          "task_id": "071_088",
+          "candidate_ids": [
+            71,
+            88
+          ],
+          "candidate_names": [
+            "azalea",
+            "watercress"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 22199,
+          "task_id": "071_089",
+          "candidate_ids": [
+            71,
+            89
+          ],
+          "candidate_names": [
+            "azalea",
+            "canna lily"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.11738847196102142,
+        0.024641573429107666
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98",
+      "gallery_id": "helpful_flowers_2",
+      "crop_filename": "helpful_flowers_2_clip224.png",
+      "original_size": [
+        698,
+        500
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/flowers102/images/image_03598.jpg"
+    },
+    {
+      "dataset": "pets",
+      "image_id": "Egyptian_Mau_81",
+      "rows": [
+        7818,
+        8212
+      ],
+      "replaced_tokens": 17,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.045726921409368515,
+            0.03662721440196037
+          ],
+          "U_margin": [
+            0.052762243896722794,
+            0.01973586343228817
+          ],
+          "margin_gain": [
+            -0.0070353224873542786,
+            0.016891350969672203
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            0
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.04443522170186043,
+            -0.005134496372193098
+          ],
+          "U_margin": [
+            0.047263722866773605,
+            0.021571112796664238
+          ],
+          "margin_gain": [
+            -0.0028285011649131775,
+            -0.026705609634518623
+          ],
+          "accuracy_gain": [
+            0,
+            -1
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            0
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.053314197808504105,
+            -0.0006215643952600658
+          ],
+          "U_margin": [
+            0.050888221710920334,
+            0.022303808480501175
+          ],
+          "margin_gain": [
+            0.0024259760975837708,
+            -0.022925373166799545
+          ],
+          "accuracy_gain": [
+            0,
+            -1
+          ]
+        }
+      ],
+      "mean_margin_gain": -0.006696246564388275,
+      "repair_seed_counts": [
+        0,
+        0
+      ],
+      "positive_margin_seed_counts": [
+        1,
+        1
+      ],
+      "primary_accuracy_gain": 0,
+      "true_class_id": 11,
+      "true_class_name": "egyptian mau",
+      "category": "boundary",
+      "image_median_replacements": 20.0,
+      "replacement_pair_percentile_interval": [
+        70.47054009819968,
+        77.03764320785598
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 7818,
+          "task_id": "11_20",
+          "candidate_ids": [
+            11,
+            20
+          ],
+          "candidate_names": [
+            "egyptian mau",
+            "maine coon"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 8212,
+          "task_id": "11_27",
+          "candidate_ids": [
+            11,
+            27
+          ],
+          "candidate_names": [
+            "egyptian mau",
+            "russian blue"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.059840116649866104,
+        0.026537826284766197
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98",
+      "gallery_id": "boundary_pets_1",
+      "crop_filename": "boundary_pets_1_clip224.png",
+      "original_size": [
+        422,
+        500
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/oxford-iiit-pet/images/Egyptian_Mau_81.jpg"
+    },
+    {
+      "dataset": "pets",
+      "image_id": "havanese_60",
+      "rows": [
+        10088,
+        10388
+      ],
+      "replaced_tokens": 17,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.11745408922433853,
+            0.051830753684043884
+          ],
+          "U_margin": [
+            0.09670278429985046,
+            0.05440554767847061
+          ],
+          "margin_gain": [
+            0.020751304924488068,
+            -0.0025747939944267273
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            0
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.10453895479440689,
+            -0.019529784098267555
+          ],
+          "U_margin": [
+            0.10713730752468109,
+            0.05530887097120285
+          ],
+          "margin_gain": [
+            -0.0025983527302742004,
+            -0.07483865320682526
+          ],
+          "accuracy_gain": [
+            0,
+            -1
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            0,
+            0
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            -0.008119185455143452,
+            -0.022199254482984543
+          ],
+          "U_margin": [
+            0.11489725857973099,
+            0.054428186267614365
+          ],
+          "margin_gain": [
+            -0.12301644682884216,
+            -0.07662744075059891
+          ],
+          "accuracy_gain": [
+            -1,
+            -1
+          ]
+        }
+      ],
+      "mean_margin_gain": -0.043150726705789566,
+      "repair_seed_counts": [
+        0,
+        0
+      ],
+      "positive_margin_seed_counts": [
+        1,
+        0
+      ],
+      "primary_accuracy_gain": 0,
+      "true_class_id": 16,
+      "true_class_name": "havanese",
+      "category": "boundary",
+      "image_median_replacements": 18.0,
+      "replacement_pair_percentile_interval": [
+        70.47054009819968,
+        77.03764320785598
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 10088,
+          "task_id": "15_16",
+          "candidate_ids": [
+            15,
+            16
+          ],
+          "candidate_names": [
+            "great pyrenees",
+            "havanese"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 10388,
+          "task_id": "16_36",
+          "candidate_ids": [
+            16,
+            36
+          ],
+          "candidate_names": [
+            "havanese",
+            "yorkshire terrier"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.11277250945568085,
+        0.046971119940280914
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/pets_b16_98",
+      "gallery_id": "boundary_pets_2",
+      "crop_filename": "boundary_pets_2_clip224.png",
+      "original_size": [
+        500,
+        333
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/oxford-iiit-pet/images/havanese_60.jpg"
+    },
+    {
+      "dataset": "flowers",
+      "image_id": "image_03800",
+      "rows": [
+        13015,
+        13236
+      ],
+      "replaced_tokens": 24,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            0,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            -0.0009586571250110865,
+            0.12258888781070709
+          ],
+          "U_margin": [
+            0.007891667075455189,
+            0.10485959053039551
+          ],
+          "margin_gain": [
+            -0.008850323967635632,
+            0.017729297280311584
+          ],
+          "accuracy_gain": [
+            -1,
+            0
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            0,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            -0.0010450264671817422,
+            0.10539861768484116
+          ],
+          "U_margin": [
+            0.007424648385494947,
+            0.10755642503499985
+          ],
+          "margin_gain": [
+            -0.008469674736261368,
+            -0.0021578073501586914
+          ],
+          "accuracy_gain": [
+            -1,
+            0
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.005441304761916399,
+            0.10519060492515564
+          ],
+          "U_margin": [
+            0.006066960282623768,
+            0.10847391188144684
+          ],
+          "margin_gain": [
+            -0.0006256555207073689,
+            -0.0032833069562911987
+          ],
+          "accuracy_gain": [
+            0,
+            0
+          ]
+        }
+      ],
+      "mean_margin_gain": -0.0009429118945263326,
+      "repair_seed_counts": [
+        0,
+        0
+      ],
+      "positive_margin_seed_counts": [
+        0,
+        1
+      ],
+      "primary_accuracy_gain": -1,
+      "true_class_id": 36,
+      "true_class_name": "cape flower",
+      "category": "boundary",
+      "image_median_replacements": 18.0,
+      "replacement_pair_percentile_interval": [
+        71.9222637827289,
+        77.89613487287906
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 13015,
+          "task_id": "036_054",
+          "candidate_ids": [
+            36,
+            54
+          ],
+          "candidate_names": [
+            "cape flower",
+            "pelargonium"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 13236,
+          "task_id": "036_064",
+          "candidate_ids": [
+            36,
+            64
+          ],
+          "candidate_names": [
+            "cape flower",
+            "californian poppy"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.010213520377874374,
+        0.099831223487854
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98",
+      "gallery_id": "boundary_flowers_1",
+      "crop_filename": "boundary_flowers_1_clip224.png",
+      "original_size": [
+        500,
+        507
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/flowers102/images/image_03800.jpg"
+    },
+    {
+      "dataset": "flowers",
+      "image_id": "image_06837",
+      "rows": [
+        3597,
+        8705
+      ],
+      "replaced_tokens": 24,
+      "seeds": [
+        {
+          "seed": 2041,
+          "C_correct": [
+            1,
+            0
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.12987101078033447,
+            -0.011103259399533272
+          ],
+          "U_margin": [
+            0.1377411186695099,
+            0.002319276798516512
+          ],
+          "margin_gain": [
+            -0.007870107889175415,
+            -0.013422535732388496
+          ],
+          "accuracy_gain": [
+            0,
+            -1
+          ]
+        },
+        {
+          "seed": 2042,
+          "C_correct": [
+            1,
+            1
+          ],
+          "U_correct": [
+            1,
+            0
+          ],
+          "C_margin": [
+            0.1387885957956314,
+            0.007398592308163643
+          ],
+          "U_margin": [
+            0.11644908785820007,
+            -0.01408282108604908
+          ],
+          "margin_gain": [
+            0.022339507937431335,
+            0.021481413394212723
+          ],
+          "accuracy_gain": [
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 2043,
+          "C_correct": [
+            1,
+            0
+          ],
+          "U_correct": [
+            1,
+            1
+          ],
+          "C_margin": [
+            0.13621799647808075,
+            -0.004944528453052044
+          ],
+          "U_margin": [
+            0.16308601200580597,
+            0.00560925155878067
+          ],
+          "margin_gain": [
+            -0.02686801552772522,
+            -0.010553780011832714
+          ],
+          "accuracy_gain": [
+            0,
+            -1
+          ]
+        }
+      ],
+      "mean_margin_gain": -0.0024822528939694166,
+      "repair_seed_counts": [
+        0,
+        1
+      ],
+      "positive_margin_seed_counts": [
+        1,
+        1
+      ],
+      "primary_accuracy_gain": -1,
+      "true_class_id": 23,
+      "true_class_name": "red ginger",
+      "category": "boundary",
+      "image_median_replacements": 20.5,
+      "replacement_pair_percentile_interval": [
+        71.9222637827289,
+        77.89613487287906
+      ],
+      "tasks": [
+        {
+          "name": "A",
+          "row_id": 3597,
+          "task_id": "009_023",
+          "candidate_ids": [
+            9,
+            23
+          ],
+          "candidate_names": [
+            "globe thistle",
+            "red ginger"
+          ]
+        },
+        {
+          "name": "B",
+          "row_id": 8705,
+          "task_id": "023_098",
+          "candidate_ids": [
+            23,
+            98
+          ],
+          "candidate_names": [
+            "red ginger",
+            "bromelia"
+          ]
+        }
+      ],
+      "C_exchanged_margin_seed2041": [
+        0.1459810733795166,
+        -0.008446156047284603
+      ],
+      "source_directory": "/data2/zhao.tong/experiments/runs/final-test-v1/flowers_b16_98",
+      "gallery_id": "boundary_flowers_2",
+      "crop_filename": "boundary_flowers_2_clip224.png",
+      "original_size": [
+        500,
+        748
+      ],
+      "remote_image": "/data2/zhao.tong/experiments/data/raw/flowers102/images/image_06837.jpg"
+    }
+  ],
+  "crop_preprocessing": "Server existing CLIP _transform(224) first three operations: bicubic shorter-side Resize224, CenterCrop224, RGB. Applied after original.convert(RGB), before normalization."
+}
